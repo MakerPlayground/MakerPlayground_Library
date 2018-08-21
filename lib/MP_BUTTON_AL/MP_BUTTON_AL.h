@@ -1,12 +1,12 @@
-#ifndef MP_BUTTON_H
-#define MP_BUTTON_H
+#ifndef MP_BUTTON_AL_H
+#define MP_BUTTON_AL_H
 
 #include <Arduino.h>
 
-class MP_BUTTON
+class MP_BUTTON_AL
 {
 public:
-	MP_BUTTON(uint8_t pin, const String &tag);
+	MP_BUTTON_AL(uint8_t pin, const String &tag);
 
 	void init();
 	boolean isReleased();

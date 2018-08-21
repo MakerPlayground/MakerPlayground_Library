@@ -1,17 +1,17 @@
-#include "MP_BUTTON.h"
+#include "MP_BUTTON_AL.h"
 
-MP_BUTTON::MP_BUTTON(uint8_t pin, const String &tag)
+MP_BUTTON_AL::MP_BUTTON_AL(uint8_t pin, const String &tag)
 	:pin(pin)
 	,tag(tag)
 {
 }
 
-void MP_BUTTON::init()
+void MP_BUTTON_AL::init()
 {
 	pinMode(pin, INPUT_PULLUP);
 }
 
-boolean MP_BUTTON::isReleased()
+boolean MP_BUTTON_AL::isReleased()
 {
 	if(digitalRead(pin)==LOW)
 	{
@@ -23,7 +23,7 @@ boolean MP_BUTTON::isReleased()
 	return false;
 }
 
-boolean MP_BUTTON::isPressed()
+boolean MP_BUTTON_AL::isPressed()
 {
 	if(digitalRead(pin)==LOW)
 	{
