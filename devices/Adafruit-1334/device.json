@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_1334",
+  "classname": "MP_TCS34725",
   "library_dependency": [
     "adafruit/Adafruit_TCS34725"
   ],

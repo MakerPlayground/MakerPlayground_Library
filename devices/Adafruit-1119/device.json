@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_1119",
+  "classname": "MP_BUTTON_AL",
   "library_dependency": [],
   "width": 119.0,
   "height": 82.0,

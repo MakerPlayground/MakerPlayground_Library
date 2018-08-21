@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_1032",
+  "classname": "MP_MICROPHONE",
   "library_dependency": [],
   "width": 79.2,
   "height": 122.4,

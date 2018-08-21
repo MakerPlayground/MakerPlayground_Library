@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_3251",
+  "classname": "MP_SI7021",
   "library_dependency": [
     "adafruit/Adafruit_Si7021"
   ],

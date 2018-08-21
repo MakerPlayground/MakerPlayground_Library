@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_2130",
+  "classname": "MP_PAM8302",
   "library_dependency": [],
   "width": 86.4,
   "height": 136.8,

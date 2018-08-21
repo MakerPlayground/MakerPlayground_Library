@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ADAFRUIT_2023",
+  "classname": "MP_TMP007",
   "library_dependency": [
     "adafruit/Adafruit_TMP007_Library"
   ],
