@@ -8,7 +8,7 @@
   "platform": [
     "MP_ARDUINO"
   ],
-  "classname": "MP_MP_0008",
+  "classname": "MP_LSM6DS3",
   "library_dependency": [
     "SparkFun/SparkFun_LSM6DS3_Arduino_Library",
     "Wire",

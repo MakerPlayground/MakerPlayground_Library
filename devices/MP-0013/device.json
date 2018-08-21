@@ -8,7 +8,7 @@
   "platform": [
     "MP_ARDUINO"
   ],
-  "classname": "MP_MP_0013",
+  "classname": "MP_RELAY",
   "library_dependency": [],
   "width": 0.0,
   "height": 0.0,

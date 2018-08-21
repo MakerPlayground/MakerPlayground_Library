@@ -8,7 +8,7 @@
   "platform": [
     "MP_ARDUINO"
   ],
-  "classname": "MP_MP_0012",
+  "classname": "MP_7SEG_SOFTSERIAL",
   "library_dependency": [
     "nickgammon/SendOnlySoftwareSerial"
   ],
