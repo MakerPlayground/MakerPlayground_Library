@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_101020020",
+  "classname": "MP_PIR",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,

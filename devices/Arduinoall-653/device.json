@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_653",
+  "classname": "MP_DHT11",
   "library_dependency": [
     "adafruit/DHT-sensor-library"
   ],

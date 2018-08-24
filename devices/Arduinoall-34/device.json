@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_34",
+  "classname": "MP_MPU6050",
   "library_dependency": [
     "adafruit/Adafruit_Sensor",
     "MPU6050",

@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_98",
+  "classname": "MP_LIGHT_SENSOR",
   "library_dependency": [],
   "width": 132.212,
   "height": 40.201,

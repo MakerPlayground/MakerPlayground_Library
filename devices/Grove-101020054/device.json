@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_101020054",
+  "classname": "MP_ADXL345",
   "library_dependency": [
     "adafruit/Adafruit_ADXL345",
     "adafruit/Adafruit_Sensor"

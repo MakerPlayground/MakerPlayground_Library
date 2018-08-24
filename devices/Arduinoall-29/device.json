@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_29",
+  "classname": "MP_PIR",
   "library_dependency": [],
   "width": 235.0,
   "height": 230.0,

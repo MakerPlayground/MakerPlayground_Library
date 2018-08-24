@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_107020000",
+  "classname": "MP_BUZZER",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,

@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_184",
+  "classname": "MP_SOIL_MOISTURE",
   "library_dependency": [],
   "width": 210.63,
   "height": 388.242,

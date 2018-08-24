@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_377",
+  "classname": "MP_WATER_SENSOR",
   "library_dependency": [],
   "width": 113.378,
   "height": 351.498,

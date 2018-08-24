@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUITRONICS_1705",
+  "classname": "MP_DHT12",
   "library_dependency": [
     "dht_dplasa"
   ],

@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_GROVE_113020010",
+  "classname": "MP_WIFI_SERIAL_BLYNK",
   "library_dependency": [
     "blynkk/blynk-library",
     "itead/ITEADLIB_Arduino_WeeESP8266"

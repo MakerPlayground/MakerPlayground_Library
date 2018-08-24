@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_103020005",
+  "classname": "MP_RELAY",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,

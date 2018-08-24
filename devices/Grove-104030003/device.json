@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_104030003",
+  "classname": "MP_TMP1637_DISPLAY",
   "library_dependency": [
     "avishorp/TM1637"
   ],

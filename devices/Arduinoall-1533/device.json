@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_1533",
+  "classname": "MP_HC_SR04",
   "library_dependency": [],
   "width": 228.0,
   "height": 129.811,

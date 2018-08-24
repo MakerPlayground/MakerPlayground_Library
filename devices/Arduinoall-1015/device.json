@@ -8,7 +8,7 @@
   "platform": [
     "ARDUINO"
   ],
-  "classname": "MP_ARDUINOALL_1015",
+  "classname": "MP_BUZZER",
   "library_dependency": [],
   "width": 158.0,
   "height": 155.0,

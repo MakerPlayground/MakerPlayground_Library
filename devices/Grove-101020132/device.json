@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_101020132",
+  "classname": "MP_LIGHT_SENSOR",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,
