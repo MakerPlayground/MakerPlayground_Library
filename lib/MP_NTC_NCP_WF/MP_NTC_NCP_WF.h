@@ -1,26 +1,23 @@
-#ifndef MP_DHT11_H
-#define MP_DHT11_H
+#ifndef MP_NTC_NCP_WF_H
+#define MP_NTC_NCP_WF_H
 
 #include <Arduino.h>
-#include "DHT.h"
+#include <math.h>
 
-class MP_DHT11
+class MP_NTC_NCP_WF
 {
 public:
-	MP_DHT11(int pin);
+	MP_NTC_NCP_WF(uint8_t pin);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
 	static const char* const* ERRORS;
 
-	double getHumidity();
 	double getTemperature();
 
 private:
-	DHT sensor;
 	uint8_t pin;
-	
-	double humidity;
+	const int B = 4255;   // B value of the thermistor
 	double celcius;
 };
 

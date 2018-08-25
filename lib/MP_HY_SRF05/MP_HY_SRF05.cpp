@@ -13,6 +13,7 @@ MP_HY_SRF05::MP_HY_SRF05(uint8_t echo, uint8_t trig)
 
 int MP_HY_SRF05::init()  
 {	
+    this->cm = 0;
 	pinMode(this->trig, OUTPUT);
 	pinMode(this->echo, INPUT);
     return 0;
@@ -33,7 +34,7 @@ void MP_HY_SRF05::update(unsigned long current_time)
 
 void MP_HY_SRF05::printStatus()
 {
-    Serial.print(F("distance = "));
+    Serial.print(F("distance (cm.) = "));
     Serial.println(this->cm);
 }
 

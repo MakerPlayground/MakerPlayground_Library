@@ -7,18 +7,20 @@
 class MP_TMP1637_DISPLAY
 {
 public:
-	MP_TMP1637_DISPLAY(uint8_t clk, uint8_t dio, const String &tag);
+	MP_TMP1637_DISPLAY(uint8_t clk, uint8_t dio);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	void showValue(double value);
 	void showData(double value);
 	void setBrightness(char c[]);
 	void off();
 
 private:
-	int data;
-	int brightness;
+	double data;
+	uint8_t brightness;
 	TM1637Display display;
-	const String tag;
 };
 #endif

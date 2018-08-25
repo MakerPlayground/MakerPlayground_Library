@@ -1,19 +1,22 @@
 #include "MP_ADXL345.h"
 
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "No ADXL345 detected ... Check your wiring!";
+const char* const errors_p[] PROGMEM = {ok, error1};
+
+const char* const* MP_DHT11::ERRORS = errors_p;
+
 MP_ADXL345::MP_ADXL345()
 {
 }
 
-void MP_ADXL345::init()
+int MP_ADXL345::init()
 {
 	accel = Adafruit_ADXL345_Unified(12345);
-	Serial.println("Accelerometer Test"); Serial.println("");
 	/* Initialise the sensor */
 	if(!accel.begin())
 	{
-		/* There was a problem detecting the ADXL345 ... check your connections */
-		Serial.println("Ooops, no ADXL345 detected ... Check your wiring!");
-		while(1);
+		return 1;
 	}
 
 	/* Set the range to whatever is appropriate for your project */
@@ -28,33 +31,51 @@ void MP_ADXL345::init()
 	// /* Display additional settings (outside the scope of sensor_t) */
 	// displayDataRate();
 	// displayRange();
+	old_time = 0;
+	return 0;
+}
+
+void MP_ADXL345::update(unsigned long current_time)
+{
+	if (current_time - old_time > 200) 
+	{
+		accel.getEvent(&event);
+		old_time = current_time;
+	}
+}
+
+void MP_ADXL345::printStatus()
+{
+	Serial.print(F("accel_x = "));
+	Serial.println(event.acceleration.x);
+
+	Serial.print(F("accel_y = "));
+	Serial.println(event.acceleration.y);
+	
+	Serial.print(F("accel_z = "));
+	Serial.println(event.acceleration.z);
+	
+	Serial.print(F("accel_magnitude = "));
+	Serial.println(this->getAccel_Magnitude());
 }
 
 double MP_ADXL345::getAccel_X()
 {
-	sensors_event_t event;
-	accel.getEvent(&event);
 	return event.acceleration.x;
 }
 
 double MP_ADXL345::getAccel_Y()
 {
-	sensors_event_t event;
-	accel.getEvent(&event);
 	return event.acceleration.y;
 }
 
 double MP_ADXL345::getAccel_Z()
 {
-	sensors_event_t event;
-	accel.getEvent(&event);
 	return event.acceleration.z;
 }
 
 double MP_ADXL345::getAccel_Magnitude()
 {
-	sensors_event_t event;
-	accel.getEvent(&event);
 	double acc_x = event.acceleration.x;
 	double acc_y = event.acceleration.y;
 	double acc_z = event.acceleration.z;

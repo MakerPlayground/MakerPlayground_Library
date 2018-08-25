@@ -8,7 +8,7 @@
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_GROVE_101020010",
+  "classname": "MP_GROVE_ULTRASONIC_RANGER",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,

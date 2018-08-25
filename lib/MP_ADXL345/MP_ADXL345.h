@@ -10,8 +10,11 @@ class MP_ADXL345
 {
 public:
 	MP_ADXL345();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getAccel_X();
 	double getAccel_Y();
 	double getAccel_Z();
@@ -19,5 +22,7 @@ public:
 
 private:
 	Adafruit_ADXL345_Unified accel;
+	sensors_event_t event;
+	unsigned long old_time;
 };
 #endif
