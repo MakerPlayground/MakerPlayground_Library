@@ -2,7 +2,7 @@
 #define MP_BLYNK_WIFI_H
 
 #include <Arduino.h>
-#include <ESP8266_Lib.h>
+#include <ESP8266.h>
 
 class MP_BLYNK_WIFI
 {

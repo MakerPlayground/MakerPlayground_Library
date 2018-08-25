@@ -1,4 +1,10 @@
+#define BLYNK_PRINT Serial
+#define ESP8266_BAUD 115200
+#define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
+#define PING_GAP 30000  // in ms (ping every 30 secs)
+
 #include "MP_BLYNK_WIFI.h"
+#include <BlynkSimpleShieldEsp8266.h>
 
 const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "Can't connect to access point";
@@ -7,13 +13,6 @@ const char error3[] PROGMEM = "Can't connect to Blynk Server";
 const char* const errors_p[] PROGMEM = {ok, error1, error2, error3};
 
 const char* const* MP_SOIL_MOISTURE::ERRORS = errors_p;
-
-#define BLYNK_PRINT Serial
-#define ESP8266_BAUD 115200
-#define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
-#define PING_GAP 30000  // in ms (ping every 30 secs)
-
-#include <BlynkSimpleShieldEsp8266.h>
 
 double MP_BLYNK_WIFI::value[8];
 uint8_t MP_BLYNK_WIFI::valueChanged;
