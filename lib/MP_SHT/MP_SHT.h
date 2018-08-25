@@ -8,14 +8,17 @@
 class MP_SHT
 {
 public:
-	MP_SHT(const String &tag);
-	void init();
+	MP_SHT();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	double getTemperature();
 	double getHumidity();
 
 private:
 	SHTSensor sht;
-	const String tag;
 };
 
 #endif

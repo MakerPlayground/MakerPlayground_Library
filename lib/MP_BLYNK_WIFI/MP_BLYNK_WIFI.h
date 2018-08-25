@@ -7,9 +7,11 @@
 class MP_BLYNK_WIFI
 {
 public:
-	MP_BLYNK_WIFI(char auth[], char ssid[], char[] pass, const String &tag);
-	void init();
-	void update(unsigned long time);
+	MP_BLYNK_WIFI(char auth[], char ssid[], char[] pass);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
 	int readVirtualPin(uint8_t pin);   // pin = 0-7
 	void writeVirtualPin(char pin[], double value);   // pin = 0-7
@@ -31,7 +33,8 @@ public:
 
 private:
 	void wifiInit();
-	bool testConnection();
+	bool connectWifi();
+	bool testPing();
 
 	void ledOn();
 	void ledOff();
@@ -42,7 +45,6 @@ private:
 	char* auth;
 	char* ssid;
 	char* pass;
-	const String tag;
 
 	unsigned long lastSendMillis;   // time of the last time we send some data to blynk server
 	unsigned long lastPingMillis;   // time of the last time we ping world's DNS server

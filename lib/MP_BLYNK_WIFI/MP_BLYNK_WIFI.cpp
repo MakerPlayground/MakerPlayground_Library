@@ -1,5 +1,13 @@
 #include "MP_BLYNK_WIFI.h"
 
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "Can't connect to access point";
+const char error2[] PROGMEM = "Can't connect to internet";
+const char error3[] PROGMEM = "Can't connect to Blynk Server";
+const char* const errors_p[] PROGMEM = {ok, error1, error2, error3};
+
+const char* const* MP_SOIL_MOISTURE::ERRORS = errors_p;
+
 #define BLYNK_PRINT Serial
 #define ESP8266_BAUD 115200
 #define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
@@ -17,7 +25,6 @@ MP_BLYNK_WIFI::MP_BLYNK_WIFI(char* auth, char* ssid, char* pass, const String &t
     , pass(pass)
     , lastSendMillis(0)
     , lastPingMillis(0)
-    ,tag(tag)
 {
     for (uint8_t i=0; i<8; i++)
     {
@@ -65,7 +72,7 @@ String MP_BLYNK_WIFI::recvString(String target1, String target2, uint32_t timeou
     return data;
 }
 
-void MP_BLYNK_WIFI::init() 
+int MP_BLYNK_WIFI::init() 
 {
     Serial1.begin(115200);
     delay(10);
@@ -73,45 +80,60 @@ void MP_BLYNK_WIFI::init()
     Serial1.println(F("AT+SYSGPIODIR=0,1"));
     recvString("OK", "ERROR", 1000);
     // connect to wifi and blynk server
-    wifiInit();
+    
+    return initConnection();
 }
 
-void MP_BLYNK_WIFI::wifiInit()
+int MP_BLYNK_WIFI::initConnection()
 {
     // initial wifi
-    ledOff();
     Blynk.config(this->wifi, this->auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
-    while (!Blynk.connectWiFi(this->ssid, this->pass)) {
-        delay(1);
+
+    if (!connectWifi()) {
+        return 1;
+    }
+    
+    if (!testPing()) {
+        return 2;
     }
 
-    // connected
-    ledOn();
-
-    // test for Blynk connection
-    while(Blynk.connect() != true) {
-        if (!testConnection()) {
-            // no internet
-            ledOff();
-            while (!Blynk.connectWiFi(this->ssid, this->pass)) {
-                delay(1);
-            }
-            ledOn();
-            // reconnected success
-        }
-        else {
-            // having internet but can't connect to blink server
-        }
-        delay(PING_GAP);
+    if (!Blynk.connect()) {
+        return 3;
     }
+
+    return 0;
 }
 
-bool MP_BLYNK_WIFI::testConnection()
+
+bool MP_BLYNK_WIFI::connectWifi()
 {
-    // test connection
-    Serial1.println(F("AT+PING=\"4.2.2.2\""));
-    String data = recvString("OK", "ERROR", 5000);
-    return (data.indexOf("OK") != -1);
+    ledOff();
+    int retry = 5;
+    while (!Blynk.connectWiFi(this->ssid, this->pass)) {
+        delay(1);
+        if (retry == 0) {
+            return false;
+        }
+        retry--;
+    }
+    ledOn();
+    return true;
+}
+
+bool MP_BLYNK_WIFI::testPing()
+{
+    int pingRetry = 5;
+    while (pingRetry > 0) {
+        // test connection
+        Serial1.println(F("AT+PING=\"4.2.2.2\""));
+        String data = recvString("OK", "ERROR", 5000);
+        if (data.indexOf("OK") != -1) {
+            return true;
+        }
+        pingRetry--;
+        delay(PING_GAP);
+    }
+    return false;
 }
 
 void MP_BLYNK_WIFI::update(unsigned long time) 
@@ -133,8 +155,8 @@ void MP_BLYNK_WIFI::update(unsigned long time)
     // ping to check network connection
     if (time - lastPingMillis > PING_GAP)
     {
-        if (!testConnection()) {
-            wifiInit();
+        if (!testPing()) {
+            initConnection();
         }
         lastPingMillis = time;
     }

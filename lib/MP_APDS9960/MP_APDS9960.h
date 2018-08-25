@@ -8,16 +8,21 @@
 class MP_APDS9960
 {
 public:
-	MP_APDS9960(const String &tag);
+	MP_APDS9960();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getDistance();
 	bool isGestureDetected(char c[]);
 	bool isGestureNotDetected();
 
 private:
 	SparkFun_APDS9960 apds;
-	const String tag;
+	bool isFailOnReading;
+	uint8_t x;
+	unsigned long end_time;
 };
 
 #endif

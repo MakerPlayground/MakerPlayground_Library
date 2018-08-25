@@ -6,15 +6,18 @@
 class MP_LOAD_DRIVER
 {
 public:
-	MP_LOAD_DRIVER(uint8_t pin, const String &tag);
-
-	void init();
+	MP_LOAD_DRIVER(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+	
 	void on();
 	void off();
 
 private:
 	uint8_t pin;
-	const String tag;
+	bool isOn;
 };
 
 #endif

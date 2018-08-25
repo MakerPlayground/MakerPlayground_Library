@@ -1,24 +1,45 @@
 #include "MP_SHT.h"
 
-MP_SHT::MP_SHT(const String &tag)
-	:tag(tag)
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "Can't detect SHT Sensor. Please check connection!!!";
+const char* const errors_p[] PROGMEM = {ok, error1};
+
+const char* const* MP_SHT::ERRORS = errors_p;
+
+MP_SHT::MP_SHT()
 {
 }
 
-void MP_SHT::init()
+int MP_SHT::init()
 {
 	Wire.begin();
-	sht.init();
+	if (sht.init()) {
+		return 0;
+	} else {
+		return 1;
+	}
+}
+
+void MP_SHT::update(unsigned long current_time) 
+{
+	sht.readSample();
+}
+
+void MP_SHT::printStatus() 
+{
+	Serial.print(F("Temp = "));
+	Serial.println(sht.getTemperature());
+
+	Serial.print(F("Humid = "));
+	Serial.println(sht.getHumidity());
 }
 
 double MP_SHT::getTemperature()
 {
-	sht.readSample();
 	return sht.getTemperature();
 }
 
 double MP_SHT::getHumidity()
 {
-	sht.readSample();
 	return sht.getHumidity();
 }
