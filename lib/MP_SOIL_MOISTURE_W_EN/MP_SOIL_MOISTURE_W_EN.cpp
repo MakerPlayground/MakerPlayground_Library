@@ -11,10 +11,11 @@ MP_SOIL_MOISTURE_W_EN::MP_SOIL_MOISTURE_W_EN(uint8_t data, uint8_t en)
 {
 }
 
-void MP_SOIL_MOISTURE_W_EN::init()
+int MP_SOIL_MOISTURE_W_EN::init()
 {
 	pinMode(data, INPUT);
 	pinMode(en, OUTPUT);
+	return 0;
 }
 
 void MP_SOIL_MOISTURE::update(unsigned long current_time)

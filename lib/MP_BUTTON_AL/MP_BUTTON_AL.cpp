@@ -24,7 +24,7 @@ void MP_BUTTON_AL::update(unsigned long current_time)
 void MP_BUTTON_AL::printStatus() 
 {
 	Serial.print(F("Button is now "));
-	Serial.println(digitalRead(pin) == LOW ? "released": "press");
+	Serial.println(digitalRead(pin) == LOW ? "pressed": "released");
 }
 
 boolean MP_BUTTON_AL::isReleased()
