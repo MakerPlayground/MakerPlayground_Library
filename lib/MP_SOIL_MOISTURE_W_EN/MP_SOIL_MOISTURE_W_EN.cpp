@@ -18,7 +18,7 @@ int MP_SOIL_MOISTURE_W_EN::init()
 	return 0;
 }
 
-void MP_SOIL_MOISTURE::update(unsigned long current_time)
+void MP_SOIL_MOISTURE_W_EN::update(unsigned long current_time)
 {
 	digitalWrite(en, HIGH);
 	delay(5);
@@ -26,13 +26,13 @@ void MP_SOIL_MOISTURE::update(unsigned long current_time)
 	digitalWrite(en, LOW);
 }
 
-void MP_SOIL_MOISTURE::printStatus()
+void MP_SOIL_MOISTURE_W_EN::printStatus()
 {
 	Serial.print(F("value = "));
 	Serial.println(this->value);
 }
 
-double MP_SOIL_MOISTURE::getPercent()
+double MP_SOIL_MOISTURE_W_EN::getPercent()
 {
 	return this->value;
 }
