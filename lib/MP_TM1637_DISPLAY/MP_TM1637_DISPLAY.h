@@ -1,13 +1,13 @@
-#ifndef MP_TMP1637_DISPLAY_H
-#define MP_TMP1637_DISPLAY_H
+#ifndef MP_TM1637_DISPLAY_H
+#define MP_TM1637_DISPLAY_H
 
 #include <Arduino.h>
 #include "TM1637Display.h"
 
-class MP_TMP1637_DISPLAY
+class MP_TM1637_DISPLAY
 {
 public:
-	MP_TMP1637_DISPLAY(uint8_t clk, uint8_t dio);
+	MP_TM1637_DISPLAY(uint8_t clk, uint8_t dio);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
