@@ -9,9 +9,12 @@
 class MP_L3GD20H
 {
 public:
-	MP_L3GD20H(const String &tag);
+	MP_L3GD20H();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getGyro_X();
 	double getGyro_Y();
 	double getGyro_Z();
@@ -19,7 +22,7 @@ public:
 private:
 	Adafruit_L3GD20_Unified gyro = Adafruit_L3GD20_Unified(20);
 	sensors_event_t event;
-	const String tag;
+	unsigned long end_time;
 };
 
 #endif
