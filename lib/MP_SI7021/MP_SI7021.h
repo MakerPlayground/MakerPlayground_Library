@@ -7,15 +7,20 @@
 class MP_SI7021
 {
 public:
-	MP_SI7021(const String &tag);
+	MP_SI7021();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getTemperature();
 	double getHumidity();
 
 private:
 	Adafruit_Si7021 sensor;
-	const String tag;
+	unsigned long end_time;
+	double temperature;
+	double humidity;
 };
 
 #endif
