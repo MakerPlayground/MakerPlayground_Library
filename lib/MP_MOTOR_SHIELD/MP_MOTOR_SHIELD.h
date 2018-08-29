@@ -9,8 +9,12 @@
 class MP_MOTOR_SHIELD
 {
 public:
-	MP_MOTOR_SHIELD(const String &tag);
-	void init();
+	MP_MOTOR_SHIELD();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	void on(char dir[], uint8_t speed);
 	void reverse();
 	void set_speed(uint8_t speed);
@@ -19,8 +23,9 @@ public:
 private:
 	Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 	Adafruit_DCMotor *myMotor;
-	uint8_t pin=0;
-	const String tag;
+
+	uint8_t speed;
+	uint8_t direction;
 };
 
 #endif
