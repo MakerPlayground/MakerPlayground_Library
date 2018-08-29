@@ -1,14 +1,29 @@
 #include "MP_BUZZER.h"
 
-MP_BUZZER::MP_BUZZER(uint8_t pin, const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_BUZZER::ERRORS = errors_p;
+
+MP_BUZZER::MP_BUZZER(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
-void MP_BUZZER::init()
+int MP_BUZZER::init()
 {
 	pinMode(this->pin, OUTPUT);
+	return 0;
+}
+
+void MP_BUZZER::update(unsigned long current_time) 
+{
+	
+}
+
+void MP_BUZZER::printStatus() {
+	Serial.print(F("If this device is not work properly, check the connection on pin "));
+	Serial.println(this->pin);
 }
 
 void MP_BUZZER::beep()

@@ -5,14 +5,17 @@
 class MP_LIGHT_SENSOR
 {
 public:
-	MP_LIGHT_SENSOR(uint8_t pin, const String &tag);
+	MP_LIGHT_SENSOR(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
 	double getPercent();
-	void init();
 
 private:
 	uint8_t pin;
-	const String tag;
+	double value;
 };
 
 #endif

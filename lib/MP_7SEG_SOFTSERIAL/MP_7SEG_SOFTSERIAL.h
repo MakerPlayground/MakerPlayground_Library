@@ -7,9 +7,12 @@
 class MP_7SEG_SOFTSERIAL
 {
 public:
-	MP_7SEG_SOFTSERIAL(uint8_t tx, const String &tag);
-
-	void init();
+	MP_7SEG_SOFTSERIAL(uint8_t tx);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+	
 	void showValue(double num);
 	void showData(double num);
 	void off();
@@ -19,7 +22,7 @@ private:
 	void showFloat(double num);
 	void sendData(int num, uint8_t dot, bool negative);
 	SendOnlySoftwareSerial serial;
-	const String tag;
+	double valueToShow;
 };
 
 #endif

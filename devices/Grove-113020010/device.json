@@ -22,65 +22,22 @@
   "category": "",
   "port": [
     {
-      "name": "VIN",
+      "name": "Port",
       "type": "GROVE",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "VCC"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 3.3,
-      "x": 14.5,
-      "y": 69.0
-    },
-    {
-      "name": "GND",
-      "type": "GROVE",
-      "function": [
-        {
-          "type": "POWER",
-          "pintype": "GND"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 3.3,
-      "x": 28.9,
-      "y": 69.0
-    },
-    {
-      "name": "RX",
-      "type": "GROVE",
-      "function": [
-        {
-          "type": "GPIO_1",
+          "type": "GROVE_GPIO_DUAL_1",
           "pintype": "INOUT"
         }
       ],
       "v_min": 3.3,
       "v_max": 3.3,
-      "x": 43.3,
-      "y": 69.0
-    },
-    {
-      "name": "TX",
-      "type": "GROVE",
-      "function": [
-        {
-          "type": "GPIO_2",
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 3.3,
-      "x": 57.7,
-      "y": 69.0
+      "x": 0.0,
+      "y": 0.0
     }
   ],
   "connectivity": [
-    "GPIO_1",
-    "GPIO_2"
+    "GROVE_GPIO_DUAL_1"
   ],
   "compatibility": [
     {

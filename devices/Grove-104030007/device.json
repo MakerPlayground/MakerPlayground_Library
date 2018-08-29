@@ -19,50 +19,22 @@
   "category": "",
   "port": [
     {
-      "name": "SIG",
+      "name": "Port",
       "type": "GROVE",
       "function": [
         {
-          "type": "GPIO_1",
+          "type": "GROVE_PWM_SINGLE_1",
           "pintype": "INOUT"
         }
       ],
       "v_min": 3.3,
       "v_max": 5.0,
-      "x": 31.785,
-      "y": 42.489
-    },
-    {
-      "name": "GND",
-      "type": "GROVE",
-      "function": [
-        {
-          "type": "POWER",
-          "pintype": "GND"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 2.984,
-      "y": 0.002
-    },
-    {
-      "name": "VCC",
-      "type": "GROVE",
-      "function": [
-        {
-          "type": "POWER",
-          "pintype": "VCC"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 117.42,
-      "y": 60.299
+      "x": 0.0,
+      "y": 0.0
     }
   ],
   "connectivity": [
-    "GPIO_1"
+    "GROVE_PWM_SINGLE_1"
   ],
   "compatibility": [
     {

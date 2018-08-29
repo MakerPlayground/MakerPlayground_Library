@@ -2,17 +2,21 @@
 #define MP_TRIMPOT_H
 
 #include <Arduino.h>
+
 class MP_TRIMPOT
 {
 public:
-	MP_TRIMPOT(uint8_t pin, const String &tag);
+	MP_TRIMPOT(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getPercent();
 
 private:
 	uint8_t pin;
-	const String tag;
+	double value;
 };
 
 #endif

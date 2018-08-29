@@ -1,22 +1,38 @@
 #include "MP_PIR.h"
 
-MP_PIR::MP_PIR(uint8_t pin, const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_PIR::ERRORS = errors_p;
+
+MP_PIR::MP_PIR(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
-void MP_PIR::init()
+int MP_PIR::init()
 {
+	isMotionDetected = false;
 	pinMode(this->pin, INPUT);
+}
+
+void MP_PIR::update(unsigned long current_time)
+{
+	this->isMotionDetected = (digitalRead(pin) == HIGH);
+}
+
+void MP_PIR::printStatus()
+{
+	Serial.print(F("Motion is "));
+	Serial.println(this->isMotionDetected ? "detected": "not detected");
 }
 
 int MP_PIR::isDetected()
 {
-	return digitalRead(pin) == HIGH;
+	return this->isMotionDetected;
 }
 
 int MP_PIR::isNotDetected()
 {
-	return digitalRead(pin) == LOW;
+	return !(this->isMotionDetected);
 }

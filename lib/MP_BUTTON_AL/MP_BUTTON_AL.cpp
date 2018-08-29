@@ -1,14 +1,30 @@
 #include "MP_BUTTON_AL.h"
 
-MP_BUTTON_AL::MP_BUTTON_AL(uint8_t pin, const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_BUTTON_AL::ERRORS = errors_p;
+
+MP_BUTTON_AL::MP_BUTTON_AL(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
-void MP_BUTTON_AL::init()
+int MP_BUTTON_AL::init()
 {
 	pinMode(pin, INPUT_PULLUP);
+	return 0;
+}
+
+void MP_BUTTON_AL::update(unsigned long current_time)
+{
+
+}
+
+void MP_BUTTON_AL::printStatus() 
+{
+	Serial.print(F("Button is now "));
+	Serial.println(digitalRead(pin) == LOW ? "pressed": "released");
 }
 
 boolean MP_BUTTON_AL::isReleased()

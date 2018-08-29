@@ -3,17 +3,20 @@
 
 #include <Arduino.h>
 
-class MP_MP_MICROPHONE
+class MP_MICROPHONE
 {
 public:
-	MP_MP_MICROPHONE(uint8_t pin,const String &tag);
+	MP_MICROPHONE(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getSoundLevel();
 
 private:
 	uint8_t pin;
-	const String tag;
+	double soundLevel;
 };
 
 #endif

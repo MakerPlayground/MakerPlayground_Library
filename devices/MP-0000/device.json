@@ -41,10 +41,6 @@
           "pintype": "INOUT"
         },
         {
-          "type": "MP_PWM_DUAL_1",
-          "pintype": "INOUT"
-        },
-        {
           "type": "MP_GPIO_SINGLE_1",
           "pintype": "INOUT"
         },
@@ -67,7 +63,7 @@
           "pintype": "INOUT"
         },
         {
-          "type": "MP_PWM_DUAL_2",
+          "type": "MP_PWM_DUAL_1",
           "pintype": "INOUT"
         },
         {
@@ -93,10 +89,6 @@
           "pintype": "INOUT"
         },
         {
-          "type": "MP_PWM_DUAL_3",
-          "pintype": "INOUT"
-        },
-        {
           "type": "MP_GPIO_SINGLE_3",
           "pintype": "INOUT"
         },
@@ -119,7 +111,7 @@
           "pintype": "INOUT"
         },
         {
-          "type": "MP_PWM_DUAL_4",
+          "type": "MP_PWM_DUAL_2",
           "pintype": "INOUT"
         },
         {
@@ -253,10 +245,16 @@
     "MP_PWM_SINGLE_4",
     "MP_PWM_DUAL_1",
     "MP_PWM_DUAL_2",
-    "MP_PWM_DUAL_3",
-    "MP_PWM_DUAL_4",
+    "MP_GPIO_SINGLE_1",
+    "MP_GPIO_SINGLE_2",
+    "MP_GPIO_SINGLE_3",
+    "MP_GPIO_SINGLE_4",
     "MP_GPIO_SINGLE_5",
     "MP_GPIO_SINGLE_6",
+    "MP_GPIO_DUAL_1",
+    "MP_GPIO_DUAL_2",
+    "MP_GPIO_DUAL_3",
+    "MP_GPIO_DUAL_4",
     "MP_GPIO_DUAL_5",
     "MP_GPIO_DUAL_6",
     "MP_ANALOG_SINGLE_1",

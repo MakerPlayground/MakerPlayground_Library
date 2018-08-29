@@ -1,18 +1,34 @@
 #include "MP_MICROPHONE.h"
 
-MP_MP_MICROPHONE::MP_MP_MICROPHONE(uint8_t pin,const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_MICROPHONE::ERRORS = errors_p;
+
+MP_MICROPHONE::MP_MICROPHONE(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
-void MP_MP_MICROPHONE::init()
+int MP_MICROPHONE::init()
 {
+	this->soundLevel = 0;
 	pinMode(pin, INPUT);
+	return 0;
 }
 
-double MP_MP_MICROPHONE::getSoundLevel()
+void MP_MICROPHONE::update(unsigned long current_time)
 {
-	Serial.println(100.0*analogRead(pin)/1024.0);
-	return 100.0*analogRead(pin)/1024.0;
+	this->soundLevel = 100.0*analogRead(pin)/1023.0;
+}
+
+void MP_MICROPHONE::printStatus()
+{
+	Serial.print(F("sound level = "));
+	Serial.println(this->soundLevel);
+}
+
+double MP_MICROPHONE::getSoundLevel()
+{
+	return this->soundLevel;
 }

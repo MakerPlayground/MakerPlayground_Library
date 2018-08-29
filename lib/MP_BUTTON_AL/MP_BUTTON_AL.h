@@ -6,15 +6,17 @@
 class MP_BUTTON_AL
 {
 public:
-	MP_BUTTON_AL(uint8_t pin, const String &tag);
+	MP_BUTTON_AL(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	boolean isReleased();
 	boolean isPressed();
 
 private:
 	uint8_t pin;
-	const String tag;
 };
 
 #endif

@@ -10,7 +10,7 @@
   ],
   "classname": "MP_BLYNK_WIFI",
   "library_dependency": [
-    "blynkk/blynk-library",
+    "blynkkk/blynk-library",
     "itead/ITEADLIB_Arduino_WeeESP8266"
   ],
   "width": 128.0,

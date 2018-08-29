@@ -6,14 +6,17 @@
 class MP_PIR
 {
 public:
-	MP_PIR(uint8_t pin, const String &tag);
+	MP_PIR(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	int isDetected();
 	int isNotDetected();
 
 private:
 	uint8_t pin;
-	const String tag;
+	int isMotionDetected;
 };
 #endif
