@@ -70,21 +70,11 @@
       "action": [
         {
           "name": "Wait For Press",
-          "parameter": [
-            {
-              "name": "isPressed",
-              "constraint": []
-            }
-          ]
+          "parameter": []
         },
         {
           "name": "Wait For Release",
-          "parameter": [
-            {
-              "name": "isReleased",
-              "constraint": []
-            }
-          ]
+          "parameter": []
         }
       ],
       "value": [],
