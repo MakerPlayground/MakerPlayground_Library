@@ -34,3 +34,8 @@ double VD_NUMBER_CONTAINER::getValue()
 {
     return this->value;
 }
+
+bool VD_NUMBER_CONTAINER::checkValue(double value)
+{
+    return this->value == value;
+}

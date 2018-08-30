@@ -14,6 +14,7 @@ public:
 
 	void setValue(double value);
 	double getValue();
+	bool checkValue(double value);
 
 private:
 	double value;
