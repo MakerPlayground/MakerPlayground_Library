@@ -10,7 +10,7 @@
       "ARDUINO",
       "GROVE_ARDUINO"
     ],
-    "classname": "Container",
+    "classname": "VD_NUMBER_CONTAINER",
     "library_dependency": [],
     "width": 0.0,
     "height": 0.0,
