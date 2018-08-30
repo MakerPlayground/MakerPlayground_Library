@@ -1,0 +1,76 @@
+{
+    "id": "VD-0002",
+    "brand": "MakerPlayground",
+    "model": "Virtual Counter",
+    "url": "http://www.makerplayground.io/library/VD-0002",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "platform": [
+      "MP_ARDUINO",
+      "ARDUINO",
+      "GROVE_ARDUINO"
+    ],
+    "classname": "VD_TIMER",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "v": "",
+    "i": "",
+    "w": "",
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "VIRTUAL",
+        "function": [
+          {
+            "type": "NOT_CONNECTED",
+            "pintype": "NOT_CONNECTED"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "NOT_CONNECTED"
+    ],
+    "compatibility": [
+      {
+        "name": "Timer",
+        "action": [
+          {
+            "name": "Start timer",
+            "parameter": []
+          },
+          {
+            "name": "Time out",
+            "parameter": [
+              {
+                "name": "Second",
+                "constraint": {
+                  "min": 1,
+                  "max": 1000000000,
+                  "unit": "SECOND"
+                }
+              }
+            ]
+          }
+        ],
+        "value": [
+          {
+            "name": "Time",
+            "constraint": {
+              "min": 0,
+              "max": 1000000000,
+              "unit": "SECOND"
+            }
+          }
+        ],
+        "count": ""
+      }
+    ]
+  }
