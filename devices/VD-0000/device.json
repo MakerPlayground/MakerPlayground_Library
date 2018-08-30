@@ -1,0 +1,76 @@
+{
+    "id": "VD-0000",
+    "brand": "MakerPlayground",
+    "model": "Virtual Number Container",
+    "url": "http://www.makerplayground.io/library/VD-0000",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "platform": [
+      "MP_ARDUINO",
+      "ARDUINO",
+      "GROVE_ARDUINO"
+    ],
+    "classname": "Container",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "v": "",
+    "i": "",
+    "w": "",
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "VIRTUAL",
+        "function": [
+          {
+            "type": "NOT_CONNECTED",
+            "pintype": "NOT_CONNECTED"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "NOT_CONNECTED"
+    ],
+    "compatibility": [
+      {
+        "name": "Number Container",
+        "action": [
+          {
+            "name": "Compare",
+            "parameter": []
+          },
+          {
+            "name": "Set to",
+            "parameter": [
+              {
+                "name": "Value",
+                "constraint": {
+                  "min": -50000.0,
+                  "max": 50000.0,
+                  "unit": "NOT_SPECIFIED"
+                }
+              }
+            ]
+          }
+        ],
+        "value": [
+          {
+            "name": "Value",
+            "constraint": {
+              "min": -50000.0,
+              "max": 50000.0,
+              "unit": "NOT_SPECIFIED"
+            }
+          }
+        ],
+        "count": ""
+      }
+    ]
+  }
