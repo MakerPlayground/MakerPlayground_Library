@@ -12,9 +12,12 @@
 class MP_BME280
 {
 public:
-	MP_BME280(const String &tag);
+	MP_BME280();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getPressure();
 	double getAltitude();
 	double getHumidity();
@@ -22,7 +25,11 @@ public:
 
 private:
 	Adafruit_BME280 bme;
-	const String tag;
+	unsigned long end_time;
+	double pressure;
+	double altitude;
+	double humidity;
+	double temperature;
 };
 
 #endif

@@ -1,60 +1,82 @@
 #include "MP_TCS34725.h"
 
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "No TCS34725 found ... check your connections"
+const char* const errors_p[] PROGMEM = {ok, error1};
+
+const char* const* MP_TCS34725::ERRORS = errors_p;
+
 float MAX (float r, float g, float b);
 float MIN (float r, float g, float b);
 void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v );
 
-MP_TCS34725::MP_TCS34725(const String &tag)
-	:tag(tag)
+MP_TCS34725::MP_TCS34725()
 {
 }
 
-void MP_TCS34725::init()
+int MP_TCS34725::init()
 {
-	Serial.println("Color View Test!");
-	if (tcs.begin()) {
-		Serial.println("Found sensor");
-	} else {
-		Serial.println("No TCS34725 found ... check your connections");
-
-		while (1); // halt!
+	if (!tcs.begin()) {
+		return 1;
 	}
+	this->end_time = 0;
+	this->update(0);
+	return 0;
+}
+
+void MP_TCS34725::update(unsigned long current_time)
+{
+	if (current_time == 0 || current_time - end_time > 50) {
+		tcs.setInterrupt(false);      // turn on LED
+		delay(60);  // takes 50ms to read 
+		tcs.getRawData(&red, &green, &blue, &clear);
+		tcs.setInterrupt(true);  // turn off LED
+
+		// Figure out some basic hex code for visualization
+		float r, g, b;
+		r = ((float) red) / clear; 
+		g = ((float) green) / clear; 
+		b = ((float) blue) / clear;
+
+		RGBtoHSV(r, g, b, &h, &s, &v);
+
+		this->red = r * 256;
+		this->green = g * 256;
+		this->blue = b * 256;
+
+		end_time = current_time;
+	}
+}
+
+void MP_TCS34725::printStatus()
+{
+	Serial.print(F("Color: "));
+	Serial.print((int)this->red, HEX);
+	Serial.print((int)this->green, HEX);
+	Serial.print((int)this->blue, HEX);
+	Serial.println();
+
+	Serial.print(F("R = "));
+	Serial.println(this->red);
+
+	Serial.print(F("G = "));
+	Serial.println(this->green);
+
+	Serial.print(F("B = "));
+	Serial.println(this->blue);
+
+	Serial.print(F("H = "));
+	Serial.println(this->h);
+
+	Serial.print(F("S = "));
+	Serial.println(this->s);
+
+	Serial.print(F("V = "));
+	Serial.println(this->v);
 }
 
 int MP_TCS34725::isColor(char color[])
 {
-	uint16_t clear, red, green, blue;
-
-	tcs.setInterrupt(false);      // turn on LED
-
-	delay(60);  // takes 50ms to read 
-
-	tcs.getRawData(&red, &green, &blue, &clear);
-
-	tcs.setInterrupt(true);  // turn off LED
-
-	Serial.print("C:\t"); Serial.print(clear);
-	Serial.print("\tR:\t"); Serial.print(red);
-	Serial.print("\tG:\t"); Serial.print(green);
-	Serial.print("\tB:\t"); Serial.print(blue);
-
-	// Figure out some basic hex code for visualization
-	uint32_t sum = clear;
-	float r, g, b;
-	r = red; r /= sum;
-	g = green; g /= sum;
-	b = blue; b /= sum;
-	// r *= 256; g *= 256; b *= 256;
-	// Serial.print("\t");
-	// Serial.print((int)r, HEX); Serial.print((int)g, HEX); Serial.print((int)b, HEX);
-	// Serial.println();
-
-	float h,s,v ;
-	RGBtoHSV(r,g,b,&h,&s,&v);
-	Serial.print("\t");
-	Serial.print(h); Serial.print("\t"); Serial.print(s*100);  Serial.print("\t"); Serial.print(v*100);
-	Serial.println();
-
 	if (strcmp(color, "Red") == 0) {
 		return (h < 60 || h > 300);
 	} else if (strcmp(color, "Green") == 0) {

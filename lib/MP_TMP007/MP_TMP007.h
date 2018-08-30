@@ -8,14 +8,18 @@
 class MP_TMP007
 {
 public:
-	MP_TMP007(const String &tag);
+	MP_TMP007();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
 	double getTemperature();
 
 private:
 	Adafruit_TMP007 tmp007;
-	const String tag;
+	double celcius;
+	unsigned long end_time;
 };
 
 #endif

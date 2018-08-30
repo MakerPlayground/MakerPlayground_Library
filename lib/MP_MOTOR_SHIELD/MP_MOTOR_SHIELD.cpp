@@ -1,55 +1,83 @@
 #include "MP_MOTOR_SHIELD.h"
 
-MP_MOTOR_SHIELD::MP_MOTOR_SHIELD(const String &tag)
-	:tag(tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_MOTOR_SHIELD::ERRORS = errors_p;
+
+MP_MOTOR_SHIELD::MP_MOTOR_SHIELD()
 {
 	myMotor = AFMS.getMotor(1);
 }
 
-void MP_MOTOR_SHIELD::init()
+int MP_MOTOR_SHIELD::init()
 {
 	AFMS.begin();
-	direction = 1;
+	direction = RELEASE;
+	return 0;
 }
 
-void MP_MOTOR_SHIELD::on(char dir[], uint8_t speed)
+void MP_MOTOR_SHIELD::update(unsigned long current_time)
 {
-	if(!strcmp(dir,"CW"))
-		direction = 1;
-	else if(!strcmp(dir,"CW"))
-		direction = 2;
 
+}
+
+void MP_MOTOR_SHIELD::printStatus()
+{
+	Serial.print(F("speed = "));
+	Serial.println(this->speed);
+
+	Serial.print(F("direction = "));
+	if (this->direction == FORWARD) {
+		Serial.println("FORWARD");
+	}
+	else if (this->direction == BACKWARD) {
+		Serial.println("BACKWARD");
+	}
+	else if (this->direction == RELEASE) {
+		Serial.println("RELEASE");
+	}
+}
+
+void MP_MOTOR_SHIELD::on(char dir[], double speed)
+{
+	this->speed = (uint8_t) (speed * 8.0 / 100.0);
+	if(strcmp(dir, "Forward") == 0) {
+		direction = FORWARD;
+	}
+	else if(strcmp(dir, "Backward") == 0) {
+		direction = BACKWARD;
+	}
+	else {
+		direction = RELEASE;
+		this->speed = 0;
+	}
 	myMotor->setSpeed(speed);
-	if(direction ==1)
-	{
-		myMotor->run(FORWARD);
-	}
-	else if(direction == 2)
-	{
-		myMotor->run(BACKWARD);
-	}
+	myMotor->run(direction);
 }
 
-void MP_MOTOR_SHIELD::reverse()
-{
-	if(direction == 1)
-	{
-		direction = 2;
-		myMotor->run(BACKWARD);
-	}
-	else if(direction == 2)
-	{
-		direction = 1;
-		myMotor->run(FORWARD);
-	}
-}
+// void MP_MOTOR_SHIELD::reverse()
+// {
+// 	if(direction == FORWARD)
+// 	{
+// 		direction = BACKWARD;
+// 		myMotor->run(direction);
+// 	}
+// 	else if(direction == BACKWARD)
+// 	{
+// 		direction = FORWARD;
+// 		myMotor->run(direction);
+// 	}
+// }
 
-void MP_MOTOR_SHIELD::set_speed(uint8_t speed)
-{
-	myMotor->setSpeed(speed);
-}
+// void MP_MOTOR_SHIELD::set_speed(uint8_t speed)
+// {
+// 	this->speed = speed;
+// 	myMotor->setSpeed(speed);
+// }
 
 void MP_MOTOR_SHIELD::off()
 {
 	myMotor->setSpeed(0);
+	myMotor->run(RELEASE);
 }

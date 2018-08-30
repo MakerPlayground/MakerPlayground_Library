@@ -8,12 +8,19 @@
 class MP_TCS34725
 {
 public:
-	MP_TCS34725(const String &tag);
-	void init();
-	int isColor(char color[]);
+	MP_TCS34725();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
+	int isColor(char color[]); // support "Red", "Green" and "Blue"
 
 private:
-	const String tag;
+	Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+	uint16_t clear, red, green, blue;
+	float h, s, v;
+	unsigned long end_time;
 };
 
 #endif
