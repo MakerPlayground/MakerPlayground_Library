@@ -1,7 +1,7 @@
 {
     "id": "VD-0000",
     "brand": "MakerPlayground",
-    "model": "Virtual Number Container",
+    "model": "Virtual Number/Value Container",
     "url": "http://www.makerplayground.io/library/VD-0000",
     "type": "VIRTUAL",
     "formfactor": "NONE",
@@ -40,7 +40,7 @@
     ],
     "compatibility": [
       {
-        "name": "Number Container",
+        "name": "Container",
         "action": [
           {
             "name": "Compare",
