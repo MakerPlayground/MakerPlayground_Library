@@ -1,8 +1,8 @@
 {
-  "id": "MP-0000",
+  "id": "MP-0020",
   "brand": "MakerPlayground",
-  "model": "BaseBoard",
-  "url": "http://www.makerplayground.io/library/MP-0000",
+  "model": "BaseBoard v3.1",
+  "url": "http://www.makerplayground.io/library/MP-0020",
   "type": "CONTROLLER",
   "formfactor": "MP_CONTROLLER",
   "platform": [
@@ -181,7 +181,55 @@
       "y": 0.0
     },
     {
-      "name": "I2C (#1)",
+      "name": "D7/A3",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_GPIO_SINGLE_7",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_7",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_ANALOG_SINGLE_3",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_ANALOG_DUAL_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "D8/I2C1",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_GPIO_SINGLE_8",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_8",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_I2C1_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "I2C0 (#1)",
       "type": "MP",
       "function": [
         {
@@ -195,39 +243,11 @@
       "y": 0.0
     },
     {
-      "name": "I2C (#2)",
+      "name": "I2C0 (#2)",
       "type": "MP",
       "function": [
         {
           "type": "MP_I2C_2",
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
-    },
-    {
-      "name": "I2C (#3)",
-      "type": "MP",
-      "function": [
-        {
-          "type": "MP_I2C_3",
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
-    },
-    {
-      "name": "I2C (#4)",
-      "type": "MP",
-      "function": [
-        {
-          "type": "MP_I2C_4",
           "pintype": "INOUT"
         }
       ],
@@ -251,20 +271,25 @@
     "MP_GPIO_SINGLE_4",
     "MP_GPIO_SINGLE_5",
     "MP_GPIO_SINGLE_6",
+    "MP_GPIO_SINGLE_7",
+    "MP_GPIO_SINGLE_8",
     "MP_GPIO_DUAL_1",
     "MP_GPIO_DUAL_2",
     "MP_GPIO_DUAL_3",
     "MP_GPIO_DUAL_4",
     "MP_GPIO_DUAL_5",
     "MP_GPIO_DUAL_6",
+    "MP_GPIO_DUAL_7",
+    "MP_GPIO_DUAL_8",
     "MP_ANALOG_SINGLE_1",
     "MP_ANALOG_SINGLE_2",
+    "MP_ANALOG_SINGLE_3",
     "MP_ANALOG_DUAL_1",
     "MP_ANALOG_DUAL_2",
+    "MP_ANALOG_DUAL_3",
+    "MP_I2C1_1",
     "MP_I2C_1",
-    "MP_I2C_2",
-    "MP_I2C_3",
-    "MP_I2C_4"
+    "MP_I2C_2"
   ],
   "compatibility": []
 }
