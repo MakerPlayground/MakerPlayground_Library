@@ -217,10 +217,6 @@
         {
           "type": "MP_GPIO_DUAL_8",
           "pintype": "INOUT"
-        },
-        {
-          "type": "MP_I2C1_1",
-          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
