@@ -4,6 +4,7 @@
   "model": "BaseBoard",
   "url": "http://www.makerplayground.io/library/MP-0000",
   "type": "CONTROLLER",
+  "pio_boardid": "atmega328pb",
   "formfactor": "MP_CONTROLLER",
   "platform": [
     "MP_ARDUINO"
