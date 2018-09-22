@@ -13,7 +13,7 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 
-	void showValue(double value);
+	// void showValue(double value);
 	void showData(double value);
 	void setBrightness(char c[]);
 	void off();

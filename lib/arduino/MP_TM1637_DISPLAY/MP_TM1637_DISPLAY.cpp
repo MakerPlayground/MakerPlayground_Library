@@ -6,7 +6,7 @@ const char* const errors_p[] PROGMEM = {ok};
 const char* const* MP_TM1637_DISPLAY::ERRORS = errors_p;
 
 MP_TM1637_DISPLAY::MP_TM1637_DISPLAY(uint8_t clk, uint8_t dio)
-	:display(TM1637Dislay(clk, dio))
+	:display(TM1637Display(clk, dio))
 	,data(0)
 	,brightness(7)
 {
@@ -29,13 +29,6 @@ void MP_TM1637_DISPLAY::printStatus()
 
 	Serial.print(F("brightness = "));
 	Serial.println(this->brightness);
-}
-
-void MP_TM1637_DISPLAY::showValue(double value)
-{
-	data = value;
-	display.setBrightness(brightness, true);
-	display.showFloat(value);
 }
 
 void MP_TM1637_DISPLAY::showData(double value)
