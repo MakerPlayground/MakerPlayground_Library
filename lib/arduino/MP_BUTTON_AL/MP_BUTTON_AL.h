@@ -12,8 +12,9 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 
-	boolean isReleased();
-	boolean isPressed();
+	bool isPress();
+	bool isPressAndRelease();
+	bool isNotPress();
 
 private:
 	uint8_t pin;

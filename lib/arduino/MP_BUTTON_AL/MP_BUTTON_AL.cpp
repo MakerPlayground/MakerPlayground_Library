@@ -23,28 +23,28 @@ void MP_BUTTON_AL::update(unsigned long current_time)
 
 void MP_BUTTON_AL::printStatus() 
 {
-	Serial.print(F("Button is now "));
-	Serial.println(digitalRead(pin) == LOW ? "pressed": "released");
+	Serial.print(F("Button is "));
+	Serial.println((digitalRead(pin) == LOW) ? F("pressed"): F("not pressed"));
 }
 
-boolean MP_BUTTON_AL::isReleased()
+bool MP_BUTTON_AL::isPress()
 {
-	if(digitalRead(pin)==LOW)
-	{
-		delay(30);
-		while(digitalRead(pin)==LOW);
-		delay(30);
-		return true;
-	}
-	return false;
+    return (digitalRead(pin) == LOW);
 }
 
-boolean MP_BUTTON_AL::isPressed()
+bool MP_BUTTON_AL::isPressAndRelease()
 {
-	if(digitalRead(pin)==LOW)
-	{
-		delay(300);
-		return true;
-	}
-	return false;
+    if(digitalRead(pin) == LOW)
+    {
+        delay(30);  // debounce
+        while (digitalRead(pin) == LOW);
+        delay(30);  // debounce
+        return true;
+    }
+    return false;
+}
+
+bool MP_BUTTON_AL::isNotPress()
+{
+    return (digitalRead(pin) == HIGH);
 }

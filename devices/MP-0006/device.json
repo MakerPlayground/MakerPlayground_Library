@@ -41,11 +41,15 @@
       "name": "Button",
       "action": [
         {
-          "name": "Wait For Press",
+          "name": "Press",
           "parameter": []
         },
         {
-          "name": "Wait For Release",
+          "name": "Press and release",
+          "parameter": []
+        },
+        {
+          "name": "Not press",
           "parameter": []
         }
       ],
