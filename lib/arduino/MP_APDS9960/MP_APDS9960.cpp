@@ -3,7 +3,7 @@
 const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "Something went wrong during APDS-9960 init!";
 const char error2[] PROGMEM = "Something went wrong trying to set PGAIN";
-const char* const errors_p[] PROGMEM = {ok, error1};
+const char* const errors_p[] PROGMEM = {ok, error1, error2};
 
 const char* const* MP_APDS9960::ERRORS = errors_p;
 
