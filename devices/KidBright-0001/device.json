@@ -1,0 +1,280 @@
+{
+  "id": "KidBright-0001",
+  "brand": "KidBright",
+  "model": "32 V1.3",
+  "url": "https://www.kid-bright.org/",
+  "type": "CONTROLLER",
+  "pio_boardid": "esp32dev",
+  "formfactor": "STANDALONE",
+  "platform": [
+    "ESP32"
+  ],
+  "classname": "",
+  "library_dependency": [],
+  "width": 425.0,
+  "height": 303.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "14",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "16",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "36",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "13",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "PWM_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "connectivity": [
+    "GPIO_1",
+    "GPIO_2",
+    "ANALOG_1",
+    "PWM_1"
+  ],
+  "compatibility": [],
+  "integrated_device": [
+    {
+      "name": "Integrated Button (S1)",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": [],
+      "port": [
+        {
+          "name": "16",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "GPIO_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Button (S2)",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": [],
+      "port": [
+        {
+          "name": "14",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "GPIO_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Light Sensor",
+      "classname": "MP_LIGHT_SENSOR_KIDBRIGHT",
+      "library_dependency": [],
+      "port": [
+        {
+          "name": "36",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "ANALOG_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "ANALOG_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Light",
+          "action": [
+            {
+              "name": "Compare",
+              "parameter": []
+            }
+          ],
+          "value": [
+            {
+              "name": "Percent",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
+            }
+          ],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Buzzer",
+      "classname": "MP_BUZZER_ESP32",
+      "library_dependency": [],
+      "port": [
+        {
+          "name": "13",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "PWM_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "PWM_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Buzzer",
+          "action": [
+            {
+              "name": "Play Tone",
+              "parameter": [
+                {
+                  "name": "Tone Frequency",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 20000.0,
+                    "unit": "HERTZ"
+                  }
+                },
+                {
+                  "name": "Duration",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "unit": "SECOND"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Beep",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    }
+  ]
+}
