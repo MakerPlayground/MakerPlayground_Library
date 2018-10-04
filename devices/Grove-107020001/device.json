@@ -1,0 +1,71 @@
+{
+  "id": "Grove-107020001",
+  "brand": "SeeedStudio",
+  "model": "Grove - Speaker",
+  "url": "https://www.seeedstudio.com/Grove-Speaker-p-1445.html",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "platform": [
+    "GROVE_ARDUINO"
+  ],
+  "classname": "MP_BUZZER",
+  "library_dependency": [],
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "GROVE_PWM_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_PWM_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Buzzer",
+      "action": [
+        {
+          "name": "Play Tone",
+          "parameter": [
+            {
+              "name": "Tone Frequency",
+              "constraint": {
+                "min": 0.0,
+                "max": 20000.0,
+                "unit": "HERTZ"
+              }
+            },
+            {
+              "name": "Duration",
+              "constraint": {
+                "min": 0.0,
+                "max": 1000.0,
+                "unit": "SECOND"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Beep",
+          "parameter": []
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ]
+}

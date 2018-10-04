@@ -1,14 +1,14 @@
 {
-  "id": "Grove-101020020",
+  "id": "Grove-104030005",
   "brand": "SeeedStudio",
-  "model": "Grove - PIR Motion Sensor",
-  "url": "https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html",
+  "model": "Grove LED Socket Kit (Red, Green, White)",
+  "url": "https://www.seeedstudio.com/Grove-Red-LED-p-1144.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_PIR",
+  "classname": "MP_LED_AH",
   "library_dependency": [],
   "width": 128.0,
   "height": 148.0,
@@ -21,40 +21,39 @@
       "type": "GROVE",
       "function": [
         {
-          "type": "GROVE_GPIO_SINGLE_1",
+          "type": "GROVE_PWM_SINGLE_1",
           "pintype": "INOUT"
         }
       ],
-      "v_min": 3.0,
+      "v_min": 3.3,
       "v_max": 5.0,
       "x": 0.0,
       "y": 0.0
     }
   ],
   "connectivity": [
-    "GROVE_GPIO_SINGLE_1"
+    "GROVE_PWM_SINGLE_1"
   ],
   "compatibility": [
     {
-      "name": "Presence",
+      "name": "LED",
       "action": [
         {
-          "name": "Detect Human",
+          "name": "On",
           "parameter": [
             {
-              "name": "isDetected",
-              "constraint": []
+              "name": "Brightness",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
             }
           ]
         },
         {
-          "name": "No Human",
-          "parameter": [
-            {
-              "name": "isNotDetected",
-              "constraint": []
-            }
-          ]
+          "name": "Off",
+          "parameter": []
         }
       ],
       "value": [],

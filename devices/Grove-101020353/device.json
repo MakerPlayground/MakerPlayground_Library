@@ -1,8 +1,8 @@
-{
-  "id": "Grove-101020020",
+{device
+  "id": "Grove-101020353",
   "brand": "SeeedStudio",
-  "model": "Grove - PIR Motion Sensor",
-  "url": "https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html",
+  "model": "Grove - Mini PIR Motion Sensor",
+  "url": "https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
@@ -10,8 +10,8 @@
   ],
   "classname": "MP_PIR",
   "library_dependency": [],
-  "width": 128.0,
-  "height": 148.0,
+  "width": 000.0,
+  "height": 000.0,
   "property": [],
   "dependency": "",
   "category": "",

@@ -1,14 +1,14 @@
 {
-  "id": "Grove-101020055",
+  "id": "Grove-316010005",
   "brand": "SeeedStudio",
-  "model": "Grove - Gas Sensor(MQ2)",
-  "url": "https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ2%29-p-937.html",
+  "model": "Grove - Servo Motor",
+  "url": "https://www.seeedstudio.com/Grove-Servo-p-1241.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_MQ2",
+  "classname": "MP_SERVO",
   "library_dependency": [],
   "width": 000.0,
   "height": 000.0,
@@ -21,38 +21,38 @@
       "type": "GROVE",
       "function": [
         {
-          "type": "GROVE_ANALOG_SINGLE_1",
+          "type": "GROVE_GPIO_SINGLE_1",
           "pintype": "INOUT"
         }
       ],
-      "v_min": 3.0,
+      "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
       "y": 0.0
     }
   ],
   "connectivity": [
-    "GROVE_ANALOG_SINGLE_1"
+    "GROVE_GPIO_SINGLE_1"
   ],
   "compatibility": [
     {
-      "name": "LPG",
+      "name": "Servo",
       "action": [
         {
-          "name": "Compare",
-          "parameter": []
+          "name": "Move To",
+          "parameter": [
+            {
+              "name": "Degree",
+              "constraint": {
+                "min": 0.0,
+                "max": 180.0,
+                "unit": "DEGREE"
+              }
+            }
+          ]
         }
       ],
-      "value": [
-        {
-          "name": "Percent",
-          "constraint": {
-            "min": 0.0,
-            "max": 100.0,
-            "unit": "PERCENT"
-          }
-        }
-      ],
+      "value": [],
       "count": ""
     }
   ]

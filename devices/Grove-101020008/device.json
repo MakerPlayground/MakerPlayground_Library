@@ -1,31 +1,31 @@
 {
-  "id": "Grove-101020055",
+  "id": "Grove-101020008",
   "brand": "SeeedStudio",
-  "model": "Grove - Gas Sensor(MQ2)",
-  "url": "https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ2%29-p-937.html",
+  "model": "Grove - Moisture Sensor",
+  "url": "https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_MQ2",
+  "classname": "MP_SOIL_MOISTURE_W_EN",
   "library_dependency": [],
-  "width": 000.0,
-  "height": 000.0,
+  "width": 0.0,
+  "height": 0.0,
   "property": [],
   "dependency": "",
   "category": "",
   "port": [
     {
       "name": "Port",
-      "type": "GROVE",
+      "type": "MP",
       "function": [
         {
           "type": "GROVE_ANALOG_SINGLE_1",
           "pintype": "INOUT"
         }
       ],
-      "v_min": 3.0,
+      "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
       "y": 0.0
@@ -36,7 +36,7 @@
   ],
   "compatibility": [
     {
-      "name": "LPG",
+      "name": "Soil Moisture",
       "action": [
         {
           "name": "Compare",

@@ -1,17 +1,17 @@
 {
-  "id": "Grove-101020055",
+  "id": "Grove-101020048",
   "brand": "SeeedStudio",
-  "model": "Grove - Gas Sensor(MQ2)",
-  "url": "https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ2%29-p-937.html",
+  "model": "Grove - Rotary Angle Sensor",
+  "url": "https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
     "GROVE_ARDUINO"
   ],
-  "classname": "MP_MQ2",
+  "classname": "MP_TRIMPOT",
   "library_dependency": [],
-  "width": 000.0,
-  "height": 000.0,
+  "width": 128.0,
+  "height": 148.0,
   "property": [],
   "dependency": "",
   "category": "",
@@ -25,7 +25,7 @@
           "pintype": "INOUT"
         }
       ],
-      "v_min": 3.0,
+      "v_min": 3.3,
       "v_max": 5.0,
       "x": 0.0,
       "y": 0.0
@@ -36,7 +36,7 @@
   ],
   "compatibility": [
     {
-      "name": "LPG",
+      "name": "POT",
       "action": [
         {
           "name": "Compare",

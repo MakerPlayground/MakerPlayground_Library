@@ -1,0 +1,123 @@
+{
+  "id": "Grove-105020012",
+  "brand": "SeeedStudio",
+  "model": "Accelerometer/Gyroscope",
+  "url": "https://www.seeedstudio.com/Grove-6-Axis-Accelerometer-Gyroscope-p-2606.html",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "platform": [
+    "GROVE_ARDUINO"
+  ],
+  "classname": "MP_LSM6DS3",
+  "library_dependency": [
+    "SparkFun/SparkFun_LSM6DS3_Arduino_Library",
+    "Wire",
+    "SPI"
+  ],
+  "width": 000.0,
+  "height": 000.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "GROVE_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Accelerometer",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Accel_X",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Y",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Z",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Magnitude",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        }
+      ],
+      "count": ""
+    },
+    {
+      "name": "Gyroscope",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Gyro_X",
+          "constraint": {
+            "min": -200.0,
+            "max": 200.0,
+            "unit": "RADIUSPERSEC"
+          }
+        },
+        {
+          "name": "Gyro_Y",
+          "constraint": {
+            "min": -200.0,
+            "max": 200.0,
+            "unit": "RADIUSPERSEC"
+          }
+        },
+        {
+          "name": "Gyro_Z",
+          "constraint": {
+            "min": -200.0,
+            "max": 200.0,
+            "unit": "RADIUSPERSEC"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
