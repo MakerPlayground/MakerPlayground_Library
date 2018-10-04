@@ -17,7 +17,7 @@ const char* const* MP_SOIL_MOISTURE::ERRORS = errors_p;
 double MP_BLYNK_WIFI::value[8];
 uint8_t MP_BLYNK_WIFI::valueChanged;
 
-MP_BLYNK_WIFI::MP_BLYNK_WIFI(char* auth, char* ssid, char* pass, const String &tag)
+MP_BLYNK_WIFI::MP_BLYNK_WIFI(char* auth, char* ssid, char* pass)
     : wifi(&Serial1)
     , auth(auth)
     , ssid(ssid)
