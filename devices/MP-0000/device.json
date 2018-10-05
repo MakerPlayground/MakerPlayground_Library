@@ -6,17 +6,6 @@
   "type": "CONTROLLER",
   "pio_boardid": "atmega328pb",
   "formfactor": "MP_CONTROLLER",
-  "support_cloudplatform": [
-    {
-      "cloud_platform": "BLYNK",
-      "classname": "MP_BLYNK_SERIAL1_WIFI",
-      "library_dependency": [
-        "blynkkk/blynk-library",
-        "itead/ITEADLIB_Arduino_WeeESP8266",
-        "vshymanskyy/BlynkESP8266"
-      ]
-    }
-  ],
   "platform": [
     "MP_ARDUINO"
   ],
@@ -44,6 +33,7 @@
     },
     {
       "name": "D1",
+      "alias": ["3", "4"], 
       "type": "MP",
       "function": [
         {
@@ -66,6 +56,7 @@
     },
     {
       "name": "D2",
+      "alias": ["5", "6"], 
       "type": "MP",
       "function": [
         {
@@ -74,6 +65,7 @@
         },
         {
           "type": "MP_PWM_DUAL_1",
+          "conflict": ["MP_PWM_SINGLE_3", "MP_GPIO_SINGLE_3", "MP_GPIO_DUAL_3"],
           "pintype": "INOUT"
         },
         {
@@ -82,6 +74,7 @@
         },
         {
           "type": "MP_GPIO_DUAL_2",
+          "conflict": ["MP_PWM_SINGLE_3", "MP_GPIO_SINGLE_3", "MP_GPIO_DUAL_3"],
           "pintype": "INOUT"
         }
       ],
@@ -92,6 +85,7 @@
     },
     {
       "name": "D3",
+      "alias": ["6", "7"], 
       "type": "MP",
       "function": [
         {
@@ -114,6 +108,7 @@
     },
     {
       "name": "D4",
+      "alias": ["9", "10"], 
       "type": "MP",
       "function": [
         {
@@ -140,6 +135,7 @@
     },
     {
       "name": "D5/A1",
+      "alias": ["A0", "A1"], 
       "type": "MP",
       "function": [
         {
@@ -166,6 +162,7 @@
     },
     {
       "name": "D6/A2",
+      "alias": ["A2", "A3"], 
       "type": "MP",
       "function": [
         {

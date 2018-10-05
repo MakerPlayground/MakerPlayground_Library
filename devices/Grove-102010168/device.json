@@ -7,7 +7,7 @@
     "pio_boardid": "uno",
     "formfactor": "STANDALONE",
     "platform": [
-      "GROVE"
+      "GROVE_ARDUINO"
     ],
     "classname": "",
     "library_dependency": [],
@@ -27,6 +27,7 @@
           },
           {
             "type": "GROVE_GPIO_DUAL_1",
+            "conflict": ["GROVE_GPIO_SINGLE_2", "GROVE_GPIO_DUAL_2", "GROVE_PWM_SINGLE_1"],
             "pintype": "INOUT"
           }
         ],
@@ -45,6 +46,7 @@
           },
           {
             "type": "GROVE_GPIO_DUAL_2",
+            "conflict": ["GROVE_GPIO_SINGLE_3", "GROVE_GPIO_DUAL_3"],
             "pintype": "INOUT"
           },
           {
@@ -67,6 +69,7 @@
           },
           {
             "type": "GROVE_GPIO_DUAL_3",
+            "conflict": ["GROVE_GPIO_SINGLE_4", "GROVE_GPIO_DUAL_4", "GROVE_PWM_SINGLE_2", "GROVE_PWM_DUAL_1"],
             "pintype": "INOUT"
           }
         ],
@@ -85,6 +88,7 @@
           },
           {
             "type": "GROVE_GPIO_DUAL_4",
+            "conflict": ["GROVE_GPIO_SINGLE_5", "GROVE_GPIO_DUAL_5", "GROVE_PWM_SINGLE_3"],
             "pintype": "INOUT"
           },
           {
@@ -111,6 +115,7 @@
           },
           {
             "type": "GROVE_GPIO_DUAL_5",
+            "conflict": ["GROVE_GPIO_SINGLE_6", "GROVE_GPIO_DUAL_6"],
             "pintype": "INOUT"
           },
           {
