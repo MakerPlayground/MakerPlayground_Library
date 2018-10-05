@@ -6,6 +6,17 @@
   "type": "CONTROLLER",
   "pio_boardid": "atmega328pb",
   "formfactor": "MP_CONTROLLER",
+  "support_cloudplatform": [
+    {
+      "cloud_platform": "BLYNK",
+      "classname": "MP_BLYNK_SERIAL1_WIFI",
+      "library_dependency": [
+        "blynkkk/blynk-library",
+        "itead/ITEADLIB_Arduino_WeeESP8266",
+        "vshymanskyy/BlynkESP8266"
+      ]
+    }
+  ],
   "platform": [
     "MP_ARDUINO"
   ],
