@@ -1,4 +1,5 @@
-#define BLYNK_PRINT Serial
+/* Comment this out to disable prints and save space */
+// #define BLYNK_PRINT Serial
 #define ESP8266_BAUD 115200
 #define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
 #define PING_GAP 30000  // in ms (ping every 30 secs)

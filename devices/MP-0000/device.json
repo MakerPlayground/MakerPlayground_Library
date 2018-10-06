@@ -12,7 +12,6 @@
       "classname": "MP_BLYNK_SERIAL1_WIFI",
       "library_dependency": [
         "blynkkk/blynk-library",
-        "itead/ITEADLIB_Arduino_WeeESP8266",
         "vshymanskyy/BlynkESP8266"
       ]
     }
