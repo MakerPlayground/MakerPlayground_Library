@@ -17,10 +17,10 @@ public:
 
 	bool isReady();
 	int readVirtualPin(uint8_t pin);   // pin = 0-7
-	void writeVirtualPin(char pin[], double value);   // pin = 0-7
+	void writeVirtualPin(uint8_t pin, double value);   // pin = 0-7
 
 	// high level function use by maker playground
-	bool checkVirtualPinValue(char pin[], int value);
+	bool checkVirtualPinValue(uint8_t pin, int value);
 	int getVirtualPin0();
 	int getVirtualPin1();
 	int getVirtualPin2();

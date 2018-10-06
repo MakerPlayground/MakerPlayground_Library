@@ -1,0 +1,83 @@
+{
+    "id": "VD-0004",
+    "brand": "Blynk",
+    "model": "Virtual Gauge",
+    "url": "http://www.makerplayground.io/library/VD-0005",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "cloud_platform": "BLYNK",
+    "platform": [
+      "MP_ARDUINO",
+      "ARDUINO",
+      "GROVE_ARDUINO"
+    ],
+    "classname": "MP_BLYNK_VIRTUAL_GAUGE",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "property": [
+      {
+        "name": "virtual pin",
+        "datatype": "INTEGER_ENUM",
+        "controltype": "DROPDOWN",
+        "value": 0,
+        "constraint": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "VIRTUAL",
+        "function": [
+          {
+            "type": "NOT_CONNECTED",
+            "pintype": "NOT_CONNECTED"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "NOT_CONNECTED"
+    ],
+    "compatibility": [
+      {
+        "name": "Virtual Gauge",
+        "action": [
+          {
+            "name": "Display number",
+            "parameter": [
+              {
+                "name": "Value",
+                "value": 0.0,
+                "constraint": {
+                  "min": -99999999.0,
+                  "max": 99999999.0,
+                  "unit": "NOT_SPECIFIED"
+                },
+                "datatype": "DOUBLE",
+                "controltype": "SPINBOX"
+              }
+            ]
+          }
+        ],
+        "value": [],
+        "count": ""
+      }
+      
+    ]
+  }

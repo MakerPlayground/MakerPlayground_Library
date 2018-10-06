@@ -193,15 +193,15 @@ int MP_BLYNK_SERIAL1_WIFI::readVirtualPin(uint8_t pin)
     return MP_BLYNK_SERIAL1_WIFI::value[pin];
 }
 
-void MP_BLYNK_SERIAL1_WIFI::writeVirtualPin(char pin[], double value)
+void MP_BLYNK_SERIAL1_WIFI::writeVirtualPin(uint8_t pin, double value)
 {
-    MP_BLYNK_SERIAL1_WIFI::value[pin[0] - '0'] = value;
-    MP_BLYNK_SERIAL1_WIFI::valueChanged |= (1 << (pin[0] - '0'));
+    MP_BLYNK_SERIAL1_WIFI::value[pin] = value;
+    MP_BLYNK_SERIAL1_WIFI::valueChanged |= (1 << (pin));
 }
 
-bool MP_BLYNK_SERIAL1_WIFI::checkVirtualPinValue(char pin[], int value)
+bool MP_BLYNK_SERIAL1_WIFI::checkVirtualPinValue(uint8_t pin, int value)
 {
-    return MP_BLYNK_SERIAL1_WIFI::value[pin[0] - '0'] == value;
+    return MP_BLYNK_SERIAL1_WIFI::value[pin] == value;
 }
 
 int MP_BLYNK_SERIAL1_WIFI::getVirtualPin0()
