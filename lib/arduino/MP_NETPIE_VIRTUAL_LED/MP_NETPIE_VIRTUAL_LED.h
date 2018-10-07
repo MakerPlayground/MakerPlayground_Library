@@ -1,5 +1,5 @@
-#ifndef MP_NETPIE_VIRTUAL_LED
-#define MP_NETPIE_VIRTUAL_LED
+#ifndef MP_NETPIE_VIRTUAL_LED_H
+#define MP_NETPIE_VIRTUAL_LED_H
 
 #include <Arduino.h>
 #include "MP_NETPIE.h"
@@ -20,6 +20,7 @@ public:
 private:
     char* topic;
     MP_NETPIE* netpie;
+    double brightness_value;
 };
 
 #endif 

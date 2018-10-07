@@ -22,14 +22,18 @@ void MP_NETPIE_VIRTUAL_LED::update(unsigned long time)
 
 void MP_NETPIE_VIRTUAL_LED::printStatus()
 {
+    Serial.print(F("Brightness value = "));
+    Serial.println(brightness_value);
 }
 
 void MP_NETPIE_VIRTUAL_LED::on(double brightness)
 {
-    netpie->publish(topic, brightness);
+    brightness_value = brightness;
+    netpie->publish(topic, brightness_value);
 }
 
 void MP_NETPIE_VIRTUAL_LED::off()
 {
+    brightness_value = 0;
     netpie->publish(topic, 0);
 }

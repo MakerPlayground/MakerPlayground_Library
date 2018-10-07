@@ -19,6 +19,7 @@ public:
 private:
     char* topic;
     MP_NETPIE* netpie;
+    double current_value;
 };
 
 #endif 
