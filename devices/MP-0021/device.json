@@ -6,7 +6,23 @@
   "type": "CONTROLLER",
   "pio_boardid": "nodemcu-32s",
   "formfactor": "MP_CONTROLLER",
-  "support_cloudplatform": [],
+  "support_cloudplatform": [
+    {
+      "cloud_platform": "NETPIE",
+      "classname": "MP_NETPIE_ESP8266",
+      "library_dependency": [
+        "netpieio/microgear-esp8266-arduino"
+      ]
+    },
+    {
+      "cloud_platform": "BLYNK",
+      "classname": "MP_BLYNK_SERIAL1_WIFI",
+      "library_dependency": [
+        "blynkkk/blynk-library",
+        "vshymanskyy/BlynkESP8266"
+      ]
+    }
+  ],
   "platform": [
     "MP_ESP32"
   ],

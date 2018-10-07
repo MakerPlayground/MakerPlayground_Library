@@ -1,36 +1,27 @@
 {
-    "id": "VD-0005",
-    "brand": "Blynk",
+    "id": "VD-0006",
+    "brand": "NETPIE",
     "model": "Virtual Gauge",
-    "url": "http://www.makerplayground.io/library/VD-0005",
+    "url": "http://www.makerplayground.io/library/VD-0006",
     "type": "VIRTUAL",
     "formfactor": "NONE",
-    "cloud_platform": "BLYNK",
+    "cloud_platform": "NETPIE",
     "platform": [
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO"
     ],
-    "classname": "MP_BLYNK_VIRTUAL_GAUGE",
+    "classname": "MP_NETPIE_VIRTUAL_GAUGE",
     "library_dependency": [],
     "width": 0.0,
     "height": 0.0,
     "property": [
       {
-        "name": "virtual pin",
-        "datatype": "INTEGER_ENUM",
-        "controltype": "DROPDOWN",
-        "value": 0,
-        "constraint": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ]
+        "name": "topic",
+        "datatype": "STRING",
+        "controltype": "TEXTBOX",
+        "value": "",
+        "constraint": []
       }
     ],
     "dependency": "",

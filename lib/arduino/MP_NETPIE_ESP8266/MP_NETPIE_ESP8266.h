@@ -1,15 +1,15 @@
-#ifndef MP_Netpie_ESP8266_H
-#define MP_Netpie_ESP8266_H
+#ifndef MP_NETPIE_ESP8266_H
+#define MP_NETPIE_ESP8266_H
 
 #include <ESP8266WiFi.h>
 #include <MicroGear.h>
 
 #include <map>
 
-class MP_Netpie_ESP8266 
+class MP_NETPIE_ESP8266 
 {
 public:
-    MP_Netpie_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
+    MP_NETPIE_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
 
     int init();
     void update(unsigned long time);

@@ -1,15 +1,15 @@
-#include "MP_Netpie_ESP8266.h"
+#include "MP_NETPIE_ESP8266.h"
 
 #define PUBLISH_INTERVAL 500
 
-std::map<char*, double> MP_Netpie_ESP8266::value;
-std::map<char*, bool> MP_Netpie_ESP8266::changed; 
+std::map<char*, double> MP_NETPIE_ESP8266::value;
+std::map<char*, bool> MP_NETPIE_ESP8266::changed; 
 
 // function to be called when message arrives
 void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) 
 {
     msg[msglen] = '\0';
-    MP_Netpie_ESP8266::value[topic] = atof((char *) msg);
+    MP_NETPIE_ESP8266::value[topic] = atof((char *) msg);
 }
 
 // function to be called when this microgear is connected to NETPIE
@@ -19,7 +19,7 @@ void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
     // microgear.setAlias(ALIAS);
 }
 
-MP_Netpie_ESP8266::MP_Netpie_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]) 
+MP_NETPIE_ESP8266::MP_NETPIE_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]) 
     : appId(appId)
     , key(key)
     , secret(secret)
@@ -31,7 +31,7 @@ MP_Netpie_ESP8266::MP_Netpie_ESP8266(char appId[], char key[], char secret[], ch
 {
 }
 
-int MP_Netpie_ESP8266::init() 
+int MP_NETPIE_ESP8266::init() 
 {
     microgear.on(MESSAGE, onMsghandler);
     microgear.on(CONNECTED, onConnected);
@@ -62,7 +62,7 @@ int MP_Netpie_ESP8266::init()
     return 0;
 }
 
-void MP_Netpie_ESP8266::update(unsigned long time)
+void MP_NETPIE_ESP8266::update(unsigned long time)
 {
     if (microgear.connected())
     {
@@ -90,24 +90,24 @@ void MP_Netpie_ESP8266::update(unsigned long time)
     } 
 }
 
-void MP_Netpie_ESP8266::publish(char* topic, double v) 
+void MP_NETPIE_ESP8266::publish(char* topic, double v) 
 {
     value[topic] = v;
     changed[topic] = true;
 }
 
-void MP_Netpie_ESP8266::subscribe(char* topic)
+void MP_NETPIE_ESP8266::subscribe(char* topic)
 {
     value[topic] = 0;
     microgear.subscribe(topic);
 }
 
-void MP_Netpie_ESP8266::unsubscribe(char* topic)
+void MP_NETPIE_ESP8266::unsubscribe(char* topic)
 {
     microgear.unsubscribe(topic);
 }
 
-double MP_Netpie_ESP8266::getValue(char* topic)
+double MP_NETPIE_ESP8266::getValue(char* topic)
 {
     return value[topic];
 }
