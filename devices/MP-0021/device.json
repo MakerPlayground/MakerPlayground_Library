@@ -195,11 +195,12 @@
       "y": 0.0
     },
     {
-      "name": "I2C #1",
+      "name": "I2C (#1)",
       "type": "MP",
       "function": [
         {
           "type": "MP_I2C_1",
+          "conflict": ["MP_PWM_SINGLE_6", "MP_PWM_DUAL_3", "MP_GPIO_SINGLE_7", "MP_GPIO_DUAL_3"],
           "pintype": "INOUT"
         }
       ],
@@ -209,11 +210,32 @@
       "y": 0.0
     },
     {
-      "name": "I2C #2",
+      "name": "I2C (#2)",
       "type": "MP",
+      "alias": ["22", "21"],
       "function": [
         {
           "type": "MP_I2C_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_SINGLE_6",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_DUAL_3",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_7",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_3",
+          "conflict": ["MP_I2C_1"],
           "pintype": "INOUT"
         }
       ],
