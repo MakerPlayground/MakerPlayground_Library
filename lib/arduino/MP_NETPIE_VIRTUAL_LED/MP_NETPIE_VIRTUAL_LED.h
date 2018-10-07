@@ -20,7 +20,7 @@ public:
 private:
     char* topic;
     MP_NETPIE* netpie;
-    double brightness_value;
+    bool ledStatus;
 };
 
 #endif 
