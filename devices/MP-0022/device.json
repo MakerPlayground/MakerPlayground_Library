@@ -1,0 +1,69 @@
+{
+  "id": "MP-0022",
+  "brand": "Maker Playground",
+  "model": "H-Bridge DC Motor Driver",
+  "url": "http://www.makerplayground.io/library/MP-0022",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO",
+    "MP_ESP32"
+  ],
+  "classname": "MP_HBRIDGE_DRIVER",
+  "library_dependency": [
+    "makerplayground/ESP32_Polyfill"
+  ],
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_PWM_DUAL_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_PWM_DUAL_1"
+  ],
+  "compatibility": [
+    {
+      "name": "DC Motor",
+      "action": [
+        {
+          "name": "On",
+          "parameter": [
+            {
+              "name": "Direction",
+              "constraint": [
+                "Forward",
+                "Backward"
+              ]
+            },
+            {
+              "name": "Speed",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
+            }
+          ]
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ]
+}
