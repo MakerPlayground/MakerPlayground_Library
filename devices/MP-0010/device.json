@@ -6,12 +6,12 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP32"
   ],
   "classname": "MP_APDS9960",
   "library_dependency": [
-    "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library",
-    "Wire"
+    "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
   ],
   "width": 0.0,
   "height": 0.0,

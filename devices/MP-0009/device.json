@@ -6,12 +6,12 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP32"
   ],
   "classname": "MP_SHT",
   "library_dependency": [
-    "Sensirion/arduino-sht",
-    "Wire"
+    "Sensirion/arduino-sht"
   ],
   "width": 0.0,
   "height": 0.0,

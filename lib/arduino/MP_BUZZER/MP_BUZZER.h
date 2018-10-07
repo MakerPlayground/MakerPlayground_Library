@@ -2,6 +2,10 @@
 #define MP_BUZZER_H
 
 #include <Arduino.h>
+#ifdef ESP32
+#include "ESP32_Polyfill.h"
+#endif
+
 class MP_BUZZER
 {
 public:
@@ -16,6 +20,8 @@ public:
 
 private:
 	uint8_t pin;
+	boolean playing;
+	unsigned long endTime;
 };
 
 #endif

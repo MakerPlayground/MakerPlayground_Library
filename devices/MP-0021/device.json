@@ -8,7 +8,7 @@
   "formfactor": "MP_CONTROLLER",
   "support_cloudplatform": [],
   "platform": [
-    "MP_ARDUINO"
+    "MP_ESP32"
   ],
   "classname": "",
   "library_dependency": [],

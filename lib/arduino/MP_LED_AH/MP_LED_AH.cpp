@@ -13,6 +13,7 @@ MP_LED_AH::MP_LED_AH(uint8_t pin)
 int MP_LED_AH::init()
 {
 	pinMode(this->pin, OUTPUT);
+	analogWrite(this->pin, 0);
 	return 0;
 }
 
@@ -36,5 +37,6 @@ void MP_LED_AH::on(int brightness)
 void MP_LED_AH::off()
 {
 	this->brightness = 0;
-	digitalWrite(this->pin, LOW);
+	// digitalWrite and analogWrite don't mix well in ESP32 so we use analogWrite with duty cycle = 0% instead
+	analogWrite(this->pin, 0);
 }

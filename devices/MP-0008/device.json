@@ -6,13 +6,12 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP32"
   ],
   "classname": "MP_LSM6DS3",
   "library_dependency": [
-    "SparkFun/SparkFun_LSM6DS3_Arduino_Library",
-    "Wire",
-    "SPI"
+    "SparkFun/SparkFun_LSM6DS3_Arduino_Library"
   ],
   "width": 0.0,
   "height": 0.0,

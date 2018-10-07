@@ -6,10 +6,13 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP32"
   ],
   "classname": "MP_BUZZER",
-  "library_dependency": [],
+  "library_dependency": [
+    "makerplayground/ESP32_Polyfill"
+  ],
   "width": 0.0,
   "height": 0.0,
   "property": [],
