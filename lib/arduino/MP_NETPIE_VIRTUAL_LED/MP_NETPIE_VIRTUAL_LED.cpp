@@ -23,7 +23,7 @@ void MP_NETPIE_VIRTUAL_LED::update(unsigned long time)
 void MP_NETPIE_VIRTUAL_LED::printStatus()
 {
     Serial.print(F("LED is now "));
-    serial.println(ledStatus ? "on": "off");
+    Serial.println(ledStatus ? "on": "off");
 }
 
 void MP_NETPIE_VIRTUAL_LED::on()

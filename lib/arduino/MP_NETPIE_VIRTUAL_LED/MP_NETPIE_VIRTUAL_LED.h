@@ -14,7 +14,7 @@ public:
     void printStatus();
     static const char* const* ERRORS;
 
-    void on(double brightness);
+    void on();
     void off();
 
 private:
