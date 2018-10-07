@@ -8,7 +8,8 @@
     "platform": [
       "MP_ARDUINO",
       "ARDUINO",
-      "GROVE_ARDUINO"
+      "GROVE_ARDUINO",
+      "MP_ESP32"
     ],
     "classname": "VD_COUNTER",
     "library_dependency": [],

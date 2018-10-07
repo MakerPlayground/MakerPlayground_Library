@@ -1,17 +1,18 @@
 {
     "id": "VD-0006",
     "brand": "NETPIE",
-    "model": "Virtual Gauge",
-    "url": "http://www.makerplayground.io/library/VD-0006",
+    "model": "Virtual LED",
+    "url": "http://www.makerplayground.io/library/VD-0007",
     "type": "VIRTUAL",
     "formfactor": "NONE",
     "cloud_platform": "NETPIE",
     "platform": [
       "MP_ARDUINO",
       "ARDUINO",
-      "GROVE_ARDUINO"
+      "GROVE_ARDUINO",
+      "MP_ESP32"
     ],
-    "classname": "MP_NETPIE_VIRTUAL_GAUGE",
+    "classname": "MP_NETPIE_VIRTUAL_LED",
     "library_dependency": [],
     "width": 0.0,
     "height": 0.0,
@@ -47,23 +48,27 @@
     ],
     "compatibility": [
       {
-        "name": "Virtual Gauge",
+        "name": "Virtual LED",
         "action": [
           {
-            "name": "Display number",
+            "name": "On",
             "parameter": [
               {
-                "name": "Value",
-                "value": 0.0,
+                "name": "Brightness",
+                "value": 100.0,
                 "constraint": {
-                  "min": -99999999.0,
-                  "max": 99999999.0,
-                  "unit": "NOT_SPECIFIED"
+                  "min": 0.0,
+                  "max": 100.0,
+                  "unit": "PERCENT"
                 },
                 "datatype": "DOUBLE",
-                "controltype": "SPINBOX"
+                "controltype": "SLIDER"
               }
             ]
+          },
+          {
+            "name": "Off",
+            "parameter": []
           }
         ],
         "value": [],

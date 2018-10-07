@@ -1,21 +1,30 @@
 {
-    "id": "VD-0000",
-    "brand": "MakerPlayground",
-    "model": "Virtual Number/Value Container",
-    "url": "http://www.makerplayground.io/library/VD-0000",
+    "id": "VD-0006",
+    "brand": "NETPIE",
+    "model": "Virtual Gauge",
+    "url": "http://www.makerplayground.io/library/VD-0006",
     "type": "VIRTUAL",
     "formfactor": "NONE",
+    "cloud_platform": "NETPIE",
     "platform": [
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO",
       "MP_ESP32"
     ],
-    "classname": "VD_NUMBER_CONTAINER",
+    "classname": "MP_NETPIE_VIRTUAL_GAUGE",
     "library_dependency": [],
     "width": 0.0,
     "height": 0.0,
-    "property": [],
+    "property": [
+      {
+        "name": "topic",
+        "datatype": "STRING",
+        "controltype": "TEXTBOX",
+        "value": "",
+        "constraint": []
+      }
+    ],
     "dependency": "",
     "category": "",
     "port": [
@@ -39,37 +48,28 @@
     ],
     "compatibility": [
       {
-        "name": "Container",
+        "name": "Virtual Gauge",
         "action": [
           {
-            "name": "Compare",
-            "parameter": []
-          },
-          {
-            "name": "Set to",
+            "name": "Display number",
             "parameter": [
               {
                 "name": "Value",
+                "value": 0.0,
                 "constraint": {
-                  "min": -50000.0,
-                  "max": 50000.0,
+                  "min": -99999999.0,
+                  "max": 99999999.0,
                   "unit": "NOT_SPECIFIED"
-                }
+                },
+                "datatype": "DOUBLE",
+                "controltype": "SPINBOX"
               }
             ]
           }
         ],
-        "value": [
-          {
-            "name": "Value",
-            "constraint": {
-              "min": -50000.0,
-              "max": 50000.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          }
-        ],
+        "value": [],
         "count": ""
       }
+      
     ]
   }

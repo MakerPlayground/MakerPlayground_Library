@@ -1,19 +1,20 @@
-#ifndef MP_NETPIE_ESP8266_H
-#define MP_NETPIE_ESP8266_H
+#ifndef MP_NETPIE_ESP32_H
+#define MP_NETPIE_ESP32_H
 
-#include <ESP8266WiFi.h>
+#include "MP_NETPIE.h"
+#include <Wifi.h>
 #include <MicroGear.h>
 
 #include <map>
 
-class MP_NETPIE_ESP8266 
+class MP_NETPIE_ESP32 : public MP_NETPIE
 {
 public:
-    MP_NETPIE_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
+    MP_NETPIE_ESP32(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
 
     int init();
     void update(unsigned long time);
-    static const char* const* ERRORS;
+    void printStatus();
 
     // chat and feed is not supported yet
     // TODO: handle error when publish

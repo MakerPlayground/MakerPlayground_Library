@@ -11,7 +11,6 @@ public:
 	virtual void printStatus();
 	static const char* const* ERRORS;
 
-	virtual bool isReady();
 	virtual void publish(char* topic, double value);
 	virtual void subscribe(char* topic);
 	virtual void unsubscribe(char* topic);
