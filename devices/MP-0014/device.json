@@ -6,7 +6,8 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP32"
   ],
   "classname": "MP_SOIL_MOISTURE_W_EN",
   "library_dependency": [],
