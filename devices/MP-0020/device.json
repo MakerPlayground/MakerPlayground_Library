@@ -5,6 +5,7 @@
   "url": "http://www.makerplayground.io/library/MP-0020",
   "type": "CONTROLLER",
   "pio_boardid": "atmega328pb",
+  "wiring_method": "MP_HEXAGON",
   "formfactor": "MP_CONTROLLER",
   "support_cloudplatform": [
     {

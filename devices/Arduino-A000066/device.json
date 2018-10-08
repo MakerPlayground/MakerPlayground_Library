@@ -6,6 +6,7 @@
   "type": "CONTROLLER",
   "pio_boardid": "uno",
   "formfactor": "STANDALONE",
+  "wiring_method": "WIRE_AND_BREADBOARD",
   "support_cloudplatform": [
     {
       "cloud_platform": "BLYNK",

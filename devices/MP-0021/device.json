@@ -5,6 +5,7 @@
   "url": "http://www.makerplayground.io/library/MP-0021",
   "type": "CONTROLLER",
   "pio_boardid": "nodemcu-32s",
+  "wiring_method": "MP_SQUARE",
   "formfactor": "MP_CONTROLLER",
   "support_cloudplatform": [
     {

@@ -6,6 +6,7 @@
   "type": "CONTROLLER",
   "pio_boardid": "esp32dev",
   "formfactor": "STANDALONE",
+  "wiring_method": "KIDBRIGHT",
   "platform": [
     "ESP32"
   ],
