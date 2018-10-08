@@ -172,6 +172,10 @@
         {
           "type": "MP_ANALOG_SINGLE_1",
           "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_8",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
