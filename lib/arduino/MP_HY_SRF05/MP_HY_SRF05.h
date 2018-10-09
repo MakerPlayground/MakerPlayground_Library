@@ -18,6 +18,7 @@ private:
     uint8_t trig;
     uint8_t echo;
     double cm;
+    unsigned long nextReading;
 };
 
 #endif
