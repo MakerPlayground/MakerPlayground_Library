@@ -1,0 +1,59 @@
+{
+  "id": "MP-0023",
+  "brand": "Maker Playground",
+  "model": "Non-invasive AC Current Sensor (30A max)",
+  "url": "http://www.makerplayground.io/library/MP-0023",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO"
+  ],
+  "classname": "MP_SCT013_30A",
+  "library_dependency": [],
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_ANALOG_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Current",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Ampere",
+          "constraint": {
+            "min": 0.0,
+            "max": 30.0,
+            "unit": "AMPERE"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
