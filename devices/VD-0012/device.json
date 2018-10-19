@@ -1,0 +1,68 @@
+{
+    "id": "VD-0012",
+    "brand": "MakerPlayground",
+    "model": "Digital Device for Arduino Board (OUT)",
+    "url": "http://www.makerplayground.io/library/VD-0012",
+    "type": "VIRTUAL",
+    "formfactor": "STANDALONE",
+    "platform": [
+      "ARDUINO"
+    ],
+    "classname": "VD_DIGITAL_OUT",
+    "library_dependency": [],
+    "width": 87.0,
+    "height": 107.0,
+    "property": [],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "IN",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_1",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 3.3,
+        "v_max": 5.0,
+        "x": 57.0,
+        "y": 10.0
+      },
+      {
+        "name": "GND",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "POWER",
+            "pintype": "GND"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 5.0,
+        "x": 30.0,
+        "y": 10.0
+      }
+    ],
+    "connectivity": [
+      "GPIO_1"
+    ],
+    "compatibility": [
+      {
+        "name": "Digital (Out)",
+        "action": [
+          {
+            "name": "Set Output HIGH",
+            "parameter": []
+          },
+          {
+            "name": "Set Output LOW",
+            "parameter": []
+          }
+        ],
+        "value": [],
+        "count": ""
+      }
+    ]
+  }
