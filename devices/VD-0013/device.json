@@ -1,0 +1,61 @@
+{
+    "id": "VD-0013",
+    "brand": "MakerPlayground",
+    "model": "Analog Device for MakerPlayground BaseBoard (IN)",
+    "url": "http://www.makerplayground.io/library/VD-0013",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "platform": [
+      "MP_ARDUINO",
+      "MP_ESP32"
+    ],
+    "classname": "VD_ANALOG_IN",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "property": [],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "MP",
+        "function": [
+          {
+            "type": "MP_PWM_SINGLE_1",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "MP_PWM_SINGLE_1"
+    ],
+    "compatibility": [
+      {
+        "name": "Analog (In)",
+        "action": [
+          {
+            "name": "Compare",
+            "parameter": []
+          }
+        ],
+        "value": [
+          {
+            "name": "Percent",
+            "dataType": "DOUBLE",
+            "constraint": {
+              "min": 0,
+              "max": 100,
+              "unit": "PERCENT"
+            }
+          }
+        ],
+        "count": ""
+      }
+    ]
+  }

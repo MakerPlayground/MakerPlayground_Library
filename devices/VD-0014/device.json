@@ -1,0 +1,61 @@
+{
+    "id": "VD-0014",
+    "brand": "MakerPlayground",
+    "model": "Digital Device for MakerPlayground BaseBoard (OUT)",
+    "url": "http://www.makerplayground.io/library/VD-0014",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "platform": [
+      "MP_ARDUINO",
+      "MP_ESP32"
+    ],
+    "classname": "VD_ANALOG_OUT",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "property": [],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "MP",
+        "function": [
+          {
+            "type": "MP_PWM_SINGLE_1",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "MP_PWM_SINGLE_1"
+    ],
+    "compatibility": [
+      {
+        "name": "Analog (Out)",
+        "action": [
+          {
+            "name": "Set Output Percent",
+            "parameter": [
+              {
+                "name": "Percent",
+                "value": 100,
+                "constraint": {
+                  "min": 0.0,
+                  "max": 100.0,
+                  "unit": "PERCENT"
+                }
+              }
+            ]
+          }
+        ],
+        "value": [],
+        "count": ""
+      }
+    ]
+  }
