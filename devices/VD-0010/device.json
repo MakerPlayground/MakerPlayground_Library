@@ -1,0 +1,55 @@
+{
+    "id": "VD-0010",
+    "brand": "MakerPlayground",
+    "model": "Digital Device for MakerPlayground BaseBoard (OUT)",
+    "url": "http://www.makerplayground.io/library/VD-0010",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "platform": [
+      "MP_ARDUINO",
+      "MP_ESP32"
+    ],
+    "classname": "VD_DIGITAL_OUT",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "property": [],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "MP",
+        "function": [
+          {
+            "type": "MP_GPIO_SINGLE_1",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "MP_GPIO_SINGLE_1"
+    ],
+    "compatibility": [
+      {
+        "name": "Digital (Out)",
+        "action": [
+          {
+            "name": "Set Output HIGH",
+            "parameter": []
+          },
+          {
+            "name": "Set Output LOW",
+            "parameter": []
+          }
+        ],
+        "value": [],
+        "count": ""
+      }
+    ]
+  }
