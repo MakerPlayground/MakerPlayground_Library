@@ -1,17 +1,17 @@
 {
-    "id": "VD-0012",
+    "id": "VD-0015",
     "brand": "MakerPlayground",
-    "model": "Digital Device for Arduino Board (OUT)",
-    "url": "http://www.makerplayground.io/library/VD-0012",
+    "model": "Analog Device for Arduino Board (IN)",
+    "url": "http://www.makerplayground.io/library/VD-0015",
     "type": "VIRTUAL",
-    "formfactor": "STANDALONE",
+    "formfactor": "NONE",
     "platform": [
       "ARDUINO"
     ],
-    "classname": "VD_DIGITAL_OUT",
+    "classname": "VD_ANALOG_IN",
     "library_dependency": [],
-    "width": 87.0,
-    "height": 107.0,
+    "width": 0.0,
+    "height": 0.0,
     "property": [],
     "dependency": "",
     "category": "",
@@ -21,7 +21,7 @@
         "type": "WIRE",
         "function": [
           {
-            "type": "GPIO_1",
+            "type": "PWM_1",
             "pintype": "INOUT"
           }
         ],
@@ -46,22 +46,28 @@
       }
     ],
     "connectivity": [
-      "GPIO_1"
+      "PWM_1"
     ],
     "compatibility": [
       {
-        "name": "Digital (Out)",
+        "name": "Analog (In)",
         "action": [
           {
-            "name": "Set Output HIGH",
-            "parameter": []
-          },
-          {
-            "name": "Set Output LOW",
+            "name": "Compare",
             "parameter": []
           }
         ],
-        "value": [],
+        "value": [
+          {
+            "name": "Percent",
+            "dataType": "DOUBLE",
+            "constraint": {
+              "min": 0,
+              "max": 100,
+              "unit": "PERCENT"
+            }
+          }
+        ],
         "count": ""
       }
     ]

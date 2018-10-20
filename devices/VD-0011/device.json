@@ -17,7 +17,7 @@
     "category": "",
     "port": [
       {
-        "name": "IN",
+        "name": "SIG",
         "type": "WIRE",
         "function": [
           {
