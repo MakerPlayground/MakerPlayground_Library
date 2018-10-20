@@ -45,6 +45,7 @@
     },
     {
       "name": "D1",
+      "alias": ["3", "4"], 
       "type": "MP",
       "function": [
         {
@@ -67,6 +68,7 @@
     },
     {
       "name": "D2",
+      "alias": ["5", "6"], 
       "type": "MP",
       "function": [
         {
@@ -93,6 +95,7 @@
     },
     {
       "name": "D3",
+      "alias": ["6", "7"],
       "type": "MP",
       "function": [
         {
@@ -115,6 +118,7 @@
     },
     {
       "name": "D4",
+      "alias": ["9", "10"], 
       "type": "MP",
       "function": [
         {
@@ -141,6 +145,7 @@
     },
     {
       "name": "D5/A1",
+      "alias": ["A0", "A1"], 
       "type": "MP",
       "function": [
         {
@@ -167,6 +172,7 @@
     },
     {
       "name": "D6/A2",
+      "alias": ["A2", "A3"], 
       "type": "MP",
       "function": [
         {
@@ -193,6 +199,7 @@
     },
     {
       "name": "D7/A3",
+      "alias": ["A4", "A5"], 
       "type": "MP",
       "function": [
         {
@@ -219,6 +226,7 @@
     },
     {
       "name": "D8/I2C1",
+      "alias": ["11", "12"], 
       "type": "MP",
       "function": [
         {
