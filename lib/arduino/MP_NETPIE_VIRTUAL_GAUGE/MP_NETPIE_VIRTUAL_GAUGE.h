@@ -1,7 +1,7 @@
 #ifndef MP_NETPIE_VIRTUAL_GAUGE_H
 #define MP_NETPIE_VIRTUAL_GAUGE_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include "MP_NETPIE.h"
 
 class MP_NETPIE_VIRTUAL_GAUGE

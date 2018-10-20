@@ -1,7 +1,7 @@
 #ifndef MP_TCS3200_H
 #define MP_TCS3200_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 
 class MP_TCS3200

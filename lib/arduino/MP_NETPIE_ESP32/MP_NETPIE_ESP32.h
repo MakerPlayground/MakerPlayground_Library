@@ -1,6 +1,7 @@
 #ifndef MP_NETPIE_ESP32_H
 #define MP_NETPIE_ESP32_H
 
+#include "MP_DEVICE.h"
 #include "MP_NETPIE.h"
 #include <Wifi.h>
 #include <MicroGear.h>

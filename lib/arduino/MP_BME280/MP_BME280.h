@@ -1,7 +1,7 @@
 #ifndef MP_BME280_H
 #define MP_BME280_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include <SPI.h>
 #include "Adafruit_Sensor.h"

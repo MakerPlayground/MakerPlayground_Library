@@ -1,10 +1,7 @@
 #ifndef MP_LED_AH_H
 #define MP_LED_AH_H
 
-#include <Arduino.h>
-#ifdef ESP32
-#include "ESP32_Polyfill.h"
-#endif
+#include "MP_DEVICE.h"
 
 class MP_LED_AH
 {

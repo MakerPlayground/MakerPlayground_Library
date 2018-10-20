@@ -1,7 +1,7 @@
 #ifndef VD_ANALOG_IN_H
 #define VD_ANALOG_IN_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_ANALOG_IN
 {

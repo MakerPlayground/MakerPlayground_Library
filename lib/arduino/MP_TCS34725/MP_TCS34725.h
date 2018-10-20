@@ -1,7 +1,7 @@
 #ifndef MP_TCS34725_H
 #define MP_TCS34725_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "Adafruit_TCS34725.h"
 

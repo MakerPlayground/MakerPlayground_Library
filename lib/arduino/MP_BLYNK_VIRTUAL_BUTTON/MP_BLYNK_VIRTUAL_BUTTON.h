@@ -1,7 +1,7 @@
 #ifndef MP_BLYNK_VIRTUAL_BUTTON_H
 #define MP_BLYNK_VIRTUAL_BUTTON_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include "MP_BLYNK.h"
 
 class MP_BLYNK_VIRTUAL_BUTTON 

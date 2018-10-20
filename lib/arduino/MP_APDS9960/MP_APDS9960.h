@@ -1,7 +1,7 @@
 #ifndef MP_APDS9960_H
 #define MP_APDS9960_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "SparkFun_APDS9960.h"
 

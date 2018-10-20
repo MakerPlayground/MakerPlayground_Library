@@ -1,7 +1,7 @@
 #ifndef VD_DIGITAL_IN_H
 #define VD_DIGITAL_IN_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_DIGITAL_IN
 {

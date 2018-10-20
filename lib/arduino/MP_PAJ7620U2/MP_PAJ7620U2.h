@@ -1,7 +1,7 @@
 #ifndef MP_PAJ7620U2_H
 #define MP_PAJ7620U2_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "paj7620.h"
 

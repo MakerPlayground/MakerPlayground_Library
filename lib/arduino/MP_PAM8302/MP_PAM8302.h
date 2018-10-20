@@ -1,7 +1,7 @@
 #ifndef MP_PAM8302_H
 #define MP_PAM8302_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_PAM8302
 {

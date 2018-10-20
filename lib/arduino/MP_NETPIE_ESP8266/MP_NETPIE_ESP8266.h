@@ -1,6 +1,7 @@
 #ifndef MP_NETPIE_ESP8266_H
 #define MP_NETPIE_ESP8266_H
 
+#include "MP_DEVICE.h"
 #include <ESP8266WiFi.h>
 #include <MicroGear.h>
 

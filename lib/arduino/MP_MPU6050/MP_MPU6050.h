@@ -1,7 +1,7 @@
 #ifndef MP_MPU6050
 #define MP_MPU6050
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <MPU6050.h>

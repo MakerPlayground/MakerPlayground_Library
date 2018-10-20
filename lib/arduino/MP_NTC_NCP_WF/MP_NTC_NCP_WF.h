@@ -1,7 +1,7 @@
 #ifndef MP_NTC_NCP_WF_H
 #define MP_NTC_NCP_WF_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <math.h>
 
 class MP_NTC_NCP_WF

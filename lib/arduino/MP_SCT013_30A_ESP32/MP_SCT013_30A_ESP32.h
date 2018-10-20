@@ -1,7 +1,8 @@
 #ifndef MP_SCT013_30A_ESP32_H
 #define MP_SCT013_30A_ESP32_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
+
 class MP_SCT013_30A_ESP32
 {
 public:

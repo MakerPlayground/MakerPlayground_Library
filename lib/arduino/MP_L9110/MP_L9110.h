@@ -1,7 +1,7 @@
 #ifndef MP_L9110_H
 #define MP_L9110_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_L9110
 {

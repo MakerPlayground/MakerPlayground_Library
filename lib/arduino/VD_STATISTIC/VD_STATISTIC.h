@@ -1,7 +1,7 @@
 #ifndef VD_STATISTIC_H
 #define VD_STATISTIC_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_STATISTIC
 {

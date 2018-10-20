@@ -1,7 +1,8 @@
 #ifndef MP_MICROPHONE_NORMALIZED_H
 #define MP_MICROPHONE_NORMALIZED_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
+
 #define NORMALIZE_FRAME_COUNT 20
 
 class MP_MICROPHONE_NORMALIZED

@@ -1,7 +1,7 @@
 #ifndef MP_BLYNK_SERIAL1_WIFI_H
 #define MP_BLYNK_SERIAL1_WIFI_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <ESP8266_Lib.h>
 #include "MP_BLYNK.h"
 

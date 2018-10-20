@@ -1,7 +1,8 @@
 #ifndef MP_SOIL_MOISTURE_H
 #define MP_SOIL_MOISTURE_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
+
 class MP_SOIL_MOISTURE
 {
 public:

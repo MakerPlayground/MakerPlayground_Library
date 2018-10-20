@@ -1,7 +1,7 @@
 #ifndef MP_HY_SRF05_H
 #define MP_HY_SRF05_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_HY_SRF05
 {

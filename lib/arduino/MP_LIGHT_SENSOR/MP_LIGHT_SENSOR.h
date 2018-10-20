@@ -1,7 +1,8 @@
 #ifndef MP_LIGHT_SENSOR_H
 #define MP_LIGHT_SENSOR_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
+
 class MP_LIGHT_SENSOR
 {
 public:

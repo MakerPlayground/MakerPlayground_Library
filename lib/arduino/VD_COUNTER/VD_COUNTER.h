@@ -1,7 +1,7 @@
 #ifndef VD_COUNTER_H
 #define VD_COUNTER_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_COUNTER
 {

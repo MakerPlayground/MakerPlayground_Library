@@ -1,7 +1,7 @@
 #ifndef MP_SHT_H
 #define MP_SHT_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "SHTSensor.h"
 

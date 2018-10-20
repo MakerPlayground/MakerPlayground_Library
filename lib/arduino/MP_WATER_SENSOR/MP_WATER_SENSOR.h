@@ -1,7 +1,7 @@
 #ifndef MP_WATER_SENSOR
 #define MP_WATER_SENSOR
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_WATER_SENSOR
 {

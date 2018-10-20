@@ -1,7 +1,7 @@
 #ifndef MP_RGB_LED_CA
 #define MP_RGB_LED_CA
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_RGB_LED_CA
 {

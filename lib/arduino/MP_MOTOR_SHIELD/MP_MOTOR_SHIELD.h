@@ -1,7 +1,7 @@
 #ifndef MP_MOTOR_SHIELD_H
 #define MP_MOTOR_SHIELD_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "Adafruit_MotorShield.h"
 #include "utility/Adafruit_MS_PWMServoDriver.h"

@@ -1,7 +1,7 @@
 #ifndef MP_PIR_H
 #define MP_PIR_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_PIR
 {

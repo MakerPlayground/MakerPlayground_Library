@@ -1,7 +1,7 @@
 #ifndef MP_ADXL345_H
 #define MP_ADXL345_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "Adafruit_Sensor.h"
 #include "Adafruit_ADXL345_U.h"

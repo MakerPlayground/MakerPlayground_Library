@@ -1,7 +1,7 @@
 #ifndef MP_RELAY_H
 #define MP_RELAY_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_RELAY
 {

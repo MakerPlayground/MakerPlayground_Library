@@ -3,7 +3,7 @@
 #ifndef MP_BLYNK_SERIAL_WIFI_H
 #define MP_BLYNK_SERIAL_WIFI_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <SoftwareSerial.h>
 #include <ESP8266_Lib.h>
 

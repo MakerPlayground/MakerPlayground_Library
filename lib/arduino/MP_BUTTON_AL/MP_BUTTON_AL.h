@@ -1,7 +1,7 @@
 #ifndef MP_BUTTON_AL_H
 #define MP_BUTTON_AL_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_BUTTON_AL
 {

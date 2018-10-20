@@ -1,7 +1,7 @@
 #ifndef MP_DHT11_H
 #define MP_DHT11_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include "DHT.h"
 
 class MP_DHT11

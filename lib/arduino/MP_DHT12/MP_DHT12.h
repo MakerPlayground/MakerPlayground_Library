@@ -1,7 +1,7 @@
 #ifndef MP_DHT12_H
 #define MP_DHT12_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "dht_dplasa.h"
 

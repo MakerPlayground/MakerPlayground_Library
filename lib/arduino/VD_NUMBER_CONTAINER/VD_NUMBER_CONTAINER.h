@@ -1,7 +1,7 @@
 #ifndef VD_NUMBER_CONTAINER_H
 #define VD_NUMBER_CONTAINER_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_NUMBER_CONTAINER
 {

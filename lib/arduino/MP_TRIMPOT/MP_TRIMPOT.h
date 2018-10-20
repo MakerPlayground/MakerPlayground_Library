@@ -1,7 +1,7 @@
 #ifndef MP_TRIMPOT_H
 #define MP_TRIMPOT_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_TRIMPOT
 {

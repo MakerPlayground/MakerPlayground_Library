@@ -1,7 +1,7 @@
 #ifndef MP_7SEG_SOFTSERIAL_H
 #define MP_7SEG_SOFTSERIAL_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include "SendOnlySoftwareSerial.h"
 
 class MP_7SEG_SOFTSERIAL

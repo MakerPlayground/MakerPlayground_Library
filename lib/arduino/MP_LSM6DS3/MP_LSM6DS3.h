@@ -1,7 +1,8 @@
 #ifndef MP_LSM6DS3_H
 #define MP_LSM6DS3_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
+
 #include "SparkFunLSM6DS3.h"
 #include "Wire.h"
 

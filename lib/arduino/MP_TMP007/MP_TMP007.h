@@ -1,7 +1,7 @@
 #ifndef MP_TMP007_H
 #define MP_TMP007_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Wire.h>
 #include "Adafruit_TMP007.h"
 

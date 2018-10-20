@@ -1,7 +1,7 @@
 #ifndef MP_LOAD_DRIVER_H
 #define MP_LOAD_DRIVER_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_LOAD_DRIVER
 {

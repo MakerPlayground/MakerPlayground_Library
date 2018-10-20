@@ -1,7 +1,7 @@
 #ifndef MP_SERVO_H
 #define MP_SERVO_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include <Servo.h>
 class MP_SERVO
 {

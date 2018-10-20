@@ -1,7 +1,7 @@
 #ifndef VD_TIMER_H
 #define VD_TIMER_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class VD_TIMER
 {

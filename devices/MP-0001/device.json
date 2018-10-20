@@ -10,9 +10,7 @@
     "MP_ESP32"
   ],
   "classname": "MP_LED_AH",
-  "library_dependency": [
-    "makerplayground/ESP32_Polyfill"
-  ],
+  "library_dependency": [],
   "width": 0.0,
   "height": 0.0,
   "property": [],

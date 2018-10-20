@@ -1,7 +1,7 @@
 #ifndef MP_GROVE_ULTRASONIC_RANGER_H
 #define MP_GROVE_ULTRASONIC_RANGER_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_GROVE_ULTRASONIC_RANGER
 {

@@ -1,7 +1,7 @@
 #ifndef MP_MICROPHONE_H
 #define MP_MICROPHONE_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_MICROPHONE
 {

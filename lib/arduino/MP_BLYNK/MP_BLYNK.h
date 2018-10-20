@@ -1,7 +1,6 @@
 #ifndef MP_BLYNK_H
 #define MP_BLYNK_H
 
-#include <Arduino.h>
 
 class MP_BLYNK 
 {

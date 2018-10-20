@@ -1,7 +1,7 @@
 #ifndef MP_TM1637_DISPLAY_H
 #define MP_TM1637_DISPLAY_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 #include "TM1637Display.h"
 
 class MP_TM1637_DISPLAY

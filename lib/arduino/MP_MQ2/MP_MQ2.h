@@ -1,7 +1,7 @@
 #ifndef MP_MQ2_H
 #define MP_MQ2_H
 
-#include <Arduino.h>
+#include "MP_DEVICE.h"
 
 class MP_MQ2
 {

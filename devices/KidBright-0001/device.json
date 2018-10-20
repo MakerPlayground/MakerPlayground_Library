@@ -222,9 +222,7 @@
     {
       "name": "Integrated Buzzer",
       "classname": "MP_BUZZER",
-      "library_dependency": [
-        "makerplayground/ESP32_Polyfill"
-      ],
+      "library_dependency": [],
       "port": [
         {
           "name": "13",
