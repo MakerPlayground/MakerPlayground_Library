@@ -1,23 +1,22 @@
-#if defined(GROVE_ARDUINO)
-
-#define BLYNK_PRINT Serial
+/* Comment this out to disable prints and save space */
+// #define BLYNK_PRINT Serial
 #define ESP8266_BAUD 9600
 #define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
 
 #include "MP_BLYNK_SERIAL_WIFI.h"
 #include <BlynkSimpleShieldEsp8266.h>
 
-MP_BLYNK_SERIAL_WIFI* MP_BLYNK_SERIAL_WIFI::instance = 0; // NULL
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "ESP is not response";
+const char error2[] PROGMEM = "Can't connect to access point";
+const char error3[] PROGMEM = "Can't connect to internet";
+const char error4[] PROGMEM = "Can't connect to Blynk Server";
+const char* const errors_p[] PROGMEM = {ok, error1, error2, error3, error4};
+
+const char* const* MP_BLYNK_SERIAL_WIFI::ERRORS = errors_p;
+
 double MP_BLYNK_SERIAL_WIFI::value[8];
 uint8_t MP_BLYNK_SERIAL_WIFI::valueChanged;
-
-void MP_BLYNK_SERIAL_WIFI::setup(char auth[], char ssid[], char pass[]) {
-    instance = new MP_BLYNK_SERIAL_WIFI(auth, ssid, pass);
-}
-
-MP_BLYNK_SERIAL_WIFI* MP_BLYNK_SERIAL_WIFI::getInstance() {
-    return instance;
-}
 
 MP_BLYNK_SERIAL_WIFI::MP_BLYNK_SERIAL_WIFI(uint8_t rx, uint8_t tx, char* auth, char* ssid, char* pass)
     : espSerial(SoftwareSerial(rx, tx))
@@ -33,11 +32,57 @@ MP_BLYNK_SERIAL_WIFI::MP_BLYNK_SERIAL_WIFI(uint8_t rx, uint8_t tx, char* auth, c
     }
 }
 
-void MP_BLYNK_SERIAL_WIFI::init() 
+int MP_BLYNK_SERIAL_WIFI::init() 
 {
-    this->espSerial.begin(ESP8266_BAUD);
+    espSerial.begin(ESP8266_BAUD);
     delay(10);
-    Blynk.begin(this->auth, this->wifi, this->ssid, this->pass);
+
+    if (espSerial.kick()) {
+        return 1;
+    }
+
+    Blynk.config(wifi, auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
+    
+    if (!connectWifi()) {
+        return 2;
+    }
+
+    if (!testPing()) {
+        return 3;
+    }
+
+    if (!Blynk.connect()) {
+        return 4;
+    }
+    
+    return 0;
+}
+
+bool MP_BLYNK_SERIAL_WIFI::connectWifi()
+{
+    int retry = 5;
+    while (!Blynk.connectWiFi(this->ssid, this->pass)) {
+        delay(1);
+        if (retry == 0) {
+            return false;
+        }
+        retry--;
+    }
+    return true;
+}
+
+bool MP_BLYNK_SERIAL_WIFI::testPing()
+{
+    int pingRetry = 5;
+    while (pingRetry > 0) {
+        // test connection
+        if (wifi.setPing("4.2.2.2")) {
+            return true;
+        }
+        pingRetry--;
+        delay(PING_GAP);
+    }
+    return false;
 }
 
 void MP_BLYNK_SERIAL_WIFI::update(unsigned long time) 
@@ -58,20 +103,46 @@ void MP_BLYNK_SERIAL_WIFI::update(unsigned long time)
     }
 }
 
+void MP_BLYNK_SERIAL_WIFI::printStatus()
+{
+    Serial.print(F("Current virtual pin status = "));
+    Serial.print(getVirtualPin0());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin1());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin2());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin3());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin4());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin5());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin6());
+    Serial.print(F(" "));
+    Serial.print(getVirtualPin7());
+    Serial.println();
+}
+
+bool MP_BLYNK_SERIAL_WIFI::isReady()
+{
+    return testPing();
+}
+
 int MP_BLYNK_SERIAL_WIFI::readVirtualPin(uint8_t pin) 
 {
     return MP_BLYNK_SERIAL_WIFI::value[pin];
 }
 
-void MP_BLYNK_SERIAL_WIFI::writeVirtualPin(char pin[], double value)
+void MP_BLYNK_SERIAL_WIFI::writeVirtualPin(uint8_t pin, double value)
 {
-    MP_BLYNK_SERIAL_WIFI::value[pin[0] - '0'] = value;
-    MP_BLYNK_SERIAL_WIFI::valueChanged |= (1 << (pin[0] - '0'));
+    MP_BLYNK_SERIAL_WIFI::value[pin] = value;
+    MP_BLYNK_SERIAL_WIFI::valueChanged |= (1 << pin);
 }
 
-bool MP_BLYNK_SERIAL_WIFI::checkVirtualPinValue(char pin[], int value)
+bool MP_BLYNK_SERIAL_WIFI::checkVirtualPinValue(uint8_t pin, int value)
 {
-    return MP_BLYNK_SERIAL_WIFI::value[pin[0] - '0'] == value;
+    return MP_BLYNK_SERIAL_WIFI::value[pin] == value;
 }
 
 int MP_BLYNK_SERIAL_WIFI::getVirtualPin0()
@@ -201,5 +272,3 @@ BLYNK_WRITE(V7)
 {
     MP_BLYNK_SERIAL_WIFI::value[7] = param.asInt();
 }
-
-#endif
