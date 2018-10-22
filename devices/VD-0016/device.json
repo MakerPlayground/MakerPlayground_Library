@@ -1,17 +1,17 @@
 {
     "id": "VD-0016",
     "brand": "MakerPlayground",
-    "model": "Digital Device for Arduino Board (OUT)",
+    "model": "PWM Device for Arduino Board (OUT)",
     "url": "http://www.makerplayground.io/library/VD-0016",
     "type": "VIRTUAL",
-    "formfactor": "NONE",
+    "formfactor": "STANDALONE",
     "platform": [
       "ARDUINO"
     ],
     "classname": "VD_ANALOG_OUT",
     "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
+    "width": 87.0,
+    "height": 107.0,
     "property": [],
     "dependency": "",
     "category": "",
@@ -50,10 +50,10 @@
     ],
     "compatibility": [
       {
-        "name": "Analog (Out)",
+        "name": "PWM (Out)",
         "action": [
           {
-            "name": "Set Output Percent",
+            "name": "Set Duty Cycle",
             "parameter": [
               {
                 "name": "Percent",

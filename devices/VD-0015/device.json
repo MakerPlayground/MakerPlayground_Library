@@ -4,14 +4,14 @@
     "model": "Analog Device for Arduino Board (IN)",
     "url": "http://www.makerplayground.io/library/VD-0015",
     "type": "VIRTUAL",
-    "formfactor": "NONE",
+    "formfactor": "STANDALONE",
     "platform": [
       "ARDUINO"
     ],
     "classname": "VD_ANALOG_IN",
     "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
+    "width": 87.0,
+    "height": 107.0,
     "property": [],
     "dependency": "",
     "category": "",

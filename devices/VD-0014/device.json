@@ -1,7 +1,7 @@
 {
     "id": "VD-0014",
     "brand": "MakerPlayground",
-    "model": "Digital Device for MakerPlayground BaseBoard (OUT)",
+    "model": "PWM Device for MakerPlayground BaseBoard (OUT)",
     "url": "http://www.makerplayground.io/library/VD-0014",
     "type": "VIRTUAL",
     "formfactor": "NONE",
@@ -37,10 +37,10 @@
     ],
     "compatibility": [
       {
-        "name": "Analog (Out)",
+        "name": "PWM (Out)",
         "action": [
           {
-            "name": "Set Output Percent",
+            "name": "Set Duty Cycle",
             "parameter": [
               {
                 "name": "Percent",
