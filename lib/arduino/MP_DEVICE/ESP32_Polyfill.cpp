@@ -80,7 +80,17 @@ void noTone(uint8_t pin)
     if (channel == channelCount)
         return;
 
-    ledcWriteTone(channel, 0);
+    if (!pinUsed[channel])
+    {
+        pinUsed[channel] = true;
+        ledcSetup(channel, 1000, 8);    // any value can be used as ledcWriteTone will override them anyway
+        ledcWriteTone(channel, 0);
+        ledcAttachPin(pin, channel);
+    }
+    else
+    {
+        ledcWriteTone(channel, 0);
+    }
 }
 
 #endif
