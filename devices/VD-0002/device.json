@@ -46,7 +46,7 @@
             "parameter": []
           },
           {
-            "name": "Time out",
+            "name": "After",
             "parameter": [
               {
                 "name": "Second",
@@ -57,6 +57,23 @@
                 }
               }
             ]
+          },
+          {
+            "name": "Before",
+            "parameter": [
+              {
+                "name": "Second",
+                "constraint": {
+                  "min": 1,
+                  "max": 1000000000,
+                  "unit": "SECOND"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Stop timer",
+            "parameter": []
           }
         ],
         "value": [

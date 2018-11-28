@@ -16,6 +16,7 @@ public:
 	void startTimer();
 	void stopTimer();
 	bool isOverTime(int second);
+	bool isNotOverTime(int second);
 
 private:
 	int second;

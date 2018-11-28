@@ -43,6 +43,11 @@ bool VD_TIMER::isOverTime(int second)
     return isStarted && this->second >= second;
 }
 
+bool VD_TIMER::isNotOverTime(int second)
+{
+    return isStarted && this->second < second;
+}
+
 void VD_TIMER::stopTimer()
 {
     this->isStarted = false;
