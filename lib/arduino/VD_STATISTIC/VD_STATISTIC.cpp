@@ -13,6 +13,15 @@ VD_STATISTIC::VD_STATISTIC()
 
 int VD_STATISTIC::init() 
 {
+    N = 0;
+    sum = 0;
+    sum_sq = 0;
+
+    average = 0;
+    variance = 0;
+    SD = 0;
+    maxValue = -3.4028235E+38;
+    minValue = 3.4028235E+38;
     return 0;
 }
 
@@ -44,6 +53,13 @@ void VD_STATISTIC::addData(double value) {
     average = sum / N;
 	variance = sum_sq / N - pow(sum / N, 2);
 	SD = sqrt(variance);
+
+    maxValue = max(maxValue, value);
+    minValue = min(minValue, value);
+}
+
+void VD_STATISTIC::clear() {
+    init();
 }
 
 unsigned long VD_STATISTIC::getCount() {
@@ -60,4 +76,12 @@ double VD_STATISTIC::getSD() {
 
 double VD_STATISTIC::getVariance() {
     returnIfDataExist(variance, 0.0);
+}
+
+double VD_STATISTIC::getMax() {
+    returnIfDataExist(maxValue, 0.0);
+}
+
+double VD_STATISTIC::getMin() {
+    returnIfDataExist(minValue, 0.0);
 }

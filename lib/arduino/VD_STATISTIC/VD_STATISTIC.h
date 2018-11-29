@@ -13,10 +13,13 @@ public:
 	static const char* const* ERRORS;
 
 	void addData(double value);
+	void clear();
 	unsigned long getCount();
 	double getAverage();
 	double getSD();
 	double getVariance();
+	double getMax();
+	double getMin();
 
 private:
 	unsigned long N = 0;
@@ -26,6 +29,8 @@ private:
 	double average;
 	double variance;
 	double SD;
+	double maxValue;
+	double minValue;
 };
 
 #endif
