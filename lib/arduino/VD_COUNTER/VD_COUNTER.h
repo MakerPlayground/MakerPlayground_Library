@@ -17,7 +17,8 @@ public:
 	void increaseValue();
 	void decreaseValue();
 	void increaseValueBy(int change);
-	bool checkValue(int value);
+	bool checkValueEqual(int value);
+	bool checkValueNotEqual(int value);
 
 private:
 	int value;

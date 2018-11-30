@@ -51,19 +51,19 @@
               {
                 "name": "Value",
                 "constraint": {
-                  "min": -32768,
-                  "max": 32767,
+                  "min": -10000,
+                  "max": 10000,
                   "unit": "NOT_SPECIFIED"
                 }
               }
             ]
           },
           {
-            "name": "Count up",
+            "name": "Count up by 1",
             "parameter": []
           },
           {
-            "name": "Count down",
+            "name": "Count down by 1",
             "parameter": []
           },
           {
@@ -72,8 +72,34 @@
               {
                 "name": "Change",
                 "constraint": {
-                  "min": -32768,
-                  "max": 32767,
+                  "min": -100,
+                  "max": 100,
+                  "unit": "NOT_SPECIFIED"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Check value equal",
+            "parameter": [
+              {
+                "name": "Value",
+                "constraint": {
+                  "min": -10000,
+                  "max": 10000,
+                  "unit": "NOT_SPECIFIED"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Check value not equal",
+            "parameter": [
+              {
+                "name": "Value",
+                "constraint": {
+                  "min": -10000,
+                  "max": 10000,
                   "unit": "NOT_SPECIFIED"
                 }
               }
@@ -84,8 +110,8 @@
           {
             "name": "Value",
             "constraint": {
-              "min": -32768,
-              "max": 32767,
+              "min": -10000,
+              "max": 10000,
               "unit": "NOT_SPECIFIED"
             }
           }

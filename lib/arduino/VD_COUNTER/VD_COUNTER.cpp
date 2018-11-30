@@ -50,7 +50,12 @@ void VD_COUNTER::increaseValueBy(int change)
     this->value = this->value + change;
 }
 
-bool VD_COUNTER::checkValue(int value)
+bool VD_COUNTER::checkValueEqual(int value)
 {
     return this->value == value;
+}
+
+bool VD_COUNTER::checkValueNotEqual(int value)
+{
+    return this->value != value;
 }
