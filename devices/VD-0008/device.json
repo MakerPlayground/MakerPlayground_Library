@@ -9,7 +9,8 @@
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO",
-      "MP_ESP32"
+      "MP_ESP32",
+      "MP_ESP8266"
     ],
     "classname": "VD_STATISTIC",
     "library_dependency": [],

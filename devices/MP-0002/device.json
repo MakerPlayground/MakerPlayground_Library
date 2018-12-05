@@ -7,7 +7,8 @@
   "formfactor": "MP_DEVICE",
   "platform": [
     "MP_ARDUINO",
-    "MP_ESP32"
+    "MP_ESP32",
+    "MP_ESP8266"
   ],
   "classname": "MP_RGB_LED",
   "library_dependency": [],

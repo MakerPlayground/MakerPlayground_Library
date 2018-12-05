@@ -1,0 +1,166 @@
+{
+  "id": "MP-0024",
+  "brand": "MakerPlayground",
+  "model": "TinyBoard",
+  "url": "http://www.makerplayground.io/library/MP-0024",
+  "type": "CONTROLLER",
+  "pio_boardid": "nodemcuv2",
+  "formfactor": "MP_CONTROLLER",
+  "wiring_method": "MP_RECTANGLE_TINY",
+  "support_cloudplatform": [
+    {
+      "cloud_platform": "NETPIE",
+      "classname": "MP_NETPIE_ESP8266",
+      "library_dependency": [
+        "netpieio/microgear-esp8266-arduino"
+      ]
+    },
+    {
+      "cloud_platform": "BLYNK",
+      "classname": "MP_BLYNK_SERIAL1_WIFI",
+      "library_dependency": [
+        "blynkkk/blynk-library",
+        "vshymanskyy/BlynkESP8266"
+      ]
+    }
+  ],
+  "platform": [
+    "MP_ESP8266"
+  ],
+  "classname": "",
+  "library_dependency": [],
+  "width": 190.0,
+  "height": 116.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "D1",
+      "alias": ["16", "14"], 
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_PWM_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_DUAL_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 3.3,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "D2",
+      "alias": ["13", "12"], 
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_PWM_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_DUAL_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "A1",
+      "alias": ["A0"], 
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "name": "I2C/D3",
+      "alias": ["4", "5"], 
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_SINGLE_3",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_PWM_DUAL_3",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_SINGLE_4",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "MP_GPIO_DUAL_3",
+          "conflict": ["MP_I2C_1"],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_PWM_SINGLE_1",
+    "MP_PWM_SINGLE_2",
+    "MP_PWM_SINGLE_3",
+    "MP_PWM_SINGLE_4",
+    "MP_PWM_DUAL_1",
+    "MP_PWM_DUAL_2",
+    "MP_PWM_DUAL_3",
+    "MP_GPIO_SINGLE_1",
+    "MP_GPIO_SINGLE_2",
+    "MP_GPIO_SINGLE_3",
+    "MP_GPIO_SINGLE_4",
+    "MP_GPIO_DUAL_1",
+    "MP_GPIO_DUAL_2",
+    "MP_GPIO_DUAL_3",
+    "MP_ANALOG_SINGLE_1",
+    "MP_I2C_1"
+  ],
+  "compatibility": []
+}

@@ -2,6 +2,7 @@
 #define MP_NETPIE_ESP8266_H
 
 #include "MP_DEVICE.h"
+#include "MP_NETPIE.h"
 #include <ESP8266WiFi.h>
 #include <MicroGear.h>
 
@@ -14,7 +15,7 @@ public:
 
     int init();
     void update(unsigned long time);
-    static const char* const* ERRORS;
+    void printStatus();
 
     // chat and feed is not supported yet
     // TODO: handle error when publish

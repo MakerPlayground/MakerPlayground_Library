@@ -1,7 +1,7 @@
 {
     "id": "VD-0001",
     "brand": "MakerPlayground",
-    "model": "Virtual Counter",
+    "model": "Counter",
     "url": "http://www.makerplayground.io/library/VD-0001",
     "type": "VIRTUAL",
     "formfactor": "NONE",
@@ -9,7 +9,8 @@
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO",
-      "MP_ESP32"
+      "MP_ESP32",
+      "MP_ESP8266"
     ],
     "classname": "VD_COUNTER",
     "library_dependency": [],

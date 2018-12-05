@@ -1,7 +1,7 @@
 {
     "id": "VD-0002",
     "brand": "MakerPlayground",
-    "model": "Virtual Timer",
+    "model": "Timer",
     "url": "http://www.makerplayground.io/library/VD-0002",
     "type": "VIRTUAL",
     "formfactor": "NONE",
@@ -9,7 +9,8 @@
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO",
-      "MP_ESP32"
+      "MP_ESP32",
+      "MP_ESP8266"
     ],
     "classname": "VD_TIMER",
     "library_dependency": [],

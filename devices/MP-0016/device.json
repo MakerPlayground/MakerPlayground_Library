@@ -6,7 +6,8 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "MP_ARDUINO",
+    "MP_ESP8266"
   ],
   "classname": "MP_SERVO",
   "library_dependency": [],

@@ -7,7 +7,8 @@
     "formfactor": "NONE",
     "platform": [
       "MP_ARDUINO",
-      "MP_ESP32"
+      "MP_ESP32",
+      "MP_ESP8266"
     ],
     "classname": "VD_ANALOG_IN",
     "library_dependency": [],

@@ -2,6 +2,11 @@
 
 #define PUBLISH_INTERVAL 500
 
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_NETPIE::ERRORS = errors_p;
+
 std::map<char*, double> MP_NETPIE_ESP8266::value;
 std::map<char*, bool> MP_NETPIE_ESP8266::changed; 
 
@@ -60,6 +65,10 @@ int MP_NETPIE_ESP8266::init()
     microgear.connect(appId);
 
     return 0;
+}
+
+void MP_NETPIE_ESP8266::printStatus() {
+    
 }
 
 void MP_NETPIE_ESP8266::update(unsigned long time)

@@ -1,12 +1,13 @@
 {
-  "id": "MP-0023_ESP32",
+  "id": "MP-0023_ESP",
   "brand": "Maker Playground",
   "model": "Non-invasive AC Current Sensor (30A max)",
   "url": "http://www.makerplayground.io/library/MP-0023",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ESP32"
+    "MP_ESP32",
+    "MP_ESP8266"
   ],
   "classname": "MP_SCT013_30A_ESP32",
   "library_dependency": [],

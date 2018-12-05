@@ -10,7 +10,8 @@
       "MP_ARDUINO",
       "ARDUINO",
       "GROVE_ARDUINO",
-      "MP_ESP32"
+      "MP_ESP32",
+      "MP_ESP8266"
     ],
     "classname": "MP_NETPIE_VIRTUAL_LED",
     "library_dependency": [],
