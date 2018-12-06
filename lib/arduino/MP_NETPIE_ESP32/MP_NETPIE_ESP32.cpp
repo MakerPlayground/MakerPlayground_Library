@@ -7,19 +7,23 @@ const char* const errors_p[] PROGMEM = {ok};
 
 const char* const* MP_NETPIE::ERRORS = errors_p;
 
-std::map<char*, double> MP_NETPIE_ESP32::value;
-std::map<char*, bool> MP_NETPIE_ESP32::changed;
+std::map<String, double> MP_NETPIE_ESP8266::value;
+std::map<String, bool> MP_NETPIE_ESP8266::changed; 
 
 // function to be called when message arrives
-void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) 
+void onMsghandler(char* topic, uint8_t* msg, unsigned int msglen) 
 {
     msg[msglen] = '\0';
-    MP_NETPIE_ESP32::value[topic] = atof((char *) msg);
+    String topic_str = topic;
+    if (topic_str.startsWith("/")) {
+        topic_str = topic_str.substring(topic_str.indexOf('/', 1));
+        MP_NETPIE_ESP8266::value[topic_str] = atof((char *) msg);
+    }
 }
 
 // function to be called when this microgear is connected to NETPIE
 void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
-    Serial.println("Connected to NETPIE...");
+    // Serial.println("Connected to NETPIE...");
     // Set the alias of this microgear ALIAS
     // microgear.setAlias(ALIAS);
 }
@@ -42,21 +46,14 @@ int MP_NETPIE_ESP32::init()
     microgear.on(CONNECTED, onConnected);
 
     // connect to wifi
-    Serial.print("Connecting to wifi");
-    Serial.println(ssid);
-    Serial.println(password);
     WiFi.mode(WIFI_STA);
     if (WiFi.begin(ssid, password)) 
     {
         while (WiFi.status() != WL_CONNECTED) 
         {
             delay(500);
-            Serial.print(".");
         }
     }
-    Serial.println("\nWiFi connected");  
-    Serial.print("IP address: ");
-    Serial.println(WiFi.localIP());
 
     // initialize the microgear
     microgear.init(key, secret, alias);
@@ -68,7 +65,15 @@ int MP_NETPIE_ESP32::init()
 }
 
 void MP_NETPIE_ESP32::printStatus() {
-    
+    Serial.print(F("IP address: "));
+    Serial.println(WiFi.localIP());
+
+    for (const auto& it : value) 
+    {
+        Serial.print(it.first);
+        Serial.print(": ");
+        Serial.println(it.second);
+    }
 }
 
 void MP_NETPIE_ESP32::update(unsigned long time)
@@ -85,7 +90,7 @@ void MP_NETPIE_ESP32::update(unsigned long time)
             {
                 if (c.second)
                 {
-                    microgear.publish(c.first, value[c.first]);
+                    microgear.publish((char*) (c.first.c_str()), value[c.first]);
                     changed[c.first] = false;
                 }
             }
@@ -118,5 +123,9 @@ void MP_NETPIE_ESP32::unsubscribe(char* topic)
 
 double MP_NETPIE_ESP32::getValue(char* topic)
 {
-    return value[topic];
+    return value[String(topic)];
+}
+
+MicroGear MP_NETPIE_ESP8266::getMicrogear() {
+    return microgear;
 }

@@ -1,5 +1,7 @@
-#ifndef MP_BLYNK_H
-#define MP_BLYNK_H
+#ifndef MP_NETPIE_H
+#define MP_NETPIE_H
+
+#include "MicroGear.h"
 
 class MP_NETPIE 
 {
@@ -12,7 +14,9 @@ public:
 	virtual void publish(char* topic, double value);
 	virtual void subscribe(char* topic);
 	virtual void unsubscribe(char* topic);
-	double getValue(char* topic);
+	virtual double getValue(char* topic);
+
+	virtual MicroGear getMicrogear();
 };
 
 #endif

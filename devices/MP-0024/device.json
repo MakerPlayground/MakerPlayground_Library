@@ -17,10 +17,9 @@
     },
     {
       "cloud_platform": "BLYNK",
-      "classname": "MP_BLYNK_SERIAL1_WIFI",
+      "classname": "MP_BLYNK_NODEMCU",
       "library_dependency": [
-        "blynkkk/blynk-library",
-        "vshymanskyy/BlynkESP8266"
+        "blynkkk/blynk-library"
       ]
     }
   ],

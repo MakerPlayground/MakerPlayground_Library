@@ -1,6 +1,7 @@
 #ifndef MP_NETPIE_ESP32_H
 #define MP_NETPIE_ESP32_H
 
+#include "Arduino.h"
 #include "MP_DEVICE.h"
 #include "MP_NETPIE.h"
 #include <Wifi.h>
@@ -25,8 +26,9 @@ public:
 
     double getValue(char* topic);
 
-    static std::map<char*, double> value;
-    static std::map<char*, bool> changed; 
+    MicroGear getMicrogear();
+    static std::map<String, double> value;
+    static std::map<String, bool> changed; 
 
 private:
     char* appId;

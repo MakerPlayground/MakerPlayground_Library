@@ -1,0 +1,70 @@
+{
+    "id": "VD-0018",
+    "brand": "NETPIE",
+    "model": "Virtual Slider",
+    "url": "http://www.makerplayground.io/library/VD-0018",
+    "type": "VIRTUAL",
+    "formfactor": "NONE",
+    "cloud_platform": "NETPIE",
+    "platform": [
+      "MP_ESP32",
+      "MP_ESP8266"
+    ],
+    "classname": "MP_NETPIE_VIRTUAL_SLIDER",
+    "library_dependency": [],
+    "width": 0.0,
+    "height": 0.0,
+    "property": [
+      {
+        "name": "topic",
+        "datatype": "STRING",
+        "controltype": "TEXTBOX",
+        "value": "",
+        "constraint": []
+      }
+    ],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "Port",
+        "type": "VIRTUAL",
+        "function": [
+          {
+            "type": "NOT_CONNECTED",
+            "pintype": "NOT_CONNECTED"
+          }
+        ],
+        "v_min": 5.0,
+        "v_max": 5.0,
+        "x": 0.0,
+        "y": 0.0
+      }
+    ],
+    "connectivity": [
+      "NOT_CONNECTED"
+    ],
+    "compatibility": [
+      {
+        "name": "Virtual Slider",
+        "action": [
+          {
+            "name": "Compare",
+            "parameter": []
+          }
+        ],
+        "value": [
+          {
+            "name": "Value",
+            "constraint": {
+              "min": -99999999.0,
+              "max": 99999999.0,
+              "unit": "NOT_SPECIFIED"
+            }
+          }
+        ],
+        "count": ""
+      }
+      
+    ]
+  }
