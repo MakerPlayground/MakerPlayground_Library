@@ -73,13 +73,42 @@
       "v_max": 0.0,
       "x": 0,
       "y": 0
+    },
+    {
+      "name": "4",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "I2C1_1",
+          "pintype": "I2C_SDA"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "5",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "I2C1_1",
+          "pintype": "I2C_SCL"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
     }
   ],
   "connectivity": [
     "GPIO_1",
     "GPIO_2",
     "ANALOG_1",
-    "PWM_1"
+    "PWM_1",
+    "I2C1_1"
   ],
   "compatibility": [],
   "integrated_device": [
@@ -273,6 +302,110 @@
             }
           ],
           "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated RTC",
+      "classname": "MP_RTC_MCP4971x",
+      "library_dependency": [
+        "jetstreamc/mcp7941x_arduino_ESP32_I2C1"
+      ],
+      "port": [
+        {
+          "name": "4",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "I2C1_1",
+              "pintype": "I2C_SDA"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "name": "4",
+          "type": "WIRE",
+          "function": [
+            {
+              "type": "I2C1_1",
+              "pintype": "I2C_SCL"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "I2C1_1"
+      ],
+      "compatibility": [
+        {
+          "name": "RTC",
+          "action": [
+            {
+              "name": "Set DateTime",
+              "parameter": [
+                {
+                  "name": "datetime",
+                  "constraint": []
+                }
+              ]
+            },
+            {
+              "name": "Compare",
+              "parameter": []
+            },
+            {
+              "name": "Check Day",
+              "parameter": [
+                {
+                  "name": "Day",
+                  "constraint": [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                  ]
+                }
+              ]
+            }
+          ],
+          "value": [
+            {
+              "name": "Hour",
+              "constraint": []
+            },
+            {
+              "name": "Minute",
+              "constraint": []
+            },
+            {
+              "name": "Second",
+              "constraint": []
+            },
+            {
+              "name": "Date",
+              "constraint": []
+            },
+            {
+              "name": "Month",
+              "constraint": []
+            },
+            {
+              "name": "Year",
+              "constraint": []
+            }
+          ],
           "count": ""
         }
       ]
