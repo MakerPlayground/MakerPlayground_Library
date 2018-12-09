@@ -10,7 +10,7 @@
   "support_cloudplatform": [
     {
       "cloud_platform": "NETPIE",
-      "classname": "MP_NETPIE_ESP8266",
+      "classname": "MP_NETPIE_ESP",
       "library_dependency": [
         "netpieio/microgear-esp8266-arduino"
       ]

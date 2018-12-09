@@ -7,9 +7,6 @@
     "formfactor": "NONE",
     "cloud_platform": "NETPIE",
     "platform": [
-      "MP_ARDUINO",
-      "ARDUINO",
-      "GROVE_ARDUINO",
       "MP_ESP32",
       "MP_ESP8266"
     ],

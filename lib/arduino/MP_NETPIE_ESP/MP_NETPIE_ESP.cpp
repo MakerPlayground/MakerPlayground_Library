@@ -1,4 +1,4 @@
-#include "MP_NETPIE_ESP32.h"
+#include "MP_NETPIE_ESP.h"
 
 #define PUBLISH_INTERVAL 500
 
@@ -7,8 +7,8 @@ const char* const errors_p[] PROGMEM = {ok};
 
 const char* const* MP_NETPIE::ERRORS = errors_p;
 
-std::map<String, double> MP_NETPIE_ESP8266::value;
-std::map<String, bool> MP_NETPIE_ESP8266::changed; 
+std::map<String, double> MP_NETPIE_ESP::value;
+std::map<String, bool> MP_NETPIE_ESP::changed;
 
 // function to be called when message arrives
 void onMsghandler(char* topic, uint8_t* msg, unsigned int msglen) 
@@ -17,18 +17,11 @@ void onMsghandler(char* topic, uint8_t* msg, unsigned int msglen)
     String topic_str = topic;
     if (topic_str.startsWith("/")) {
         topic_str = topic_str.substring(topic_str.indexOf('/', 1));
-        MP_NETPIE_ESP8266::value[topic_str] = atof((char *) msg);
+        MP_NETPIE_ESP::value[topic_str] = atof((char *) msg);
     }
 }
 
-// function to be called when this microgear is connected to NETPIE
-void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
-    // Serial.println("Connected to NETPIE...");
-    // Set the alias of this microgear ALIAS
-    // microgear.setAlias(ALIAS);
-}
-
-MP_NETPIE_ESP32::MP_NETPIE_ESP32(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]) 
+MP_NETPIE_ESP::MP_NETPIE_ESP(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[])
     : appId(appId)
     , key(key)
     , secret(secret)
@@ -40,10 +33,9 @@ MP_NETPIE_ESP32::MP_NETPIE_ESP32(char appId[], char key[], char secret[], char a
 {
 }
 
-int MP_NETPIE_ESP32::init() 
+int MP_NETPIE_ESP::init()
 {
     microgear.on(MESSAGE, onMsghandler);
-    microgear.on(CONNECTED, onConnected);
 
     // connect to wifi
     WiFi.mode(WIFI_STA);
@@ -64,19 +56,15 @@ int MP_NETPIE_ESP32::init()
     return 0;
 }
 
-void MP_NETPIE_ESP32::printStatus() {
-    Serial.print(F("IP address: "));
-    Serial.println(WiFi.localIP());
-
-    for (const auto& it : value) 
+void MP_NETPIE_ESP::printStatus()
+{
+    if (!microgear.connected())
     {
-        Serial.print(it.first);
-        Serial.print(": ");
-        Serial.println(it.second);
+        Serial.println("Can't connected to the NETPIE server");
     }
 }
 
-void MP_NETPIE_ESP32::update(unsigned long time)
+void MP_NETPIE_ESP::update(unsigned long time)
 {
     if (microgear.connected())
     {
@@ -99,33 +87,39 @@ void MP_NETPIE_ESP32::update(unsigned long time)
     } 
     else
     {
-        Serial.println("Connection lost, reconnecting...");
         microgear.connect(appId);
-    } 
+    }
+
+#ifdef ESP8266
+    // Since ESP8266 has only 1 processor core, we need to delay for a few ms to allow the network tasks to run.
+    // It may be better to use client.flush() but this function is not working in the current version (v2.4.2)
+    // of the Arduino core for the ESP8266.
+    delay(5);
+#endif
 }
 
-void MP_NETPIE_ESP32::publish(char* topic, double v) 
+void MP_NETPIE_ESP::publish(char* topic, double v)
 {
-    value[topic] = v;
-    changed[topic] = true;
+    value[String(topic)] = v;
+    changed[String(topic)] = true;
 }
 
-void MP_NETPIE_ESP32::subscribe(char* topic)
+void MP_NETPIE_ESP::subscribe(char* topic)
 {
-    value[topic] = 0;
+    value[String(topic)] = 0;
     microgear.subscribe(topic);
 }
 
-void MP_NETPIE_ESP32::unsubscribe(char* topic)
+void MP_NETPIE_ESP::unsubscribe(char* topic)
 {
     microgear.unsubscribe(topic);
 }
 
-double MP_NETPIE_ESP32::getValue(char* topic)
+double MP_NETPIE_ESP::getValue(char* topic)
 {
     return value[String(topic)];
 }
 
-MicroGear MP_NETPIE_ESP8266::getMicrogear() {
+MicroGear& MP_NETPIE_ESP::getMicrogear() {
     return microgear;
 }

@@ -32,10 +32,12 @@ bool MP_NETPIE_VIRTUAL_BUTTON::isPress() {
     return bPress;
 }
 
-bool MP_NETPIE_VIRTUAL_BUTTON::isPressAndRelease(){
+bool MP_NETPIE_VIRTUAL_BUTTON::isPressAndRelease()
+{
     if(bPress)
     {
-        while (bPress) {
+        while (bPress)
+        {
             if ((netpie->getMicrogear()).connected())
             {
                 // this method need to be called regularly to avoid connection lost

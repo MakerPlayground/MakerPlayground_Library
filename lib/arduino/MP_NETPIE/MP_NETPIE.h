@@ -16,7 +16,7 @@ public:
 	virtual void unsubscribe(char* topic);
 	virtual double getValue(char* topic);
 
-	virtual MicroGear getMicrogear();
+	virtual MicroGear& getMicrogear();
 };
 
 #endif

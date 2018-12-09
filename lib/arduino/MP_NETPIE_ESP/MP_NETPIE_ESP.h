@@ -1,18 +1,23 @@
-#ifndef MP_NETPIE_ESP8266_H
-#define MP_NETPIE_ESP8266_H
+#ifndef MP_NETPIE_ESP_H
+#define MP_NETPIE_ESP_H
 
 #include "Arduino.h"
 #include "MP_DEVICE.h"
 #include "MP_NETPIE.h"
+#ifdef ESP8266
 #include <ESP8266WiFi.h>
+#endif
+#ifdef ESP32
+#include <Wifi.h>
+#endif
 #include <MicroGear.h>
 
 #include <map>
 
-class MP_NETPIE_ESP8266 : public MP_NETPIE
+class MP_NETPIE_ESP : public MP_NETPIE
 {
 public:
-    MP_NETPIE_ESP8266(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
+    MP_NETPIE_ESP(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[]);
 
     int init();
     void update(unsigned long time);
@@ -26,7 +31,7 @@ public:
 
     double getValue(char* topic);
 
-    MicroGear getMicrogear();
+    MicroGear& getMicrogear();
     static std::map<String, double> value;
     static std::map<String, bool> changed; 
 
