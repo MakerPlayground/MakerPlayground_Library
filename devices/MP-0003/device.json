@@ -12,8 +12,8 @@
   ],
   "classname": "MP_BUZZER",
   "library_dependency": [],
-  "width": 0.0,
-  "height": 0.0,
+  "width": 124.0,
+  "height": 108.0,
   "property": [],
   "dependency": "",
   "category": "",
@@ -21,6 +21,7 @@
     {
       "name": "Port",
       "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
       "function": [
         {
           "type": "MP_PWM_SINGLE_1",
@@ -29,8 +30,9 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
+      "x": 62.0,
+      "y": 0.0,
+      "angle": 0.0
     }
   ],
   "connectivity": [
