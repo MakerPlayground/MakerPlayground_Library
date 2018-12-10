@@ -34,7 +34,7 @@ public:
         return MM;
     }
 
-    uint8_t getYear() {
+    uint16_t getYear() {
         return YY;
     }
 

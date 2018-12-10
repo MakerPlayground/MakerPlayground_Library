@@ -1,0 +1,104 @@
+{
+  "id": "MP-Arduinoall-28",
+  "brand": "Arduinoall",
+  "model": "DS3231 RTC Module with MakerPlayground connection",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-28",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO",
+    "MP_ESP8266"
+  ],
+  "classname": "MP_DS3231",
+  "library_dependency": [
+    "Makuna/Rtc-2.3.0"
+  ],
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "RTC",
+      "action": [
+        {
+          "name": "Set DateTime",
+          "parameter": [
+            {
+              "name": "datetime",
+              "constraint": []
+            }
+          ]
+        },
+        {
+          "name": "Compare",
+          "parameter": []
+        },
+        {
+          "name": "Check Day",
+          "parameter": [
+            {
+              "name": "Day",
+              "constraint": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ]
+            }
+          ]
+        }
+      ],
+      "value": [
+        {
+          "name": "Hour",
+          "constraint": []
+        },
+        {
+          "name": "Minute",
+          "constraint": []
+        },
+        {
+          "name": "Second",
+          "constraint": []
+        },
+        {
+          "name": "Date",
+          "constraint": []
+        },
+        {
+          "name": "Month",
+          "constraint": []
+        },
+        {
+          "name": "Year",
+          "constraint": []
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
