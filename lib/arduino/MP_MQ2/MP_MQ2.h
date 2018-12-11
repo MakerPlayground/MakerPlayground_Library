@@ -6,14 +6,18 @@
 class MP_MQ2
 {
 public:
-	MP_MQ2(uint8_t pin, const String &tag);
+	MP_MQ2(uint8_t pin);
 
-	void init();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	double getPercent();
 
 private:
 	uint8_t pin;
-	const String tag;
+	int percent = 0;
 };
 
 #endif
