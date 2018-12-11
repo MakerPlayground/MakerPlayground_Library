@@ -1,0 +1,62 @@
+{
+  "id": "MP-Arduinoall-106",
+  "brand": "ArduinoAll",
+  "model": "Temp Sensor Probe DS18B20 (Water Proof)",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-106",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO"
+  ],
+  "classname": "MP_DS18B20",
+  "library_dependency": [
+    "milesburton/Arduino-Temperature-Control-Library-3.8.0",
+    "PaulStoffregen/OneWire-2.3.4"
+  ],
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_GPIO_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Temperature",
+      "action": [
+        {
+          "name": "Compare", 
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Temperature", 
+          "constraint": {
+            "min": -55.0, 
+            "max": 125.0, 
+            "unit": "CELSIUS"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
