@@ -4,7 +4,7 @@
   "model": "MQ-3 alcohol sensor Alcohol",
   "url": "http://www.makerplayground.io/library/MP-Arduinoall-261",
   "type": "PERIPHERAL",
-  "formfactor": "BREAKOUT_BOARD_ONESIDE",
+  "formfactor": "MP_DEVICE",
   "platform": [
     "MP_ARDUINO"
   ],

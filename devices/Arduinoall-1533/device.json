@@ -90,9 +90,9 @@
         {
           "name": "Distance",
           "constraint": {
-            "min": 0.02,
-            "max": 4.5,
-            "unit": "METER"
+            "min": 2,
+            "max": 450,
+            "unit": "CENTIMETER"
           }
         }
       ],

@@ -4,7 +4,7 @@
   "model": "Module MQ-2 FC-22 Smoke Gas Sensor Smoke methane gas liquefied flammable gas sensor module for arduino",
   "url": "http://www.makerplayground.io/library/MP-Arduinoall-222",
   "type": "PERIPHERAL",
-  "formfactor": "BREAKOUT_BOARD_ONESIDE",
+  "formfactor": "MP_DEVICE",
   "platform": [
     "MP_ARDUINO"
   ],
