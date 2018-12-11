@@ -6,14 +6,19 @@
 class MP_MQ3
 {
 public:
-	MP_MQ3(uint8_t pin, const Sting &tag);
+	MP_MQ3(uint8_t pin);
 
-	void init();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	double getPercent();
 
 private:
 	uint8_t pin;
-	const String tag;
+	int percent = 0;
+	
 };
 
 #endif

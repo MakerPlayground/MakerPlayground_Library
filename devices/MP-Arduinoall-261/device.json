@@ -1,0 +1,59 @@
+{
+  "id": "MP-Arduinoall-261",
+  "brand": "Arduinoall",
+  "model": "MQ-3 alcohol sensor Alcohol",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-261",
+  "type": "PERIPHERAL",
+  "formfactor": "BREAKOUT_BOARD_ONESIDE",
+  "platform": [
+    "MP_ARDUINO"
+  ],
+  "classname": "MP_MQ3",
+  "library_dependency": [],
+  "width": 130.194,
+  "height": 203.991,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_ANALOG_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Alcohol",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Percent",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
