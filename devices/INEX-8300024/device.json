@@ -1,0 +1,518 @@
+{
+  "id": "INEX-8300024",
+  "brand": "INEX",
+  "model": "AX-WiFi",
+  "url": "https://inex.co.th/shop/ax-wifi.html",
+  "type": "CONTROLLER",
+  "pio_boardid": "nodemcuv2",
+  "formfactor": "STANDALONE",
+  "wiring_method": "INEX",
+  "support_cloudplatform": [
+    {
+      "cloud_platform": "NETPIE",
+      "classname": "MP_NETPIE_ESP",
+      "library_dependency": [
+        "netpieio/microgear-esp8266-arduino"
+      ]
+    },
+    {
+      "cloud_platform": "BLYNK",
+      "classname": "MP_BLYNK_NODEMCU",
+      "library_dependency": [
+        "blynkkk/blynk-library"
+      ]
+    }
+  ],
+  "width": 432.0,
+  "height": 572.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "D1",
+      "alias": ["5"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_I2C_1",
+          "pintype": "I2C_SCL"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 343.44,
+      "y": 198.84,
+      "angle": 180.0
+    },
+    {
+      "name": "D2",
+      "alias": ["4"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_I2C_1",
+          "pintype": "I2C_SDA"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 198.84,
+      "angle": 180.0
+    },
+    {
+      "name": "D0",
+      "alias": ["16"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 255.31,
+      "angle": 180.0
+    },
+    {
+      "name": "D4",
+      "alias": ["2"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 313.72,
+      "angle": 180.0
+    },
+    {
+      "name": "D5",
+      "alias": ["14"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_3",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 372.12,
+      "angle": 180.0
+    },
+    {
+      "name": "D6",
+      "alias": ["12"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_4",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_4",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 430.52,
+      "angle": 180.0
+    },
+    {
+      "name": "D7",
+      "alias": ["13"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_5",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_5",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 407.76,
+      "y": 488.92,
+      "angle": 180.0
+    },
+    {
+      "name": "D8",
+      "alias": ["15"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_6",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "INEX_PWM_6",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "D9",
+      "alias": ["3"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_UART_1",
+          "pintype": "UART_RX"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 20.66,
+      "y": 425.64,
+      "angle": 0.0
+    },
+    {
+      "name": "D10",
+      "alias": ["1"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_UART_1",
+          "pintype": "UART_TX"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 20.66,
+      "y": 482.28,
+      "angle": 0.0
+    },
+    {
+      "name": "A0",
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_ANALOG_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 20.66,
+      "y": 255.01,
+      "angle": 0.0
+    },
+    {
+      "name": "WS2812",
+      "alias": ["10"],
+      "type": "INEX_JST3",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_WS2812_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 20.66,
+      "y": 96.69,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "INEX_GPIO_1",
+    "INEX_GPIO_2",
+    "INEX_GPIO_3",
+    "INEX_GPIO_4",
+    "INEX_GPIO_5",
+    "INEX_GPIO_6",
+    "INEX_PWM_1",
+    "INEX_PWM_2",
+    "INEX_PWM_3",
+    "INEX_PWM_4",
+    "INEX_PWM_5",
+    "INEX_PWM_6",
+    "INEX_ANALOG_1",
+    "INEX_I2C_1",
+    "INEX_UART_1",
+    "INEX_WS2812_1"
+  ],
+  "compatibility": [],
+  "integrated_device": [
+    {
+      "name": "Integrated VR",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP8266",
+          "classname": "MP_TRIMPOT",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "A0",
+          "type": "INEX_JST3",
+          "function": [
+            {
+              "type": "INEX_ANALOG_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "INEX_ANALOG_1"
+      ],
+      "compatibility": [
+        {
+          "name": "POT",
+          "action": [
+            {
+              "name": "Compare",
+              "parameter": []
+            }
+          ],
+          "value": [
+            {
+              "name": "Percent",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
+            }
+          ],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Buzzer",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP8266",
+          "classname": "MP_BUZZER",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "D8",
+          "alias": ["15"],
+          "type": "INEX_JST3",
+          "function": [
+            {
+              "type": "INEX_PWM_1",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "INEX_PWM_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Buzzer",
+          "action": [
+            {
+              "name": "Play Tone",
+              "parameter": [
+                {
+                  "name": "Tone Frequency",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 20000.0,
+                    "unit": "HERTZ"
+                  }
+                },
+                {
+                  "name": "Duration",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "unit": "SECOND"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Beep",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated OLED",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP8266",
+          "classname": "MP_OLED_SSD1306_128x64",
+          "library_dependency": [
+            "adafruit/Adafruit_SSD1306",
+            "adafruit/Adafruit-GFX-Library"
+          ]
+        }
+      ],
+      "port": [
+        {
+          "name": "D1",
+          "type": "INEX_JST3",
+          "function": [
+            {
+              "type": "INEX_I2C_1",
+              "pintype": "I2C_SCL"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "D2",
+          "type": "INEX_JST3",
+          "function": [
+            {
+              "type": "INEX_I2C_1",
+              "pintype": "I2C_SDA"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "INEX_I2C_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Display",
+          "action": [
+            {
+              "name": "Show Text",
+              "parameter": [
+                {
+                  "name": "Line",
+                  "value": 1.0,
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  },
+                  "datatype": "INTEGER",
+                  "controltype": "SPINBOX"
+                },
+                {
+                  "name": "Text",
+                  "value": "",
+                  "constraint": [],
+                  "datatype": "STRING",
+                  "controltype": "TEXTBOX"
+                }
+              ]
+            },
+            {
+              "name": "Show Number",
+              "parameter": [
+                {
+                  "name": "Line",
+                  "value": 1.0,
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  },
+                  "datatype": "INTEGER",
+                  "controltype": "SPINBOX"
+                },
+                {
+                  "name": "Label",
+                  "value": "",
+                  "constraint": [],
+                  "datatype": "STRING",
+                  "controltype": "TEXTBOX"
+                },
+                {
+                  "name": "Value",
+                  "value": 1234.0,
+                  "constraint": {
+                    "min": -99999.0,
+                    "max": 99999.0,
+                    "unit": "NOT_SPECIFIED"
+                  },
+                  "datatype": "DOUBLE",
+                  "controltype": "SPINBOX"
+                }
+              ]
+            },
+            {
+              "name": "Clear Screen",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
+}
