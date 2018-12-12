@@ -12,11 +12,11 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 
-	int isDetected();
-	int isNotDetected();
+	bool isDetected();
+	bool isNotDetected();
 
 private:
 	uint8_t pin;
-	int isMotionDetected;
+	bool isMotionDetected;
 };
 #endif

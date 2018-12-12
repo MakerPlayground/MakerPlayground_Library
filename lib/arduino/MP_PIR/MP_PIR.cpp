@@ -14,6 +14,7 @@ int MP_PIR::init()
 {
 	isMotionDetected = false;
 	pinMode(this->pin, INPUT);
+	return 0;
 }
 
 void MP_PIR::update(unsigned long current_time)
@@ -27,12 +28,12 @@ void MP_PIR::printStatus()
 	Serial.println(this->isMotionDetected ? "detected": "not detected");
 }
 
-int MP_PIR::isDetected()
+bool MP_PIR::isDetected()
 {
 	return this->isMotionDetected;
 }
 
-int MP_PIR::isNotDetected()
+bool MP_PIR::isNotDetected()
 {
 	return !(this->isMotionDetected);
 }
