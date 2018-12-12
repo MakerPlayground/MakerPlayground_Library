@@ -8,7 +8,11 @@ const char* const* MP_7SEG_SOFTSERIAL::ERRORS = errors_p;
 uint8_t digits[] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111};
 
 MP_7SEG_SOFTSERIAL::MP_7SEG_SOFTSERIAL(uint8_t tx)
+#if defined(ARDUINO_ARCH_AVR)
 	:serial(SendOnlySoftwareSerial(tx))
+#elif defined(ARDUINO_ARCH_ESP8266)
+	:serial(SoftwareSerial(-1, tx))
+#endif
 {
 }
 

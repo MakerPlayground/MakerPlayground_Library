@@ -2,7 +2,12 @@
 #define MP_7SEG_SOFTSERIAL_H
 
 #include "MP_DEVICE.h"
-#include "SendOnlySoftwareSerial.h"
+
+#if defined(ARDUINO_ARCH_AVR)
+	#include "SendOnlySoftwareSerial.h"
+#elif defined(ARDUINO_ARCH_ESP8266)
+	#include "SoftwareSerial.h"
+#endif
 
 class MP_7SEG_SOFTSERIAL
 {
@@ -21,7 +26,11 @@ private:
 	void sendInvalid();
 	void showFloat(double num);
 	void sendData(int num, uint8_t dot, bool negative);
+#if defined(ARDUINO_ARCH_AVR)
 	SendOnlySoftwareSerial serial;
+#elif defined(ARDUINO_ARCH_ESP8266)
+	SoftwareSerial serial;
+#endif
 	double valueToShow;
 };
 
