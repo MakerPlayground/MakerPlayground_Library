@@ -1,0 +1,69 @@
+{
+  "id": "MP-Arduinoall-1640",
+  "brand": "Arduinoall",
+  "model": "GPS Module with Antenna (GPS ATGM336H)",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-1640",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO"
+  ],
+  "classname": "MP_TINY_GPS",
+  "library_dependency": [
+    "mikalhart/TinyGPSPlus-1.0.2"
+  ],
+  "width": 130.194,
+  "height": 203.991,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_GPIO_DUAL_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_GPIO_DUAL_1"
+  ],
+  "compatibility": [
+    {
+      "name": "GPS",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Latitude",
+          "constraint": {
+            "min": -90,
+            "max": 90,
+            "unit": "DEGREE"
+          }
+        },
+        {
+          "name": "Longitude",
+          "constraint": {
+            "min": -180,
+            "max": 180,
+            "unit": "DEGREE"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
