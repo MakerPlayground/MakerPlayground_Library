@@ -1,0 +1,62 @@
+{
+  "id": "MP-Arduinoall-823",
+  "brand": "Arduinoall",
+  "model": "Infrared Temperature Sensor Module (GY-906 MLX90614ESF)",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-823",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO",
+    "MP_ESP8266"
+  ],
+  "classname": "MP_GY906",
+  "library_dependency": [
+    "adafruit/Adafruit-MLX90614-Library-1.0.0"
+  ],
+  "width": 205.0,
+  "height": 80.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Temperature",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Temperature",
+          "constraint": {
+            "min": -40.0,
+            "max": 125.0,
+            "unit": "CELSIUS"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}
