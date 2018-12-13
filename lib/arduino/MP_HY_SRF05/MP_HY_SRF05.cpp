@@ -35,7 +35,6 @@ void MP_HY_SRF05::update(unsigned long current_time)
         {
             cm = 300;
         }
-        Serial.println(cm);
     }
 }
 
