@@ -13,8 +13,8 @@
     "plerup/espsoftwareserial-3.4.2",
     "mikalhart/TinyGPSPlus-1.0.2"
   ],
-  "width": 130.194,
-  "height": 203.991,
+  "width": 74.0,
+  "height": 148.0,
   "property": [],
   "dependency": "",
   "category": "",
@@ -22,6 +22,7 @@
     {
       "name": "Port",
       "type": "MP",
+      "sub_type": "RIGHTANGLE_TOP",
       "function": [
         {
           "type": "MP_GPIO_DUAL_1",
@@ -31,7 +32,8 @@
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
-      "y": 0.0
+      "y": 0.0,
+      "angle": 0.0
     }
   ],
   "connectivity": [

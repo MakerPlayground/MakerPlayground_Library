@@ -11,8 +11,8 @@
     ],
     "classname": "MP_HC_SR04",
     "library_dependency": [],
-    "width": 228.0,
-    "height": 129.811,
+    "width": 256.0,
+    "height": 170.0,
     "property": [],
     "dependency": "",
     "category": "",
@@ -29,8 +29,8 @@
         ],
         "v_min": 3.3,
         "v_max": 5.0,
-        "x": 120.456,
-        "y": 129.811,
+        "x": 0.0,
+        "y": 0.0,
         "angle": 0.0
       }
     ],
