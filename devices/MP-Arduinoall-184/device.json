@@ -1,0 +1,60 @@
+{
+  "id": "MP-Arduinoall-184",
+  "brand": "Arduinoall",
+  "model": "Soil Moisture Sensor Module",
+  "url": "http://www.makerplayground.io/library/MP-Arduinoall-184",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "platform": [
+    "MP_ARDUINO",
+    "MP_ESP8266"
+  ],
+  "classname": "MP_SOIL_MOISTURE",
+  "library_dependency": [],
+  "width": 210.63,
+  "height": 388.242,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "function": [
+        {
+          "type": "MP_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_ANALOG_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Soil Moisture",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Percent",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ]
+}

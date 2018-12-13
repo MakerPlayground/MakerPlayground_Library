@@ -1,19 +1,33 @@
 #include "MP_SOIL_MOISTURE.h"
 
-MP_SOIL_MOISTURE::MP_SOIL_MOISTURE(uint8_t pin, const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok};
+
+const char* const* MP_SOIL_MOISTURE::ERRORS = errors_p;
+
+MP_SOIL_MOISTURE::MP_SOIL_MOISTURE(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
 int MP_SOIL_MOISTURE::init()
 {
-	pinMode(data, INPUT);
-	pinMode(en, OUTPUT);
+	pinMode(pin, INPUT);
 	return 0;
 }
 
-double MP_SOIL_MOISTURE::getHumidity()
+void MP_SOIL_MOISTURE::update(unsigned long current_time)
 {
-	return (analogRead(pin) / 1023.0) * 100.0;
+	this->value = (analogRead(pin) / 1023.0) * 100.0;
+}
+
+void MP_SOIL_MOISTURE::printStatus()
+{
+	Serial.print(F("value = "));
+	Serial.println(this->value);
+}
+
+double MP_SOIL_MOISTURE::getPercent()
+{
+	return value;
 }

@@ -6,15 +6,16 @@
 class MP_SOIL_MOISTURE
 {
 public:
-	MP_SOIL_MOISTURE(uint8_t pin,const String &tag);
-
-	void init();
-	double getHumidity();
+	MP_SOIL_MOISTURE(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+	double getPercent();
 
 private:
 	uint8_t pin;
-	const String tag;
-
+	double value;
 };
 
 #endif
