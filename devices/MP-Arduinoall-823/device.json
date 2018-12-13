@@ -13,8 +13,8 @@
   "library_dependency": [
     "adafruit/Adafruit-MLX90614-Library-1.0.0"
   ],
-  "width": 140,
-  "height": 238,
+  "width": 62,
+  "height": 152,
   "property": [],
   "dependency": "",
   "category": "",
