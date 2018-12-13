@@ -12,8 +12,8 @@
   ],
   "classname": "MP_HBRIDGE_DRIVER",
   "library_dependency": [],
-  "width": 0.0,
-  "height": 0.0,
+  "width": 89,
+  "height": 203,
   "property": [],
   "dependency": "",
   "category": "",
@@ -21,6 +21,7 @@
     {
       "name": "Port",
       "type": "MP",
+      "sub_type": "RIGHTANGLE_TOP",
       "function": [
         {
           "type": "MP_PWM_DUAL_1",
@@ -30,7 +31,8 @@
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
-      "y": 0.0
+      "y": 0.0,
+      "angle": 0.0
     }
   ],
   "connectivity": [

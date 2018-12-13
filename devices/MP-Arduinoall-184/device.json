@@ -11,8 +11,8 @@
   ],
   "classname": "MP_SOIL_MOISTURE",
   "library_dependency": [],
-  "width": 210.63,
-  "height": 388.242,
+  "width": 89,
+  "height": 223,
   "property": [],
   "dependency": "",
   "category": "",
@@ -20,6 +20,7 @@
     {
       "name": "Port",
       "type": "MP",
+      "sub_type": "RIGHTANGLE_TOP",
       "function": [
         {
           "type": "MP_ANALOG_SINGLE_1",
@@ -29,7 +30,8 @@
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
-      "y": 0.0
+      "y": 0.0,
+      "angle": 0.0
     }
   ],
   "connectivity": [

@@ -28,8 +28,8 @@
   ],
   "classname": "",
   "library_dependency": [],
-  "width": 190.0,
-  "height": 116.0,
+  "width": 142.0,
+  "height": 238.0,
   "property": [],
   "dependency": "",
   "category": "",
@@ -38,6 +38,7 @@
       "name": "D1",
       "alias": ["16", "14"], 
       "type": "MP",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "MP_PWM_SINGLE_1",
@@ -58,13 +59,14 @@
       ],
       "v_min": 0.0,
       "v_max": 3.3,
-      "x": 0.0,
-      "y": 0.0
+      "x": 93,
+      "y": 177
     },
     {
       "name": "D2",
       "alias": ["13", "12"], 
       "type": "MP",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "MP_PWM_SINGLE_2",
@@ -85,13 +87,14 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
+      "x": 127,
+      "y": 177
     },
     {
       "name": "A1",
       "alias": ["A0"], 
       "type": "MP",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "MP_ANALOG_SINGLE_1",
@@ -104,13 +107,14 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
+      "x": 59,
+      "y": 177
     },
     {
       "name": "I2C/D3",
       "alias": ["4", "5"], 
       "type": "MP",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "MP_I2C_1",
@@ -139,8 +143,8 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
+      "x": 25,
+      "y": 177
     }
   ],
   "connectivity": [

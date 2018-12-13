@@ -14,8 +14,8 @@
   "library_dependency": [
     "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
   ],
-  "width": 0.0,
-  "height": 0.0,
+  "width": 124,
+  "height": 108,
   "property": [],
   "dependency": "",
   "category": "",
@@ -23,6 +23,7 @@
     {
       "name": "Port",
       "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
       "function": [
         {
           "type": "MP_I2C_1",
@@ -32,7 +33,8 @@
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 0.0,
-      "y": 0.0
+      "y": 0.0,
+      "angle": 0.0
     }
   ],
   "connectivity": [
