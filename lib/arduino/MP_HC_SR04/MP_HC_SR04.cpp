@@ -13,6 +13,7 @@ MP_HC_SR04::MP_HC_SR04(uint8_t echo, uint8_t trig)
 int MP_HC_SR04::init()  
 {	
 	pinMode(this->trig, OUTPUT);
+	digitalWrite(this->trig, LOW);
 	pinMode(this->echo, INPUT);
     return 0;
 }
@@ -21,19 +22,19 @@ void MP_HC_SR04::update(unsigned long current_time)
 {
     if (current_time >= nextReading)
     {
-        nextReading = current_time + 50;        // next reading should happen at least 50ms later otherwise the sound
-                                                // wave from previous reading may interfere with the new reading
+        nextReading = current_time + 100;       // next reading should happen at least 36(max echo pulse width)+10(gap according to the datasheet)=46ms
+                                                // later otherwise the sound wave from previous reading may interfere with the new reading
         digitalWrite(trig, LOW);
         delayMicroseconds(2);
         digitalWrite(trig, HIGH);
         delayMicroseconds(10);
         digitalWrite(trig, LOW);
-        cm = pulseIn(echo, HIGH, 12000) / 58;   // we need to wait for a few ms before the pulse start and
-                                                // a pulse with 8.82uS width is returned for distance of 3m 
-                                                // so we wait for 12ms before timeout and return 0
-        if (cm == 0 || cm > 300)
+        cm = pulseIn(echo, HIGH, 30000) / 58;   // we need to wait for a few ms before the pulse start and
+                                                // a pulse with 26.1uS width is returned for distance of 4.5m
+                                                // so we wait for 30ms before timeout and return 0
+        if (cm == 0 || cm > 450)
         {
-            cm = 300;
+            cm = 450;
         }
     }
 }
