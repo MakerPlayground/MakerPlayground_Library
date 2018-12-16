@@ -6,7 +6,7 @@
   "type": "CONTROLLER",
   "pio_boardid": "nodemcuv2",
   "formfactor": "MP_CONTROLLER",
-  "wiring_method": "MP_RECTANGLE_TINY",
+  "wiring_method": "MP",
   "support_cloudplatform": [
     {
       "cloud_platform": "NETPIE",

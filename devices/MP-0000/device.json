@@ -6,7 +6,7 @@
   "type": "CONTROLLER",
   "pio_boardid": "atmega328pb",
   "formfactor": "MP_CONTROLLER",
-  "wiring_method": "MP_HEXAGON",
+  "wiring_method": "MP",
   "support_cloudplatform": [
     {
       "cloud_platform": "BLYNK",
