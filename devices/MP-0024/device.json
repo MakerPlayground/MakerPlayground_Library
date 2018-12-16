@@ -99,10 +99,6 @@
         {
           "type": "MP_ANALOG_SINGLE_1",
           "pintype": "INOUT"
-        },
-        {
-          "type": "MP_GPIO_SINGLE_3",
-          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
@@ -122,22 +118,18 @@
         },
         {
           "type": "MP_PWM_SINGLE_3",
-          "conflict": ["MP_I2C_1"],
           "pintype": "INOUT"
         },
         {
           "type": "MP_PWM_DUAL_3",
-          "conflict": ["MP_I2C_1"],
           "pintype": "INOUT"
         },
         {
           "type": "MP_GPIO_SINGLE_4",
-          "conflict": ["MP_I2C_1"],
           "pintype": "INOUT"
         },
         {
           "type": "MP_GPIO_DUAL_3",
-          "conflict": ["MP_I2C_1"],
           "pintype": "INOUT"
         }
       ],
@@ -151,14 +143,12 @@
     "MP_PWM_SINGLE_1",
     "MP_PWM_SINGLE_2",
     "MP_PWM_SINGLE_3",
-    "MP_PWM_SINGLE_4",
     "MP_PWM_DUAL_1",
     "MP_PWM_DUAL_2",
     "MP_PWM_DUAL_3",
     "MP_GPIO_SINGLE_1",
     "MP_GPIO_SINGLE_2",
     "MP_GPIO_SINGLE_3",
-    "MP_GPIO_SINGLE_4",
     "MP_GPIO_DUAL_1",
     "MP_GPIO_DUAL_2",
     "MP_GPIO_DUAL_3",
