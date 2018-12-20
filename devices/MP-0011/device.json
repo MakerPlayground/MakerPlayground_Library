@@ -6,10 +6,10 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO",
-    "MP_ESP32",
-    "MP_ESP8266"
-  ],
+      "ARDUINO_AVR8",
+      "ARDUINO_ESP8266",
+      "ARDUINO_ESP32"
+    ],
   "classname": "MP_MICROPHONE_NORMALIZED",
   "library_dependency": [],
   "width": 124,

@@ -1,14 +1,14 @@
 {
     "id": "VD-0014",
-    "brand": "MakerPlayground",
-    "model": "PWM Device for MakerPlayground BaseBoard (OUT)",
-    "url": "http://www.makerplayground.io/library/VD-0014",
+    "brand": "",
+    "model": "Generic PWM Output",
+    "url": "",
     "type": "VIRTUAL",
     "formfactor": "NONE",
     "platform": [
-      "MP_ARDUINO",
-      "MP_ESP32",
-      "MP_ESP8266"
+      "ARDUINO_AVR8",
+      "ARDUINO_ESP8266",
+      "ARDUINO_ESP32"
     ],
     "classname": "VD_ANALOG_OUT",
     "library_dependency": [],
@@ -20,10 +20,10 @@
     "port": [
       {
         "name": "Port",
-        "type": "MP",
+        "type": "WIRE",
         "function": [
           {
-            "type": "MP_PWM_SINGLE_1",
+            "type": "PWM_1",
             "pintype": "INOUT"
           }
         ],
@@ -34,7 +34,7 @@
       }
     ],
     "connectivity": [
-      "MP_PWM_SINGLE_1"
+      "PWM_1"
     ],
     "compatibility": [
       {

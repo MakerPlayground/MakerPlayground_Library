@@ -25,7 +25,7 @@
     }
   ],
   "platform": [
-    "MP_ESP32"
+    "ARDUINO_ESP32"
   ],
   "classname": "",
   "library_dependency": [],

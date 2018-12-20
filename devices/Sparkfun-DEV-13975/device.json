@@ -8,7 +8,7 @@
   "formfactor": "STANDALONE",
   "wiring_method": "WIRE_AND_BREADBOARD",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "",
   "library_dependency": [],

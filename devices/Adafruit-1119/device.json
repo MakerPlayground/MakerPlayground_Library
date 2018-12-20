@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_TWOSIDE",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_BUTTON_AL",
   "library_dependency": [],

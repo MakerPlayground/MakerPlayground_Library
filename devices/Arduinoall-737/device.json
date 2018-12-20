@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_L9910",
   "library_dependency": [],

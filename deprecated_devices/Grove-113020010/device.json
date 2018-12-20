@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_WIFI_SERIAL_BLYNK",
   "library_dependency": [

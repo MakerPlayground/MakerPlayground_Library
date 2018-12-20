@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ESP8266"
+    "ARDUINO_ESP8266"
   ],
   "classname": "MP_TINY_GPS",
   "library_dependency": [

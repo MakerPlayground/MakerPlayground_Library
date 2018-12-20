@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_MPU6050",
   "library_dependency": [

@@ -18,7 +18,7 @@
     }
   ],
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "",
   "library_dependency": [],

@@ -1,14 +1,14 @@
 {
     "id": "VD-0009",
-    "brand": "MakerPlayground",
-    "model": "Digital Device for MakerPlayground BaseBoard (IN)",
-    "url": "http://www.makerplayground.io/library/VD-0009",
+    "brand": "",
+    "model": "Generic Digital Input",
+    "url": "",
     "type": "VIRTUAL",
     "formfactor": "NONE",
     "platform": [
-      "MP_ARDUINO",
-      "MP_ESP32",
-      "MP_ESP8266"
+      "ARDUINO_AVR8",
+      "ARDUINO_ESP8266",
+      "ARDUINO_ESP32"
     ],
     "classname": "VD_DIGITAL_IN",
     "library_dependency": [],
@@ -20,10 +20,10 @@
     "port": [
       {
         "name": "Port",
-        "type": "MP",
+        "type": "WIRE",
         "function": [
           {
-            "type": "MP_GPIO_SINGLE_1",
+            "type": "GPIO_1",
             "pintype": "INOUT"
           }
         ],
@@ -34,7 +34,7 @@
       }
     ],
     "connectivity": [
-      "MP_GPIO_SINGLE_1"
+      "GPIO_1"
     ],
     "compatibility": [
       {

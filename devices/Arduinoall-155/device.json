@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_TCS3200",
   "library_dependency": [],

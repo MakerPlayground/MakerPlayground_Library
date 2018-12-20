@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "platform": [
-    "GROVE_ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_BUZZER",
   "library_dependency": [],

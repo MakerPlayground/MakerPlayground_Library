@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "SHIELD",
   "platform": [
-    "ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_MOTOR_SHIELD",
   "library_dependency": [

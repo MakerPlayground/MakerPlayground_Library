@@ -6,11 +6,9 @@
     "type": "VIRTUAL",
     "formfactor": "NONE",
     "platform": [
-      "MP_ARDUINO",
-      "ARDUINO",
-      "GROVE_ARDUINO",
-      "MP_ESP32",
-      "MP_ESP8266"
+      "ARDUINO_AVR8",
+      "ARDUINO_ESP8266",
+      "ARDUINO_ESP32"
     ],
     "classname": "VD_TIMER",
     "library_dependency": [],

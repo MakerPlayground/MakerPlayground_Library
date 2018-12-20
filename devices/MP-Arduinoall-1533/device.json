@@ -6,9 +6,9 @@
     "type": "PERIPHERAL",
     "formfactor": "BREAKOUT_BOARD_ONESIDE",
     "platform": [
-      "MP_ARDUINO",
-      "MP_ESP8266"
-    ],
+    "ARDUINO_AVR8",
+    "ARDUINO_ESP8266"
+  ],
     "classname": "MP_HC_SR04",
     "library_dependency": [],
     "width": 256.0,

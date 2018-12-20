@@ -8,7 +8,7 @@
   "formfactor": "STANDALONE",
   "wiring_method": "KIDBRIGHT",
   "platform": [
-    "ESP32"
+    "ARDUINO_ESP32"
   ],
   "classname": "",
   "library_dependency": [],

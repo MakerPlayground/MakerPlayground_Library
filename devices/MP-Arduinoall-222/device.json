@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
   "platform": [
-    "MP_ARDUINO"
+    "ARDUINO_AVR8"
   ],
   "classname": "MP_MQ2",
   "library_dependency": [],

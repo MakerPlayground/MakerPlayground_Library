@@ -24,7 +24,7 @@
     }
   ],
   "platform": [
-    "MP_ESP8266"
+    "ARDUINO_ESP8266"
   ],
   "classname": "",
   "library_dependency": [],
