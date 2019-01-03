@@ -1,9 +1,10 @@
 /* Comment this out to disable prints and save space */
 // #define BLYNK_PRINT Serial
-#define ESP8266_BAUD 9600
 #define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
 
 #include "MP_BLYNK_NODEMCU.h"
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
 
 const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "Can't connect to access point";

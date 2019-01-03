@@ -2,8 +2,6 @@
 #define MP_BLYNK_NODEMCU_H
 
 #include "MP_DEVICE.h"
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
 #include "MP_BLYNK.h"
 
 class MP_BLYNK_NODEMCU : public MP_BLYNK
