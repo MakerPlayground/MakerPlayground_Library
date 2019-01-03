@@ -6,9 +6,13 @@
 class MP_RGB_LED_CA
 {
 public:
-	MP_RGB_LED_CA(uint8_t r, uint8_t g, uint8_t b, const String &tag);
+	MP_RGB_LED_CA(uint8_t r, uint8_t g, uint8_t b);
 
-	void init();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+	
 	void on(int red, int green, int blue, int brightness);
 	void off();
 
