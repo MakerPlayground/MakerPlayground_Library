@@ -3,20 +3,26 @@
 
 #include "MP_DEVICE.h"
 #include <Wire.h>
-#include "dht_dplasa.h"
+#include "dht.h"
 
 class MP_DHT12
 {
 public:
-	MP_DHT12(const String &tag);
+	MP_DHT12();
 
-	void init();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	double getTemperature();
 	double getHumidity();
 
 private:
 	dht12 sensor;
-	const String tag;
-}
+	double temperature;
+	double humidity;
+	unsigned long last_update = 0;
+};
 
 #endif

@@ -10,7 +10,7 @@
   ],
   "classname": "MP_DHT12",
   "library_dependency": [
-    "dht_dplasa"
+    "dplasa/dht"
   ],
   "width": 72.0,
   "height": 72.0,
