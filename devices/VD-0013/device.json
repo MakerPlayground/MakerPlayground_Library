@@ -1,62 +1,72 @@
 {
-    "id": "VD-0013",
-    "brand": "",
-    "model": "Generic Analog Input",
-    "url": "",
-    "type": "VIRTUAL",
-    "formfactor": "NONE",
-    "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-    "classname": "VD_ANALOG_IN",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "Port",
-        "type": "WIRE",
-        "function": [
-          {
-            "type": "ANALOG_1",
-            "pintype": "INOUT"
+  "id": "VD-0013",
+  "brand": "",
+  "model": "Generic Analog Input",
+  "url": "",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "ANALOG_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Analog (In)",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Percent",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": 0,
+            "max": 100,
+            "unit": "PERCENT"
           }
-        ],
-        "v_min": 5.0,
-        "v_max": 5.0,
-        "x": 0.0,
-        "y": 0.0
-      }
-    ],
-    "connectivity": [
-      "ANALOG_1"
-    ],
-    "compatibility": [
-      {
-        "name": "Analog (In)",
-        "action": [
-          {
-            "name": "Compare",
-            "parameter": []
-          }
-        ],
-        "value": [
-          {
-            "name": "Percent",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": 0,
-              "max": 100,
-              "unit": "PERCENT"
-            }
-          }
-        ],
-        "count": ""
-      }
-    ]
-  }
+        }
+      ],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "VD_ANALOG_IN",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "VD_ANALOG_IN",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "VD_ANALOG_IN",
+      "library_dependency": []
+    }
+  ]
+}

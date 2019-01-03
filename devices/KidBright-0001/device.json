@@ -7,11 +7,6 @@
   "pio_boardid": "esp32dev",
   "formfactor": "STANDALONE",
   "wiring_method": "KIDBRIGHT",
-  "platform": [
-    "ARDUINO_ESP32"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 425.0,
   "height": 303.0,
   "property": [],
@@ -114,8 +109,13 @@
   "integrated_device": [
     {
       "name": "Integrated Button (S1)",
-      "classname": "MP_BUTTON_AL",
-      "library_dependency": [],
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
       "port": [
         {
           "name": "16",
@@ -159,8 +159,13 @@
     },
     {
       "name": "Integrated Button (S2)",
-      "classname": "MP_BUTTON_AL",
-      "library_dependency": [],
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
       "port": [
         {
           "name": "14",
@@ -204,8 +209,13 @@
     },
     {
       "name": "Integrated Light Sensor",
-      "classname": "MP_LIGHT_SENSOR_KIDBRIGHT",
-      "library_dependency": [],
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_LIGHT_SENSOR_KIDBRIGHT",
+          "library_dependency": []
+        }
+      ],
       "port": [
         {
           "name": "36",
@@ -250,8 +260,13 @@
     },
     {
       "name": "Integrated Buzzer",
-      "classname": "MP_BUZZER",
-      "library_dependency": [],
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUZZER",
+          "library_dependency": []
+        }
+      ],
       "port": [
         {
           "name": "13",
@@ -308,9 +323,14 @@
     },
     {
       "name": "Integrated RTC",
-      "classname": "MP_RTC_MCP4971x",
-      "library_dependency": [
-        "jetstreamc/mcp7941x_arduino_ESP32_I2C1"
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_RTC_MCP4971x",
+          "library_dependency": [
+            "jetstreamc/mcp7941x_arduino_ESP32_I2C1"
+          ]
+        }
       ],
       "port": [
         {
@@ -409,6 +429,13 @@
           "count": ""
         }
       ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "",
+      "library_dependency": []
     }
   ]
 }

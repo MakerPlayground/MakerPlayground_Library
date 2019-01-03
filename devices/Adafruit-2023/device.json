@@ -5,13 +5,6 @@
   "url": "https://www.adafruit.com/product/2023",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TMP007",
-  "library_dependency": [
-    "adafruit/Adafruit_TMP007_Library"
-  ],
   "width": 116.0,
   "height": 116.0,
   "property": [],
@@ -125,6 +118,15 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TMP007",
+      "library_dependency": [
+        "adafruit/Adafruit_TMP007_Library"
+      ]
     }
   ]
 }

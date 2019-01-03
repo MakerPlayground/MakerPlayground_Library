@@ -1,256 +1,277 @@
 {
-    "id": "Grove-102010168",
-    "brand": "Seeeduino",
-    "model": "Lotus V1.1 - ATMega328 Board with Grove Interface",
-    "url": "https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface-p-2917.html",
-    "type": "CONTROLLER",
-    "pio_boardid": "uno",
-    "formfactor": "STANDALONE",
-    "wiring_method": "GROVE",
-    "platform": [
-      "ARDUINO_AVR8"
-    ],
-    "classname": "",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "D2",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_1",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_1",
-            "conflict": ["GROVE_GPIO_SINGLE_2", "GROVE_GPIO_DUAL_2", "GROVE_PWM_SINGLE_1"],
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 262.662,
-        "y": 74.189
-      },
-      {
-        "name": "D3",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_2",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_2",
-            "conflict": ["GROVE_GPIO_SINGLE_3", "GROVE_GPIO_DUAL_3"],
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_PWM_SINGLE_1",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 193.588,
-        "y": 74.189
-      },
-      {
-        "name": "D4",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_3",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_3",
-            "conflict": ["GROVE_GPIO_SINGLE_4", "GROVE_GPIO_DUAL_4", "GROVE_PWM_SINGLE_2", "GROVE_PWM_DUAL_1"],
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 124.514,
-        "y": 74.189
-      },
-      {
-        "name": "D5",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_4",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_4",
-            "conflict": ["GROVE_GPIO_SINGLE_5", "GROVE_GPIO_DUAL_5", "GROVE_PWM_SINGLE_3"],
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_PWM_SINGLE_2",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_PWM_DUAL_1",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 331.736,
-        "y": 154.732
-      },
-      {
-        "name": "D6",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_5",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_5",
-            "conflict": ["GROVE_GPIO_SINGLE_6", "GROVE_GPIO_DUAL_6"],
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_PWM_SINGLE_3",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 262.662,
-        "y": 154.732
-      },
-      {
-        "name": "D7",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_GPIO_SINGLE_6",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_GPIO_DUAL_6",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 193.588,
-        "y": 154.732
-      },
-      {
-        "name": "A6",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_ANALOG_SINGLE_3",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_ANALOG_DUAL_3",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 124.514,
-        "y": 154.732
-      },
-      {
-        "name": "I2C..",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_I2C_2",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 331.736,
-        "y": 235.274
-      },
-      {
-        "name": "I2C.",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_I2C_1",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 262.662,
-        "y": 235.274
-      },
-      {
-        "name": "A0",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_ANALOG_SINGLE_1",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_ANALOG_DUAL_1",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 193.588,
-        "y": 235.274
-      },
-      {
-        "name": "A2",
-        "type": "GROVE",
-        "function": [
-          {
-            "type": "GROVE_ANALOG_SINGLE_2",
-            "pintype": "INOUT"
-          },
-          {
-            "type": "GROVE_ANALOG_DUAL_2",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 0.0,
-        "v_max": 0.0,
-        "x": 124.514,
-        "y": 235.274
-      }
-    ],
-    "connectivity": [
-      "GROVE_GPIO_SINGLE_1",
-      "GROVE_GPIO_SINGLE_2",
-      "GROVE_GPIO_SINGLE_3",
-      "GROVE_GPIO_SINGLE_4",
-      "GROVE_GPIO_SINGLE_5",
-      "GROVE_GPIO_SINGLE_6",
-      "GROVE_GPIO_DUAL_1",
-      "GROVE_GPIO_DUAL_2",
-      "GROVE_GPIO_DUAL_3",
-      "GROVE_GPIO_DUAL_4",
-      "GROVE_GPIO_DUAL_5",
-      "GROVE_GPIO_DUAL_6",
-      "GROVE_ANALOG_SINGLE_1",
-      "GROVE_ANALOG_SINGLE_2",
-      "GROVE_ANALOG_SINGLE_3",
-      "GROVE_ANALOG_DUAL_1",
-      "GROVE_ANALOG_DUAL_2",
-      "GROVE_ANALOG_DUAL_3",
-      "GROVE_I2C_1",
-      "GROVE_I2C_2"
-    ],
-    "compatibility": []
-  }
+  "id": "Grove-102010168",
+  "brand": "Seeeduino",
+  "model": "Lotus V1.1 - ATMega328 Board with Grove Interface",
+  "url": "https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface-p-2917.html",
+  "type": "CONTROLLER",
+  "pio_boardid": "uno",
+  "formfactor": "STANDALONE",
+  "wiring_method": "GROVE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "D2",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_1",
+          "conflict": [
+            "GROVE_GPIO_SINGLE_2",
+            "GROVE_GPIO_DUAL_2",
+            "GROVE_PWM_SINGLE_1"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 262.662,
+      "y": 74.189
+    },
+    {
+      "name": "D3",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_2",
+          "conflict": [
+            "GROVE_GPIO_SINGLE_3",
+            "GROVE_GPIO_DUAL_3"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 193.588,
+      "y": 74.189
+    },
+    {
+      "name": "D4",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_3",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_3",
+          "conflict": [
+            "GROVE_GPIO_SINGLE_4",
+            "GROVE_GPIO_DUAL_4",
+            "GROVE_PWM_SINGLE_2",
+            "GROVE_PWM_DUAL_1"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 124.514,
+      "y": 74.189
+    },
+    {
+      "name": "D5",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_4",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_4",
+          "conflict": [
+            "GROVE_GPIO_SINGLE_5",
+            "GROVE_GPIO_DUAL_5",
+            "GROVE_PWM_SINGLE_3"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_DUAL_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 331.736,
+      "y": 154.732
+    },
+    {
+      "name": "D6",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_5",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_5",
+          "conflict": [
+            "GROVE_GPIO_SINGLE_6",
+            "GROVE_GPIO_DUAL_6"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 262.662,
+      "y": 154.732
+    },
+    {
+      "name": "D7",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_6",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_GPIO_DUAL_6",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 193.588,
+      "y": 154.732
+    },
+    {
+      "name": "A6",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_ANALOG_SINGLE_3",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_ANALOG_DUAL_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 124.514,
+      "y": 154.732
+    },
+    {
+      "name": "I2C..",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_I2C_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 331.736,
+      "y": 235.274
+    },
+    {
+      "name": "I2C.",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 262.662,
+      "y": 235.274
+    },
+    {
+      "name": "A0",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_ANALOG_DUAL_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 193.588,
+      "y": 235.274
+    },
+    {
+      "name": "A2",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_ANALOG_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_ANALOG_DUAL_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 124.514,
+      "y": 235.274
+    }
+  ],
+  "connectivity": [
+    "GROVE_GPIO_SINGLE_1",
+    "GROVE_GPIO_SINGLE_2",
+    "GROVE_GPIO_SINGLE_3",
+    "GROVE_GPIO_SINGLE_4",
+    "GROVE_GPIO_SINGLE_5",
+    "GROVE_GPIO_SINGLE_6",
+    "GROVE_GPIO_DUAL_1",
+    "GROVE_GPIO_DUAL_2",
+    "GROVE_GPIO_DUAL_3",
+    "GROVE_GPIO_DUAL_4",
+    "GROVE_GPIO_DUAL_5",
+    "GROVE_GPIO_DUAL_6",
+    "GROVE_ANALOG_SINGLE_1",
+    "GROVE_ANALOG_SINGLE_2",
+    "GROVE_ANALOG_SINGLE_3",
+    "GROVE_ANALOG_DUAL_1",
+    "GROVE_ANALOG_DUAL_2",
+    "GROVE_ANALOG_DUAL_3",
+    "GROVE_I2C_1",
+    "GROVE_I2C_2"
+  ],
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
+}

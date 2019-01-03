@@ -5,12 +5,6 @@
   "url": "https://www.arduinoall.com/product/1533/ultrasonic-sensor-module-hc-sr04p-โมดูล-ultrasonic-hc-sr04-p",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_HC_SR04",
-  "library_dependency": [],
   "width": 256.0,
   "height": 132.0,
   "property": [],
@@ -98,6 +92,18 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_HC_SR04",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_HC_SR04",
+      "library_dependency": []
     }
   ]
 }

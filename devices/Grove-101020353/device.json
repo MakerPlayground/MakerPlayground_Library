@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_PIR",
-  "library_dependency": [],
   "width": 0.0,
   "height": 0.0,
   "property": [],
@@ -59,6 +54,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_PIR",
+      "library_dependency": []
     }
   ]
 }

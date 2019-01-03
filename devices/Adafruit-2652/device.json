@@ -5,14 +5,6 @@
   "url": "https://www.adafruit.com/products/2652",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_BME280",
-  "library_dependency": [
-    "adafruit/Adafruit_BME280_Library",
-    "adafruit/Adafruit_Sensor"
-  ],
   "width": 100.8,
   "height": 108.0,
   "property": [],
@@ -186,6 +178,16 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BME280",
+      "library_dependency": [
+        "adafruit/Adafruit_BME280_Library",
+        "adafruit/Adafruit_Sensor"
+      ]
     }
   ]
 }

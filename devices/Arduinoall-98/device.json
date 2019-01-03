@@ -5,11 +5,6 @@
   "url": "https://www.arduinoall.com/product/98/light-dependent-resistor-ldr-5mm-photoresistor",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_LIGHT_SENSOR",
-  "library_dependency": [],
   "width": 132.212,
   "height": 40.201,
   "property": [],
@@ -82,6 +77,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LIGHT_SENSOR",
+      "library_dependency": []
     }
   ]
 }

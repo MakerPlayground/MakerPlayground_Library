@@ -1,91 +1,101 @@
 {
-    "id": "VD-0002",
-    "brand": "MakerPlayground",
-    "model": "Timer",
-    "url": "http://www.makerplayground.io/library/VD-0002",
-    "type": "VIRTUAL",
-    "formfactor": "NONE",
-    "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-    "classname": "VD_TIMER",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "Port",
-        "type": "VIRTUAL",
-        "function": [
-          {
-            "type": "NOT_CONNECTED",
-            "pintype": "NOT_CONNECTED"
-          }
-        ],
-        "v_min": 5.0,
-        "v_max": 5.0,
-        "x": 0.0,
-        "y": 0.0
-      }
-    ],
-    "connectivity": [
-      "NOT_CONNECTED"
-    ],
-    "compatibility": [
-      {
-        "name": "Timer",
-        "action": [
-          {
-            "name": "Start timer",
-            "parameter": []
-          },
-          {
-            "name": "After",
-            "parameter": [
-              {
-                "name": "Second",
-                "constraint": {
-                  "min": 1,
-                  "max": 1000000000,
-                  "unit": "SECOND"
-                }
+  "id": "VD-0002",
+  "brand": "MakerPlayground",
+  "model": "Timer",
+  "url": "http://www.makerplayground.io/library/VD-0002",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Timer",
+      "action": [
+        {
+          "name": "Start timer",
+          "parameter": []
+        },
+        {
+          "name": "After",
+          "parameter": [
+            {
+              "name": "Second",
+              "constraint": {
+                "min": 1,
+                "max": 1000000000,
+                "unit": "SECOND"
               }
-            ]
-          },
-          {
-            "name": "Before",
-            "parameter": [
-              {
-                "name": "Second",
-                "constraint": {
-                  "min": 1,
-                  "max": 1000000000,
-                  "unit": "SECOND"
-                }
-              }
-            ]
-          },
-          {
-            "name": "Stop timer",
-            "parameter": []
-          }
-        ],
-        "value": [
-          {
-            "name": "Time",
-            "constraint": {
-              "min": 0,
-              "max": 1000000000,
-              "unit": "SECOND"
             }
+          ]
+        },
+        {
+          "name": "Before",
+          "parameter": [
+            {
+              "name": "Second",
+              "constraint": {
+                "min": 1,
+                "max": 1000000000,
+                "unit": "SECOND"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Stop timer",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Time",
+          "constraint": {
+            "min": 0,
+            "max": 1000000000,
+            "unit": "SECOND"
           }
-        ],
-        "count": ""
-      }
-    ]
-  }
+        }
+      ],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "VD_TIMER",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "VD_TIMER",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "VD_TIMER",
+      "library_dependency": []
+    }
+  ]
+}

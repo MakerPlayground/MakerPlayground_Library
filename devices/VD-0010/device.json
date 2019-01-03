@@ -1,56 +1,66 @@
 {
-    "id": "VD-0010",
-    "brand": "",
-    "model": "Generic Digital Output",
-    "url": "",
-    "type": "VIRTUAL",
-    "formfactor": "NONE",
-    "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-    "classname": "VD_DIGITAL_OUT",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "Port",
-        "type": "WIRE",
-        "function": [
-          {
-            "type": "GPIO_1",
-            "pintype": "INOUT"
-          }
-        ],
-        "v_min": 5.0,
-        "v_max": 5.0,
-        "x": 0.0,
-        "y": 0.0
-      }
-    ],
-    "connectivity": [
-      "GPIO_1"
-    ],
-    "compatibility": [
-      {
-        "name": "Digital (Out)",
-        "action": [
-          {
-            "name": "Set Output HIGH",
-            "parameter": []
-          },
-          {
-            "name": "Set Output LOW",
-            "parameter": []
-          }
-        ],
-        "value": [],
-        "count": ""
-      }
-    ]
-  }
+  "id": "VD-0010",
+  "brand": "",
+  "model": "Generic Digital Output",
+  "url": "",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "GPIO_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Digital (Out)",
+      "action": [
+        {
+          "name": "Set Output HIGH",
+          "parameter": []
+        },
+        {
+          "name": "Set Output LOW",
+          "parameter": []
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "VD_DIGITAL_OUT",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "VD_DIGITAL_OUT",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "VD_DIGITAL_OUT",
+      "library_dependency": []
+    }
+  ]
+}

@@ -5,11 +5,6 @@
   "url": "https://www.adafruit.com/product/1119",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_TWOSIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_BUTTON_AL",
-  "library_dependency": [],
   "width": 119.0,
   "height": 82.0,
   "property": [],
@@ -81,6 +76,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
     }
   ]
 }

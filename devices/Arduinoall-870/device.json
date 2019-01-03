@@ -5,12 +5,6 @@
   "url": "https://www.arduinoall.com/product/899/micro-pir-human-body-sensing-module-pir-module-infrared-module-เซนเซอร์-pir-ตรวจจับความเคลื่อนไหวของ",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_PIR",
-  "library_dependency": [],
   "width": 46,
   "height": 92,
   "property": [],
@@ -88,6 +82,18 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_PIR",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_PIR",
+      "library_dependency": []
     }
   ]
 }

@@ -5,11 +5,6 @@
   "url": "https://www.sparkfun.com/products/13743",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 128.0,
   "height": 173.0,
   "property": [],
@@ -113,5 +108,12 @@
   "connectivity": [
     "SPI_1"
   ],
-  "compatibility": []
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
 }

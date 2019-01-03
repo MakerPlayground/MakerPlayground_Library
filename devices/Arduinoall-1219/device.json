@@ -5,13 +5,6 @@
   "url": "https://www.arduinoall.com/product/1219/%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B8%82-4-%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-0-36-%E0%B8%AA%E0%B8%B5%E0%B9%81%E0%B8%94%E0%B8%87-tm1637-driver",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TM1637_DISPLAY",
-  "library_dependency": [
-    "avishorp/TM1637"
-  ],
   "width": 372.0,
   "height": 153.0,
   "property": [],
@@ -130,6 +123,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TM1637_DISPLAY",
+      "library_dependency": [
+        "avishorp/TM1637"
+      ]
     }
   ]
 }

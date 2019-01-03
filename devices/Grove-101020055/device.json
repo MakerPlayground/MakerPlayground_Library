@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ2%29-p-937.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_MQ2",
-  "library_dependency": [],
   "width": 0.0,
   "height": 0.0,
   "property": [],
@@ -54,6 +49,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MQ2",
+      "library_dependency": []
     }
   ]
 }

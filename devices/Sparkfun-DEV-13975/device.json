@@ -7,11 +7,6 @@
   "pio_boardid": "uno",
   "formfactor": "STANDALONE",
   "wiring_method": "WIRE_AND_BREADBOARD",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 531.0,
   "height": 410.0,
   "property": [],
@@ -450,5 +445,12 @@
     "ANALOG_4",
     "ANALOG_5"
   ],
-  "compatibility": []
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
 }

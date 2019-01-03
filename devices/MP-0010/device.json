@@ -5,15 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-0010",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
-  "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-  "classname": "MP_APDS9960",
-  "library_dependency": [
-    "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
-  ],
   "width": 124,
   "height": 108,
   "property": [],
@@ -51,6 +42,29 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_APDS9960",
+      "library_dependency": [
+        "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_APDS9960",
+      "library_dependency": [
+        "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_APDS9960",
+      "library_dependency": [
+        "SparkFun/SparkFun_APDS-9960_Sensor_Arduino_Library"
+      ]
     }
   ]
 }

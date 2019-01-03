@@ -5,12 +5,6 @@
   "url": "https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-เซนเซอร์-ตรวจจับเปลวไฟด้วย-infrared",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_FLYINGFISH_FLAME_DETECTOR",
-  "library_dependency": [],
   "width": 80,
   "height": 244,
   "property": [],
@@ -92,6 +86,18 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_FLYINGFISH_FLAME_DETECTOR",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_FLYINGFISH_FLAME_DETECTOR",
+      "library_dependency": []
     }
   ]
 }

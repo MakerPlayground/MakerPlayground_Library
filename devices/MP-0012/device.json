@@ -5,13 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-0012",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_7SEG_SOFTSERIAL",
-  "library_dependency": [
-    "nickgammon/SendOnlySoftwareSerial"
-  ],
   "width": 108.0,
   "height": 308.0,
   "property": [],
@@ -71,6 +64,22 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_7SEG_SOFTSERIAL",
+      "library_dependency": [
+        "nickgammon/SendOnlySoftwareSerial"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_7SEG_SOFTSERIAL",
+      "library_dependency": [
+        "plerup/espsoftwareserial-3.4.2"
+      ]
     }
   ]
 }

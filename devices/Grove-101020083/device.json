@@ -5,13 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Gesture-PAJ7620U-p-2463.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_PAJ7620U2",
-  "library_dependency": [
-    "SeeedStudio/Gesture_PAJ7620-master"
-  ],
   "width": 0.0,
   "height": 0.0,
   "property": [],
@@ -75,6 +68,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_PAJ7620U2",
+      "library_dependency": [
+        "SeeedStudio/Gesture_PAJ7620-master"
+      ]
     }
   ]
 }

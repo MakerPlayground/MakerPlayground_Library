@@ -5,11 +5,6 @@
   "url": "https://www.arduinoall.com/product/222/module-mq-2-fc-22-smoke-gas-sensor-mq2-smoke-methane-gas-liquefied-flammable-gas-sensor-module-for-a",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_MQ2",
-  "library_dependency": [],
   "width": 114,
   "height": 182,
   "property": [],
@@ -91,6 +86,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MQ2",
+      "library_dependency": []
     }
   ]
 }

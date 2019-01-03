@@ -5,13 +5,6 @@
   "url": "https://www.adafruit.com/product/3251",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_SI7021",
-  "library_dependency": [
-    "adafruit/Adafruit_Si7021"
-  ],
   "width": 86.4,
   "height": 100.8,
   "property": [],
@@ -127,6 +120,15 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SI7021",
+      "library_dependency": [
+        "adafruit/Adafruit_Si7021"
+      ]
     }
   ]
 }

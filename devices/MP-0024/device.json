@@ -23,11 +23,6 @@
       ]
     }
   ],
-  "platform": [
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 142.0,
   "height": 238.0,
   "property": [],
@@ -36,7 +31,10 @@
   "port": [
     {
       "name": "D1",
-      "alias": ["16", "14"], 
+      "alias": [
+        "16",
+        "14"
+      ],
       "type": "MP",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -64,7 +62,10 @@
     },
     {
       "name": "D2",
-      "alias": ["13", "12"], 
+      "alias": [
+        "13",
+        "12"
+      ],
       "type": "MP",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -92,7 +93,9 @@
     },
     {
       "name": "A1",
-      "alias": ["A0"], 
+      "alias": [
+        "A0"
+      ],
       "type": "MP",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -108,7 +111,10 @@
     },
     {
       "name": "I2C/D3",
-      "alias": ["5", "4"], 
+      "alias": [
+        "5",
+        "4"
+      ],
       "type": "MP",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -155,5 +161,12 @@
     "MP_ANALOG_SINGLE_1",
     "MP_I2C_1"
   ],
-  "compatibility": []
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
 }

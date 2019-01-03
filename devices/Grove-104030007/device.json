@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Green-LED-p-1144.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_LED_AH",
-  "library_dependency": [],
   "width": 128.0,
   "height": 148.0,
   "property": [],
@@ -58,6 +53,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LED_AH",
+      "library_dependency": []
     }
   ]
 }

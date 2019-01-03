@@ -5,11 +5,6 @@
   "url": "https://www.sparkfun.com/products/9590",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_LED_AH",
-  "library_dependency": [],
   "width": 111.0,
   "height": 129.0,
   "property": [],
@@ -72,6 +67,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LED_AH",
+      "library_dependency": []
     }
   ]
 }

@@ -1,121 +1,131 @@
 {
-    "id": "VD-0001",
-    "brand": "MakerPlayground",
-    "model": "Counter",
-    "url": "http://www.makerplayground.io/library/VD-0001",
-    "type": "VIRTUAL",
-    "formfactor": "NONE",
-    "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-    "classname": "VD_COUNTER",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "Port",
-        "type": "VIRTUAL",
-        "function": [
-          {
-            "type": "NOT_CONNECTED",
-            "pintype": "NOT_CONNECTED"
-          }
-        ],
-        "v_min": 5.0,
-        "v_max": 5.0,
-        "x": 0.0,
-        "y": 0.0
-      }
-    ],
-    "connectivity": [
-      "NOT_CONNECTED"
-    ],
-    "compatibility": [
-      {
-        "name": "Counter",
-        "action": [
-          {
-            "name": "Compare",
-            "parameter": []
-          },
-          {
-            "name": "Set to",
-            "parameter": [
-              {
-                "name": "Value",
-                "constraint": {
-                  "min": -10000,
-                  "max": 10000,
-                  "unit": "NOT_SPECIFIED"
-                }
+  "id": "VD-0001",
+  "brand": "MakerPlayground",
+  "model": "Counter",
+  "url": "http://www.makerplayground.io/library/VD-0001",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Counter",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        },
+        {
+          "name": "Set to",
+          "parameter": [
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -10000,
+                "max": 10000,
+                "unit": "NOT_SPECIFIED"
               }
-            ]
-          },
-          {
-            "name": "Count up by 1",
-            "parameter": []
-          },
-          {
-            "name": "Count down by 1",
-            "parameter": []
-          },
-          {
-            "name": "Count by",
-            "parameter": [
-              {
-                "name": "Change",
-                "constraint": {
-                  "min": -100,
-                  "max": 100,
-                  "unit": "NOT_SPECIFIED"
-                }
-              }
-            ]
-          },
-          {
-            "name": "Check value equal",
-            "parameter": [
-              {
-                "name": "Value",
-                "constraint": {
-                  "min": -10000,
-                  "max": 10000,
-                  "unit": "NOT_SPECIFIED"
-                }
-              }
-            ]
-          },
-          {
-            "name": "Check value not equal",
-            "parameter": [
-              {
-                "name": "Value",
-                "constraint": {
-                  "min": -10000,
-                  "max": 10000,
-                  "unit": "NOT_SPECIFIED"
-                }
-              }
-            ]
-          }
-        ],
-        "value": [
-          {
-            "name": "Value",
-            "constraint": {
-              "min": -10000,
-              "max": 10000,
-              "unit": "NOT_SPECIFIED"
             }
+          ]
+        },
+        {
+          "name": "Count up by 1",
+          "parameter": []
+        },
+        {
+          "name": "Count down by 1",
+          "parameter": []
+        },
+        {
+          "name": "Count by",
+          "parameter": [
+            {
+              "name": "Change",
+              "constraint": {
+                "min": -100,
+                "max": 100,
+                "unit": "NOT_SPECIFIED"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Check value equal",
+          "parameter": [
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -10000,
+                "max": 10000,
+                "unit": "NOT_SPECIFIED"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Check value not equal",
+          "parameter": [
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -10000,
+                "max": 10000,
+                "unit": "NOT_SPECIFIED"
+              }
+            }
+          ]
+        }
+      ],
+      "value": [
+        {
+          "name": "Value",
+          "constraint": {
+            "min": -10000,
+            "max": 10000,
+            "unit": "NOT_SPECIFIED"
           }
-        ],
-        "count": ""
-      }
-    ]
-  }
+        }
+      ],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "VD_COUNTER",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "VD_COUNTER",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "VD_COUNTER",
+      "library_dependency": []
+    }
+  ]
+}

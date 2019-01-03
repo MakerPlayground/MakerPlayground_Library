@@ -5,11 +5,6 @@
   "url": "https://www.adafruit.com/product/1063",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_MICROPHONE",
-  "library_dependency": [],
   "width": 79.2,
   "height": 122.4,
   "property": [],
@@ -82,6 +77,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MICROPHONE",
+      "library_dependency": []
     }
   ]
 }

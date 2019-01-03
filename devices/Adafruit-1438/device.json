@@ -5,13 +5,6 @@
   "url": "https://www.adafruit.com/product/1438",
   "type": "PERIPHERAL",
   "formfactor": "SHIELD",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_MOTOR_SHIELD",
-  "library_dependency": [
-    "adafruit/Adafruit_MotorShield_V2_Library"
-  ],
   "width": 454.0,
   "height": 204.0,
   "property": [],
@@ -271,6 +264,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MOTOR_SHIELD",
+      "library_dependency": [
+        "adafruit/Adafruit_MotorShield_V2_Library"
+      ]
     }
   ]
 }
