@@ -1,0 +1,83 @@
+{
+  "id": "Arduinoall-1311",
+  "brand": "Arduinoall",
+  "model": "Vibration Motor Module (Catalex)",
+  "url": "https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-บอร์ดทดลองมอเตอร์สั่น",
+  "type": "PERIPHERAL",
+  "formfactor": "BREAKOUT_BOARD_ONESIDE",
+  "platform": [
+    "ARDUINO_AVR8",
+    "ARDUINO_ESP8266"
+  ],
+  "classname": "MP_LOAD_DRIVER",
+  "library_dependency": [],
+  "width": 124.0,
+  "height": 150.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 49.0,
+      "y": 150.0
+    },
+    {
+      "name": "VCC",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 61.1,
+      "y": 150.0
+    },
+    {
+      "name": "SIG",
+      "type": "WIRE",
+      "function": [
+        {
+        "type": "PWM_1",
+        "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 73.1,
+      "y": 150.0
+    }
+  ],
+  "connectivity": [
+    "PWM_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Load Driver",
+      "action": [
+        {
+          "name": "On",
+          "parameter": []
+        },
+        {
+          "name": "Off",
+          "parameter": []
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ]
+}

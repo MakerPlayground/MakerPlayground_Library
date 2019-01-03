@@ -1,34 +1,44 @@
 {
-  "id": "Arduinoall-261",
+  "id": "Arduinoall-807",
   "brand": "Arduinoall",
-  "model": "MQ-3 alcohol sensor",
-  "url": "https://www.arduinoall.com/product/261/%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%AD%E0%B8%A5%E0%B8%81%E0%B8%AD%E0%B8%AE%E0%B8%AD%E0%B8%A5%E0%B9%8C-mq-3-alcohol-sensor-alcohol",
+  "model": "Infrared IR Flame Detector Sensor Module",
+  "url": "https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-เซนเซอร์-ตรวจจับเปลวไฟด้วย-infrared",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "platform": [
-    "ARDUINO_AVR8"
+    "ARDUINO_AVR8",
+    "ARDUINO_ESP8266"
   ],
-  "classname": "MP_MQ3",
+  "classname": "MP_FLYINGFISH_FLAME_DETECTOR",
   "library_dependency": [],
-  "width": 114,
-  "height": 182,
+  "width": 80,
+  "height": 244,
   "property": [],
   "dependency": "",
   "category": "",
   "port": [
     {
-      "name": "VCC",
+      "name": "A0",
       "type": "WIRE",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "VCC"
+          "type": "ANALOG_1",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 35.1,
-      "y": 171.7
+      "x": 18.5,
+      "y": 244
+    },
+    {
+      "name": "D0",
+      "type": "WIRE",
+      "function": [],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 32.59,
+      "y": 244
     },
     {
       "name": "GND",
@@ -41,31 +51,22 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 49.5,
-      "y": 171.1
+      "x": 46.7,
+      "y": 244
     },
     {
-      "name": "D0",
-      "type": "WIRE",
-      "function": [],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 63.9,
-      "y": 171.1
-    },
-    {
-      "name": "A0",
+      "name": "VCC",
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_1",
-          "pintype": "INOUT"
+          "type": "POWER",
+          "pintype": "VCC"
         }
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 78.3,
-      "y": 171.1
+      "x": 60.7,
+      "y": 244
     }
   ],
   "connectivity": [
@@ -73,7 +74,7 @@
   ],
   "compatibility": [
     {
-      "name": "Alcohol",
+      "name": "Flame",
       "action": [
         {
           "name": "Compare",

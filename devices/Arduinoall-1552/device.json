@@ -1,24 +1,26 @@
 {
-  "id": "Arduinoall-1533",
-  "brand": "Aduinoall",
-  "model": "Ultrasonic Sensor Module HC-SR04P",
-  "url": "https://www.arduinoall.com/product/1533/ultrasonic-sensor-module-hc-sr04p-โมดูล-ultrasonic-hc-sr04-p",
+  "id": "Arduinoall-1552",
+  "brand": "Arduinoall",
+  "model": "Laser Ranging Distance Sensor",
+  "url": "https://www.arduinoall.com/product/1584/vl53l0x-v2-laser-ranging-distance-sensor-เซนเซอร์วัดระยะทางด้วยแสงเลเซอร์-0-3-120-เซนติเมตร",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "platform": [
     "ARDUINO_AVR8",
     "ARDUINO_ESP8266"
   ],
-  "classname": "MP_HC_SR04",
-  "library_dependency": [],
-  "width": 256.0,
-  "height": 132.0,
+  "classname": "MP_VL53L0X",
+  "library_dependency": [
+    "polulu/vl53l0x-arduino-1.0.2"
+  ],
+  "width": 128,
+  "height": 98,
   "property": [],
   "dependency": "",
   "category": "",
   "port": [
     {
-      "name": "VIN",
+      "name": "VCC",
       "type": "WIRE",
       "function": [
         {
@@ -28,36 +30,8 @@
       ],
       "v_min": 3.3,
       "v_max": 5.0,
-      "x": 105.654,
-      "y": 132.0
-    },
-    {
-      "name": "TRIG",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_1",
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 120.0,
-      "y": 132.0
-    },
-    {
-      "name": "ECHO",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_2",
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 134.23,
-      "y": 132.0
+      "x": 34.054,
+      "y": 98.0
     },
     {
       "name": "GND",
@@ -70,13 +44,40 @@
       ],
       "v_min": 3.3,
       "v_max": 5.0,
-      "x": 148.568,
-      "y": 132.0
+      "x": 45.798,
+      "y": 114.0
+    },
+    {
+      "name": "SCL",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "I2C_1",
+          "pintype": "I2C_SCL"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 57.542,
+      "y": 114.0
+    },
+    {
+      "name": "SDA",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "I2C_1",
+          "pintype": "I2C_SDA"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 69.286,
+      "y": 114.0
     }
   ],
   "connectivity": [
-    "GPIO_1",
-    "GPIO_2"
+    "I2C_1"
   ],
   "compatibility": [
     {
@@ -91,8 +92,8 @@
         {
           "name": "Distance",
           "constraint": {
-            "min": 2,
-            "max": 450,
+            "min": 0.3,
+            "max": 120,
             "unit": "CENTIMETER"
           }
         }
