@@ -2,14 +2,12 @@
   "id": "Arduinoall-1311",
   "brand": "Arduinoall",
   "model": "Vibration Motor Module (Catalex)",
-  "url": "https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-บอร์ดทดลองมอเตอร์สั่น",
+  "url": "https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-\u0e1a\u0e2d\u0e23\u0e4c\u0e14\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e2a\u0e31\u0e48\u0e19",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 124.0,
   "height": 150.0,
   "property": [],
-  "dependency": "",
-  "category": "",
   "port": [
     {
       "name": "GND",
@@ -44,8 +42,8 @@
       "type": "WIRE",
       "function": [
         {
-        "type": "PWM_1",
-        "pintype": "INOUT"
+          "type": "PWM_1",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,

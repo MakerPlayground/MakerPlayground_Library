@@ -2,14 +2,12 @@
   "id": "Arduinoall-1552",
   "brand": "Arduinoall",
   "model": "Laser Ranging Distance Sensor",
-  "url": "https://www.arduinoall.com/product/1584/vl53l0x-v2-laser-ranging-distance-sensor-เซนเซอร์วัดระยะทางด้วยแสงเลเซอร์-0-3-120-เซนติเมตร",
+  "url": "https://www.arduinoall.com/product/1584/vl53l0x-v2-laser-ranging-distance-sensor-\u0e40\u0e0b\u0e19\u0e40\u0e0b\u0e2d\u0e23\u0e4c\u0e27\u0e31\u0e14\u0e23\u0e30\u0e22\u0e30\u0e17\u0e32\u0e07\u0e14\u0e49\u0e27\u0e22\u0e41\u0e2a\u0e07\u0e40\u0e25\u0e40\u0e0b\u0e2d\u0e23\u0e4c-0-3-120-\u0e40\u0e0b\u0e19\u0e15\u0e34\u0e40\u0e21\u0e15\u0e23",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 128,
   "height": 98,
   "property": [],
-  "dependency": "",
-  "category": "",
   "port": [
     {
       "name": "VCC",

@@ -2,14 +2,12 @@
   "id": "Arduinoall-1640",
   "brand": "Arduinoall",
   "model": "GPS Module with Antenna (GPS ATGM336H)",
-  "url": "https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-โมดูล-gps-atgm336h-พร้อมสายอากาศ",
+  "url": "https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-\u0e42\u0e21\u0e14\u0e39\u0e25-gps-atgm336h-\u0e1e\u0e23\u0e49\u0e2d\u0e21\u0e2a\u0e32\u0e22\u0e2d\u0e32\u0e01\u0e32\u0e28",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 74.0,
   "height": 110.0,
   "property": [],
-  "dependency": "",
-  "category": "",
   "port": [
     {
       "name": "VCC",

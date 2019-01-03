@@ -2,14 +2,12 @@
   "id": "Arduinoall-28",
   "brand": "Arduinoall",
   "model": "DS3231 RTC Module",
-  "url": "https://www.arduinoall.com/product/1698/ds3231-high-precision-clock-module-โมดูลนาฬิกา-ds3231",
+  "url": "https://www.arduinoall.com/product/1698/ds3231-high-precision-clock-module-\u0e42\u0e21\u0e14\u0e39\u0e25\u0e19\u0e32\u0e2c\u0e34\u0e01\u0e32-ds3231",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 90.0,
   "height": 142.0,
   "property": [],
-  "dependency": "",
-  "category": "",
   "port": [
     {
       "name": "VCC",

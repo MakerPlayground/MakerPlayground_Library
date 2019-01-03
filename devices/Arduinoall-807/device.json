@@ -2,14 +2,12 @@
   "id": "Arduinoall-807",
   "brand": "Arduinoall",
   "model": "Infrared IR Flame Detector Sensor Module",
-  "url": "https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-เซนเซอร์-ตรวจจับเปลวไฟด้วย-infrared",
+  "url": "https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-\u0e40\u0e0b\u0e19\u0e40\u0e0b\u0e2d\u0e23\u0e4c-\u0e15\u0e23\u0e27\u0e08\u0e08\u0e31\u0e1a\u0e40\u0e1b\u0e25\u0e27\u0e44\u0e1f\u0e14\u0e49\u0e27\u0e22-infrared",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 80,
   "height": 244,
   "property": [],
-  "dependency": "",
-  "category": "",
   "port": [
     {
       "name": "A0",
