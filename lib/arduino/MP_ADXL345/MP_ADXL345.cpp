@@ -4,7 +4,7 @@ const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "No ADXL345 detected ... Check your wiring!";
 const char* const errors_p[] PROGMEM = {ok, error1};
 
-const char* const* MP_DHT11::ERRORS = errors_p;
+const char* const* MP_ADXL345::ERRORS = errors_p;
 
 MP_ADXL345::MP_ADXL345()
 {
