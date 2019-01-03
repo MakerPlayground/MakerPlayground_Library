@@ -58,6 +58,11 @@
       "platform": "ARDUINO_AVR8",
       "classname": "MP_SCT013_30A",
       "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_SCT013_30A_ESP32",
+      "library_dependency": []
     }
   ]
 }
