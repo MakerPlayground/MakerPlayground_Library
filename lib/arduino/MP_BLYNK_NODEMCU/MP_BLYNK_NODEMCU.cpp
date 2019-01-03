@@ -112,6 +112,10 @@ void MP_BLYNK_NODEMCU::writeVirtualPin(uint8_t pin, double value)
     MP_BLYNK_NODEMCU::valueChanged |= (1 << pin);
 }
 
+void MP_BLYNK_NODEMCU::notify(char* msg) {
+    Blynk.notify(msg);
+}
+
 bool MP_BLYNK_NODEMCU::checkVirtualPinValue(uint8_t pin, int value)
 {
     return MP_BLYNK_NODEMCU::value[pin] == value;

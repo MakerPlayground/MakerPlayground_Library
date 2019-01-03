@@ -140,6 +140,10 @@ void MP_BLYNK_SERIAL_WIFI::writeVirtualPin(uint8_t pin, double value)
     MP_BLYNK_SERIAL_WIFI::valueChanged |= (1 << pin);
 }
 
+void MP_BLYNK_SERIAL_WIFI::notify(char* msg) {
+    Blynk.notify(msg);
+}
+
 bool MP_BLYNK_SERIAL_WIFI::checkVirtualPinValue(uint8_t pin, int value)
 {
     return MP_BLYNK_SERIAL_WIFI::value[pin] == value;
