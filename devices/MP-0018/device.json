@@ -5,13 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-0018",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
-  "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-  "classname": "MP_HY_SRF05",
-  "library_dependency": [],
   "width": 256,
   "height": 170,
   "property": [],
@@ -58,6 +51,23 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_HY_SRF05",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_HY_SRF05",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_HY_SRF05",
+      "library_dependency": []
     }
   ]
 }

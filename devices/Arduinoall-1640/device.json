@@ -5,13 +5,6 @@
   "url": "https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-โมดูล-gps-atgm336h-พร้อมสายอากาศ",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TINY_GPS",
-  "library_dependency": [
-    "mikalhart/TinyGPSPlus-1.0.2"
-  ],
   "width": 74.0,
   "height": 110.0,
   "property": [],
@@ -107,6 +100,23 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TINY_GPS",
+      "library_dependency": [
+        "mikalhart/TinyGPSPlus-1.0.2"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_TINY_GPS",
+      "library_dependency": [
+        "plerup/espsoftwareserial-3.4.2",
+        "mikalhart/TinyGPSPlus-1.0.2"
+      ]
     }
   ]
 }

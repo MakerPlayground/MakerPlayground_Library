@@ -5,13 +5,6 @@
   "url": "https://www.arduinoall.com/product/653/dht11-digital-temperature-and-humidity-sensor-dht11-%E0%B9%81%E0%B8%9A%E0%B8%9A-pcb-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9F",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_DHT11",
-  "library_dependency": [
-    "adafruit/DHT-sensor-library"
-  ],
   "width": 93.542,
   "height": 140.332,
   "property": [],
@@ -104,6 +97,15 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_DHT11",
+      "library_dependency": [
+        "adafruit/DHT-sensor-library"
+      ]
     }
   ]
 }

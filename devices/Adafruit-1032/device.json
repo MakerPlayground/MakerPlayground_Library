@@ -5,14 +5,6 @@
   "url": "https://www.adafruit.com/product/1032",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_L3GD20H",
-  "library_dependency": [
-    "adafruit/Adafruit_Sensor",
-    "adafruit/Adafruit_L3GD20_U"
-  ],
   "width": 173.0,
   "height": 108.0,
   "property": [],
@@ -160,6 +152,16 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_L3GD20H",
+      "library_dependency": [
+        "adafruit/Adafruit_Sensor",
+        "adafruit/Adafruit_L3GD20_U"
+      ]
     }
   ]
 }

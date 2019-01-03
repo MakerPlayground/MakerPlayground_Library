@@ -5,13 +5,6 @@
   "url": "https://www.adafruit.com/product/1334",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TCS34725",
-  "library_dependency": [
-    "adafruit/Adafruit_TCS34725"
-  ],
   "width": 116.0,
   "height": 117.0,
   "property": [],
@@ -133,6 +126,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TCS34725",
+      "library_dependency": [
+        "adafruit/Adafruit_TCS34725"
+      ]
     }
   ]
 }

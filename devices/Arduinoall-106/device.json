@@ -5,14 +5,6 @@
   "url": "https://www.arduinoall.com/product/107/digital-temperature-temp-sensor-probe-ds18b20-for-thermometer-waterproof-100cm",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_DS18B20",
-  "library_dependency": [
-    "milesburton/Arduino-Temperature-Control-Library-3.8.0",
-    "PaulStoffregen/OneWire-2.3.4"
-  ],
   "width": 80.0,
   "height": 302.0,
   "property": [],
@@ -70,21 +62,31 @@
       "name": "Temperature",
       "action": [
         {
-          "name": "Compare", 
+          "name": "Compare",
           "parameter": []
         }
       ],
       "value": [
         {
-          "name": "Temperature", 
+          "name": "Temperature",
           "constraint": {
-            "min": -55.0, 
-            "max": 125.0, 
+            "min": -55.0,
+            "max": 125.0,
             "unit": "CELSIUS"
           }
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_DS18B20",
+      "library_dependency": [
+        "milesburton/Arduino-Temperature-Control-Library-3.8.0",
+        "PaulStoffregen/OneWire-2.3.4"
+      ]
     }
   ]
 }

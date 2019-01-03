@@ -5,14 +5,6 @@
   "url": "https://www.arduinoall.com/product/1698/ds3231-high-precision-clock-module-โมดูลนาฬิกา-ds3231",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_DS3231",
-  "library_dependency": [
-    "Makuna/Rtc-2.3.0"
-  ],
   "width": 90.0,
   "height": 142.0,
   "property": [],
@@ -141,6 +133,22 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_DS3231",
+      "library_dependency": [
+        "Makuna/Rtc-2.3.0"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_DS3231",
+      "library_dependency": [
+        "Makuna/Rtc-2.3.0"
+      ]
     }
   ]
 }

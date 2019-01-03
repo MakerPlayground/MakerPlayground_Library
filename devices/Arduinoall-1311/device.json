@@ -5,12 +5,6 @@
   "url": "https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-บอร์ดทดลองมอเตอร์สั่น",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_LOAD_DRIVER",
-  "library_dependency": [],
   "width": 124.0,
   "height": 150.0,
   "property": [],
@@ -78,6 +72,18 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LOAD_DRIVER",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_LOAD_DRIVER",
+      "library_dependency": []
     }
   ]
 }

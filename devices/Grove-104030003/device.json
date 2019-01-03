@@ -5,13 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TM1637_DISPLAY",
-  "library_dependency": [
-    "avishorp/TM1637"
-  ],
   "width": 266.0,
   "height": 148.0,
   "property": [],
@@ -87,6 +80,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TM1637_DISPLAY",
+      "library_dependency": [
+        "avishorp/TM1637"
+      ]
     }
   ]
 }

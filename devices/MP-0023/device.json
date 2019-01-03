@@ -5,11 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-0023",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_SCT013_30A",
-  "library_dependency": [],
   "width": 51,
   "height": 51,
   "property": [],
@@ -56,6 +51,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SCT013_30A",
+      "library_dependency": []
     }
   ]
 }

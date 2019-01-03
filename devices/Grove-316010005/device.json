@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Servo-p-1241.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_SERVO",
-  "library_dependency": [],
   "width": 0.0,
   "height": 0.0,
   "property": [],
@@ -54,6 +49,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SERVO",
+      "library_dependency": []
     }
   ]
 }

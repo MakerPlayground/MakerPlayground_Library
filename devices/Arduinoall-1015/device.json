@@ -5,11 +5,6 @@
   "url": "https://www.arduinoall.com/product/1015/active-buzzer-dc-1-5v-12v-buzzer",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_BUZZER",
-  "library_dependency": [],
   "width": 158.0,
   "height": 155.0,
   "property": [],
@@ -80,6 +75,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUZZER",
+      "library_dependency": []
     }
   ]
 }

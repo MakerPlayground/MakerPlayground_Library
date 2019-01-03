@@ -17,11 +17,6 @@
       ]
     }
   ],
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 425.0,
   "height": 303.0,
   "property": [],
@@ -495,5 +490,12 @@
     "ANALOG_2",
     "ANALOG_3"
   ],
-  "compatibility": []
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
 }

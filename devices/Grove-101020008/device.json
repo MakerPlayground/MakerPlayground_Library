@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_SOIL_MOISTURE_W_EN",
-  "library_dependency": [],
   "width": 0.0,
   "height": 0.0,
   "property": [],
@@ -54,6 +49,13 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SOIL_MOISTURE_W_EN",
+      "library_dependency": []
     }
   ]
 }

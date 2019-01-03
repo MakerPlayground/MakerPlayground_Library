@@ -5,11 +5,6 @@
   "url": "https://www.arduinoall.com/product/737/fan-dc-motor-module-l9110-fan-module-for-arduino",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_L9910",
-  "library_dependency": [],
   "width": 235.329,
   "height": 241.152,
   "property": [],
@@ -99,6 +94,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_L9910",
+      "library_dependency": []
     }
   ]
 }

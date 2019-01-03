@@ -17,11 +17,6 @@
       ]
     }
   ],
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "",
-  "library_dependency": [],
   "width": 392.0,
   "height": 346.0,
   "property": [],
@@ -46,7 +41,10 @@
     },
     {
       "name": "D1",
-      "alias": ["3", "4"], 
+      "alias": [
+        "3",
+        "4"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -71,7 +69,10 @@
     },
     {
       "name": "D2",
-      "alias": ["5", "6"], 
+      "alias": [
+        "5",
+        "6"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -81,7 +82,11 @@
         },
         {
           "type": "MP_PWM_DUAL_1",
-          "conflict": ["MP_PWM_SINGLE_3", "MP_GPIO_SINGLE_3", "MP_GPIO_DUAL_3"],
+          "conflict": [
+            "MP_PWM_SINGLE_3",
+            "MP_GPIO_SINGLE_3",
+            "MP_GPIO_DUAL_3"
+          ],
           "pintype": "INOUT"
         },
         {
@@ -90,7 +95,11 @@
         },
         {
           "type": "MP_GPIO_DUAL_2",
-          "conflict": ["MP_PWM_SINGLE_3", "MP_GPIO_SINGLE_3", "MP_GPIO_DUAL_3"],
+          "conflict": [
+            "MP_PWM_SINGLE_3",
+            "MP_GPIO_SINGLE_3",
+            "MP_GPIO_DUAL_3"
+          ],
           "pintype": "INOUT"
         }
       ],
@@ -102,7 +111,10 @@
     },
     {
       "name": "D3",
-      "alias": ["6", "7"], 
+      "alias": [
+        "6",
+        "7"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -127,7 +139,10 @@
     },
     {
       "name": "D4",
-      "alias": ["9", "10"], 
+      "alias": [
+        "9",
+        "10"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -156,7 +171,10 @@
     },
     {
       "name": "D5/A1",
-      "alias": ["A0", "A1"], 
+      "alias": [
+        "A0",
+        "A1"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -185,7 +203,10 @@
     },
     {
       "name": "D6/A2",
-      "alias": ["A2", "A3"], 
+      "alias": [
+        "A2",
+        "A3"
+      ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
       "function": [
@@ -306,5 +327,12 @@
     "MP_I2C_3",
     "MP_I2C_4"
   ],
-  "compatibility": []
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
 }

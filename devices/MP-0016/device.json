@@ -5,12 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-0016",
   "type": "PERIPHERAL",
   "formfactor": "MP_DEVICE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_SERVO",
-  "library_dependency": [],
   "width": 188,
   "height": 182,
   "property": [],
@@ -57,6 +51,18 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SERVO",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_SERVO",
+      "library_dependency": []
     }
   ]
 }

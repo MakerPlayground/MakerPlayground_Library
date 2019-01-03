@@ -5,13 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Temperature-%26amp%3B-Humidity-Sensor-%EF%BC%88DHT11%EF%BC%89-p-745.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_DHT11",
-  "library_dependency": [
-    "adafruit/DHT-sensor-library"
-  ],
   "width": 128.0,
   "height": 148.0,
   "property": [],
@@ -76,6 +69,15 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_DHT11",
+      "library_dependency": [
+        "adafruit/DHT-sensor-library"
+      ]
     }
   ]
 }

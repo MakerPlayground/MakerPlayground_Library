@@ -5,14 +5,6 @@
   "url": "http://www.makerplayground.io/library/MP-Arduinoall-823",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8",
-    "ARDUINO_ESP8266"
-  ],
-  "classname": "MP_GY906",
-  "library_dependency": [
-    "adafruit/Adafruit-MLX90614-Library-1.0.0"
-  ],
   "width": 62,
   "height": 114,
   "property": [],
@@ -99,6 +91,22 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_GY906",
+      "library_dependency": [
+        "adafruit/Adafruit-MLX90614-Library-1.0.0"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_GY906",
+      "library_dependency": [
+        "adafruit/Adafruit-MLX90614-Library-1.0.0"
+      ]
     }
   ]
 }

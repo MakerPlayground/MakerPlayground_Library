@@ -5,11 +5,6 @@
   "url": "https://www.arduinoall.com/product/967/rgb-led-10mm-module-%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5-led-rgb-3-%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-10mm",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_RGB_LED_CA",
-  "library_dependency": [],
   "width": 86.0,
   "height": 107.0,
   "property": [],
@@ -126,6 +121,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_RGB_LED_CA",
+      "library_dependency": []
     }
   ]
 }

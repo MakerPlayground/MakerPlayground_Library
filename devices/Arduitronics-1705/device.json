@@ -5,13 +5,6 @@
   "url": "https://www.arduitronics.com/product/1705/dht12-humidity-temperature-sensor-module-free-cable-i2c-interface",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_DHT12",
-  "library_dependency": [
-    "dht_dplasa"
-  ],
   "width": 72.0,
   "height": 72.0,
   "property": [],
@@ -118,6 +111,15 @@
         }
       ],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_DHT12",
+      "library_dependency": [
+        "dht_dplasa"
+      ]
     }
   ]
 }

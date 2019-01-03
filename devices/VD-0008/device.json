@@ -1,128 +1,137 @@
 {
-    "id": "VD-0008",
-    "brand": "MakerPlayground",
-    "model": "Statistic Calulation",
-    "url": "http://www.makerplayground.io/library/VD-0008",
-    "type": "VIRTUAL",
-    "formfactor": "NONE",
-    "platform": [
-      "ARDUINO_AVR8",
-      "ARDUINO_ESP8266",
-      "ARDUINO_ESP32"
-    ],
-    "classname": "VD_STATISTIC",
-    "library_dependency": [],
-    "width": 0.0,
-    "height": 0.0,
-    "property": [],
-    "dependency": "",
-    "category": "",
-    "port": [
-      {
-        "name": "Port",
-        "type": "VIRTUAL",
-        "function": [
-          {
-            "type": "NOT_CONNECTED",
-            "pintype": "NOT_CONNECTED"
+  "id": "VD-0008",
+  "brand": "MakerPlayground",
+  "model": "Statistic Calulation",
+  "url": "http://www.makerplayground.io/library/VD-0008",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Statistics",
+      "action": [
+        {
+          "name": "Add new",
+          "parameter": [
+            {
+              "name": "Data",
+              "value": 0,
+              "constraint": {
+                "min": -99999999.0,
+                "max": 99999999.0,
+                "unit": "NOT_SPECIFIED"
+              },
+              "datatype": "DOUBLE",
+              "controltype": "SPINBOX"
+            }
+          ]
+        },
+        {
+          "name": "Clear all data",
+          "parameter": []
+        },
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Average",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": -99999999.0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
           }
-        ],
-        "v_min": 5.0,
-        "v_max": 5.0,
-        "x": 0.0,
-        "y": 0.0
-      }
-    ],
-    "connectivity": [
-      "NOT_CONNECTED"
-    ],
-    "compatibility": [
-      {
-        "name": "Statistics",
-        "action": [
-          {
-            "name": "Add new",
-            "parameter": [
-              {
-                "name": "Data",
-                "value": 0,
-                "constraint": {
-                  "min": -99999999.0,
-                  "max": 99999999.0,
-                  "unit": "NOT_SPECIFIED"
-                },
-                "datatype": "DOUBLE",
-                "controltype": "SPINBOX"
-              }
-            ]
-          },
-          {
-            "name": "Clear all data",
-            "parameter": []
-          },
-          {
-            "name": "Compare",
-            "parameter": []
+        },
+        {
+          "name": "SD",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": 0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
           }
-        ],
-        "value": [
-          {
-            "name": "Average",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": -99999999.0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          },
-          {
-            "name": "SD",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": 0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          },
-          {
-            "name": "Variance",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": 0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          },
-          {
-            "name": "Count",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": 0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          },
-          {
-            "name": "Min",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": -99999999.0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
-          },
-          {
-            "name": "Max",
-            "dataType": "DOUBLE",
-            "constraint": {
-              "min": -99999999.0,
-              "max": 99999999.0,
-              "unit": "NOT_SPECIFIED"
-            }
+        },
+        {
+          "name": "Variance",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": 0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
           }
-        ],
-        "count": ""
-      }
-      
-    ]
-  }
+        },
+        {
+          "name": "Count",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": 0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
+          }
+        },
+        {
+          "name": "Min",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": -99999999.0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
+          }
+        },
+        {
+          "name": "Max",
+          "dataType": "DOUBLE",
+          "constraint": {
+            "min": -99999999.0,
+            "max": 99999999.0,
+            "unit": "NOT_SPECIFIED"
+          }
+        }
+      ],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "VD_STATISTIC",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "VD_STATISTIC",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "VD_STATISTIC",
+      "library_dependency": []
+    }
+  ]
+}

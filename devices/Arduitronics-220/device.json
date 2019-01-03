@@ -5,13 +5,6 @@
   "url": "https://www.arduitronics.com/product/220/seven-segment-4-digit-clock-display-0-36-inches-catalex",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_TM1637_DISPLAY",
-  "library_dependency": [
-    "avishorp/TM1637"
-  ],
   "width": 372.0,
   "height": 153.0,
   "property": [],
@@ -130,6 +123,15 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TM1637_DISPLAY",
+      "library_dependency": [
+        "avishorp/TM1637"
+      ]
     }
   ]
 }

@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Buzzer-p-768.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_BUZZER",
-  "library_dependency": [],
   "width": 128.0,
   "height": 148.0,
   "property": [],
@@ -45,6 +40,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUZZER",
+      "library_dependency": []
     }
   ]
 }

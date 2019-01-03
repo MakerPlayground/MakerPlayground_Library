@@ -5,11 +5,6 @@
   "url": "https://www.seeedstudio.com/Grove-Button-p-766.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
-  "platform": [
-    "ARDUINO_AVR8"
-  ],
-  "classname": "MP_BUTTON_AL",
-  "library_dependency": [],
   "width": 128.0,
   "height": 148.0,
   "property": [],
@@ -53,6 +48,13 @@
       ],
       "value": [],
       "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
     }
   ]
 }
