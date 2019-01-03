@@ -10,7 +10,8 @@
   ],
   "classname": "MP_DHT11",
   "library_dependency": [
-    "adafruit/DHT-sensor-library"
+    "adafruit/DHT-sensor-library",
+    "adafruit/Adafruit_Sensor"
   ],
   "width": 93.542,
   "height": 140.332,

@@ -5,7 +5,7 @@ const char* const errors_p[] PROGMEM = {ok};
 
 const char* const* MP_DHT11::ERRORS = errors_p;
 
-MP_DHT11::MP_DHT11(int pin, const String &tag)
+MP_DHT11::MP_DHT11(int pin)
 	:sensor(DHT(pin,11))
 	,pin(pin)
 {
