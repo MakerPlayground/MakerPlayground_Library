@@ -7,16 +7,7 @@
   "pio_boardid": "uno",
   "formfactor": "STANDALONE",
   "wiring_method": "WIRE_AND_BREADBOARD",
-  "support_cloudplatform": [
-    {
-      "cloud_platform": "BLYNK",
-      "classname": "MP_BLYNK_SERIAL_WIFI",
-      "library_dependency": [
-        "blynkkk/blynk-library",
-        "vshymanskyy/BlynkESP8266"
-      ]
-    }
-  ],
+  "support_cloudplatform": [],
   "platform": [
     "ARDUINO_AVR8"
   ],
