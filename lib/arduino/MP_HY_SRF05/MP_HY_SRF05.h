@@ -6,7 +6,7 @@
 class MP_HY_SRF05
 {
 public:
-    MP_HY_SRF05(uint8_t echo ,uint8_t trig);
+    MP_HY_SRF05(uint8_t trig ,uint8_t echo);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

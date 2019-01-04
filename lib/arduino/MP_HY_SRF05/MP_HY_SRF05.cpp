@@ -5,7 +5,7 @@ const char* const errors_p[] PROGMEM = {ok};
 
 const char* const* MP_HY_SRF05::ERRORS = errors_p;
 
-MP_HY_SRF05::MP_HY_SRF05(uint8_t echo, uint8_t trig)
+MP_HY_SRF05::MP_HY_SRF05(uint8_t trig, uint8_t echo)
   : trig(trig), echo(echo), cm(0), nextReading(0)
 {
 }
