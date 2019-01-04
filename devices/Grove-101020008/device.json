@@ -11,7 +11,7 @@
   "port": [
     {
       "name": "Port",
-      "type": "MP",
+      "type": "GROVE",
       "function": [
         {
           "type": "GROVE_ANALOG_SINGLE_1",
