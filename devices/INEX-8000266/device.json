@@ -1,0 +1,75 @@
+{
+  "id": "INEX-8000266",
+  "brand": "INEX",
+  "model": "ZX-LED",
+  "url": "https://inex.co.th/shop/zx-led-clear.html",
+  "type": "PERIPHERAL",
+  "formfactor": "STANDALONE",
+  "width": 94.0,
+  "height": 188.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "INEX_JST3",
+      "sub_type": "RIGHTANGLE_TOP",
+      "function": [
+        {
+          "type": "INEX_PWM_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.0,
+      "v_max": 5.0,
+      "x": 47.352,
+      "y": 184.082,
+      "angle": 270.0
+    }
+  ],
+  "connectivity": [
+    "INEX_PWM_1"
+  ],
+  "compatibility": [
+    {
+      "name": "LED",
+      "action": [
+        {
+          "name": "On",
+          "parameter": [
+            {
+              "name": "Brightness",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Off",
+          "parameter": []
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LED_AH",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_LED_AH",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_LED_AH",
+      "library_dependency": []
+    }
+  ]
+}
