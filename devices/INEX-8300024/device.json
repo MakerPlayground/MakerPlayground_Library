@@ -171,13 +171,9 @@
     {
       "name": "D8",
       "alias": ["15"],
-      "type": "INEX_JST3",
+      "type": "INTERNAL",
       "sub_type": "STRAIGHT_TOP",
       "function": [
-        {
-          "type": "INEX_GPIO_6",
-          "pintype": "INOUT"
-        },
         {
           "type": "INEX_PWM_6",
           "pintype": "INOUT"
@@ -262,7 +258,6 @@
     "INEX_GPIO_3",
     "INEX_GPIO_4",
     "INEX_GPIO_5",
-    "INEX_GPIO_6",
     "INEX_PWM_1",
     "INEX_PWM_2",
     "INEX_PWM_3",
@@ -287,8 +282,8 @@
       ],
       "port": [
         {
-          "name": "A0",
-          "type": "INEX_JST3",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "INEX_ANALOG_1",
@@ -338,12 +333,11 @@
       ],
       "port": [
         {
-          "name": "D8",
-          "alias": ["15"],
-          "type": "INEX_JST3",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
-              "type": "INEX_PWM_1",
+              "type": "INEX_PWM_6",
               "pintype": "INOUT"
             }
           ],
@@ -354,7 +348,7 @@
         }
       ],
       "connectivity": [
-        "INEX_PWM_1"
+        "INEX_PWM_6"
       ],
       "compatibility": [
         {
@@ -405,8 +399,8 @@
       ],
       "port": [
         {
-          "name": "D1",
-          "type": "INEX_JST3",
+          "name": "SCL",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "INEX_I2C_1",
@@ -419,8 +413,8 @@
           "y": 0
         },
         {
-          "name": "D2",
-          "type": "INEX_JST3",
+          "name": "SDA",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "INEX_I2C_1",

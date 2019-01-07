@@ -13,7 +13,7 @@
   "port": [
     {
       "name": "14",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "GPIO_1",
@@ -27,7 +27,7 @@
     },
     {
       "name": "16",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "GPIO_2",
@@ -41,7 +41,7 @@
     },
     {
       "name": "36",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "ANALOG_1",
@@ -55,7 +55,7 @@
     },
     {
       "name": "13",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "PWM_1",
@@ -69,7 +69,7 @@
     },
     {
       "name": "4",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "I2C1_1",
@@ -83,7 +83,7 @@
     },
     {
       "name": "5",
-      "type": "WIRE",
+      "type": "INTERNAL",
       "function": [
         {
           "type": "I2C1_1",
@@ -116,11 +116,11 @@
       ],
       "port": [
         {
-          "name": "16",
-          "type": "WIRE",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
-              "type": "GPIO_1",
+              "type": "GPIO_2",
               "pintype": "INOUT"
             }
           ],
@@ -131,7 +131,7 @@
         }
       ],
       "connectivity": [
-        "GPIO_1"
+        "GPIO_2"
       ],
       "compatibility": [
         {
@@ -166,8 +166,8 @@
       ],
       "port": [
         {
-          "name": "14",
-          "type": "WIRE",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "GPIO_1",
@@ -216,8 +216,8 @@
       ],
       "port": [
         {
-          "name": "36",
-          "type": "WIRE",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "ANALOG_1",
@@ -267,8 +267,8 @@
       ],
       "port": [
         {
-          "name": "13",
-          "type": "WIRE",
+          "name": "Port",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "PWM_1",
@@ -332,8 +332,8 @@
       ],
       "port": [
         {
-          "name": "4",
-          "type": "WIRE",
+          "name": "SDA",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "I2C1_1",
@@ -346,8 +346,8 @@
           "y": 0.0
         },
         {
-          "name": "4",
-          "type": "WIRE",
+          "name": "SCL",
+          "type": "INTERNAL",
           "function": [
             {
               "type": "I2C1_1",
