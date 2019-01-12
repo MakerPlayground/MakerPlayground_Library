@@ -14,7 +14,7 @@ struct Expr {
     unsigned long latestUpdateTime = 0;
 };
 
-void (*currentScene)(void);
+void (*currentNode)(void);
 int status_code = 0;
 unsigned long currentTime = 0;
 unsigned long latestLogTime = 0;
@@ -24,7 +24,7 @@ void update();
 
 void loop() {
     update();
-    currentScene();
+    currentNode();
 }
 
 void evaluateExpression(Task task, Expr expr[], int numExpr) {
