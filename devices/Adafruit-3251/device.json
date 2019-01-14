@@ -96,8 +96,7 @@
             "unit": "CELSIUS"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Humidity",
@@ -116,8 +115,7 @@
             "unit": "PERCENT"
           }
         }
-      ],
-      "count": ""
+      ]
     }
   ],
   "platforms": [

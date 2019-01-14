@@ -71,8 +71,7 @@
             "unit": "METERPERSECSQUARE"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Gyroscope",
@@ -107,8 +106,7 @@
             "unit": "RADIUSPERSEC"
           }
         }
-      ],
-      "count": ""
+      ]
     }
   ],
   "platforms": [

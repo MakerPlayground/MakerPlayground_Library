@@ -147,8 +147,7 @@
             "unit": "METERPERSECSQUARE"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Gyroscope",
@@ -183,8 +182,7 @@
             "unit": "DEGREEPERSEC"
           }
         }
-      ],
-      "count": ""
+      ]
     }
   ],
   "platforms": [

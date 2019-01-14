@@ -31,7 +31,9 @@
   "port": [
     {
       "name": "D1",
-      "alias": ["5"],
+      "alias": [
+        "5"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -48,7 +50,9 @@
     },
     {
       "name": "D2",
-      "alias": ["4"],
+      "alias": [
+        "4"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -65,7 +69,9 @@
     },
     {
       "name": "D0",
-      "alias": ["16"],
+      "alias": [
+        "16"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -86,7 +92,9 @@
     },
     {
       "name": "D4",
-      "alias": ["2"],
+      "alias": [
+        "2"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -107,7 +115,9 @@
     },
     {
       "name": "D5",
-      "alias": ["14"],
+      "alias": [
+        "14"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -128,7 +138,9 @@
     },
     {
       "name": "D6",
-      "alias": ["12"],
+      "alias": [
+        "12"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -149,7 +161,9 @@
     },
     {
       "name": "D7",
-      "alias": ["13"],
+      "alias": [
+        "13"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -170,7 +184,9 @@
     },
     {
       "name": "D8",
-      "alias": ["15"],
+      "alias": [
+        "15"
+      ],
       "type": "INTERNAL",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -186,7 +202,9 @@
     },
     {
       "name": "D9",
-      "alias": ["3"],
+      "alias": [
+        "3"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -203,7 +221,9 @@
     },
     {
       "name": "D10",
-      "alias": ["1"],
+      "alias": [
+        "1"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [
@@ -236,7 +256,9 @@
     },
     {
       "name": "WS2812",
-      "alias": ["10"],
+      "alias": [
+        "10"
+      ],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
       "function": [

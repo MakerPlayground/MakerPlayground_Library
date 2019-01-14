@@ -114,8 +114,7 @@
             "unit": "CELSIUS"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Humidity",
@@ -134,8 +133,7 @@
             "unit": "PERCENT"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Pressuremeter",
@@ -154,8 +152,7 @@
             "unit": "HECTOPASCAL"
           }
         }
-      ],
-      "count": ""
+      ]
     },
     {
       "name": "Altimeter",
@@ -174,8 +171,7 @@
             "unit": "METER"
           }
         }
-      ],
-      "count": ""
+      ]
     }
   ],
   "platforms": [
