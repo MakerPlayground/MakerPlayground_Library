@@ -18,7 +18,7 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 	
-	void showValue(double num);
+	void showTwoIntWithComma(int8_t beforeComma, int8_t afterComma);
 	void showData(double num);
 	void off();
 
@@ -31,7 +31,7 @@ private:
 #elif defined(ARDUINO_ARCH_ESP8266)
 	SoftwareSerial serial;
 #endif
-	double valueToShow;
+	String valueToShow;
 };
 
 #endif

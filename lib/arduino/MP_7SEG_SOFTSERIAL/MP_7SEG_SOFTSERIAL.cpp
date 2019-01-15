@@ -33,15 +33,40 @@ void MP_7SEG_SOFTSERIAL::printStatus()
 	Serial.println(this->valueToShow);
 }
 
-void MP_7SEG_SOFTSERIAL::showValue(double value)
-{
-	this->valueToShow = value;
-	showFloat(value);
+void MP_7SEG_SOFTSERIAL::showTwoIntWithComma(int8_t beforeComma, int8_t afterComma) {
+	valueToShow = String(beforeComma) + String(":") + String(afterComma);
+
+	serial.write((byte)0x7f);
+	serial.write((byte)3);
+	if (beforeComma < 0 && beforeComma > -10) {
+		serial.write((byte)0b01000000);
+		serial.write(digits[-beforeComma]);
+	} else if (beforeComma >= 0 && beforeComma < 100) {
+		serial.write(digits[beforeComma / 10]);
+		serial.write(digits[beforeComma % 10]);
+	} else {
+		serial.write((byte)0b01000000);
+		serial.write((byte)0b01000000);
+	}
+
+	if (afterComma < 0 && afterComma > -10) {
+		serial.write((byte)0b01000000);
+		serial.write(digits[-afterComma]);
+	} else if (afterComma >= 0 && afterComma < 100) {
+		serial.write(digits[afterComma / 10]);
+		serial.write(digits[afterComma % 10]);
+	} else {
+		serial.write((byte)0b01000000);
+		serial.write((byte)0b01000000);
+	}
+	serial.write((byte)0b00000011);
+	serial.write((byte)'\r');
+	serial.write((byte)'\n');
 }
 
 void MP_7SEG_SOFTSERIAL::showData(double value)
 {
-	this->valueToShow = value;
+	valueToShow = String(value);
 	showFloat(value);
 }
 
