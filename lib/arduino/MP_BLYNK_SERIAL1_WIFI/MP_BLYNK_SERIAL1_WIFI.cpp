@@ -199,6 +199,16 @@ void MP_BLYNK_SERIAL1_WIFI::writeVirtualPin(uint8_t pin, double value)
     MP_BLYNK_SERIAL1_WIFI::valueChanged |= (1 << (pin));
 }
 
+void MP_BLYNK_SERIAL1_WIFI::writeVirtualPin(uint8_t pin, int val1, double val2, double val3, char* val4)
+{
+    Blynk.virtualWrite(pin, val1, val2, val3, val4);
+}
+
+void MP_BLYNK_SERIAL1_WIFI::writeVirtualPin(uint8_t pin, char* val1)
+{
+    Blynk.virtualWrite(pin, val1);
+}
+
 void MP_BLYNK_SERIAL1_WIFI::notify(char* msg) {
     Blynk.notify(msg);
 }

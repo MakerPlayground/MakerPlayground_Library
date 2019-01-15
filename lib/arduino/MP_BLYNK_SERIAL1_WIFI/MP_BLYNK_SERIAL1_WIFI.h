@@ -18,6 +18,8 @@ public:
 	bool isReady();
 	int readVirtualPin(uint8_t pin);   // pin = 0-7
 	void writeVirtualPin(uint8_t pin, double value);   // pin = 0-7
+	void writeVirtualPin(uint8_t pin, int val1, double val2, double val3, char* val4);
+	void writeVirtualPin(uint8_t pin, char* val1);
 	void notify(char* msg);
 
 	// high level function use by maker playground

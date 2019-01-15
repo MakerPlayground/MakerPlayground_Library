@@ -24,7 +24,7 @@ int MP_BLYNK_VIRTUAL_GAUGE::init() {
 
 void MP_BLYNK_VIRTUAL_GAUGE::printStatus() {
     Serial.print(F("Current value = "));
-    Serial.println(value);
+    Serial.println(val);
 }
 
 void MP_BLYNK_VIRTUAL_GAUGE::update(unsigned long current_time) {
@@ -32,5 +32,6 @@ void MP_BLYNK_VIRTUAL_GAUGE::update(unsigned long current_time) {
 }
 
 void MP_BLYNK_VIRTUAL_GAUGE::setNumber(double value) {
-    blynk->writeVirtualPin(v_pin, value);
+    val = value;
+    blynk->writeVirtualPin(v_pin, val);
 }

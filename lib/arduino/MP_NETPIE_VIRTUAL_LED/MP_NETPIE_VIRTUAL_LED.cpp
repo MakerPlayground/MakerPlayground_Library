@@ -28,12 +28,14 @@ void MP_NETPIE_VIRTUAL_LED::printStatus()
 
 void MP_NETPIE_VIRTUAL_LED::on()
 {
+    Serial.print("turn on");
     ledStatus = true;
     netpie->publish(topic, 1);
 }
 
 void MP_NETPIE_VIRTUAL_LED::off()
 {
+    Serial.print("turn off");
     ledStatus = false;
     netpie->publish(topic, 0);
 }

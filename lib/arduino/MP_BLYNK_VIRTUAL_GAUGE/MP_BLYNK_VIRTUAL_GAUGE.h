@@ -18,7 +18,7 @@ public:
 private:
     uint8_t v_pin;
     MP_BLYNK* blynk;
-    double value = 0.0;
+    double val = 0.0;
 };
 
 #endif
