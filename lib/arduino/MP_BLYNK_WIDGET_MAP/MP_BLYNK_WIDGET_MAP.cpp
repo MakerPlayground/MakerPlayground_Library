@@ -30,9 +30,9 @@ void MP_BLYNK_WIDGET_MAP::printStatus() {
     if (clearPinSentRequest) {
         Serial.println("None");
     } else {
-        Serial.print(lat);
+        Serial.print(lat, 6); // Six digits
         Serial.print(F(", "));
-        Serial.println(lon);
+        Serial.println(lon, 6); // Six digits
     }
 }
 

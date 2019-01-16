@@ -8,7 +8,7 @@
 class MP_TINY_GPS
 {
 public:
-	MP_TINY_GPS(uint8_t tx, uint8_t rx, int baud = 9600);
+	MP_TINY_GPS(uint8_t gps_tx, uint8_t gps_rx, int baud = 9600);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
@@ -16,6 +16,8 @@ public:
 
 	double getLatitude();
 	double getLongitude();
+	bool isDataValid();
+	bool isDataInvalid();
 
 private:
 	TinyGPSPlus gps;

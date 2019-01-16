@@ -77,6 +77,14 @@
         {
           "name": "Compare",
           "parameter": []
+        },
+        {
+          "name": "Data is valid",
+          "parameter": []
+        },
+        {
+          "name": "Data is not valid",
+          "parameter": []
         }
       ],
       "value": [

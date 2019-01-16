@@ -5,8 +5,8 @@ const char* const errors_p[] PROGMEM = {ok};
 
 const char* const* MP_TINY_GPS::ERRORS = errors_p;
 
-MP_TINY_GPS::MP_TINY_GPS(uint8_t tx, uint8_t rx, int baud)
-	:ss(SoftwareSerial(rx, tx))
+MP_TINY_GPS::MP_TINY_GPS(uint8_t gps_tx, uint8_t gps_rx, int baud)
+	:ss(SoftwareSerial(gps_tx, gps_rx))
 	,GPSBaud(baud)
 {
 }
@@ -20,13 +20,32 @@ int MP_TINY_GPS::init()
 
 void MP_TINY_GPS::update(unsigned long current_time) 
 {
-	while(ss.available()) {
-		if (gps.encode(ss.read()) && gps.location.isValid()) {
-			lat = gps.location.lat();
-			lon = gps.location.lng();
-		}
+	// while(ss.available()) {
+	// 	if (gps.encode(ss.read()) && gps.location.isValid()) {
+	// 		lat = gps.location.lat();
+	// 		lon = gps.location.lng();
+	// 	}
+	// }
+	// isGPSDetected = !(gps.charsProcessed() < 10);
+	while(ss.available() > 0) {
+		gps.encode(ss.read());
 	}
-	isGPSDetected = !(gps.charsProcessed() < 10);
+	if (gps.location.isValid() && gps.location.isUpdated()) {
+		lat = gps.location.lat();
+		lon = gps.location.lng();
+		isGPSDetected = true;
+	}
+	else if (gps.location.age() > 2000) {
+		isGPSDetected = false;
+	}
+}
+
+bool MP_TINY_GPS::isDataValid() {
+	return isGPSDetected;
+}
+
+bool MP_TINY_GPS::isDataInvalid() {
+	return !isGPSDetected;
 }
 
 void MP_TINY_GPS::printStatus()
