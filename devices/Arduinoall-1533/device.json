@@ -95,12 +95,23 @@
     {
       "platform": "ARDUINO_AVR8",
       "classname": "MP_HC_SR04",
-      "library_dependency": []
+      "library_dependency": [
+        "teckel12/NewPing_v1.9.1"
+      ]
     },
     {
       "platform": "ARDUINO_ESP8266",
       "classname": "MP_HC_SR04",
-      "library_dependency": []
+      "library_dependency": [
+        "teckel12/NewPing_v1.9.1"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_HC_SR04",
+      "library_dependency": [
+        "teckel12/NewPing_v1.9.1"
+      ]
     }
   ]
 }

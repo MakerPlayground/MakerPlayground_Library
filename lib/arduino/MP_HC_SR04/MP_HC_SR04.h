@@ -2,6 +2,7 @@
 #define MP_HC_SR04_H
 
 #include "MP_DEVICE.h"
+#include <NewPing.h>
 
 class MP_HC_SR04
 {
@@ -19,6 +20,7 @@ private:
     uint8_t echo;
     double cm;
     unsigned long nextReading;
+    NewPing sonar;
 };
 
 #endif
