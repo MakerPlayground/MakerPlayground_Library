@@ -1,8 +1,8 @@
 {
   "id": "MP-0021",
-  "brand": "MakerPlayground",
+  "brand": "Maker Playground",
   "model": "NodeMCU-32S Breakout Board",
-  "url": "http://www.makerplayground.io/library/MP-0021",
+  "url": "",
   "type": "CONTROLLER",
   "pio_boardid": "nodemcu-32s",
   "wiring_method": "MP",
