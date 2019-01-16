@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 113.4 56.7" style="enable-background:new 0 0 113.4 56.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#274A88;}
+	.st2{fill:#EDEDF2;}
+	.st3{fill:#DDDDDC;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:none;stroke:#000000;stroke-width:8.812200e-002;stroke-miterlimit:10;}
+	.st6{fill:#C9B55E;}
+	.st7{font-family:'Consolas';}
+	.st8{font-size:3.75px;}
+	.st9{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+	.st10{fill:#688DFF;}
+	.st11{fill:#4A6DE5;}
+	.st12{clip-path:url(#XMLID_326_);}
+	.st13{clip-path:url(#XMLID_326_);fill:#DDDDDC;}
+	.st14{fill:#F1F3E8;}
+	.st15{fill:#5E5E5E;}
+	.st16{fill:#D0CDC4;}
+	.st17{fill:#CFCCC3;}
+	.st18{fill:#CECBC2;}
+	.st19{fill:#CDCAC1;}
+	.st20{fill:#CCC9C0;}
+	.st21{fill:#CBC8BF;}
+	.st22{fill:#CBC8BE;}
+	.st23{fill:#CAC7BE;}
+	.st24{fill:#CAC7BD;}
+	.st25{fill:#C9C6BD;}
+	.st26{fill:#C9C6BC;}
+	.st27{fill:#C8C5BC;}
+	.st28{fill:#C7C5BB;}
+	.st29{fill:#C7C4BB;}
+	.st30{fill:#C6C4BA;}
+	.st31{fill:#C6C3B9;}
+	.st32{fill:#C5C3B9;}
+	.st33{fill:#C5C2B8;}
+	.st34{fill:#C4C1B8;}
+	.st35{fill:#C4C1B7;}
+	.st36{fill:#C3C0B7;}
+	.st37{fill:#C3C0B6;}
+	.st38{fill:#C2BFB6;}
+	.st39{fill:#C2BFB5;}
+	.st40{fill:#C1BEB4;}
+	.st41{fill:#C0BEB4;}
+	.st42{fill:#C0BDB3;}
+	.st43{fill:#BFBDB3;}
+	.st44{fill:#BFBCB2;}
+	.st45{fill:#BEBCB2;}
+	.st46{fill:#BEBBB1;}
+	.st47{fill:#BDBBB1;}
+	.st48{fill:#BDBAB0;}
+	.st49{fill:#BCBAAF;}
+	.st50{fill:#BCB9AF;}
+	.st51{fill:#BBB9AE;}
+	.st52{fill:#BBB8AE;}
+	.st53{fill:#BAB7AD;}
+	.st54{fill:#B9B6AC;}
+	.st55{fill:#B8B6AC;}
+	.st56{fill:#B8B5AB;}
+	.st57{fill:#B7B5AA;}
+	.st58{fill:#B7B4AA;}
+	.st59{fill:#B6B4A9;}
+	.st60{fill:#B6B3A9;}
+	.st61{fill:#B5B3A8;}
+	.st62{fill:#B5B2A8;}
+	.st63{fill:#B4B2A7;}
+	.st64{fill:#B4B1A7;}
+	.st65{fill:#B3B1A6;}
+	.st66{fill:#B3B0A6;}
+	.st67{fill:#B2B0A5;}
+	.st68{fill:#B2AFA4;}
+	.st69{fill:#B1AFA4;}
+	.st70{fill:#B0AEA3;}
+	.st71{fill:#AFADA2;}
+	.st72{fill:#AFACA2;}
+	.st73{fill:#AEACA1;}
+	.st74{fill:#AEABA1;}
+	.st75{fill:#ADABA0;}
+	.st76{fill:#ADAA9F;}
+	.st77{fill:#ACAA9F;}
+	.st78{fill:#ACA99E;}
+	.st79{fill:#ABA99E;}
+	.st80{fill:#ABA89D;}
+	.st81{fill:#AAA89D;}
+	.st82{fill:#AAA79C;}
+	.st83{fill:#A9A79C;}
+	.st84{fill:#A8A69B;}
+	.st85{fill:#A8A69A;}
+	.st86{fill:#A7A59A;}
+	.st87{fill:#A7A599;}
+	.st88{fill:#A6A499;}
+	.st89{fill:#A6A498;}
+	.st90{fill:#A5A398;}
+	.st91{fill:#A5A297;}
+	.st92{fill:#A4A297;}
+	.st93{fill:#A4A196;}
+	.st94{fill:#A3A195;}
+	.st95{fill:#A3A095;}
+	.st96{fill:#A2A094;}
+	.st97{fill:#A19F94;}
+	.st98{fill:#A19F93;}
+	.st99{fill:#A09E93;}
+	.st100{fill:#A09E92;}
+	.st101{fill:#9F9D92;}
+	.st102{fill:#9F9D91;}
+	.st103{fill:#9E9C90;}
+	.st104{fill:#9D9B8F;}
+	.st105{fill:#9C9A8E;}
+	.st106{fill:#9B998D;}
+	.st107{fill:#9A988C;}
+</style>
+<g id="XMLID_704_">
+	<circle id="XMLID_711_" class="st0" cx="85.5" cy="0" r="3.2"/>
+	<circle id="XMLID_710_" class="st0" cx="85.5" cy="56.7" r="3.2"/>
+	<path id="XMLID_705_" class="st1" d="M0.1,34l0,19.9c0,1.6,1.3,2.8,2.8,2.8h17.9c0,0,0,0,0,0c0-4.1,3.3-7.3,7.4-7.3
+		c4.1,0,7.4,3.3,7.4,7.3c0,0,0,0,0,0l44.6,0c0,2.9,2.4,5.3,5.3,5.3c2.9,0,5.3-2.4,5.3-5.3h20c1.6,0,2.8-1.3,2.8-2.8V35.7
+		c0,0,0,0,0,0c-4.1,0-7.3-3.3-7.3-7.4s3.3-7.4,7.3-7.4c0,0,0,0,0,0V2.8c0-1.6-1.3-2.8-2.8-2.8l-20,0c0-2.9-2.4-5.3-5.3-5.3
+		c-2.9,0-5.3,2.4-5.3,5.3L35.6,0c0,0,0,0,0,0.1c0,4.1-3.3,7.4-7.4,7.4c-4.1,0-7.4-3.3-7.4-7.4c0,0,0,0,0-0.1h-18
+		C1.4,0,0.1,1.3,0.1,2.8l0,20.6c-2.9,0-5.3,2.4-5.3,5.3C-5.1,31.6-2.8,34,0.1,34z M83.9-2.8c2.9-1.5,5.9,1.4,4.4,4.4
+		c-0.3,0.5-0.7,0.9-1.2,1.2c-2.9,1.5-5.9-1.4-4.4-4.4C82.9-2.1,83.4-2.5,83.9-2.8z M83.9,53.9c2.9-1.5,5.9,1.4,4.4,4.4
+		c-0.3,0.5-0.7,0.9-1.2,1.2c-2.9,1.5-5.9-1.4-4.4-4.4C82.9,54.6,83.4,54.2,83.9,53.9z M0.1,25.5c1.8,0,3.2,1.4,3.2,3.2
+		s-1.4,3.2-3.2,3.2S-3,30.5-3,28.7S-1.6,25.5,0.1,25.5z"/>
+</g>
+<g id="XMLID_698_">
+	<g id="g3109_1_" transform="matrix(0 1.2499976 -1.2499976 0 1338.60444 1003.15358)">
+		<g id="g33658-1_1_" transform="translate(-1.6000031,0)">
+			<path id="path16826-7_1_" class="st2" d="M-789.5,1055.5h3.6v1.2l-2.4,0v7.2h3.9v1.2h-1.3v1.8h-3.8V1055.5z"/>
+			<path id="path16828-7_1_" class="st2" d="M-770.6,1055.5h3.6v11.4h-3.8v-1.8h-1.3v-1.2h3.9v-7.2h-2.4V1055.5z"/>
+			<path id="path16830-7_1_" class="st3" d="M-768.2,1063.9h-3.9h-12.2h-3.9v-7.2l2.4,0h15.4h2.4L-768.2,1063.9L-768.2,1063.9z
+				 M-784.4,1060.9v-1.1h-1.1v1.1H-784.4z M-780,1059.7h-1.1v1.1h1.1V1059.7z M-772.1,1059.7v1.1h1.1v-1.1H-772.1z M-775.4,1060.9
+				v-1.1h-1.1v1.1H-775.4z"/>
+			<path id="path16832-7_1_" class="st4" d="M-770.6,1055.5v1.2h-15.4v-1.2H-770.6z"/>
+			<path id="path16834-3_1_" class="st4" d="M-782.2,1065.1h-2.2v-1.2h12.2v1.2h-2.2H-782.2L-782.2,1065.1z"/>
+			<path id="path16836-3_1_" class="st2" d="M-782.2,1067v-1.9h7.8v1.9H-782.2z"/>
+			<path id="path22220-2_4_" class="st5" d="M-785.9,1055.5"/>
+			<path id="path22220-2_3_" class="st5" d="M-770.6,1055.5"/>
+			<path id="path22246-8_4_" class="st5" d="M-768.2,1063.9"/>
+			<path id="path22246-8_3_" class="st5" d="M-768.2,1056.7"/>
+			<path id="path22248-0_4_" class="st5" d="M-768.2,1056.7"/>
+			<path id="path22248-0_3_" class="st5" d="M-770.6,1056.7"/>
+			<path id="path22250-1_4_" class="st5" d="M-770.6,1056.7"/>
+			<path id="path22250-1_3_" class="st5" d="M-770.6,1055.5"/>
+			<path id="path22252-2_4_" class="st5" d="M-767,1055.5"/>
+			<path id="path22252-2_3_" class="st5" d="M-770.6,1055.5"/>
+			<path id="path22276-4_4_" class="st5" d="M-770.8,1066.9"/>
+			<path id="path22276-4_3_" class="st5" d="M-767,1066.9"/>
+			<path id="path29510-1_4_" class="st5" d="M-767,1066.9"/>
+			<path id="path29510-1_3_" class="st5" d="M-767,1055.5"/>
+		</g>
+		<path id="connector3pin_1_" class="st6" d="M-786,1060.9h-1.1v-1.1h1.1V1060.9z"/>
+		<path id="connector2pin_1_" class="st6" d="M-782.7,1059.7h1.1v1.1h-1.1V1059.7z"/>
+		<path id="connector1pin_1_" class="st6" d="M-778.2,1060.9v-1.1h1.1v1.1H-778.2z"/>
+		<path id="connector0pin_1_" class="st6" d="M-773.7,1060.9v-1.1h1.1v1.1H-773.7z"/>
+	</g>
+</g>
+<text id="XMLID_697_" transform="matrix(1 0 0 1 20.5255 21.3135)" class="st4 st7 st8">SIG</text>
+<text id="XMLID_696_" transform="matrix(0 -1 1 0 14.8717 12.5201)" class="st4 st7 st8">J2</text>
+<text id="XMLID_695_" transform="matrix(1 0 0 1 80.6748 8.9278)" class="st4 st7 st8">J1</text>
+<text id="XMLID_694_" transform="matrix(1 0 0 1 93.2581 16.3445)" class="st4 st7 st8">R1</text>
+<text id="XMLID_693_" transform="matrix(1 0 0 1 20.5255 27.126)" class="st4 st7 st8">NC</text>
+<text id="XMLID_692_" transform="matrix(1 0 0 1 20.5255 32.9385)" class="st4 st7 st8">VCC</text>
+<text id="XMLID_691_" transform="matrix(1 0 0 1 20.5255 38.751)" class="st4 st7 st8">GND</text>
+<rect id="XMLID_690_" x="86.3" y="18.1" class="st9" width="20.8" height="20.8"/>
+<g id="XMLID_654_">
+	<path id="XMLID_689_" class="st10" d="M106.1,38.4H87.3c-0.3,0-0.5-0.2-0.5-0.5V19.1c0-0.3,0.2-0.5,0.5-0.5h18.8
+		c0.3,0,0.5,0.2,0.5,0.5v18.8C106.6,38.2,106.4,38.4,106.1,38.4z"/>
+	<g id="XMLID_670_">
+		<circle id="XMLID_686_" class="st11" cx="96.7" cy="28.5" r="6.7"/>
+		<g id="XMLID_684_">
+			<rect id="XMLID_685_" x="96.3" y="20" class="st11" width="0.8" height="3.6"/>
+		</g>
+		<g id="XMLID_682_">
+			
+				<rect id="XMLID_683_" x="92.9" y="20.9" transform="matrix(0.866 -0.5 0.5 0.866 1.158 49.7101)" class="st11" width="0.8" height="3.6"/>
+		</g>
+		<g id="XMLID_679_">
+			
+				<rect id="XMLID_681_" x="90.5" y="23.4" transform="matrix(0.5 -0.866 0.866 0.5 23.6516 91.2798)" class="st11" width="0.8" height="3.6"/>
+			
+				<rect id="XMLID_680_" x="102.1" y="30.1" transform="matrix(0.5 -0.866 0.866 0.5 23.6516 104.7369)" class="st11" width="0.8" height="3.6"/>
+		</g>
+		<g id="XMLID_676_">
+			<rect id="XMLID_678_" x="88.2" y="28.1" class="st11" width="3.6" height="0.8"/>
+			<rect id="XMLID_677_" x="101.6" y="28.1" class="st11" width="3.6" height="0.8"/>
+		</g>
+		<g id="XMLID_673_">
+			
+				<rect id="XMLID_675_" x="90.5" y="30.1" transform="matrix(-0.5 -0.866 0.866 -0.5 108.701 126.5297)" class="st11" width="0.8" height="3.6"/>
+			
+				<rect id="XMLID_674_" x="102.1" y="23.4" transform="matrix(-0.5 -0.866 0.866 -0.5 132.0094 126.5297)" class="st11" width="0.8" height="3.6"/>
+		</g>
+		<g id="XMLID_671_">
+			
+				<rect id="XMLID_672_" x="99.7" y="20.9" transform="matrix(-0.866 -0.5 0.5 -0.866 175.382 92.3819)" class="st11" width="0.8" height="3.6"/>
+		</g>
+	</g>
+	<g id="XMLID_659_">
+		<defs>
+			<circle id="XMLID_660_" cx="96.7" cy="28.5" r="5.8"/>
+		</defs>
+		<clipPath id="XMLID_326_">
+			<use xlink:href="#XMLID_660_"  style="overflow:visible;"/>
+		</clipPath>
+		<g id="XMLID_663_" class="st12">
+			<circle id="XMLID_667_" class="st4" cx="96.7" cy="28.5" r="5.8"/>
+			<g id="XMLID_664_">
+				<rect id="XMLID_666_" x="95.3" y="21.7" class="st3" width="2.8" height="13.6"/>
+				<rect id="XMLID_665_" x="89.9" y="27.1" class="st3" width="13.6" height="2.8"/>
+			</g>
+		</g>
+		<circle id="XMLID_662_" class="st13" cx="92.8" cy="24.3" r="0.9"/>
+		<circle id="XMLID_661_" class="st13" cx="100.8" cy="24.3" r="0.9"/>
+	</g>
+	<circle id="XMLID_658_" class="st11" cx="89.4" cy="35.2" r="1.2"/>
+	<circle id="XMLID_655_" class="st4" cx="89.4" cy="35.2" r="1"/>
+</g>
+<g id="XMLID_3_">
+	<circle id="XMLID_653_" class="st14" cx="57.8" cy="28.5" r="27.9"/>
+	<circle id="XMLID_652_" class="st15" cx="57.8" cy="28.5" r="25.7"/>
+	<circle id="XMLID_651_" class="st14" cx="57.8" cy="28.5" r="24.7"/>
+	<circle id="XMLID_650_" class="st15" cx="57.8" cy="28.5" r="21.5"/>
+	<g id="XMLID_5_">
+		<circle id="XMLID_4_" class="st16" cx="57.8" cy="28.5" r="20.9"/>
+		<circle id="XMLID_106_" class="st17" cx="57.8" cy="28.5" r="20.9"/>
+		<circle id="XMLID_105_" class="st17" cx="57.8" cy="28.5" r="20.8"/>
+		<circle id="XMLID_104_" class="st18" cx="57.8" cy="28.5" r="20.8"/>
+		<circle id="XMLID_103_" class="st18" cx="57.8" cy="28.5" r="20.8"/>
+		<circle id="XMLID_102_" class="st19" cx="57.8" cy="28.5" r="20.7"/>
+		<circle id="XMLID_101_" class="st19" cx="57.8" cy="28.5" r="20.7"/>
+		<circle id="XMLID_100_" class="st20" cx="57.8" cy="28.5" r="20.7"/>
+		<circle id="XMLID_99_" class="st20" cx="57.8" cy="28.5" r="20.6"/>
+		<circle id="XMLID_98_" class="st21" cx="57.8" cy="28.5" r="20.6"/>
+		<circle id="XMLID_97_" class="st22" cx="57.8" cy="28.5" r="20.6"/>
+		<circle id="XMLID_96_" class="st23" cx="57.8" cy="28.5" r="20.5"/>
+		<circle id="XMLID_95_" class="st24" cx="57.8" cy="28.5" r="20.5"/>
+		<circle id="XMLID_94_" class="st25" cx="57.8" cy="28.5" r="20.4"/>
+		<circle id="XMLID_93_" class="st26" cx="57.8" cy="28.5" r="20.4"/>
+		<circle id="XMLID_92_" class="st27" cx="57.8" cy="28.5" r="20.4"/>
+		<circle id="XMLID_91_" class="st28" cx="57.8" cy="28.5" r="20.3"/>
+		<circle id="XMLID_90_" class="st29" cx="57.8" cy="28.5" r="20.3"/>
+		<circle id="XMLID_89_" class="st30" cx="57.8" cy="28.5" r="20.3"/>
+		<circle id="XMLID_88_" class="st31" cx="57.8" cy="28.5" r="20.2"/>
+		<circle id="XMLID_87_" class="st32" cx="57.8" cy="28.5" r="20.2"/>
+		<circle id="XMLID_86_" class="st33" cx="57.8" cy="28.5" r="20.2"/>
+		<circle id="XMLID_85_" class="st34" cx="57.8" cy="28.5" r="20.1"/>
+		<circle id="XMLID_84_" class="st35" cx="57.8" cy="28.5" r="20.1"/>
+		<circle id="XMLID_83_" class="st36" cx="57.8" cy="28.5" r="20.1"/>
+		<circle id="XMLID_82_" class="st37" cx="57.8" cy="28.5" r="20"/>
+		<circle id="XMLID_81_" class="st38" cx="57.8" cy="28.5" r="20"/>
+		<circle id="XMLID_80_" class="st39" cx="57.8" cy="28.5" r="19.9"/>
+		<circle id="XMLID_79_" class="st40" cx="57.8" cy="28.5" r="19.9"/>
+		<circle id="XMLID_78_" class="st41" cx="57.8" cy="28.5" r="19.9"/>
+		<circle id="XMLID_77_" class="st42" cx="57.8" cy="28.5" r="19.8"/>
+		<circle id="XMLID_76_" class="st43" cx="57.8" cy="28.5" r="19.8"/>
+		<circle id="XMLID_75_" class="st44" cx="57.8" cy="28.5" r="19.8"/>
+		<circle id="XMLID_74_" class="st45" cx="57.8" cy="28.5" r="19.7"/>
+		<circle id="XMLID_73_" class="st46" cx="57.8" cy="28.5" r="19.7"/>
+		<circle id="XMLID_72_" class="st47" cx="57.8" cy="28.5" r="19.7"/>
+		<circle id="XMLID_71_" class="st48" cx="57.8" cy="28.5" r="19.6"/>
+		<circle id="XMLID_70_" class="st49" cx="57.8" cy="28.5" r="19.6"/>
+		<circle id="XMLID_69_" class="st50" cx="57.8" cy="28.5" r="19.6"/>
+		<circle id="XMLID_68_" class="st51" cx="57.8" cy="28.5" r="19.5"/>
+		<circle id="XMLID_67_" class="st52" cx="57.8" cy="28.5" r="19.5"/>
+		<circle id="XMLID_66_" class="st53" cx="57.8" cy="28.5" r="19.4"/>
+		<circle id="XMLID_65_" class="st53" cx="57.8" cy="28.5" r="19.4"/>
+		<circle id="XMLID_64_" class="st54" cx="57.8" cy="28.5" r="19.4"/>
+		<circle id="XMLID_63_" class="st55" cx="57.8" cy="28.5" r="19.3"/>
+		<circle id="XMLID_62_" class="st56" cx="57.8" cy="28.5" r="19.3"/>
+		<circle id="XMLID_61_" class="st57" cx="57.8" cy="28.5" r="19.3"/>
+		<circle id="XMLID_60_" class="st58" cx="57.8" cy="28.5" r="19.2"/>
+		<circle id="XMLID_59_" class="st59" cx="57.8" cy="28.5" r="19.2"/>
+		<circle id="XMLID_58_" class="st60" cx="57.8" cy="28.5" r="19.2"/>
+		<circle id="XMLID_57_" class="st61" cx="57.8" cy="28.5" r="19.1"/>
+		<circle id="XMLID_56_" class="st62" cx="57.8" cy="28.5" r="19.1"/>
+		<circle id="XMLID_55_" class="st63" cx="57.8" cy="28.5" r="19"/>
+		<circle id="XMLID_54_" class="st64" cx="57.8" cy="28.5" r="19"/>
+		<circle id="XMLID_53_" class="st65" cx="57.8" cy="28.5" r="19"/>
+		<circle id="XMLID_52_" class="st66" cx="57.8" cy="28.5" r="18.9"/>
+		<circle id="XMLID_51_" class="st67" cx="57.8" cy="28.5" r="18.9"/>
+		<circle id="XMLID_50_" class="st68" cx="57.8" cy="28.5" r="18.9"/>
+		<circle id="XMLID_49_" class="st69" cx="57.8" cy="28.5" r="18.8"/>
+		<circle id="XMLID_48_" class="st70" cx="57.8" cy="28.5" r="18.8"/>
+		<circle id="XMLID_47_" class="st70" cx="57.8" cy="28.5" r="18.8"/>
+		<circle id="XMLID_46_" class="st71" cx="57.8" cy="28.5" r="18.7"/>
+		<circle id="XMLID_45_" class="st72" cx="57.8" cy="28.5" r="18.7"/>
+		<circle id="XMLID_44_" class="st73" cx="57.8" cy="28.5" r="18.7"/>
+		<circle id="XMLID_43_" class="st74" cx="57.8" cy="28.5" r="18.6"/>
+		<circle id="XMLID_42_" class="st75" cx="57.8" cy="28.5" r="18.6"/>
+		<circle id="XMLID_41_" class="st76" cx="57.8" cy="28.5" r="18.5"/>
+		<circle id="XMLID_40_" class="st77" cx="57.8" cy="28.5" r="18.5"/>
+		<circle id="XMLID_39_" class="st78" cx="57.8" cy="28.5" r="18.5"/>
+		<circle id="XMLID_38_" class="st79" cx="57.8" cy="28.5" r="18.4"/>
+		<circle id="XMLID_37_" class="st80" cx="57.8" cy="28.5" r="18.4"/>
+		<circle id="XMLID_36_" class="st81" cx="57.8" cy="28.5" r="18.4"/>
+		<circle id="XMLID_35_" class="st82" cx="57.8" cy="28.5" r="18.3"/>
+		<circle id="XMLID_34_" class="st83" cx="57.8" cy="28.5" r="18.3"/>
+		<circle id="XMLID_33_" class="st84" cx="57.8" cy="28.5" r="18.3"/>
+		<circle id="XMLID_32_" class="st85" cx="57.8" cy="28.5" r="18.2"/>
+		<circle id="XMLID_31_" class="st86" cx="57.8" cy="28.5" r="18.2"/>
+		<circle id="XMLID_30_" class="st87" cx="57.8" cy="28.5" r="18.2"/>
+		<circle id="XMLID_29_" class="st88" cx="57.8" cy="28.5" r="18.1"/>
+		<circle id="XMLID_28_" class="st89" cx="57.8" cy="28.5" r="18.1"/>
+		<circle id="XMLID_27_" class="st90" cx="57.8" cy="28.5" r="18"/>
+		<circle id="XMLID_26_" class="st91" cx="57.8" cy="28.5" r="18"/>
+		<circle id="XMLID_25_" class="st92" cx="57.8" cy="28.5" r="18"/>
+		<circle id="XMLID_24_" class="st93" cx="57.8" cy="28.5" r="17.9"/>
+		<circle id="XMLID_23_" class="st94" cx="57.8" cy="28.5" r="17.9"/>
+		<circle id="XMLID_22_" class="st95" cx="57.8" cy="28.5" r="17.9"/>
+		<circle id="XMLID_21_" class="st96" cx="57.8" cy="28.5" r="17.8"/>
+		<circle id="XMLID_20_" class="st97" cx="57.8" cy="28.5" r="17.8"/>
+		<circle id="XMLID_19_" class="st98" cx="57.8" cy="28.5" r="17.8"/>
+		<circle id="XMLID_18_" class="st99" cx="57.8" cy="28.5" r="17.7"/>
+		<circle id="XMLID_17_" class="st100" cx="57.8" cy="28.5" r="17.7"/>
+		<circle id="XMLID_16_" class="st101" cx="57.8" cy="28.5" r="17.7"/>
+		<circle id="XMLID_15_" class="st102" cx="57.8" cy="28.5" r="17.6"/>
+		<circle id="XMLID_14_" class="st103" cx="57.8" cy="28.5" r="17.6"/>
+		<circle id="XMLID_13_" class="st103" cx="57.8" cy="28.5" r="17.5"/>
+		<circle id="XMLID_12_" class="st104" cx="57.8" cy="28.5" r="17.5"/>
+		<circle id="XMLID_11_" class="st104" cx="57.8" cy="28.5" r="17.5"/>
+		<circle id="XMLID_10_" class="st105" cx="57.8" cy="28.5" r="17.4"/>
+		<circle id="XMLID_9_" class="st105" cx="57.8" cy="28.5" r="17.4"/>
+		<circle id="XMLID_8_" class="st106" cx="57.8" cy="28.5" r="17.4"/>
+		<circle id="XMLID_7_" class="st106" cx="57.8" cy="28.5" r="17.3"/>
+		<circle id="XMLID_1_" class="st107" cx="57.8" cy="28.5" r="17.3"/>
+	</g>
+</g>
+</svg>
