@@ -33,28 +33,28 @@ void MP_7SEG_SOFTSERIAL::printStatus()
 	Serial.println(this->valueToShow);
 }
 
-void MP_7SEG_SOFTSERIAL::showTwoIntWithComma(int8_t beforeComma, int8_t afterComma) {
-	valueToShow = String(beforeComma) + String(":") + String(afterComma);
+void MP_7SEG_SOFTSERIAL::showTwoIntWithColon(int8_t beforeColon, int8_t afterColon) {
+	valueToShow = String(beforeColon) + String(":") + String(afterColon);
 
 	serial.write((byte)0x7f);
 	serial.write((byte)3);
-	if (beforeComma < 0 && beforeComma > -10) {
+	if (beforeColon < 0 && beforeColon > -10) {
 		serial.write((byte)0b01000000);
-		serial.write(digits[-beforeComma]);
-	} else if (beforeComma >= 0 && beforeComma < 100) {
-		serial.write(digits[beforeComma / 10]);
-		serial.write(digits[beforeComma % 10]);
+		serial.write(digits[-beforeColon]);
+	} else if (beforeColon >= 0 && beforeColon < 100) {
+		serial.write(digits[beforeColon / 10]);
+		serial.write(digits[beforeColon % 10]);
 	} else {
 		serial.write((byte)0b01000000);
 		serial.write((byte)0b01000000);
 	}
 
-	if (afterComma < 0 && afterComma > -10) {
+	if (afterColon < 0 && afterColon > -10) {
 		serial.write((byte)0b01000000);
-		serial.write(digits[-afterComma]);
-	} else if (afterComma >= 0 && afterComma < 100) {
-		serial.write(digits[afterComma / 10]);
-		serial.write(digits[afterComma % 10]);
+		serial.write(digits[-afterColon]);
+	} else if (afterColon >= 0 && afterColon < 100) {
+		serial.write(digits[afterColon / 10]);
+		serial.write(digits[afterColon % 10]);
 	} else {
 		serial.write((byte)0b01000000);
 		serial.write((byte)0b01000000);

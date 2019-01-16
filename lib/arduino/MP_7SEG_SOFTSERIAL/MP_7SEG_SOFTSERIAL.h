@@ -18,7 +18,7 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 	
-	void showTwoIntWithComma(int8_t beforeComma, int8_t afterComma);
+	void showTwoIntWithColon(int8_t beforeColon, int8_t afterColon);
 	void showData(double num);
 	void off();
 
