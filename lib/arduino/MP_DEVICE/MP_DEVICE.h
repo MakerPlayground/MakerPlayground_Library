@@ -9,6 +9,10 @@
     #include "ESP32_Polyfill.h"
 #endif
 
+#if defined(ESP32) || defined(ESP8266)
+    #include "MP_RECORD.h"
+#endif
+
 // base class: MP_Device
 // error msgs
 

@@ -30,6 +30,7 @@ public:
     void unsubscribe(char* topic);
 
     double getValue(char* topic);
+    void writeFeed(char* feedId, String data, char* apiKey);
 
     static std::map<String, double> value;
     static std::map<String, bool> changed; 

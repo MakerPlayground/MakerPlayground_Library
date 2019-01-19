@@ -119,3 +119,7 @@ double MP_NETPIE_ESP::getValue(char* topic)
 {
     return value[String(topic)];
 }
+
+void MP_NETPIE_ESP::writeFeed(char* feedId, String data, char* apiKey) {
+    microgear.writeFeed(feedId, data, apiKey);
+}

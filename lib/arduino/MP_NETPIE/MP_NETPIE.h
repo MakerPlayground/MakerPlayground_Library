@@ -13,6 +13,7 @@ public:
 	virtual void subscribe(char* topic);
 	virtual void unsubscribe(char* topic);
 	virtual double getValue(char* topic);
+	virtual void writeFeed(char* feedId, String data, char* apiKey);
 };
 
 #endif
