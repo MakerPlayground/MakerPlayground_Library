@@ -261,12 +261,7 @@
     {
       "name": "A5",
       "type": "WIRE",
-      "function": [
-        {
-          "type": "ANALOG_5",
-          "pintype": "INOUT"
-        }
-      ],
+      "function": [],
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 492.542,
@@ -275,12 +270,7 @@
     {
       "name": "A4",
       "type": "WIRE",
-      "function": [
-        {
-          "type": "ANALOG_4",
-          "pintype": "INOUT"
-        }
-      ],
+      "function": [],
       "v_min": 5.0,
       "v_max": 5.0,
       "x": 473.475,
@@ -291,7 +281,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_3",
+          "type": "ANALOG_4",
           "pintype": "INOUT"
         }
       ],
@@ -305,7 +295,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_2",
+          "type": "ANALOG_3",
           "pintype": "INOUT"
         }
       ],
@@ -319,7 +309,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_1",
+          "type": "ANALOG_2",
           "pintype": "INOUT"
         }
       ],
@@ -333,7 +323,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_0",
+          "type": "ANALOG_1",
           "pintype": "INOUT"
         }
       ],
@@ -436,12 +426,10 @@
     "PWM_4",
     "PWM_5",
     "PWM_6",
-    "ANALOG_0",
     "ANALOG_1",
     "ANALOG_2",
     "ANALOG_3",
-    "ANALOG_4",
-    "ANALOG_5"
+    "ANALOG_4"
   ],
   "compatibility": [],
   "platforms": [

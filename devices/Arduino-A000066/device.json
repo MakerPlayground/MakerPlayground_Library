@@ -199,7 +199,7 @@
           "pintype": "INOUT"
         },
         {
-          "type": "SPI_2",
+          "type": "SPI_1",
           "pintype": "SPI_MOSI"
         },
         {
@@ -217,7 +217,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "SPI_3",
+          "type": "SPI_1",
           "pintype": "SPI_MISO"
         },
         {
@@ -235,7 +235,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "SPI_4",
+          "type": "SPI_1",
           "pintype": "SPI_SCK"
         },
         {
@@ -382,7 +382,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_0",
+          "type": "ANALOG_1",
           "pintype": "INOUT"
         }
       ],
@@ -396,7 +396,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_1",
+          "type": "ANALOG_2",
           "pintype": "INOUT"
         }
       ],
@@ -410,7 +410,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_2",
+          "type": "ANALOG_3",
           "pintype": "INOUT"
         }
       ],
@@ -424,7 +424,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "ANALOG_3",
+          "type": "ANALOG_4",
           "pintype": "INOUT"
         }
       ],
@@ -474,10 +474,10 @@
     "PWM_4",
     "PWM_5",
     "PWM_6",
-    "ANALOG_0",
     "ANALOG_1",
     "ANALOG_2",
-    "ANALOG_3"
+    "ANALOG_3",
+    "ANALOG_4"
   ],
   "compatibility": [],
   "platforms": [

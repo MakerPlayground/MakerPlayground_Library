@@ -14,14 +14,6 @@
       "library_dependency": [
         "lamloei/ESP32_Microgear"
       ]
-    },
-    {
-      "cloud_platform": "BLYNK",
-      "classname": "MP_BLYNK_SERIAL1_WIFI",
-      "library_dependency": [
-        "blynkkk/blynk-library",
-        "vshymanskyy/BlynkESP8266"
-      ]
     }
   ],
   "width": 289.0,
