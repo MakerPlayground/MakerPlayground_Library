@@ -1,0 +1,69 @@
+{
+  "id": "LINE-Notify",
+  "brand": "LINE",
+  "model": "Notify API",
+  "url": "https://notify-bot.line.me/en/",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "cloud_platform": "REST",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [
+    {
+      "name": "token",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "value": "",
+      "constraint": []
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Notification",
+      "action": [
+        {
+          "name": "Notify",
+          "parameter": [
+            {
+              "name": "Message",
+              "constraint": []
+            }
+          ]
+        }
+      ],
+      "condition": [],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_Line_Notify",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_Line_Notify",
+      "library_dependency": []
+    }
+  ]
+}
