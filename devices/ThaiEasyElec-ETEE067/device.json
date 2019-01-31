@@ -1,0 +1,340 @@
+{
+  "id": "ThaiEasyElec-ETEE067",
+  "brand": "ThaiEasyElec",
+  "model": "Camera Expansion for ESPino32 (OV2640)",
+  "url": "https://www.thaieasyelec.com/products/internet-of-things/camera-expansion-for-espino32-ov2640-detail.html",
+  "type": "PERIPHERAL",
+  "formfactor": "SHIELD",
+  "wiring_method": "WIRE_AND_BREADBOARD",
+  "support_cloudplatform": [],
+  "width": 367.0,
+  "height": 144.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 43.5,
+      "y": 136.8
+    },
+    {
+      "name": "3V3",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 57.9,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D2",
+      "alias": ["36"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 72.3,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D1",
+      "alias": ["39"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 86.7,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D3",
+      "alias": ["32"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 101.1,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D0",
+      "alias": ["33"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 115.5,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D4",
+      "alias": ["34"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_5",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 129.9,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D5",
+      "alias": ["35"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "ANALOG_6",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 144.3,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D6",
+      "alias": ["4"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 158.7,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_D7",
+      "alias": ["15"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_6",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 230.7,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_XCLK",
+      "alias": ["13"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_7",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 245.1,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_PCLK",
+      "alias": ["12"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_8",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 259.5,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_VSYNC",
+      "alias": ["14"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_9",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 273.9,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_HREF",
+      "alias": ["27"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_10",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 288.3,
+      "y": 136.8
+    },
+    {
+      "name": "CAM_RESET",
+      "alias": ["25"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_11",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 302.7,
+      "y": 136.8
+    },
+    {
+      "name": "3V3",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 43.5,
+      "y": 7.2
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 57.9,
+      "y": 7.2
+    },
+    {
+      "name": "CAM_SCL",
+      "alias": ["22"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_13",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 72.3,
+      "y": 7.2
+    },
+    {
+      "name": "CAM_SDA",
+      "alias": ["21"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_14",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 86.7,
+      "y": 7.2
+    }
+  ],
+  "connectivity": [
+    "GPIO_2",
+    "ANALOG_2",
+    "ANALOG_1",
+    "GPIO_1",
+    "ANALOG_5",
+    "ANALOG_6",
+    "GPIO_3",
+    "GPIO_6",
+    "GPIO_7",
+    "GPIO_8",
+    "GPIO_9",
+    "GPIO_10",
+    "GPIO_14",
+    "GPIO_13",
+    "GPIO_11"
+  ],
+  "compatibility": [
+    {
+      "name": "Camera",
+      "action": [
+        {
+          "name": "Capture Image",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Image",
+          "constraint": []
+        }
+      ]
+    }
+  ],
+  "integrated_device": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_CAMERA_OV2640_ESP32",
+      "library_dependency": []
+    }
+  ]
+}

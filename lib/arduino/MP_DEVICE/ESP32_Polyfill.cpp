@@ -2,7 +2,7 @@
 
 #ifdef ESP32
 
-const uint8_t pinList[] = {13, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27};
+const uint8_t pinList[] = {255, 255, 4, 12, 13, 14, 16, 17, 255, 255, 18, 19, 23, 25, 26, 27};  // channel 0, 1, 8, 9 may be used by the camera
 constexpr uint8_t channelCount = sizeof(pinList) / sizeof(pinList[0]);
 
 bool pinUsed[channelCount] = {false};

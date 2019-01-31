@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include "MP_DATETIME.h"
+#include "MP_IMAGE.h"
 
 #ifdef ESP32
     #include "ESP32_Polyfill.h"
