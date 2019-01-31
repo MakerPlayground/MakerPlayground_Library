@@ -1,0 +1,106 @@
+{
+  "id": "Azure-CustomVision",
+  "brand": "Azure",
+  "model": "Custom Vision Service",
+  "url": "https://www.customvision.ai",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "cloud_platform": "REST",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [
+    {
+      "name": "region",
+      "datatype": "ENUM",
+      "controltype": "DROPDOWN",
+      "value": "",
+      "constraint": [
+        "westus2",
+        "eastus",
+        "eastus2",
+        "southcentralus",
+        "nouthcentralus",
+        "westeurope",
+        "northeurope",
+        "southeastasia",
+        "australiaeast",
+        "centralindia",
+        "uksouth",
+        "japaneast"
+      ]
+    },
+    {
+      "name": "Prediction Key",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "value": "",
+      "constraint": []
+    },
+    {
+      "name": "Project Id",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "value": "",
+      "constraint": []
+    }
+  ],
+
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Image Recognizer",
+      "action": [],
+      "condition": [
+        {
+          "name": "Classify Image",
+          "parameter": [
+            {
+              "name": "Image",
+              "constraint": []
+            },
+            {
+              "name": "Class",
+              "constraint": []
+            },
+            {
+              "name": "Minimum Probability",
+              "constraint": {
+                "min": 0.0,
+                "max": 100.0,
+                "unit": "PERCENT"
+              }
+            }
+          ]
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_Azure_CustomVisionServices",
+      "library_dependency": [
+        "bblanchon/ArduinoJson-v5.13.4"
+      ]
+    }
+  ]
+}

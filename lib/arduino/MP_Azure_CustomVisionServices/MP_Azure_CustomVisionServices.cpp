@@ -1,35 +1,36 @@
-#include "MP_Azure_CognitiveServices.h"
+#include "MP_Azure_CustomVisionServices.h"
 
-#define COGNITIVE_SERVICE_ENDPOINT ".api.cognitive.microsoft.com"   // endpoint should be prepended by region name
-#define COGNITIVE_SERVICE_PORT 443
-#define COGNITIVE_REQUEST_INTERVAL 100  // in ms (maximum of 10 requests per second)
+#define CUSTOMVISION_SERVICE_ENDPOINT ".api.cognitive.microsoft.com"   // endpoint should be prepended by region name
+#define CUSTOMVISION_SERVICE_PORT 443
+#define CUSTOMVISION_REQUEST_INTERVAL 100  // in ms (maximum of 10 requests per second)
 #define TIMEOUT 10000   // in ms (maximum time to wait for response from the server)
 
 const char ok[] PROGMEM = "OK";
 const char* const errors_p[] PROGMEM = {ok};
-const char* const* MP_Azure_CognitiveServices::ERRORS = errors_p;
+const char* const* MP_Azure_CustomVisionServices::ERRORS = errors_p;
 
 using namespace ArduinoJson;
 
-MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, MP_REST* rest)
-    : requestEndPoint(azureRegion + COGNITIVE_SERVICE_ENDPOINT)
-    , key(key)
+MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, MP_REST* rest)
+    : requestEndPoint(azureRegion + CUSTOMVISION_SERVICE_ENDPOINT)
+    , predictionKey(predictionKey)
+    , projectId(projectId)
     , rest(rest)
     , latestProcessTime(0)
     , error(Error::OK)
 {
 }
 
-int MP_Azure_CognitiveServices::init()
+int MP_Azure_CustomVisionServices::init()
 {
     return 0;
 }
 
-void MP_Azure_CognitiveServices::update(unsigned long currentTime)
+void MP_Azure_CustomVisionServices::update(unsigned long currentTime)
 {
 }
 
-void MP_Azure_CognitiveServices::printStatus()
+void MP_Azure_CustomVisionServices::printStatus()
 {
     switch (error) 
     {
@@ -48,7 +49,7 @@ void MP_Azure_CognitiveServices::printStatus()
             Serial.println(F("Wifi is not connected"));
             break;
         case Error::CANT_CONNECT_AZURE:
-            Serial.println(F("Can't connect to cognitive services endpoint"));
+            Serial.println(F("Can't connect to Costom Vision services endpoint"));
             break;
         case Error::SERVER_ERROR:
             Serial.println(F("Got error reponse code from the server"));
@@ -62,11 +63,11 @@ void MP_Azure_CognitiveServices::printStatus()
     }
 }
 
-bool MP_Azure_CognitiveServices::classifiedImage(MP_IMAGE image, String tag, double minProbability)
+bool MP_Azure_CustomVisionServices::classifiedImage(MP_IMAGE image, String tag, double minProbability)
 {
     // process the image iff this function is called for the first time or the image is newer
     if ((this->image.data == NULL || this->image.id != image.id) 
-        && (millis() - latestProcessTime) >= COGNITIVE_REQUEST_INTERVAL)
+        && (millis() - latestProcessTime) >= CUSTOMVISION_REQUEST_INTERVAL)
     {
         analyzeImage(image);
         if (error != Error::OK)
@@ -81,7 +82,7 @@ bool MP_Azure_CognitiveServices::classifiedImage(MP_IMAGE image, String tag, dou
     return (it != resultTag.end()) && (it->second >= minProbability);
 }
 
-void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
+void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
 {
     if (!rest->isConnected())
     {
@@ -90,21 +91,21 @@ void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
     }
 
     String header;
-    header = "POST /vision/v1.0/analyze?visualFeatures=Tags&language=en HTTP/1.1\r\n";
+    header = "POST /customvision/v2.0/Prediction/" + projectId + "/image\r\n";
     header += "Host: ";
     header += requestEndPoint;
     header += "\r\n";
-    header += "Content-Type: application/octet-stream\r\n";
+    header += "Content-Type: multipart/form-data\r\n";
     header += "Content-Length: ";
     header += image.size;
     header += "\r\n";
-    header += "Ocp-Apim-Subscription-Key: ";
-    header += key;
+    header += "Prediction-Key: ";
+    header += predictionKey;
     header += "\r\n";
     header += "\r\n";
 
     WiFiClientSecure client;
-    if (!client.connect(requestEndPoint.c_str(), COGNITIVE_SERVICE_PORT))
+    if (!client.connect(requestEndPoint.c_str(), CUSTOMVISION_SERVICE_PORT))
     {
         error = Error::CANT_CONNECT_AZURE;
         return;
@@ -136,10 +137,10 @@ void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
         error = Error::CANT_PARSE_JSON;
         return;
     }
-    JsonArray& tags = root["tags"];
+    JsonArray& tags = root["Predictions"];
     for (auto& node : tags)
     {
-        resultTag[String(node["name"].as<const char*>())] = node["confidence"];
+        resultTag[String(node["TagName"].as<const char*>())] = node["Probability"];
     }
     /*เรียก jason*/
     error = Error::OK;
