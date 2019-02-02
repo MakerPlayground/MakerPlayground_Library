@@ -142,6 +142,6 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
     {
         resultTag[String(node["TagName"].as<const char*>())] = node["Probability"];
     }
-    /*เรียก jason*/
+
     error = Error::OK;
 }

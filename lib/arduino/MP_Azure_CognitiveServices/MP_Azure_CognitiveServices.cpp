@@ -141,6 +141,6 @@ void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
     {
         resultTag[String(node["name"].as<const char*>())] = node["confidence"];
     }
-    /*เรียก jason*/
+
     error = Error::OK;
 }
