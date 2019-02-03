@@ -12,18 +12,16 @@ MP_REST_ESP::MP_REST_ESP(const char* ssid, const char* pass)
 
 int MP_REST_ESP::init()
 {
-    // WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, pass);
-    // TODO: allow system to work without wifi connection
-    while (WiFi.status() != WL_CONNECTED)
-    {
-        delay(500);
-    }
     return 0;
 }
 
 void MP_REST_ESP::update(unsigned long currentTime)
 {
+    if (WiFi.status() != WL_CONNECTED)
+    {
+        delay(25);
+    }
 }
 
 void MP_REST_ESP::printStatus()
