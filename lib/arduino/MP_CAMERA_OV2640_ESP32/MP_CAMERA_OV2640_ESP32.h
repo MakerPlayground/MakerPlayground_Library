@@ -15,7 +15,6 @@ public:
 	void printStatus();
 	static const char* const* ERRORS;
 
-	void captureImage();
     MP_IMAGE getImage();
 
 private:

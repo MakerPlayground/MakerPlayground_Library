@@ -46,30 +46,10 @@ int MP_CAMERA_OV2640_ESP32::init()
     if (err != ESP_OK)
         return 1;
 
-	captureImage();
-	if (err != ESP_OK)
-        return 1;
-
     return 0;
 }
 
 void MP_CAMERA_OV2640_ESP32::update(unsigned long current_time) 
-{
-}
-
-void MP_CAMERA_OV2640_ESP32::printStatus() 
-{
-	if (err == ESP_OK)
-	{
-		Serial.println(F("ok"));
-	}
-	else
-	{
-		Serial.println(F("found error(s) while capturing image"));
-	}
-}
-
-void MP_CAMERA_OV2640_ESP32::captureImage()
 {
 	err = camera_run();
 	if (err == ESP_OK) 
@@ -77,6 +57,18 @@ void MP_CAMERA_OV2640_ESP32::captureImage()
 		image.data = camera_get_fb();
 		image.size = camera_get_data_size() - 1;
 		image.id += 1;
+	}
+}
+
+void MP_CAMERA_OV2640_ESP32::printStatus() 
+{
+	if (err == ESP_OK)
+	{
+		Serial.println(F("camera is working"));
+	}
+	else
+	{
+		Serial.println(F("found error while capturing image"));
 	}
 }
 
