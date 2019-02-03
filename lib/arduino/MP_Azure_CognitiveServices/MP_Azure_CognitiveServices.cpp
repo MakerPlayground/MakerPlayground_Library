@@ -11,9 +11,10 @@ const char* const* MP_Azure_CognitiveServices::ERRORS = errors_p;
 
 using namespace ArduinoJson;
 
-MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, MP_REST* rest)
+MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, double requestInterval, MP_REST* rest)
     : requestEndPoint(azureRegion + COGNITIVE_SERVICE_ENDPOINT)
     , key(key)
+    , requestInterval(requestInterval * 1000)   // convert from sec to ms
     , rest(rest)
     , latestProcessTime(0)
     , error(Error::OK)
@@ -65,8 +66,10 @@ void MP_Azure_CognitiveServices::printStatus()
 bool MP_Azure_CognitiveServices::classifiedImage(MP_IMAGE image, String tag, double minProbability)
 {
     // process the image iff this function is called for the first time or the image is newer
+    unsigned long timeElapsed = millis() - latestProcessTime;
     if ((this->image.data == NULL || this->image.id != image.id) 
-        && (millis() - latestProcessTime) >= COGNITIVE_REQUEST_INTERVAL)
+        && timeElapsed >= COGNITIVE_REQUEST_INTERVAL
+        && timeElapsed >= requestInterval)
     {
         analyzeImage(image);
         if (error != Error::OK)
@@ -83,6 +86,9 @@ bool MP_Azure_CognitiveServices::classifiedImage(MP_IMAGE image, String tag, dou
 
 void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
 {
+    // clear result map first so classifiedImage won't reused old result when this function fails
+    resultTag.clear();
+
     if (!rest->isConnected())
     {
         error = Error::NO_INTERNET_CONNECTION;

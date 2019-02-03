@@ -10,7 +10,7 @@
 class MP_Azure_CognitiveServices
 {
 public:
-    MP_Azure_CognitiveServices(String azureRegion, String key, MP_REST* rest);
+    MP_Azure_CognitiveServices(String azureRegion, String key, double requestInterval, MP_REST* rest);
     int init();
 	void update(unsigned long currentTime);
 	void printStatus();
@@ -33,6 +33,7 @@ private:
 
     String requestEndPoint;
     String key;
+    int requestInterval;    // user defined minimum time to wait before next request (in ms)
     MP_REST* rest;
 
     MP_IMAGE image;

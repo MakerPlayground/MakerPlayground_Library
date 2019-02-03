@@ -11,10 +11,11 @@ const char* const* MP_Azure_CustomVisionServices::ERRORS = errors_p;
 
 using namespace ArduinoJson;
 
-MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, MP_REST* rest)
+MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, double requestInterval, MP_REST* rest)
     : requestEndPoint(azureRegion + CUSTOMVISION_SERVICE_ENDPOINT)
     , predictionKey(predictionKey)
     , projectId(projectId)
+    , requestInterval(requestInterval * 1000)   // convert from sec to ms
     , rest(rest)
     , latestProcessTime(0)
     , error(Error::OK)
@@ -49,7 +50,7 @@ void MP_Azure_CustomVisionServices::printStatus()
             Serial.println(F("Wifi is not connected"));
             break;
         case Error::CANT_CONNECT_AZURE:
-            Serial.println(F("Can't connect to Costom Vision services endpoint"));
+            Serial.println(F("Can't connect to custom vision services endpoint"));
             break;
         case Error::SERVER_ERROR:
             Serial.println(F("Got error reponse code from the server"));
@@ -66,8 +67,10 @@ void MP_Azure_CustomVisionServices::printStatus()
 bool MP_Azure_CustomVisionServices::classifiedImage(MP_IMAGE image, String tag, double minProbability)
 {
     // process the image iff this function is called for the first time or the image is newer
+    unsigned long timeElapsed = millis() - latestProcessTime;
     if ((this->image.data == NULL || this->image.id != image.id) 
-        && (millis() - latestProcessTime) >= CUSTOMVISION_REQUEST_INTERVAL)
+        && timeElapsed >= CUSTOMVISION_REQUEST_INTERVAL
+        && timeElapsed >= requestInterval)
     {
         analyzeImage(image);
         if (error != Error::OK)
@@ -84,6 +87,9 @@ bool MP_Azure_CustomVisionServices::classifiedImage(MP_IMAGE image, String tag, 
 
 void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
 {
+    // clear result map first so classifiedImage won't reused old result when this function fails
+    resultTag.clear();
+
     if (!rest->isConnected())
     {
         error = Error::NO_INTERNET_CONNECTION;

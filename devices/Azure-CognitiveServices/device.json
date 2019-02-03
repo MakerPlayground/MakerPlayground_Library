@@ -10,7 +10,7 @@
   "height": 0.0,
   "property": [
     {
-      "name": "region",
+      "name": "Region",
       "datatype": "ENUM",
       "controltype": "DROPDOWN",
       "value": "",
@@ -34,11 +34,22 @@
       ]
     },
     {
-      "name": "key",
+      "name": "Key",
       "datatype": "STRING",
       "controltype": "TEXTBOX",
       "value": "",
       "constraint": []
+    },
+    {
+      "name": "Request interval",
+      "datatype": "DOUBLE",
+      "controltype": "SPINBOX",
+      "value": 3.0,
+      "constraint": {
+        "min": 0.0,
+        "max": 1000000.0,
+        "unit": "SECOND"
+      }
     }
   ],
   "port": [

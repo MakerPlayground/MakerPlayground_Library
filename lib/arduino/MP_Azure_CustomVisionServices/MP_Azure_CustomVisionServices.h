@@ -10,7 +10,7 @@
 class MP_Azure_CustomVisionServices
 {
 public:
-    MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, MP_REST* rest);
+    MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, double requestInterval, MP_REST* rest);
     int init();
 	void update(unsigned long currentTime);
 	void printStatus();
@@ -34,6 +34,7 @@ private:
     String requestEndPoint;
     String predictionKey;
     String projectId;
+    int requestInterval;    // user defined minimum time to wait before next request (in ms)
     MP_REST* rest;
 
     MP_IMAGE image;
