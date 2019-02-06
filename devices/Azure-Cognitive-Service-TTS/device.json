@@ -1,0 +1,114 @@
+{
+  "id": "Azure-Cognitive-Service-TTS",
+  "brand": "Azure",
+  "model": "Cognitive Service Text-to-Speech",
+  "url": "https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [
+    {
+      "name": "region",
+      "datatype": "ENUM",
+      "controltype": "DROPDOWN",
+      "constraint": [
+        "southeastasia"
+      ],
+      "value": "southeastasia"
+    },
+    {
+      "name": "speech service name",
+      "value": "",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "constraint": []
+    },
+    {
+      "name": "service subscription key",
+      "value": "",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "constraint": []
+    },
+    {
+      "name": "max translations per minute",
+      "value": "10",
+      "datatype": "INTEGER_ENUM",
+      "controltype": "DROPDOWN",
+      "constraint": [
+        "30",
+        "20",
+        "15",
+        "12",
+        "10",
+        "6",
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ]
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "TTS",
+      "action": [
+        {
+          "name": "text to sound file",
+          "parameter": [
+            {
+              "name": "text",
+              "value": "Hello world",
+              "constraint": []
+            },
+            {
+              "name": "save file name",
+              "value": "temp.wav",
+              "constraint": []
+            }
+          ]
+        },
+        {
+          "name": "play sound",
+          "funcname": "speak",
+          "parameter": [
+            {
+              "name": "text",
+              "value": "Hello world",
+              "constraint": []
+            }
+          ]
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "RASPBERRYPI",
+      "classname": "MP_Azure_Cognitive_Service_TTS",
+      "library_dependency": []
+    }
+  ]
+}
