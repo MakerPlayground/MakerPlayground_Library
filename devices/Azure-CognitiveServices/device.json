@@ -5,38 +5,14 @@
   "url": "https://azure.microsoft.com/en-us/services/cognitive-services/",
   "type": "VIRTUAL",
   "formfactor": "NONE",
-  "cloud_platform": "REST",
+  "cloud_platform": "AZURE",
   "width": 0.0,
   "height": 0.0,
   "property": [
     {
-      "name": "Region",
-      "datatype": "ENUM",
-      "controltype": "DROPDOWN",
-      "value": "",
-      "constraint": [
-        "westus",
-        "westus2",
-        "eastus",
-        "eastus2",
-        "westcentralus",
-        "southcentralus",
-        "westeurope",
-        "northeurope",
-        "southeastasia",
-        "eastasia",
-        "australiaeast",
-        "brazilsouth",
-        "canadacentral",
-        "centralindia",
-        "uksouth",
-        "japaneast"
-      ]
-    },
-    {
       "name": "Key",
-      "datatype": "STRING",
-      "controltype": "TEXTBOX",
+      "datatype": "AZURE_COGNITIVE_KEY",
+      "controltype": "AZURE_WIZARD",
       "value": "",
       "constraint": []
     },

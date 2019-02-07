@@ -16,8 +16,8 @@
       ]
     },
     {
-      "cloud_platform": "REST",
-      "classname": "MP_REST_ESP",
+      "cloud_platform": "AZURE",
+      "classname": "MP_AZURE_ESP",
       "library_dependency": []
     }
   ],

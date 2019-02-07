@@ -5,7 +5,7 @@
   "url": "https://www.customvision.ai",
   "type": "VIRTUAL",
   "formfactor": "NONE",
-  "cloud_platform": "REST",
+  "cloud_platform": "AZURE",
   "width": 0.0,
   "height": 0.0,
   "property": [
