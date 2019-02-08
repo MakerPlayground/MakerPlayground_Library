@@ -1,7 +1,7 @@
 {
-  "id": "Azure-Cognitive-Service-TTS",
+  "id": "Azure-CognitiveService-TTS-for-RPI",
   "brand": "Azure",
-  "model": "Cognitive Service Text-to-Speech",
+  "model": "Cognitive Service - Text to Speech (Rest API)",
   "url": "https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/",
   "type": "VIRTUAL",
   "formfactor": "NONE",
@@ -9,46 +9,49 @@
   "height": 0.0,
   "property": [
     {
-      "name": "region",
+      "name": "Region",
       "datatype": "ENUM",
       "controltype": "DROPDOWN",
       "constraint": [
-        "southeastasia"
+        "westus2",
+        "eastus",
+        "eastus2",
+        "southcentralus",
+        "nouthcentralus",
+        "westeurope",
+        "northeurope",
+        "southeastasia",
+        "australiaeast",
+        "centralindia",
+        "uksouth",
+        "japaneast"
       ],
       "value": "southeastasia"
     },
     {
-      "name": "speech service name",
+      "name": "Speech Service Id",
       "value": "",
       "datatype": "STRING",
       "controltype": "TEXTBOX",
       "constraint": []
     },
     {
-      "name": "service subscription key",
+      "name": "Speech Service key",
       "value": "",
       "datatype": "STRING",
       "controltype": "TEXTBOX",
       "constraint": []
     },
     {
-      "name": "max translations per minute",
+      "name": "Max Translations / Minute",
       "value": "10",
-      "datatype": "INTEGER_ENUM",
-      "controltype": "DROPDOWN",
-      "constraint": [
-        "30",
-        "20",
-        "15",
-        "12",
-        "10",
-        "6",
-        "5",
-        "4",
-        "3",
-        "2",
-        "1"
-      ]
+      "datatype": "DOUBLE",
+      "controltype": "SPINBOX",
+      "constraint": {
+        "min": 1,
+        "max": 30,
+        "unit": "NOT_SPECIFIED"
+      }
     }
   ],
   "port": [
@@ -72,14 +75,14 @@
   ],
   "compatibility": [
     {
-      "name": "TTS",
+      "name": "Text to Speech",
       "action": [
         {
-          "name": "text to sound file",
+          "name": "Convert to sound file",
           "parameter": [
             {
               "name": "text",
-              "value": "Hello world",
+              "value": "Maker playground",
               "constraint": []
             },
             {
@@ -90,12 +93,12 @@
           ]
         },
         {
-          "name": "play sound",
+          "name": "Convert and play sound",
           "funcname": "speak",
           "parameter": [
             {
               "name": "text",
-              "value": "Hello world",
+              "value": "Maker playground",
               "constraint": []
             }
           ]

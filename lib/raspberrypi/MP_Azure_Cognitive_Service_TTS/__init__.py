@@ -32,7 +32,7 @@ class MP_Azure_Cognitive_Service_TTS(MP_Device):
         except requests.Timeout:
             pass
 
-    def toSoundFile(self, text, save_file_name):
+    def convertToSoundFile(self, text, save_file_name):
         currentTime = time.time()
         if currentTime - self.last_translation_time < self.min_seconds_wait_per_translation:
             return
@@ -41,6 +41,11 @@ class MP_Azure_Cognitive_Service_TTS(MP_Device):
             self.last_token_time = currentTime
             self._get_token()
 
+        print("text = ", text)
+
+        if text == "":
+            return
+            
         headers = {
             'Authorization': 'Bearer ' + self.access_token,
             'Content-Type': 'application/ssml+xml',
@@ -64,12 +69,12 @@ class MP_Azure_Cognitive_Service_TTS(MP_Device):
         except requests.Timeout:
             pass
 
-    def speak(self, text):
+    def convertAndPlaySound(self, text):
         if time.time() - self.last_translation_time < self.min_seconds_wait_per_translation:
             return
 
         dummy_sound_file = "__.wav"
-        self.toSoundFile(text, dummy_sound_file)
+        self.convertToSoundFile(text, dummy_sound_file)
         if os.path.exists(dummy_sound_file):
             pygame.mixer.init()
             pygame.mixer.music.load(dummy_sound_file)

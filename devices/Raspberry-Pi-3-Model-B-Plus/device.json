@@ -743,6 +743,21 @@
       "v_max": 3.3,
       "x": 320,
       "y": 13
+    },
+    {
+      "name": "Camera",
+      "alias": [],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "RPI_CAMERA",
+          "pintype": "RPI_CAMERA"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 3.3,
+      "x": 255,
+      "y": 248
     }
   ],
   "connectivity": [

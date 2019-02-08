@@ -1,0 +1,120 @@
+{
+  "id": "Azure-CognitiveService-OCR-for-RPI",
+  "brand": "Azure",
+  "model": "Cognitive Service - Computer Vision OCR (Rest API)",
+  "url": "https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [
+    {
+      "name": "Region",
+      "datatype": "ENUM",
+      "controltype": "DROPDOWN",
+      "constraint": [
+        "westus2",
+        "eastus",
+        "eastus2",
+        "southcentralus",
+        "nouthcentralus",
+        "westeurope",
+        "northeurope",
+        "southeastasia",
+        "australiaeast",
+        "centralindia",
+        "uksouth",
+        "japaneast"
+      ],
+      "value": "southeastasia"
+    },
+    {
+      "name": "Subscription key",
+      "value": "",
+      "datatype": "STRING",
+      "controltype": "TEXTBOX",
+      "constraint": []
+    },
+    {
+      "name": "Max Translations / Minute",
+      "value": "10",
+      "datatype": "DOUBLE",
+      "controltype": "SPINBOX",
+      "constraint": {
+        "min": 1,
+        "max": 30,
+        "unit": "NOT_SPECIFIED"
+      }
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Image to Text",
+      "action": [
+        {
+          "name": "Convert to Text",
+          "parameter": [
+            {
+              "name": "Image",
+              "constraint": []
+            }
+          ]
+        },
+        {
+          "name": "Convert to Text File",
+          "parameter": [
+            {
+              "name": "Image",
+              "constraint": []
+            },
+            {
+              "name": "File name",
+              "constraint": []
+            }
+          ]
+        },
+        {
+          "name": "Has Text",
+          "parameter": []
+        },
+        {
+          "name": "Has No Text",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Text",
+          "dataType": "STRING",
+          "constraint": []
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "RASPBERRYPI",
+      "classname": "MP_Azure_Cognitive_Service_OCR",
+      "library_dependency": []
+    }
+  ]
+}
