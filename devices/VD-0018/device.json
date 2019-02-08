@@ -59,6 +59,11 @@
   ],
   "platforms": [
     {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_NETPIE_VIRTUAL_SLIDER",
+      "library_dependency": []
+    },
+    {
       "platform": "ARDUINO_ESP8266",
       "classname": "MP_NETPIE_VIRTUAL_SLIDER",
       "library_dependency": []

@@ -13,7 +13,7 @@ MP_NETPIE_VIRTUAL_BUTTON::MP_NETPIE_VIRTUAL_BUTTON(char* topic, MP_NETPIE* netpi
 
 int MP_NETPIE_VIRTUAL_BUTTON::init()
 {
-    (netpie->getMicrogear()).subscribe(topic);
+    netpie->subscribe(topic);
     return 0;
 }
     
@@ -38,11 +38,7 @@ bool MP_NETPIE_VIRTUAL_BUTTON::isPressAndRelease()
     {
         while (bPress)
         {
-            if ((netpie->getMicrogear()).connected())
-            {
-                // this method need to be called regularly to avoid connection lost
-                (netpie->getMicrogear()).loop();
-            }
+            netpie->update(millis());
             update(millis());
         }
         return true;

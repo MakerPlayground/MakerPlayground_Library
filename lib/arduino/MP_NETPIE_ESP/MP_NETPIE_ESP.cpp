@@ -119,7 +119,3 @@ double MP_NETPIE_ESP::getValue(char* topic)
 {
     return value[String(topic)];
 }
-
-MicroGear& MP_NETPIE_ESP::getMicrogear() {
-    return microgear;
-}
