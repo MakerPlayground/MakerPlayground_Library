@@ -20,6 +20,18 @@
         "max": 60,
         "unit": "NOT_SPECIFIED"
       }
+    },
+    {
+      "name": "Rotation",
+      "value": 0,
+      "datatype": "INTEGER_ENUM",
+      "controltype": "DROPDOWN",
+      "constraint": [
+        0,
+        90,
+        180,
+        270
+      ]
     }
   ],
   "dependency": "",

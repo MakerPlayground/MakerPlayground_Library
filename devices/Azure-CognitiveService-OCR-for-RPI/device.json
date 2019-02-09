@@ -9,30 +9,10 @@
   "height": 0.0,
   "property": [
     {
-      "name": "Region",
-      "datatype": "ENUM",
-      "controltype": "DROPDOWN",
-      "constraint": [
-        "westus2",
-        "eastus",
-        "eastus2",
-        "southcentralus",
-        "nouthcentralus",
-        "westeurope",
-        "northeurope",
-        "southeastasia",
-        "australiaeast",
-        "centralindia",
-        "uksouth",
-        "japaneast"
-      ],
-      "value": "southeastasia"
-    },
-    {
-      "name": "Subscription key",
+      "name": "Key",
+      "datatype": "AZURE_COGNITIVE_KEY",
+      "controltype": "AZURE_WIZARD",
       "value": "",
-      "datatype": "STRING",
-      "controltype": "TEXTBOX",
       "constraint": []
     },
     {

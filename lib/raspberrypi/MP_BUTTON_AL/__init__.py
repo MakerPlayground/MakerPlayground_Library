@@ -26,9 +26,9 @@ class MP_BUTTON_AL(MP_Device):
         
         if self.state == State.PRESSED and self.isNotPress():
             self.state = State.JUST_RELEASE
-            checkpoint = currentTime
+            self.checkpoint = currentTime
         
-        if self.state == State.JUST_RELEASE and currentTime - checkpoint >= 0.150:
+        if self.state == State.JUST_RELEASE and currentTime - self.checkpoint >= 0.150:
             self.state = State.NOTHING
 
     def getStatus(self):

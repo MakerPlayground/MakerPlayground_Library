@@ -79,6 +79,11 @@
       "platform": "ARDUINO_AVR8",
       "classname": "MP_BUZZER",
       "library_dependency": []
+    },
+    {
+      "platform": "RASPBERRYPI",
+      "classname": "MP_BUZZER",
+      "library_dependency": []
     }
   ]
 }

@@ -6,7 +6,8 @@ from xml.etree import ElementTree
 
 class MP_Azure_Cognitive_Service_OCR(MP_Device):
     # properties: region, service_subscription_key, word_per_minute
-    def __init__(self, region, service_subscription_key, max_translations_per_minute):
+    def __init__(self, region, speech_service_name, service_subscription_key, max_translations_per_minute):
+        region = region.lower()
         self.min_seconds_wait_per_translation = 60.0 / max_translations_per_minute
         self.ocrUrl = "https://{0}.api.cognitive.microsoft.com/vision/v2.0/ocr".format(region)
         self.subscription_key = service_subscription_key

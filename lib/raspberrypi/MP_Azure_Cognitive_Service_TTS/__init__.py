@@ -15,22 +15,24 @@ class MP_Azure_Cognitive_Service_TTS(MP_Device):
 
         self.last_token_time = 0
         self.last_translation_time = 0
+        self.text = ""
 
     def update(self, currentTime):
         pass
 
     def getStatus(self):
-        return "Device is working..."
+        return "lastest text: {0}".format(self.text)
 
     def _get_token(self):
         try:
-            headers = {
-                'Ocp-Apim-Subscription-Key': self.subscription_key
-            }
+            headers = { 'Ocp-Apim-Subscription-Key': self.subscription_key }
             response = requests.post(self.issueTokenUrl, headers=headers, timeout=0.25)
-            self.access_token = str(response.text)
+            if response.text is not None:
+                self.access_token = str(response.text)
+                return True
         except requests.Timeout:
             pass
+        return False
 
     def convertToSoundFile(self, text, save_file_name):
         currentTime = time.time()
@@ -38,11 +40,13 @@ class MP_Azure_Cognitive_Service_TTS(MP_Device):
             return
 
         if currentTime - self.last_token_time >= 9.0:
-            self.last_token_time = currentTime
-            self._get_token()
+            if self._get_token():
+                self.last_token_time = currentTime
+            else:
+                return
 
-        print("text = ", text)
-
+        self.text = text
+        
         if text == "":
             return
             
