@@ -23,7 +23,8 @@ class MP_BUZZER(MP_Device):
         self.text_status = "Last action: beep"
         self.pi.set_PWM_frequency(self.pin, 5000)
         self.pi.set_PWM_dutycycle(self.pin, 80)
-        self.stop_time = time.time() + 0.05
+        time.sleep(0.050)
+        self.pi.set_PWM_dutycycle(self.pin, 0)
 
     def play(self, frequency, duration):
         self.text_status = "Last action: play sound {0} Hz for {1} second".format(frequency, duration)
