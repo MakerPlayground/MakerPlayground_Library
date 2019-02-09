@@ -1,8 +1,6 @@
 #ifndef MP_NETPIE_H
 #define MP_NETPIE_H
 
-#include "MicroGear.h"
-
 class MP_NETPIE 
 {
 public:
@@ -15,8 +13,6 @@ public:
 	virtual void subscribe(char* topic);
 	virtual void unsubscribe(char* topic);
 	virtual double getValue(char* topic);
-
-	virtual MicroGear& getMicrogear();
 };
 
 #endif

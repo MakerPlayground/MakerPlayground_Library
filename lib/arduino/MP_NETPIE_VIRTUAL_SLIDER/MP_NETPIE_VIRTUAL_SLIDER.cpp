@@ -13,7 +13,7 @@ MP_NETPIE_VIRTUAL_SLIDER::MP_NETPIE_VIRTUAL_SLIDER(char* topic, MP_NETPIE* netpi
 
 int MP_NETPIE_VIRTUAL_SLIDER::init()
 {
-    (netpie->getMicrogear()).subscribe(topic);
+    netpie->subscribe(topic);
     return 0;
 }
     
