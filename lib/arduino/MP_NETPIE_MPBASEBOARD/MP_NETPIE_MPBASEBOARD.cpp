@@ -125,3 +125,8 @@ double MP_NETPIE_MPBASEBOARD::getValue(char* topic)
     }
     return 0;
 }
+
+void MP_NETPIE_MPBASEBOARD::writeFeed(char* feedId, String data, char* apiKey)
+{
+    // TODO: implement write feed for MP
+}

@@ -28,6 +28,7 @@ public:
     void unsubscribe(char* topic);
 
     double getValue(char* topic);
+    void writeFeed(char* feedId, String data, char* apiKey);
 
 private:
     bool checkResponse();
