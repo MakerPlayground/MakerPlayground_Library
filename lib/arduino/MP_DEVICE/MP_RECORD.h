@@ -13,7 +13,7 @@ public:
         mymap.insert(entry);
     }
 
-    String asJson() {
+    String asJson() const {
         String str = "{";
         for (auto it=mymap.begin(); it!=mymap.end(); ++it) {
             str += "\"";
@@ -28,7 +28,7 @@ public:
         return str;
     }
 
-    String asNetpieStr() {
+    String asNetpieStr() const {
         String str = "{";
         for (auto it=mymap.begin(); it!=mymap.end(); ++it) {
             str += it->first;

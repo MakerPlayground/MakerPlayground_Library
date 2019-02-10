@@ -9,6 +9,11 @@
   "wiring_method": "INEX",
   "support_cloudplatform": [
     {
+      "cloud_platform": "AZURE",
+      "classname": "MP_AZURE_ESP",
+      "library_dependency": []
+    },
+    {
       "cloud_platform": "NETPIE",
       "classname": "MP_NETPIE_ESP",
       "library_dependency": [

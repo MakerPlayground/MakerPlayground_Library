@@ -1,0 +1,68 @@
+{
+  "id": "Azure-IotHub",
+  "brand": "Azure",
+  "model": "IotHub",
+  "url": "",
+  "type": "VIRTUAL",
+  "formfactor": "NONE",
+  "cloud_platform": "AZURE",
+  "width": 0.0,
+  "height": 0.0,
+  "property": [
+    {
+      "name": "Key",
+      "datatype": "AZURE_IOTHUB_KEY",
+      "controltype": "AZURE_WIZARD",
+      "value": "",
+      "constraint": []
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "VIRTUAL",
+      "function": [
+        {
+          "type": "NOT_CONNECTED",
+          "pintype": "NOT_CONNECTED"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "NOT_CONNECTED"
+  ],
+  "compatibility": [
+    {
+      "name": "Telemetry",
+      "action": [
+        {
+          "name": "Send Telemetry",
+          "parameter": [
+            {
+              "name": "data",
+              "value": "",
+              "constraint": []
+            }
+          ]
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_Azure_IoTHub_ESP8266",
+      "library_dependency": [
+        "Azure/azure-iot-arduino-1.0.45",
+        "Azure/azure-iot-arduino-protocol-mqtt-1.0.45",
+        "Azure/azure-iot-arduino-utility-1.0.45"
+      ]
+    }
+  ]
+}
