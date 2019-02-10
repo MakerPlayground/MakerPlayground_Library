@@ -45,10 +45,10 @@
   ],
   "compatibility": [
     {
-      "name": "Database",
+      "name": "Telemetry",
       "action": [
         {
-          "name": "Insert Data",
+          "name": "Send Telemetry",
           "parameter": [
             {
               "name": "data",

@@ -14,7 +14,7 @@ public:
     void printStatus();
     static const char* const* ERRORS;
 
-    void insertData(Record record);
+    void sendTelemetry(Record record);
 
 private:
     char* feedId;

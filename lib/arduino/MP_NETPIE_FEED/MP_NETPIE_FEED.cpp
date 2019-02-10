@@ -33,7 +33,7 @@ void MP_NETPIE_FEED::update(unsigned long currentTime)
     }
 }
 
-void MP_NETPIE_FEED::insertData(Record record)
+void MP_NETPIE_FEED::sendTelemetry(Record record)
 {
     current_value = record.asNetpieStr();
 }
