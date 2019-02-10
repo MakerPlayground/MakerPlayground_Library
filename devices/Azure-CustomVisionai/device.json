@@ -81,7 +81,7 @@
       "action": [],
       "condition": [
         {
-          "name": "Classify Image",
+          "name": "Found",
           "parameter": [
             {
               "name": "Image",
@@ -99,6 +99,27 @@
                 "unit": "PERCENT"
               }
             }
+          ]
+        },
+            {
+              "name": "Not Found",
+              "parameter": [
+                {
+                  "name": "Image",
+                  "constraint": []
+                },
+                {
+                  "name": "Class",
+                  "constraint": []
+                },
+                {
+                  "name": "Minimum Probability",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 100.0,
+                    "unit": "PERCENT"
+                  }
+                }
           ]
         }
       ],

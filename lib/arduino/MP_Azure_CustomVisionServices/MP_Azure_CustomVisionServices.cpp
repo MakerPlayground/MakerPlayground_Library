@@ -11,7 +11,7 @@ const char* const* MP_Azure_CustomVisionServices::ERRORS = errors_p;
 
 using namespace ArduinoJson;
 
-MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, double requestInterval, MP_REST* rest)
+MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, double requestInterval, MP_AZURE* rest)
     : requestEndPoint(azureRegion + CUSTOMVISION_SERVICE_ENDPOINT)
     , predictionKey(predictionKey)
     , projectId(projectId)
@@ -81,8 +81,65 @@ bool MP_Azure_CustomVisionServices::classifiedImage(MP_IMAGE image, String tag, 
         latestProcessTime = millis();
     }
 
-    std::map<String, double>::iterator it = resultTag.find(tag);
-    return (it != resultTag.end()) && (it->second >= minProbability);
+    if (tag.indexOf(',') == -1)
+    {
+        std::map<String, double>::iterator it = resultTag.find(tag);
+        return (it != resultTag.end()) && (it->second >= minProbability);
+    }
+    else
+    {
+        char* tmp = strdup(tag.c_str());
+        tmp = strtok(tmp, ",");
+        while (tmp != NULL)
+        {
+            std::map<String, double>::iterator it = resultTag.find(String(tmp));
+            if ((it == resultTag.end()) || (it->second < minProbability))
+            {
+                return false;
+            }
+            tmp = strtok(NULL, ",");
+        }
+        return true;
+    }
+}
+
+bool MP_Azure_CustomVisionServices::noDetectedImage(MP_IMAGE image, String tag, double minProbability)
+{
+    // process the image iff this function is called for the first time or the image is newer
+    unsigned long timeElapsed = millis() - latestProcessTime;
+    if ((this->image.data == NULL || this->image.id != image.id)
+        && timeElapsed >= CUSTOMVISION_REQUEST_INTERVAL
+        && timeElapsed >= requestInterval)
+    {
+        analyzeImage(image);
+        if (error != Error::OK)
+        {
+            return false;
+        }
+        this->image = image;
+        latestProcessTime = millis();
+    }
+
+    if (tag.indexOf(',') == -1)
+    {
+        std::map<String, double>::iterator it = resultTag.find(tag);
+        return (it == resultTag.end()) && (it->second >= minProbability);
+    }
+    else
+    {
+        char* tmp = strdup(tag.c_str());
+        tmp = strtok(tmp, ",");
+        while (tmp != NULL)
+        {
+            std::map<String, double>::iterator it = resultTag.find(String(tmp));
+            if ((it != resultTag.end()) && (it->second >= minProbability))
+            {
+                return false;
+            }
+            tmp = strtok(NULL, ",");
+        }
+        return true;
+    }
 }
 
 void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
@@ -97,7 +154,7 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
     }
 
     String header;
-    header = "POST /customvision/v2.0/Prediction/" + projectId + "/image\r\n";
+    header = "POST /customvision/v2.0/Prediction/" + projectId + "/image HTTP/1.1\r\n";
     header += "Host: ";
     header += requestEndPoint;
     header += "\r\n";
@@ -105,10 +162,11 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
     header += "Content-Length: ";
     header += image.size;
     header += "\r\n";
-    header += "Prediction-Key: ";
+    header += "Prediction-key: ";
     header += predictionKey;
     header += "\r\n";
     header += "\r\n";
+
 
     WiFiClientSecure client;
     if (!client.connect(requestEndPoint.c_str(), CUSTOMVISION_SERVICE_PORT))
@@ -121,8 +179,11 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
     client.write(image.data, image.size);
     client.print("\r\n");
 
+   
+
     // check http status
     String status = client.readStringUntil('\r');
+    Serial.println(status);
     if (!status.equals("HTTP/1.1 200 OK"))
     {
         error = Error::SERVER_ERROR;
@@ -143,10 +204,10 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
         error = Error::CANT_PARSE_JSON;
         return;
     }
-    JsonArray& tags = root["Predictions"];
+    JsonArray& tags = root["predictions"];
     for (auto& node : tags)
     {
-        resultTag[String(node["TagName"].as<const char*>())] = node["Probability"];
+        resultTag[String(node["tagName"].as<const char*>())] = node["probability"];
     }
 
     error = Error::OK;

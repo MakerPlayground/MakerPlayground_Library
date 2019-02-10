@@ -1,5 +1,5 @@
-#ifndef MP_REST_H
-#define MP_REST_H
+#ifndef MP_AZURE_H
+#define MP_AZURE_H
 
 class MP_AZURE
 {

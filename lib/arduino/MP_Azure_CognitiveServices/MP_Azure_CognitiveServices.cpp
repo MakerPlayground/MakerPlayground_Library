@@ -11,7 +11,7 @@ const char* const* MP_Azure_CognitiveServices::ERRORS = errors_p;
 
 using namespace ArduinoJson;
 
-MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, double requestInterval, MP_REST* rest)
+MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, double requestInterval, MP_AZURE* rest)
     : requestEndPoint(azureRegion + COGNITIVE_SERVICE_ENDPOINT)
     , key(key)
     , requestInterval(requestInterval * 1000)   // convert from sec to ms
@@ -80,9 +80,67 @@ bool MP_Azure_CognitiveServices::classifiedImage(MP_IMAGE image, String tag, dou
         latestProcessTime = millis();
     }
 
-    std::map<String, double>::iterator it = resultTag.find(tag);
-    return (it != resultTag.end()) && (it->second >= minProbability);
+    if (tag.indexOf(',') == -1)
+    {
+        std::map<String, double>::iterator it = resultTag.find(tag);
+        return (it != resultTag.end()) && (it->second >= minProbability);
+    }
+    else
+    {
+        char* tmp = strdup(tag.c_str());
+        tmp = strtok(tmp, ",");
+        while (tmp != NULL)
+        {
+            std::map<String, double>::iterator it = resultTag.find(String(tmp));
+            if ((it == resultTag.end()) || (it->second < minProbability))
+            {
+                return false;
+            }
+            tmp = strtok(NULL, ",");
+        }
+        return true;
+    }
 }
+
+bool MP_Azure_CognitiveServices::noDetectedImage(MP_IMAGE image, String tag, double minProbability)
+{
+    // process the image iff this function is called for the first time or the image is newer
+    unsigned long timeElapsed = millis() - latestProcessTime;
+    if ((this->image.data == NULL || this->image.id != image.id)
+        && timeElapsed >= COGNITIVE_REQUEST_INTERVAL
+        && timeElapsed >= requestInterval)
+    {
+        analyzeImage(image);
+        if (error != Error::OK)
+        {
+            return false;
+        }
+        this->image = image;
+        latestProcessTime = millis();
+    }
+
+    if (tag.indexOf(',') == -1)
+        {
+            std::map<String, double>::iterator it = resultTag.find(tag);
+            return (it == resultTag.end()) && (it->second >= minProbability);
+        }
+        else
+        {
+            char* tmp = strdup(tag.c_str());
+            tmp = strtok(tmp, ",");
+            while (tmp != NULL)
+            {
+                std::map<String, double>::iterator it = resultTag.find(String(tmp));
+                if ((it != resultTag.end()) && (it->second >= minProbability))
+                {
+                    return false;
+                }
+                tmp = strtok(NULL, ",");
+            }
+            return true;
+        }
+}
+
 
 void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
 {
