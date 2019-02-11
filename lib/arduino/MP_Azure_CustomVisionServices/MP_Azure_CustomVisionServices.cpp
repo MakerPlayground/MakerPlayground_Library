@@ -207,7 +207,7 @@ void MP_Azure_CustomVisionServices::analyzeImage(MP_IMAGE image)
     JsonArray& tags = root["predictions"];
     for (auto& node : tags)
     {
-        resultTag[String(node["tagName"].as<const char*>())] = node["probability"];
+        resultTag[String(node["tagName"].as<const char*>())] = (node["probability"].as<double>() * 100.0);
     }
 
     error = Error::OK;

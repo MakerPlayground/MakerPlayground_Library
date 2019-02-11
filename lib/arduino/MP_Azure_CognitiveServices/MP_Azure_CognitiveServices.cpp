@@ -203,7 +203,7 @@ void MP_Azure_CognitiveServices::analyzeImage(MP_IMAGE image)
     JsonArray& tags = root["tags"];
     for (auto& node : tags)
     {
-        resultTag[String(node["name"].as<const char*>())] = node["confidence"];
+        resultTag[String(node["name"].as<const char*>())] = (node["probability"].as<double>() * 100.0);
     }
 
     error = Error::OK;
