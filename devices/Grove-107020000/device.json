@@ -20,8 +20,8 @@
       ],
       "v_min": 3.3,
       "v_max": 5.0,
-      "x": 0.0,
-      "y": 0.0
+      "x": 64,
+      "y": 96
     }
   ],
   "connectivity": [
@@ -42,6 +42,11 @@
   "platforms": [
     {
       "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUZZER",
+      "library_dependency": []
+    },
+    {
+      "platform": "RASPBERRYPI",
       "classname": "MP_BUZZER",
       "library_dependency": []
     }

@@ -747,7 +747,8 @@
     {
       "name": "Camera",
       "alias": [],
-      "type": "WIRE",
+      "type": "RPI_CAMERA",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "RPI_CAMERA",
@@ -756,8 +757,8 @@
       ],
       "v_min": 0.0,
       "v_max": 3.3,
-      "x": 255,
-      "y": 248
+      "x": 250,
+      "y": 263
     }
   ],
   "connectivity": [

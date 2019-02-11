@@ -7,8 +7,8 @@
   "formfactor": "STANDALONE",
   "wiring_method": "WIRE_AND_BREADBOARD",
   "support_cloudplatform": [],
-  "width": 114.0,
-  "height": 116.0,
+  "width": 116.0,
+  "height": 114.0,
   "property": [
     {
       "name": "Max FPS",
@@ -39,7 +39,7 @@
   "port": [
     {
       "name": "RPI Camera Port",
-      "type": "WIRE",
+      "type": "RPI_CAMERA",
       "function": [
         {
           "type": "RPI_CAMERA",
@@ -48,8 +48,8 @@
       ],
       "v_min": 0.0,
       "v_max": 3.3,
-      "x": 112.0,
-      "y": 58
+      "x": 55,
+      "y": 110.0
     }
   ],
   "connectivity": [

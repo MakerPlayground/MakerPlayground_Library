@@ -6,7 +6,7 @@
   "type": "CONTROLLER",
   "pio_boardid": "",
   "formfactor": "STANDALONE",
-  "wiring_method": "WIRE_AND_BREADBOARD",
+  "wiring_method": "MP",
   "support_cloudplatform": [],
   "width": 500.0,
   "height": 334.0,
@@ -298,7 +298,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_3",
-            "GROVE_GPIO_DUAL_3"
+            "GROVE_GPIO_DUAL_3",
+            "GROVE_PWM_SINGLE_4",
+            "GROVE_PWM_DUAL_4"
           ]
         },
         {
@@ -306,7 +308,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_3",
-            "GROVE_GPIO_DUAL_3"
+            "GROVE_GPIO_DUAL_3",
+            "GROVE_PWM_SINGLE_4",
+            "GROVE_PWM_DUAL_4"
           ]
         }
       ],
@@ -364,7 +368,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_4",
-            "GROVE_GPIO_DUAL_4"
+            "GROVE_GPIO_DUAL_4",
+            "GROVE_PWM_SINGLE_5",
+            "GROVE_PWM_DUAL_5"
           ]
         },
         {
@@ -372,7 +378,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_4",
-            "GROVE_GPIO_DUAL_4"
+            "GROVE_GPIO_DUAL_4",
+            "GROVE_PWM_SINGLE_5",
+            "GROVE_PWM_DUAL_5"
           ]
         }
       ],
@@ -430,7 +438,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_5",
-            "GROVE_GPIO_DUAL_5"
+            "GROVE_GPIO_DUAL_5",
+            "GROVE_PWM_SINGLE_6",
+            "GROVE_PWM_DUAL_6"
           ]
         },
         {
@@ -438,7 +448,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_5",
-            "GROVE_GPIO_DUAL_5"
+            "GROVE_GPIO_DUAL_5",
+            "GROVE_PWM_SINGLE_6",
+            "GROVE_PWM_DUAL_6"
           ]
         }
       ],
@@ -643,7 +655,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_1",
-            "GROVE_GPIO_DUAL_1"
+            "GROVE_GPIO_DUAL_1",
+            "GROVE_PWM_SINGLE_2",
+            "GROVE_PWM_DUAL_2"
           ]
         },
         {
@@ -651,7 +665,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_1",
-            "GROVE_GPIO_DUAL_1"
+            "GROVE_GPIO_DUAL_1",
+            "GROVE_PWM_SINGLE_2",
+            "GROVE_PWM_DUAL_2"
           ]
         }
       ],
@@ -807,7 +823,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_2",
-            "GROVE_GPIO_DUAL_2"
+            "GROVE_GPIO_DUAL_2",
+            "GROVE_PWM_SINGLE_3",
+            "GROVE_PWM_DUAL_3"
           ]
         },
         {
@@ -815,7 +833,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_2",
-            "GROVE_GPIO_DUAL_2"
+            "GROVE_GPIO_DUAL_2",
+            "GROVE_PWM_SINGLE_3",
+            "GROVE_PWM_DUAL_3"
           ]
         },
         {
@@ -823,7 +843,9 @@
           "pintype": "SPI_SS",
           "conflict": [
             "GROVE_GPIO_SINGLE_2",
-            "GROVE_GPIO_DUAL_2"
+            "GROVE_GPIO_DUAL_2",
+            "GROVE_PWM_SINGLE_3",
+            "GROVE_PWM_DUAL_3"
           ]
         }
       ],
@@ -842,7 +864,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_6",
-            "GROVE_GPIO_DUAL_6"
+            "GROVE_GPIO_DUAL_6",
+            "GROVE_PWM_SINGLE_7",
+            "GROVE_PWM_DUAL_7"
           ]
         },
         {
@@ -850,7 +874,9 @@
           "pintype": "INOUT",
           "conflict": [
             "GROVE_GPIO_SINGLE_6",
-            "GROVE_GPIO_DUAL_6"
+            "GROVE_GPIO_DUAL_6",
+            "GROVE_PWM_SINGLE_7",
+            "GROVE_PWM_DUAL_7"
           ]
         }
       ],
@@ -922,7 +948,8 @@
     {
       "name": "Camera",
       "alias": [],
-      "type": "WIRE",
+      "type": "RPI_CAMERA",
+      "sub_type": "STRAIGHT_TOP",
       "function": [
         {
           "type": "RPI_CAMERA",
@@ -931,8 +958,8 @@
       ],
       "v_min": 0.0,
       "v_max": 3.3,
-      "x": 255,
-      "y": 248
+      "x": 250,
+      "y": 263
     },
     {
       "name": "PWM",
@@ -960,8 +987,8 @@
           ]
         }
       ],
-      "x": 46,
-      "y": 70,
+      "x": 55,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -989,10 +1016,28 @@
             "PWM_5",
             "PWM_6"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_2",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_5",
+            "PWM_5"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_2",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_5",
+            "GPIO_6",
+            "PWM_5",
+            "PWM_6"
+          ]
         }
       ],
-      "x": 94,
-      "y": 70,
+      "x": 113,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1022,10 +1067,30 @@
             "PWM_17",
             "SPI_1"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_3",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_16",
+            "PWM_16",
+            "SPI_1"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_3",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_16",
+            "GPIO_17",
+            "PWM_16",
+            "PWM_17",
+            "SPI_1"
+          ]
         }
       ],
-      "x": 141,
-      "y": 70,
+      "x": 168,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1054,10 +1119,29 @@
             "PWM_19",
             "SPI_1"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_4",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_18",
+            "PWM_18"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_4",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_18",
+            "GPIO_19",
+            "PWM_18",
+            "PWM_19",
+            "SPI_1"
+          ]
         }
       ],
-      "x": 141,
-      "y": 70,
+      "x": 230,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1085,10 +1169,28 @@
             "PWM_22",
             "PWM_23"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_5",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_22",
+            "PWM_22"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_5",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_22",
+            "GPIO_23",
+            "PWM_22",
+            "PWM_23"
+          ]
         }
       ],
-      "x": 98,
-      "y": 152,
+      "x": 117,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1116,10 +1218,28 @@
             "PWM_24",
             "PWM_25"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_6",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_24",
+            "PWM_24"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_6",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_24",
+            "GPIO_25",
+            "PWM_24",
+            "PWM_25"
+          ]
         }
       ],
-      "x": 148,
-      "y": 152,
+      "x": 176,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1147,10 +1267,28 @@
             "PWM_26",
             "PWM_27"
           ]
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_7",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_26",
+            "PWM_26"
+          ]
+        },
+        {
+          "type": "GROVE_PWM_DUAL_7",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_26",
+            "GPIO_27",
+            "PWM_26",
+            "PWM_27"
+          ]
         }
       ],
-      "x": 195,
-      "y": 152,
+      "x": 234,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1173,8 +1311,8 @@
           ]
         }
       ],
-      "x": 56,
-      "y": 152,
+      "x": 67,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1196,8 +1334,8 @@
           ]
         }
       ],
-      "x": 85,
-      "y": 228,
+      "x": 103,
+      "y": 272,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1217,8 +1355,8 @@
           ]
         }
       ],
-      "x": 133,
-      "y": 228,
+      "x": 159,
+      "y": 272,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1238,8 +1376,8 @@
           ]
         }
       ],
-      "x": 179,
-      "y": 228,
+      "x": 213,
+      "y": 272,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1271,8 +1409,8 @@
           ]
         }
       ],
-      "x": 245,
-      "y": 70,
+      "x": 292,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1304,8 +1442,8 @@
           ]
         }
       ],
-      "x": 294,
-      "y": 70,
+      "x": 351,
+      "y": 83,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1337,8 +1475,8 @@
           ]
         }
       ],
-      "x": 245,
-      "y": 152,
+      "x": 292,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     },
@@ -1370,8 +1508,8 @@
           ]
         }
       ],
-      "x": 294,
-      "y": 152,
+      "x": 351,
+      "y": 180,
       "v_min": 0.0,
       "v_max": 3.3
     }
@@ -1434,7 +1572,19 @@
     "PWM_26",
     "PWM_27",
     "GROVE_PWM_SINGLE_1",
+    "GROVE_PWM_SINGLE_2",
+    "GROVE_PWM_SINGLE_3",
+    "GROVE_PWM_SINGLE_4",
+    "GROVE_PWM_SINGLE_5",
+    "GROVE_PWM_SINGLE_6",
+    "GROVE_PWM_SINGLE_7",
     "GROVE_PWM_DUAL_1",
+    "GROVE_PWM_DUAL_2",
+    "GROVE_PWM_DUAL_3",
+    "GROVE_PWM_DUAL_4",
+    "GROVE_PWM_DUAL_5",
+    "GROVE_PWM_DUAL_6",
+    "GROVE_PWM_DUAL_7",
     "GROVE_GPIO_SINGLE_1",
     "GROVE_GPIO_SINGLE_2",
     "GROVE_GPIO_SINGLE_3",
