@@ -89,13 +89,6 @@ void MP_NETPIE_ESP::update(unsigned long time)
     {
         microgear.connect(appId);
     }
-
-#ifdef ESP8266
-    // Since ESP8266 has only 1 processor core, we need to delay for a few ms to allow the network tasks to run.
-    // It may be better to use client.flush() but this function is not working in the current version (v2.4.2)
-    // of the Arduino core for the ESP8266.
-    delay(5);
-#endif
 }
 
 void MP_NETPIE_ESP::publish(char* topic, double v)
