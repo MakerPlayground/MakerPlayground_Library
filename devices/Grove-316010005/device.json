@@ -52,7 +52,9 @@
     {
       "platform": "ARDUINO_AVR8",
       "classname": "MP_SERVO",
-      "library_dependency": []
+      "library_dependency": [
+        "arduino-libraries/Servo-1.1.3"
+      ]
     }
   ]
 }
