@@ -2,7 +2,7 @@
 #define MP_DHT11_H
 
 #include "MP_DEVICE.h"
-#include "DHT.h"
+#include "DHT_U.h"
 
 class MP_DHT11
 {

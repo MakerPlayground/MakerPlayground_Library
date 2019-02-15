@@ -14,7 +14,7 @@ MP_DHT11::MP_DHT11(int pin)
 int MP_DHT11::init()
 {
 	this->humidity = 0;
-	this->temperature = 25;
+	this->celcius = 0;
 	sensor.begin();
 	return 0;
 }

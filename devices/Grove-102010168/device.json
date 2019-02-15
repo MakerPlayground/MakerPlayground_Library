@@ -13,6 +13,7 @@
   "port": [
     {
       "name": "D2",
+      "alias": ["2", "3"],
       "type": "GROVE",
       "function": [
         {
@@ -36,6 +37,7 @@
     },
     {
       "name": "D3",
+      "alias": ["3", "4"],
       "type": "GROVE",
       "function": [
         {
@@ -62,6 +64,7 @@
     },
     {
       "name": "D4",
+      "alias": ["4", "5"],
       "type": "GROVE",
       "function": [
         {
@@ -86,6 +89,7 @@
     },
     {
       "name": "D5",
+      "alias": ["5", "6"],
       "type": "GROVE",
       "function": [
         {
@@ -117,6 +121,7 @@
     },
     {
       "name": "D6",
+      "alias": ["6", "7"],
       "type": "GROVE",
       "function": [
         {
@@ -143,6 +148,7 @@
     },
     {
       "name": "D7",
+      "alias": ["7", "8"],
       "type": "GROVE",
       "function": [
         {
@@ -161,6 +167,7 @@
     },
     {
       "name": "A6",
+      "alias": ["A6", "A7"],
       "type": "GROVE",
       "function": [
         {
@@ -179,6 +186,7 @@
     },
     {
       "name": "I2C..",
+      "alias": [],
       "type": "GROVE",
       "function": [
         {
@@ -193,6 +201,7 @@
     },
     {
       "name": "I2C.",
+      "alias": [],
       "type": "GROVE",
       "function": [
         {
@@ -207,6 +216,7 @@
     },
     {
       "name": "A0",
+      "alias": ["A0", "A1"],
       "type": "GROVE",
       "function": [
         {
@@ -225,6 +235,7 @@
     },
     {
       "name": "A2",
+      "alias": ["A2", "A3"],
       "type": "GROVE",
       "function": [
         {
