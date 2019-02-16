@@ -120,14 +120,16 @@
         {
           "type": "INEX_GPIO_2",
           "conflict": [
-            "GPIO_2"
+            "GPIO_3",
+            "PWM_3"
           ],
           "pintype": "INOUT"
         },
         {
           "type": "INEX_PWM_2",
           "conflict": [
-            "INEX_PWM_2"
+            "GPIO_3",
+            "PWM_3"
           ],
           "pintype": "INOUT"
         }
@@ -149,16 +151,16 @@
         {
           "type": "INEX_GPIO_3",
           "conflict": [
-            "GPIO_3",
-            "PWM_3"
+            "GPIO_4",
+            "PWM_4"
           ],
           "pintype": "INOUT"
         },
         {
           "type": "INEX_PWM_3",
           "conflict": [
-            "GPIO_3",
-            "PWM_3"
+            "GPIO_4",
+            "PWM_4"
           ],
           "pintype": "INOUT"
         }
@@ -180,16 +182,16 @@
         {
           "type": "INEX_GPIO_4",
           "conflict": [
-            "GPIO_4",
-            "PWM_4"
+            "GPIO_5",
+            "PWM_5"
           ],
           "pintype": "INOUT"
         },
         {
           "type": "INEX_PWM_4",
           "conflict": [
-            "GPIO_4",
-            "PWM_4"
+            "GPIO_5",
+            "PWM_5"
           ],
           "pintype": "INOUT"
         }
@@ -211,16 +213,16 @@
         {
           "type": "INEX_GPIO_5",
           "conflict": [
-            "GPIO_5",
-            "PWM_5"
+            "GPIO_6",
+            "PWM_6"
           ],
           "pintype": "INOUT"
         },
         {
           "type": "INEX_PWM_5",
           "conflict": [
-            "GPIO_5",
-            "PWM_5"
+            "GPIO_6",
+            "PWM_6"
           ],
           "pintype": "INOUT"
         }
@@ -240,9 +242,18 @@
       "sub_type": "STRAIGHT_TOP",
       "function": [
         {
+          "type": "INEX_GPIO_6",
+          "conflict": [
+            "GPIO_7",
+            "PWM_7"
+          ],
+          "pintype": "INOUT"
+        },
+        {
           "type": "INEX_PWM_6",
           "conflict": [
-            "PWM_6"
+            "GPIO_7",
+            "PWM_7"
           ],
           "pintype": "INOUT"
         }
@@ -251,50 +262,6 @@
       "v_max": 3.3,
       "x": 0,
       "y": 0
-    },
-    {
-      "name": "D9",
-      "alias": [
-        "3"
-      ],
-      "type": "INEX_JST3",
-      "sub_type": "STRAIGHT_TOP",
-      "function": [
-        {
-          "type": "INEX_UART_1",
-          "conflict": [
-            "UART_1"
-          ],
-          "pintype": "UART_RX"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 3.3,
-      "x": 20.66,
-      "y": 425.64,
-      "angle": 0.0
-    },
-    {
-      "name": "D10",
-      "alias": [
-        "1"
-      ],
-      "type": "INEX_JST3",
-      "sub_type": "STRAIGHT_TOP",
-      "function": [
-        {
-          "type": "INEX_UART_1",
-          "conflict": [
-            "UART_1"
-          ],
-          "pintype": "UART_TX"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 3.3,
-      "x": 20.66,
-      "y": 482.28,
-      "angle": 0.0
     },
     {
       "name": "A0",
@@ -335,216 +302,6 @@
       "angle": 0.0
     },
     {
-      "name": "0",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_6",
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 363.0
-    },
-    {
-      "name": "1",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "UART_1",
-          "conflict": [
-            "INEX_UART_1"
-          ],
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 491.0
-    },
-    {
-      "name": "2",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_2",
-          "conflict": [
-            "INEX_GPIO_2",
-            "INEX_PWM_2"
-
-          ],
-          "pintype": "INOUT"
-        },
-        {
-          "type": "PWM_2",
-          "conflict": [
-            "INEX_GPIO_2",
-            "INEX_PWM_2"
-          ],
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 377.0
-    },
-    {
-      "name": "3",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "UART_1",
-          "conflict": [
-            "INEX_UART_1"
-          ],
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 477.0
-    },
-    {
-      "name": "4",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "I2C_1",
-          "conflict": [
-            "INEX_I2C_1"
-          ],
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 349.0
-    },
-    {
-      "name": "5",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "I2C_1",
-          "conflict": [
-            "INEX_I2C_1"
-          ],
-          "pintype": "INOUT"
-
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 335.0
-    },
-    {
-      "name": "12",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_4",
-          "conflict": [
-            "INEX_GPIO_4",
-            "INEX_PWM_4"
-          ],
-          "pintype": "INOUT"
-        },
-        {
-          "type": "PWM_4",
-          "conflict": [
-            "INEX_GPIO_4",
-            "INEX_PWM_4"
-          ],
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 435.0
-    },
-    {
-      "name": "13",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_5",
-          "conflict": [
-            "INEX_GPIO_5",
-            "INEX_PWM_5"
-          ],
-          "pintype": "INOUT"
-        },
-        {
-          "type": "PWM_5",
-          "conflict": [
-            "INEX_GPIO_5",
-            "INEX_PWM_5"
-          ],
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 449.0
-    },
-    {
-      "name": "14",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_3",
-          "conflict": [
-            "INEX_GPIO_3",
-            "INEX_PWM_3"
-          ],
-          "pintype": "INOUT"
-        },
-        {
-          "type": "PWM_3",
-          "conflict": [
-            "INEX_GPIO_3",
-            "INEX_PWM_3"
-          ],
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 420.0
-    },
-    {
-      "name": "15",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "PWM_6",
-          "conflict": [
-            "INEX_PWM_6"
-          ],
-          "pintype": "INOUT"
-        }
-      ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 464.0
-    },
-    {
       "name": "16",
       "type": "WIRE",
       "function": [
@@ -565,73 +322,91 @@
           "pintype": "INOUT"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 321.0
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 320
     },
     {
-      "name": "GND",
+      "name": "5",
       "type": "WIRE",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "GND"
+          "type": "I2C_1",
+          "conflict": [
+            "INEX_I2C_1"
+          ],
+          "pintype": "I2C_SCL"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 112.0,
-      "y": 463.0
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 334.4
     },
     {
-      "name": "GND",
+      "name": "4",
       "type": "WIRE",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "GND"
+          "type": "I2C_1",
+          "conflict": [
+            "INEX_I2C_1"
+          ],
+          "pintype": "I2C_SDA"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 314.0,
-      "y": 509.0
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 348.8
     },
     {
-      "name": "GND",
+      "name": "0",
       "type": "WIRE",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "GND"
+          "type": "GPIO_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_2",
+          "pintype": "INOUT"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 113.0,
-      "y": 504.0
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 363.2
     },
     {
-      "name": "3.3V",
+      "name": "2",
       "type": "WIRE",
-      "function": [],
-      "v_min": "",
-      "v_max": "",
-      "x": 314.0,
-      "y": 392.0
+      "function": [
+        {
+          "type": "GPIO_3",
+          "conflict": [
+            "INEX_GPIO_2",
+            "INEX_PWM_2"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_3",
+          "conflict": [
+            "INEX_GPIO_2",
+            "INEX_PWM_2"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 377.6
     },
     {
-      "name": "3.3V",
-      "type": "WIRE",
-      "function": [],
-      "v_min": "",
-      "v_max": "",
-      "x": 113.0,
-      "y": 476
-    },
-    {
-      "name": "5V",
+      "name": "3V3",
       "type": "WIRE",
       "function": [
         {
@@ -639,10 +414,170 @@
           "pintype": "VCC"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 113.0,
-      "y": 533.0
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 392
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 406.4
+    },
+    {
+      "name": "14",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_4",
+          "conflict": [
+            "INEX_GPIO_3",
+            "INEX_PWM_3"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_4",
+          "conflict": [
+            "INEX_GPIO_3",
+            "INEX_PWM_3"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 420.8
+    },
+    {
+      "name": "12",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_5",
+          "conflict": [
+            "INEX_GPIO_4",
+            "INEX_PWM_4"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_5",
+          "conflict": [
+            "INEX_GPIO_4",
+            "INEX_PWM_4"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 435.2
+    },
+    {
+      "name": "13",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_6",
+          "conflict": [
+            "INEX_GPIO_5",
+            "INEX_PWM_5"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_6",
+          "conflict": [
+            "INEX_GPIO_5",
+            "INEX_PWM_5"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 449.6
+    },
+    {
+      "name": "15",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_7",
+          "conflict": [
+            "INEX_GPIO_6",
+            "INEX_PWM_6"
+          ],
+          "pintype": "INOUT"
+        },
+        {
+          "type": "PWM_7",
+          "conflict": [
+            "INEX_GPIO_6",
+            "INEX_PWM_6"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 464
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 507.2
+    },
+    {
+      "name": "3V3",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 521.6
+    },
+    {
+      "name": "3V3",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 314.5,
+      "y": 536
     },
     {
       "name": "A0",
@@ -656,12 +591,53 @@
           "pintype": "INOUT"
         }
       ],
-      "v_min": 5.0,
-      "v_max": 5.0,
-      "x": 112.0,
-      "y": 321
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 113.0,
+      "y": 320.0
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 113.0,
+      "y": 464.0
+    },
+    {
+      "name": "3V3",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 113.0,
+      "y": 478.4
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 3.3,
+      "x": 113.0,
+      "y": 521.6
     }
-
   ],
   "connectivity": [
     "INEX_GPIO_1",
@@ -669,6 +645,7 @@
     "INEX_GPIO_3",
     "INEX_GPIO_4",
     "INEX_GPIO_5",
+    "INEX_GPIO_6",
     "INEX_PWM_1",
     "INEX_PWM_2",
     "INEX_PWM_3",
@@ -677,23 +654,22 @@
     "INEX_PWM_6",
     "INEX_ANALOG_1",
     "INEX_I2C_1",
-    "INEX_UART_1",
     "INEX_WS2812_1",
-    "GPIO_6",
-    "UART_1",
-    "GPIO_2",
-    "PWM_2",
-    "I2C_1",
-    "GPIO_4",
-    "PWM_4",
-    "GPIO_5",
-    "PWM_5",
-    "GPIO_3",
-    "PWM_3",
-    "PWM_6",
     "GPIO_1",
+    "GPIO_2",
+    "GPIO_3",
+    "GPIO_4",
+    "GPIO_5",
+    "GPIO_6",
+    "GPIO_7",
     "PWM_1",
-    "ANALOG_1"
+    "PWM_2",
+    "PWM_3",
+    "PWM_4",
+    "PWM_5",
+    "PWM_6",
+    "PWM_7",
+    "I2C_1"
   ],
   "compatibility": [],
   "integrated_device": [
