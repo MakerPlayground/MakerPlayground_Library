@@ -1,0 +1,26 @@
+#ifndef MP_BH1750_H
+#define MP_BH1750_H
+
+#include "MP_DEVICE.h"
+#include <Wire.h>
+#include "BH1750.h"
+
+class MP_BH1750
+{
+public:
+	MP_BH1750(bool addr_pull_up);
+
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
+	double getPercent();
+
+private:
+	BH1750 lightMeter;
+	uint16_t lux = 0;
+	unsigned long last_update = 0;
+};
+
+#endif
