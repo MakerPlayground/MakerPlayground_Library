@@ -1,7 +1,7 @@
 #include "MP_DHT12.h"
 
 const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to MP_DHT12";
+const char error1[] PROGMEM = "Can't connect to DHT12";
 const char* const errors_p[] PROGMEM = {ok, error1};
 
 const char* const* MP_DHT12::ERRORS = errors_p;
