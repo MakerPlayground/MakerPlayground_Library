@@ -1,8 +1,8 @@
 {
-  "id": "Winsen-ZH03",
-  "brand": "Winsen",
-  "model": "ZH-03 Laser Dust Module",
-  "url": "https://www.winsen-sensor.com/products/pm25-detection-module/zh03b-particle.html",
+  "id": "Plantower-PMS7003",
+  "brand": "Plantower",
+  "model": "PMS7003 - laser dust sensor",
+  "url": "http://www.plantower.com/en/content/?110.html",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
   "width": 74.0,
@@ -118,8 +118,9 @@
   "platforms": [
     {
       "platform": "ARDUINO_ESP8266",
-      "classname": "MP_WINSEN_ZH03",
+      "classname": "MP_PMS7003",
       "library_dependency": [
+        "fu-hsi/PMS-1.1.0",
         "plerup/espsoftwareserial-3.4.2"
       ]
     }
