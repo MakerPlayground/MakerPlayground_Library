@@ -117,6 +117,13 @@
       "library_dependency": [
         "claws/BH1750"
       ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_BH1750",
+      "library_dependency": [
+        "claws/BH1750"
+      ]
     }
   ]
 }

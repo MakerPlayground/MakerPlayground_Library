@@ -20,6 +20,7 @@ public:
 private:
 	BH1750 lightMeter;
 	uint16_t lux = 0;
+	double percent = 0.0;
 	unsigned long last_update = 0;
 };
 
