@@ -719,12 +719,16 @@
         {
           "type": "GPIO_13",
           "pintype": "INOUT",
-          "conflict": []
+          "conflict": [
+            "INEX_GPIO_13"
+          ]
         },
         {
           "type": "PWM_13",
           "pintype": "INOUT",
-          "conflict": []
+          "conflict": [
+            "INEX_GPIO_13"
+          ]
         }
       ],
       "v_min": 0.0,
@@ -1313,6 +1317,26 @@
       "y": 179,
       "v_min": 0.0,
       "v_max": 3.3
+    },
+    {
+      "name": "Port 13",
+      "alias": ["13"],
+      "type": "INTERNAL",
+      "sub_type": "STRAIGHT_TOP",
+      "function": [
+        {
+          "type": "INEX_GPIO_13",
+          "conflict": [
+            "GPIO_13",
+            "PWM_13"
+          ],
+          "pintype": "INOUT"
+        }
+      ],
+      "v_max": 3.3,
+      "v_min": 0.0,
+      "x": 0,
+      "y": 0
     }
   ],
   "connectivity": [
@@ -1378,6 +1402,7 @@
     "INEX_GPIO_3",
     "INEX_GPIO_4",
     "INEX_GPIO_5",
+    "INEX_GPIO_13",
     "INEX_GPIO_14",
     "INEX_GPIO_15",
     "INEX_GPIO_24",
@@ -1399,6 +1424,297 @@
     "INEX_I2C_1"
   ],
   "compatibility": [],
+  "integrated_device": [
+    {
+      "name": "Integrated Button",
+      "platforms": [
+        {
+          "platform": "RASPBERRYPI",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "INEX_GPIO_13",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "INEX_GPIO_13"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated Joystick",
+      "platforms": [
+        {
+          "platform": "RASPBERRYPI",
+          "classname": "MP_LEAFHAT_JOYSTICK",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_6",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_17",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_18",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_22",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_23",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "POWER",
+              "pintype": "GND"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_6",
+        "GPIO_17",
+        "GPIO_18",
+        "GPIO_22",
+        "GPIO_23"
+      ],
+      "compatibility": [
+        {
+          "name": "Joystick",
+          "action": [
+            {
+              "name": "Press up",
+              "parameter": []
+            },
+            {
+              "name": "Not press up",
+              "parameter": []
+            },
+            {
+              "name": "Press down",
+              "parameter": []
+            },
+            {
+              "name": "Not press down",
+              "parameter": []
+            },
+            {
+              "name": "Press left",
+              "parameter": []
+            },
+            {
+              "name": "Not press left",
+              "parameter": []
+            },
+            {
+              "name": "Press right",
+              "parameter": []
+            },
+            {
+              "name": "Not press right",
+              "parameter": []
+            },
+            {
+              "name": "Press middle",
+              "parameter": []
+            },
+            {
+              "name": "Not press middle",
+              "parameter": []
+            },
+            {
+              "name": "Not press all",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated WS2812",
+      "platforms": [
+        {
+          "platform": "RASPBERRYPI",
+          "classname": "MP_WS281X",
+          "library_dependency": [],
+          "info_message": [
+            "The device required user to install an external library: \"pip3 install rpi_ws281x\""
+          ],
+          "warning_message": [
+            "In order to use this device, you must deactivate audio by comment out \"dtparam=audio=on\" in \"/boot/config.txt\" and reboot"
+          ]
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "alias": ["12"],
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "PWM_12",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "PWM_12"
+      ],
+      "compatibility": [
+        {
+          "name": "RGB LED",
+          "action": [
+            {
+              "name": "On",
+              "parameter": [
+                {
+                  "name": "Red",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 255.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Green",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 255.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Blue",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 255.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Brightness",
+                  "constraint": {
+                    "min": 0.0,
+                    "max": 100.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Off",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    }
+  ],
   "platforms": [
     {
       "platform": "RASPBERRYPI",

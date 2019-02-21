@@ -15,7 +15,7 @@ class MP_BUTTON_AH(MP_Device):
         self.pi = pigpio.pi()
 
         self.pi.set_mode(pin, pigpio.INPUT)
-        self.pi.set_pull_up_down(pin, pigpio.PUD_OFF)
+        self.pi.set_pull_up_down(pin, pigpio.PUD_DOWN)
  
         self.checkpoint = time.time()
         self.state = State.NOTHING

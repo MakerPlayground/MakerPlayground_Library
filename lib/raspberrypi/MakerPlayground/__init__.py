@@ -73,3 +73,9 @@ class MP:
             return
         for p in pins:
             pi.set_mode(p, pigpio.INPUT)
+
+    @staticmethod
+    def cleanup():
+        for device_name, device in MP.devices.items():
+            if "_dispose" in dir(device):
+                device._dispose()
