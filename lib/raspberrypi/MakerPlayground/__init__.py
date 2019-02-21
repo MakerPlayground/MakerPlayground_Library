@@ -78,4 +78,7 @@ class MP:
     def cleanup():
         for device_name, device in MP.devices.items():
             if "_dispose" in dir(device):
-                device._dispose()
+                try:
+                    device._dispose()
+                except:
+                    pass

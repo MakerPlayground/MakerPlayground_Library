@@ -1016,7 +1016,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 5",
+      "name": "5",
       "alias": ["5"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
@@ -1045,7 +1045,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 27",
+      "name": "27",
       "alias": ["27"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
@@ -1074,7 +1074,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 26",
+      "name": "26",
       "alias": ["26"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
@@ -1103,7 +1103,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 25",
+      "name": "25",
       "alias": ["25"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
@@ -1132,7 +1132,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 24",
+      "name": "24",
       "alias": ["24"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
@@ -1319,7 +1319,7 @@
       "v_max": 3.3
     },
     {
-      "name": "Port 13",
+      "name": "13",
       "alias": ["13"],
       "type": "INTERNAL",
       "sub_type": "STRAIGHT_TOP",
@@ -1707,6 +1707,109 @@
             },
             {
               "name": "Off",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated OLED",
+      "platforms": [
+        {
+          "platform": "RASPBERRYPI",
+          "classname": "MP_OLED_SSD1306_128x64",
+          "library_dependency": [],
+          "info_message": [
+            "The device required to enable I2C interface: \"sudo raspi-config\" > Interfacing Options > I2C > Enable",
+            "The device required user to install an external library: \"sudo pip3 install Adafruit-SSD1306\""
+          ]
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "alias": [],
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "I2C_1",
+              "pintype": "I2C_SDA"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Port",
+          "alias": [],
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "I2C_1",
+              "pintype": "I2C_SCL"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 3.3,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "I2C_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Display",
+          "action": [
+            {
+              "name": "Show Text",
+              "parameter": [
+                {
+                  "name": "Line",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Text",
+                  "constraint": []
+                }
+              ]
+            },
+            {
+              "name": "Show Number",
+              "parameter": [
+                {
+                  "name": "Line",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Label",
+                  "constraint": []
+                },
+                {
+                  "name": "Value",
+                  "constraint": {
+                    "min": -99999.0,
+                    "max": 99999.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Clear Screen",
               "parameter": []
             }
           ],

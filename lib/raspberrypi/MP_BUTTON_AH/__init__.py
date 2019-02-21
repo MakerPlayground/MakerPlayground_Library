@@ -46,3 +46,6 @@ class MP_BUTTON_AH(MP_Device):
 
     def isNotPress(self):
         return self.pi.read(self.pin) == 0
+
+    def _dispose(self):
+        self.pi.stop()

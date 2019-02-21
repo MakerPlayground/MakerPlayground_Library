@@ -82,3 +82,6 @@ class MP_LEAFHAT_JOYSTICK(MP_Device):
     def isAllRelease(self):
         release_list = [self.isUpRelease(), self.isDownRelease(), self.isLeftRelease(), self.isRightRelease(), self.isMiddleRelease()]
         return all(release_list)
+
+    def _dispose(self):
+        self.pi.stop()

@@ -49,3 +49,6 @@ class MP_HC_SR04(MP_Device):
 
     def getDistance(self):
         return self.cm
+
+    def _dispose(self):
+        self.pi.stop()

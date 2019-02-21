@@ -25,3 +25,6 @@ class MP_PWM_LED_AH(MP_Generic_LED):
 
     def getStatus(self):
         return "brightness = {0:.2f}".format(self.brightness)
+    
+    def _dispose(self):
+        self.pi.stop()
