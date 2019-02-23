@@ -980,7 +980,6 @@
       "alias": ["4"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_4",
@@ -1020,7 +1019,6 @@
       "alias": ["5"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_5",
@@ -1049,7 +1047,6 @@
       "alias": ["27"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_27",
@@ -1078,7 +1075,6 @@
       "alias": ["26"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_26",
@@ -1107,7 +1103,6 @@
       "alias": ["25"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_25",
@@ -1136,7 +1131,6 @@
       "alias": ["24"],
       "type": "INEX_JST3",
       "sub_type": "STRAIGHT_TOP",
-      "angle": 180,
       "function": [
         {
           "type": "INEX_GPIO_24",
@@ -1197,7 +1191,8 @@
       "x": 130,
       "y": 129,
       "v_min": 0.0,
-      "v_max": 3.3
+      "v_max": 3.3,
+      "angle": 180.0
     },
     {
       "name": "TXD",
@@ -1236,7 +1231,8 @@
       "x": 90,
       "y": 129,
       "v_min": 0.0,
-      "v_max": 3.3
+      "v_max": 3.3,
+      "angle": 180.0
     },
     {
       "name": "SDA",
@@ -1276,7 +1272,8 @@
       "x": 56,
       "y": 129,
       "v_min": 0.0,
-      "v_max": 3.3
+      "v_max": 3.3,
+      "angle": 180.0
     },
     {
       "name": "SCL",
@@ -1316,7 +1313,8 @@
       "x": 56,
       "y": 179,
       "v_min": 0.0,
-      "v_max": 3.3
+      "v_max": 3.3,
+      "angle": 180.0
     },
     {
       "name": "13",
