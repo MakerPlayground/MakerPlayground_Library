@@ -1,22 +1,38 @@
 #include "MP_IR_REFLECTOR.h"
 
-MP_IR_REFLECTOR::MP_IR_REFLECTOR(uint8_t pin, const String &tag)
+const char ok[] PROGMEM = "OK";
+const char* const errors_p[] PROGMEM = {ok, error1};
+
+const char* const* MP_IR_REFLECTOR::ERRORS = errors_p;
+
+MP_IR_REFLECTOR::MP_IR_REFLECTOR(uint8_t pin)
 	:pin(pin)
-	,tag(tag)
 {
 }
 
-void MP_IR_REFLECTOR::init()
+int MP_IR_REFLECTOR::init()
 {
 	pinMode(this->pin, INPUT);
+	return 0;
 }
 
-int MP_IR_REFLECTOR::isDetected()
+bool MP_IR_REFLECTOR::isDetected()
 {
-	return digitalRead(pin) == LOW;
+	return isDetected;
 }
 
-int MP_IR_REFLECTOR::isNotDetected()
+bool MP_IR_REFLECTOR::isNotDetected()
 {
-	return digitalRead(pin) == HIGH;
+	return !isDetected;
+}
+
+void MP_IR_REFLECTOR::update(unsigned long current_time)
+{
+    isDetected = (digitalRead(pin) == LOW);
+}
+
+void MP_IR_REFLECTOR::printStatus()
+{
+    Serial.print(F("Obstrucle is "));
+    Serial.println(isDetected ? "detected" : "not detected");
 }

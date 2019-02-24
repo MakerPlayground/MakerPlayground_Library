@@ -6,9 +6,13 @@
 class MP_L9110
 {
 public:
-	MP_L9110(uint8_t inA, uint8_t inB, const String &tag);
+	MP_L9110(uint8_t inA, uint8_t inB);
 
-	void init();
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
+
 	void on(char dir[], int speed);
 	void off();
 	//void reverse();                   //not implemented
@@ -17,7 +21,7 @@ public:
 private:
 	uint8_t inA;
 	uint8_t inB;
-	const Sting tag;
+	String status;
 };
 
 #endif

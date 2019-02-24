@@ -1,13 +1,26 @@
 #include "MP_MPU6050.h"
-#define error 10.0f
+
 #define GRAVITY 9.81
 
-MP_MPU6050::MP_MPU6050(const String &tag)
-	:tag(tag)
+const char ok[] PROGMEM = "OK";
+const char error1[] PROGMEM = "Cannot connect to device";
+const char* const errors_p[] PROGMEM = {ok, error1};
+
+const char* const* MP_MPU6050::ERRORS = errors_p;
+
+MP_MPU6050::MP_MPU6050(bool ad0high)
+	: accel_x(0.0)
+	, accel_y(0.0)
+	, accel_z(0.0)
+	, accel_mag(0.0)
+	, gyro_x(0.0)
+	, gyro_y(0.0)
+	, gyro_z(0.0)
+	, accelgyro(MPU6050(ad0high ? 0x69 : 0x68))
 {
 }
 
-void MP_MPU6050::init()
+int MP_MPU6050::init()
 {
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 	Wire.begin();
@@ -18,52 +31,82 @@ void MP_MPU6050::init()
 	accelgyro.initialize();
 	if (!accelgyro.testConnection())
 	{
-		/* There was a problem detecting the MPU6050 ... check your connections */
-		while (1);
+		return 1;
 	}
+	return 0;
+}
+
+void MP_MPU6050::update(unsigned long current_time)
+{
+	if (next_update_time <= current_time) {
+		// the default range is +-2g and the sensor is 16 bits
+		accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+		accel_x = (ax / 16384.0) * GRAVITY;
+		accel_y = (ay / 16384.0) * GRAVITY;
+		accel_z = (az / 16384.0) * GRAVITY;
+		accel_mag = sqrt(accel_x*accel_x + accel_y*accel_y + accel_z*accel_z);
+		
+		// the default range is +-250degree/sec and the sensor is 16 bits
+		gyro_x = gx / 32768.0 * 250.0;
+		gyro_y = gy / 32768.0 * 250.0;
+		gyro_z = gz / 32768.0 * 250.0;
+
+		next_update_time = current_time + 100;
+	}
+}
+
+void MP_MPU6050::printStatus()
+{
+	Serial.print(F("accel (x, y, z, mag) = ("));
+	Serial.print(accel_x);
+	Serial.print(F(","));
+	Serial.print(accel_y);
+	Serial.print(F(","));
+	Serial.print(accel_z);
+	Serial.print(F(","));
+	Serial.print(accel_mag);
+	Serial.println(F(")"));
+	
+	Serial.print(F("gyro (x, y, z) = ("));
+	Serial.print(gyro_x);
+	Serial.print(F(","));
+	Serial.print(gyro_y);
+	Serial.print(F(","));
+	Serial.print(gyro_z);
+	Serial.println(F(")"));
 }
 
 double MP_MPU6050::getAccel_X()
 {
-	// the default range is +-2g and the sensor is 16 bits
-	return (accelgyro.getAccelerationX() / 16384.0) * GRAVITY;
+	return accel_x;
 }
 
 double MP_MPU6050::getAcces_Y()
 {
-	// the default range is +-2g and the sensor is 16 bits
-	return (accelgyro.getAccelerationY() / 16384.0) * GRAVITY;
+	return accel_y;
 }
 
 double MP_MPU6050::getAccel_Z()
 {
-	// the default range is +-2g and the sensor is 16 bits
-	return (accelgyro.getAccelerationZ() / 16384.0) * GRAVITY;
+	return accel_z;
 }
 
 double MP_MPU6050::getAccel_Magnitude()
 {
-	// the default range is +-2g and the sensor is 16 bits
-	double acc_x = (accelgyro.getAccelerationX() / 16384.0);
-	double acc_y = (accelgyro.getAccelerationY() / 16384.0);
-	double acc_z = (accelgyro.getAccelerationZ() / 16384.0);
-	return sqrt(acc_x*acc_x + acc_y*acc_y + acc_z*acc_z) * GRAVITY;
+	return accel_mag;
 }
 
 double MP_MPU6050::getGyro_X()
 {
-	// the default range is +-250degree/sec and the sensor is 16 bits
-    return accelgyro.getRotationX() / 32768.0 * 250.0;
+    return gyro_x;
 }
 
 double MP_MPU6050::getGyro_Y()
-{
-	// the default range is +-250degree/sec and the sensor is 16 bits
-    return accelgyro.getRotationY() / 32768.0 * 250.0;
+{	
+    return gyro_y;
 }
 
 double MP_MPU6050::getGyro_Z()
 {
-	// the default range is +-250degree/sec and the sensor is 16 bits
-    return accelgyro.getRotationZ() / 32768.0 * 250.0;
+    return gyro_z;
 }

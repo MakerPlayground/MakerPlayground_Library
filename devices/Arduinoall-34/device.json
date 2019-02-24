@@ -7,7 +7,18 @@
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 141.733,
   "height": 113.387,
-  "property": [],
+  "property": [
+    {
+      "name": "AD0 High",
+      "datatype": "BOOLEAN_ENUM",
+      "controltype": "DROPDOWN",
+      "value": "false",
+      "constraint": [
+        "true",
+        "false"
+      ]
+    }
+  ],
   "port": [
     {
       "name": "VCC",
@@ -190,9 +201,9 @@
       "platform": "ARDUINO_AVR8",
       "classname": "MP_MPU6050",
       "library_dependency": [
-        "adafruit/Adafruit_Sensor",
-        "MPU6050",
-        "I2Cdev"
+        "i2cdevlib/Arduino/MPU6050",
+        "i2cdevlib/Arduino/I2Cdev",
+        "Wire"
       ]
     }
   ]

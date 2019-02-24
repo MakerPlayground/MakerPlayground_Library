@@ -6,14 +6,16 @@
 class MP_IR_REFLECTOR
 {
 public:
-	MP_IR_REFLECTOR(uint8_t pin, const String &tag);
+	MP_IR_REFLECTOR(uint8_t pin);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
+	static const char* const* ERRORS;
 
-	void init();
-	int isDetected();
-	int isNotDetected();
+	bool isDetected();
+	bool isNotDetected();
 
 private:
 	uint8_t pin;
-	const String tag;
 };
 #endif

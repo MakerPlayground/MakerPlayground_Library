@@ -96,7 +96,7 @@
   "platforms": [
     {
       "platform": "ARDUINO_AVR8",
-      "classname": "MP_L9910",
+      "classname": "MP_L9110",
       "library_dependency": []
     }
   ]
