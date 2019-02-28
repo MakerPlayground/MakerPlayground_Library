@@ -34,7 +34,7 @@ class MP_OLED_SSD1306_128x64(MP_Device):
         self._show()
 
     def showNumber(self, line, label, value):
-        self.memory[line-1] = str(label).replace("/value/", str(value), 1)
+        self.memory[line-1] = str(label).replace("/value/", "{:.2f}".format(value), 1)
         self._show()
 
     def clearScreen(self):

@@ -3,12 +3,6 @@ import pigpio
 
 MP_LOG_INTERVAL = 1
 
-def constrain(data, min_value, max_value):
-    return min(max(data, min_value), max_value)
-
-def map(x: float, in_min: float, in_max: float, out_min: float, out_max: float):
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-
 class Expr:
     def __init__(self, fn = lambda: None, value: float = 0.0, interval: float = 0.0, latestUpdateTime: float = 0):
         self.fn = fn
@@ -82,3 +76,11 @@ class MP:
                     device._dispose()
                 except:
                     pass
+
+    @staticmethod
+    def constrain(data, min_value, max_value):
+        return min(max(data, min_value), max_value)
+
+    @staticmethod
+    def map(x: float, in_min: float, in_max: float, out_min: float, out_max: float):
+        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
