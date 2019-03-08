@@ -32,7 +32,7 @@ void MP_BH1750::update(unsigned long current_time)
 		if (lux < 0) {
 			percent = 0.0;
 		}
-		else if (lux > 50000) { // tested on mobile phone flash
+		else if (lux > 10000) { // tested on mobile phone flash
 			percent = 100.0;
 		}
 		else {

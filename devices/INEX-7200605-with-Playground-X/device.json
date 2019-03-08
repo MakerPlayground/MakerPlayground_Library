@@ -160,11 +160,17 @@
       "function": [
         {
           "type": "PWM_9",
-          "pintype": "INOUT"
+          "pintype": "INOUT",
+          "conflict": [
+            "JR3_SERVO_PWM_1"
+          ]
         },
         {
           "type": "GPIO_9",
-          "pintype": "INOUT"
+          "pintype": "INOUT",
+          "conflict": [
+            "JR3_SERVO_PWM_1"
+          ]
         }
       ],
       "v_min": 0.0,
@@ -178,15 +184,24 @@
       "function": [
         {
           "type": "PWM_10",
-          "pintype": "INOUT"
+          "pintype": "INOUT",
+          "conflict": [
+            "JR3_SERVO_PWM_2"
+          ]
         },
         {
           "type": "SPI_1",
-          "pintype": "SPI_SS"
+          "pintype": "SPI_SS",
+          "conflict": [
+            "JR3_SERVO_PWM_2"
+          ]
         },
         {
           "type": "GPIO_10",
-          "pintype": "INOUT"
+          "pintype": "INOUT",
+          "conflict": [
+            "JR3_SERVO_PWM_2"
+          ]
         }
       ],
       "v_min": 0.0,
@@ -436,7 +451,8 @@
           "type": "ANALOG_1",
           "pintype": "INOUT",
           "conflict": [
-            "INEX_ANALOG_1"
+            "INEX_ANALOG_1",
+            "INEX_GPIO_1"
           ]
         }
       ],
@@ -517,7 +533,8 @@
           "type": "ANALOG_6",
           "pintype": "INOUT",
           "conflict": [
-            "INEX_ANALOG_6"
+            "INEX_ANALOG_6",
+            "INEX_GPIO_20"
           ]
         }
       ],
@@ -583,6 +600,13 @@
       "function": [
         {
           "type": "INEX_ANALOG_6",
+          "pintype": "INOUT",
+          "conflict": [
+            "ANALOG_6"
+          ]
+        },
+        {
+          "type": "INEX_GPIO_20",
           "pintype": "INOUT",
           "conflict": [
             "ANALOG_6"
@@ -715,12 +739,60 @@
           "conflict": [
             "ANALOG_1"
           ]
+        },
+        {
+          "type": "INEX_GPIO_15",
+          "pintype": "INOUT",
+          "conflict": [
+            "ANALOG_1"
+          ]
         }
       ],
       "v_min": 0.0,
       "v_max": 5.0,
       "x": 19.0,
       "y": 251.0,
+      "angle": 180
+    },
+    {
+      "name": "SV1",
+      "alias": ["9"],
+      "type": "JR3_SERVO",
+      "function": [
+        {
+          "type": "JR3_SERVO_PWM_1",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_9",
+            "PWM_9"
+          ]
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 5.0,
+      "x": 11,
+      "y": 25.4,
+      "angle": 180
+    },
+    {
+      "name": "SV2",
+      "alias": ["10"],
+      "type": "JR3_SERVO",
+      "function": [
+        {
+          "type": "JR3_SERVO_PWM_2",
+          "pintype": "INOUT",
+          "conflict": [
+            "GPIO_10",
+            "PWM_10",
+            "SPI_1"
+          ]
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 5.0,
+      "x": 25.4,
+      "y": 25.4,
       "angle": 180
     }
   ],
@@ -830,7 +902,7 @@
       "platforms": [
         {
           "platform": "ARDUINO_AVR8",
-          "classname": "MP_POT",
+          "classname": "MP_TRIMPOT",
           "library_dependency": []
         }
       ],
@@ -881,7 +953,7 @@
       "platforms": [
         {
           "platform": "ARDUINO_AVR8",
-          "classname": "MP_POT",
+          "classname": "MP_TRIMPOT",
           "library_dependency": []
         }
       ],
@@ -1477,11 +1549,14 @@
     "ANALOG_7",
     "INEX_GPIO_11",
     "INEX_GPIO_12",
+    "INEX_GPIO_20",
     "INEX_I2C_1",
     "INEX_SPI_1",
     "INEX_PWM_11",
     "INEX_ANALOG_1",
-    "INEX_ANALOG_6"
+    "INEX_ANALOG_6",
+    "JR3_SERVO_PWM_1",
+    "JR3_SERVO_PWM_2"
   ],
   "compatibility": [],
   "platforms": [

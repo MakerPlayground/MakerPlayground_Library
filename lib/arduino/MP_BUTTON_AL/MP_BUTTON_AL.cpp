@@ -19,7 +19,7 @@ int MP_BUTTON_AL::init()
 
 void MP_BUTTON_AL::update(unsigned long current_time)
 {
-    if (state == NOTHING && isPress()) {
+    if (state == NOTHING && isPress() && current_time - checkpoint >= 30) {
         state = PRESSED;
         // checkpoint = millis();
     }
