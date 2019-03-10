@@ -1,7 +1,7 @@
 {
   "id": "INEX-7200605",
   "brand": "INEX",
-  "model": "i-Duino UNO R3B",
+  "model": "i-Duino R3B",
   "url": "https://inex.co.th/shop/i-duino-uno-r3b.html",
   "type": "CONTROLLER",
   "pio_boardid": "atmega328pb",
