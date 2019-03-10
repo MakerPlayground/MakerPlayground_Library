@@ -1,8 +1,8 @@
 {
-  "id": "Arduinoall-653",
-  "brand": "Arduinoall",
-  "model": "DHT11 Digital Temperature and Humidity Sensor",
-  "url": "https://www.arduinoall.com/product/653/dht11-digital-temperature-and-humidity-sensor-dht11-%E0%B9%81%E0%B8%9A%E0%B8%9A-pcb-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9F",
+  "id": "INEX-8000421",
+  "brand": "INEX",
+  "model": "ZX-DHT11 Digital Temperature and Humidity Sensor",
+  "url": "https://inex.co.th/shop/zx-dht11.html",
   "type": "PERIPHERAL",
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 68,
@@ -10,25 +10,11 @@
   "property": [],
   "port": [
     {
-      "name": "VIN",
-      "type": "WIRE",
+      "name": "out",
+      "type": "INEX_JST3",
       "function": [
         {
-          "type": "POWER",
-          "pintype": "VCC"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 19.6,
-      "y": 158
-    },
-    {
-      "name": "OUT",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "GPIO_1",
+          "type": "INEX_GPIO_1",
           "pintype": "INOUT"
         }
       ],
@@ -36,24 +22,10 @@
       "v_max": 5.0,
       "x": 34,
       "y": 158
-    },
-    {
-      "name": "GND",
-      "type": "WIRE",
-      "function": [
-        {
-          "type": "POWER",
-          "pintype": "GND"
-        }
-      ],
-      "v_min": 3.3,
-      "v_max": 5.0,
-      "x": 48.4,
-      "y": 158
     }
   ],
   "connectivity": [
-    "GPIO_1"
+    "INEX_GPIO_1"
   ],
   "compatibility": [
     {
