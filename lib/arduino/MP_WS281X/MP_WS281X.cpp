@@ -51,6 +51,10 @@ void MP_WS281X::on(int red, int green, int blue, int brightness)
 void MP_WS281X::off()
 {
 	this->brightness = 0;
+	this->red = 0;
+	this->green = 0;
+	this->blue = 0;
 	pixels.setBrightness(0);
+	pixels.setPixelColor(0, pixels.Color(0, 0, 0));
 	pixels.show(); // Initialize all pixels to 'off'
 }
