@@ -30,6 +30,8 @@ public:
     double getValue(char* topic);
     void writeFeed(char* feedId, String data, char* apiKey);
 
+    void notify(char* message);
+
 private:
     bool checkResponse();
 

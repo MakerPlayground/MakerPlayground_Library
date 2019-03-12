@@ -130,3 +130,7 @@ void MP_NETPIE_MPBASEBOARD::writeFeed(char* feedId, String data, char* apiKey)
 {
     // TODO: implement write feed for MP
 }
+
+void MP_NETPIE_MPBASEBOARD::notify(char* message)
+{
+}

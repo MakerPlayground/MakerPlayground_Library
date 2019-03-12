@@ -32,6 +32,8 @@ public:
     double getValue(char* topic);
     void writeFeed(char* feedId, String data, char* apiKey);
 
+    void notify(char* message);
+
     static std::map<String, double> value;
     static std::map<String, bool> changed; 
 
