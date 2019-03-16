@@ -10,18 +10,21 @@ MP_PMS7003::MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx, int baud)
 	: ss(SoftwareSerial(dust_tx, dust_rx))
 	, pms(ss)
 	, isDataCorrected(false)
+	, lastReadSuccess(0)
 {
 }
 
 int MP_PMS7003::init()
 {
+    ss.begin(baud);
 	pms.activeMode();
 	return 0;
 }
 
 void MP_PMS7003::update(unsigned long current_time)
 {
-    if (pms.read(data)) {
+    if (pms.read(data))
+    {
 		lastReadSuccess = current_time;
 		isDataCorrected = true;
 	}
@@ -47,13 +50,13 @@ void MP_PMS7003::printStatus()
 	{
 		Serial.print(F("PM1.0 = "));
 		Serial.print(data.PM_AE_UG_1_0);
-		Serial.println(F("ug/m^3"));
+		Serial.print(F("ug/m^3 "));
 		Serial.print(F("PM2.5 = "));
 		Serial.print(data.PM_AE_UG_2_5);
-		Serial.println(F("ug/m^3"));
+		Serial.print(F("ug/m^3 "));
 		Serial.print(F("PM10 = "));
 		Serial.print(data.PM_AE_UG_10_0);
-		Serial.println(F("ug/m^3"));
+		Serial.print(F("ug/m^3 "));
 	}
 	else
 	{

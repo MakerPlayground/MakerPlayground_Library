@@ -22,11 +22,11 @@ public:
 	bool isDataInvalid();
 
 private:
-    unsigned long lastReadSuccess = 0;
 	SoftwareSerial ss;
 	PMS pms;
 	PMS::DATA data;
 	bool isDataCorrected;
+	unsigned long lastReadSuccess;
 };
 
 #endif
