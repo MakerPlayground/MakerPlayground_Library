@@ -90,6 +90,8 @@ void noTone(uint8_t pin)
     else
     {
         ledcWriteTone(channel, 0);
+        ledcDetachPin(pin);
+        pinUsed[channel] = false;
     }
 }
 
