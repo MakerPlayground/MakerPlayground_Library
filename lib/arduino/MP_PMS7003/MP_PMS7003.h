@@ -8,7 +8,7 @@
 class MP_PMS7003
 {
 public:
-	MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx, int baud = 9600);
+	MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

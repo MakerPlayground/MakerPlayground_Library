@@ -6,7 +6,7 @@ const char* const errors_p[] PROGMEM = {ok};
 const char* const* MP_PMS7003::ERRORS = errors_p;
 
 
-MP_PMS7003::MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx, int baud)
+MP_PMS7003::MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx)
 	: ss(SoftwareSerial(dust_tx, dust_rx))
 	, pms(ss)
 	, isDataCorrected(false)
@@ -16,7 +16,7 @@ MP_PMS7003::MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx, int baud)
 
 int MP_PMS7003::init()
 {
-    ss.begin(baud);
+    ss.begin(9600);
 	pms.activeMode();
 	return 0;
 }
