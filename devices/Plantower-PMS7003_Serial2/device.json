@@ -1,0 +1,126 @@
+{
+  "id": "Plantower-PMS7003_Serial2",
+  "brand": "Plantower",
+  "model": "PMS7003 - laser dust sensor",
+  "url": "http://www.plantower.com/en/content/?110.html",
+  "type": "PERIPHERAL",
+  "formfactor": "STANDALONE",
+  "width": 74.0,
+  "height": 110.0,
+  "property": [],
+  "port": [
+    {
+      "name": "VCC",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 45,
+      "y": 28
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 54,
+      "y": 29
+    },
+    {
+      "name": "TX",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "UART_1",
+          "pintype": "UART_TX"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 68.0,
+      "y": 28.0
+    },
+    {
+      "name": "RX",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "UART_1",
+          "pintype": "UART_RX"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 60,
+      "y": 28.0
+    }
+  ],
+  "connectivity": [
+    "UART_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Dust",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        },
+        {
+          "name": "Data is valid",
+          "parameter": []
+        },
+        {
+          "name": "Data is not valid",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Atmospheric PM 1.0",
+          "constraint": {
+            "min": 0.0,
+            "max": 1000.0,
+            "unit": "MICROGRAMS_PER_CUBIC_METER"
+          }
+        },
+        {
+          "name": "Atmospheric PM 2.5",
+          "constraint": {
+            "min": 0.0,
+            "max": 1000.0,
+            "unit": "MICROGRAMS_PER_CUBIC_METER"
+          }
+        },
+        {
+          "name": "Atmospheric PM 10",
+          "constraint": {
+            "min": 0.0,
+            "max": 1000.0,
+            "unit": "MICROGRAMS_PER_CUBIC_METER"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_PMS7003_SERIAL2",
+      "library_dependency": [
+        "fu-hsi/PMS-1.1.0"
+      ]
+    }
+  ]
+}
