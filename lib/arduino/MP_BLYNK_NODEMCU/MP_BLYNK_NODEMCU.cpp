@@ -3,8 +3,14 @@
 #define SEND_GAP 100    // in ms (100 mean we send 10 times / sec)
 
 #include "MP_BLYNK_NODEMCU.h"
+#ifdef ESP8266
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
+#elif defined(ESP32)
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <BlynkSimpleEsp32.h>
+#endif
 
 const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "Can't connect to access point";
