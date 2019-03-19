@@ -1,10 +1,5 @@
 #include "MP_PAM8302.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_PAM8302::ERRORS = errors_p;
-
 MP_PAM8302::MP_PAM8302(uint8_t speakerPin)
 	:speakerPin(speakerPin)
 {
@@ -13,7 +8,7 @@ MP_PAM8302::MP_PAM8302(uint8_t speakerPin)
 int MP_PAM8302::init()
 {
 	pinMode(speakerPin, OUTPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_PAM8302::update(unsigned long current_time)

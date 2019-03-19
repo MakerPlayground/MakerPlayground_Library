@@ -1,11 +1,5 @@
 #include "MP_TCS34725.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "No TCS34725 found ... check your connections"
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_TCS34725::ERRORS = errors_p;
-
 float MAX (float r, float g, float b);
 float MIN (float r, float g, float b);
 void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v );
@@ -17,11 +11,11 @@ MP_TCS34725::MP_TCS34725()
 int MP_TCS34725::init()
 {
 	if (!tcs.begin()) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
 	this->end_time = 0;
 	this->update(0);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_TCS34725::update(unsigned long current_time)

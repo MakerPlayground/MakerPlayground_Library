@@ -1,11 +1,5 @@
 #include "MP_DHT12.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to DHT12";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_DHT12::ERRORS = errors_p;
-
 #define UPDATE_INTERVAL 50
 
 MP_DHT12::MP_DHT12()
@@ -18,9 +12,9 @@ int MP_DHT12::init()
 	dht::ReadStatus chk = sensor.read();
 	if(chk != dht::OK)
 	{
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_DHT12::update(unsigned long current_time)

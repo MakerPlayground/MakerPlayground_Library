@@ -1,10 +1,5 @@
 #include "MP_7SEG_SOFTSERIAL.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_7SEG_SOFTSERIAL::ERRORS = errors_p;
-
 uint8_t digits[] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111};
 
 MP_7SEG_SOFTSERIAL::MP_7SEG_SOFTSERIAL(uint8_t tx)
@@ -19,7 +14,7 @@ MP_7SEG_SOFTSERIAL::MP_7SEG_SOFTSERIAL(uint8_t tx)
 int MP_7SEG_SOFTSERIAL::init()
 {
 	serial.begin(9600);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_7SEG_SOFTSERIAL::update(unsigned long current_time) 

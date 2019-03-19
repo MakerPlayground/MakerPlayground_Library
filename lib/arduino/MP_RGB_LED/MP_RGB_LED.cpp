@@ -1,10 +1,5 @@
 #include "MP_RGB_LED.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_RGB_LED::ERRORS = errors_p;
-
 MP_RGB_LED::MP_RGB_LED(uint8_t data, uint8_t clk)
 	:data(data)
 	,clk(clk)
@@ -17,7 +12,7 @@ int MP_RGB_LED::init()
 	pinMode(data, OUTPUT);
 	digitalWrite(clk, LOW);
 	pinMode(clk,OUTPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_RGB_LED::update(unsigned long current_time) 

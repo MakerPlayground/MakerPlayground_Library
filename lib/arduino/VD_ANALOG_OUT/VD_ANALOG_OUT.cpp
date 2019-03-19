@@ -1,10 +1,5 @@
 #include "VD_ANALOG_OUT.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_ANALOG_OUT::ERRORS = errors_p;
-
 VD_ANALOG_OUT::VD_ANALOG_OUT(uint8_t txPin):
     txPin(txPin)
 {
@@ -13,7 +8,7 @@ VD_ANALOG_OUT::VD_ANALOG_OUT(uint8_t txPin):
 int VD_ANALOG_OUT::init() 
 {
     pinMode(txPin, OUTPUT);
-    return 0;
+    return ERR_OK;
 }
 
 void VD_ANALOG_OUT::update(unsigned long current_time) 

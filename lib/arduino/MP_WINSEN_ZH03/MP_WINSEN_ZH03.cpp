@@ -1,10 +1,5 @@
 #include "MP_WINSEN_ZH03.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_WINSEN_ZH03::ERRORS = errors_p;
-
 #define Q_INTERVAL 100
 
 MP_WINSEN_ZH03::MP_WINSEN_ZH03(uint8_t dust_tx, uint8_t dust_rx, int baud)
@@ -24,7 +19,7 @@ int MP_WINSEN_ZH03::init()
 	{
         ss.write(configCommand[i]);
     }
-	return 0;
+	return ERR_OK;
 }
 
 void MP_WINSEN_ZH03::update(unsigned long current_time)

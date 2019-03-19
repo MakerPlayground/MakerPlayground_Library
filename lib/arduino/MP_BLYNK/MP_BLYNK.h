@@ -8,7 +8,6 @@ public:
 	virtual int init();
 	virtual void update(unsigned long current_time);
 	virtual void printStatus();
-	static const char* const* ERRORS;
 
 	virtual bool isReady();
 	virtual int readVirtualPin(uint8_t pin);   // pin = 0-7

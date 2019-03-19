@@ -1,10 +1,5 @@
 #include "MP_SCT013_30A_ESP32.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_SCT013_30A_ESP32::ERRORS = errors_p;
-
 MP_SCT013_30A_ESP32::MP_SCT013_30A_ESP32(uint8_t pin)
 	: pin(pin)
 	, value(0)
@@ -20,7 +15,7 @@ int MP_SCT013_30A_ESP32::init()
 	analogReadResolution(10);
     analogSetWidth(10);
   	analogSetPinAttenuation(this->pin, ADC_0db);	// acceptable range from 0-1v
-	return 0;
+	return ERR_OK;
 }
 
 void MP_SCT013_30A_ESP32::update(unsigned long currentTime)

@@ -1,10 +1,5 @@
 #include "MP_RGB_LED_CC.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_RGB_LED_CC::ERRORS = errors_p;
-
 MP_RGB_LED_CC::MP_RGB_LED_CC(uint8_t r, uint8_t g, uint8_t b)
 	:r(r)
 	,g(g)
@@ -17,7 +12,7 @@ int MP_RGB_LED_CC::init()
 	pinMode(r, OUTPUT);
 	pinMode(g, OUTPUT);
 	pinMode(b, OUTPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_RGB_LED_CC::update(unsigned long current_time) 

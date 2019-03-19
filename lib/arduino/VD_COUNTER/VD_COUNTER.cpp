@@ -1,17 +1,12 @@
 #include "VD_COUNTER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_COUNTER::ERRORS = errors_p;
-
 VD_COUNTER::VD_COUNTER()
 {
 }
 
 int VD_COUNTER::init() 
 {
-    return 0;
+    return ERR_OK;
 }
 
 void VD_COUNTER::update(unsigned long current_time) 

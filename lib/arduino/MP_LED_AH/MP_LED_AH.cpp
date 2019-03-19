@@ -1,10 +1,5 @@
 #include "MP_LED_AH.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_LED_AH::ERRORS = errors_p;
-
 MP_LED_AH::MP_LED_AH(uint8_t pin)
 	:pin(pin)
 {
@@ -14,7 +9,7 @@ int MP_LED_AH::init()
 {
 	pinMode(this->pin, OUTPUT);
 	analogWrite(this->pin, 0);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_LED_AH::update(unsigned long current_time) 

@@ -1,10 +1,5 @@
 #include "MP_HBRIDGE_DRIVER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_HBRIDGE_DRIVER::ERRORS = errors_p;
-
 MP_HBRIDGE_DRIVER::MP_HBRIDGE_DRIVER(uint8_t inA, uint8_t inB)
 	: inA(inA)
 	, inB(inB)
@@ -17,7 +12,7 @@ int MP_HBRIDGE_DRIVER::init()
 	digitalWrite(inA, LOW);
 	pinMode(inB, OUTPUT);
 	digitalWrite(inB, LOW);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_HBRIDGE_DRIVER::update(unsigned long current_time) 

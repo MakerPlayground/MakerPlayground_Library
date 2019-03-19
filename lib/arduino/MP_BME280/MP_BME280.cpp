@@ -1,11 +1,5 @@
 #include "MP_BME280.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Could not find a valid BME280 sensor, check wiring!";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_BME280::ERRORS = errors_p;
-
 MP_BME280::MP_BME280()
 {
 
@@ -14,11 +8,11 @@ MP_BME280::MP_BME280()
 int MP_BME280::init()
 {
 	if (!bme.begin()) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
 	this->end_time = 0;
 	this->update(0);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_BME280::update(unsigned long current_time)

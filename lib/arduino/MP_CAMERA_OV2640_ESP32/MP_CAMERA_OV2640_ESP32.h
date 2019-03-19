@@ -13,7 +13,6 @@ public:
 	int init();
 	void update(unsigned long currentTime);
 	void printStatus();
-	static const char* const* ERRORS;
 
     MP_IMAGE getImage();
 

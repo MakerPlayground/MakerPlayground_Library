@@ -31,9 +31,9 @@ int MP_MPU6050::init()
 	accelgyro.initialize();
 	if (!accelgyro.testConnection())
 	{
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_MPU6050::update(unsigned long current_time)

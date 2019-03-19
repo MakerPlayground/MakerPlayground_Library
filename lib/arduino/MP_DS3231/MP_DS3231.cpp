@@ -3,12 +3,6 @@
 
 #define REFRESH_INTERVAL 50
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "DateTime is not valid";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_DS3231::ERRORS = errors_p;
-
 MP_DS3231::MP_DS3231()
     : Rtc(Wire)
 {
@@ -17,16 +11,13 @@ MP_DS3231::MP_DS3231()
 
 int MP_DS3231::init() {
     Rtc.Begin();
-    // if (!Rtc.IsDateTimeValid()) {
-    //     return 1;
-    // }
     if (!Rtc.GetIsRunning())
     {
         Rtc.SetIsRunning(true);
     }
     Rtc.Enable32kHzPin(false);
     Rtc.SetSquareWavePin(DS3231SquareWavePin_ModeNone);
-    return 0;
+    return ERR_OK;
 }
 
 void MP_DS3231::update(unsigned long current_time) {

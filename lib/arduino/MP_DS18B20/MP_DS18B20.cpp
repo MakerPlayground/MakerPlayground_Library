@@ -5,11 +5,6 @@
 #define REFRESH_INTERVAL 100
 #define TEMPERATURE_PRECISION 9
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Device is not detected.";
-const char error2[] PROGMEM = "Found ghost device.";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
 const char* const* MP_DS18B20::ERRORS = errors_p;
 
 MP_DS18B20::MP_DS18B20(uint8_t pin)
@@ -24,7 +19,7 @@ int MP_DS18B20::init()
     sensors.begin();
     numberOfDevices = sensors.getDeviceCount();
     if (numberOfDevices < 1) {
-        return 1;
+        return ERR_CONNECT_DEVICE;
     }
     // for(int i=0;i<numberOfDevices; i++) {
     //     if(sensors.getAddress(tempDeviceAddress, i)) {
@@ -37,9 +32,9 @@ int MP_DS18B20::init()
         sensors.setResolution(tempDeviceAddress, TEMPERATURE_PRECISION);
     } else {
         // Found ghost device
-        return 2;
+        return ERR_CONFIG_DEVICE;
     }
-    return 0;
+    return ERR_OK;
 }
 
 void MP_DS18B20::update(unsigned long current_time) {

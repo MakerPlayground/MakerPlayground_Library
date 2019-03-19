@@ -1,10 +1,13 @@
+#ifndef MAKERPLAYGROUND_H
+#define MAKERPLAYGROUND_H
+
 #include <Arduino.h>
+#include "MP_ERROR.h"
 
 #define MP_LOG_INTERVAL 1000
 #define MP_LOG(device, name) Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); device.printStatus(); Serial.println('\0');
-#define MP_ERR(device, name, status_code) Serial.print(F("[[ERROR]] ")); Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); Serial.println(reinterpret_cast<const __FlashStringHelper *>(pgm_read_word(&(device.ERRORS[status_code])))); Serial.println('\0');
+#define MP_ERR(name, status_code) Serial.print(F("[[ERROR]] ")); Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); Serial.println(reinterpret_cast<const __FlashStringHelper *>(pgm_read_word(&(ERRORS[status_code])))); Serial.println('\0');
 #define MP_LOG_P(device, name) Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); device->printStatus(); Serial.println('\0');
-#define MP_ERR_P(device, name, status_code) Serial.print(F("[[ERROR]] ")); Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); Serial.println(reinterpret_cast<const __FlashStringHelper *>(pgm_read_word(&(device->ERRORS[status_code])))); Serial.println('\0');
 
 typedef void (*Task)(void);
 struct Expr {
@@ -58,3 +61,5 @@ void setTask(Task& task, void (*fn)(void)) {
 double map(double x, double in_min, double in_max, double out_min, double out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
+#endif

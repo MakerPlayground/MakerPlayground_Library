@@ -1,10 +1,5 @@
 #include "MP_DHT11.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_DHT11::ERRORS = errors_p;
-
 MP_DHT11::MP_DHT11(uint8_t pin)
 	:sensor(DHT(pin,11))
 	,pin(pin)
@@ -16,7 +11,7 @@ int MP_DHT11::init()
 	this->humidity = 0;
 	this->celcius = 0;
 	sensor.begin();
-	return 0;
+	return ERR_OK;
 }
 
 void MP_DHT11::update(unsigned long current_time)

@@ -18,7 +18,7 @@ MP_RTC_MCP4971x::MP_RTC_MCP4971x()
 int MP_RTC_MCP4971x::init() {
     rtc.enableClock();
     // TODO: implement sensor connection checking
-    return 0;
+    return ERR_OK;
 }
 
 void MP_RTC_MCP4971x::update(unsigned long current_time) {

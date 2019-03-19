@@ -12,7 +12,6 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
 
 	uint16_t getAtmospheric_PM_1_0();
 	uint16_t getAtmospheric_PM_2_5();

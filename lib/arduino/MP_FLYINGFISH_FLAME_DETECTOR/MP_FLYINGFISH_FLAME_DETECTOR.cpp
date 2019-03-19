@@ -1,8 +1,4 @@
 #include "MP_FLYINGFISH_FLAME_DETECTOR.h"
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_FLYINGFISH_FLAME_DETECTOR::ERRORS = errors_p;
 
 MP_FLYINGFISH_FLAME_DETECTOR::MP_FLYINGFISH_FLAME_DETECTOR(uint8_t pin)
 	:pin(pin)
@@ -12,7 +8,7 @@ MP_FLYINGFISH_FLAME_DETECTOR::MP_FLYINGFISH_FLAME_DETECTOR(uint8_t pin)
 int MP_FLYINGFISH_FLAME_DETECTOR::init()
 {
 	pinMode(this->pin, INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_FLYINGFISH_FLAME_DETECTOR::printStatus()

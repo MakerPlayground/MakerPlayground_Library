@@ -16,10 +16,10 @@ MP_BLYNK_VIRTUAL_SLIDER::MP_BLYNK_VIRTUAL_SLIDER(uint8_t v_pin, MP_BLYNK* blynk)
 
 int MP_BLYNK_VIRTUAL_SLIDER::init() {
     if (!blynk)
-        return 1;
+        return ERR_INTERNAL_ERROR;
     if (!blynk->isReady())
-        return 2;
-    return 0;
+        return ERR_CLIENT_NOT_READY;
+    return ERR_OK;
 }
 
 void MP_BLYNK_VIRTUAL_SLIDER::printStatus() {

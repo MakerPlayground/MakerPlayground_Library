@@ -14,7 +14,6 @@ public:
     int init();
 	void update(unsigned long currentTime);
 	void printStatus();
-	static const char* const* ERRORS;
 
     bool classifiedImage(MP_IMAGE image, String tag, double minProbability);
     bool noDetectedImage(MP_IMAGE image, String tag, double minProbability);

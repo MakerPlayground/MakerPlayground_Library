@@ -1,10 +1,5 @@
 #include "MP_TRIMPOT.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_TRIMPOT::ERRORS = errors_p;
-
 MP_TRIMPOT::MP_TRIMPOT(uint8_t pin)
 	:pin(pin)
 {
@@ -13,7 +8,7 @@ MP_TRIMPOT::MP_TRIMPOT(uint8_t pin)
 int MP_TRIMPOT::init()
 {
 	pinMode(this->pin, INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_TRIMPOT::update(unsigned long current_time) 

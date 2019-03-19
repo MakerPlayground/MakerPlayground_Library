@@ -2,11 +2,6 @@
 
 #define PUBLISH_INTERVAL 500
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_NETPIE::ERRORS = errors_p;
-
 std::map<String, double> MP_NETPIE_ESP::value;
 std::map<String, bool> MP_NETPIE_ESP::changed;
 
@@ -46,6 +41,9 @@ int MP_NETPIE_ESP::init()
             delay(500);
         }
     }
+    else {
+        return ERR_CONNECT_WIFI;
+    }
 
     // initialize the microgear
     microgear.init(key, secret, alias);
@@ -53,7 +51,7 @@ int MP_NETPIE_ESP::init()
     // connect to NETPIE
     microgear.connect(appId);
 
-    return 0;
+    return ERR_OK;
 }
 
 void MP_NETPIE_ESP::printStatus()

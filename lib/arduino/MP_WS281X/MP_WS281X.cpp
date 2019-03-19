@@ -1,10 +1,5 @@
 #include "MP_WS281X.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_WS281X::ERRORS = errors_p;
-
 #define NUMPIXELS 1
 
 MP_WS281X::MP_WS281X(uint8_t pin)
@@ -17,7 +12,7 @@ int MP_WS281X::init()
 {
 	pixels.begin();
 	off();
-	return 0;
+	return ERR_OK;
 }
 
 void MP_WS281X::update(unsigned long current_time) 

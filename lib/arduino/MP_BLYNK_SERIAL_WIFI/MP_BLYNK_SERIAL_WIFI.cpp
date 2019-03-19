@@ -6,15 +6,6 @@
 #include "MP_BLYNK_SERIAL_WIFI.h"
 #include <BlynkSimpleShieldEsp8266.h>
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "ESP is not response";
-const char error2[] PROGMEM = "Can't connect to access point";
-const char error3[] PROGMEM = "Can't connect to internet";
-const char error4[] PROGMEM = "Can't connect to Blynk Server";
-const char* const errors_p[] PROGMEM = {ok, error1, error2, error3, error4};
-
-const char* const* MP_BLYNK_SERIAL_WIFI::ERRORS = errors_p;
-
 double MP_BLYNK_SERIAL_WIFI::value[8];
 uint8_t MP_BLYNK_SERIAL_WIFI::valueChanged;
 
@@ -38,24 +29,24 @@ int MP_BLYNK_SERIAL_WIFI::init()
     delay(10);
 
     if (espSerial.kick()) {
-        return 1;
+        return ERR_CONNECT_DEVICE;
     }
 
     Blynk.config(wifi, auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
     
     if (!connectWifi()) {
-        return 2;
+        return ERR_CONNECT_WIFI;
     }
 
     if (!testPing()) {
-        return 3;
+        return ERR_CONNECT_SERVER;
     }
 
     if (!Blynk.connect()) {
-        return 4;
+        return ERR_CONNECT_SERVER;
     }
     
-    return 0;
+    return ERR_OK;
 }
 
 bool MP_BLYNK_SERIAL_WIFI::connectWifi()

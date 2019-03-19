@@ -3,13 +3,6 @@
 
 #include "MP_BLYNK_MPBASEBOARD.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to internet";
-const char error2[] PROGMEM = "Can't connect to Blynk Server";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_BLYNK_MPBASEBOARD::ERRORS = errors_p;
-
 MP_BLYNK_MPBASEBOARD::MP_BLYNK_MPBASEBOARD(char* auth, char* ssid, char* pass)
     : auth(auth)
     , ssid(ssid)
@@ -45,7 +38,7 @@ int MP_BLYNK_MPBASEBOARD::init()
     Serial1.println(pass);
     if (!checkResponse())
     {
-        return 1;
+        return ERR_CONNECT_WIFI;
     }
 
     // connect to blynk
@@ -53,10 +46,10 @@ int MP_BLYNK_MPBASEBOARD::init()
     Serial1.println(auth);
     if (!checkResponse())
     {
-        return 2;
+        return ERR_CONNECT_SERVER;
     }
 
-    return 0;
+    return ERR_OK;
 }
 
 void MP_BLYNK_MPBASEBOARD::printStatus()

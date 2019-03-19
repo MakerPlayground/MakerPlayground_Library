@@ -2,11 +2,6 @@
 
 #include "MP_Azure_IoTHub_ESP8266.h"
 
-const char ok[] PROGMEM = "OK";
-const char cant_init[] PROGMEM = "Can't init IoT Hub";
-const char* const errors_p[] PROGMEM = {ok, cant_init};
-const char* const* MP_Azure_IoTHub_ESP8266::ERRORS = errors_p;
-
 MP_Azure_IoTHub_ESP8266::MP_Azure_IoTHub_ESP8266(const char* connectionString, MP_AZURE* azure)
     : connectionString(connectionString)
     , azure(azure)
@@ -35,10 +30,10 @@ int MP_Azure_IoTHub_ESP8266::init()
     iotHubClientHandle = IoTHubClient_LL_CreateFromConnectionString(connectionString, MQTT_Protocol);
     if (iotHubClientHandle == NULL)
     {
-        return 1;
+        return ERR_CONNECT_SERVER;
     }
 
-    return 0;
+    return ERR_OK;
 }
 
 void sendCallback(IOTHUB_CLIENT_CONFIRMATION_RESULT result, void *userContextCallback)

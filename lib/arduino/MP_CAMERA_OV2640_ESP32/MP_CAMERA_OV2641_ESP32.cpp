@@ -1,11 +1,5 @@
 #include "MP_CAMERA_OV2640_ESP32.h"
 
-const char ok[] PROGMEM = "OK";
-const char cant_init_camera[] PROGMEM = "Can't initialize the camera";
-const char* const errors_p[] PROGMEM = {ok, cant_init_camera};
-
-const char* const* MP_CAMERA_OV2640_ESP32::ERRORS = errors_p;
-
 MP_CAMERA_OV2640_ESP32::MP_CAMERA_OV2640_ESP32(uint8_t d0, uint8_t d1, uint8_t d2
 	, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, uint8_t xclk, uint8_t pclk
 	, uint8_t vsync, uint8_t href, uint8_t sda, uint8_t scl, uint8_t reset)
@@ -44,9 +38,9 @@ int MP_CAMERA_OV2640_ESP32::init()
 
 	err = camera_init(&config);
     if (err != ESP_OK)
-        return 1;
+        return ERR_CONNECT_DEVICE;
 
-    return 0;
+    return ERR_OK;
 }
 
 void MP_CAMERA_OV2640_ESP32::update(unsigned long current_time) 

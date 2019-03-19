@@ -1,10 +1,5 @@
 #include "MP_TM1637_DISPLAY.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_TM1637_DISPLAY::ERRORS = errors_p;
-
 MP_TM1637_DISPLAY::MP_TM1637_DISPLAY(uint8_t clk, uint8_t dio)
 	:display(TM1637Display(clk, dio))
 	,data(0)
@@ -14,7 +9,7 @@ MP_TM1637_DISPLAY::MP_TM1637_DISPLAY(uint8_t clk, uint8_t dio)
 
 int MP_TM1637_DISPLAY::init()
 {
-	return 0;
+	return ERR_OK;
 }
 
 void MP_TM1637_DISPLAY::update(unsigned long current_time)

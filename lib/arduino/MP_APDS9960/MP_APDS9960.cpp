@@ -1,12 +1,5 @@
 #include "MP_APDS9960.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Something went wrong during APDS-9960 init!";
-const char error2[] PROGMEM = "Something went wrong trying to set PGAIN";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_APDS9960::ERRORS = errors_p;
-
 MP_APDS9960::MP_APDS9960()
 	:apds(SparkFun_APDS9960())
 {
@@ -18,22 +11,22 @@ int MP_APDS9960::init()
 
 	// Initialize APDS-9960 (configure I2C and initial values)
 	if ( !apds.init() ) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
 
 	// Adjust the Proximity sensor gain
 	if ( !apds.setProximityGain(PGAIN_2X) ) {
-		return 2;
+		return ERR_CONFIG_DEVICE;
 	}
 
 	// Start running the APDS-9960 proximity sensor (no interrupts)
 	if ( !apds.enableProximitySensor(false) ) {
-		return 1;
+		return ERR_CONFIG_DEVICE;
 	}
 	
 	//Serial.println(F("APDS-9960 initialization complete"));
 	//Serial.println(F("Proximity sensor is now running"));
-	return 0;
+	return ERR_OK;
 
 //    // Start running the APDS-9960 gesture sensor engine
 //    if ( apds.enableGestureSensor(false) ) {

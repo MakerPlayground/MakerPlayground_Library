@@ -1,10 +1,5 @@
 #include "MP_SHARP_GP2D120X.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_SHARP_GP2D120X::ERRORS = errors_p;
-
 MP_SHARP_GP2D120X::MP_SHARP_GP2D120X(uint8_t pin)
   : pin(pin)
 {
@@ -12,7 +7,7 @@ MP_SHARP_GP2D120X::MP_SHARP_GP2D120X(uint8_t pin)
 
 int MP_SHARP_GP2D120X::init()  
 {	
-    return 0;
+    return ERR_OK;
 }
 
 void MP_SHARP_GP2D120X::update(unsigned long current_time)

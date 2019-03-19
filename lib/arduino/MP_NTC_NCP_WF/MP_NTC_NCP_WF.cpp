@@ -1,10 +1,5 @@
 #include "MP_NTC_NCP_WF.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_NTC_NCP_WF::ERRORS = errors_p;
-
 MP_NTC_NCP_WF::MP_NTC_NCP_WF(uint8_t pin)
   : pin(pin)
 {
@@ -15,7 +10,7 @@ int MP_NTC_NCP_WF::init()
 {
     this->celcius = 25;
 	pinMode(this->pin, INPUT);
-    return 0;
+    return ERR_OK;
 }
 
 void MP_NTC_NCP_WF::update(unsigned long current_time)

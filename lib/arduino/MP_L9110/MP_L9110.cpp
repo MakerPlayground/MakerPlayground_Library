@@ -1,10 +1,5 @@
 #include "MP_L9110.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_L9110::ERRORS = errors_p;
-
 MP_L9110::MP_L9110(uint8_t inA, uint8_t inB)
 	:inA(inA)
 	,inB(inB)
@@ -18,7 +13,7 @@ int MP_L9110::init()
 	pinMode(inB, OUTPUT);
 	digitalWrite(inA, LOW);
 	digitalWrite(inB, LOW);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_L9110::update(unsigned long current_time)

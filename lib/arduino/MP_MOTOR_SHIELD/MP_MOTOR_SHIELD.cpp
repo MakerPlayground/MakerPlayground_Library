@@ -1,10 +1,5 @@
 #include "MP_MOTOR_SHIELD.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_MOTOR_SHIELD::ERRORS = errors_p;
-
 MP_MOTOR_SHIELD::MP_MOTOR_SHIELD()
 {
 	myMotor = AFMS.getMotor(1);
@@ -14,7 +9,7 @@ int MP_MOTOR_SHIELD::init()
 {
 	AFMS.begin();
 	direction = RELEASE;
-	return 0;
+	return ERR_OK;
 }
 
 void MP_MOTOR_SHIELD::update(unsigned long current_time)

@@ -1,10 +1,5 @@
 #include "MP_BUTTON_AH.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_BUTTON_AH::ERRORS = errors_p;
-
 MP_BUTTON_AH::MP_BUTTON_AH(uint8_t pin)
 	:pin(pin)
 {
@@ -14,7 +9,7 @@ int MP_BUTTON_AH::init()
 {
 	pinMode(pin, INPUT_PULLUP);
     checkpoint = millis();
-	return 0;
+	return ERR_OK;
 }
 
 void MP_BUTTON_AH::update(unsigned long current_time)

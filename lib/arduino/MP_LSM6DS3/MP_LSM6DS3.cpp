@@ -1,11 +1,5 @@
 #include "MP_LSM6DS3.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't detect LSM6DS3. Please check connection!!!";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_LSM6DS3::ERRORS = errors_p;
-
 MP_LSM6DS3::MP_LSM6DS3()
 	:imu(LSM6DS3(I2C_MODE,0x6A))
 {
@@ -15,9 +9,9 @@ int MP_LSM6DS3::init()
 {
 	end_time = 0;
 	if(imu.begin() != IMU_SUCCESS) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_LSM6DS3::update(unsigned long current_time) 

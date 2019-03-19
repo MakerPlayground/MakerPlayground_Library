@@ -1,9 +1,5 @@
 #include "MP_REST_ESP.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-const char* const* MP_REST::ERRORS = errors_p;
-
 MP_REST_ESP::MP_REST_ESP(const char* ssid, const char* pass)
     : ssid(ssid)
     , pass(pass)
@@ -13,7 +9,7 @@ MP_REST_ESP::MP_REST_ESP(const char* ssid, const char* pass)
 int MP_REST_ESP::init()
 {
     WiFi.begin(ssid, pass);
-    return 0;
+    return ERR_OK;
 }
 
 void MP_REST_ESP::update(unsigned long currentTime)

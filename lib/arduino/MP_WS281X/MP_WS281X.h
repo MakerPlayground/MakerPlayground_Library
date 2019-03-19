@@ -14,7 +14,6 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
 
 	void on(int red, int green, int blue, int brightness);
 	void off();

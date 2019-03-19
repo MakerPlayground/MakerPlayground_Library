@@ -1,10 +1,5 @@
 #include "MP_LIGHT_SENSOR_KIDBRIGHT.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_LIGHT_SENSOR_KIDBRIGHT::ERRORS = errors_p;
-
 MP_LIGHT_SENSOR_KIDBRIGHT::MP_LIGHT_SENSOR_KIDBRIGHT(uint8_t pin)
 	:pin(pin)
 {
@@ -15,7 +10,7 @@ int MP_LIGHT_SENSOR_KIDBRIGHT::init()
 	pinMode(this->pin, INPUT);
 	analogReadResolution(10);
   	analogSetAttenuation(ADC_0db);	// acceptable range from 0-1v
-	return 0;
+	return ERR_OK;
 }
 
 void MP_LIGHT_SENSOR_KIDBRIGHT::update(unsigned long current_time) 

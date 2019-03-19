@@ -26,7 +26,11 @@ MP_PAJ7620U2::MP_PAJ7620U2()
 
 int MP_PAJ7620U2::init()
 {
-    return paj7620Init();
+    uint8_t status = paj7620Init();
+    if (status != 0) {
+        return ERR_CONNECT_DEVICE;
+    }
+    return ERR_OK;
 }
 
 void MP_PAJ7620U2::update(unsigned long current_time)

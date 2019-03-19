@@ -1,11 +1,5 @@
 #include "MP_GY906.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Cannot connect the sensor";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_GY906::ERRORS = errors_p;
-
 #define READ_INTERVAL 50
 
 MP_GY906::MP_GY906()
@@ -16,9 +10,9 @@ MP_GY906::MP_GY906()
 int MP_GY906::init()
 {
 	if (!mlx.begin()) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_GY906::update(unsigned long current_time)

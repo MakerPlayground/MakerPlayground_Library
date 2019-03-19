@@ -1,10 +1,5 @@
 #include "MP_BUZZER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_BUZZER::ERRORS = errors_p;
-
 MP_BUZZER::MP_BUZZER(uint8_t pin)
 	: pin(pin)
 	, playing(false)
@@ -16,7 +11,7 @@ int MP_BUZZER::init()
 {
 	pinMode(this->pin, OUTPUT);
 	noTone(this->pin);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_BUZZER::update(unsigned long current_time) 

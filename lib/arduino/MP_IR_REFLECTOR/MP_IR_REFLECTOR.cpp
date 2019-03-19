@@ -1,10 +1,5 @@
 #include "MP_IR_REFLECTOR.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_IR_REFLECTOR::ERRORS = errors_p;
-
 MP_IR_REFLECTOR::MP_IR_REFLECTOR(uint8_t pin)
 	:pin(pin)
 {
@@ -13,7 +8,7 @@ MP_IR_REFLECTOR::MP_IR_REFLECTOR(uint8_t pin)
 int MP_IR_REFLECTOR::init()
 {
 	pinMode(this->pin, INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 bool MP_IR_REFLECTOR::isDetected()

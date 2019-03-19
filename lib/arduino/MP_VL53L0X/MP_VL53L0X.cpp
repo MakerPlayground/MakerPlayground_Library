@@ -2,12 +2,6 @@
 #include <Wire.h>
 #include <VL53L0X.h>
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Cannot connect to sensor";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_VL53L0X::ERRORS = errors_p;
-
 //#define LONG_RANGE
 //#define HIGH_SPEED
 //#define HIGH_ACCURACY
@@ -20,7 +14,7 @@ int MP_VL53L0X::init()
 {
     Wire.begin();
     if(!sensor.init()) {
-        return 1;
+        return ERR_CONNECT_DEVICE;
     }
     sensor.setTimeout(500);
 #if defined LONG_RANGE
@@ -38,7 +32,7 @@ int MP_VL53L0X::init()
     // increase timing budget to 200 ms
     sensor.setMeasurementTimingBudget(200000);
 #endif
-    return 0;
+    return ERR_OK;
 }
 
 void MP_VL53L0X::update(unsigned long current_time)

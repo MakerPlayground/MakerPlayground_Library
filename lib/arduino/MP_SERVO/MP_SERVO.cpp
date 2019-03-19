@@ -1,10 +1,5 @@
 #include "MP_SERVO.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_SERVO::ERRORS = errors_p;
-
 MP_SERVO::MP_SERVO(uint8_t pin)
   : pin(pin)
 {
@@ -14,6 +9,7 @@ int MP_SERVO::init()
 {
     this->degree = 0;
     myservo.attach(pin);
+    return ERR_OK;
 }
 
 void MP_SERVO::update(unsigned long current_time) 

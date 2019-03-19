@@ -1,10 +1,5 @@
 #include "MP_NETPIE_NOTIFICATION.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_NETPIE_NOTIFICATION::ERRORS = errors_p;
-
 MP_NETPIE_NOTIFICATION::MP_NETPIE_NOTIFICATION(MP_NETPIE* netpie)
     : netpie(netpie)
 {
@@ -13,7 +8,7 @@ MP_NETPIE_NOTIFICATION::MP_NETPIE_NOTIFICATION(MP_NETPIE* netpie)
 
 int MP_NETPIE_NOTIFICATION::init()
 {
-    return 0;
+    return ERR_OK;
 }
 
 void MP_NETPIE_NOTIFICATION::printStatus() {

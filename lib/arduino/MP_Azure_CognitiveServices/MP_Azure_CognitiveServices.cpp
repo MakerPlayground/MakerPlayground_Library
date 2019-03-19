@@ -5,10 +5,6 @@
 #define COGNITIVE_REQUEST_INTERVAL 100  // in ms (maximum of 10 requests per second)
 #define TIMEOUT 10000   // in ms (maximum time to wait for response from the server)
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-const char* const* MP_Azure_CognitiveServices::ERRORS = errors_p;
-
 using namespace ArduinoJson;
 
 MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, String key, double requestInterval, MP_AZURE* rest)
@@ -23,7 +19,7 @@ MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, Strin
 
 int MP_Azure_CognitiveServices::init()
 {
-    return 0;
+    return ERR_OK;
 }
 
 void MP_Azure_CognitiveServices::update(unsigned long currentTime)

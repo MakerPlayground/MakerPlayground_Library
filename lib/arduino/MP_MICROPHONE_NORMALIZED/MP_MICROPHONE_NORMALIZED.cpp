@@ -1,10 +1,5 @@
 #include "MP_MICROPHONE_NORMALIZED.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_MICROPHONE_NORMALIZED::ERRORS = errors_p;
-
 MP_MICROPHONE_NORMALIZED::MP_MICROPHONE_NORMALIZED(uint8_t pin)
 	:pin(pin)
 {
@@ -18,7 +13,7 @@ int MP_MICROPHONE_NORMALIZED::init()
 	{
 		normal = 0.8 * normal + 0.2 * (analogRead(pin) - normal);
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_MICROPHONE_NORMALIZED::update(unsigned long current_time)

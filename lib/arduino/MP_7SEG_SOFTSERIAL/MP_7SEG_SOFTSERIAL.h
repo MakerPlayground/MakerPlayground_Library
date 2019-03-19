@@ -16,7 +16,6 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
 	
 	void showTwoIntWithColon(int8_t beforeColon, int8_t afterColon);
 	void showData(double num);

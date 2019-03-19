@@ -5,10 +5,6 @@
 #define CUSTOMVISION_REQUEST_INTERVAL 100  // in ms (maximum of 10 requests per second)
 #define TIMEOUT 10000   // in ms (maximum time to wait for response from the server)
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-const char* const* MP_Azure_CustomVisionServices::ERRORS = errors_p;
-
 using namespace ArduinoJson;
 
 MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion, String predictionKey, String projectId, double requestInterval, MP_AZURE* rest)
@@ -24,7 +20,7 @@ MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion,
 
 int MP_Azure_CustomVisionServices::init()
 {
-    return 0;
+    return ERR_OK;
 }
 
 void MP_Azure_CustomVisionServices::update(unsigned long currentTime)

@@ -13,7 +13,6 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
 
 	void showText(int line, char* text);
 	void showNumber(int line, char* label, double value);

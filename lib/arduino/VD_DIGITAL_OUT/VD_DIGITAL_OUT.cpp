@@ -1,10 +1,5 @@
 #include "VD_DIGITAL_OUT.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_DIGITAL_OUT::ERRORS = errors_p;
-
 VD_DIGITAL_OUT::VD_DIGITAL_OUT(uint8_t txPin):
     txPin(txPin)
 {
@@ -17,7 +12,7 @@ int VD_DIGITAL_OUT::init()
     isTxHigh = false;
     digitalWrite(txPin, LOW);
 
-    return 0;
+    return ERR_OK;
 }
 
 void VD_DIGITAL_OUT::update(unsigned long current_time) 

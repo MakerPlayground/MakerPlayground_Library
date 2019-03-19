@@ -12,13 +12,6 @@
 #include <BlynkSimpleEsp32.h>
 #endif
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to access point";
-const char error2[] PROGMEM = "Can't connect to Blynk Server";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_BLYNK::ERRORS = errors_p;
-
 double MP_BLYNK_NODEMCU::value[8];
 uint8_t MP_BLYNK_NODEMCU::valueChanged;
 
@@ -39,14 +32,14 @@ int MP_BLYNK_NODEMCU::init()
     Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
     
     if (!connectWifi()) {
-        return 1;
+        return ERR_CONNECT_WIFI;
     }
 
     if (!Blynk.connect()) {
-        return 2;
+        return ERR_CONNECT_SERVER;
     }
     
-    return 0;
+    return ERR_OK;
 }
 
 bool MP_BLYNK_NODEMCU::connectWifi()

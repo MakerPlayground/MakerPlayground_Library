@@ -28,8 +28,7 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
-
+    
     void setDateTime(MP_DATETIME datetime);
     bool checkDayOfWeek(char* dayName);
     uint8_t getHour();

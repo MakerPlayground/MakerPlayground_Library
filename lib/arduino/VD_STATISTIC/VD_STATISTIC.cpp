@@ -1,10 +1,5 @@
 #include "VD_STATISTIC.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_STATISTIC::ERRORS = errors_p;
-
 #define returnIfDataExist(val, default_val) return N != 0 ? val : default_val;
 
 VD_STATISTIC::VD_STATISTIC()
@@ -22,7 +17,7 @@ int VD_STATISTIC::init()
     SD = 0;
     maxValue = -3.4028235E+38;
     minValue = 3.4028235E+38;
-    return 0;
+    return ERR_OK;
 }
 
 void VD_STATISTIC::update(unsigned long current_time) 

@@ -7,7 +7,6 @@ public:
     virtual int init();
 	virtual void update(unsigned long currentTime);
 	virtual void printStatus();
-	static const char* const* ERRORS;
 
     virtual bool isConnected();
 };

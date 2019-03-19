@@ -2,13 +2,6 @@
 
 #define PUBLISH_INTERVAL 500
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to internet";
-const char error2[] PROGMEM = "Can't connect to NETPIE Server";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_NETPIE_MPBASEBOARD::ERRORS = errors_p;
-
 MP_NETPIE_MPBASEBOARD::MP_NETPIE_MPBASEBOARD(char appId[], char key[], char secret[], char alias[], char ssid[], char pass[])
     : appId(appId)
     , key(key)
@@ -34,7 +27,7 @@ int MP_NETPIE_MPBASEBOARD::init()
     Serial1.println(password);
     if (!checkResponse())
     {
-        return 1;
+        return ERR_CONNECT_WIFI;
     }
 
     // connect to netpie
@@ -48,10 +41,10 @@ int MP_NETPIE_MPBASEBOARD::init()
     Serial1.println(appId);
     if (!checkResponse())
     {
-        return 2;
+        return ERR_CONNECT_SERVER;
     }
 
-    return 0;
+    return ERR_OK;
 }
 
 void MP_NETPIE_MPBASEBOARD::printStatus()

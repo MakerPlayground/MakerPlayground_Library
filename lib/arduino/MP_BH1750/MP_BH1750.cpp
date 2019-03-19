@@ -1,11 +1,5 @@
 #include "MP_BH1750.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Can't connect to BH1750";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_BH1750::ERRORS = errors_p;
-
 #define UPDATE_INTERVAL 1000
 
 MP_BH1750::MP_BH1750(bool addr_pull_up)
@@ -20,9 +14,9 @@ int MP_BH1750::init()
 	Wire.begin();
 	if(!lightMeter.begin())
 	{
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
-	return 0;
+	return ERR_OK;
 }
 
 void MP_BH1750::update(unsigned long current_time)

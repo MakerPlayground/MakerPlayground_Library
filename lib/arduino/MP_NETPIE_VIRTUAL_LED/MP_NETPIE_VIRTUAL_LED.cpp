@@ -1,10 +1,5 @@
 #include "MP_NETPIE_VIRTUAL_LED.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_NETPIE_VIRTUAL_LED::ERRORS = errors_p;
-
 MP_NETPIE_VIRTUAL_LED::MP_NETPIE_VIRTUAL_LED(char* topic, MP_NETPIE* netpie)
     : topic(topic)
     , netpie(netpie)
@@ -13,7 +8,7 @@ MP_NETPIE_VIRTUAL_LED::MP_NETPIE_VIRTUAL_LED(char* topic, MP_NETPIE* netpie)
 
 int MP_NETPIE_VIRTUAL_LED::init()
 {
-    return 0;
+    return ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_LED::update(unsigned long time)

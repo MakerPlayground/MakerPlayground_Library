@@ -1,10 +1,5 @@
 #include "VD_DIGITAL_IN.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_DIGITAL_IN::ERRORS = errors_p;
-
 VD_DIGITAL_IN::VD_DIGITAL_IN(uint8_t rxPin):
     rxPin(rxPin)
 {
@@ -13,7 +8,7 @@ VD_DIGITAL_IN::VD_DIGITAL_IN(uint8_t rxPin):
 int VD_DIGITAL_IN::init() 
 {
     pinMode(rxPin, INPUT);
-    return 0;
+    return ERR_OK;
 }
 
 void VD_DIGITAL_IN::update(unsigned long current_time) 

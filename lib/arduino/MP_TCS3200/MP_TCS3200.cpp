@@ -2,18 +2,17 @@
 
 int rgb2hsv(int r,int g,int b,double out[]);
 
-MP_TCS3200::MP_TCS3200(uint8_t s0, uint8_t s1, uint8_t s2, uint8_t s3, uint8_t out, uint8_t LED, const String &tag)
+MP_TCS3200::MP_TCS3200(uint8_t s0, uint8_t s1, uint8_t s2, uint8_t s3, uint8_t out, uint8_t LED)
 	:s0(s0)
 	,s1(s1)
 	,s2(s2)
 	,s3(s3)
 	,out(out)
 	,LED(LED)
-	,tag(tag)
 {
 }
 
-void MP_TCS3200::init()
+int MP_TCS3200::init()
 {
 	pinMode(s0, OUTPUT);
 	pinMode(s1, OUTPUT);
@@ -28,95 +27,95 @@ void MP_TCS3200::init()
 	digitalWrite(s0, HIGH);
 	digitalWrite(s1, HIGH);
 	digitalWrite(LED, LOW);
+	
+	return ERR_OK;
 }
 
-int MP_TCS3200::isColor(char color[])
+void MP_TCS3200::update(unsigned long current_time)
 {
-	delay(100);
+	if (next_reading <= current_time) {
+		int red = 0;
+		int green = 0;
+		int blue = 0;
+		digitalWrite(LED,1);
+		digitalWrite(s2, LOW);
+		digitalWrite(s3, LOW);
+		// count OUT, pRed, RED
+		red = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+		digitalWrite(s3, HIGH);
+		//count OUT, pBLUE, BLUE
+		blue = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+		digitalWrite(s2, HIGH);
+		// count OUT, pGreen, GREEN
+		green = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
+		digitalWrite(LED,0);
 
-	int red = 0;
-	int green = 0;
-	int blue = 0;
-	digitalWrite(LED,1);
-	digitalWrite(s2, LOW);
-	digitalWrite(s3, LOW);
-	// count OUT, pRed, RED
-	red = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
-	digitalWrite(s3, HIGH);
-	//count OUT, pBLUE, BLUE
-	blue = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
-	digitalWrite(s2, HIGH);
-	// count OUT, pGreen, GREEN
-	green = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
-	digitalWrite(LED,0);
+		double hsv[3] ;
+		rgb2hsv(255-red,255-green,255-blue,hsv);
+		hsv[1]*=100;
+		hsv[2]*=100;
+		hsv[2]/=255;
 
-	Serial.print("R");
+		if(hsv[2]>97&&hsv[1]<5)
+		{
+			current_color = "White";
+		}
+		else if((hsv[0]>=330 || hsv[0]<15))
+		{
+			current_color = "Red";
+		}
+		else if((hsv[0]>=15 && hsv[0]<25))
+		{
+			current_color = "Orange";
+		}
+		else if((hsv[0]>=25 && hsv[0]<75)) //30
+		{
+			current_color = "Yellow";
+		}
+		else if((hsv[0]>=75 && hsv[0]<165))//135
+		{
+			current_color = "Green";
+		}
+		else if((hsv[0]>=165 && hsv[0]<220)) //210
+		{
+			current_color = "Cyan";
+		}
+		else if((hsv[0]>=220 && hsv[0]<235)) //225
+		{
+			current_color = "Blue";
+		}
+		else if((hsv[0]>=235 && hsv[0]<270))
+		{
+			current_color = "Violet";
+		}
+		else if((hsv[0]>=270 && hsv[0]<330))
+		{
+			current_color = "Magenta";
+		}
+		else {
+			current_color = "unknown";
+		}
+		next_reading = current_time + 100;
+	}
+}
+
+void MP_TCS3200::printStatus()
+{
+	Serial.print(F("(R, G, B) = ("));
 	Serial.print(255-red, DEC);
-	Serial.print(" G");
+	Serial.print(F(","));
 	Serial.print(255-green, DEC);
-	Serial.print(" B");
+	Serial.print(F(","));
 	Serial.print(255-blue, DEC);
-	Serial.println();
+	Serial.println(F(")"));
 
-	double hsv[3] ;
-	rgb2hsv(255-red,255-green,255-blue,hsv);
-	hsv[1]*=100;
-	hsv[2]*=100;
-	hsv[2]/=255;
+	Serial.print("Color is ");
+	Serial.println(current_color);
+}
 
-	Serial.println(hsv[0]) ;
-	Serial.println(hsv[1]) ;
-	Serial.println(hsv[2]) ;
-	Serial.println("-----"+(hsv[0]>=270 && hsv[0]<330)&&(strcmp(color, "Magenta") == 0));
-
-	if(hsv[2]>97&&hsv[1]<5&&strcmp(color, "White") == 0)
-	{
-		Serial.println("White") ;
-		return 1;
-	}
-
-	if((hsv[0]>=330 || hsv[0]<15)&&strcmp(color, "Red") == 0)
-	{
-		Serial.println("Red") ;
-		return 1;
-	}
-	if((hsv[0]>=15 && hsv[0]<25)&&strcmp(color, "Orange") == 0)
-	{
-		Serial.println("Orange") ;
-		return 1;
-	}
-	if((hsv[0]>=25 && hsv[0]<75)&&strcmp(color, "Yellow") == 0) //30
-	{
-		Serial.println("Yellow") ;
-		return 1;
-	}
-	if((hsv[0]>=75 && hsv[0]<165)&&strcmp(color, "Green") == 0)//135
-	{
-		Serial.println("Green") ;
-		return 1;
-	}
-	if((hsv[0]>=165 && hsv[0]<220)&&strcmp(color, "Cyan") == 0) //210
-	{
-		Serial.println("Cyan") ;
-		return 1;
-	}
-	if((hsv[0]>=220 && hsv[0]<235)&&strcmp(color, "Blue") == 0) //225
-	{
-		Serial.println("Blue") ;
-		return 1;
-	}
-	if((hsv[0]>=235 && hsv[0]<270)&&strcmp(color, "Violet") == 0)
-	{
-		Serial.println("Violet") ;
-		return 1;
-	}
-	if((hsv[0]>=270 && hsv[0]<330)&&strcmp(color, "Magenta") == 0)
-	{
-		Serial.println("Margenta") ;
-		return 1;
-	}
-	Serial.println("mdkfmiwmgirwmg") ;
-	return 0;
+bool MP_TCS3200::isColor(char color[])
+{
+	return current_color.equals(String(color));
 }
 
 int rgb2hsv(int r,int g,int b,double out[])

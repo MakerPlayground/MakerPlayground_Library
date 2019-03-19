@@ -10,7 +10,6 @@ public:
 	int init();
 	void update(unsigned long time);
 	void printStatus();
-	static const char* const* ERRORS;
 
 	int getSecond();
 	void startTimer();

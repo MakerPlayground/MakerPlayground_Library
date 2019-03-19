@@ -1,10 +1,5 @@
 #include "MP_GROVE_ULTRASONIC_RANGER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_GROVE_ULTRASONIC_RANGER::ERRORS = errors_p;
-
 MP_GROVE_ULTRASONIC_RANGER::MP_GROVE_ULTRASONIC_RANGER(uint8_t pin)
   : pin(pin)
 {
@@ -15,7 +10,7 @@ int MP_GROVE_ULTRASONIC_RANGER::init()
 {
 	this->cm = 0;
 	pinMode(this->pin,INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_GROVE_ULTRASONIC_RANGER::update(unsigned long current_time)

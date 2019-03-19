@@ -15,7 +15,6 @@ public:
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
-	static const char* const* ERRORS;
 
 	double getAccel_X();
 	double getAcces_Y();

@@ -1,10 +1,5 @@
 #include "MP_PIR.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_PIR::ERRORS = errors_p;
-
 MP_PIR::MP_PIR(uint8_t pin)
 	:pin(pin)
 {
@@ -14,7 +9,7 @@ int MP_PIR::init()
 {
 	isMotionDetected = false;
 	pinMode(this->pin, INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_PIR::update(unsigned long current_time)

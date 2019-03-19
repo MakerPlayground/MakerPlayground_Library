@@ -1,17 +1,12 @@
 #include "VD_NUMBER_CONTAINER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_NUMBER_CONTAINER::ERRORS = errors_p;
-
 VD_NUMBER_CONTAINER::VD_NUMBER_CONTAINER()
 {
 }
 
 int VD_NUMBER_CONTAINER::init() 
 {
-    return 0;
+    return ERR_OK;
 }
 
 void VD_NUMBER_CONTAINER::update(unsigned long current_time) 

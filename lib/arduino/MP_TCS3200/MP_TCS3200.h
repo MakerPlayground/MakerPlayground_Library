@@ -7,10 +7,12 @@
 class MP_TCS3200
 {
 public:
-	MP_TCS3200(uint8_t s0, uint8_t s1, uint8_t s2, uint8_t s3, uint8_t out, uint8_t LED, const String &tag);
+	MP_TCS3200(uint8_t s0, uint8_t s1, uint8_t s2, uint8_t s3, uint8_t out, uint8_t LED);
+	int init();
+	void update(unsigned long current_time);
+	void printStatus();
 
-	void init();
-	int isColor(char color[]);
+	bool isColor(char color[]);
 
 private:
 	uint8_t s0;
@@ -19,7 +21,10 @@ private:
 	uint8_t s3;
 	uint8_t out;
 	uint8_t LED;
-	const String tag;
+
+	unsigned long next_reading = 0;
+
+	String current_color;
 };
 
 #endif

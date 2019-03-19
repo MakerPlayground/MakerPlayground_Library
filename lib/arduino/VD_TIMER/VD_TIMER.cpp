@@ -1,10 +1,5 @@
 #include "VD_TIMER.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* VD_TIMER::ERRORS = errors_p;
-
 VD_TIMER::VD_TIMER()
 {
 }
@@ -13,7 +8,7 @@ int VD_TIMER::init()
 {
     this->isStarted = false;
     this->second = 0;
-    return 0;
+    return ERR_OK;
 }
 
 void VD_TIMER::update(unsigned long current_time) 

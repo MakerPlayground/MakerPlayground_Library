@@ -1,11 +1,5 @@
 #include "MP_SI7021.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Could not find a valid Si7021 sensor, check wiring!";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_SI7021::ERRORS = errors_p;
-
 MP_SI7021::MP_SI7021()
 {
 
@@ -16,12 +10,12 @@ int MP_SI7021::init()
 	sensor = Adafruit_Si7021();
 
 	if (!sensor.begin()) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
 
 	this->end_time = 0;
 	this->update(0);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_SI7021::update(unsigned long current_time)

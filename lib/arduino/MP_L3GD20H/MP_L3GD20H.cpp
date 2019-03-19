@@ -1,11 +1,5 @@
 #include "MP_L3GD20H.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Could not find a valid L3GD20 sensor, check wiring!";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_L3GD20H::ERRORS = errors_p;
-
 MP_L3GD20H::MP_L3GD20H()
 {
 }
@@ -17,12 +11,12 @@ int MP_L3GD20H::init()
 
 	/* Initialise the sensor */
 	if (!gyro.begin()) {
-		return 1;
+		return ERR_CONNECT_DEVICE;
 	}
 
 	this->end_time = 0;
 	this->update(0);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_L3GD20H::update(unsigned long current_time)

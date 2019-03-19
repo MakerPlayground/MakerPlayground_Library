@@ -11,8 +11,7 @@ public:
     int init();
     void update(unsigned long current_time);
     void printStatus();
-    static const char* const* ERRORS;
-
+    
     bool isPress();
     bool isPressAndRelease();
     bool isNotPress();

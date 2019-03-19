@@ -19,10 +19,10 @@ MP_BLYNK_WIDGET_MAP::MP_BLYNK_WIDGET_MAP(uint8_t v_pin, uint8_t pinIndex, MP_BLY
 
 int MP_BLYNK_WIDGET_MAP::init() {
     if (!blynk)
-        return 1;
+        return ERR_INTERNAL_ERROR;
     if (!blynk->isReady())
-        return 2;
-    return 0;
+        return ERR_CLIENT_NOT_READY;
+    return ERR_OK;
 }
 
 void MP_BLYNK_WIDGET_MAP::printStatus() {

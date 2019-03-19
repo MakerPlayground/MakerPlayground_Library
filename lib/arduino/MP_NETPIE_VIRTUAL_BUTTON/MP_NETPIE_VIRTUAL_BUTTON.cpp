@@ -1,10 +1,5 @@
 #include "MP_NETPIE_VIRTUAL_BUTTON.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_NETPIE_VIRTUAL_BUTTON::ERRORS = errors_p;
-
 MP_NETPIE_VIRTUAL_BUTTON::MP_NETPIE_VIRTUAL_BUTTON(char* topic, MP_NETPIE* netpie)
     : topic(topic)
     , netpie(netpie)
@@ -14,7 +9,7 @@ MP_NETPIE_VIRTUAL_BUTTON::MP_NETPIE_VIRTUAL_BUTTON(char* topic, MP_NETPIE* netpi
 int MP_NETPIE_VIRTUAL_BUTTON::init()
 {
     netpie->subscribe(topic);
-    return 0;
+    return ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_BUTTON::printStatus()

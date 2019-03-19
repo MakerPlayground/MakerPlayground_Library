@@ -1,12 +1,5 @@
 #include "MP_BLYNK_VIRTUAL_BUTTON.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "no Blynk object";
-const char error2[] PROGMEM = "Blynk is not ready";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_BLYNK_VIRTUAL_BUTTON::ERRORS = errors_p;
-
 MP_BLYNK_VIRTUAL_BUTTON::MP_BLYNK_VIRTUAL_BUTTON(uint8_t v_pin, MP_BLYNK* blynk) :
     v_pin(v_pin),
     blynk(blynk)
@@ -16,10 +9,10 @@ MP_BLYNK_VIRTUAL_BUTTON::MP_BLYNK_VIRTUAL_BUTTON(uint8_t v_pin, MP_BLYNK* blynk)
 
 int MP_BLYNK_VIRTUAL_BUTTON::init() {
     if (!blynk)
-        return 1;
+        return ERR_INTERNAL_ERROR;
     if (!blynk->isReady())
-        return 2;
-    return 0;
+        return ERR_CLIENT_NOT_READY;
+    return ERR_OK;
 }
 
 void MP_BLYNK_VIRTUAL_BUTTON::printStatus() {

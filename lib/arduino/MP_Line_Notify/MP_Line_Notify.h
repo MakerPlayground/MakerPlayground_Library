@@ -13,7 +13,6 @@ public:
     int init();
 	void update(unsigned long currentTime);
 	void printStatus();
-	static const char* const* ERRORS;
 
     void notify(String message);
     void sendMessage(String message, MP_IMAGE image = MP_IMAGE());

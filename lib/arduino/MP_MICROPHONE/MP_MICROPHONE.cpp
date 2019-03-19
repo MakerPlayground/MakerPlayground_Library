@@ -1,10 +1,5 @@
 #include "MP_MICROPHONE.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_MICROPHONE::ERRORS = errors_p;
-
 MP_MICROPHONE::MP_MICROPHONE(uint8_t pin)
 	:pin(pin)
 {
@@ -14,7 +9,7 @@ int MP_MICROPHONE::init()
 {
 	this->soundLevel = 0;
 	pinMode(pin, INPUT);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_MICROPHONE::update(unsigned long current_time)

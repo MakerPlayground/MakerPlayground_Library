@@ -20,7 +20,6 @@ public:
     int init();
 	void update(unsigned long currentTime);
 	void printStatus();
-    static const char* const* ERRORS;
     
     void sendTelemetry(const Record& record);
     void sendTelemetry(const char* message);

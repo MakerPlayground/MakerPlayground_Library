@@ -1,11 +1,5 @@
 #include "MP_PMS7003.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_PMS7003::ERRORS = errors_p;
-
-
 MP_PMS7003::MP_PMS7003(uint8_t dust_tx, uint8_t dust_rx)
 	: ss(SoftwareSerial(dust_tx, dust_rx))
 	, pms(ss)
@@ -18,7 +12,7 @@ int MP_PMS7003::init()
 {
     ss.begin(9600);
 	pms.activeMode();
-	return 0;
+	return ERR_OK;
 }
 
 void MP_PMS7003::update(unsigned long current_time)

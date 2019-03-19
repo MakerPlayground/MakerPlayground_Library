@@ -4,10 +4,6 @@
 #define LINE_PORT 443
 #define LINE_TIMEOUT 10000
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-const char* const* MP_Line_Notify::ERRORS = errors_p;
-
 MP_Line_Notify::MP_Line_Notify(String token, MP_REST* rest)
     : token(token)
     , rest(rest)
@@ -17,7 +13,7 @@ MP_Line_Notify::MP_Line_Notify(String token, MP_REST* rest)
 
 int MP_Line_Notify::init()
 {
-    return 0;
+    return ERR_OK;
 }
 
 void MP_Line_Notify::update(unsigned long currentTime)

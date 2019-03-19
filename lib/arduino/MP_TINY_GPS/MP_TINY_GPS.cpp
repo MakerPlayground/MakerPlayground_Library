@@ -1,10 +1,5 @@
 #include "MP_TINY_GPS.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_TINY_GPS::ERRORS = errors_p;
-
 MP_TINY_GPS::MP_TINY_GPS(uint8_t gps_tx, uint8_t gps_rx, int baud)
 	:ss(SoftwareSerial(gps_tx, gps_rx))
 	,GPSBaud(baud)
@@ -15,7 +10,7 @@ int MP_TINY_GPS::init()
 {
 	isGPSDetected = false;
 	ss.begin(GPSBaud);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_TINY_GPS::update(unsigned long current_time) 
