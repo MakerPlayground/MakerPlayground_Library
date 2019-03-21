@@ -74,59 +74,204 @@
       "name": "Display",
       "action": [
         {
-          "name": "Show Text",
+          "name": "Show Text at Line",
           "parameter": [
             {
               "name": "Line",
-              "value": 1.0,
               "constraint": {
                 "min": 1.0,
                 "max": 10.0,
                 "unit": "NOT_SPECIFIED"
-              },
-              "datatype": "INTEGER",
-              "controltype": "SPINBOX"
+              }
             },
             {
               "name": "Text",
-              "value": "",
-              "constraint": [],
-              "datatype": "STRING",
-              "controltype": "TEXTBOX"
+              "constraint": []
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
             }
           ]
         },
         {
-          "name": "Show Number",
+          "name": "Show Text at Position",
           "parameter": [
             {
-              "name": "Line",
-              "value": 1.0,
+              "name": "X",
               "constraint": {
                 "min": 1.0,
                 "max": 10.0,
                 "unit": "NOT_SPECIFIED"
-              },
-              "datatype": "INTEGER",
-              "controltype": "SPINBOX"
+              }
+            },
+            {
+              "name": "Y",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Text",
+              "constraint": []
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Show Number at Line",
+          "parameter": [
+            {
+              "name": "Line",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
             },
             {
               "name": "Label",
-              "value": "",
-              "constraint": [],
-              "datatype": "STRING",
-              "controltype": "TEXTBOX"
+              "constraint": []
             },
             {
               "name": "Value",
-              "value": 1234.0,
               "constraint": {
                 "min": -99999.0,
                 "max": 99999.0,
                 "unit": "NOT_SPECIFIED"
-              },
-              "datatype": "DOUBLE",
-              "controltype": "SPINBOX"
+              }
+            },
+            {
+              "name": "Decimal places",
+              "constraint": {
+                "min": 0,
+                "max": 6,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Show Number at Position",
+          "parameter": [
+            {
+              "name": "X",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Y",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Label",
+              "constraint": [],
+              "datatype": "STRING"
+            },
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -99999.0,
+                "max": 99999.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Decimal places",
+              "constraint": {
+                "min": 0,
+                "max": 6,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Clear Line",
+          "parameter": [
+            {
+              "name": "Line",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
             }
           ]
         },
