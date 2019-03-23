@@ -1765,7 +1765,7 @@
           "name": "Display",
           "action": [
             {
-              "name": "Show Text",
+              "name": "Show Text at Line",
               "parameter": [
                 {
                   "name": "Line",
@@ -1778,11 +1778,72 @@
                 {
                   "name": "Text",
                   "constraint": []
+                },
+                {
+                  "name": "Size",
+                  "constraint": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ]
+                },
+                {
+                  "name": "Color",
+                  "constraint": [
+                    "White",
+                    "Red",
+                    "Green",
+                    "Blue",
+                    "Yellow"
+                  ]
                 }
               ]
             },
             {
-              "name": "Show Number",
+              "name": "Show Text at Position",
+              "parameter": [
+                {
+                  "name": "X",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Y",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Text",
+                  "constraint": []
+                },
+                {
+                  "name": "Size",
+                  "constraint": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ]
+                },
+                {
+                  "name": "Color",
+                  "constraint": [
+                    "White",
+                    "Red",
+                    "Green",
+                    "Blue",
+                    "Yellow"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Show Number at Line",
               "parameter": [
                 {
                   "name": "Line",
@@ -1803,6 +1864,105 @@
                     "max": 99999.0,
                     "unit": "NOT_SPECIFIED"
                   }
+                },
+                {
+                  "name": "Decimal places",
+                  "constraint": {
+                    "min": 0,
+                    "max": 6,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Size",
+                  "constraint": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ]
+                },
+                {
+                  "name": "Color",
+                  "constraint": [
+                    "White",
+                    "Red",
+                    "Green",
+                    "Blue",
+                    "Yellow"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Show Number at Position",
+              "parameter": [
+                {
+                  "name": "X",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Y",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Label",
+                  "constraint": [],
+                  "datatype": "STRING"
+                },
+                {
+                  "name": "Value",
+                  "constraint": {
+                    "min": -99999.0,
+                    "max": 99999.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Decimal places",
+                  "constraint": {
+                    "min": 0,
+                    "max": 6,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Size",
+                  "constraint": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ]
+                },
+                {
+                  "name": "Color",
+                  "constraint": [
+                    "White",
+                    "Red",
+                    "Green",
+                    "Blue",
+                    "Yellow"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Clear Line",
+              "parameter": [
+                {
+                  "name": "Line",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
                 }
               ]
             },
@@ -1811,7 +1971,8 @@
               "parameter": []
             }
           ],
-          "value": []
+          "value": [],
+          "count": ""
         }
       ]
     }
