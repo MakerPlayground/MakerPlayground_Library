@@ -121,9 +121,18 @@ double MP_NETPIE_MPBASEBOARD::getValue(char* topic)
 
 void MP_NETPIE_MPBASEBOARD::writeFeed(char* feedId, String data, char* apiKey)
 {
-    // TODO: implement write feed for MP
+    Serial1.print(F("F,"));
+    Serial1.print(feedId);
+    Serial1.print(F(","));
+    Serial1.print(data);
+    Serial1.print(F(","));
+    Serial1.println(apiKey);
+    checkResponse();
 }
 
 void MP_NETPIE_MPBASEBOARD::notify(char* message)
 {
+    Serial1.print(F("O,"));
+    Serial1.println(message);
+    checkResponse();
 }
