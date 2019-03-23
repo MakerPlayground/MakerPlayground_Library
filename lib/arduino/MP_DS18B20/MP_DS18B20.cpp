@@ -5,8 +5,6 @@
 #define REFRESH_INTERVAL 100
 #define TEMPERATURE_PRECISION 9
 
-const char* const* MP_DS18B20::ERRORS = errors_p;
-
 MP_DS18B20::MP_DS18B20(uint8_t pin)
     : wire(OneWire(pin))
     , sensors(DallasTemperature(&wire))

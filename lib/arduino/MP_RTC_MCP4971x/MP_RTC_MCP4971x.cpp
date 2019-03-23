@@ -3,12 +3,6 @@
 
 #define REFRESH_INTERVAL 50
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Could not connect to sensor via I2C bus";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_RTC_MCP4971x::ERRORS = errors_p;
-
 MP_RTC_MCP4971x::MP_RTC_MCP4971x()
     : rtc(MCP7941x())
 {

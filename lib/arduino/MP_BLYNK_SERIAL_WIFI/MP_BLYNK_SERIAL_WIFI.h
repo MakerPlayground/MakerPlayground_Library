@@ -13,7 +13,6 @@ public:
 	int init();
 	void update(unsigned long time);
 	void printStatus();
-	// static const char* const* ERRORS; // removed since the ERRORS are already declared in MP_BLYNK
 
 	bool isReady();
 	int readVirtualPin(uint8_t pin);   // pin = 0-7

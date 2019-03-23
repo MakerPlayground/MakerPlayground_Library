@@ -2,12 +2,6 @@
 
 #define GRAVITY 9.81
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Cannot connect to device";
-const char* const errors_p[] PROGMEM = {ok, error1};
-
-const char* const* MP_MPU6050::ERRORS = errors_p;
-
 MP_MPU6050::MP_MPU6050(bool ad0high)
 	: accel_x(0.0)
 	, accel_y(0.0)

@@ -1,12 +1,5 @@
 #include "MP_BLYNK_WIDGET_MAP.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "no Blynk object";
-const char error2[] PROGMEM = "Blynk is not ready";
-const char* const errors_p[] PROGMEM = {ok, error1, error2};
-
-const char* const* MP_BLYNK_WIDGET_MAP::ERRORS = errors_p;
-
 #define SEND_INTERVAL 100
 
 MP_BLYNK_WIDGET_MAP::MP_BLYNK_WIDGET_MAP(uint8_t v_pin, uint8_t pinIndex, MP_BLYNK* blynk) :

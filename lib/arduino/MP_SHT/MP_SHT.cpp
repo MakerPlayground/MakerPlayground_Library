@@ -1,7 +1,5 @@
 #include "MP_SHT.h"
 
-const char* const* MP_SHT::ERRORS = errors_p;
-
 MP_SHT::MP_SHT()
 {
 }

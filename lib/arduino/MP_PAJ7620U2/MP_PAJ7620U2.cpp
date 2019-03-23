@@ -1,11 +1,5 @@
 #include "MP_PAJ7620U2.h"
 
-const char ok[] PROGMEM = "OK";
-const char error1[] PROGMEM = "Something went wrong during PAJ7620U2 init!";
-const char *const errors_p[] PROGMEM = {ok, error1};
-
-const char *const *MP_PAJ7620U2::ERRORS = errors_p;
-
 #define GES_REACTION_TIME 500
 #define GES_ENTRY_TIME 800
 #define GES_QUIT_TIME 1000
