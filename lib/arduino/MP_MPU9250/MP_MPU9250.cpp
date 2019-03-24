@@ -2,11 +2,6 @@
 
 #define GRAVITY 9.81
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_MPU9250::ERRORS = errors_p;
-
 MP_MPU9250::MP_MPU9250()
 	: accelMagnitude(0.0)
 	, nextUpdateTime(0)
@@ -20,7 +15,7 @@ int MP_MPU9250::init()
     imu.calibrateMPU9250(imu.gyroBias, imu.accelBias);
     imu.initMPU9250();
     imu.initAK8963(imu.magCalibration);
-	return 0;
+	return ERR_OK;
 }
 
 void MP_MPU9250::update(unsigned long current_time)

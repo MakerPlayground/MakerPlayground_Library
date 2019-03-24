@@ -1,11 +1,5 @@
 #include "MP_PMS7003_SERIAL2.h"
 
-const char ok[] PROGMEM = "OK";
-const char* const errors_p[] PROGMEM = {ok};
-
-const char* const* MP_PMS7003_SERIAL2::ERRORS = errors_p;
-
-
 MP_PMS7003_SERIAL2::MP_PMS7003_SERIAL2()
 	: pms(Serial2)
 	, isDataCorrected(false)
@@ -17,7 +11,7 @@ int MP_PMS7003_SERIAL2::init()
 {
     Serial2.begin(9600);
 	pms.activeMode();
-	return 0;
+	return ERR_OK;
 }
 
 void MP_PMS7003_SERIAL2::update(unsigned long current_time)
