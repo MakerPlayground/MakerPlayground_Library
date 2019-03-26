@@ -92,7 +92,7 @@ double MP_MPU9250::getAccel_X()
 	return imu.ax;
 }
 
-double MP_MPU9250::getAcces_Y()
+double MP_MPU9250::getAccel_Y()
 {
 	return imu.ay;
 }

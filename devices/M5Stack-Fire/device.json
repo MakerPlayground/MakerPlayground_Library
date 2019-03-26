@@ -113,6 +113,38 @@
       "angle": 180.0
     },
     {
+      "name": "I2C (OLED)",
+      "type": "INTERNAL",
+      "sub_type": "RIGHTANGLE_TOP",
+      "function": [
+        {
+          "type": "GROVE_I2C_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5,
+      "v_max": 5,
+      "x": 0.0,
+      "y": 0.0,
+      "angle": 0.0
+    },
+    {
+      "name": "I2C (IMU)",
+      "type": "INTERNAL",
+      "sub_type": "RIGHTANGLE_TOP",
+      "function": [
+        {
+          "type": "GROVE_I2C_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5,
+      "v_max": 5,
+      "x": 0.0,
+      "y": 0.0,
+      "angle": 0.0
+    },
+    {
       "name": "25",
       "type": "INTERNAL",
       "function": [
@@ -183,6 +215,8 @@
     "GROVE_PWM_DUAL_1",
     "GROVE_PWM_DUAL_2",
     "GROVE_I2C_1",
+    "GROVE_I2C_2",
+    "GROVE_I2C_3",
     "GROVE_UART_1"
   ],
   "compatibility": [],
@@ -417,7 +451,7 @@
           "type": "INTERNAL",
           "function": [
             {
-              "type": "GROVE_I2C_1",
+              "type": "GROVE_I2C_2",
               "pintype": "INOUT"
             }
           ],
@@ -428,7 +462,7 @@
         }
       ],
       "connectivity": [
-        "GROVE_I2C_1"
+        "GROVE_I2C_2"
       ],
       "compatibility": [
         {
@@ -663,7 +697,7 @@
           "type": "INTERNAL",
           "function": [
             {
-              "type": "GROVE_I2C_1",
+              "type": "GROVE_I2C_3",
               "pintype": "INOUT"
             }
           ],
@@ -674,7 +708,7 @@
         }
       ],
       "connectivity": [
-        "GROVE_I2C_1"
+        "GROVE_I2C_3"
       ],
       "compatibility": [
         {

@@ -16,7 +16,7 @@ public:
 	void printStatus();
 
 	double getAccel_X();
-	double getAcces_Y();
+	double getAccel_Y();
 	double getAccel_Z();
 	double getAccel_Magnitude();
 
