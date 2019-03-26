@@ -494,10 +494,23 @@
                 {
                   "name": "Color",
                   "constraint": [
+                    "Blue",
+                    "Cyan",
+                    "Dark Cyan",
+                    "Dark Green",
+                    "Dark Grey",
+                    "Green",
+                    "Green Yellow",
+                    "Light Grey",
+                    "Magenta",
+                    "Maroon",
+                    "Navy",
+                    "Olive",
+                    "Orange",
+                    "Pink",
+                    "Purple",
                     "White",
                     "Red",
-                    "Green",
-                    "Blue",
                     "Yellow"
                   ]
                 }
@@ -510,7 +523,7 @@
                   "name": "X",
                   "constraint": {
                     "min": 1.0,
-                    "max": 10.0,
+                    "max": 1000.0,
                     "unit": "NOT_SPECIFIED"
                   }
                 },
@@ -518,7 +531,7 @@
                   "name": "Y",
                   "constraint": {
                     "min": 1.0,
-                    "max": 10.0,
+                    "max": 1000.0,
                     "unit": "NOT_SPECIFIED"
                   }
                 },
@@ -537,10 +550,23 @@
                 {
                   "name": "Color",
                   "constraint": [
+                    "Blue",
+                    "Cyan",
+                    "Dark Cyan",
+                    "Dark Green",
+                    "Dark Grey",
+                    "Green",
+                    "Green Yellow",
+                    "Light Grey",
+                    "Magenta",
+                    "Maroon",
+                    "Navy",
+                    "Olive",
+                    "Orange",
+                    "Pink",
+                    "Purple",
                     "White",
                     "Red",
-                    "Green",
-                    "Blue",
                     "Yellow"
                   ]
                 }
@@ -588,10 +614,23 @@
                 {
                   "name": "Color",
                   "constraint": [
+                    "Blue",
+                    "Cyan",
+                    "Dark Cyan",
+                    "Dark Green",
+                    "Dark Grey",
+                    "Green",
+                    "Green Yellow",
+                    "Light Grey",
+                    "Magenta",
+                    "Maroon",
+                    "Navy",
+                    "Olive",
+                    "Orange",
+                    "Pink",
+                    "Purple",
                     "White",
                     "Red",
-                    "Green",
-                    "Blue",
                     "Yellow"
                   ]
                 }
@@ -604,7 +643,7 @@
                   "name": "X",
                   "constraint": {
                     "min": 1.0,
-                    "max": 10.0,
+                    "max": 1000.0,
                     "unit": "NOT_SPECIFIED"
                   }
                 },
@@ -612,14 +651,13 @@
                   "name": "Y",
                   "constraint": {
                     "min": 1.0,
-                    "max": 10.0,
+                    "max": 1000.0,
                     "unit": "NOT_SPECIFIED"
                   }
                 },
                 {
                   "name": "Label",
-                  "constraint": [],
-                  "datatype": "STRING"
+                  "constraint": []
                 },
                 {
                   "name": "Value",
@@ -648,10 +686,23 @@
                 {
                   "name": "Color",
                   "constraint": [
+                    "Blue",
+                    "Cyan",
+                    "Dark Cyan",
+                    "Dark Green",
+                    "Dark Grey",
+                    "Green",
+                    "Green Yellow",
+                    "Light Grey",
+                    "Magenta",
+                    "Maroon",
+                    "Navy",
+                    "Olive",
+                    "Orange",
+                    "Pink",
+                    "Purple",
                     "White",
                     "Red",
-                    "Green",
-                    "Blue",
                     "Yellow"
                   ]
                 }
