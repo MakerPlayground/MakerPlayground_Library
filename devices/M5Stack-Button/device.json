@@ -1,0 +1,57 @@
+{
+  "id": "M5Stack-Button",
+  "brand": "M5Stack",
+  "model": "Button",
+  "url": "https://docs.m5stack.com/#/en/unit/button",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "width": 138.0,
+  "height": 184.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 69,
+      "y": 173
+    }
+  ],
+  "connectivity": [
+    "GROVE_GPIO_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Button",
+      "action": [
+        {
+          "name": "Press",
+          "parameter": []
+        },
+        {
+          "name": "Press and release",
+          "parameter": []
+        },
+        {
+          "name": "Not press",
+          "parameter": []
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    }
+  ]
+}

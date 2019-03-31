@@ -1,0 +1,120 @@
+{
+  "id": "M5Stack-ENV",
+  "brand": "M5Stack",
+  "model": "ENV",
+  "url": "https://docs.m5stack.com/#/en/unit/env",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "width": 100.8,
+  "height": 108.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 69,
+      "y": 173
+    }
+  ],
+  "connectivity": [
+    "GROVE_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Temperature",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Temperature",
+          "constraint": {
+            "min": 20.0,
+            "max": 60.0,
+            "unit": "CELSIUS"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Humidity",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Humidity",
+          "constraint": {
+            "min": 20.0,
+            "max": 95.0,
+            "unit": "PERCENT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pressuremeter",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Pressure",
+          "constraint": {
+            "min": 300.0,
+            "max": 1100.0,
+            "unit": "HECTOPASCAL"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Altimeter",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Altitude",
+          "constraint": {
+            "min": -698.43,
+            "max": 9165.37,
+            "unit": "METER"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_M5STACK_ENV",
+      "library_dependency": [
+        "dplasa/dht",
+        "adafruit/Adafruit_BMP280_Library-1.0.2",
+        "adafruit/Adafruit_Sensor",
+        "M5Stack/M5Stack-0.2.5"
+      ]
+    }
+  ]
+}

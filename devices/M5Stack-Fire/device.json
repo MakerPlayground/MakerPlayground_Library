@@ -55,6 +55,10 @@
         {
           "type": "GROVE_PWM_DUAL_1",
           "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5,
@@ -217,7 +221,9 @@
     "GROVE_I2C_1",
     "GROVE_I2C_2",
     "GROVE_I2C_3",
-    "GROVE_UART_1"
+    "GROVE_UART_1",
+    "GROVE_ANALOG_SINGLE_1",
+    "GROVE_ANALOG_SINGLE_2"
   ],
   "compatibility": [],
   "integrated_device": [

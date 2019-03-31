@@ -1,0 +1,63 @@
+{
+  "id": "M5Stack-PIR",
+  "brand": "M5Stack",
+  "model": "PIR",
+  "url": "https://docs.m5stack.com/#/en/unit/pir",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "width": 138.0,
+  "height": 184.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.0,
+      "v_max": 5.0,
+      "x": 0.0,
+      "y": 0.0
+    }
+  ],
+  "connectivity": [
+    "GROVE_GPIO_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Presence",
+      "action": [
+        {
+          "name": "Detect Human",
+          "parameter": [
+            {
+              "name": "isDetected",
+              "constraint": []
+            }
+          ]
+        },
+        {
+          "name": "No Human",
+          "parameter": [
+            {
+              "name": "isNotDetected",
+              "constraint": []
+            }
+          ]
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_PIR",
+      "library_dependency": []
+    }
+  ]
+}

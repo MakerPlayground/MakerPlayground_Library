@@ -1,0 +1,58 @@
+{
+  "id": "M5Stack-Angle",
+  "brand": "M5Stack",
+  "model": "Angle",
+  "url": "https://docs.m5stack.com/#/en/unit/angle",
+  "type": "PERIPHERAL",
+  "formfactor": "GROVE",
+  "width": 138.0,
+  "height": 184.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "GROVE",
+      "function": [
+        {
+          "type": "GROVE_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 69,
+      "y": 173
+    }
+  ],
+  "connectivity": [
+    "GROVE_ANALOG_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "POT",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Percent",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_TRIMPOT",
+      "library_dependency": []
+    }
+  ]
+}
