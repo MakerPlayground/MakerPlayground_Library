@@ -10,6 +10,7 @@
 #include <SD.h>
 #include <Wire.h>
 #include <M5Display.h>
+#include <M5Stack.h>
 
 class MP_OLED_M5Stack
 {
@@ -28,7 +29,8 @@ public:
 
 private:
     M5Display display;
-	void show();
+	bool isDirty = false;
+	unsigned long last_update = 0;
 	uint8_t getSizeFromSizeName(char* size);
 	uint16_t getColorFromColorName(char* color);
 

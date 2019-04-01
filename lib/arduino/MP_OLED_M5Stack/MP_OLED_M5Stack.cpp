@@ -2,6 +2,7 @@
 
 #define SCREEN_WIDTH 320 // OLED display width, in pixels
 #define SCREEN_HEIGHT 240 // OLED display height, in pixels
+#define UPDATE_INTERVAL 500
 
 MP_OLED_M5Stack::MP_OLED_M5Stack()
 {
@@ -10,52 +11,52 @@ MP_OLED_M5Stack::MP_OLED_M5Stack()
 int MP_OLED_M5Stack::init()
 {
     display.begin();
+    display.setFreeFont(&FreeSans9pt7b);
     clearScreen();
     return ERR_OK;
 }
 
 void MP_OLED_M5Stack::update(unsigned long current_time)
 {
+    if (current_time - last_update > UPDATE_INTERVAL && isDirty) {
+        display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
+        int currentY = 0;
+        for (int i=0; i < MAX_ENTRY_COUNT; i++) {
+            currentY += (entries[i].size * 14);
+            if (entries[i].message[0]) {
+                display.setTextColor(entries[i].color);
+                display.setTextSize(entries[i].size);
+                display.setCursor(0, currentY);
+                display.print(entries[i].message);
+            }
+        }
+        for (int i=0; i < entryWithPositionCount; i++) {
+            if (entriesWithPosition[i].message[0]) {
+                display.setTextColor(entriesWithPosition[i].color);
+                display.setTextSize(entriesWithPosition[i].size);
+                display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
+                display.print(entriesWithPosition[i].message);
+            }
+        }
+        display.display();
+        last_update = current_time;
+    }
 }
 
 void MP_OLED_M5Stack::printStatus()
 {
 }
 
-void MP_OLED_M5Stack::show()
-{
-    display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
-    int currentY = 0;
-    for (int i=0; i < MAX_ENTRY_COUNT; i++) {
-        if (entries[i].message[0]) {
-            display.setTextColor(entries[i].color);
-            display.setTextSize(entries[i].size);
-            display.setCursor(0, currentY);
-            display.print(entries[i].message);
-        }
-        currentY += (entries[i].size << 3);
-    }
-    for (int i=0; i < entryWithPositionCount; i++) {
-        if (entriesWithPosition[i].message[0]) {
-            display.setTextColor(entriesWithPosition[i].color);
-            display.setTextSize(entriesWithPosition[i].size);
-            display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
-            display.print(entriesWithPosition[i].message);
-        }
-    }
-    display.display();
-}
-
 uint8_t MP_OLED_M5Stack::getSizeFromSizeName(char* size)
 {
     if (strcmp(size, "Small") == 0) {
-        return 2;
+        return 1;
     } else if(strcmp(size, "Medium") == 0) {
-        return 4;
+        return 2;
     } else if(strcmp(size, "Large") == 0) {
-        return 6;
+        return 3;
     }
-    return 2;
+    return 1;
 }
 
 uint16_t MP_OLED_M5Stack::getColorFromColorName(char* color)
@@ -107,7 +108,7 @@ void MP_OLED_M5Stack::showTextAtLine(int line, char* text, char* size, char* col
         strcpy(entries[lineIndex].message, text);
         entries[lineIndex].size = getSizeFromSizeName(size);
         entries[lineIndex].color = getColorFromColorName(color);
-        show();
+        isDirty = true;
     }
 }
 
@@ -149,7 +150,7 @@ void MP_OLED_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, c
         entriesWithPosition[storingIndex].y = y;
         entriesWithPosition[storingIndex].size = getSizeFromSizeName(size);
         entriesWithPosition[storingIndex].color = getColorFromColorName(color);
-        show();
+        isDirty = true;
     }
 }
 

@@ -5,8 +5,8 @@
   "url": "http://www.plantower.com/en/content/?110.html",
   "type": "PERIPHERAL",
   "formfactor": "STANDALONE",
-  "width": 74.0,
-  "height": 110.0,
+  "width": 323.0,
+  "height": 256.0,
   "property": [],
   "port": [
     {
@@ -20,8 +20,8 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 45,
-      "y": 28
+      "x": 6,
+      "y": 67
     },
     {
       "name": "GND",
@@ -34,8 +34,8 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 54,
-      "y": 29
+      "x": 6,
+      "y": 72
     },
     {
       "name": "TX",
@@ -48,8 +48,8 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 68.0,
-      "y": 28.0
+      "x": 6,
+      "y": 62
     },
     {
       "name": "RX",
@@ -62,8 +62,8 @@
       ],
       "v_min": 5.0,
       "v_max": 5.0,
-      "x": 60,
-      "y": 28.0
+      "x": 6,
+      "y": 57
     }
   ],
   "connectivity": [
