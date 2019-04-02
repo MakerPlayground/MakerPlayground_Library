@@ -31,11 +31,11 @@ private:
     M5Display display;
 	bool isDirty = false;
 	unsigned long last_update = 0;
-	uint8_t getSizeFromSizeName(char* size);
+	const GFXfont * getFontFromSizeName(char* size);
 	uint16_t getColorFromColorName(char* color);
 
 	struct messageEntry {
-		uint8_t size = 1;
+		const GFXfont *font = NULL;
 		uint16_t color = 1;
 		char message[32] = "";
 	};
@@ -43,7 +43,7 @@ private:
 	struct messageEntryWithPosition {
 		uint8_t x = -1;
 		uint8_t y = -1;
-		uint8_t size = 1;
+		const GFXfont *font = NULL;
 		uint16_t color = 1;
 		char message[32] = "";
 	};

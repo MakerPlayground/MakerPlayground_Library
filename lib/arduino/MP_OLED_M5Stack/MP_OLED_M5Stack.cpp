@@ -22,10 +22,25 @@ void MP_OLED_M5Stack::update(unsigned long current_time)
         display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
         int currentY = 0;
         for (int i=0; i < MAX_ENTRY_COUNT; i++) {
-            currentY += (entries[i].size * 14);
+            if (entries[i].font == &FreeSansBold9pt7b) {
+                currentY += 16;
+            }
+            else if (entries[i].font == &FreeSansBold12pt7b) {
+                currentY += 20;
+            }
+            else if (entries[i].font == &FreeSansBold18pt7b) {
+                currentY += 28;
+            }
+            else if (entries[i].font == &FreeSansBold24pt7b) {
+                currentY += 36;
+            }
+            else {
+                currentY += 16;
+            }
+
             if (entries[i].message[0]) {
                 display.setTextColor(entries[i].color);
-                display.setTextSize(entries[i].size);
+                display.setFreeFont(entries[i].font);
                 display.setCursor(0, currentY);
                 display.print(entries[i].message);
             }
@@ -33,7 +48,7 @@ void MP_OLED_M5Stack::update(unsigned long current_time)
         for (int i=0; i < entryWithPositionCount; i++) {
             if (entriesWithPosition[i].message[0]) {
                 display.setTextColor(entriesWithPosition[i].color);
-                display.setTextSize(entriesWithPosition[i].size);
+                display.setFreeFont(entries[i].font);
                 display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
                 display.print(entriesWithPosition[i].message);
             }
@@ -47,16 +62,16 @@ void MP_OLED_M5Stack::printStatus()
 {
 }
 
-uint8_t MP_OLED_M5Stack::getSizeFromSizeName(char* size)
+const GFXfont * MP_OLED_M5Stack::getFontFromSizeName(char* size)
 {
     if (strcmp(size, "Small") == 0) {
-        return 1;
+        return &FreeSansBold9pt7b;
     } else if(strcmp(size, "Medium") == 0) {
-        return 2;
+        return &FreeSansBold18pt7b;
     } else if(strcmp(size, "Large") == 0) {
-        return 3;
+        return &FreeSansBold24pt7b;
     }
-    return 1;
+    return &FreeSansBold9pt7b;
 }
 
 uint16_t MP_OLED_M5Stack::getColorFromColorName(char* color)
@@ -106,7 +121,7 @@ void MP_OLED_M5Stack::showTextAtLine(int line, char* text, char* size, char* col
     int lineIndex = line - 1;
     if (lineIndex >= 0 && lineIndex < MAX_ENTRY_COUNT) {
         strcpy(entries[lineIndex].message, text);
-        entries[lineIndex].size = getSizeFromSizeName(size);
+        entries[lineIndex].font = getFontFromSizeName(size);
         entries[lineIndex].color = getColorFromColorName(color);
         isDirty = true;
     }
@@ -148,7 +163,7 @@ void MP_OLED_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, c
         strcpy(entriesWithPosition[storingIndex].message, text);
         entriesWithPosition[storingIndex].x = x;
         entriesWithPosition[storingIndex].y = y;
-        entriesWithPosition[storingIndex].size = getSizeFromSizeName(size);
+        entriesWithPosition[storingIndex].font = getFontFromSizeName(size);
         entriesWithPosition[storingIndex].color = getColorFromColorName(color);
         isDirty = true;
     }
@@ -179,11 +194,11 @@ void MP_OLED_M5Stack::clearScreen()
 {
     for (int i=0; i<MAX_ENTRY_COUNT; i++) {
         strcpy(entries[i].message, "");
-        entries[i].size = getSizeFromSizeName("Small");
+        entries[i].font = getFontFromSizeName("Small");
     }
     for (int i=0; i<entryWithPositionCount; i++) {
         strcpy(entriesWithPosition[i].message, "");
-        entriesWithPosition[i].size = getSizeFromSizeName("Small");
+        entriesWithPosition[i].font = getFontFromSizeName("Small");
         entriesWithPosition[i].x = -1;
         entriesWithPosition[i].y = -1;
     }
