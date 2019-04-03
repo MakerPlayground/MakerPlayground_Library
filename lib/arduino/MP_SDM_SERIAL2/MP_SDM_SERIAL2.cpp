@@ -7,6 +7,7 @@ MP_SDM_SERIAL2::MP_SDM_SERIAL2()
 
 int MP_SDM_SERIAL2::init()
 {
+    sdm.begin();
 	return ERR_OK;
 }
 
