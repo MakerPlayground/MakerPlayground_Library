@@ -1,8 +1,8 @@
 {
-  "id": "M5Stack-PIR",
+  "id": "M5Stack-Relay",
   "brand": "M5Stack",
-  "model": "PIR",
-  "url": "https://docs.m5stack.com/#/en/unit/pir",
+  "model": "Relay",
+  "url": "https://www.seeedstudio.com/Grove-Relay-p-769.html",
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "width": 138.0,
@@ -18,7 +18,7 @@
           "pintype": "INOUT"
         }
       ],
-      "v_min": 3.0,
+      "v_min": 3.3,
       "v_max": 5.0,
       "x": 69,
       "y": 173
@@ -29,25 +29,15 @@
   ],
   "compatibility": [
     {
-      "name": "Presence",
+      "name": "Relay Module",
       "action": [
         {
-          "name": "Detect Human",
-          "parameter": [
-            {
-              "name": "isDetected",
-              "constraint": []
-            }
-          ]
+          "name": "On",
+          "parameter": []
         },
         {
-          "name": "No Human",
-          "parameter": [
-            {
-              "name": "isNotDetected",
-              "constraint": []
-            }
-          ]
+          "name": "Off",
+          "parameter": []
         }
       ],
       "value": []
@@ -56,7 +46,7 @@
   "platforms": [
     {
       "platform": "ARDUINO_ESP32",
-      "classname": "MP_PIR",
+      "classname": "MP_RELAY",
       "library_dependency": []
     }
   ]
