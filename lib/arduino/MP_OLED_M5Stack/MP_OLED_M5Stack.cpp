@@ -48,7 +48,7 @@ void MP_OLED_M5Stack::update(unsigned long current_time)
         for (int i=0; i < entryWithPositionCount; i++) {
             if (entriesWithPosition[i].message[0]) {
                 display.setTextColor(entriesWithPosition[i].color);
-                display.setFreeFont(entries[i].font);
+                display.setFreeFont(entriesWithPosition[i].font);
                 display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
                 display.print(entriesWithPosition[i].message);
             }
