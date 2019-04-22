@@ -25,7 +25,6 @@ void (*currentNode)(void);
 uint8_t status_code = 0;
 unsigned long currentTime = 0;
 unsigned long latestLogTime = 0;
-unsigned long delayEndTime = 0;
 
 void update();
 
