@@ -29,11 +29,6 @@ unsigned long delayEndTime = 0;
 
 void update();
 
-void loop() {
-    update();
-    currentNode();
-}
-
 void evaluateExpression(Task task, Expr expr[], int numExpr) {
     if (task != NULL) {
         for (int i=0; i<numExpr; i++) {
