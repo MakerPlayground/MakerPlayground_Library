@@ -6,7 +6,7 @@
   "type": "PERIPHERAL",
   "formfactor": "GROVE",
   "width": 138.0,
-  "height": 184.0,
+  "height": 271.0,
   "property": [],
   "port": [
     {
@@ -21,7 +21,7 @@
       "v_min": 3.3,
       "v_max": 5.0,
       "x": 69,
-      "y": 173
+      "y": 271
     }
   ],
   "connectivity": [
