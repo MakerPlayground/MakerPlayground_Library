@@ -21,7 +21,6 @@ struct Expr {
     unsigned long latestUpdateTime = 0;
 };
 
-void (*currentNode)(void);
 uint8_t status_code = 0;
 unsigned long currentTime = 0;
 unsigned long latestLogTime = 0;
