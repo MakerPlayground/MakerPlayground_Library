@@ -1,14 +1,14 @@
-#include "MP_OLED_M5Stack.h"
+#include "MP_TFT_M5Stack.h"
 
 #define SCREEN_WIDTH 320 // OLED display width, in pixels
 #define SCREEN_HEIGHT 240 // OLED display height, in pixels
 #define UPDATE_INTERVAL 500
 
-MP_OLED_M5Stack::MP_OLED_M5Stack()
+MP_TFT_M5Stack::MP_TFT_M5Stack()
 {
 }
 
-int MP_OLED_M5Stack::init()
+int MP_TFT_M5Stack::init()
 {
     display.begin();
     display.setFreeFont(&FreeSans9pt7b);
@@ -16,7 +16,7 @@ int MP_OLED_M5Stack::init()
     return ERR_OK;
 }
 
-void MP_OLED_M5Stack::update(unsigned long current_time)
+void MP_TFT_M5Stack::update(unsigned long current_time)
 {
     if (current_time - last_update > UPDATE_INTERVAL && isDirty) {
         display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
@@ -58,11 +58,11 @@ void MP_OLED_M5Stack::update(unsigned long current_time)
     }
 }
 
-void MP_OLED_M5Stack::printStatus()
+void MP_TFT_M5Stack::printStatus()
 {
 }
 
-const GFXfont * MP_OLED_M5Stack::getFontFromSizeName(char* size)
+const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(char* size)
 {
     if (strcmp(size, "Small") == 0) {
         return &FreeSansBold9pt7b;
@@ -74,7 +74,7 @@ const GFXfont * MP_OLED_M5Stack::getFontFromSizeName(char* size)
     return &FreeSansBold9pt7b;
 }
 
-uint16_t MP_OLED_M5Stack::getColorFromColorName(char* color)
+uint16_t MP_TFT_M5Stack::getColorFromColorName(char* color)
 {
     if (strcmp(color, "Navy") == 0) {
         return TFT_NAVY;
@@ -116,7 +116,7 @@ uint16_t MP_OLED_M5Stack::getColorFromColorName(char* color)
     return TFT_WHITE;
 }
 
-void MP_OLED_M5Stack::showTextAtLine(int line, char* text, char* size, char* color)
+void MP_TFT_M5Stack::showTextAtLine(int line, char* text, char* size, char* color)
 {
     int lineIndex = line - 1;
     if (lineIndex >= 0 && lineIndex < MAX_ENTRY_COUNT) {
@@ -127,7 +127,7 @@ void MP_OLED_M5Stack::showTextAtLine(int line, char* text, char* size, char* col
     }
 }
 
-void MP_OLED_M5Stack::showNumberAtLine(int line, char* label, double value, double decimalPlaces, char* size, char* color)
+void MP_TFT_M5Stack::showNumberAtLine(int line, char* label, double value, double decimalPlaces, char* size, char* color)
 {
     char* p;
     char buff[33] = "";
@@ -143,7 +143,7 @@ void MP_OLED_M5Stack::showNumberAtLine(int line, char* label, double value, doub
     showTextAtLine(line, buff, size, color);
 }
 
-void MP_OLED_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, char* color)
+void MP_TFT_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, char* color)
 {
     if (x >= 0 && x < SCREEN_WIDTH && y >= 0 && y < SCREEN_HEIGHT) {
         int storingIndex = -1;
@@ -169,7 +169,7 @@ void MP_OLED_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, c
     }
 }
 
-void MP_OLED_M5Stack::showNumberAtPosition(int x, int y, char* label, double value, double decimalPlaces, char* size, char* color)
+void MP_TFT_M5Stack::showNumberAtPosition(int x, int y, char* label, double value, double decimalPlaces, char* size, char* color)
 {
     char* p;
     char buff[33] = "";
@@ -185,12 +185,12 @@ void MP_OLED_M5Stack::showNumberAtPosition(int x, int y, char* label, double val
     showTextAtPosition(x, y, buff, size, color);
 }
 
-void MP_OLED_M5Stack::clearLine(int line)
+void MP_TFT_M5Stack::clearLine(int line)
 {
     strcpy(entries[line-1].message, "");
 }
 
-void MP_OLED_M5Stack::clearScreen()
+void MP_TFT_M5Stack::clearScreen()
 {
     for (int i=0; i<MAX_ENTRY_COUNT; i++) {
         strcpy(entries[i].message, "");

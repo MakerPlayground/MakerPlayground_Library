@@ -1,5 +1,5 @@
-#ifndef MP_OLED_M5Stack_H
-#define MP_OLED_M5Stack_H
+#ifndef MP_TFT_M5Stack_H
+#define MP_TFT_M5Stack_H
 
 #define MAX_ENTRY_COUNT 10
 
@@ -12,10 +12,10 @@
 #include <M5Display.h>
 #include <M5Stack.h>
 
-class MP_OLED_M5Stack
+class MP_TFT_M5Stack
 {
 public:
-	MP_OLED_M5Stack();
+	MP_TFT_M5Stack();
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

@@ -203,6 +203,20 @@
       "v_max": 5,
       "x": 0,
       "y": 0
+    },
+    {
+      "name": "SPI",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "SPI_0",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5,
+      "v_max": 5,
+      "x": 0,
+      "y": 0
     }
   ],
   "connectivity": [
@@ -223,7 +237,8 @@
     "GROVE_I2C_3",
     "GROVE_UART_1",
     "GROVE_ANALOG_SINGLE_1",
-    "GROVE_ANALOG_SINGLE_2"
+    "GROVE_ANALOG_SINGLE_2",
+    "SPI_0"
   ],
   "compatibility": [],
   "integrated_device": [
@@ -441,11 +456,11 @@
       ]
     },
     {
-      "name": "Integrated OLED",
+      "name": "Integrated TFT LCD",
       "platforms": [
         {
           "platform": "ARDUINO_ESP32",
-          "classname": "MP_OLED_M5Stack",
+          "classname": "MP_TFT_M5Stack",
           "library_dependency": [
             "M5Stack/M5Stack-0.2.5"
           ]
@@ -453,11 +468,11 @@
       ],
       "port": [
         {
-          "name": "I2C",
+          "name": "SPI",
           "type": "INTERNAL",
           "function": [
             {
-              "type": "GROVE_I2C_2",
+              "type": "SPI_0",
               "pintype": "INOUT"
             }
           ],
@@ -468,7 +483,7 @@
         }
       ],
       "connectivity": [
-        "GROVE_I2C_2"
+        "SPI_0"
       ],
       "compatibility": [
         {
