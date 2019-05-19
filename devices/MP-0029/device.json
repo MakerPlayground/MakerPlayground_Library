@@ -1,0 +1,273 @@
+{
+  "id": "MP-0029",
+  "brand": "Maker Playground",
+  "model": "OLED Screen",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "BREAKOUT_BOARD_ONESIDE",
+  "width": 153.0,
+  "height": 153.0,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 76.0,
+      "y": 153.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Display",
+      "action": [
+        {
+          "name": "Show Text at Line",
+          "parameter": [
+            {
+              "name": "Line",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Text",
+              "constraint": []
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Show Text at Position",
+          "parameter": [
+            {
+              "name": "X",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Y",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Text",
+              "constraint": []
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Show Number at Line",
+          "parameter": [
+            {
+              "name": "Line",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Label",
+              "constraint": []
+            },
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -99999.0,
+                "max": 99999.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Decimal places",
+              "constraint": {
+                "min": 0,
+                "max": 6,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Show Number at Position",
+          "parameter": [
+            {
+              "name": "X",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Y",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Label",
+              "constraint": [],
+              "datatype": "STRING"
+            },
+            {
+              "name": "Value",
+              "constraint": {
+                "min": -99999.0,
+                "max": 99999.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Decimal places",
+              "constraint": {
+                "min": 0,
+                "max": 6,
+                "unit": "NOT_SPECIFIED"
+              }
+            },
+            {
+              "name": "Size",
+              "constraint": [
+                "Small",
+                "Medium",
+                "Large"
+              ]
+            },
+            {
+              "name": "Color",
+              "constraint": [
+                "White",
+                "Red",
+                "Green",
+                "Blue",
+                "Yellow"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Clear Line",
+          "parameter": [
+            {
+              "name": "Line",
+              "constraint": {
+                "min": 1.0,
+                "max": 10.0,
+                "unit": "NOT_SPECIFIED"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Clear Screen",
+          "parameter": []
+        }
+      ],
+      "value": [],
+      "count": ""
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_OLED_SSD1306_128x64",
+      "library_dependency": [
+        "adafruit/Adafruit_SSD1306",
+        "adafruit/Adafruit-GFX-Library"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_OLED_SSD1306_128x64",
+      "library_dependency": [
+        "adafruit/Adafruit_SSD1306",
+        "adafruit/Adafruit-GFX-Library"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_OLED_SSD1306_128x64",
+      "library_dependency": [
+        "adafruit/Adafruit_SSD1306",
+        "adafruit/Adafruit-GFX-Library"
+      ]
+    }
+  ]
+}

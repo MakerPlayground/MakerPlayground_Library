@@ -6,7 +6,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#define MAX_ENTRY_COUNT 10
+#define MAX_ENTRY_COUNT 5
 
 class MP_OLED_SSD1306_128x64
 {
