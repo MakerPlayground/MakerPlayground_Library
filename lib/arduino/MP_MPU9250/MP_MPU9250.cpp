@@ -1,6 +1,6 @@
 #include "MP_MPU9250.h"
 
-#define GRAVITY 9.81
+#define GRAVITY 9.80665
 
 MP_MPU9250::MP_MPU9250()
 	: accelMagnitude(0.0)
@@ -27,9 +27,9 @@ void MP_MPU9250::update(unsigned long current_time)
             imu.readAccelData(imu.accelCount);
             imu.getAres();
 
-            imu.ax = (float)imu.accelCount[0] * imu.aRes; // - accelBias[0];
-            imu.ay = (float)imu.accelCount[1] * imu.aRes; // - accelBias[1];
-            imu.az = (float)imu.accelCount[2] * imu.aRes; // - accelBias[2];
+            imu.ax = (float)imu.accelCount[0] * imu.aRes * GRAVITY; // - accelBias[0];
+            imu.ay = (float)imu.accelCount[1] * imu.aRes * GRAVITY; // - accelBias[1];
+            imu.az = (float)imu.accelCount[2] * imu.aRes * GRAVITY; // - accelBias[2];
             accelMagnitude = sqrt(imu.ax*imu.ax + imu.ay*imu.ay + imu.az*imu.az);
 
             imu.readGyroData(imu.gyroCount);  // Read the x/y/z adc values
@@ -63,7 +63,7 @@ void MP_MPU9250::update(unsigned long current_time)
 
 void MP_MPU9250::printStatus()
 {
-    Serial.print(F("ax,ay,az,amag = "))
+    Serial.print(F("ax,ay,az,amag = "));
 	Serial.print(imu.ax);
 	Serial.print(F(","));
 	Serial.print(imu.ay);
@@ -71,15 +71,15 @@ void MP_MPU9250::printStatus()
 	Serial.print(imu.az);
 	Serial.print(F(","));
 	Serial.print(accelMagnitude);
-	Serial.print(F(" | gx,gy,gz = "));
 
+	Serial.print(F(" | gx,gy,gz = "));
 	Serial.print(imu.gx);
 	Serial.print(F(","));
 	Serial.print(imu.gy);
 	Serial.print(F(","));
 	Serial.print(imu.gz);
-	Serial.print(F(" | mx,my,mz = "));
 
+	Serial.print(F(" | mx,my,mz"));
 	Serial.print(imu.mx);
     Serial.print(F(","));
     Serial.print(imu.my);
