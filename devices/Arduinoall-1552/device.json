@@ -7,7 +7,18 @@
   "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 128,
   "height": 98,
-  "property": [],
+  "property": [
+    {
+      "name": "Mode",
+      "datatype": "ENUM",
+      "controltype": "DROPDOWN",
+      "value": "High Accuracy",
+      "constraint": [
+        "High Accuracy",
+        "High Speed"
+      ]
+    }
+  ],
   "port": [
     {
       "name": "VCC",

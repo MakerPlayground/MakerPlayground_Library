@@ -2,11 +2,12 @@
 #include <Wire.h>
 #include <VL53L0X.h>
 
-//#define LONG_RANGE
+#define LONG_RANGE
 //#define HIGH_SPEED
 //#define HIGH_ACCURACY
 
-MP_VL53L0X::MP_VL53L0X()
+MP_VL53L0X::MP_VL53L0X(String mode)
+    : mode(mode)
 {
 }
 
@@ -17,7 +18,7 @@ int MP_VL53L0X::init()
         return ERR_CONNECT_DEVICE;
     }
     sensor.setTimeout(500);
-#if defined LONG_RANGE
+#if defined(LONG_RANGE)
     // lower the return signal rate limit (default is 0.25 MCPS)
     sensor.setSignalRateLimit(0.1);
     // increase laser pulse periods (defaults are 14 and 10 PCLKs)
@@ -25,13 +26,17 @@ int MP_VL53L0X::init()
     sensor.setVcselPulsePeriod(VL53L0X::VcselPeriodFinalRange, 14);
 #endif
 
-#if defined HIGH_SPEED
-    // reduce timing budget to 20 ms (default is about 33 ms)
-    sensor.setMeasurementTimingBudget(20000);
-#elif defined HIGH_ACCURACY
-    // increase timing budget to 200 ms
-    sensor.setMeasurementTimingBudget(200000);
-#endif
+// #if defined HIGH_SPEED
+    if (String("High Speed").equals(mode)) {
+        // reduce timing budget to 20 ms (default is about 33 ms)
+        sensor.setMeasurementTimingBudget(20000);
+    }
+// #elif defined HIGH_ACCURACY
+    else if (String("High Accuracy").equals(mode)) {
+        // increase timing budget to 200 ms
+        sensor.setMeasurementTimingBudget(200000);
+    }
+// #endif
     return ERR_OK;
 }
 

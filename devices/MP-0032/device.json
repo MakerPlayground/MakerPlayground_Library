@@ -1,0 +1,87 @@
+{
+  "id": "MP-0032",
+  "brand": "Maker Playground",
+  "model": "Distance v1.0",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "width": 171,
+  "height": 114,
+  "property": [
+    {
+      "name": "Mode",
+      "datatype": "ENUM",
+      "controltype": "DROPDOWN",
+      "value": "High Accuracy",
+      "constraint": [
+        "High Accuracy",
+        "High Speed"
+      ]
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 85.0,
+      "y": 114.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Distance",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Distance",
+          "constraint": {
+            "min": 0.3,
+            "max": 120,
+            "unit": "CENTIMETER"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_VL53L0X",
+      "library_dependency": [
+        "polulu/vl53l0x-arduino-1.0.2"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_VL53L0X",
+      "library_dependency": [
+        "polulu/vl53l0x-arduino-1.0.2"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_VL53L0X",
+      "library_dependency": [
+        "polulu/vl53l0x-arduino-1.0.2"
+      ]
+    }
+  ]
+}

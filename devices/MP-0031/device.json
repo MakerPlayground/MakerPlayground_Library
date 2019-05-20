@@ -1,0 +1,103 @@
+{
+  "id": "MP-0031",
+  "brand": "Maker Playground",
+  "model": "Accelerometer v1.0",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "width": 171,
+  "height": 114,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 85.0,
+      "y": 114.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Accelerometer",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Accel_X",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Y",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Z",
+          "constraint": {
+            "min": -100.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        },
+        {
+          "name": "Accel_Magnitude",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "METERPERSECSQUARE"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_LIS3DH",
+      "library_dependency": [
+        "adafruit/Adafruit_LIS3DH-1.0.4",
+        "adafruit/Adafruit_Sensor"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_LIS3DH",
+      "library_dependency": [
+        "adafruit/Adafruit_LIS3DH-1.0.4",
+        "adafruit/Adafruit_Sensor"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_LIS3DH",
+      "library_dependency": [
+        "adafruit/Adafruit_LIS3DH-1.0.4",
+        "adafruit/Adafruit_Sensor"
+      ]
+    }
+  ]
+}
