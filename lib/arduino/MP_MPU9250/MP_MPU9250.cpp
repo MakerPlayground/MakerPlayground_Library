@@ -63,28 +63,28 @@ void MP_MPU9250::update(unsigned long current_time)
 
 void MP_MPU9250::printStatus()
 {
+    Serial.print(F("ax,ay,az,amag = "))
 	Serial.print(imu.ax);
-	Serial.print(F(" "));
-	Serial.print(imu.ay);
-	Serial.print(F(" "));
-	Serial.print(imu.az);
-	Serial.print(F(" "));
-	Serial.print(accelMagnitude);
 	Serial.print(F(","));
+	Serial.print(imu.ay);
+	Serial.print(F(","));
+	Serial.print(imu.az);
+	Serial.print(F(","));
+	Serial.print(accelMagnitude);
+	Serial.print(F(" | gx,gy,gz = "));
 
 	Serial.print(imu.gx);
-	Serial.print(F(" "));
-	Serial.print(imu.gy);
-	Serial.print(F(" "));
-	Serial.print(imu.gz);
 	Serial.print(F(","));
+	Serial.print(imu.gy);
+	Serial.print(F(","));
+	Serial.print(imu.gz);
+	Serial.print(F(" | mx,my,mz = "));
 
 	Serial.print(imu.mx);
-    Serial.print(F(" "));
+    Serial.print(F(","));
     Serial.print(imu.my);
-    Serial.print(F(" "));
+    Serial.print(F(","));
     Serial.print(imu.mz);
-    Serial.print(F(" "));
 }
 
 double MP_MPU9250::getAccel_X()

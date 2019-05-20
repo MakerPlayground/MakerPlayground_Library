@@ -1,5 +1,7 @@
 #include "MP_LSM6DS3.h"
 
+#define GRAVITY 9.80665
+
 MP_LSM6DS3::MP_LSM6DS3()
 	:imu(LSM6DS3(I2C_MODE,0x6A))
 {
@@ -17,9 +19,9 @@ int MP_LSM6DS3::init()
 void MP_LSM6DS3::update(unsigned long current_time) 
 {
 	if (current_time - end_time > 10) {
-		this->accel_x = imu.readFloatAccelX();
-		this->accel_y = imu.readFloatAccelY();
-		this->accel_z = imu.readFloatAccelZ();
+		this->accel_x = imu.readFloatAccelX() * GRAVITY;
+		this->accel_y = imu.readFloatAccelY() * GRAVITY;
+		this->accel_z = imu.readFloatAccelZ() * GRAVITY;
 		this->accel_mag = sqrt(accel_x * accel_x + accel_y * accel_y + accel_z * accel_z);
 		this->gyro_x = imu.readFloatGyroX();
 		this->gyro_y = imu.readFloatGyroY();
@@ -30,25 +32,20 @@ void MP_LSM6DS3::update(unsigned long current_time)
 
 void MP_LSM6DS3::printStatus()
 {
-	Serial.print(F("accel_x = "));
+	Serial.print(F("ax,ay,az,amag = "));
 	Serial.println(this->accel_x);
-
-	Serial.print(F("accel_y = "));
+	Serial.print(F(","));
 	Serial.println(this->accel_y);
-	
-	Serial.print(F("accel_z = "));
+	Serial.print(F(","));
 	Serial.println(this->accel_z);
-	
-	Serial.print(F("accel_mag = "));
+	Serial.print(F(","));
 	Serial.println(this->accel_mag);
 	
-	Serial.print(F("gyro_x = "));
+	Serial.print(F(" | gx,gy,gz = "));
 	Serial.println(this->gyro_x);
-	
-	Serial.print(F("gyro_y = "));
+	Serial.print(F(","));
 	Serial.println(this->gyro_y);
-	
-	Serial.print(F("gyro_z = "));
+	Serial.print(F(","));
 	Serial.println(this->gyro_z);
 }
 
