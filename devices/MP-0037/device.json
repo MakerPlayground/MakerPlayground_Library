@@ -1,0 +1,95 @@
+{
+  "id": "MP-0037",
+  "brand": "Maker Playground",
+  "model": "Temperature/Humidity v1",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "width": 171,
+  "height": 114,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
+      "function": [
+        {
+          "type": "MP_I2C_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 85.0,
+      "y": 114.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_I2C_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Temperature",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Temperature",
+          "constraint": {
+            "min": -500.0,
+            "max": 500.0,
+            "unit": "CELSIUS"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Humidity",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Humidity",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_SHT",
+      "library_dependency": [
+        "Sensirion/arduino-sht"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_SHT",
+      "library_dependency": [
+        "Sensirion/arduino-sht"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_SHT",
+      "library_dependency": [
+        "Sensirion/arduino-sht"
+      ]
+    }
+  ]
+}

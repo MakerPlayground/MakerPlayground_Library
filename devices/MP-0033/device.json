@@ -1,0 +1,70 @@
+{
+  "id": "MP-0033",
+  "brand": "Maker Playground",
+  "model": "Microphone v1",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "width": 171,
+  "height": 114,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_TOP",
+      "function": [
+        {
+          "type": "MP_ANALOG_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 85.0,
+      "y": 114.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_ANALOG_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Sound",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "SoundLevel",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MICROPHONE_NORMALIZED",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_MICROPHONE_NORMALIZED",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_MICROPHONE_NORMALIZED",
+      "library_dependency": []
+    }
+  ]
+}

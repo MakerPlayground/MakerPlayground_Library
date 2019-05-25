@@ -1,0 +1,69 @@
+{
+  "id": "MP-0034",
+  "brand": "Maker Playground",
+  "model": "Button v1",
+  "url": "",
+  "type": "PERIPHERAL",
+  "formfactor": "MP_DEVICE",
+  "width": 171,
+  "height": 114,
+  "property": [],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_BOTTOM",
+      "function": [
+        {
+          "type": "MP_GPIO_SINGLE_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 85.0,
+      "y": 114.0,
+      "angle": 0.0
+    }
+  ],
+  "connectivity": [
+    "MP_GPIO_SINGLE_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Button",
+      "action": [
+        {
+          "name": "Press",
+          "parameter": []
+        },
+        {
+          "name": "Press and release",
+          "parameter": []
+        },
+        {
+          "name": "Not press",
+          "parameter": []
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    }
+  ]
+}
