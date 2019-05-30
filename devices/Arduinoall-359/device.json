@@ -74,10 +74,10 @@
       "name": "Display",
       "action": [
         {
-          "name": "Show Text at Line",
+          "name": "Show Text at Row",
           "parameter": [
             {
-              "name": "Line",
+              "name": "Row",
               "constraint": {
                 "min": 1.0,
                 "max": 10.0,
@@ -91,71 +91,50 @@
             {
               "name": "Size",
               "constraint": [
-                "Small",
-                "Medium",
-                "Large"
+                "1x",
+                "2x",
+                "3x"
+              ]
+            },
+            {
+              "name": "Align",
+              "value": "Left",
+              "constraint": [
+                "Left",
+                "Center",
+                "Right"
               ]
             },
             {
               "name": "Color",
               "constraint": [
+                "Blue",
+                "Cyan",
+                "Dark Cyan",
+                "Dark Green",
+                "Dark Grey",
+                "Green",
+                "Green Yellow",
+                "Light Grey",
+                "Magenta",
+                "Maroon",
+                "Navy",
+                "Olive",
+                "Orange",
+                "Pink",
+                "Purple",
                 "White",
                 "Red",
-                "Green",
-                "Blue",
                 "Yellow"
               ]
             }
           ]
         },
         {
-          "name": "Show Text at Position",
+          "name": "Show Number at Row",
           "parameter": [
             {
-              "name": "X",
-              "constraint": {
-                "min": 1.0,
-                "max": 10.0,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Y",
-              "constraint": {
-                "min": 1.0,
-                "max": 10.0,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Text",
-              "constraint": []
-            },
-            {
-              "name": "Size",
-              "constraint": [
-                "Small",
-                "Medium",
-                "Large"
-              ]
-            },
-            {
-              "name": "Color",
-              "constraint": [
-                "White",
-                "Red",
-                "Green",
-                "Blue",
-                "Yellow"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Show Number at Line",
-          "parameter": [
-            {
-              "name": "Line",
+              "name": "Row",
               "constraint": {
                 "min": 1.0,
                 "max": 10.0,
@@ -185,88 +164,50 @@
             {
               "name": "Size",
               "constraint": [
-                "Small",
-                "Medium",
-                "Large"
+                "1x",
+                "2x",
+                "3x"
+              ]
+            },
+            {
+              "name": "Align",
+              "value": "Left",
+              "constraint": [
+                "Left",
+                "Center",
+                "Right"
               ]
             },
             {
               "name": "Color",
               "constraint": [
+                "Blue",
+                "Cyan",
+                "Dark Cyan",
+                "Dark Green",
+                "Dark Grey",
+                "Green",
+                "Green Yellow",
+                "Light Grey",
+                "Magenta",
+                "Maroon",
+                "Navy",
+                "Olive",
+                "Orange",
+                "Pink",
+                "Purple",
                 "White",
                 "Red",
-                "Green",
-                "Blue",
                 "Yellow"
               ]
             }
           ]
-        },
+        },  
         {
-          "name": "Show Number at Position",
+          "name": "Clear Row",
           "parameter": [
             {
-              "name": "X",
-              "constraint": {
-                "min": 1.0,
-                "max": 10.0,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Y",
-              "constraint": {
-                "min": 1.0,
-                "max": 10.0,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Label",
-              "constraint": [],
-              "datatype": "STRING"
-            },
-            {
-              "name": "Value",
-              "constraint": {
-                "min": -99999.0,
-                "max": 99999.0,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Decimal places",
-              "constraint": {
-                "min": 0,
-                "max": 6,
-                "unit": "NOT_SPECIFIED"
-              }
-            },
-            {
-              "name": "Size",
-              "constraint": [
-                "Small",
-                "Medium",
-                "Large"
-              ]
-            },
-            {
-              "name": "Color",
-              "constraint": [
-                "White",
-                "Red",
-                "Green",
-                "Blue",
-                "Yellow"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Clear Line",
-          "parameter": [
-            {
-              "name": "Line",
+              "name": "Row",
               "constraint": {
                 "min": 1.0,
                 "max": 10.0,

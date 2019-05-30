@@ -3,6 +3,13 @@
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
 
+#define CHAR_WIDTH_1X 6
+#define CHAR_HEIGHT_1X 8
+
+#define ROW_HEIGHT 8
+
+#define REFRESH_MILLIS 300
+
 MP_OLED_SSD1306_128x64::MP_OLED_SSD1306_128x64()
     : display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1)
 {
@@ -15,143 +22,85 @@ int MP_OLED_SSD1306_128x64::init()
         return ERR_CONNECT_DEVICE;
     }
     display.clearDisplay();
+    display.display();
+    display.setTextWrap(false);
+    display.setTextColor(WHITE);
+    display.cp437();
+    initRowHeights();
     return ERR_OK;
 }
 
 void MP_OLED_SSD1306_128x64::update(unsigned long current_time)
 {
+    if (lastRunMillis + REFRESH_MILLIS < current_time) {
+        display.display();
+        display.clearDisplay();
+        lastRunMillis = current_time;
+    }
 }
 
 void MP_OLED_SSD1306_128x64::printStatus()
 {
 }
 
-void MP_OLED_SSD1306_128x64::show()
+void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color)
 {
-    display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
-    int currentY = 0;
-    for (int i=0; i < MAX_ENTRY_COUNT; i++) {
-        if (entries[i].message[0]) {
-            display.setTextColor(WHITE);
-            display.cp437(true);
-            display.setTextSize(entries[i].size);
-            display.setCursor(0, currentY);
-            display.print(entries[i].message);
-        }
-        currentY += (entries[i].size << 3);
-    }
-    for (int i=0; i < entryWithPositionCount; i++) {
-        if (entriesWithPosition[i].message[0]) {
-            display.setTextColor(WHITE);
-            display.cp437(true);
-            display.setTextSize(entriesWithPosition[i].size);
-            display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
-            display.print(entriesWithPosition[i].message);
-        }
-    }
-    display.display();
-}
+    uint8_t rowIndex = row - 1;
+    if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT) {
 
-void MP_OLED_SSD1306_128x64::showTextAtLine(int line, char* text, char* size, char* color)
-{
-    int lineIndex = line - 1;
-    if (lineIndex >= 0 && lineIndex < MAX_ENTRY_COUNT) {
-        strcpy(entries[lineIndex].message, text);
-        if (strcmp(size, "Small") == 0) {
-            entries[lineIndex].size = 1;
-        } else if(strcmp(size, "Medium") == 0) {
-            entries[lineIndex].size = 2;
-        } else if(strcmp(size, "Large") == 0) {
-            entries[lineIndex].size = 3;
-        } else {
-            entries[lineIndex].size = 1;
+        uint8_t currentX = 0;
+        uint8_t currentY = 0;
+        uint8_t sizeInt = strcmp(size, "1x") == 0 ? 1 : (strcmp(size, "2x") == 0 ? 2 : (strcmp(size, "3x") == 0 ? 3 : 1));
+        
+        if (strcmp(align, "Left") == 0) {
+            currentX = 0;
+        } else if (strcmp(align, "Center") == 0) {
+            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text))) / 2;
+        } else if (strcmp(align, "Right") == 0) {
+            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text));
         }
-        show();
+        currentY = rowIndex * ROW_HEIGHT;
+        
+        // clearRow(row);
+
+        display.setTextSize(sizeInt);
+        display.setCursor(currentX, currentY);
+        display.print(text);
+        row_heights[rowIndex] = size;
     }
 }
 
-void MP_OLED_SSD1306_128x64::showTextAtPosition(int x, int y, char* text, char* size, char* color)
-{
-    if (x >= 0 && x < SCREEN_WIDTH && y >= 0 && y < SCREEN_HEIGHT) {
-        int storingIndex = -1;
-        for(int i=0; i<entryWithPositionCount; i++) {
-            if (entriesWithPosition[i].x == x && entriesWithPosition[i].y == y) {
-                storingIndex = i;
-                break;
-            }
-        }
-        if (entryWithPositionCount == MAX_ENTRY_COUNT) {
-            return;
-        }
-        if (storingIndex == -1) {
-            storingIndex = entryWithPositionCount;
-            entryWithPositionCount++;
-        }
-        strcpy(entriesWithPosition[storingIndex].message, text);
-        entriesWithPosition[storingIndex].x = x;
-        entriesWithPosition[storingIndex].y = y;
-        if (strcmp(size, "Small") == 0) {
-            entriesWithPosition[storingIndex].size = 1;
-        } else if(strcmp(size, "Medium") == 0) {
-            entriesWithPosition[storingIndex].size = 2;
-        } else if(strcmp(size, "Large") == 0) {
-            entriesWithPosition[storingIndex].size = 3;
-        } else {
-            entriesWithPosition[storingIndex].size = 1;
-        }
-        show();
-    }
-}
-
-void MP_OLED_SSD1306_128x64::showNumberAtLine(int line, char* label, double value, double decimalPlaces, char* size, char* color)
+void MP_OLED_SSD1306_128x64::showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color)
 {
     char* p;
-    char buff[33] = "";
-    char buff2[33] = "";
-    char buff3[33] = "";
-    strcpy(buff, label);
-    if ((p = strstr(buff, "/value/")) != NULL) {
-        strcpy(buff3, p+7);
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, buff2);
-        strcpy(p, buff2);
-        strcpy(p + strlen(buff2), buff3);
+    char temp[25] = "";
+    char valueStr[10] = "";
+    if ((p = strstr(label, "/value/")) != NULL) {
+        dtostrf(value, (decimalPlaces + 2), decimalPlaces, valueStr);
+        strcpy(temp, label);
+        strcpy(temp + (p - label), valueStr);
+        strcpy(temp + (p - label) + strlen(valueStr), p+7);
     }
-    showTextAtLine(line, buff, size, color);
+    showTextAtRow(row, temp, size, align, color);
 }
 
-void MP_OLED_SSD1306_128x64::showNumberAtPosition(int x, int y, char* label, double value, double decimalPlaces, char* size, char* color)
+void MP_OLED_SSD1306_128x64::clearRow(uint8_t row)
 {
-    char* p;
-    char buff[33] = "";
-    char buff2[33] = "";
-    char buff3[33] = "";
-    strcpy(buff, label);
-    if ((p = strstr(buff, "/value/")) != NULL) {
-        strcpy(buff3, p+7);
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, buff2);
-        strcpy(p, buff2);
-        strcpy(p + strlen(buff2), buff3);
-    }
-    showTextAtPosition(x, y, buff, size, color);
-}
-
-void MP_OLED_SSD1306_128x64::clearLine(int line)
-{
-    strcpy(entries[line-1].message, "");
+    display.startWrite();
+    display.writeFillRect(0, (row-1) * ROW_HEIGHT, SCREEN_WIDTH, row_heights[row-1] * ROW_HEIGHT, BLACK);
+    display.endWrite();
+    row_heights[row-1] = 1;
 }
 
 void MP_OLED_SSD1306_128x64::clearScreen()
 {
-    for (int i=0; i<MAX_ENTRY_COUNT; i++) {
-        strcpy(entries[i].message, "");
-        entries[i].size = 1;
-    }
-    for (int i=0; i<entryWithPositionCount; i++) {
-        strcpy(entriesWithPosition[i].message, "");
-        entriesWithPosition[i].size = 1;
-        entriesWithPosition[i].x = -1;
-        entriesWithPosition[i].y = -1;
-    }
-    entryWithPositionCount = 0;
     display.clearDisplay();
+    initRowHeights();
+}
+
+void MP_OLED_SSD1306_128x64::initRowHeights()
+{
+    for (uint8_t i=0; i<MAX_ENTRY_COUNT; i++) {
+        row_heights[i] = 1;
+    }
 }
