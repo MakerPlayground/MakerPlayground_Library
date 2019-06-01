@@ -8,10 +8,8 @@
 
 #define ROW_HEIGHT 8
 
-#define REFRESH_MILLIS 300
-
 MP_OLED_SSD1306_128x64::MP_OLED_SSD1306_128x64()
-    : display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1)
+    : display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire)
 {
 }
 
@@ -32,11 +30,6 @@ int MP_OLED_SSD1306_128x64::init()
 
 void MP_OLED_SSD1306_128x64::update(unsigned long current_time)
 {
-    if (lastRunMillis + REFRESH_MILLIS < current_time) {
-        display.display();
-        display.clearDisplay();
-        lastRunMillis = current_time;
-    }
 }
 
 void MP_OLED_SSD1306_128x64::printStatus()
@@ -46,27 +39,32 @@ void MP_OLED_SSD1306_128x64::printStatus()
 void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color)
 {
     uint8_t rowIndex = row - 1;
-    if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT) {
-
-        uint8_t currentX = 0;
-        uint8_t currentY = 0;
-        uint8_t sizeInt = strcmp(size, "1x") == 0 ? 1 : (strcmp(size, "2x") == 0 ? 2 : (strcmp(size, "3x") == 0 ? 3 : 1));
+    if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
+    {
+        int8_t currentX = 0;
+        int8_t currentY = 0;
+        uint8_t sizeInt = (strcmp(size, "1x") == 0) ? 1 : ((strcmp(size, "2x") == 0) ? 2 : ((strcmp(size, "3x") == 0) ? 3 : 1));
         
-        if (strcmp(align, "Left") == 0) {
+        if (strcmp(align, "Left") == 0)
+        {
             currentX = 0;
-        } else if (strcmp(align, "Center") == 0) {
+        }
+        else if (strcmp(align, "Center") == 0)
+        {
             currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text))) / 2;
-        } else if (strcmp(align, "Right") == 0) {
+        }
+        else if (strcmp(align, "Right") == 0)
+        {
             currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text));
         }
         currentY = rowIndex * ROW_HEIGHT;
         
-        // clearRow(row);
-
+        display.fillRect(0, rowIndex * ROW_HEIGHT, SCREEN_WIDTH, (sizeInt > row_heights[rowIndex] ? sizeInt : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
         display.setTextSize(sizeInt);
         display.setCursor(currentX, currentY);
         display.print(text);
-        row_heights[rowIndex] = size;
+        display.display();
+        row_heights[rowIndex] = sizeInt;
     }
 }
 
@@ -75,7 +73,8 @@ void MP_OLED_SSD1306_128x64::showNumberAtRow(uint8_t row, char* label, double va
     char* p;
     char temp[25] = "";
     char valueStr[10] = "";
-    if ((p = strstr(label, "/value/")) != NULL) {
+    if ((p = strstr(label, "/value/")) != NULL)
+    {
         dtostrf(value, (decimalPlaces + 2), decimalPlaces, valueStr);
         strcpy(temp, label);
         strcpy(temp + (p - label), valueStr);
@@ -86,21 +85,22 @@ void MP_OLED_SSD1306_128x64::showNumberAtRow(uint8_t row, char* label, double va
 
 void MP_OLED_SSD1306_128x64::clearRow(uint8_t row)
 {
-    display.startWrite();
-    display.writeFillRect(0, (row-1) * ROW_HEIGHT, SCREEN_WIDTH, row_heights[row-1] * ROW_HEIGHT, BLACK);
-    display.endWrite();
+    display.fillRect(0, (row-1) * ROW_HEIGHT, SCREEN_WIDTH, row_heights[row-1] * ROW_HEIGHT, BLACK);
+    display.display();
     row_heights[row-1] = 1;
 }
 
 void MP_OLED_SSD1306_128x64::clearScreen()
 {
     display.clearDisplay();
+    display.display();
     initRowHeights();
 }
 
 void MP_OLED_SSD1306_128x64::initRowHeights()
 {
-    for (uint8_t i=0; i<MAX_ENTRY_COUNT; i++) {
+    for (uint8_t i=0; i<MAX_ENTRY_COUNT; i++)
+    {
         row_heights[i] = 1;
     }
 }

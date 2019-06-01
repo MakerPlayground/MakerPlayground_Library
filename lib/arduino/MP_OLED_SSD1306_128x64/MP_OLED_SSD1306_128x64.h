@@ -6,7 +6,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#define MAX_ENTRY_COUNT 10
+#define MAX_ENTRY_COUNT 8
 
 class MP_OLED_SSD1306_128x64
 {
@@ -22,9 +22,9 @@ public:
 	void clearScreen();
 
 private:
-    Adafruit_SSD1306 display;
-
 	void initRowHeights();
+
+	Adafruit_SSD1306 display;
 	uint8_t row_heights[MAX_ENTRY_COUNT];
 	unsigned long lastRunMillis = 0;
 };
