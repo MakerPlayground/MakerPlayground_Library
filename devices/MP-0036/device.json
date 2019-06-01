@@ -43,7 +43,7 @@
       "name": "D1",
       "alias": [
         "3",
-        "4"
+        "2"
       ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
@@ -71,7 +71,7 @@
       "name": "D2",
       "alias": [
         "5",
-        "6"
+        "4"
       ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
@@ -82,11 +82,6 @@
         },
         {
           "type": "MP_PWM_DUAL_1",
-          "conflict": [
-            "MP_PWM_SINGLE_3",
-            "MP_GPIO_SINGLE_3",
-            "MP_GPIO_DUAL_3"
-          ],
           "pintype": "INOUT"
         },
         {
@@ -95,11 +90,6 @@
         },
         {
           "type": "MP_GPIO_DUAL_2",
-          "conflict": [
-            "MP_PWM_SINGLE_3",
-            "MP_GPIO_SINGLE_3",
-            "MP_GPIO_DUAL_3"
-          ],
           "pintype": "INOUT"
         }
       ],
@@ -236,8 +226,8 @@
     {
       "name": "D7/A3",
       "alias": [
-        "A5",
-        "A4"
+        "A6",
+        "A7"
       ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
