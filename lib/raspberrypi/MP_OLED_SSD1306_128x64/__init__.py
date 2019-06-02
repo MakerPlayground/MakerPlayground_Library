@@ -1,24 +1,35 @@
 from MakerPlayground.Devices.MP_Device import MP_Device
 import pigpio
 import Adafruit_SSD1306
+import os.path as path
 
 from PIL import Image, ImageFont, ImageDraw
 
 class MP_OLED_SSD1306_128x64(MP_Device):
 
-    MAX_ENTRY_COUNT = 10
+    MAX_ENTRY_COUNT = 7
     SCREEN_WIDTH = 128
     SCREEN_HEIGHT = 64
 
+    CHAR_WIDTH_1X = 7
+    CHAR_HEIGHT_1X = 12
+    ROW_HEIGHT = 9
+    
+    CURRENT_DIR = path.dirname(path.abspath(__file__))
+    FONT_FILE_PATH = path.join(CURRENT_DIR, "FreeMonoBold.ttf")
+    FONT_1X = ImageFont.truetype(FONT_FILE_PATH, CHAR_HEIGHT_1X)
+    FONT_2X = ImageFont.truetype(FONT_FILE_PATH, 2 * CHAR_HEIGHT_1X)
+    FONT_3X = ImageFont.truetype(FONT_FILE_PATH, 3 * CHAR_HEIGHT_1X)
+
     class Entry:
-        def __init__(self, x: int = -1, y: int = -1, message: str = '', size: int = 1):
+        def __init__(self, x: int = -1, message: str = '', size: int = 1, align: str = 'left'):
             self.x = x
-            self.y = y
             self.message = message
             self.size = size
+            self.align = align
 
         def __repr__(self):
-            return '(x: {}, y: {}, message: "{}", size: {})'.format(self.x, self.y, self.message, self.size)
+            return '(x: {}, message: "{}", size: {}, align: "{}")'.format(self.x, self.message, self.size, self.align)
 
     def __init__(self):
         RST = 1
@@ -33,87 +44,58 @@ class MP_OLED_SSD1306_128x64(MP_Device):
         self.font = ImageFont.load_default()
 
         self.entries = [MP_OLED_SSD1306_128x64.Entry() for _ in range(MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT)]
-        self.entryWithPositionCount = 0
-        self.entriesWithPosition = [MP_OLED_SSD1306_128x64.Entry() for _ in range(MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT)]
 
     def _show(self):
-        line_height = 20
         image = Image.new('1', (self.disp.width, self.disp.height))
         draw = ImageDraw.Draw(image)
         currentY = 0
         for entry in self.entries:
             if entry.message != '':
-                draw.text((0, currentY), entry.message, fill=1)
-            currentY += (entry.size * line_height)
-        for entry in self.entriesWithPosition:
-            if entry.message != '':
-                draw.text((entry.x, entry.y), entry.message, fill=1)
+                font = MP_OLED_SSD1306_128x64.FONT_1X    # 1X
+                if entry.size == 2:
+                    font = MP_OLED_SSD1306_128x64.FONT_2X
+                elif entry.size == 3:
+                    font = MP_OLED_SSD1306_128x64.FONT_3X
+                draw.text((entry.x, currentY), entry.message, fill=1, font=font)
+            currentY += MP_OLED_SSD1306_128x64.ROW_HEIGHT
         self.disp.image(image)
         self.disp.display()
 
-    def showTextAtLine(self, line, text, size, color):
-        line_index = int(line - 1)
-        if line_index >= 0 and line_index < MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT:
-            size_dict = {
-                'Small': 1,
-                'Medium': 2,
-                'Large': 3,
-            }
-            self.entries[line_index].message = str(text)
-            self.entries[line_index].size = size_dict[size]
+    def showTextAtRow(self, row, text, size, align, color):
+        row_index = int(row - 1)
+        if row_index >= 0 and row_index < MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT:
+            sizeInt = { '1x': 1, '2x': 2, '3x': 3 }[size]
+            self.entries[row_index].message = str(text)
+            self.entries[row_index].size = sizeInt
+            if align == 'Left':
+                self.entries[row_index].x = 0
+            elif align == 'Center':
+                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * sizeInt * len(self.entries[row_index].message))) // 2
+            elif align == 'Right':
+                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * sizeInt * len(self.entries[row_index].message)))
             self._show()
 
-    def showTextAtPosition(self, x, y, text, size, color):
-        if x >= 0 and x < MP_OLED_SSD1306_128x64.SCREEN_WIDTH and y >= 0 and y < MP_OLED_SSD1306_128x64.SCREEN_HEIGHT:
-            storingIndex = -1
-            for i in range(self.entryWithPositionCount):
-                if self.entriesWithPosition[i].x == x and self.entriesWithPosition[i].y == y:
-                    storingIndex = i
-                    break
-
-            if self.entryWithPositionCount == MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT:
-                return
-            
-            if storingIndex == -1:
-                storingIndex = self.entryWithPositionCount
-                self.entryWithPositionCount += 1
-            
-            size_dict = {
-                'Small': 1,
-                'Medium': 2,
-                'Large': 3,
-            }
-            self.entriesWithPosition[storingIndex].size = size_dict[size]
-            self.entriesWithPosition[storingIndex].message = text
-            self.entriesWithPosition[storingIndex].x = x
-            self.entriesWithPosition[storingIndex].y = y
-            self._show()
-
-    def showNumberAtLine(self, line, label, value, decimalPlaces, size, color):
+    def showNumberAtRow(self, row, label, value, decimalPlaces, size, align, color):
         value_str = "{:.{}f}".format(value, int(decimalPlaces))
         temp = str(label).replace('/value/', value_str, 1)
-        self.showTextAtLine(line, temp, size, color)
+        self.showTextAtRow(row, temp, size, align, color)
 
-    def showNumberAtPosition(self, x, y, label, value, decimalPlaces, size, color):
-        value_str = "{:.{}f}".format(value, int(decimalPlaces))
-        temp = str(label).replace('/value/', value_str, 1)
-        self.showTextAtPosition(x, y, temp, size, color)
-
-    def clearLine(self, line):
-        self.entries[int(line-1)]['message'] = ''
+    def clearRow(self, row):
+        rowIndex = int(row-1)
+        self.entries[rowIndex].message = ''
+        self.entries[rowIndex].x = 0
+        self.entries[rowIndex].size = 1
+        self._show()
 
     def clearScreen(self):
         self.entries = [MP_OLED_SSD1306_128x64.Entry() for _ in range(MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT)]
-
-        self.entriesWithPosition = [MP_OLED_SSD1306_128x64.Entry() for _ in range(MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT)]
-        
         self._show()
 
     def update(self, currentTime):
         pass
 
     def getStatus(self):
-        return "Data on screen: {0}, {1}".format(self.entries, self.entriesWithPosition)
+        return "Data on screen: {0}".format(self.entries)
     
     def _dispose(self):
         self.clearScreen()
