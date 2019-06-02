@@ -33,18 +33,18 @@ void MP_LSM6DS3::update(unsigned long current_time)
 void MP_LSM6DS3::printStatus()
 {
 	Serial.print(F("ax,ay,az,amag = "));
-	Serial.println(this->accel_x);
+	Serial.print(this->accel_x);
 	Serial.print(F(","));
-	Serial.println(this->accel_y);
+	Serial.print(this->accel_y);
 	Serial.print(F(","));
-	Serial.println(this->accel_z);
+	Serial.print(this->accel_z);
 	Serial.print(F(","));
-	Serial.println(this->accel_mag);
+	Serial.print(this->accel_mag);
 	
 	Serial.print(F(" | gx,gy,gz = "));
-	Serial.println(this->gyro_x);
+	Serial.print(this->gyro_x);
 	Serial.print(F(","));
-	Serial.println(this->gyro_y);
+	Serial.print(this->gyro_y);
 	Serial.print(F(","));
 	Serial.println(this->gyro_z);
 }

@@ -26,7 +26,6 @@ private:
 
 	Adafruit_SSD1306 display;
 	uint8_t row_heights[MAX_ENTRY_COUNT];
-	unsigned long lastRunMillis = 0;
 };
 
 #endif

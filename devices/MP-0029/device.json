@@ -190,24 +190,24 @@
       "platform": "ARDUINO_AVR8",
       "classname": "MP_OLED_SSD1306_128x64",
       "library_dependency": [
-        "adafruit/Adafruit_SSD1306",
-        "adafruit/Adafruit-GFX-Library"
+        "adafruit/Adafruit_SSD1306-1.2.9",
+        "adafruit/Adafruit-GFX-Library-1.5.2"
       ]
     },
     {
       "platform": "ARDUINO_ESP8266",
       "classname": "MP_OLED_SSD1306_128x64",
       "library_dependency": [
-        "adafruit/Adafruit_SSD1306",
-        "adafruit/Adafruit-GFX-Library"
+        "adafruit/Adafruit_SSD1306-1.2.9",
+        "adafruit/Adafruit-GFX-Library-1.5.2"
       ]
     },
     {
       "platform": "ARDUINO_ESP32",
       "classname": "MP_OLED_SSD1306_128x64",
       "library_dependency": [
-        "adafruit/Adafruit_SSD1306",
-        "adafruit/Adafruit-GFX-Library"
+        "adafruit/Adafruit_SSD1306-1.2.9",
+        "adafruit/Adafruit-GFX-Library-1.5.2"
       ]
     }
   ]

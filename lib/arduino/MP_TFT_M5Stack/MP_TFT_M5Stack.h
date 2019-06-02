@@ -12,6 +12,8 @@
 #include <M5Display.h>
 #include <M5Stack.h>
 
+#define MAX_ENTRY_COUNT 20
+
 class MP_TFT_M5Stack
 {
 public:
@@ -20,37 +22,18 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void showTextAtLine(int line, char* text, char* size, char* color);
-	void showTextAtPosition(int x, int y, char* text, char* size, char* color);
-	void showNumberAtLine(int line, char* label, double value, double decimalPlaces, char* size, char* color);
-	void showNumberAtPosition(int x, int y, char* label, double value, double decimalPlaces, char* size, char* color);
-	void clearLine(int line);
+	void showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color);
+	void showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color);
+	void clearRow(uint8_t row);
 	void clearScreen();
 
 private:
     M5Display display;
-	bool isDirty = false;
-	unsigned long last_update = 0;
+	void initRowHeights();
+	uint8_t row_heights[MAX_ENTRY_COUNT];
+	
 	const GFXfont * getFontFromSizeName(char* size);
 	uint16_t getColorFromColorName(char* color);
-
-	struct messageEntry {
-		const GFXfont *font = NULL;
-		uint16_t color = 1;
-		char message[32] = "";
-	};
-
-	struct messageEntryWithPosition {
-		uint8_t x = -1;
-		uint8_t y = -1;
-		const GFXfont *font = NULL;
-		uint16_t color = 1;
-		char message[32] = "";
-	};
-
-	uint8_t entryWithPositionCount = 0;
-	struct messageEntry entries[MAX_ENTRY_COUNT];
-	struct messageEntryWithPosition entriesWithPosition[MAX_ENTRY_COUNT];
 };
 
 #endif

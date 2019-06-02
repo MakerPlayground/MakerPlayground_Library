@@ -2,7 +2,13 @@
 
 #define SCREEN_WIDTH 320 // OLED display width, in pixels
 #define SCREEN_HEIGHT 240 // OLED display height, in pixels
-#define UPDATE_INTERVAL 500
+
+#define CHAR_WIDTH_1X 11
+#define CHAR_HEIGHT_1X 13
+
+#define ROW_HEIGHT 13
+
+// #define UPDATE_INTERVAL 500
 
 MP_TFT_M5Stack::MP_TFT_M5Stack()
 {
@@ -11,67 +17,97 @@ MP_TFT_M5Stack::MP_TFT_M5Stack()
 int MP_TFT_M5Stack::init()
 {
     display.begin();
-    display.setFreeFont(&FreeSans9pt7b);
+    display.setTextWrap(false);
     clearScreen();
     return ERR_OK;
 }
 
 void MP_TFT_M5Stack::update(unsigned long current_time)
 {
-    if (current_time - last_update > UPDATE_INTERVAL && isDirty) {
-        display.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, BLACK);
-        int currentY = 0;
-        for (int i=0; i < MAX_ENTRY_COUNT; i++) {
-            if (entries[i].font == &FreeSansBold9pt7b) {
-                currentY += 16;
-            }
-            else if (entries[i].font == &FreeSansBold12pt7b) {
-                currentY += 20;
-            }
-            else if (entries[i].font == &FreeSansBold18pt7b) {
-                currentY += 28;
-            }
-            else if (entries[i].font == &FreeSansBold24pt7b) {
-                currentY += 36;
-            }
-            else {
-                currentY += 16;
-            }
-
-            if (entries[i].message[0]) {
-                display.setTextColor(entries[i].color);
-                display.setFreeFont(entries[i].font);
-                display.setCursor(0, currentY);
-                display.print(entries[i].message);
-            }
-        }
-        for (int i=0; i < entryWithPositionCount; i++) {
-            if (entriesWithPosition[i].message[0]) {
-                display.setTextColor(entriesWithPosition[i].color);
-                display.setFreeFont(entriesWithPosition[i].font);
-                display.setCursor(entriesWithPosition[i].x, entriesWithPosition[i].y);
-                display.print(entriesWithPosition[i].message);
-            }
-        }
-        display.display();
-        last_update = current_time;
-    }
 }
 
 void MP_TFT_M5Stack::printStatus()
 {
 }
 
+void MP_TFT_M5Stack::showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color) {
+    uint8_t rowIndex = row - 1;
+    if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
+    {
+        int currentX = 0;
+        int currentY = 0;
+        uint8_t sizeInt = (strcmp(size, "1x") == 0) ? 1 : ((strcmp(size, "2x") == 0) ? 2 : ((strcmp(size, "3x") == 0) ? 3 : 1));
+        
+        if (strcmp(align, "Left") == 0)
+        {
+            currentX = 0;
+        }
+        else if (strcmp(align, "Center") == 0)
+        {
+            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text))) / 2;
+        }
+        else if (strcmp(align, "Right") == 0)
+        {
+            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text));
+        }
+        currentY = rowIndex * ROW_HEIGHT;
+
+        display.fillRect(0, rowIndex * ROW_HEIGHT + 1, SCREEN_WIDTH, (sizeInt > row_heights[rowIndex] ? sizeInt : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
+        row_heights[rowIndex] = sizeInt;
+
+        if (strcmp(size, "1x") == 0) {
+            display.setTextSize(1);
+            display.setFreeFont(&FreeMonoBold9pt7b);
+        } else if(strcmp(size, "2x") == 0) {
+            display.setTextSize(1);
+            display.setFreeFont(&FreeMonoBold18pt7b);
+        } else if(strcmp(size, "3x") == 0) {
+            display.setTextSize(3);
+            display.setFreeFont(&FreeMonoBold9pt7b);
+        }
+        display.setTextColor(getColorFromColorName(color));
+        display.setCursor(currentX, currentY + row_heights[rowIndex] * (ROW_HEIGHT - 1));
+        display.print(text);
+        display.display();
+    }
+}
+
+void MP_TFT_M5Stack::showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color) {
+    char* p;
+    char temp[25] = "";
+    char valueStr[10] = "";
+    if ((p = strstr(label, "/value/")) != NULL)
+    {
+        dtostrf(value, (decimalPlaces + 2), decimalPlaces, valueStr);
+        strcpy(temp, label);
+        strcpy(temp + (p - label), valueStr);
+        strcpy(temp + (p - label) + strlen(valueStr), p+7);
+    }
+    showTextAtRow(row, temp, size, align, color);
+}
+
+void MP_TFT_M5Stack::clearRow(uint8_t row) {
+    display.fillRect(0, (row-1) * ROW_HEIGHT, SCREEN_WIDTH, row_heights[row-1] * ROW_HEIGHT, BLACK);
+    display.display();
+    row_heights[row-1] = 1;
+}
+
+void MP_TFT_M5Stack::clearScreen() {
+    display.clearDisplay();
+    display.display();
+    initRowHeights();
+}
+
 const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(char* size)
 {
-    if (strcmp(size, "Small") == 0) {
-        return &FreeSansBold9pt7b;
-    } else if(strcmp(size, "Medium") == 0) {
-        return &FreeSansBold18pt7b;
-    } else if(strcmp(size, "Large") == 0) {
-        return &FreeSansBold24pt7b;
+    if (strcmp(size, "1x") == 0) {
+        return &FreeMonoBold9pt7b;
+    } else if(strcmp(size, "2x") == 0) {
+        return &FreeMonoBold18pt7b;
+    } else if(strcmp(size, "3x") == 0) {
+        return &FreeMonoBold18pt7b;
     }
-    return &FreeSansBold9pt7b;
+    return &FreeMonoBold9pt7b;
 }
 
 uint16_t MP_TFT_M5Stack::getColorFromColorName(char* color)
@@ -116,92 +152,10 @@ uint16_t MP_TFT_M5Stack::getColorFromColorName(char* color)
     return TFT_WHITE;
 }
 
-void MP_TFT_M5Stack::showTextAtLine(int line, char* text, char* size, char* color)
+void MP_TFT_M5Stack::initRowHeights()
 {
-    int lineIndex = line - 1;
-    if (lineIndex >= 0 && lineIndex < MAX_ENTRY_COUNT) {
-        strcpy(entries[lineIndex].message, text);
-        entries[lineIndex].font = getFontFromSizeName(size);
-        entries[lineIndex].color = getColorFromColorName(color);
-        isDirty = true;
+    for (uint8_t i=0; i<MAX_ENTRY_COUNT; i++)
+    {
+        row_heights[i] = 1;
     }
-}
-
-void MP_TFT_M5Stack::showNumberAtLine(int line, char* label, double value, double decimalPlaces, char* size, char* color)
-{
-    char* p;
-    char buff[33] = "";
-    char buff2[33] = "";
-    char buff3[33] = "";
-    strcpy(buff, label);
-    if ((p = strstr(buff, "/value/")) != NULL) {
-        strcpy(buff3, p+7);
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, buff2);
-        strcpy(p, buff2);
-        strcpy(p + strlen(buff2), buff3);
-    }
-    showTextAtLine(line, buff, size, color);
-}
-
-void MP_TFT_M5Stack::showTextAtPosition(int x, int y, char* text, char* size, char* color)
-{
-    if (x >= 0 && x < SCREEN_WIDTH && y >= 0 && y < SCREEN_HEIGHT) {
-        int storingIndex = -1;
-        for(int i=0; i<entryWithPositionCount; i++) {
-            if (entriesWithPosition[i].x == x && entriesWithPosition[i].y == y) {
-                storingIndex = i;
-                break;
-            }
-        }
-        if (entryWithPositionCount == MAX_ENTRY_COUNT) {
-            return;
-        }
-        if (storingIndex == -1) {
-            storingIndex = entryWithPositionCount;
-            entryWithPositionCount++;
-        }
-        strcpy(entriesWithPosition[storingIndex].message, text);
-        entriesWithPosition[storingIndex].x = x;
-        entriesWithPosition[storingIndex].y = y;
-        entriesWithPosition[storingIndex].font = getFontFromSizeName(size);
-        entriesWithPosition[storingIndex].color = getColorFromColorName(color);
-        isDirty = true;
-    }
-}
-
-void MP_TFT_M5Stack::showNumberAtPosition(int x, int y, char* label, double value, double decimalPlaces, char* size, char* color)
-{
-    char* p;
-    char buff[33] = "";
-    char buff2[33] = "";
-    char buff3[33] = "";
-    strcpy(buff, label);
-    if ((p = strstr(buff, "/value/")) != NULL) {
-        strcpy(buff3, p+7);
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, buff2);
-        strcpy(p, buff2);
-        strcpy(p + strlen(buff2), buff3);
-    }
-    showTextAtPosition(x, y, buff, size, color);
-}
-
-void MP_TFT_M5Stack::clearLine(int line)
-{
-    strcpy(entries[line-1].message, "");
-}
-
-void MP_TFT_M5Stack::clearScreen()
-{
-    for (int i=0; i<MAX_ENTRY_COUNT; i++) {
-        strcpy(entries[i].message, "");
-        entries[i].font = getFontFromSizeName("Small");
-    }
-    for (int i=0; i<entryWithPositionCount; i++) {
-        strcpy(entriesWithPosition[i].message, "");
-        entriesWithPosition[i].font = getFontFromSizeName("Small");
-        entriesWithPosition[i].x = -1;
-        entriesWithPosition[i].y = -1;
-    }
-    entryWithPositionCount = 0;
-    display.fillScreen(TFT_BLACK);
 }
