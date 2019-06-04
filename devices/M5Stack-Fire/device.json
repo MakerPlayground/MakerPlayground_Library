@@ -45,11 +45,19 @@
           "pintype": "INOUT"
         },
         {
+          "type": "GROVE_GPIO_SINGLE_INNER_1",
+          "pintype": "INOUT"
+        },
+        {
           "type": "GROVE_GPIO_DUAL_1",
           "pintype": "INOUT"
         },
         {
           "type": "GROVE_PWM_SINGLE_1",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_INNER_1",
           "pintype": "INOUT"
         },
         {
@@ -78,11 +86,19 @@
           "pintype": "INOUT"
         },
         {
+          "type": "GROVE_GPIO_SINGLE_INNER_2",
+          "pintype": "INOUT"
+        },
+        {
           "type": "GROVE_GPIO_DUAL_2",
           "pintype": "INOUT"
         },
         {
           "type": "GROVE_PWM_SINGLE_2",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "GROVE_PWM_SINGLE_INNER_2",
           "pintype": "INOUT"
         },
         {
@@ -225,11 +241,15 @@
     "GROVE_GPIO_SINGLE_3",
     "GROVE_GPIO_SINGLE_4",
     "GROVE_GPIO_SINGLE_5",
+    "GROVE_GPIO_SINGLE_INNER_1",
+    "GROVE_GPIO_SINGLE_INNER_2",
     "GROVE_GPIO_DUAL_1",
     "GROVE_GPIO_DUAL_2",
     "GROVE_PWM_SINGLE_1",
     "GROVE_PWM_SINGLE_2",
     "GROVE_PWM_SINGLE_3",
+    "GROVE_PWM_SINGLE_INNER_1",
+    "GROVE_PWM_SINGLE_INNER_2",
     "GROVE_PWM_DUAL_1",
     "GROVE_PWM_DUAL_2",
     "GROVE_I2C_1",

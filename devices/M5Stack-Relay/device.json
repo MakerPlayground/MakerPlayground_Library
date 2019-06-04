@@ -14,7 +14,7 @@
       "type": "GROVE",
       "function": [
         {
-          "type": "GROVE_GPIO_SINGLE_1",
+          "type": "GROVE_GPIO_SINGLE_INNER_1",
           "pintype": "INOUT"
         }
       ],
@@ -25,7 +25,7 @@
     }
   ],
   "connectivity": [
-    "GROVE_GPIO_SINGLE_1"
+    "GROVE_GPIO_SINGLE_INNER_1"
   ],
   "compatibility": [
     {
