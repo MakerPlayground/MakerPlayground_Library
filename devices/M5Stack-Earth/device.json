@@ -51,7 +51,7 @@
   "platforms": [
     {
       "platform": "ARDUINO_ESP32",
-      "classname": "MP_SOIL_MOISTURE",
+      "classname": "MP_SOIL_MOISTURE_INV",
       "library_dependency": []
     }
   ]
