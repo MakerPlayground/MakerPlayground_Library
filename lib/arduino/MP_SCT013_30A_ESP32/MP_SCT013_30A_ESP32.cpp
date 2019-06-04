@@ -12,8 +12,6 @@ MP_SCT013_30A_ESP32::MP_SCT013_30A_ESP32(uint8_t pin)
 int MP_SCT013_30A_ESP32::init()
 {
 	pinMode(this->pin, INPUT);
-	analogReadResolution(10);
-    analogSetWidth(10);
   	analogSetPinAttenuation(this->pin, ADC_0db);	// acceptable range from 0-1v
 	return ERR_OK;
 }

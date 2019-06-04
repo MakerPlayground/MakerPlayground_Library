@@ -13,11 +13,7 @@ int MP_TRIMPOT::init()
 
 void MP_TRIMPOT::update(unsigned long current_time) 
 {
-#ifdef ESP32
-	this->value = ((analogRead(pin) >> 2)/1023.0)*100;
-#else
 	this->value = (analogRead(pin)/1023.0)*100;
-#endif
 }
 
 void MP_TRIMPOT::printStatus() {
