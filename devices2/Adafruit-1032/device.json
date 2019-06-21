@@ -1,0 +1,117 @@
+{
+  "id": "Adafruit-1032",
+  "brand": "Adafruit",
+  "model": "L3GD20H Triple-Axis Gyro Breakout Board - L3GD20/L3G4200 Upgrade - L3GD20H",
+  "url": "https://www.adafruit.com/product/1032",
+  "type": "MODULE",
+  "width": 173.0,
+  "height": 108.0,
+  "pin_consume": [
+    {
+      "name": "SCL",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "SCL",
+      "connection_type": "WIRE",
+      "x": 29.0,
+      "y": 99.0
+    },
+    {
+      "name": "SDA",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "SDA",
+      "connection_type": "WIRE",
+      "x": 43.4,
+      "y": 99.0
+    },
+    {
+      "name": "GND",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "GND",
+      "connection_type": "WIRE",
+      "x": 115.4,
+      "y": 99.0
+    },
+    {
+      "name": "VIN",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "VCC",
+      "connection_type": "WIRE",
+      "x": 144.2,
+      "y": 99.0
+    }
+  ],
+  "pin_unused": [
+    {
+      "name": "SA0",
+      "x": 57.8,
+      "y": 99.0
+    },
+    {
+      "name": "CS",
+      "x": 72.2,
+      "y": 99.0
+    },
+    {
+      "name": "DRDY",
+      "x": 86.6,
+      "y": 99.0
+    },
+    {
+      "name": "INT1",
+      "x": 101.0,
+      "y": 99.0
+    },
+    {
+      "name": "3Vo",
+      "x": 129.8,
+      "y": 99.0
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "Gyroscope",
+      "condition": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Gyro_X",
+          "constraint": {
+            "min": -2000.0,
+            "max": 2000.0,
+            "unit": "DEGREEPERSEC"
+          }
+        },
+        {
+          "name": "Gyro_Y",
+          "constraint": {
+            "min": -2000.0,
+            "max": 2000.0,
+            "unit": "DEGREEPERSEC"
+          }
+        },
+        {
+          "name": "Gyro_Z",
+          "constraint": {
+            "min": -2000.0,
+            "max": 2000.0,
+            "unit": "DEGREEPERSEC"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_L3GD20H",
+      "library_dependency": [
+        "adafruit/Adafruit_Sensor",
+        "adafruit/Adafruit_L3GD20_U"
+      ]
+    }
+  ]
+}

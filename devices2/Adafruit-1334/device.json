@@ -1,0 +1,97 @@
+{
+  "id": "Adafruit-1334",
+  "brand": "Adafruit",
+  "model": "RGB Color Sensor with IR filter and White LED - TCS34725",
+  "url": "https://www.adafruit.com/product/1334",
+  "type": "MODULE",
+  "width": 116.0,
+  "height": 117.0,
+  "pin_consume": [
+    {
+      "name": "SDA",
+      "type": "WIRE",
+      "function": "SDA",
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 43.201,
+      "y": 106.559
+    },
+    {
+      "name": "SCL",
+      "type": "WIRE",
+      "function": "SCL",
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 57.601,
+      "y": 106.559
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": "GND",
+      "v_min": 3.3,
+      "v_max": 5.0,
+      "x": 86.401,
+      "y": 106.559
+    },
+    {
+      "name": "VIN",
+      "type": "WIRE",
+      "function": "VCC",
+      "v_min": 3.5,
+      "v_max": 5.0,
+      "x": 100.801,
+      "y": 106.559
+    }
+  ],
+  "pin_unused": [
+    {
+      "name": "LED",
+      "x": 14.401,
+      "y": 106.559
+    },
+    {
+      "name": "INT",
+      "x": 28.801,
+      "y": 106.559
+    },
+    {
+      "name": "3V3",
+      "x": 72.001,
+      "y": 106.559
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "Color",
+      "condition": [
+        {
+          "name": "Detect Color",
+          "parameter": [
+            {
+              "name": "Color",
+              "constraint": [
+                "Red",
+                "Green",
+                "Blue",
+                "Cyan",
+                "Magenta",
+                "Yellow"
+              ]
+            }
+          ]
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_TCS34725",
+      "library_dependency": [
+        "adafruit/Adafruit_TCS34725"
+      ]
+    }
+  ]
+}

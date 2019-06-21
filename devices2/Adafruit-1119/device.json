@@ -1,0 +1,67 @@
+{
+  "id": "Adafruit-1119",
+  "brand": "Adafruit",
+  "model": "Tactile Switch Button",
+  "url": "https://www.adafruit.com/product/1119",
+  "type": "MODULE",
+  "width": 119.0,
+  "height": 82.0,
+  "pin_consume": [
+    {
+      "name": "S1A",
+      "connection_type": "WIRE",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "DIGITAL_OUT",
+      "x": 31.785,
+      "y": 42.489
+    },
+    {
+      "name": "S1B",
+      "connection_type": "WIRE",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "GND",
+      "x": 2.984,
+      "y": 0.002
+    },
+    {
+      "name": "VCC",
+      "connection_type": "WIRE",
+      "voltage_level": "LEVEL_3v3_5",
+      "function": "VCC",
+      "x": 117.42,
+      "y": 60.299
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "Button",
+      "condition": [
+        {
+          "name": "Press",
+          "parameter": []
+        },
+        {
+          "name": "Press and release",
+          "parameter": []
+        },
+        {
+          "name": "Not press",
+          "parameter": []
+        }
+      ],
+      "value": []
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    },
+    {
+      "platform": "RASPBERRYPI",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    }
+  ]
+}

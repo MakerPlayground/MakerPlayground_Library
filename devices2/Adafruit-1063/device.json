@@ -1,0 +1,63 @@
+{
+  "id": "Adafruit-1063",
+  "brand": "Adafruit",
+  "model": "Electret Microphone Amplifier - MAX4466 with Adjustable Gain",
+  "url": "https://www.adafruit.com/product/1063",
+  "type": "MODULE",
+  "width": 79.2,
+  "height": 122.4,
+  "pin_consume": [
+    {
+      "name": "OUT",
+      "connection_type": "WIRE",
+      "function": "ANALOG_OUT",
+      "voltage_level": "LEVEL_3v3_5",
+      "x": 21.646,
+      "y": 110.924
+    },
+    {
+      "name": "GND",
+      "connection_type": "WIRE",
+      "function": "GND",
+      "voltage_level": "LEVEL_3v3_5",
+      "x": 36.046,
+      "y": 110.924
+    },
+    {
+      "name": "VCC",
+      "connection_type": "WIRE",
+      "function": "VCC",
+      "voltage_level": "LEVEL_3v3_5",
+      "x": 50.446,
+      "y": 110.924
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "Sound",
+      "condition": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "SoundLevel",
+          "constraint": {
+            "min": 0.0,
+            "max": 0.0,
+            "unit": "DECIBEL"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "MP_MICROPHONE",
+      "library_dependency": []
+    }
+  ]
+}
