@@ -1,0 +1,277 @@
+{
+  "id": "Arduino-A000066",
+  "brand": "Arduino",
+  "model": "UNO REV3",
+  "url": "https://store.arduino.cc/usa/arduino-uno-rev3",
+  "type": "CONTROLLER",
+  "pio_boardid": "uno",
+  "wiring_method": "WIRE_AND_BREADBOARD",
+  "support_cloudplatform": [],
+  "width": 425.0,
+  "height": 303.0,
+  "property": [],
+  "pin_provide": [
+    {
+      "name": "0",
+      "connection_type": "WIRE",
+      "function": ["HW_SERIAL_IN"],
+      "voltage_level": "LEVEL_5",
+      "x": 395.56,
+      "y": 14.4
+    },
+    {
+      "name": "1",
+      "connection_type": "WIRE",
+      "function": ["HW_SERIAL_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 381.16,
+      "y": 14.4
+    },
+    {
+      "name": "2",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 366.74,
+      "y": 14.4
+    },
+    {
+      "name": "3",
+      "type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM"],
+      "voltage_level": "LEVEL_5",
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 352.36,
+      "y": 14.4
+    },
+    {
+      "name": "4",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 337.96,
+      "y": 14.4
+    },
+    {
+      "name": "5",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM"],
+      "voltage_level": "LEVEL_5",
+      "type": "WIRE",
+      "x": 323.56,
+      "y": 14.4
+    },
+    {
+      "name": "6",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM"],
+      "voltage_level": "LEVEL_5",
+      "x": 309.16,
+      "y": 14.4
+    },
+    {
+      "name": "7",
+      "type": "WIRE",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 294.74,
+      "y": 14.4
+    },
+    {
+      "name": "8",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT"],
+      "voltage_level": "LEVEL_5",
+      "type": "WIRE",
+      "x": 271.6,
+      "y": 14.4
+    },
+    {
+      "name": "9",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM"],
+      "voltage_level": "LEVEL_5",
+      "x": 257.2,
+      "y": 14.4
+    },
+    {
+      "name": "10",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM"],
+      "voltage_level": "LEVEL_5",
+      "x": 242.78,
+      "y": 14.4
+    },
+    {
+      "name": "11",
+      "type": "WIRE",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "PWM", "MOSI"],
+      "voltage_level": "LEVEL_5",
+      "x": 228.38,
+      "y": 14.4
+    },
+    {
+      "name": "12",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "MISO"],
+      "voltage_level": "LEVEL_5",
+      "x": 214.0,
+      "y": 14.4
+    },
+    {
+      "name": "13",
+      "connection_type": "WIRE",
+      "function": ["DIGITAL_IN", "DIGITAL_OUT", "SCK"],
+      "voltage_level": "LEVEL_5",
+      "x": 199.6,
+      "y": 14.4
+    },
+    {
+      "name": "GND",
+      "connection_type": "WIRE",
+      "function": ["GND"],
+      "voltage_level": "LEVEL_5",
+      "x": 185.2,
+      "y": 14.4
+    },
+    {
+      "name": "AREF",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 170.8,
+      "y": 14.4
+    },
+    {
+      "name": "SDA",
+      "connection_type": "WIRE",
+      "function": ["SDA"],
+      "voltage_level": "LEVEL_5",
+      "x": 156.4,
+      "y": 14.4
+    },
+    {
+      "name": "SCL",
+      "connection_type": "WIRE",
+      "function": ["SCL"],
+      "voltage_level": "LEVEL_5",
+      "x": 142.0,
+      "y": 14.4
+    },
+    {
+      "name": "IOREF",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 208.36,
+      "y": 288.0
+    },
+    {
+      "name": "RESET",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 222.76,
+      "y": 288.0
+    },
+    {
+      "name": "3.3V",
+      "connection_type": "WIRE",
+      "function": ["VCC"],
+      "voltage_level": "LEVEL_3v3",
+      "x": 237.16,
+      "y": 288.0
+    },
+    {
+      "name": "5V",
+      "connection_type": "WIRE",
+      "function": ["VCC"],
+      "voltage_level": "LEVEL_5",
+      "x": 251.56,
+      "y": 288.0
+    },
+    {
+      "name": "GND",
+      "connection_type": "WIRE",
+      "function": ["GND"],
+      "voltage_level": "LEVEL_5",
+      "x": 265.96,
+      "y": 288.0
+    },
+    {
+      "name": "GND",
+      "connection_type": "WIRE",
+      "function": ["GND"],
+      "voltage_level": "LEVEL_5",
+      "x": 280.36,
+      "y": 288.0
+    },
+    {
+      "name": "VIN",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 294.76,
+      "y": 288.0
+    },
+    {
+      "name": "A0",
+      "connection_type": "WIRE",
+      "function": ["ANALOG_IN", "ANALOG_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 323.56,
+      "y": 288.0
+    },
+    {
+      "name": "A1",
+      "connection_type": "WIRE",
+      "function": ["ANALOG_IN", "ANALOG_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 337.96,
+      "y": 288.0
+    },
+    {
+      "name": "A2",
+      "connection_type": "WIRE",
+      "function": ["ANALOG_IN", "ANALOG_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 352.36,
+      "y": 288.0
+    },
+    {
+      "name": "A3",
+      "connection_type": "WIRE",
+      "function": ["ANALOG_IN", "ANALOG_OUT"],
+      "voltage_level": "LEVEL_5",
+      "x": 366.76,
+      "y": 288.0
+    },
+    {
+      "name": "A4",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 381.16,
+      "y": 288.0
+    },
+    {
+      "name": "A5",
+      "connection_type": "WIRE",
+      "function": ["NO_FUNCTION"],
+      "voltage_level": "LEVEL_5",
+      "x": 395.56,
+      "y": 288.0
+    }
+  ],
+  "compatibility": [],
+  "platforms": [
+    {
+      "platform": "ARDUINO_AVR8",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
+}
