@@ -1,0 +1,866 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "definitions": {
+    "pin_not_connect": {
+      "$id": "#/definitions/pin_not_connect",
+      "type": "object",
+      "title": "Pin",
+      "required": ["name", "x", "y"],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/pin/properties/name",
+          "type": "string",
+          "title": "Pin Name",
+          "description": "The unique name of the pin that is displayed on the device",
+          "default": "",
+          "examples": ["VCC", "GND", "IN", "OUT"],
+          "pattern": "^(.*)$"
+        },
+        "voltage_level": {
+          "$id": "#/definitions/pin/properties/voltage_level",
+          "type": "string",
+          "enum": ["LEVEL_3v3_5", "LEVEL_3v3", "LEVEL_5"],
+          "title": "Pin Voltage Level",
+          "description": "The support voltage level for the pin.\n- LEVEL_3v3_5: support both 3.3v and 5v\n- LEVEL_3v3: support only 3.3v\n- LEVEL_5: support only 5v",
+          "default": "LEVEL_3v3_5",
+          "pattern": "^(.*)$"
+        },
+        "function": {
+          "$id": "#/definitions/pin/properties/function",
+          "title": "Pin Functions",
+          "description": "string or array of pin_function. Noted that IN and OUT pin_function are device-centered.",
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+              }
+            }
+          ],
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "x": {
+          "$id": "#/definitions/pin/properties/x",
+          "type": "number",
+          "title": "Pin X position",
+          "description": "X position in pixel unit",
+          "default": 0.0
+        },
+        "y": {
+          "$id": "#/definitions/pin/properties/y",
+          "type": "number",
+          "title": "Pin Y position",
+          "description": "Y position in pixel unit",
+          "default": 0.0
+        },
+        "ref_pin": {
+          "$id": "#/definitions/pin/properties/ref_pin",
+          "type": "string",
+          "title": "ref_pin",
+          "description": "Name of the pin that is referenced by pin_template",
+          "default": ""
+        }
+      }      
+    },
+    "pin": {
+      "$id": "#/definitions/pin",
+      "type": "object",
+      "title": "Pin",
+      "anyOf": [
+        {"required": ["name", "x", "y", "ref_pin"]},
+        {"required": ["name", "x", "y", "voltage_level", "function"]},
+        {"required": ["name", "x", "y", "ref_pin", "function"]},
+        {"required": ["name", "x", "y", "ref_pin", "function", "voltage_level"]}
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/pin/properties/name",
+          "type": "string",
+          "title": "Pin Name",
+          "description": "The unique name of the pin that is displayed on the device",
+          "default": "",
+          "examples": ["VCC", "GND", "IN", "OUT"],
+          "pattern": "^(.*)$"
+        },
+        "voltage_level": {
+          "$id": "#/definitions/pin/properties/voltage_level",
+          "type": "string",
+          "enum": ["LEVEL_3v3_5", "LEVEL_3v3", "LEVEL_5"],
+          "title": "Pin Voltage Level",
+          "description": "The support voltage level for the pin.\n- LEVEL_3v3_5: support both 3.3v and 5v\n- LEVEL_3v3: support only 3.3v\n- LEVEL_5: support only 5v",
+          "default": "LEVEL_3v3_5",
+          "pattern": "^(.*)$"
+        },
+        "function": {
+          "$id": "#/definitions/pin/properties/function",
+          "title": "Pin Functions",
+          "description": "string or array of pin_function. Noted that IN and OUT pin_function are device-centered.",
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+              }
+            }
+          ],
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "x": {
+          "$id": "#/definitions/pin/properties/x",
+          "type": "number",
+          "title": "Pin X position",
+          "description": "X position in pixel unit",
+          "default": 0.0
+        },
+        "y": {
+          "$id": "#/definitions/pin/properties/y",
+          "type": "number",
+          "title": "Pin Y position",
+          "description": "Y position in pixel unit",
+          "default": 0.0
+        },
+        "ref_pin": {
+          "$id": "#/definitions/pin/properties/ref_pin",
+          "type": "string",
+          "title": "ref_pin",
+          "description": "Name of the pin that is referenced by pin_template",
+          "default": ""
+        },
+        "connect_to": {
+          "$id": "#/definitions/pin/properties/connect_to",
+          "type": "string",
+          "title": "connect_to",
+          "description": "Name of the pin that the integrated device connected to",
+          "default": ""
+        }
+      }
+    },
+    "integrated_pin": {
+      "$id": "#/definitions/integrated_pin",
+      "type": "object",
+      "title": "Pin",
+      "anyOf": [
+        {"required": ["name", "x", "y", "voltage_level", "function", "connect_to"]},
+        {"required": ["name", "x", "y", "ref_pin", "connect_to"]},
+        {"required": ["name", "x", "y", "ref_pin", "function", "connect_to"]},
+        {"required": ["name", "x", "y", "ref_pin", "function", "voltage_level", "connect_to"]}
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/pin/properties/name",
+          "type": "string",
+          "title": "Pin Name",
+          "description": "The unique name of the pin that is displayed on the device",
+          "default": "",
+          "examples": ["VCC", "GND", "IN", "OUT"],
+          "pattern": "^(.*)$"
+        },
+        "voltage_level": {
+          "$id": "#/definitions/pin/properties/voltage_level",
+          "type": "string",
+          "enum": ["LEVEL_3v3_5", "LEVEL_3v3", "LEVEL_5"],
+          "title": "Pin Voltage Level",
+          "description": "The support voltage level for the pin.\n- LEVEL_3v3_5: support both 3.3v and 5v\n- LEVEL_3v3: support only 3.3v\n- LEVEL_5: support only 5v",
+          "default": "LEVEL_3v3_5",
+          "pattern": "^(.*)$"
+        },
+        "function": {
+          "$id": "#/definitions/pin/properties/function",
+          "title": "Pin Functions",
+          "description": "string or array of pin_function. Noted that IN and OUT pin_function are device-centered.",
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["VCC", "GND", "SCL", "SDA", "DIGITAL_IN", "DIGITAL_OUT", "ANALOG_IN", "ANALOG_OUT", "PWM_OUT", "PWM_IN", "INTERRUPT_LOW", "INTERRUPT_HIGH", "INTERRUPT_CHANGE", "INTERRUPT_RISING", "INTERRUPT_FALLING", "HW_SERIAL_IN", "HW_SERIAL_OUT", "SW_SERIAL_IN", "SW_SERIAL_OUT", "MOSI", "MISO", "SCK", "AREF", "NO_FUNCTION"]
+              }
+            }
+          ],
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "x": {
+          "$id": "#/definitions/pin/properties/x",
+          "type": "number",
+          "title": "Pin X position",
+          "description": "X position in pixel unit",
+          "default": 0.0
+        },
+        "y": {
+          "$id": "#/definitions/pin/properties/y",
+          "type": "number",
+          "title": "Pin Y position",
+          "description": "Y position in pixel unit",
+          "default": 0.0
+        },
+        "ref_pin": {
+          "$id": "#/definitions/pin/properties/ref_pin",
+          "type": "string",
+          "title": "ref_pin",
+          "description": "Name of the pin that is referenced by pin_template",
+          "default": ""
+        },
+        "connect_to": {
+          "$id": "#/definitions/pin/properties/connect_to",
+          "type": "string",
+          "title": "connect_to",
+          "description": "Name of the pin that the integrated device connected to",
+          "default": ""
+        }
+      }
+    },
+    "port": {
+      "$id": "#/properties/port",
+        "type": "object",
+        "title": "Port",
+        "required": [
+          "name",
+          "type",
+          "elements"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/definitions/port/properties/name",
+            "type": "string",
+            "title": "Port Name",
+            "description": "The unique port name that is displayed on device.",
+            "default": "",
+            "examples": [],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/definitions/port/properties/type",
+            "type": "string",
+            "title": "Port Type",
+            "description": "The connection type of the port supported by Maker Playground software.",
+            "enum": ["GROVE", "MP", "M5STACK", "UNO_SHIELD"],
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "elements": {
+            "$id": "#/definitions/port/properties/elements",
+            "type": "array",
+            "title": "Port Elements",
+            "description": "The array of pin name that is belonged to the port. The pins must follow the order for each connection types.\n- GROVE: [GND, VCC, DATA2, DATA1]\n- MP: [GND, VCC, DATA2, DATA1]\n- M5STACK: [GND, VCC, DATA2, DATA1]\n- INEX3: [GND, DATA, VCC]\n",
+            "items": {
+              "$id": "#/definitions/port/properties/elements/items",
+              "type": "string",
+              "title": "Pin name",
+              "description": "Pin name that is defined in pin_consume or pin_provide",
+              "default": "",
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+    },
+    "compatibility": {
+      "$id": "#/definitions/compatibility",
+      "type": "object",
+      "title": "Compatibility",
+      "anyOf": [
+        { "required": ["condition"] },
+        { "required": ["action"] },
+        { "required": ["value"] }
+      ],
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/compatibility/properties/name",
+          "type": "string",
+          "title": "Name",
+          "description": "The generic device name",
+          "enum": [
+            "Accelerometer", 
+            "Alcohol", 
+            "Altimeter", 
+            "Button",
+            "Camera", 
+            "Color", 
+            "Current", 
+            "Distance", 
+            "Dust", 
+            "Energy Meter",
+            "Flame", 
+            "Gesture", 
+            "GPS", 
+            "Gyroscope", 
+            "Humidity", 
+            "Joystick",
+            "Light", 
+            "LPG", 
+            "Magnetometer",
+            "POT",
+            "Presence",
+            "Pressuremeter",
+            "RTC",
+            "Soil Moisture",
+            "Sound",
+            "Temperature",
+            "Water",
+            "7 Segment",
+            "Buzzer",
+            "DC Motor",
+            "Display",
+            "LED",
+            "Load Driver",
+            "Relay Module",
+            "RGB LED",
+            "Servo",
+            "Container",
+            "Counter",
+            "Statistics",
+            "Timer",
+            "Image Recognizer",
+            "Image to Text",
+            "Map",
+            "Notification",
+            "Telemetry",
+            "Text to Speech",
+            "Virtual Button",
+            "Virtual Gauge",
+            "Virtual LED",
+            "Virtual Slider",
+            "Analog (In)",
+            "Digital (In)",
+            "Digital (Out)",
+            "PWM (Out)]"
+          ]
+        },
+        "action": {
+          "$id": "#/definitions/compatibility/properties/action",
+          "type": "array",
+          "title": "Action Schema",
+          "items": {
+            "$id": "#/definitions/compatibility/properties/action/items",
+            "type": "object",
+            "title": "Action",
+            "required": [
+              "name",
+              "parameter"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/definitions/compatibility/items/properties/name",
+                "type": "string",
+                "title": "Action Name",
+                "description": "The action name that is belonged to the generic device",
+                "default": "",
+                "enum": [
+                  "Set DateTime",
+                  "Show Number",
+                  "Show Two Numbers with Colon",
+                  "Off",
+                  "Beep",
+                  "Play Tone",
+                  "On",
+                  "Show Text at Row",
+                  "Show Number at Row",
+                  "Clear Row",
+                  "Clear Screen",
+                  "Move To",
+                  "Set to",
+                  "Count up by 1",
+                  "Count down by 1",
+                  "Count by",
+                  "Add new",
+                  "Clear all data",
+                  "Initialize timer",
+                  "Stop Timer",
+                  "Convert to Text",
+                  "Convert to Text File",
+                  "Pin Location",
+                  "Clear Pin",
+                  "Notify",
+                  "Send Telemetry",
+                  "Convert and play sound",
+                  "Convert to sounf file",
+                  "Display number",
+                  "Set Output HIGH",
+                  "Set Output LOW",
+                  "Set Duty Cycle"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "parameter": {
+                "$id": "#/definitions/compatibility/action/items/properties/parameter",
+                "type": "array",
+                "title": "Parameter",
+                "description": "The parameter list that is belonged to the action of the generic device",
+                "default": []
+              }
+            }
+          }
+        },
+        "condition": {
+          "$id": "#/definitions/compatibility/properties/condition",
+          "type": "array",
+          "title": "Condition Schema",
+          "items": {
+            "$id": "#/definitions/compatibility/properties/condition/items",
+            "type": "object",
+            "title": "Condition",
+            "required": [
+              "name",
+              "parameter"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/definitions/compatibility/properties/condition/items/properties/name",
+                "type": "string",
+                "title": "Name",
+                "description": "The name of the condition belonged to the generic device",
+                "default": "Compare",
+                "enum": [
+                  "Compare",
+                  "Tap",
+                  "Free Fall",
+                  "Press",
+                  "Press and release",
+                  "Not press",
+                  "Detect Color",
+                  "Swipe Up",
+                  "Swipe Down",
+                  "Swipe Left",
+                  "Swipe Right",
+                  "Move Forward",
+                  "Move Backward",
+                  "Spin Clockwise",
+                  "Spin Counter Clockwise",
+                  "Waving",
+                  "Not Detected",
+                  "Data is valid",
+                  "Data is not valid",
+                  "Press up",
+                  "Press down",
+                  "Press left",
+                  "Press middle",
+                  "Not press up",
+                  "Not press down",
+                  "Not press left",
+                  "Not press middle",
+                  "Not press all",
+                  "Direction",
+                  "Detect Human",
+                  "No Human",
+                  "Check Day",
+                  "Detect Water",
+                  "No Water",
+                  "Check Value",
+                  "Value equal to",
+                  "Value not equal to",
+                  "After",
+                  "Before",
+                  "Found",
+                  "Not Found",
+                  "Has Text",
+                  "Has No Text",
+                  "Receive HIGH logic",
+                  "Receive LOW logic"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "parameter": {
+                "$id": "#/definitions/compatibility/properties/condition/items/properties/parameter",
+                "type": "array",
+                "title": "Parameter",
+                "description": "The parameter list that is belonged to the condition of the generic device",
+                "default": []
+              }
+            }
+          }
+        },
+        "value": {
+          "$id": "#/definitions/compatibility/properties/value",
+          "type": "array",
+          "title": "Value Schema",
+          "items": {
+            "$id": "#/definitions/compatibility/properties/value/items",
+            "type": "object",
+            "title": "Value",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/definitions/compatibility/properties/value/items/properties/name",
+                "title": "Name",
+                "description": "The name of the value belonged to the generic device",
+                "type": "string",
+                "enum": [
+                  "Accel_X",
+                  "Accel_Y",
+                  "Accel_Z",
+                  "Accel_Magnitude",
+                  "Percent",
+                  "Altitude",
+                  "Image",
+                  "Ampere",
+                  "Distance",
+                  "Atmospheric PM 1.0",
+                  "Atmospheric PM 2.5",
+                  "Atmospheric PM 10",
+                  "Current",
+                  "Voltage",
+                  "Power",
+                  "Frequency",
+                  "Active Apparent Power",
+                  "Reactive Apparent Power",
+                  "Total Active Energy",
+                  "Total Reactive Energy",
+                  "Power Factor",
+                  "Phase Angle",
+                  "Latitude",
+                  "Longitude",
+                  "Gyro_X",
+                  "Gyro_Y",
+                  "Gyro_Z",
+                  "Humidity",
+                  "Mag_X",
+                  "Mag_Y",
+                  "Mag_Z",
+                  "Pressure",
+                  "Hour",
+                  "Minute",
+                  "Second",
+                  "Date",
+                  "Month",
+                  "Year",
+                  "SoundLevel",
+                  "Temperature",
+                  "Value",
+                  "Average",
+                  "SD",
+                  "Variance",
+                  "Count",
+                  "Min",
+                  "Max",
+                  "Text"
+                ]
+              },
+              "constraint": {
+                "$id": "#/definitions/compatibility/properties/value/items/properties/constraint",
+                "title": "Constraint",
+                "description": "The constraint of the value that the actual device provided",
+                "type": ["array", "object"],
+                "default": {},
+                "examples": [{}, []]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "title": "Device Schema",
+  "allOf": [
+    {
+      "anyOf": [
+        {"required": ["pin_provide"]},
+        {"required": ["pin_consume"]}
+      ]
+    },
+    {
+      "anyof": [
+        {"required": ["integrated_devices"]}, 
+        {"required": []}
+      ]
+    }
+  ],
+  "required": [
+    "id",
+    "brand",
+    "model",
+    "url",
+    "type",
+    "width",
+    "height",
+    "compatibility",
+    "platforms"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "Device ID",
+      "description": "The device ID is the unique identifier of the device.\n It usually a device provider, dash, and the unique id given by device provider.",
+      "default": "",
+      "examples": [
+        "Adafruit-1119",
+        "Grove-101020055"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "brand": {
+      "$id": "#/properties/brand",
+      "type": "string",
+      "title": "Device Brand",
+      "description": "The device brand is the name of the device owner or provider.",
+      "default": "",
+      "examples": [
+        "Adafruit",
+        "SeeedStudio"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "model": {
+      "$id": "#/properties/model",
+      "type": "string",
+      "title": "Device Model",
+      "description": "The device model is the device-specific description such as IC, module name, color.",
+      "default": "",
+      "examples": [
+        "Tactile Switch Button"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "Device Url",
+      "description": "The device URL is the link to device description given by device owner or provider.",
+      "default": "",
+      "examples": [
+        "https://www.adafruit.com/product/1119"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "Device Type",
+      "description": "The device type should be\n- MODULE: most device in the world\n- CONTROLLER: software-programmable device\n- VIRTUAL: no hardware but works like device\n- INTEGRATED: device on the donor device\n- SHIELD: shield device",
+      "enum": ["MODULE", "CONTROLLER", "VIRTUAL", "INTEGRATED", "SHIELD"],
+      "default": "MODULE",
+      "pattern": "^(.*)$"
+    },
+    "width": {
+      "$id": "#/properties/width",
+      "type": "number",
+      "title": "Device Width",
+      "description": "The device width in pixel unit. (1 inch = 144 pixels)",
+      "default": 120.0,
+      "examples": [
+        120.0
+      ]
+    },
+    "height": {
+      "$id": "#/properties/height",
+      "type": "number",
+      "title": "Device Height",
+      "description": "The device height in pixel unit. (1 inch = 144 pixels)",
+      "default": 80.0,
+      "examples": [
+        80.0
+      ]
+    },
+    "cloud_consume": {
+      "$id": "#/properties/pin_template",
+      "type": "string",
+      "title": "cloud_consume",
+      "description": "The name of cloud that the device needed",
+      "enum": ["BLYNK", "NETPIE", "REST", "AZURE"]
+    },
+    "pin_template": {
+      "$id": "#/properties/pin_template",
+      "type": "string",
+      "title": "pin_template",
+      "description": "The name of the pin template that the device is extended from",
+      "default": "",
+      "examples": ["ATMEGA328"]
+    },
+    "pin_consume": {
+      "$id": "#/properties/pin_consume",
+      "type": "array",
+      "title": "pin_consume",
+      "description": "The device pins that will be mapped to the provided pins of the other device",
+      "items": {"$ref": "#/definitions/pin"},
+      "default": [],
+      "examples": [[]]
+    },
+    "pin_provide": {
+      "$id": "#/properties/pin_provide",
+      "type": "array",
+      "title": "pin_provide",
+      "description": "The device pins that will supply for other device pins",
+      "items": {
+        "$ref": "#/definitions/pin"
+      },
+      "default": [],
+      "examples": [[]]
+    },
+    "pin_not_connect": {
+      "$id": "#/properties/pin_not_connect",
+      "type": "array",
+      "title": "pin_not_connect",
+      "description": "The device pins that appears on the device but usually not connect",
+      "items": {"$ref": "#/definitions/pin_not_connect"}
+    },
+    "port_consume": {
+      "$id": "#/properties/port_consume",
+      "type": "array",
+      "title": "port_consume",
+      "description": "The device ports that will be mapped to the provided ports of the other device",
+      "items": {"$ref": "#/definitions/port"}
+    },
+    "port_provide": {
+      "$id": "#/properties/port_provide",
+      "type": "array",
+      "title": "port_provide",
+      "description": "The device ports that will supply for other device ports",
+      "items": {"$ref": "#/definitions/port"}
+    },
+    "compatibility": {
+      "$id": "#/properties/compatibility",
+      "type": "array",
+      "title": "Compatibility",
+      "description": "The combatibility is the mapping of the generic device to the action/condition/value that the device is supported.",
+      "items": {"$ref": "#/definitions/compatibility"}
+    },
+    "platforms": {
+      "$id": "#/properties/platforms",
+      "type": "array",
+      "title": "Platforms Schema",
+      "items": {
+        "$id": "#/properties/platforms/items",
+        "type": "object",
+        "title": "Platform",
+        "required": [
+          "platform",
+          "classname",
+          "library_dependency"
+        ],
+        "properties": {
+          "platform": {
+            "$id": "#/properties/platforms/items/properties/platform",
+            "type": "string",
+            "title": "Platform",
+            "description": "the development platform supported by the device",
+            "enum": [
+              "ARDUINO_AVR8",
+              "ARDUINO_ESP8266",
+              "ARDUINO_ESP32",
+              "RASPBERRYPI"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "classname": {
+            "$id": "#/properties/platforms/items/properties/classname",
+            "type": "string",
+            "title": "Classname",
+            "description": "The name of the file and class of the code implementation",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "library_dependency": {
+            "$id": "#/properties/platforms/items/properties/library_dependency",
+            "type": "array",
+            "title": "Library_dependency",
+            "description": "The array of library folder to be included to the project while building an execuable",
+            "items": {
+              "type": "string",
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "integrated_devices": {
+      "$id": "#/properties/integrated_devices",
+      "type": "array",
+      "title": "integrated_devices",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {"required": ["name", "compatibility", "pin_provide"]},
+          {"required": ["name", "compatibility", "pin_consume"]},
+          {"required": ["name", "compatibility", "pin_consume", "pin_template"]},
+          {"required": ["name", "compatibility", "pin_provide", "pin_template"]},
+          {"required": ["name", "compatibility", "pin_consume", "pin_provide", "pin_template"]}
+        ],
+        "required": ["name", "compatibility"],
+        "properties": {
+          "name": {
+            "$id": "#/properties/integrated_devices/items/properties/name",
+            "type": "string",
+            "title": "name",
+            "description": "The name of the integrated device",
+            "pattern": "^(.*)$"
+          },
+          "cloud_consume": {
+            "$id": "#/properties/integrated_devices/items/properties/cloud_consume",
+            "type": "string",
+            "title": "cloud_consume",
+            "description": "The name of cloud that the device needed",
+            "enum": ["BLYNK", "NETPIE", "REST", "AZURE"]
+          },
+          "pin_template": {
+            "$id": "#/properties/integrated_devices/items/properties/pin_template",
+            "type": "string",
+            "title": "pin_template",
+            "description": "The name of the pin template that the device is extended from",
+            "default": "",
+            "examples": ["ATMEGA328"]
+          },
+          "pin_consume": {
+            "$id": "#/properties/integrated_devices/items/properties/pin_consume",
+            "type": "array",
+            "title": "pin_consume",
+            "description": "The device pins that will be mapped to the provided pins of the other device",
+            "items": {"$ref": "#/definitions/pin"},
+            "default": [],
+            "examples": [[]]
+          },
+          "pin_provide": {
+            "$id": "#/properties/integrated_devices/items/properties/pin_provide",
+            "type": "array",
+            "title": "pin_provide",
+            "description": "The device pins that will supply for other device pins",
+            "items": {"$ref": "#/definitions/pin"},
+            "default": [],
+            "examples": [[]]
+          },
+          "port_consume": {
+            "$id": "#/properties/integrated_devices/items/properties/port_consume",
+            "type": "array",
+            "title": "port_consume",
+            "description": "The device ports that will be mapped to the provided ports of the other device",
+            "items": {"$ref": "#/definitions/port"}
+          },
+          "port_provide": {
+            "$id": "#/properties/integrated_devices/items/properties/port_provide",
+            "type": "array",
+            "title": "port_provide",
+            "description": "The device ports that will supply for other device ports",
+            "items": {"$ref": "#/definitions/port"}
+          },
+          "compatibility": {
+            "$id": "#/properties/integrated_devices/items/properties/compatibility",
+            "type": "array",
+            "title": "Compatibility",
+            "description": "The combatibility is the mapping of the generic device to the action/condition/value that the device is supported.",
+            "items": {"$ref": "#/definitions/compatibility"}
+          }
+        }
+      }
+    }
+  }
+}
