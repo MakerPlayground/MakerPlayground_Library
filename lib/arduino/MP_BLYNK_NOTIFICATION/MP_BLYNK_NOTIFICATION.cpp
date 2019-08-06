@@ -22,6 +22,6 @@ void MP_BLYNK_NOTIFICATION::update(unsigned long current_time) {
     blynk->update(millis());
 }
 
-void MP_BLYNK_NOTIFICATION::notify(char* msg) {
+void MP_BLYNK_NOTIFICATION::notify(const char* msg) {
     blynk->notify(msg);
 }

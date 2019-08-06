@@ -121,7 +121,7 @@ void MP_BLYNK_NODEMCU::writeVirtualPin(uint8_t pin, char* val1)
     Blynk.virtualWrite(pin, val1);
 }
 
-void MP_BLYNK_NODEMCU::notify(char* msg) {
+void MP_BLYNK_NODEMCU::notify(const char* msg) {
     Blynk.notify(msg);
 }
 

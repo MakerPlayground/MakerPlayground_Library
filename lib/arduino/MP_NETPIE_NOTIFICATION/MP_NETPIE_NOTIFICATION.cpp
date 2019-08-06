@@ -19,6 +19,6 @@ void MP_NETPIE_NOTIFICATION::update(unsigned long current_time) {
     netpie->update(millis());
 }
 
-void MP_NETPIE_NOTIFICATION::notify(char* msg) {
+void MP_NETPIE_NOTIFICATION::notify(const char* msg) {
     netpie->notify(msg);
 }

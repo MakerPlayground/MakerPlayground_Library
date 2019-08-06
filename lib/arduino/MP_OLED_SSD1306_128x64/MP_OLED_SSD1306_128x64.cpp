@@ -36,7 +36,7 @@ void MP_OLED_SSD1306_128x64::printStatus()
 {
 }
 
-void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color)
+void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color)
 {
     uint8_t rowIndex = row - 1;
     if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
@@ -66,21 +66,6 @@ void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, char* text, char* size, 
         display.display();
         row_heights[rowIndex] = sizeInt;
     }
-}
-
-void MP_OLED_SSD1306_128x64::showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color)
-{
-    char* p;
-    char temp[25] = "";
-    char valueStr[10] = "";
-    if ((p = strstr(label, "/value/")) != NULL)
-    {
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, valueStr);
-        strcpy(temp, label);
-        strcpy(temp + (p - label), valueStr);
-        strcpy(temp + (p - label) + strlen(valueStr), p+7);
-    }
-    showTextAtRow(row, temp, size, align, color);
 }
 
 void MP_OLED_SSD1306_128x64::clearRow(uint8_t row)

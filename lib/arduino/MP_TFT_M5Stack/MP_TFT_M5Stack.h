@@ -22,8 +22,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color);
-	void showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color);
+	void showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color);
 	void clearRow(uint8_t row);
 	void clearScreen();
 

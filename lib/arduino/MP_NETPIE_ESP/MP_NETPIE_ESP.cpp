@@ -115,7 +115,7 @@ void MP_NETPIE_ESP::writeFeed(char* feedId, String data, char* apiKey) {
     microgear.writeFeed(feedId, data, apiKey);
 }
 
-void MP_NETPIE_ESP::notify(char* message)
+void MP_NETPIE_ESP::notify(const char* message)
 {
     microgear.publish("/@push/owner", message);
 }

@@ -116,7 +116,7 @@ void MP_BLYNK_MPBASEBOARD::writeVirtualPin(uint8_t pin, char* val1)
     checkResponse();
 }
 
-void MP_BLYNK_MPBASEBOARD::notify(char* msg) {
+void MP_BLYNK_MPBASEBOARD::notify(const char* msg) {
     Serial1.print(F("A,"));
     Serial1.println(msg);
     checkResponse();

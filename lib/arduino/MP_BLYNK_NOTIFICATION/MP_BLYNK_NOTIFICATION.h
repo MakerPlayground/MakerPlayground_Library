@@ -12,7 +12,7 @@ public:
     void update(unsigned long current_time);
     void printStatus();
 
-    void notify(char* msg);
+    void notify(const char* msg);
 
 private:
     MP_BLYNK* blynk;

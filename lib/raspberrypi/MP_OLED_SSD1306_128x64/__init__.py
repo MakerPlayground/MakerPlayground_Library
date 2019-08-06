@@ -75,11 +75,6 @@ class MP_OLED_SSD1306_128x64(MP_Device):
                 self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * sizeInt * len(self.entries[row_index].message)))
             self._show()
 
-    def showNumberAtRow(self, row, label, value, decimalPlaces, size, align, color):
-        value_str = "{:.{}f}".format(value, int(decimalPlaces))
-        temp = str(label).replace('/value/', value_str, 1)
-        self.showTextAtRow(row, temp, size, align, color)
-
     def clearRow(self, row):
         rowIndex = int(row-1)
         self.entries[rowIndex].message = ''

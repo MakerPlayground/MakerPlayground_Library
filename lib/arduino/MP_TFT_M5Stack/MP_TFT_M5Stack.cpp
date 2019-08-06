@@ -30,7 +30,7 @@ void MP_TFT_M5Stack::printStatus()
 {
 }
 
-void MP_TFT_M5Stack::showTextAtRow(uint8_t row, char* text, char* size, char* align, char* color) {
+void MP_TFT_M5Stack::showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color) {
     uint8_t rowIndex = row - 1;
     if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
     {
@@ -70,20 +70,6 @@ void MP_TFT_M5Stack::showTextAtRow(uint8_t row, char* text, char* size, char* al
         display.print(text);
         display.display();
     }
-}
-
-void MP_TFT_M5Stack::showNumberAtRow(uint8_t row, char* label, double value, double decimalPlaces, char* size, char* align, char* color) {
-    char* p;
-    char temp[25] = "";
-    char valueStr[10] = "";
-    if ((p = strstr(label, "/value/")) != NULL)
-    {
-        dtostrf(value, (decimalPlaces + 2), decimalPlaces, valueStr);
-        strcpy(temp, label);
-        strcpy(temp + (p - label), valueStr);
-        strcpy(temp + (p - label) + strlen(valueStr), p+7);
-    }
-    showTextAtRow(row, temp, size, align, color);
 }
 
 void MP_TFT_M5Stack::clearRow(uint8_t row) {

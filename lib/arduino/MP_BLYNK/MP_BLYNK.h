@@ -14,7 +14,7 @@ public:
 	virtual void writeVirtualPin(uint8_t pin, double value);   // pin = 0-7
     virtual void writeVirtualPin(uint8_t pin, int val1, double val2, double val3, char* val4);
     virtual void writeVirtualPin(uint8_t pin, char* val1);
-	virtual void notify(char* msg);
+	virtual void notify(const char* msg);
 	
 	// high level function use by maker playground
 	virtual bool checkVirtualPinValue(uint8_t pin, int value);

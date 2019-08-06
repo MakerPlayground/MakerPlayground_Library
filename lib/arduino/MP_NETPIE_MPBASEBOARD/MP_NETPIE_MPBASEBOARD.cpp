@@ -130,7 +130,7 @@ void MP_NETPIE_MPBASEBOARD::writeFeed(char* feedId, String data, char* apiKey)
     checkResponse();
 }
 
-void MP_NETPIE_MPBASEBOARD::notify(char* message)
+void MP_NETPIE_MPBASEBOARD::notify(const char* message)
 {
     Serial1.print(F("O,"));
     Serial1.println(message);

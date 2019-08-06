@@ -1282,7 +1282,7 @@
           "name": "Display",
           "action": [
             {
-              "name": "Show Text at Row",
+              "name": "Show Text",
               "parameter": [
                 {
                   "name": "Row",
@@ -1338,79 +1338,6 @@
                 }
               ]
             },
-            {
-              "name": "Show Number at Row",
-              "parameter": [
-                {
-                  "name": "Row",
-                  "constraint": {
-                    "min": 1.0,
-                    "max": 10.0,
-                    "unit": "NOT_SPECIFIED"
-                  }
-                },
-                {
-                  "name": "Label",
-                  "constraint": []
-                },
-                {
-                  "name": "Value",
-                  "constraint": {
-                    "min": -99999.0,
-                    "max": 99999.0,
-                    "unit": "NOT_SPECIFIED"
-                  }
-                },
-                {
-                  "name": "Decimal places",
-                  "constraint": {
-                    "min": 0,
-                    "max": 6,
-                    "unit": "NOT_SPECIFIED"
-                  }
-                },
-                {
-                  "name": "Size",
-                  "constraint": [
-                    "1x",
-                    "2x",
-                    "3x"
-                  ]
-                },
-                {
-                  "name": "Align",
-                  "value": "Left",
-                  "constraint": [
-                    "Left",
-                    "Center",
-                    "Right"
-                  ]
-                },
-                {
-                  "name": "Color",
-                  "constraint": [
-                    "Blue",
-                    "Cyan",
-                    "Dark Cyan",
-                    "Dark Green",
-                    "Dark Grey",
-                    "Green",
-                    "Green Yellow",
-                    "Light Grey",
-                    "Magenta",
-                    "Maroon",
-                    "Navy",
-                    "Olive",
-                    "Orange",
-                    "Pink",
-                    "Purple",
-                    "White",
-                    "Red",
-                    "Yellow"
-                  ]
-                }
-              ]
-            },  
             {
               "name": "Clear Row",
               "parameter": [
