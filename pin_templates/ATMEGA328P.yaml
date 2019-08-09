@@ -1,0 +1,161 @@
+pins:
+# GROUP B
+- pin_name: PB0
+  coding_name: 8
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PB1
+  coding_name: 9
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PB2
+  coding_name: 10
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+  voltage_level: LEVEL_5
+  
+- pin_name: PB3
+  coding_name: 11
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+    - MOSI
+  voltage_level: LEVEL_5
+
+- pin_name: PB4
+  coding_name: 12
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - MISO
+  voltage_level: LEVEL_5
+
+- pin_name: PB5
+  coding_name: 13
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - SCK
+  voltage_level: LEVEL_5
+
+# GROUP C
+- pin_name: PC0
+  coding_name: A0
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
+- pin_name: PC1
+  coding_name: A1
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
+- pin_name: PC2
+  coding_name: A2
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
+- pin_name: PC3
+  coding_name: A3
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
+- pin_name: PC4
+  coding_name: A4
+  pin_function:
+    - ANALOG_IN
+    - SDA
+  voltage_level: LEVEL_5
+
+- pin_name: PC5
+  coding_name: A5
+  pin_function:
+    - ANALOG_IN
+    - SCL
+  voltage_level: LEVEL_5
+
+# GROUP D
+- pin_name: PD0
+  coding_name: 0
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - HW_SERIAL_IN
+  voltage_level: LEVEL_5
+
+- pin_name: PD1
+  coding_name: 1
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - HW_SERIAL_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD2
+  coding_name: 2
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD3
+  coding_name: 3
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD4
+  coding_name: 4
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD5
+  coding_name: 5
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD6
+  coding_name: 6
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+    - PWM_OUT
+  voltage_level: LEVEL_5
+
+- pin_name: PD7
+  coding_name: 7
+  pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
+  voltage_level: LEVEL_5
+  
+# POWER
+- pin_name: GND
+  pin_function:
+    - GND
+  voltage_level: LEVEL_5
+
+- pin_name: VCC
+  pin_function:
+    - VCC
+  voltage_level: LEVEL_5
