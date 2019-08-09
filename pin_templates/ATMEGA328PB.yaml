@@ -30,7 +30,7 @@ pins:
     - DIGITAL_OUT
     - PWM_OUT
     - MOSI
-    - HW_SERIAL_OUT1
+    - HW_SERIAL_TX1
   voltage_level: LEVEL_5
 
 - pin_name: PB4
@@ -39,7 +39,7 @@ pins:
     - DIGITAL_IN
     - DIGITAL_OUT
     - MISO
-    - HW_SERIAL_OUT0
+    - HW_SERIAL_RX1
   voltage_level: LEVEL_5
 
 - pin_name: PB5
@@ -55,32 +55,40 @@ pins:
   coding_name: A0
   pin_function:
     - ANALOG_IN
-    - MISO1
+    - DIGITAL_IN
+    - DIGITAL_OUT
   voltage_level: LEVEL_5
 
 - pin_name: PC1
   coding_name: A1
   pin_function:
     - ANALOG_IN
-    - SCK1
+    - DIGITAL_IN
+    - DIGITAL_OUT
   voltage_level: LEVEL_5
 
 - pin_name: PC2
   coding_name: A2
   pin_function:
     - ANALOG_IN
+    - DIGITAL_IN
+    - DIGITAL_OUT
   voltage_level: LEVEL_5
 
 - pin_name: PC3
   coding_name: A3
   pin_function:
     - ANALOG_IN
+    - DIGITAL_IN
+    - DIGITAL_OUT
   voltage_level: LEVEL_5
 
 - pin_name: PC4
   coding_name: A4
   pin_function:
     - ANALOG_IN
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - SDA
   voltage_level: LEVEL_5
 
@@ -88,6 +96,8 @@ pins:
   coding_name: A5
   pin_function:
     - ANALOG_IN
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - SCL
   voltage_level: LEVEL_5
 
@@ -97,7 +107,7 @@ pins:
   pin_function:
     - DIGITAL_IN
     - DIGITAL_OUT
-    - HW_SERIAL_IN
+    - HW_SERIAL_RX
   voltage_level: LEVEL_5
 
 - pin_name: PD1
@@ -105,7 +115,7 @@ pins:
   pin_function:
     - DIGITAL_IN
     - DIGITAL_OUT
-    - HW_SERIAL_OUT
+    - HW_SERIAL_TX
   voltage_level: LEVEL_5
 
 - pin_name: PD2

@@ -5,7 +5,7 @@
     "platforms": {
       "$id": "#/definitions/platforms",
       "type": "string",
-      "title": "platform",
+      "title": "platforms",
       "description": "Name of development Platform",
       "enum": [
         "ARDUINO_AVR8",
@@ -33,6 +33,8 @@
         "GND",
         "SCL",
         "SDA",
+        "SCL1",
+        "SDA1",
         "DIGITAL_IN",
         "DIGITAL_OUT",
         "ANALOG_IN",
@@ -44,13 +46,20 @@
         "INTERRUPT_CHANGE",
         "INTERRUPT_RISING",
         "INTERRUPT_FALLING",
-        "HW_SERIAL_IN",
-        "HW_SERIAL_OUT",
-        "SW_SERIAL_IN",
-        "SW_SERIAL_OUT",
+        "HW_SERIAL_RX",
+        "HW_SERIAL_TX",
+        "HW_SERIAL_RX1",
+        "HW_SERIAL_TX1",
+        "SW_SERIAL_RX",
+        "SW_SERIAL_TX",
+        "HW_OR_SW_SERIAL_RX",
+        "HW_OR_SW_SERIAL_TX",
         "MOSI",
         "MISO",
         "SCK",
+        "MOSI1",
+        "MISO1",
+        "SCK1",
         "AREF",
         "NO_FUNCTION"
       ]
@@ -990,7 +999,7 @@
         "$ref": "#/definitions/compatibility_object"
       }
     },
-    "platform": {
+    "platforms": {
       "$id": "#/properties/platforms",
       "type": "array",
       "title": "platforms",

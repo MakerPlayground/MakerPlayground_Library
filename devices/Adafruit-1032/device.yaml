@@ -1,0 +1,60 @@
+id: Adafruit-1032
+brand: Adafruit
+model: L3GD20H Triple-Axis Gyro Breakout Board - L3GD20/L3G4200 Upgrade - L3GD20H
+url: https://www.adafruit.com/product/1032
+type: MODULE
+width: 120
+height: 108
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+- name: SCL
+  type: WIRE
+  pins:
+    - x: 29
+      y: 99
+      ref_to: SCL
+- name: SDA
+  type: WIRE
+  pins:
+    - x: 43.4
+      y: 99
+      ref_to: SDA
+- name: GND
+  type: WIRE
+  pins:
+    - ref_to: GND
+      x: 115.4
+      y: 99
+- name: VIN
+  type: WIRE
+  pins:
+    - x: 144.2
+      y: 99
+      ref_to: VCC
+compatibility:
+- name: Gyroscope
+  condition:
+  - name: Compare
+    parameter: []
+  value:
+  - name: Gyro_X
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
+  - name: Gyro_Y
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
+  - name: Gyro_Z
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_L3GD20H
+  library_dependency:
+  - adafruit/Adafruit_Sensor
+  - adafruit/Adafruit_L3GD20_U

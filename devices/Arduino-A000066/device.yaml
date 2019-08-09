@@ -1,0 +1,192 @@
+---
+id: Arduino-A000066
+brand: Arduino
+model: UNO REV3
+url: https://store.arduino.cc/usa/arduino-uno-rev3
+type: CONTROLLER
+pio_boardid: uno
+wiring_method: WIRE_AND_BREADBOARD
+support_cloudplatform: []
+width: 425
+height: 303
+property: []
+pin_template: ATMEGA328P
+connection_provide:
+  - name: '0'
+    type: WIRE
+    pins:
+      - x: 395.56
+        y: 14.4
+        ref_to: PD0
+  - name: '1'
+    type: WIRE
+    pins:
+      - x: 381.16
+        y: 14.4
+        ref_to: PD1
+  - name: '2'
+    type: WIRE
+    pins:
+      - x: 366.74
+        y: 14.4
+        ref_to: PD2
+  - name: '3'
+    type: WIRE
+    pins:
+      - x: 352.36
+        y: 14.4
+        ref_to: PD3
+  - name: '4'
+    type: WIRE
+    pins:
+      - x: 337.96
+        y: 14.4
+        ref_to: PD4
+  - name: '5'
+    type: WIRE
+    pins:
+      - x: 323.56
+        y: 14.4
+        ref_to: PD5
+  - name: '6'
+    type: WIRE
+    pins:
+      - x: 309.16
+        y: 14.4
+        ref_to: PD6
+  - name: '7'
+    type: WIRE
+    pins:
+      - x: 294.74
+        y: 14.4
+        ref_to: PD7
+  - name: '8'
+    type: WIRE
+    pins:
+      - x: 271.6
+        y: 14.4
+        ref_to: PB0
+  - name: '9'
+    type: WIRE
+    pins:
+      - x: 257.2
+        y: 14.4
+        ref_to: PB1
+  - name: '10'
+    type: WIRE
+    pins:
+      - x: 242.78
+        y: 14.4
+        ref_to: PB2
+  - name: '11'
+    type: WIRE
+    pins:
+      - x: 228.38
+        y: 14.4
+        ref_to: PB3
+  - name: '12'
+    type: WIRE
+    pins:
+      - x: 214
+        y: 14.4
+        ref_to: PB4
+  - name: '13'
+    type: WIRE
+    pins:
+      - x: 199.6
+        y: 14.4
+        ref_to: PB5
+  - name: GND0
+    type: WIRE
+    pins:
+      - x: 185.2
+        y: 14.4
+        ref_to: GND
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 156.4
+        y: 14.4
+        ref_to: PC4
+        function: SDA
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 142
+        y: 14.4
+        ref_to: PC5
+        function: SCL
+  - name: 3.3V
+    type: WIRE
+    pins:
+      - x: 237.16
+        y: 288
+        ref_to: VCC
+        voltage_level: LEVEL_3v3
+  - name: 5V
+    type: WIRE
+    pins:
+      - x: 251.56
+        y: 288
+        ref_to: VCC
+  - name: GND1
+    type: WIRE
+    pins:
+      - x: 265.96
+        y: 288
+        ref_to: GND
+  - name: GND2
+    type: WIRE
+    pins:
+      - x: 280.36
+        y: 288
+        ref_to: GND
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 323.56
+        y: 288
+        ref_to: PC0
+  - name: A1
+    type: WIRE
+    pins:
+      - x: 337.96
+        y: 288
+        ref_to: PC1
+  - name: A2
+    type: WIRE
+    pins:
+      - x: 352.36
+        y: 288
+        ref_to: PC2
+  - name: A3
+    type: WIRE
+    pins:
+      - x: 366.73
+        y: 288
+        ref_to: PC3
+  - name: A4
+    type: WIRE
+    pins:
+      - x: 381.16
+        y: 288
+        ref_to: PC4
+        function:
+        - ANALOG_IN
+        - DIGITAL_IN
+        - DIGITAL_OUT
+  - name: A5
+    type: WIRE
+    pins:
+      - x: 395.56
+        y: 288
+        ref_to: PC5
+        function:
+        - ANALOG_IN
+        - DIGITAL_IN
+        - DIGITAL_OUT
+compatibility: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: ''
+  library_dependency: []
