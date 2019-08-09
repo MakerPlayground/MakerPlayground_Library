@@ -1,0 +1,1021 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/device-schema-0.1/schemas/device_json_schema.json",
+  "definitions": {
+    "platforms": {
+      "$id": "#/definitions/platforms",
+      "type": "string",
+      "title": "platform",
+      "description": "Name of development Platform",
+      "enum": [
+        "ARDUINO_AVR8",
+        "ARDUINO_ESP8266",
+        "ARDUINO_ESP32",
+        "RASPBERRYPI"
+      ]
+    },
+    "cloud_platform": {
+      "$id": "#/definitions/cloud_platform",
+      "title": "cloud_platform",
+      "description": "Name of supporting Cloud Platform",
+      "enum": [
+        "BLYNK",
+        "NETPIE",
+        "REST",
+        "AZURE"
+      ]
+    },
+    "pin_function": {
+      "$id": "#/definitions/pin_function",
+      "type": "string",
+      "enum": [
+        "VCC",
+        "GND",
+        "SCL",
+        "SDA",
+        "DIGITAL_IN",
+        "DIGITAL_OUT",
+        "ANALOG_IN",
+        "ANALOG_OUT",
+        "PWM_OUT",
+        "PWM_IN",
+        "INTERRUPT_LOW",
+        "INTERRUPT_HIGH",
+        "INTERRUPT_CHANGE",
+        "INTERRUPT_RISING",
+        "INTERRUPT_FALLING",
+        "HW_SERIAL_IN",
+        "HW_SERIAL_OUT",
+        "SW_SERIAL_IN",
+        "SW_SERIAL_OUT",
+        "MOSI",
+        "MISO",
+        "SCK",
+        "AREF",
+        "NO_FUNCTION"
+      ]
+    },
+    "port_types": {
+      "$id": "#/definitions/port_types",
+      "type": "string",
+      "title": "port_types",
+      "description": "Name of the Port Type",
+      "enum": [
+        "WIRE",
+        "GROVE",
+        "MAKER_PLAYGROUND",
+        "M5STACK",
+        "INEX3",
+        "UNO_SHIELD"
+      ]
+    },
+    "voltage_level": {
+      "$id": "#/definitions/voltage_level",
+      "type": "string",
+      "title": "voltage_level",
+      "description": "The supporting voltage level for pin",
+      "enum": [
+        "LEVEL_3v3_5",
+        "LEVEL_3v3",
+        "LEVEL_5"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "generic_devices": {
+      "$id": "#/definitions/generic_devices",
+      "type": "string",
+      "title": "name",
+      "description": "generic_devices",
+      "enum": [
+        "Accelerometer",
+        "Alcohol",
+        "Altimeter",
+        "Button",
+        "Camera",
+        "Color",
+        "Current",
+        "Distance",
+        "Dust",
+        "Energy Meter",
+        "Flame",
+        "Gesture",
+        "GPS",
+        "Gyroscope",
+        "Humidity",
+        "Joystick",
+        "Light",
+        "LPG",
+        "Magnetometer",
+        "POT",
+        "Presence",
+        "Pressuremeter",
+        "RTC",
+        "Soil Moisture",
+        "Sound",
+        "Temperature",
+        "Water",
+        "7 Segment",
+        "Buzzer",
+        "DC Motor",
+        "Display",
+        "LED",
+        "Load Driver",
+        "Relay Module",
+        "RGB LED",
+        "Servo",
+        "Container",
+        "Counter",
+        "Statistics",
+        "Timer",
+        "Image Recognizer",
+        "Image to Text",
+        "Map",
+        "Notification",
+        "Telemetry",
+        "Text to Speech",
+        "Virtual Button",
+        "Virtual Gauge",
+        "Virtual LED",
+        "Virtual Slider",
+        "Analog (In)",
+        "Digital (In)",
+        "Digital (Out)",
+        "PWM (Out)"
+      ]
+    },
+    "action_condition": {
+      "$id": "#/definitions/action_condition",
+      "type": "string",
+      "title": "name",
+      "description": "The action/condition name that is belonged to the generic device",
+      "enum": [
+        "Set DateTime",
+        "Show Number",
+        "Show Two Numbers with Colon",
+        "Off",
+        "Beep",
+        "Play Tone",
+        "On",
+        "Show Text at Row",
+        "Show Number at Row",
+        "Clear Row",
+        "Clear Screen",
+        "Move To",
+        "Set to",
+        "Count up by 1",
+        "Count down by 1",
+        "Count by",
+        "Add new",
+        "Clear all data",
+        "Initialize timer",
+        "Stop Timer",
+        "Convert to Text",
+        "Convert to Text File",
+        "Pin Location",
+        "Clear Pin",
+        "Notify",
+        "Send Telemetry",
+        "Convert and play sound",
+        "Convert to sounf file",
+        "Display number",
+        "Set Output HIGH",
+        "Set Output LOW",
+        "Set Duty Cycle",
+        "Compare",
+        "Tap",
+        "Free Fall",
+        "Press",
+        "Press and release",
+        "Not press",
+        "Detect Color",
+        "Swipe Up",
+        "Swipe Down",
+        "Swipe Left",
+        "Swipe Right",
+        "Move Forward",
+        "Move Backward",
+        "Spin Clockwise",
+        "Spin Counter Clockwise",
+        "Waving",
+        "Not Detected",
+        "Data is valid",
+        "Data is not valid",
+        "Press up",
+        "Press down",
+        "Press left",
+        "Press middle",
+        "Not press up",
+        "Not press down",
+        "Not press left",
+        "Not press middle",
+        "Not press all",
+        "Direction",
+        "Detect Human",
+        "No Human",
+        "Check Day",
+        "Detect Water",
+        "No Water",
+        "Check Value",
+        "Value equal to",
+        "Value not equal to",
+        "After",
+        "Before",
+        "Found",
+        "Not Found",
+        "Has Text",
+        "Has No Text",
+        "Receive HIGH logic",
+        "Receive LOW logic"
+      ]
+    },
+    "values": {
+      "id": "#/definitions/values",
+      "title": "values",
+      "type": "string",
+      "description": "Name of the value that belonged to the generic device",
+      "examples": [
+        "Brightness"
+      ],
+      "enum": [
+        "Accel_X",
+        "Accel_Y",
+        "Accel_Z",
+        "Accel_Magnitude",
+        "Percent",
+        "Altitude",
+        "Image",
+        "Ampere",
+        "Distance",
+        "Atmospheric PM 1.0",
+        "Atmospheric PM 2.5",
+        "Atmospheric PM 10",
+        "Current",
+        "Voltage",
+        "Power",
+        "Frequency",
+        "Active Apparent Power",
+        "Reactive Apparent Power",
+        "Total Active Energy",
+        "Total Reactive Energy",
+        "Power Factor",
+        "Phase Angle",
+        "Latitude",
+        "Longitude",
+        "Gyro_X",
+        "Gyro_Y",
+        "Gyro_Z",
+        "Humidity",
+        "Mag_X",
+        "Mag_Y",
+        "Mag_Z",
+        "Pressure",
+        "Hour",
+        "Minute",
+        "Second",
+        "Date",
+        "Month",
+        "Year",
+        "SoundLevel",
+        "Temperature",
+        "Value",
+        "Average",
+        "SD",
+        "Variance",
+        "Count",
+        "Min",
+        "Max",
+        "Text"
+      ]
+    },
+    "units": {
+      "$id": "#/definitions/units",
+      "type": "string",
+      "title": "units",
+      "description": "The unit of the value or property or action/condition parameter.",
+      "enum": [
+        "TIME",
+        "METERPERSECSQUARE",
+        "HECTOPASCAL",
+        "METER",
+        "CELSIUS",
+        "FAHRENHEIT",
+        "KELVIN",
+        "RADIUSPERSEC",
+        "DEGREEPERSEC",
+        "DECIBEL",
+        "MICROTESLA",
+        "CENTIMETER",
+        "LUX",
+        "DEGREE",
+        "AMPERE",
+        "MICROGRAMS_PER_CUBIC_METER",
+        "VOLT",
+        "WATT",
+        "VOLT_AMPERE",
+        "VOLT_AMPERE_REACTIVE",
+        "KILO_WATT_HOUR",
+        "KILO_VOLT_AMPERE_REACTIVE_HOUR",
+        "POWER_FACTOR",
+        "SECOND",
+        "MILLISECOND",
+        "WAV",
+        "NUMBER",
+        "PERCENT",
+        "NOT_SPECIFIED",
+        "HERTZ",
+        "BPM"
+      ]
+    },
+    "datatype": {
+      "$id": "#/definitions/datatype",
+      "type": "string",
+      "title": "datatype",
+      "description": "The data type of the device property",
+      "enum": [
+        "DOUBLE",
+        "STRING",
+        "ENUM",
+        "INTEGER",
+        "INTEGER_ENUM",
+        "BOOLEAN_ENUM",
+        "DATETIME",
+        "IMAGE",
+        "AZURE_COGNITIVE_KEY",
+        "AZURE_IOTHUB_KEY",
+        "RECORD"
+      ]
+    },
+    "controltype": {
+      "$id": "#/definitions/controltype",
+      "type": "string",
+      "title": "controltype",
+      "description": "The control type for the device property",
+      "enum": [
+        "TEXTBOX",
+        "SPINBOX",
+        "DROPDOWN",
+        "SLIDER",
+        "CUSTOMPRINT",
+        "TIME",
+        "CUSTOMSEGMENT",
+        "CHECKBOX",
+        "EXPRESSION",
+        "DATETIMEPICKER",
+        "TEXTBOX_WITH_TEXT_SELECTOR",
+        "IMAGE_SELECTOR",
+        "AZURE_WIZARD",
+        "RECORD"
+      ]
+    },
+    "constraint_object": {
+      "$id": "#/definitions/constraint_object",
+      "title": "constraint_object",
+      "description": "There are two different types of constraint\n- Categorical Constraint:The categorical constrint is the set of items that defines the supporting property, value or parameter. You should define it by the array of string.\n- Numerical Constraint:The numeric constraint is defined by the minimum, maximum, and unit of the value that device is supported. You should define it by the object as follows.",
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "min",
+            "max",
+            "unit"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/definitions/constraint_object/properties/min",
+              "title": "min",
+              "type": "number",
+              "description": "Minimum possible value",
+              "examples": [
+                0
+              ]
+            },
+            "max": {
+              "$id": "#/definitions/constraint_object/properties/max",
+              "title": "min",
+              "type": "number",
+              "description": "Maximum possible value",
+              "examples": [
+                100
+              ]
+            },
+            "unit": {
+              "$ref": "#/definitions/units"
+            }
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "platform_mapping_object": {
+      "$id": "#/definitions/platform_mapping_object",
+      "type": "object",
+      "title": "platform_mapping_object",
+      "required": [
+        "platform",
+        "classname",
+        "library_dependency"
+      ],
+      "properties": {
+        "platform": {
+          "$ref": "#/definitions/platforms"
+        },
+        "classname": {
+          "$id": "#/definitions/platform_mapping_object/classname",
+          "type": "string",
+          "title": "classname",
+          "description": "Name of the sourcecode file without extension in the lib directory (./lib/xxx/) which is the same name to the implementation's class"
+        },
+        "library_dependency": {
+          "$id": "#/definitions/platform_mapping_object/library_dependency",
+          "type": "array",
+          "title": "library_dependency",
+          "description": "Array of external libraries (availible in ./lib_ext/) that must be included for the compiling or running process",
+          "items": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "value_object": {
+      "$id": "#/definitions/value_object",
+      "type": "object",
+      "title": "value_object",
+      "required": [
+        "name",
+        "constraint"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/values"
+        },
+        "constraint": {
+          "$ref": "#/definitions/constraint_object"
+        }
+      }
+    },
+    "parameter_object": {
+      "$id": "#/definitions/parameter_object",
+      "type": "object",
+      "title": "parameter_object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "id": "#/definitions/parameter_object",
+          "title": "name",
+          "description": "Name of parameter that belonged to the action/condition",
+          "examples": [
+            "Percent",
+            "Temperature"
+          ]
+        },
+        "constraint": {
+          "$ref": "#/definitions/constraint_object"
+        }
+      }
+    },
+    "action_condition_object": {
+      "$id": "#/definitions/action_condition_object",
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/action_condition"
+        },
+        "parameter": {
+          "$id": "#/definitions/action_condition_object/properties/parameter",
+          "type": "array",
+          "title": "parameter",
+          "description": "Array of action or condition parameters based on the hardware",
+          "items": {
+            "$ref": "#/definitions/parameter_object"
+          }
+        }
+      }
+    },
+    "compatibility_object": {
+      "$id": "#/definitions/compatibility_object",
+      "type": "object",
+      "title": "compatibility",
+      "description": "The mapping of the generic device name to action, condition, and value. It indicates the supporting features and the limitation of the device. For example, HC-04 could be used as \"Distance\" sensor. It supports the condition \"Compare\" value and it provides the value \"Distance\".",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/generic_devices"
+        },
+        "action": {
+          "$id": "#/definitions/compatibility_object/properties/action",
+          "type": "array",
+          "title": "action",
+          "description": "Array of supported actions",
+          "items": {
+            "$ref": "#/definitions/action_condition_object"
+          }
+        },
+        "condition": {
+          "$id": "#/definitions/compatibility_object/properties/condition",
+          "type": "array",
+          "title": "condition",
+          "description": "Array of supported conditions",
+          "items": {
+            "$ref": "#/definitions/action_condition_object"
+          }
+        },
+        "value": {
+          "$id": "#/definitions/compatibility_object/properties/value",
+          "type": "array",
+          "title": "value",
+          "description": "Array of supported values",
+          "items": {
+            "$ref": "#/definitions/value_object"
+          }
+        }
+      }
+    },
+    "connection_object": {
+      "$id": "#/definitions/connection_object",
+      "type": "object",
+      "title": "connection_object",
+      "description": "The port that is physically displayed on the device. A port could have one or more pins.",
+      "required": [
+        "name",
+        "type",
+        "pins"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/connection_object/properties/name",
+          "type": "string",
+          "title": "name",
+          "description": "Unique name of the port that is displayed on device",
+          "examples": [
+            "D1",
+            "D2",
+            "A3",
+            "A4",
+            "I2C"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "type": {
+          "$ref": "#/definitions/port_types"
+        },
+        "pins": {
+          "$id": "#/definitions/connection_object/properties/pins",
+          "type": "array",
+          "title": "pins",
+          "description": "Array of Pin Object. The pin order is defined in Port Type section and belonged to the constructure of the implementation class.",
+          "items": {
+            "$ref": "#/definitions/pin_object"
+          }
+        }
+      }
+    },
+    "pin_object": {
+      "$id": "#/definitions/pin_object",
+      "type": "object",
+      "title": "pin_object",
+      "description": "The definition of the pin that is physically appeared on the device. It might be a pin header, pin hole, or pin that is sealed by the port. The pin is normally inherited from the pin in the pin_template defining in the Device Object section. The defined pin is able to be connected by or to the pin in other devices. In some board, the multiple pins are referenced to the same point in the circuit. Those pins will inherited from the same pin of the pin template. The function and voltage level of the pin are also inherited from referencing pin. However, you can overwrite the default function and/or voltage_level by defining those properties. This is the scenario when user wants to limit the pin functions such as A4 and A5 pins in Arduino UNO which are appropiate for ANALOG but not for I2C connection. Another example is a pin of the device that has a built-in level shifter circuit.",
+      "required": [
+        "ref_to",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "$id": "#/definitions/pin_object/properties/x",
+          "type": "number",
+          "title": "x",
+          "description": "X position in pixel unit",
+          "examples": [
+            60
+          ]
+        },
+        "y": {
+          "$id": "#/definitions/pin_object/properties/y",
+          "type": "number",
+          "title": "y",
+          "description": "Y position in pixel unit",
+          "examples": [
+            40
+          ]
+        },
+        "ref_to": {
+          "$id": "#/definitions/pin_object/properties/ref_to",
+          "type": "string",
+          "title": "ref_pin",
+          "description": "NName of the refered pin in the device's pin_template",
+          "examples": [
+            "PB0",
+            "PB1",
+            "PC0",
+            "PC1"
+          ]
+        },
+        "voltage_level": {
+          "$ref": "#/definitions/voltage_level"
+        },
+        "function": {
+          "title": "function",
+          "description": "Pin Function or the array of them",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/pin_function"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/pin_function"
+              }
+            }
+          ],
+          "examples": [
+            "VCC",
+            "GND",
+            "DIGITAL_IN",
+            "DIGITAL_OUT",
+            "ANALOG_IN",
+            "ANALOG_OUT",
+            [
+              "DIGITAL_IN",
+              "DIGITAL_OUT",
+              "PWM_OUT"
+            ]
+          ]
+        }
+      }
+    },
+    "connection_mapping_object": {
+      "$id": "#/definitions/connection_mapping_object",
+      "title": "connection_mapping_object",
+      "type": "object",
+      "description": "The connection mapping defined the connection between the pin of the device to pin of the hosted device. However, the connection is connected inside the board so the X, Y position is not needed.",
+      "required": [
+        "ref_to",
+        "host_ref_to"
+      ],
+      "properties": {
+        "ref_to": {
+          "title": "ref_to",
+          "description": "The pin name in the pin_template of the integrated device",
+          "type": "string",
+          "example": [
+            "DIGITAL_IN",
+            "VCC",
+            "GND"
+          ]
+        },
+        "host_ref_to": {
+          "title": "ref_to",
+          "description": "The pin name in the pin_template of the integrated device",
+          "type": "string",
+          "example": [
+            "AD0",
+            "VCC",
+            "GND"
+          ]
+        }
+      }
+    },
+    "cloud_platform_mapping_object": {
+      "$id": "#/definitions/cloud_platform_mapping_object",
+      "title": "cloud_platform_mapping_object",
+      "type": "object",
+      "description": "The mapping of the supporting cloud platform to the implementation class and its library dependency.",
+      "required": [
+        "cloud_platform",
+        "classname",
+        "library_dependency"
+      ],
+      "properties": {
+        "cloud_platform": {
+          "$ref": "#/definitions/cloud_platform"
+        },
+        "classname": {
+          "$id": "#/definitions/cloud_platform_mapping_object/properties/classname",
+          "title": "classname",
+          "type": "string",
+          "description": "Name of the file (without extension) and the implementation class",
+          "examples": [
+            "MP_BLYNK_NODEMCU"
+          ]
+        },
+        "library_dependency": {
+          "$id": "#/definitions/cloud_platform_mapping_object/properties/library_dependency",
+          "title": "library_dependency",
+          "type": "array",
+          "description": "Array of directory that the source files must be included in building process",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "property_object": {
+      "$id": "#/definitions/property_object",
+      "type": "object",
+      "title": "property_object",
+      "description": "The software configurable property required by the specific device/hardware. For example,\n+ virtual pin of Blynk's Virtual Gauge\n+ Image resolution and Frame rate of the camera\n+ configurable I2C address of some i2C devices.",
+      "required": [
+        "name",
+        "constraint",
+        "datatype",
+        "controltype"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/property_object/name",
+          "title": "name",
+          "type": "string",
+          "description": "Name of the property required by the device",
+          "examples": [
+            "virtual pin"
+          ]
+        },
+        "constraint": {
+          "$id": "#/definitions/property_object/constraint",
+          "title": "constraint",
+          "type": "object",
+          "description": "Constraint Object that defines the constraint for the property's value"
+        },
+        "datatype": {
+          "$ref": "#/definitions/datatype"
+        },
+        "controltype": {
+          "$ref": "#/definitions/controltype"
+        }
+      }
+    },
+    "integrated_device_object": {
+      "$id": "#/definitions/integrated_device_object",
+      "type": "object",
+      "required": [
+        "name",
+        "pin_template",
+        "integrated_connection",
+        "compatibility",
+        "platforms"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/integrated_device_object/properties/name",
+          "type": "string",
+          "title": "name",
+          "description": "Name of the integrated device",
+          "pattern": "^(.*)$"
+        },
+        "property": {
+          "$id": "#/definitions/integrated_device_object/properties/property",
+          "type": "array",
+          "title": "property",
+          "description": "Array of Property Object that defines the device-specific configuration.",
+          "items": {
+            "$ref": "#/definitions/property_object"
+          }
+        },
+        "pin_template": {
+          "$id": "#/definitions/integrated_device_object/properties/pin_template",
+          "type": "string",
+          "title": "pin_template",
+          "description": "Name of the pin template file (without extension) that the device is relied on",
+          "examples": []
+        },
+        "integrated_connection": {
+          "$id": "#/definitions/integrated_device_object/properties/integrated_connection",
+          "type": "array",
+          "title": "integrated_connection",
+          "description": "Array of Connection Mapping Object that defines the circuit connection between the integrated and the host device. The order of the item in the array is belonged to the constructure of the class implementation.",
+          "items": {
+            "$ref": "#/definitions/connection_mapping_object"
+          },
+          "default": [],
+          "examples": [
+            []
+          ]
+        },
+        "compatibility": {
+          "$id\"": "#/definitions/integrated_device_object/properties/compatibility",
+          "type": "array",
+          "title": "compatibility",
+          "description": "Array of Compatibility Object that defines the device features and limitations.",
+          "items": {
+            "$ref": "#/definitions/compatibility_object"
+          }
+        },
+        "platforms": {
+          "$id": "#/definitions/integrated_device_object/properties/platforms",
+          "type": "array",
+          "title": "platforms",
+          "description": "Array of Platform Mapping Object that defines the supporting development platform and the implementation of the device.",
+          "items": {
+            "$ref": "#/definitions/platform_mapping_object"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "title": "Device Object",
+  "description": "The device object is the root of the supported device/hardware definition.\nIt is an embbed structure consisting of many properties. Some of them might be a\nstring, number, or array. Some of them could be an other object.",
+  "required": [
+    "id",
+    "brand",
+    "model",
+    "url",
+    "type",
+    "width",
+    "height",
+    "pin_template",
+    "compatibility",
+    "platforms"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "id",
+      "description": "Unique identifier of the device. (It is usually a concatenation of device provider, dash symbol, and the unique id given by device provider)",
+      "examples": [
+        "Adafruit-xxx",
+        "Grove-xxxxxxxxx"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "brand": {
+      "$id": "#/properties/brand",
+      "type": "string",
+      "title": "brand",
+      "description": "Name of the device owner or provider",
+      "examples": [
+        "Adafruit",
+        "SeeedStudio"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "model": {
+      "$id": "#/properties/model",
+      "type": "string",
+      "title": "model",
+      "description": "Device-specific description such as IC, module name, color",
+      "examples": [
+        "Tactile Switch Button"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "url",
+      "description": "Link to device description given by device owner or provider",
+      "examples": [
+        "https://www.adafruit.com/product/1119"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "type",
+      "description": "Type of the device",
+      "enum": [
+        "MODULE",
+        "CONTROLLER",
+        "VIRTUAL",
+        "INTEGRATED",
+        "SHIELD"
+      ],
+      "default": "MODULE",
+      "pattern": "^(.*)$"
+    },
+    "width": {
+      "$id": "#/properties/width",
+      "type": "number",
+      "title": "width",
+      "description": "Device width in pixel unit. (1 inch = 144 pixels)",
+      "examples": [
+        120
+      ]
+    },
+    "height": {
+      "$id": "#/properties/height",
+      "type": "number",
+      "title": "height",
+      "description": "Device height in pixel unit. (1 inch = 144 pixels)",
+      "examples": [
+        80
+      ]
+    },
+    "pio_boardid": {
+      "$id": "#/properties/pio_boardid",
+      "type": "string",
+      "title": "pio_boardid",
+      "description": "Platform IO's board for controller device",
+      "examples": [
+        "uno",
+        "atmega328pb",
+        "nodemcuv2",
+        "esp32dev",
+        "m5stack-fire",
+        "nodemcu-32s",
+        "espino32"
+      ]
+    },
+    "cloud_consume": {
+      "$id": "#/properties/cloud_consume",
+      "type": "string",
+      "title": "cloud_consume",
+      "description": "Name of Cloud Platform that the device needs. Normally, the device that has cloud_consume is the cloud device such as virtual LED, button, and gauge",
+      "enum": [
+        "BLYNK",
+        "NETPIE",
+        "REST",
+        "AZURE"
+      ]
+    },
+    "cloud_provide": {
+      "$id": "#/properties/cloud_provide",
+      "type": "array",
+      "title": "cloud_provide",
+      "description": "Array of the Cloud Platform Mapping Object that defines the cloud platforms and its code implementation. This property introduces the usable cloud platforms to all devices in the MakerPlayground project.",
+      "items": {
+        "$ref": "#/definitions/cloud_platform_mapping_object"
+      }
+    },
+    "pin_template": {
+      "$id": "#/properties/pin_template",
+      "type": "string",
+      "title": "pin_template",
+      "description": "Name of the pin template file (without extension) that the device is relied on",
+      "examples": [
+        "ATMEGA328",
+        "I2C_3v3",
+        "DIGITAL_IN_5V"
+      ]
+    },
+    "connection_consume": {
+      "$id": "#/properties/connection_consume",
+      "type": "array",
+      "title": "connection_consume",
+      "description": "Array of Connection Object (the ports appeared on the device). MakerPlayground will completely map them to the available ports of the controller or other devices. The order of the item in the array is belonged to the constructure of implementation class.",
+      "items": {
+        "$ref": "#/definitions/connection_object"
+      }
+    },
+    "connection_provide": {
+      "$id": "#/properties/connection_provide",
+      "type": "array",
+      "title": "connection_provide",
+      "description": "Array of Connection Object (the ports appeared on the device). In MakerPlayground, these ports will supply their functions to other device or module.",
+      "items": {
+        "$ref": "#/definitions/connection_object"
+      }
+    },
+    "compatibility": {
+      "$id": "#/properties/compatibility",
+      "type": "array",
+      "title": "compatibility",
+      "description": "Array of Compatibility Object that defines the device features and limitations.",
+      "items": {
+        "$ref": "#/definitions/compatibility_object"
+      }
+    },
+    "platform": {
+      "$id": "#/properties/platforms",
+      "type": "array",
+      "title": "platforms",
+      "description": "Array of Platform Mapping Object that defines the supporting development platform and the implementation of the device.",
+      "items": {
+        "$ref": "#/definitions/platform_mapping_object"
+      }
+    },
+    "property": {
+      "$id": "#/properties/property",
+      "type": "array",
+      "title": "property",
+      "description": "Array of Property Object that defines the software-configurable device-specific properties.",
+      "items": {
+        "$ref": "#/definitions/property_object"
+      }
+    },
+    "integrated_devices": {
+      "$id": "#/properties/integrated_devices",
+      "type": "array",
+      "title": "integrated_devices",
+      "description": "Array of Integrated Device Object that defines the built-in devices integrated in this device.",
+      "items": {
+        "$ref": "#/definitions/integrated_device_object"
+      }
+    }
+  }
+}
