@@ -243,6 +243,8 @@ The function that the pin is supported. The IN and OUT function is considered by
 - GND
 - SCL
 - SDA
+- SCL1
+- SDA1
 - DIGITAL_IN
 - DIGITAL_OUT
 - ANALOG_IN
@@ -254,13 +256,20 @@ The function that the pin is supported. The IN and OUT function is considered by
 - INTERRUPT_CHANGE
 - INTERRUPT_RISING
 - INTERRUPT_FALLING
-- HW_SERIAL_IN
-- HW_SERIAL_OUT
-- SW_SERIAL_IN
-- SW_SERIAL_OUT
+- HW_SERIAL_RX
+- HW_SERIAL_TX
+- HW_SERIAL_RX1
+- HW_SERIAL_TX1
+- SW_SERIAL_RX
+- SW_SERIAL_TX
+- HW_OR_SW_SERIAL_RX
+- HW_OR_SW_SERIAL_TX
 - MOSI
 - MISO
 - SCK
+- MOSI1
+- MISO1
+- SCK1
 - AREF
 - NO_FUNCTION
 

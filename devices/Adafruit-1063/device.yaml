@@ -1,0 +1,41 @@
+id: Adafruit-1063
+brand: Adafruit
+model: Electret Microphone Amplifier - MAX4466 with Adjustable Gain
+url: https://www.adafruit.com/product/1063
+type: MODULE
+width: 79.2
+height: 122.4
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: OUT
+    type: WIRE
+    pins:
+      - x: 21.646
+        y: 110.924
+        ref_to: ANALOG_OUT
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 36.046
+        y: 110.924
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 2.4
+        y: 5.5
+        ref_to: VCC
+compatibility:
+  - name: Sound
+    condition:
+      - name: Compare
+    value:
+      - name: SoundLevel
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_MICROPHONE
+    library_dependency: []
