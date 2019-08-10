@@ -798,7 +798,25 @@
           "type": "string",
           "title": "pin_template",
           "description": "Name of the pin template file (without extension) that the device is relied on",
-          "examples": []
+          "examples": [
+            "ATMEGA328P",
+            "ATMEGA328PB",
+            "GENERIC_ANALOG_SENSOR_3v3_5",
+            "GENERIC_ANALOG_SENSOR_3v3",
+            "GENERIC_ANALOG_SENSOR_5",
+            "GENERIC_DIGITAL_ACTUATOR_3v3_5",
+            "GENERIC_DIGITAL_ACTUATOR_3v3",
+            "GENERIC_DIGITAL_ACTUATOR_5",
+            "GENERIC_DIGITAL_SENSOR_3v3_5",
+            "GENERIC_DIGITAL_SENSOR_3v3",
+            "GENERIC_DIGITAL_SENSOR_5",
+            "GENERIC_I2C_DEVICE_3v3_5",
+            "GENERIC_I2C_DEVICE_3v3",
+            "GENERIC_I2C_DEVICE_5",
+            "GENERIC_PWM_ACTUATOR_3v3_5",
+            "GENERIC_PWM_ACTUATOR_3v3",
+            "GENERIC_PWM_ACTUATOR_5"
+          ]
         },
         "integrated_connection": {
           "$id": "#/definitions/integrated_device_object/properties/integrated_connection",
