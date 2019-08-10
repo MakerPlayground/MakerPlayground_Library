@@ -1,0 +1,23 @@
+id: Azure-CognitiveService-TTS-for-RPI
+brand: Azure
+model: Cognitive Service - Text to Speech (Rest API)
+url: https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/
+type: VIRTUAL
+width: 0.0
+height: 0.0
+property:
+  - name: Key
+    datatype: AZURE_COGNITIVE_KEY
+    controltype: AZURE_WIZARD
+    constraint: []
+  - name: Max Translations / Minute
+    datatype: DOUBLE
+    controltype: SPINBOX
+    constraint:
+      min: 1
+      max: 30
+      unit: NOT_SPECIFIED
+compatibility:
+  - name: Text to Speech
+    action:
+      - name: Convert to sound file
