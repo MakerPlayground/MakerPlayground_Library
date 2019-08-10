@@ -12,7 +12,7 @@ connection_consume:
     pins:
       - x: 21.646
         y: 110.924
-        ref_to: ANALOG_OUT
+        ref_to: SIG
   - name: GND
     type: WIRE
     pins:

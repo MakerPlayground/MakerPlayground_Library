@@ -7,6 +7,6 @@ pins:
   pin_function: VCC
   voltage_level: LEVEL_3v3
 
-- pin_name: ANALOG_OUT
+- pin_name: SIG
   pin_function: ANALOG_OUT
   voltage_level: LEVEL_3v3

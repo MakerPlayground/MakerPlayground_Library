@@ -57,7 +57,7 @@ The properties of the device object are defined as follows
 |connection_consume|Array of [Connection Object](#connection-object) (the ports appeared on the device). MakerPlayground will completely map them to the available ports of the controller or other devices. The order of the item in the array is belonged to the constructure of implementation class.|array|No|-
 |connection_provide|Array of [Connection Object](#connection-object) (the ports appeared on the device). In MakerPlayground, these ports will supply their functions to other device or module.|array|No|-
 |compatibility|Array of [Compatibility Object](#compatibility-object) that defines the device features and limitations.|array|Yes|-|
-|platform|Array of [Platform Mapping Object](#platform-mapping-object) that defines the supporting development platform and the implementation of the device.|array|Yes|-|
+|platforms|Array of [Platform Mapping Object](#platform-mapping-object) that defines the supporting development platform and the implementation of the device.|array|Yes|-|
 |property|Array of [Property Object](#property-object) that defines the software-configurable device-specific properties.|array|No|-|
 |integrated_devices|Array of [Integrated Device Object](#integrated-device-object) that defines the built-in devices integrated in this device.|array|No|-|
 

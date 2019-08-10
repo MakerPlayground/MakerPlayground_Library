@@ -8,6 +8,6 @@ pins:
   pin_function: VCC
   voltage_level: LEVEL_5
 
-- pin_name: DIGITAL_OUT
+- pin_name: SIG
   pin_function: DIGITAL_OUT
   voltage_level: LEVEL_5
