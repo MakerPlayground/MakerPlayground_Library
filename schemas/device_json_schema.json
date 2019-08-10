@@ -753,10 +753,7 @@
           ]
         },
         "constraint": {
-          "$id": "#/definitions/property_object/constraint",
-          "title": "constraint",
-          "type": "object",
-          "description": "Constraint Object that defines the constraint for the property's value"
+          "$ref": "#/definitions/constraint_object"
         },
         "datatype": {
           "$ref": "#/definitions/datatype"
