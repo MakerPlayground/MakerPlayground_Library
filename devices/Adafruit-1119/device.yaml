@@ -1,0 +1,40 @@
+id: Adafruit-1119
+brand: Adafruit
+model: Tactile Switch Button
+url: https://www.adafruit.com/product/1119
+type: MODULE
+width: 119.0
+height: 82.0
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: S1A
+    type: WIRE
+    pins:
+      - x: 31.785
+        y: 42.489
+        ref_to: SIG
+  - name: S1B
+    type: WIRE
+    pins:
+      - x: 2.984
+        y: 0.002
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 117.42
+        y: 60.299
+        ref_to: VCC
+compatibility:
+  - name: Button
+    condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_BUTTON_AL
+    library_dependency: []

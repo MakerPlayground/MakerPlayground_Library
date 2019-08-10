@@ -8,6 +8,6 @@ pins:
   pin_function: VCC
   voltage_level: LEVEL_5
 
-- pin_name: PWM_IN
+- pin_name: SIG
   pin_function: PWM_IN
   voltage_level: LEVEL_5
