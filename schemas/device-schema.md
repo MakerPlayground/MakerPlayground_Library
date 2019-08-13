@@ -284,6 +284,7 @@ Port type is defined to let the MakerPlayground software calculates the correct 
 |MAKER_PLAYGROUND|[DATA1, DATA2, VCC, GND]|
 |M5STACK|[DATA1, DATA2, VCC, GND]|
 |INEX3|[VCC, DATA, GND]|
+|CSI|[CSI1, CSI2, CSI3, ..., CSI15]|
 |UNO_SHIELD|Not defined yet|
 
 ### **Voltage Level**

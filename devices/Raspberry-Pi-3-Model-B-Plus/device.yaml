@@ -1,0 +1,310 @@
+id: Raspberry-Pi-3-Model-B-Plus
+brand: Raspberry Pi
+model: 3 Model B+
+url: https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/
+type: CONTROLLER
+pio_boardid: ''
+cloud_provide:
+  - cloud_platform: AZURE
+    classname: ''
+    library_dependency: []
+width: 500.0
+height: 334.0
+pin_template: RASPBERRYPI_MODEL_B_PLUS
+connection_provide:
+  - name: '1'
+    type: WIRE
+    pins:
+      - x: 48.0
+        y: 28.0
+        ref_to: '1'
+  - name: '2'
+    type: WIRE
+    pins:
+      - x: 48.0
+        y: 13.0
+        ref_to: '2'
+  - name: '3'
+    type: WIRE
+    pins:
+      - x: 63.0
+        y: 28.0
+        ref_to: '3'
+  - name: '4'
+    type: WIRE
+    pins:
+      - x: 63.0
+        y: 13.0
+        ref_to: '4'
+  - name: '5'
+    type: WIRE
+    pins:
+      - x: 77.0
+        y: 28.0
+        ref_to: '5'
+  - name: '6'
+    type: WIRE
+    pins:
+      - x: 77.0
+        y: 13.0
+        ref_to: '6'
+  - name: '7'
+    type: WIRE
+    pins:
+      - x: 91.0
+        y: 28.0
+        ref_to: '7'
+  - name: '8'
+    type: WIRE
+    pins:
+      - x: 91.0
+        y: 13.0
+        ref_to: '8'
+  - name: '9'
+    type: WIRE
+    pins:
+      - x: 105.0
+        y: 28.0
+        ref_to: '9'
+  - name: '10'
+    type: WIRE
+    pins:
+      - x: 105.0
+        y: 13.0
+        ref_to: '10'
+  - name: '11'
+    type: WIRE
+    pins:
+      - x: 119.0
+        y: 28.0
+        ref_to: '11'
+  - name: '12'
+    type: WIRE
+    pins:
+      - x: 119.0
+        y: 13.0
+        ref_to: '12'
+  - name: '13'
+    type: WIRE
+    pins:
+      - x: 134.0
+        y: 28.0
+        ref_to: '13'
+  - name: '14'
+    type: WIRE
+    pins:
+      - x: 134.0
+        y: 13.0
+        ref_to: '14'
+  - name: '15'
+    type: WIRE
+    pins:
+      - x: 148.0
+        y: 28.0
+        ref_to: '15'
+  - name: '16'
+    type: WIRE
+    pins:
+      - x: 148.0
+        y: 13.0
+        ref_to: '16'
+  - name: '17'
+    type: WIRE
+    pins:
+      - x: 162.0
+        y: 28.0
+        ref_to: '17'
+  - name: '18'
+    type: WIRE
+    pins:
+      - x: 162.0
+        y: 13.0
+        ref_to: '18'
+  - name: '19'
+    type: WIRE
+    pins:
+      - x: 177.0
+        y: 28.0
+        ref_to: '19'
+  - name: '20'
+    type: WIRE
+    pins:
+      - x: 177.0
+        y: 13.0
+        ref_to: '20'
+  - name: '21'
+    type: WIRE
+    pins:
+      - x: 191.0
+        y: 28.0
+        ref_to: '21'
+  - name: '22'
+    type: WIRE
+    pins:
+      - x: 191.0
+        y: 13.0
+        ref_to: '22'
+  - name: '23'
+    type: WIRE
+    pins:
+      - x: 205.0
+        y: 28.0
+        ref_to: '23'
+  - name: '24'
+    type: WIRE
+    pins:
+      - x: 205.0
+        y: 13.0
+        ref_to: '24'
+  - name: '25'
+    type: WIRE
+    pins:
+      - x: 219.0
+        y: 28.0
+        ref_to: '25'
+  - name: '26'
+    type: WIRE
+    pins:
+      - x: 219.0
+        y: 13.0
+        ref_to: '26'
+  - name: '27'
+    type: WIRE
+    pins:
+      - x: 234.0
+        y: 28.0
+        ref_to: '27'
+  - name: '28'
+    type: WIRE
+    pins:
+      - x: 234.0
+        y: 13.0
+        ref_to: '28'
+  - name: '29'
+    type: WIRE
+    pins:
+      - x: 248.0
+        y: 28.0
+        ref_to: '29'
+  - name: '30'
+    type: WIRE
+    pins:
+      - x: 248.0
+        y: 13.0
+        ref_to: '30'
+  - name: '31'
+    type: WIRE
+    pins:
+      - x: 262.0
+        y: 28.0
+        ref_to: '31'
+  - name: '32'
+    type: WIRE
+    pins:
+      - x: 262.0
+        y: 13.0
+        ref_to: '32'
+  - name: '33'
+    type: WIRE
+    pins:
+      - x: 276.0
+        y: 28.0
+        ref_to: '33'
+  - name: '34'
+    type: WIRE
+    pins:
+      - x: 276.0
+        y: 13.0
+        ref_to: '34'
+  - name: '35'
+    type: WIRE
+    pins:
+      - x: 291.0
+        y: 28.0
+        ref_to: '35'
+  - name: '36'
+    type: WIRE
+    pins:
+      - x: 291.0
+        y: 13.0
+        ref_to: '36'
+  - name: '37'
+    type: WIRE
+    pins:
+      - x: 305.0
+        y: 28.0
+        ref_to: '37'
+  - name: '38'
+    type: WIRE
+    pins:
+      - x: 305.0
+        y: 13.0
+        ref_to: '38'
+  - name: '39'
+    type: WIRE
+    pins:
+      - x: 320.0
+        y: 28.0
+        ref_to: '39'
+  - name: '40'
+    type: WIRE
+    pins:
+      - x: 320.0
+        y: 13.0
+        ref_to: '40'
+  - name: Camera
+    type: CSI
+    pins:
+      - x: 250.0
+        y: 211.0
+        ref_to: CSI1
+      - x: 250.0
+        y: 216.4
+        ref_to: CSI2
+      - x: 250.0
+        y: 221.8
+        ref_to: CSI3
+      - x: 250.0
+        y: 227.2
+        ref_to: CSI4
+      - x: 250.0
+        y: 232.6
+        ref_to: CSI4
+      - x: 250.0
+        y: 238.0
+        ref_to: CSI5
+      - x: 250.0
+        y: 243.4
+        ref_to: CSI6
+      - x: 250.0
+        y: 248.8
+        ref_to: CSI7
+      - x: 250.0
+        y: 254.2
+        ref_to: CSI8
+      - x: 250.0
+        y: 259.6
+        ref_to: CSI9
+      - x: 250.0
+        y: 265.0
+        ref_to: CSI10
+      - x: 250.0
+        y: 270.4
+        ref_to: CSI11
+      - x: 250.0
+        y: 275.8
+        ref_to: CSI12
+      - x: 250.0
+        y: 281.2
+        ref_to: CSI13
+      - x: 250.0
+        y: 286.6
+        ref_to: CSI14
+      - x: 250.0
+        y: 292.0
+        ref_to: CSI15
+compatibility: []
+platforms:
+  - platform: RASPBERRYPI
+    classname: ''
+    library_dependency: []

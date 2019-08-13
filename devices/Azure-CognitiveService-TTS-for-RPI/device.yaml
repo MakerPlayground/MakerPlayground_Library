@@ -17,7 +17,26 @@ property:
       min: 1
       max: 30
       unit: NOT_SPECIFIED
+    value: 10
+pin_template: NO_PIN
+connection_consume: []
 compatibility:
   - name: Text to Speech
     action:
       - name: Convert to sound file
+        parameter:
+          - name: text
+            value: "Hello world"
+            constraint: []
+          - name: save file name
+            value: temp.wav
+            constraint: []
+      - name: Convert and play sound
+        parameter:
+          - name: text
+            value: "Hello world"
+            constraint: []
+platforms:
+  - platform: RASPBERRYPI
+    classname: MP_Azure_Cognitive_Service_TTS
+    library_dependency: []
