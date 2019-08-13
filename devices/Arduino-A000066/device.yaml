@@ -1,11 +1,9 @@
----
 id: Arduino-A000066
 brand: Arduino
 model: UNO REV3
 url: https://store.arduino.cc/usa/arduino-uno-rev3
 type: CONTROLLER
 pio_boardid: uno
-wiring_method: WIRE_AND_BREADBOARD
 support_cloudplatform: []
 width: 425
 height: 303

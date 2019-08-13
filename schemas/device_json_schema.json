@@ -75,7 +75,8 @@
         "MAKER_PLAYGROUND",
         "M5STACK",
         "INEX3",
-        "UNO_SHIELD"
+        "UNO_SHIELD",
+        "CSI"
       ]
     },
     "voltage_level": {

@@ -1,0 +1,50 @@
+id: Azure-CognitiveServices
+brand: Azure
+model: Cognitive Services
+url: https://azure.microsoft.com/en-us/services/cognitive-services/
+type: VIRTUAL
+cloud_consume: AZURE
+width: 0.0
+height: 0.0
+property:
+  - name: Key
+    datatype: AZURE_COGNITIVE_KEY
+    controltype: AZURE_WIZARD
+    value: ""
+    constraint: []
+  - name: Request interval
+    datatype: DOUBLE
+    controltype: SPINBOX
+    value: 3.0
+    constraint:
+      min: 0.0
+      max: 1000000.0
+      unit: SECOND
+pin_template: NO_PIN
+connection_consume: []
+compatibility:
+  - name: Image Recognizer
+    condition:
+      - name: Found
+        parameter:
+          - name: Image
+          - name: Class
+          - name: Minimum Probability
+            constraint:
+              min: 0.0
+              max: 100.0
+              unit: PERCENT
+      - name: Not Found
+        parameter:
+          - name: Image
+          - name: Class
+          - name: Minimum Probability
+            constraint:
+              min: 0.0
+              max: 100.0
+              unit: PERCENT
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: MP_Azure_CognitiveServices
+    library_dependency:
+      - bblanchon/ArduinoJson-v5.13.4

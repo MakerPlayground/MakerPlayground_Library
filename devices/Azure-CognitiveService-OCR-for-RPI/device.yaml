@@ -19,7 +19,7 @@ property:
     datatype: DOUBLE
     controltype: SPINBOX
     value: 10
-pin_template: VIRTUAL_DEVICE
+pin_template: NO_PIN
 connection_consume: []
 compatibility:
   - name: Image to Text
