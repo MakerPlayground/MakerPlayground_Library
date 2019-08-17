@@ -916,7 +916,7 @@
           "name": "Led Count",
           "datatype": "INTEGER",
           "controltype": "SPINBOX",
-          "value": 1,
+          "value": 2,
           "constraint": {
             "min": 1.0,
             "max": 10000.0,
