@@ -1,5 +1,5 @@
 {
-  "id": "SDM220_Serial2",
+  "id": "SDM220_SoftwareSerial",
   "brand": "Eastron",
   "model": "SDM220 - Single Phase Energy/Power Meter",
   "url": "http://www.eastrongroup.com/productsview/49.html",
@@ -42,8 +42,8 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "UART_1",
-          "pintype": "UART_TX"
+          "type": "GPIO_1",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
@@ -56,8 +56,8 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "UART_1",
-          "pintype": "UART_RX"
+          "type": "GPIO_2",
+          "pintype": "INOUT"
         }
       ],
       "v_min": 5.0,
@@ -67,7 +67,8 @@
     }
   ],
   "connectivity": [
-    "UART_1"
+    "GPIO_1",
+    "GPIO_2"
   ],
   "compatibility": [
     {
@@ -164,10 +165,11 @@
   ],
   "platforms": [
     {
-      "platform": "ARDUINO_ESP32",
-      "classname": "MP_SDM_SERIAL2",
+      "platform": "ARDUINO_ESP8266",
+      "classname": "MP_SDM_SOFTSERIAL",
       "library_dependency": [
-        "reaper7/SDM_Energy_Meter_HardwareSerial"
+        "plerup/espsoftwareserial-3.4.2",
+        "reaper7/SDM_Energy_Meter_SoftwareSerial"
       ]
     }
   ]
