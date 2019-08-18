@@ -84,7 +84,7 @@ void MP_TFT_M5Stack::clearScreen() {
     initRowHeights();
 }
 
-const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(char* size)
+const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(const char* size)
 {
     if (strcmp(size, "1x") == 0) {
         return &FreeMonoBold9pt7b;
@@ -96,7 +96,7 @@ const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(char* size)
     return &FreeMonoBold9pt7b;
 }
 
-uint16_t MP_TFT_M5Stack::getColorFromColorName(char* color)
+uint16_t MP_TFT_M5Stack::getColorFromColorName(const char* color)
 {
     if (strcmp(color, "Navy") == 0) {
         return TFT_NAVY;

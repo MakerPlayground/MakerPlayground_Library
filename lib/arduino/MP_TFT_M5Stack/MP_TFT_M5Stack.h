@@ -31,8 +31,8 @@ private:
 	void initRowHeights();
 	uint8_t row_heights[MAX_ENTRY_COUNT];
 	
-	const GFXfont * getFontFromSizeName(char* size);
-	uint16_t getColorFromColorName(char* color);
+	const GFXfont * getFontFromSizeName(const char* size);
+	uint16_t getColorFromColorName(const char* color);
 };
 
 #endif
