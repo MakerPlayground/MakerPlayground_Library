@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/device-schema-0.1/schemas/device_json_schema.json",
+  "$id": "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/develop/schemas/device_json_schema.json",
   "definitions": {
     "platforms": {
       "$id": "#/definitions/platforms",
@@ -87,7 +87,8 @@
       "enum": [
         "LEVEL_3v3_5",
         "LEVEL_3v3",
-        "LEVEL_5"
+        "LEVEL_5",
+        "LEVEL_1"
       ],
       "pattern": "^(.*)$"
     },
@@ -132,6 +133,7 @@
         "Load Driver",
         "Relay Module",
         "RGB LED",
+        "RGB LED Strip",
         "Servo",
         "Container",
         "Counter",
@@ -166,8 +168,7 @@
         "Beep",
         "Play Tone",
         "On",
-        "Show Text at Row",
-        "Show Number at Row",
+        "Show Text",
         "Clear Row",
         "Clear Screen",
         "Move To",
@@ -235,7 +236,11 @@
         "Has Text",
         "Has No Text",
         "Receive HIGH logic",
-        "Receive LOW logic"
+        "Receive LOW logic",
+        "Set Color",
+        "Fill Color",
+        "Set Brightness",
+        "Clear"
       ]
     },
     "values": {
@@ -939,6 +944,16 @@
       "description": "Device height in pixel unit. (1 inch = 144 pixels)",
       "examples": [
         80
+      ]
+    },
+    "need_breadboard": {
+      "$id": "#/properties/need_breadboard",
+      "title": "need_breadboard",
+      "type": "boolean",
+      "description": "Indicate whether breadboard is required when using the device. This property is false by default.",
+      "examples": [
+        true,
+        false
       ]
     },
     "pio_boardid": {

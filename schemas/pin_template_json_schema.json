@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "pin_function": {
+      "$id": "#/definitions/pin_function",
+      "type": "string",
+      "enum": [
+        "VCC",
+        "GND",
+        "SCL",
+        "SDA",
+        "SCL1",
+        "SDA1",
+        "DIGITAL_IN",
+        "DIGITAL_OUT",
+        "ANALOG_IN",
+        "ANALOG_OUT",
+        "PWM_OUT",
+        "PWM_IN",
+        "INTERRUPT_LOW",
+        "INTERRUPT_HIGH",
+        "INTERRUPT_CHANGE",
+        "INTERRUPT_RISING",
+        "INTERRUPT_FALLING",
+        "HW_SERIAL_RX",
+        "HW_SERIAL_TX",
+        "HW_SERIAL_RX1",
+        "HW_SERIAL_TX1",
+        "SW_SERIAL_RX",
+        "SW_SERIAL_TX",
+        "HW_OR_SW_SERIAL_RX",
+        "HW_OR_SW_SERIAL_TX",
+        "MOSI",
+        "MISO",
+        "SCK",
+        "MOSI1",
+        "MISO1",
+        "SCK1",
+        "AREF",
+        "NO_FUNCTION"
+      ]
+    },
+    "voltage_level": {
+      "$id": "#/definitions/voltage_level",
+      "type": "string",
+      "title": "voltage_level",
+      "description": "The supporting voltage level for pin",
+      "enum": [
+        "LEVEL_3v3_5",
+        "LEVEL_3v3",
+        "LEVEL_5",
+        "LEVEL_1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "pin_object": {
+      "$id": "#/definitions/pin_object",
+      "type": "object",
+      "title": "pin_object",
+      "required": [
+        "pin_name",
+        "pin_function",
+        "voltage_level"
+      ],
+      "properties": {
+        "pin_name": {
+          "$id": "#/definitions/pin_object/pin_name",
+          "type": "string",
+          "pattern": "^(.*)$"
+        },
+        "pin_function": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/pin_function"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/pin_function"
+              }
+            }
+          ]
+        },
+        "voltage_level": {
+          "$ref": "#/definitions/voltage_level"
+        },
+        "coding_name": {
+          "$id": "#/definitions/pin_object/coding_name",
+          "type": ["string", "number"],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  },
+  "required": [
+    "pins"
+  ],
+  "properties": {
+    "pins": {
+      "$id": "#/properties/pins",
+      "type": "array",
+      "title": "pins",
+      "items": {
+        "$ref": "#/definitions/pin_object"
+      }
+    }
+  }
+}

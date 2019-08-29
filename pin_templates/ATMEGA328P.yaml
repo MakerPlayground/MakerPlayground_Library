@@ -161,6 +161,18 @@ pins:
     - DIGITAL_OUT
   voltage_level: LEVEL_5
   
+- pin_name: A6
+  coding_name: A6
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
+- pin_name: A7
+  coding_name: A7
+  pin_function:
+    - ANALOG_IN
+  voltage_level: LEVEL_5
+
 # POWER
 - pin_name: GND
   pin_function:
