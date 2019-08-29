@@ -11,3 +11,7 @@ pins:
 - pin_name: SIG
   pin_function: DIGITAL_IN
   voltage_level: LEVEL_5
+
+- pin_name: NC
+  pin_function: NO_FUNCTION
+  voltage_level: LEVEL_5

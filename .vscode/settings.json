@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
-        "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/develop/schemas/device_json_schema.json": "**/device.yaml",
+        "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/jet-migration/schemas/device_json_schema.json": "**/device.yaml",
+        "https://raw.githubusercontent.com/MakerPlayground/MakerPlayground_Library/jet-migration/schemas/pin_template_json_schema.json": "pin_templates/*.yaml",
     }
 }

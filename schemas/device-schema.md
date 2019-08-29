@@ -50,6 +50,7 @@ The properties of the device object are defined as follows
 |type|[Type](#device-types) of the device|enum|Yes|MODULE, CONTROLLER, VIRTUAL, INTEGRATED, SHIELD|
 |width|Device width in pixel unit. (1 inch = 144 pixels)|number|Yes|120.0|
 |height|Device height in pixel unit. (1 inch = 144 pixels)|number|Yes|80.0|
+|need_breadboard|Indicate whether breadboard is required when using the device. This property is false by default.|boolean|No|true, false|
 |pio_boardid|[Platform IO's board](https://docs.platformio.org/en/latest/projectconf/section_env_board.html#board) for controller device|string|No|uno, atmega328pb, nodemcuv2, esp32dev, m5stack-fire, nodemcu-32s, espino32
 |cloud_consume|Name of [Cloud Platform](#cloud-platforms) that the device needs. Normally, the device that has cloud_consume is the cloud device such as virtual LED, button, and gauge|enum|No|BLYNK, NETPIE|
 |cloud_provide|Array of the [Cloud Platform Mapping Object](#cloud-platform-mapping-object) that defines the cloud platforms and its code implementation. This property introduces the usable cloud platforms to all devices in the MakerPlayground project.|array|No|-|
@@ -95,7 +96,7 @@ The function and voltage level of the pin are also inherited from referencing pi
 |x|X position in pixel unit|number|Yes|60.0|
 |y|Y position in pixel unit|number|Yes|40.0|
 |function|[Pin Function](#pin-functions) or the array of them that will overwrite the default functions|enum|No|VCC, GND, DIGITAL_IN, DIGITAL_OUT|
-|voltage_level|[Voltage Level](#voltage-level) that could overwrite the default voltage_level of pin|enum|No|LEVEL_3v3, LEVEL_5, LEVEL_3v3_5|
+|voltage_level|[Voltage Level](#voltage-level) that could overwrite the default voltage_level of pin|enum|No|LEVEL_3v3, LEVEL_5, LEVEL_3v3_5, LEVEL_1|
 
 ### **Compatibility Object**
 
@@ -280,10 +281,10 @@ Port type is defined to let the MakerPlayground software calculates the correct 
 | Port Type | Pins order |
 |-----------|-------|
 |WIRE|[PIN]|
-|GROVE|[DATA1, DATA2, VCC, GND]|
-|MAKER_PLAYGROUND|[DATA1, DATA2, VCC, GND]|
-|M5STACK|[DATA1, DATA2, VCC, GND]|
-|INEX3|[VCC, DATA, GND]|
+|GROVE|[GND, VCC, DATA2, DATA1]|
+|MAKER_PLAYGROUND|[GND, VCC, DATA2, DATA1]|
+|M5STACK|[GND, VCC, DATA2, DATA1]|
+|INEX3|[GND, DATA, VCC]|
 |CSI|[CSI1, CSI2, CSI3, ..., CSI15]|
 |UNO_SHIELD|Not defined yet|
 
@@ -294,6 +295,7 @@ The supporting voltage level for pin
 - LEVEL_3v3_5 : operate on both 3.3 and 5 volts
 - LEVEL_3v3 : operate on 3.3 volts only
 - LEVEL_5 : operate on 5 volts only
+- LEVEL_1 : operate on 1 volt only
 
 ### **Generic Devices**
 
@@ -331,11 +333,12 @@ The table below is the basic list of action/condition/value of each generic devi
 |7 Segment|Show Number, Show Two Numbers with Colon, Off|-|-|
 |Buzzer|Beep, Play Tone|-|-|
 |DC Motor|On, Off|-|-|
-|Display|Show Text at Row, Show Number at Row, Clear Row, Clear Screen|-|-|
+|Display|Show Text, Clear Row, Clear Screen|-|-|
 |LED|On, Off|-|-|
 |Load Driver|On, Off|-|-|
 |Relay Module|On, Off|-|-|
 |RGB LED|On, Off|-|-|
+|RGB LED Strip|Set Color, Fill Color, Set Brightness, Clear|-|-|
 |Servo|Move To|-|-|
 |Container|Set to|Check Value, Compare|Value|
 |Counter|Set to, Count up by 1, Count down by 1, Count by|Value equal to, Value not equal to, Compare|Value|
