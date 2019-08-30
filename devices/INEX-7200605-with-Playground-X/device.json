@@ -4,7 +4,7 @@
   "model": "i-Duino R3B with Playground-X",
   "url": "https://inex.co.th/shop/i-duino-uno-r3b.html",
   "type": "CONTROLLER",
-  "pio_boardid": "atmega328pb",
+  "pio_boardid": "ATmega328PB",
   "formfactor": "STANDALONE",
   "wiring_method": "INEX",
   "support_cloudplatform": [],
@@ -527,6 +527,7 @@
     },
     {
       "name": "A6",
+      "alias": ["25"],
       "type": "WIRE",
       "function": [
         {
@@ -545,6 +546,7 @@
     },
     {
       "name": "A7",
+      "alias": ["26"],
       "type": "WIRE",
       "function": [
         {
@@ -595,7 +597,7 @@
     },
     {
       "name": "20/A6",
-      "alias": ["A6"],
+      "alias": ["25"],
       "type": "INEX_JST3",
       "function": [
         {

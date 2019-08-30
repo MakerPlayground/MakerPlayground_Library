@@ -4,7 +4,7 @@
   "model": "BaseBoard V4",
   "url": "",
   "type": "CONTROLLER",
-  "pio_boardid": "atmega328pb",
+  "pio_boardid": "ATmega328PB",
   "formfactor": "MP_CONTROLLER",
   "wiring_method": "MP",
   "support_cloudplatform": [
@@ -226,8 +226,8 @@
     {
       "name": "D7/A3",
       "alias": [
-        "A6",
-        "A7"
+        "25",
+        "26"
       ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",
@@ -258,8 +258,8 @@
     {
       "name": "D8",
       "alias": [
-        "23",
-        "22"
+        "24",
+        "23"
       ],
       "type": "MP",
       "sub_type": "RIGHTANGLE_TOP",

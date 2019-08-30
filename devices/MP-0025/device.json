@@ -4,7 +4,7 @@
   "model": "BaseBoard V3",
   "url": "",
   "type": "CONTROLLER",
-  "pio_boardid": "atmega328pb",
+  "pio_boardid": "ATmega328PB",
   "formfactor": "MP_CONTROLLER",
   "wiring_method": "MP",
   "support_cloudplatform": [
