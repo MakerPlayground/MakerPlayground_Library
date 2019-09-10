@@ -963,7 +963,7 @@
       "description": "Platform IO's board for controller device",
       "examples": [
         "uno",
-        "atmega328pb",
+        "ATmega328PB",
         "nodemcuv2",
         "esp32dev",
         "m5stack-fire",

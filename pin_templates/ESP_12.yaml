@@ -1,0 +1,149 @@
+pins:
+  - pin_name: RST
+    voltage_level: LEVEL_3v3
+    pin_function: []
+  
+  - pin_name: ADC
+    voltage_level: LEVEL_1
+    pin_function:
+      - ANALOG_IN
+  
+  - pin_name: EN
+    voltage_level: LEVEL_3v3
+    pin_function: []
+  
+  - pin_name: IO16
+    coding_name: 16
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+  
+  - pin_name: IO14
+    coding_name: 14
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - SCK
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO12
+    coding_name: 12
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - MISO
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO13
+    coding_name: 13
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - MOSI
+    voltage_level: LEVEL_3v3
+  
+  - pin_name: VCC
+    pin_function:
+      - VCC
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used.
+  - pin_name: CS0
+    pin_function: []
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used.
+  - pin_name: MISO
+    coding_name: 8
+    pin_function: []
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used.
+  - pin_name: IO9
+    coding_name: 9
+    pin_function: []
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used. However, INEX AX-Wifi used it as the digital pin
+  - pin_name: IO10
+    coding_name: 10
+    pin_function:
+      - DIGITAL_OUT
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used.
+  - pin_name: MOSI
+    coding_name: 11
+    pin_function: []
+    voltage_level: LEVEL_3v3
+
+  # This pin is not normally used.
+  - pin_name: SCLK
+    pin_function: []
+    voltage_level: LEVEL_3v3
+
+  - pin_name: GND
+    pin_function:
+      - GND
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO15
+    coding_name: 15
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO2
+    coding_name: 2
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO0
+    coding_name: 0
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO4
+    coding_name: 4
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: IO5
+    coding_name: 5
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: RXD
+    coding_name: 3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
+
+  - pin_name: TXD
+    coding_name: 1
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+    voltage_level: LEVEL_3v3
