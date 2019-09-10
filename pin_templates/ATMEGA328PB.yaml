@@ -166,7 +166,7 @@ pins:
 
 # GROUP E
 - pin_name: PE0
-  coding_name: 22
+  coding_name: 23
   pin_function:
     - DIGITAL_IN
     - DIGITAL_OUT
@@ -174,7 +174,7 @@ pins:
   voltage_level: LEVEL_5
 
 - pin_name: PE1
-  coding_name: 23
+  coding_name: 24
   pin_function:
     - DIGITAL_IN
     - DIGITAL_OUT
@@ -182,13 +182,13 @@ pins:
   voltage_level: LEVEL_5
 
 - pin_name: PE2
-  coding_name: 20
+  coding_name: 25
   pin_function:
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PE3
-  coding_name: 21
+  coding_name: 26
   pin_function:
     - ANALOG_IN
     - MOSI1

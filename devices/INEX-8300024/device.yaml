@@ -1,0 +1,594 @@
+id: INEX-8300024
+brand: INEX
+model: AX-WiFi
+url: https://inex.co.th/shop/ax-wifi.html
+type: CONTROLLER
+pio_boardid: nodemcuv2
+width: 432.0
+height: 572.0
+cloud_provide:
+  - cloud_platform: AZURE
+    classname: MP_AZURE_ESP
+    library_dependency: []
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_ESP
+    library_dependency:
+      - netpieio/microgear-esp8266-arduino
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_NODEMCU
+    library_dependency:
+      - blynkkk/blynk-library
+compatibility: []
+platforms:
+  - platform: ARDUINO_ESP8266
+    classname: ''
+    library_dependency: []
+pin_template: ESP-12_FAMILY
+connection_provide:
+  - name: Port D1
+    type: INEX3
+    pins:
+      - x: 343
+        y: 211
+        ref_to: GND
+      - x: 343
+        y: 199
+        ref_to: IO5
+      - x: 343
+        y: 187
+        ref_to: VCC
+  - name: Port D2
+    type: INEX3
+    pins:
+      - x: 408
+        y: 211
+        ref_to: GND
+      - x: 408
+        y: 199
+        ref_to: IO4
+      - x: 408
+        y: 187
+        ref_to: VCC
+  - name: Port D0
+    type: INEX3
+    pins:
+      - x: 408
+        y: 267
+        ref_to: GND
+      - x: 408
+        y: 255
+        ref_to: IO16
+      - x: 408
+        y: 243
+        ref_to: VCC
+  - name: Port D4
+    type: INEX3
+    pins:
+      - x: 408
+        y: 326
+        ref_to: GND
+      - x: 408
+        y: 314
+        ref_to: IO2
+      - x: 408
+        y: 302
+        ref_to: VCC
+  - name: Port D6
+    type: INEX3
+    pins:
+      - x: 408
+        y: 443
+        ref_to: GND
+      - x: 408
+        y: 431
+        ref_to: IO12
+      - x: 408
+        y: 419
+        ref_to: VCC
+  - name: Port D7
+    type: INEX3
+    pins:
+      - x: 408
+        y: 501
+        ref_to: GND
+      - x: 408
+        y: 489
+        ref_to: IO13
+      - x: 408
+        y: 477
+        ref_to: VCC
+  - name: Port A0
+    type: INEX3
+    pins:
+      - x: 21
+        y: 243
+        ref_to: GND
+      - x: 21
+        y: 255
+        ref_to: ADC
+        voltage_level: LEVEL_3v3
+      - x: 21
+        y: 267
+        ref_to: VCC
+  - name: WS2812
+    type: INEX3
+    pins:
+      - x: 21
+        y: 109
+        ref_to: GND
+      - x: 21
+        y: 97
+        ref_to: IO10
+      - x: 21
+        y: 85
+        ref_to: VCC
+  - name: RxD0
+    type: INEX3
+    pins:
+      - x: 21
+        y: 438
+        ref_to: GND
+      - x: 21
+        y: 426
+        ref_to: RXD
+      - x: 21
+        y: 414
+        ref_to: VCC
+  - name: TxD0
+    type: INEX3
+    pins:
+      - x: 21
+        y: 494
+        ref_to: GND
+      - x: 21
+        y: 482
+        ref_to: TXD
+      - x: 21
+        y: 470
+        ref_to: VCC
+  - name: 16 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 321
+        ref_to: IO16
+  - name: 16 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 321
+        ref_to: IO16
+  - name: 5 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 336
+        ref_to: IO5
+  - name: 5 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 336
+        ref_to: IO5
+  - name: 4 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 350
+        ref_to: IO4
+  - name: 4 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 350
+        ref_to: IO4
+  - name: 0 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 350
+        ref_to: IO0
+  - name: 0 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 350
+        ref_to: IO0
+  - name: +3V3 Male(1)
+    type: WIRE
+    pins:
+      - x: 299
+        y: 393
+        ref_to: VCC
+  - name: +3V3 Female(1)
+    type: WIRE
+    pins:
+      - x: 314
+        y: 393
+        ref_to: VCC
+  - name: GND Male(1)
+    type: WIRE
+    pins:
+      - x: 299
+        y: 408
+        ref_to: GND
+  - name: GND Female(1)
+    type: WIRE
+    pins:
+      - x: 314
+        y: 408
+        ref_to: GND
+  - name: 14 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 422
+        ref_to: IO14
+  - name: 14 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 422
+        ref_to: IO14
+  - name: 12 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 436
+        ref_to: IO12
+  - name: 12 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 436
+        ref_to: IO12
+  - name: 13 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 451
+        ref_to: IO13
+  - name: 13 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 451
+        ref_to: IO13
+  - name: 15 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 465
+        ref_to: IO15
+  - name: 15 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 465
+        ref_to: IO15
+  - name: 3 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 479
+        ref_to: RXD
+  - name: 3 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 479
+        ref_to: RXD
+  - name: 1 Male
+    type: WIRE
+    pins:
+      - x: 299
+        y: 494
+        ref_to: TXD
+  - name: 1 Female
+    type: WIRE
+    pins:
+      - x: 314
+        y: 494
+        ref_to: TXD
+  - name: GND Female(2)
+    type: WIRE
+    pins:
+      - x: 299
+        y: 509
+        ref_to: GND
+  - name: GND Male(2)
+    type: WIRE
+    pins:
+      - x: 314
+        y: 509
+        ref_to: GND
+  - name: +3V3 Female(2)
+    type: WIRE
+    pins:
+      - x: 299
+        y: 522
+        ref_to: VCC
+  - name: +3V3 Male(2)
+    type: WIRE
+    pins:
+      - x: 314
+        y: 522
+        ref_to: VCC
+  - name: +3V3 Female(3)
+    type: WIRE
+    pins:
+      - x: 299
+        y: 537
+        ref_to: VCC
+  - name: +3V3 Male(3)
+    type: WIRE
+    pins:
+      - x: 314
+        y: 537
+        ref_to: VCC
+  - name: A0 Female
+    type: WIRE
+    pins:
+      - x: 128
+        y: 321
+        ref_to: ADC
+        voltage_level: LEVEL_3v3
+  - name: A0 Male
+    type: WIRE
+    pins:
+      - x: 113
+        y: 321
+        ref_to: ADC
+        voltage_level: LEVEL_3v3
+  - name: GPIO10 Female
+    type: WIRE
+    pins:
+      - x: 128
+        y: 364
+        ref_to: IO10
+  - name: GPIO10 Male
+    type: WIRE
+    pins:
+      - x: 113
+        y: 364
+        ref_to: IO10
+  - name: GND Female(3)
+    type: WIRE
+    pins:
+      - x: 128
+        y: 451
+        ref_to: GND
+  - name: GND Male(3)
+    type: WIRE
+    pins:
+      - x: 113
+        y: 451
+        ref_to: GND
+  - name: +3V3 Female(4)
+    type: WIRE
+    pins:
+      - x: 128
+        y: 465
+        ref_to: VCC
+  - name: +3V3 Male(4)
+    type: WIRE
+    pins:
+      - x: 113
+        y: 465
+        ref_to: VCC
+  - name: nRST Female
+    type: WIRE
+    pins:
+      - x: 128
+        y: 494
+        ref_to: RST
+  - name: nRST Male
+    type: WIRE
+    pins:
+      - x: 113
+        y: 494
+        ref_to: RST
+  - name: GND Female(4)
+    type: WIRE
+    pins:
+      - x: 128
+        y: 508
+        ref_to: GND
+  - name: GND Male(4)
+    type: WIRE
+    pins:
+      - x: 113
+        y: 508
+        ref_to: GND
+  - name: +Vcc Female
+    type: WIRE
+    pins:
+      - x: 128
+        y: 522
+        ref_to: VCC
+        voltage_level: LEVEL_5
+  - name: +Vcc Male
+    type: WIRE
+    pins:
+      - x: 113
+        y: 522
+        ref_to: VCC
+        voltage_level: LEVEL_5
+  - name: +5V Female
+    type: WIRE
+    pins:
+      - x: 128
+        y: 537
+        ref_to: VCC
+        voltage_level: LEVEL_5
+  - name: +5V Male
+    type: WIRE
+    pins:
+      - x: 113
+        y: 537
+        ref_to: VCC
+        voltage_level: LEVEL_5
+integrated_devices:
+  - name: Integrated VR
+    pin_template: GENERIC_ANALOG_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: ADC
+    compatibility:
+      - name: POT
+        condition:
+          - name: Compare
+        value:
+          - name: Percent
+            constraint:
+              max: 100.0
+              min: 0.0
+              unit: PERCENT
+    platforms:
+      - platform: ARDUINO_ESP8266
+        classname: MP_TRIMPOT
+        library_dependency: []
+  - name: Integrated Buzzer
+    pin_template: GENERIC_PWM_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: IO15
+    compatibility:
+      - name: Buzzer
+        action:
+          - name: Play Tone
+            parameter:
+              - name: Tone Frequency
+                constraint:
+                  max: 20000.0
+                  min: 0.0
+                  unit: HERTZ
+              - name: Duration
+                constraint:
+                  max: 1000.0
+                  min: 0.0
+                  unit: SECOND
+          - name: Beep
+    platforms:
+      - platform: ARDUINO_ESP8266
+        classname: MP_BUZZER
+        library_dependency: []
+  - name: Integrated OLED
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: IO4
+      - ref_to: SCL
+        host_ref_to: IO5
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  max: 10
+                  min: 1
+                  unit: NOT_SPECIFIED
+              - name: Text
+              - name: Size
+                constraint:
+                  - 1x
+                  - 2x
+                  - 3x
+              - name: Align
+                value: Left
+                constraint:
+                  - Left
+                  - Center
+                  - Right
+              - name: Color
+                constraint:
+                  - Blue
+                  - Cyan
+                  - Dark Cyan
+                  - Dark Green
+                  - Dark Grey
+                  - Green
+                  - Green Yellow
+                  - Light Grey
+                  - Magenta
+                  - Maroon
+                  - Navy
+                  - Olive
+                  - Orange
+                  - Pink
+                  - Purple
+                  - White
+                  - Red
+                  - Yellow
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+    platforms:
+      - platform: ARDUINO_ESP8266
+        classname: MP_OLED_SSD1306_128x64
+        library_dependency:
+          - "adafruit/Adafruit_SSD1306-1.2.9"
+          - "adafruit/Adafruit-GFX-Library-1.5.2"
+  - name: Integrated RGB LED
+    property:
+      - name: Led Count
+        datatype: INTEGER
+        controltype: SPINBOX
+        value: 1
+        constraint:
+          min: 1
+          max: 10000
+          unit: NOT_SPECIFIED
+    platforms:
+      - platform: ARDUINO_ESP8266
+        classname: MP_WS281X_STRIP
+        library_dependency:
+          - "adafruit/Adafruit_NeoPixel-1.1.8"
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: IO10
+    compatibility:
+      - name: RGB LED Strip
+        action:
+          - name: Set Color
+            parameter:
+              - name: Index
+              - name: Red
+              - name: Green
+              - name: Blue
+          - name: Fill Color
+            parameter:
+              - name: Start Index
+              - name: End Index
+              - name: Red
+              - name: Green
+              - name: Blue
+          - name: Set Brightness
+            parameter:
+              - name: Brightness
+          - name: Clear
+            parameter: []
