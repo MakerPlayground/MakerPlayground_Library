@@ -1,0 +1,236 @@
+pins:
+  - pin_name: EN
+    voltage_level: LEVEL_3v3
+    pin_function: []
+  
+  - pin_name: "36"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "39"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "34"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "35"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "32"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "33"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "25"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - ANALOG_OUT
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "26"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - ANALOG_OUT
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "27"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "14"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - SCK
+  
+  - pin_name: "12"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - MISO
+  
+  - pin_name: "13"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - MOSI
+  
+  - pin_name: "9"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "10"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "11"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "GND"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - GND
+  
+  - pin_name: "VIN"
+    voltage_level: LEVEL_12
+    pin_function: []
+  
+  - pin_name: "VCC"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - VCC
+  
+  - pin_name: "6"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "7"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "8"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "0"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "15"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "2"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "4"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - ANALOG_IN
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "16"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "17"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "5"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "18"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "19"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  
+  - pin_name: "21"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - SDA
+  
+  - pin_name: "3"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - HW_SERIAL_RX
+  
+  - pin_name: "1"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - HW_SERIAL_TX
+  
+  - pin_name: "22"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - SCL
+  
+  - pin_name: "23"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+  

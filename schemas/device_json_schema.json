@@ -61,6 +61,8 @@
         "MISO1",
         "SCK1",
         "AREF",
+        "RS485_Negative",
+        "RS485_Positive",
         "NO_FUNCTION"
       ]
     },
@@ -88,7 +90,8 @@
         "LEVEL_3v3_5",
         "LEVEL_3v3",
         "LEVEL_5",
-        "LEVEL_1"
+        "LEVEL_1",
+        "LEVEL_12"
       ],
       "pattern": "^(.*)$"
     },
@@ -421,7 +424,7 @@
         {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": ["string", "integer"]
           }
         }
       ]

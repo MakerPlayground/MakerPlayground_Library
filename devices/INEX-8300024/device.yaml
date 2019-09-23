@@ -23,7 +23,7 @@ platforms:
   - platform: ARDUINO_ESP8266
     classname: ''
     library_dependency: []
-pin_template: ESP-12_FAMILY
+pin_template: ESP_12
 connection_provide:
   - name: Port D1
     type: INEX3

@@ -1,0 +1,53 @@
+id: KMM-RS0401
+brand: KMM
+model: RS0401 Light sensor (remote sensor w/RS-485 Module)
+url: http://komomi.net/wp-content/uploads/2019/09/KMM-RS0401-Light-Sensor.pdf
+type: MODULE
+width: 988.0
+height: 378.0
+property:
+  - name: device id
+    datatype: INTEGER_ENUM
+    controltype: DROPDOWN
+    value: 1
+    constraint:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+pin_template: RS485_DEVICE
+connection_consume:
+  - name: Port RS485
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 983.0
+        y: 216.0
+        ref_to: GND
+      - x: 983.0
+        y: 198.0
+        ref_to: VCC
+      - x: 983.0
+        y: 179.0
+        ref_to: "B-"
+      - x: 983.0
+        y: 161.0
+        ref_to: "A+"
+compatibility:
+  - name: Light
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: KMM_RS0401
+    library_dependency:
+      - 4-20ma/ModbusMaster-2.0.1
