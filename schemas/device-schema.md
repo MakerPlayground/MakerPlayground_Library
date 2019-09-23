@@ -272,6 +272,8 @@ The function that the pin is supported. The IN and OUT function is considered by
 - MISO1
 - SCK1
 - AREF
+- RS485_Negative
+- RS485_Positive
 - NO_FUNCTION
 
 ### **Port Types**
@@ -296,6 +298,7 @@ The supporting voltage level for pin
 - LEVEL_3v3 : operate on 3.3 volts only
 - LEVEL_5 : operate on 5 volts only
 - LEVEL_1 : operate on 1 volt only
+- LEVEL_12 : operate on 12 volt only
 
 ### **Generic Devices**
 

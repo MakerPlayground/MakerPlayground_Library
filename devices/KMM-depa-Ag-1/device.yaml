@@ -1,0 +1,251 @@
+id: KMM-depa-Ag-1
+brand: KMM
+model: "depa Ag 1.0"
+url: ""
+type: CONTROLLER
+pio_boardid: esp32dev
+cloud_provide:
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_ESP
+    library_dependency:
+      - lamloei/ESP32_Microgear
+  - cloud_platform: AZURE
+    classname: MP_AZURE_ESP
+    library_dependency: []
+width: 1205.0
+height: 1016.0
+property: []
+pin_template: ESP_32
+connection_provide:
+  - name: Port RS485
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 485.0
+        y: 1012.0
+        voltage_level: LEVEL_12
+        ref_to: GND
+      - x: 530.0
+        y: 1012.0
+        voltage_level: LEVEL_12
+        ref_to: VCC
+      - x: 100.0
+        y: 1012.0
+        voltage_level: LEVEL_12
+        function: RS485_Negative
+        ref_to: "3"
+      - x: 145.0
+        y: 1012.0
+        voltage_level: LEVEL_12
+        function: RS485_Positive
+        ref_to: "1"
+compatibility: []
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: ""
+    library_dependency: []
+integrated_devices:
+  - name: Integrated OLED
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: SCL
+        host_ref_to: "22"
+      - ref_to: SDA
+        host_ref_to: "21"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+              - name: Text
+                constraint: []
+              - name: Size
+                constraint:
+                  - 1x
+                  - 2x
+                  - 3x
+              - name: Align
+                value: Left
+                constraint:
+                  - Left
+                  - Center
+                  - Right
+              - name: Color
+                constraint:
+                  - Blu
+                  - Cyan
+                  - Dark Cyan
+                  - Dark Green
+                  - Dark Grey
+                  - Green
+                  - Green Yellow
+                  - Light Grey
+                  - Magenta
+                  - Maroon
+                  - Navy
+                  - Olive
+                  - Orange
+                  - Pink
+                  - Purple
+                  - White
+                  - Red
+                  - Yello
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+            parameter: []
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_OLED_SSD1306_128x64
+        library_dependency:
+          - adafruit/Adafruit_SSD1306-1.2.9
+          - adafruit/Adafruit-GFX-Library-1.5.2
+  - name: Integrated Button (SW1)
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection: 
+      - ref_to: SIG
+        host_ref_to: "34"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press and release
+          - name: Press
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated Button (SW2)
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection: 
+      - ref_to: SIG
+        host_ref_to: "35"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press and release
+          - name: Press
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated Button (SW3)
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection: 
+      - ref_to: SIG
+        host_ref_to: "32"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press and release
+          - name: Press
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated Relay (R1)
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: SIG
+        host_ref_to: "17"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Relay Module
+        action:
+          - name: "On"
+          - name: "Off"
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_RELAY_AL
+        library_dependency: []
+  - name: Integrated Relay (R2)
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: SIG
+        host_ref_to: "16"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Relay Module
+        action:
+          - name: "On"
+          - name: "Off"
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_RELAY_AL
+        library_dependency: []
+  - name: Integrated Relay (R2)
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: SIG
+        host_ref_to: "4"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: Relay Module
+        action:
+          - name: "On"
+          - name: "Off"
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_RELAY_AL
+        library_dependency: []
+  - name: Integrated LED (LED on ESP32)
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: SIG
+        host_ref_to: "2"
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+    compatibility:
+      - name: LED
+        action:
+          - name: "On"
+            parameter:
+              - name: Brightness
+                value: 100.0
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: "Off"
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LED_AH
+        library_dependency: []
