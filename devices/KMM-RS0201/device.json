@@ -1,0 +1,79 @@
+{
+  "id": "KMM-RS0201",
+  "brand": "KMM",
+  "model": "RS0201 Soil Moisture remote sensor w/RS-485 Module",
+  "url": "http://komomi.net/wp-content/uploads/2019/09/KMM-RS0201-Soil-Moisture-Sensor.pdf",
+  "type": "PERIPHERAL",
+  "formfactor": "STANDALONE",
+  "width": 378,
+  "height": 1894,
+  "property": [
+    {
+      "name": "device id",
+      "datatype": "INTEGER_ENUM",
+      "controltype": "DROPDOWN",
+      "value": 1,
+      "constraint": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "port": [
+    {
+      "name": "Port",
+      "type": "MP",
+      "sub_type": "RIGHTANGLE_TOP",
+      "function": [
+        {
+          "type": "KMM_RS_485_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 5.0,
+      "v_max": 5.0,
+      "x": 189.0,
+      "y": 1888.0,
+      "angle": 180.0
+    }
+  ],
+  "connectivity": [
+    "KMM_RS_485_1"
+  ],
+  "compatibility": [
+    {
+      "name": "Soil Moisture",
+      "action": [
+        {
+          "name": "Compare",
+          "parameter": []
+        }
+      ],
+      "value": [
+        {
+          "name": "Percent",
+          "constraint": {
+            "min": 0.0,
+            "max": 100.0,
+            "unit": "PERCENT"
+          }
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "KMM_RS0201",
+      "library_dependency": [
+        "4-20ma/ModbusMaster-2.0.1"
+      ]
+    }
+  ]
+}

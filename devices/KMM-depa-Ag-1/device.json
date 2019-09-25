@@ -1,0 +1,664 @@
+{
+  "id": "KMM-depa-Ag-1",
+  "brand": "KMM",
+  "model": "depa Ag 1.0",
+  "url": "",
+  "type": "CONTROLLER",
+  "pio_boardid": "esp32dev",
+  "formfactor": "STANDALONE",
+  "wiring_method": "MP",
+  "support_cloudplatform": [
+    {
+      "cloud_platform": "NETPIE",
+      "classname": "MP_NETPIE_ESP",
+      "library_dependency": [
+        "lamloei/ESP32_Microgear"
+      ]
+    },
+    {
+      "cloud_platform": "AZURE",
+      "classname": "MP_AZURE_ESP",
+      "library_dependency": []
+    }
+  ],
+  "width": 1205.0,
+  "height": 1016.0,
+  "property": [],
+  "dependency": "",
+  "category": "",
+  "port": [
+    {
+      "name": "2",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "PWM_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "4",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_4",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "16",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_16",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "17",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_17",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "32",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_32",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "34",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_34",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "35",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "GPIO_35",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "21",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "I2C_1",
+          "pintype": "I2C_SDA"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "22",
+      "type": "INTERNAL",
+      "function": [
+        {
+          "type": "I2C_1",
+          "pintype": "I2C_SCL"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "Port RS485",
+      "type": "MP",
+      "function": [
+        {
+          "type": "KMM_RS_485_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 252,
+      "y": 995,
+      "angle": 270.0
+    }
+  ],
+  "connectivity": [
+    "I2C_1",
+    "GPIO_2",
+    "GPIO_4",
+    "GPIO_16",
+    "GPIO_17",
+    "GPIO_32",
+    "GPIO_34",
+    "GPIO_35",
+    "KMM_RS_485_1"
+  ],
+  "compatibility": [],
+  "integrated_device": [
+    {
+      "name": "Integrated OLED",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP8266",
+          "classname": "MP_OLED_SSD1306_128x64",
+          "library_dependency": [
+            "adafruit/Adafruit_SSD1306-1.2.9",
+            "adafruit/Adafruit-GFX-Library-1.5.2"
+          ]
+        }
+      ],
+      "port": [
+        {
+          "name": "SCL",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "I2C_1",
+              "pintype": "I2C_SCL"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "SDA",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "I2C_1",
+              "pintype": "I2C_SDA"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "I2C_1"
+      ],
+      "compatibility": [
+        {
+          "name": "Display",
+          "action": [
+            {
+              "name": "Show Text",
+              "parameter": [
+                {
+                  "name": "Row",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                },
+                {
+                  "name": "Text",
+                  "constraint": []
+                },
+                {
+                  "name": "Size",
+                  "constraint": [
+                    "1x",
+                    "2x",
+                    "3x"
+                  ]
+                },
+                {
+                  "name": "Align",
+                  "value": "Left",
+                  "constraint": [
+                    "Left",
+                    "Center",
+                    "Right"
+                  ]
+                },
+                {
+                  "name": "Color",
+                  "constraint": [
+                    "Blue",
+                    "Cyan",
+                    "Dark Cyan",
+                    "Dark Green",
+                    "Dark Grey",
+                    "Green",
+                    "Green Yellow",
+                    "Light Grey",
+                    "Magenta",
+                    "Maroon",
+                    "Navy",
+                    "Olive",
+                    "Orange",
+                    "Pink",
+                    "Purple",
+                    "White",
+                    "Red",
+                    "Yellow"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Clear Row",
+              "parameter": [
+                {
+                  "name": "Row",
+                  "constraint": {
+                    "min": 1.0,
+                    "max": 10.0,
+                    "unit": "NOT_SPECIFIED"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Clear Screen",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Button (SW1)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_34",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_34"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Button (SW2)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_35",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_35"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Button (SW3)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_BUTTON_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_32",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_32"
+      ],
+      "compatibility": [
+        {
+          "name": "Button",
+          "action": [
+            {
+              "name": "Press",
+              "parameter": []
+            },
+            {
+              "name": "Press and release",
+              "parameter": []
+            },
+            {
+              "name": "Not press",
+              "parameter": []
+            }
+          ],
+          "value": [],
+          "count": ""
+        }
+      ]
+    },
+    {
+      "name": "Integrated Relay (R1)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_RELAY_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "alias": ["17"],
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_17",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_17"
+      ],
+      "compatibility": [
+        {
+          "name": "Relay Module",
+          "action": [
+            {
+              "name": "On",
+              "parameter": []
+            },
+            {
+              "name": "Off",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated Relay (R2)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_RELAY_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_16",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_16"
+      ],
+      "compatibility": [
+        {
+          "name": "Relay Module",
+          "action": [
+            {
+              "name": "On",
+              "parameter": []
+            },
+            {
+              "name": "Off",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated Relay (R3)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_RELAY_AL",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_4",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "connectivity": [
+        "GPIO_4"
+      ],
+      "compatibility": [
+        {
+          "name": "Relay Module",
+          "action": [
+            {
+              "name": "On",
+              "parameter": []
+            },
+            {
+              "name": "Off",
+              "parameter": []
+            }
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "name": "Integrated LED (LED on ESP32)",
+      "platforms": [
+        {
+          "platform": "ARDUINO_ESP32",
+          "classname": "MP_LED_AH",
+          "library_dependency": []
+        }
+      ],
+      "port": [
+        {
+          "name": "Port",
+          "type": "INTERNAL",
+          "function": [
+            {
+              "type": "GPIO_2",
+              "pintype": "INOUT"
+            }
+          ],
+          "v_min": 0.0,
+          "v_max": 0.0,
+          "x": 0.0,
+          "y": 0.0
+        }
+      ],
+      "connectivity": [
+        "GPIO_2"
+      ],
+      "compatibility": [
+        {
+          "name": "LED", 
+          "action": [
+            {
+              "name": "On", 
+              "parameter": [
+                {
+                  "name": "Brightness", 
+                  "value": 100.0, 
+                  "constraint": {
+                    "min": 0.0, 
+                    "max": 100.0, 
+                    "unit": "PERCENT"
+                  }
+                }
+              ]
+            }, 
+            {
+              "name": "Off",
+              "parameter": []
+            }
+          ], 
+          "condition": [], 
+          "value": []
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "platform": "ARDUINO_ESP32",
+      "classname": "",
+      "library_dependency": []
+    }
+  ]
+}
