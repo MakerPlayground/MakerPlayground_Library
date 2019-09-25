@@ -4,7 +4,7 @@
   "model": "Light Intensity Sensor Module (GY-302 BH1750)",
   "url": "https://www.arduitronics.com/product/849/light-intensity-sensor-module-gy-302-bh1750",
   "type": "PERIPHERAL",
-  "formfactor": "STANDALONE",
+  "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 79.0,
   "height": 105.0,
   "property": [
@@ -34,7 +34,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "I2C_0",
+          "type": "I2C_1",
           "pintype": "I2C_SDA"
         }
       ],
@@ -48,7 +48,7 @@
       "type": "WIRE",
       "function": [
         {
-          "type": "I2C_0",
+          "type": "I2C_1",
           "pintype": "I2C_SCL"
         }
       ],
@@ -87,7 +87,7 @@
     }
   ],
   "connectivity": [
-    "I2C_0"
+    "I2C_1"
   ],
   "compatibility": [
     {
@@ -129,6 +129,13 @@
     },
     {
       "platform": "ARDUINO_ESP8266",
+      "classname": "MP_BH1750",
+      "library_dependency": [
+        "claws/BH1750"
+      ]
+    },
+    {
+      "platform": "ARDUINO_ESP32",
       "classname": "MP_BH1750",
       "library_dependency": [
         "claws/BH1750"

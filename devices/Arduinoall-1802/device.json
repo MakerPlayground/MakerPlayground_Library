@@ -4,7 +4,7 @@
   "model": "Soil Moisture Sensor Module",
   "url": "https://www.arduinoall.com/product/1836/soil-moisture-sensor-v2-for-arduino-red-pcb-keys",
   "type": "PERIPHERAL",
-  "formfactor": "STANDALONE",
+  "formfactor": "BREAKOUT_BOARD_ONESIDE",
   "width": 124.0,
   "height": 320.0,
   "property": [],
@@ -84,6 +84,11 @@
     },
     {
       "platform": "ARDUINO_ESP8266",
+      "classname": "MP_SOIL_MOISTURE",
+      "library_dependency": []
+    },
+    {
+      "platform": "ARDUINO_ESP32",
       "classname": "MP_SOIL_MOISTURE",
       "library_dependency": []
     }
