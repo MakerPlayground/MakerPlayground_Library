@@ -12,7 +12,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 	
-	double getPercent();
+	double getIntensity();
 
 private:
     ModbusMaster node;

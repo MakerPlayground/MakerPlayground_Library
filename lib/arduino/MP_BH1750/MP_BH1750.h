@@ -15,6 +15,7 @@ public:
 	void printStatus();
 
 	double getPercent();
+	double getIntensity();
 
 private:
 	BH1750 lightMeter;

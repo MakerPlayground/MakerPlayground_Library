@@ -40,7 +40,7 @@ void KMM_RS0401::printStatus()
 	Serial.println(this->light);
 }
 
-double KMM_RS0401::getPercent()
+double KMM_RS0401::getIntensity()
 {
 	return light;
 }

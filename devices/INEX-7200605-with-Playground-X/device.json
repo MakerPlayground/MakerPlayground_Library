@@ -1532,6 +1532,15 @@
                 "max": 100.0,
                 "unit": "PERCENT"
               }
+            },
+            {
+              "name": "Intensity",
+              "dataType": "DOUBLE",
+              "constraint": {
+                "min": 0.0,
+                "max": 65535.0,
+                "unit": "LUX"
+              }
             }
           ]
         }
