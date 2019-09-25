@@ -16,6 +16,13 @@
       ]
     },
     {
+      "cloud_platform": "BLYNK",
+      "classname": "MP_BLYNK_NODEMCU",
+      "library_dependency": [
+        "blynkkk/blynk-library"
+      ]
+    },
+    {
       "cloud_platform": "AZURE",
       "classname": "MP_AZURE_ESP",
       "library_dependency": []
