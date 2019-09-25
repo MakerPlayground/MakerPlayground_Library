@@ -1,0 +1,754 @@
+{
+    "id": "ESP-32-36pins",
+    "brand": "Espressif",
+    "model": "DOIT Esp32 DevKit v1 (36 GPIOs)",
+    "url": "",
+    "type": "CONTROLLER",
+    "pio_boardid": "esp32dev",
+    "formfactor": "STANDALONE",
+    "wiring_method": "MP",
+    "support_cloudplatform": [
+      {
+        "cloud_platform": "NETPIE",
+        "classname": "MP_NETPIE_ESP",
+        "library_dependency": [
+          "lamloei/ESP32_Microgear"
+        ]
+      },
+      {
+        "cloud_platform": "BLYNK",
+        "classname": "MP_BLYNK_NODEMCU",
+        "library_dependency": [
+          "blynkkk/blynk-library"
+        ]
+      },
+      {
+        "cloud_platform": "AZURE",
+        "classname": "MP_AZURE_ESP",
+        "library_dependency": []
+      }
+    ],
+    "width": 312.0,
+    "height": 159.0,
+    "property": [],
+    "dependency": "",
+    "category": "",
+    "port": [
+      {
+        "name": "VP",
+        "alias": ["36"],
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_36",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_1",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 274.286,
+        "y": 7.2
+      },
+      {
+        "name": "VN",
+        "alias": ["39"],
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_39",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_2",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 259.886,
+        "y": 7.2
+      },
+      {
+        "name": "34",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_34",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_3",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 245.486,
+        "y": 7.2
+      },
+      {
+        "name": "35",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_35",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_4",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 231.086,
+        "y": 7.2
+      },
+      {
+        "name": "32",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_32",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_5",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 216.686,
+        "y": 7.2
+      },
+      {
+        "name": "33",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_33",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_6",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 202.286,
+        "y": 7.2
+      },
+      {
+        "name": "25",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_25",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_7",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 187.886,
+        "y": 7.2
+      },
+      {
+        "name": "26",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_26",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_8",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 173.486,
+        "y": 7.2
+      },
+      {
+        "name": "27",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_27",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_9",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 159.086,
+        "y": 7.2
+      },
+      {
+        "name": "14",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_14",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_10",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_1",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "SPI_1",
+            "pintype": "SPI_SCK"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 144.686,
+        "y": 7.2
+      },
+      {
+        "name": "12",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_12",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_11",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_2",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "SPI_1",
+            "pintype": "SPI_MISO"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 130.286,
+        "y": 7.2
+      },
+      {
+        "name": "13",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_13",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_12",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_3",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "SPI_1",
+            "pintype": "SPI_MOSI"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 115.886,
+        "y": 7.2
+      },
+      {
+        "name": "9",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_9",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_4",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 101.486,
+        "y": 7.2
+      },
+      {
+        "name": "10",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_10",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_5",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 87.086,
+        "y": 7.2
+      },
+      {
+        "name": "11",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_11",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_6",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 78.686,
+        "y": 7.2
+      },
+      {
+        "name": "GND",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "POWER",
+            "pintype": "GND"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 58.286,
+        "y": 7.2
+      },
+      {
+        "name": "VIN",
+        "type": "WIRE",
+        "function": [],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 43.886,
+        "y": 7.2
+      },
+      {
+        "name": "VCC",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "POWER",
+            "pintype": "VCC"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 43.886,
+        "y": 151.54
+      },
+      {
+        "name": "6",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_6",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_7",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 58.286,
+        "y": 151.54
+      },
+      {
+        "name": "7",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_7",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_8",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 72.686,
+        "y": 151.54
+      },
+      {
+        "name": "8",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_8",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_9",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 87.086,
+        "y": 151.54
+      },
+      {
+        "name": "0",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_0",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_13",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_10",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 101.486,
+        "y": 151.54
+      },
+      {
+        "name": "15",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_15",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_14",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_11",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "SPI_1",
+            "pintype": "SPI_SS"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 115.886,
+        "y": 151.54
+      },
+      {
+        "name": "2",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_2",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_15",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_12",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 130.286,
+        "y": 151.54
+      },
+      {
+        "name": "4",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_4",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "ANALOG_16",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_13",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 144.686,
+        "y": 151.54
+      },
+      {
+        "name": "16",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_16",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 159.086,
+        "y": 151.54
+      },
+      {
+        "name": "17",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_17",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 173.486,
+        "y": 151.54
+      },
+      {
+        "name": "5",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_5",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_14",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 187.886,
+        "y": 151.54
+      },
+      {
+        "name": "18",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_18",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 202.286,
+        "y": 151.54
+      },
+      {
+        "name": "19",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_19",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 216.686,
+        "y": 151.54
+      },
+      {
+        "name": "21",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_21",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "I2C_1",
+            "pintype": "I2C_SDA"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 231.086,
+        "y": 151.54
+      },
+      {
+        "name": "3",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_3",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_15",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 245.486,
+        "y": 151.54
+      },
+      {
+        "name": "1",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_1",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "PWM_16",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 259.886,
+        "y": 151.54
+      },
+      {
+        "name": "22",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_22",
+            "pintype": "INOUT"
+          },
+          {
+            "type": "I2C_1",
+            "pintype": "I2C_SCL"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 274.286,
+        "y": 151.54
+      },
+      {
+        "name": "23",
+        "type": "WIRE",
+        "function": [
+          {
+            "type": "GPIO_23",
+            "pintype": "INOUT"
+          }
+        ],
+        "v_min": 0.0,
+        "v_max": 0.0,
+        "x": 288.686,
+        "y": 151.54
+      }
+    ],
+    "connectivity": [
+      "I2C_1",
+      "SPI_1",
+      "GPIO_0",
+      "GPIO_1",
+      "GPIO_2",
+      "GPIO_3",
+      "GPIO_4",
+      "GPIO_5",
+      "GPIO_6",
+      "GPIO_7",
+      "GPIO_8",
+      "GPIO_9",
+      "GPIO_10",
+      "GPIO_11",
+      "GPIO_12",
+      "GPIO_13",
+      "GPIO_14",
+      "GPIO_15",
+      "GPIO_16",
+      "GPIO_17",
+      "GPIO_18",
+      "GPIO_19",
+      "GPIO_21",
+      "GPIO_22",
+      "GPIO_23",
+      "GPIO_25",
+      "GPIO_26",
+      "GPIO_27",
+      "GPIO_32",
+      "GPIO_33",
+      "GPIO_34",
+      "GPIO_35",
+      "GPIO_36",
+      "GPIO_39",
+      "PWM_1",
+      "PWM_2",
+      "PWM_3",
+      "PWM_4",
+      "PWM_5",
+      "PWM_6",
+      "PWM_7",
+      "PWM_8",
+      "PWM_9",
+      "PWM_10",
+      "PWM_11",
+      "PWM_12",
+      "PWM_13",
+      "PWM_14",
+      "PWM_15",
+      "PWM_16",
+      "ANALOG_1",
+      "ANALOG_2",
+      "ANALOG_3",
+      "ANALOG_4",
+      "ANALOG_5",
+      "ANALOG_6",
+      "ANALOG_7",
+      "ANALOG_8",
+      "ANALOG_9",
+      "ANALOG_10",
+      "ANALOG_11",
+      "ANALOG_12",
+      "ANALOG_13",
+      "ANALOG_14",
+      "ANALOG_15",
+      "ANALOG_16"
+    ],
+    "compatibility": [],
+    "integrated_device": [],
+    "platforms": [
+      {
+        "platform": "ARDUINO_ESP32",
+        "classname": "",
+        "library_dependency": []
+      }
+    ]
+  }
