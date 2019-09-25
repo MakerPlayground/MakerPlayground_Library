@@ -206,7 +206,7 @@ integrated_devices:
       - platform: ARDUINO_ESP32
         classname: MP_RELAY_AL
         library_dependency: []
-  - name: Integrated Relay (R2)
+  - name: Integrated Relay (R3)
     pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
     integrated_connection:
       - ref_to: SIG
