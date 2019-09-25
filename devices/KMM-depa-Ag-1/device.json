@@ -28,8 +28,8 @@
       "library_dependency": []
     }
   ],
-  "width": 1205.0,
-  "height": 1016.0,
+  "width": 578.0,
+  "height": 471.0,
   "property": [],
   "dependency": "",
   "category": "",
@@ -161,23 +161,364 @@
       "y": 0
     },
     {
-      "name": "Port RS485",
-      "type": "MP",
+      "name": "TX",
+      "alias": ["25"],
+      "type": "WIRE",
       "function": [
         {
-          "type": "KMM_RS_485_1",
+          "type": "GPIO_25",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "ANALOG_1",
           "pintype": "INOUT"
         }
       ],
       "v_min": 0.0,
       "v_max": 0.0,
-      "x": 252,
-      "y": 995,
-      "angle": 270.0
+      "x": 206,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "RX",
+      "alias": ["26"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_26",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "ANALOG_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 226,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "D14",
+      "alias": ["14"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_14",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "ANALOG_3",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "SPI_1",
+          "pintype": "SPI_SCK"
+        },
+        {
+          "type": "PWM_1",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 246,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "D13",
+      "alias": ["13"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_13",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "ANALOG_4",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "SPI_1",
+          "pintype": "SPI_MOSI"
+        },
+        {
+          "type": "PWM_2",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 266,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "D12",
+      "alias": ["12"],
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "GPIO_12",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "ANALOG_5",
+          "pintype": "INOUT"
+        },
+        {
+          "type": "SPI_1",
+          "pintype": "SPI_MISO"
+        },
+        {
+          "type": "PWM_3",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 286,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "3.3V",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 306,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "5V",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 326,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 346,
+      "y": 31,
+      "angle": 90
+    },
+    {
+      "name": "+5V",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "VCC"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 379,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "POWER",
+          "pintype": "GND"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 407.34,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "+12V",
+      "type": "WIRE",
+      "function": [
+        
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 435.68,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 464.02,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "POWER",
+      "type": "WIRE",
+      "function": [
+        
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 492.36,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "POWER",
+      "type": "WIRE",
+      "function": [
+        
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 520.7,
+      "y": 36,
+      "angle": 90
+    },
+    {
+      "name": "B-",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "RS_485_B",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 55,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "A+",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "RS_485_A",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 83.34,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "DIN1+",
+      "type": "WIRE",
+      "function": [
+
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 111.68,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "DIN1-",
+      "type": "WIRE",
+      "function": [
+
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 140.02,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "DIN2+",
+      "type": "WIRE",
+      "function": [
+
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 168.34,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "DIN2-",
+      "type": "WIRE",
+      "function": [
+
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 196.7,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "GND",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "RS_485_GND",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 225.04,
+      "y": 434,
+      "angle": 270
+    },
+    {
+      "name": "+12V",
+      "type": "WIRE",
+      "function": [
+        {
+          "type": "RS_485_12V",
+          "pintype": "INOUT"
+        }
+      ],
+      "v_min": 0.0,
+      "v_max": 0.0,
+      "x": 253.38,
+      "y": 434,
+      "angle": 270
     }
   ],
   "connectivity": [
     "I2C_1",
+    "SPI_1",
     "GPIO_2",
     "GPIO_4",
     "GPIO_16",
@@ -185,7 +526,23 @@
     "GPIO_32",
     "GPIO_34",
     "GPIO_35",
-    "KMM_RS_485_1"
+    "GPIO_25",
+    "GPIO_26",
+    "GPIO_14",
+    "GPIO_13",
+    "GPIO_12",
+    "ANALOG_1",
+    "ANALOG_2",
+    "ANALOG_3",
+    "ANALOG_4",
+    "ANALOG_5",
+    "PWM_1",
+    "PWM_2",
+    "PWM_3",
+    "RS_485_A",
+    "RS_485_B",
+    "RS_485_GND",
+    "RS_485_12V"
   ],
   "compatibility": [],
   "integrated_device": [
