@@ -82,6 +82,11 @@
       "library_dependency": []
     },
     {
+      "platform": "ARDUINO_ESP32",
+      "classname": "MP_BUTTON_AL",
+      "library_dependency": []
+    },
+    {
       "platform": "RASPBERRYPI",
       "classname": "MP_BUTTON_AL",
       "library_dependency": []
