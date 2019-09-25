@@ -5,8 +5,8 @@
     "url": "",
     "type": "CONTROLLER",
     "pio_boardid": "esp32dev",
-    "formfactor": "STANDALONE",
-    "wiring_method": "MP",
+    "formfactor": "BREAKOUT_BOARD_TWOSIDE",
+    "wiring_method": "WIRE_AND_BREADBOARD",
     "support_cloudplatform": [
       {
         "cloud_platform": "NETPIE",
