@@ -39,7 +39,7 @@
       "type": "INTERNAL",
       "function": [
         {
-          "type": "PWM_1",
+          "type": "PWM_4",
           "pintype": "INOUT"
         }
       ],
@@ -539,6 +539,7 @@
     "PWM_1",
     "PWM_2",
     "PWM_3",
+    "PWM_4",
     "RS_485_A",
     "RS_485_B",
     "RS_485_GND",
@@ -550,7 +551,7 @@
       "name": "Integrated OLED",
       "platforms": [
         {
-          "platform": "ARDUINO_ESP8266",
+          "platform": "ARDUINO_ESP32",
           "classname": "MP_OLED_SSD1306_128x64",
           "library_dependency": [
             "adafruit/Adafruit_SSD1306-1.2.9",
@@ -976,7 +977,7 @@
           "type": "INTERNAL",
           "function": [
             {
-              "type": "GPIO_2",
+              "type": "PWM_4",
               "pintype": "INOUT"
             }
           ],
@@ -987,7 +988,7 @@
         }
       ],
       "connectivity": [
-        "GPIO_2"
+        "PWM_4"
       ],
       "compatibility": [
         {
