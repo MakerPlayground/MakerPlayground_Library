@@ -302,7 +302,8 @@
         "Count",
         "Min",
         "Max",
-        "Text"
+        "Text",
+        "Intensity"
       ]
     },
     "units": {

@@ -171,8 +171,6 @@ connection_provide:
         ref_to: PC4
         function:
         - ANALOG_IN
-        - DIGITAL_IN
-        - DIGITAL_OUT
   - name: A5
     type: WIRE
     pins:
@@ -181,8 +179,6 @@ connection_provide:
         ref_to: PC5
         function:
         - ANALOG_IN
-        - DIGITAL_IN
-        - DIGITAL_OUT
 compatibility: []
 platforms:
 - platform: ARDUINO_AVR8

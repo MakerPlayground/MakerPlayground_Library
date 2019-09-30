@@ -22,6 +22,10 @@ private:
 	uint8_t out;
 	uint8_t LED;
 
+	int red = 0;
+	int green = 0;
+	int blue = 0;
+	
 	unsigned long next_reading = 0;
 
 	String current_color;

@@ -1,0 +1,61 @@
+id: Arduitronics-220
+brand: Arduitronics
+model: 4 digit display LED module clock for Arduino 0.36"
+url: https://www.arduitronics.com/product/220/seven-segment-4-digit-clock-display-0-36-inches-catalex
+type: MODULE
+width: 372
+height: 153
+pin_template: TM1637
+connection_consume:
+  - name: CLK
+    type: WIRE
+    pins:
+      - x: 321
+        y: 53.3
+        ref_to: CLK
+  - name: DIO
+    type: WIRE
+    pins:
+      - x: 321
+        y: 67.8
+        ref_to: DIO
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 321
+        y: 82.3
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 321
+        y: 96.8
+        ref_to: GND
+compatibility:
+  - name: 7 Segment
+    action:
+      - name: Show Number
+        parameter:
+          - name: Number
+            constraint:
+              min: -999
+              max: 9999
+              unit: NOT_SPECIFIED
+      - name: Show Two Numbers with Colon
+        parameter:
+          - name: Before colon
+            constraint:
+              min: -9
+              max: 99
+              unit: NOT_SPECIFIED
+          - name: After colon
+            constraint:
+              min: -9
+              max: 99
+              unit: NOT_SPECIFIED
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TM1637_DISPLAY
+    library_dependency:
+      - avishorp/TM1637

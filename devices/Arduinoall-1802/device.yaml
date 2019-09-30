@@ -1,0 +1,47 @@
+id: Arduinoall-1802
+brand: Arduinoall
+model: Soil Moisture Sensor Module
+url: https://www.arduinoall.com/product/1836/soil-moisture-sensor-v2-for-arduino-red-pcb-keys
+type: MODULE
+width: 124
+height: 320
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 48
+        y: 319
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 62
+        y: 319
+        ref_to: VCC
+  - name: SIG
+    type: WIRE
+    pins:
+      - x: 76
+        y: 319
+        ref_to: SIG
+compatibility:
+  - name: Soil Moisture
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SOIL_MOISTURE
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_SOIL_MOISTURE
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_SOIL_MOISTURE
+    library_dependency: []

@@ -1,0 +1,39 @@
+id: Arduinoall-1311
+brand: Arduinoall
+model: Vibration Motor Module (Catalex)
+url: https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-บอร์ดทดลองมอเตอร์สั่น
+type: MODULE
+width: 124
+height: 150
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 49
+        y: 150
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 61.1
+        y: 150
+        ref_to: VCC
+  - name: SIG
+    type: WIRE
+    pins:
+      - x: 73.1
+        y: 150
+        ref_to: SIG
+compatibility:
+  - name: Load Driver
+    action:
+      - name: 'On'
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LOAD_DRIVER
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_LOAD_DRIVER
+    library_dependency: []
