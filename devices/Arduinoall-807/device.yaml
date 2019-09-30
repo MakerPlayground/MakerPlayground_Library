@@ -1,0 +1,44 @@
+id: Arduinoall-807
+brand: Arduinoall
+model: Infrared IR Flame Detector Sensor Module
+url: https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-เซนเซอร์-ตรวจจับเปลวไฟด้วย-infrared
+type: MODULE
+width: 80
+height: 244
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 18.5
+        y: 244
+        ref_to: SIG
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 32.59
+        y: 244
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 60.7
+        y: 244
+        ref_to: VCC
+compatibility:
+  - name: Flame
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_FLYINGFISH_FLAME_DETECTOR
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_FLYINGFISH_FLAME_DETECTOR
+    library_dependency: []

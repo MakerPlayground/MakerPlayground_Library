@@ -1,0 +1,44 @@
+id: Arduinoall-1015
+brand: Arduinoall
+model: Active Buzzer DC 1.5V-12V
+url: https://www.arduinoall.com/product/1015/active-buzzer-dc-1-5v-12v-buzzer
+type: MODULE
+width: 158
+height: 155
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 85.742
+        y: 151.8
+        ref_to: SIG
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 71.279
+        y: 151.8
+        ref_to: GND
+compatibility:
+  - name: Buzzer
+    action:
+      - name: Play Tone
+        parameter:
+          - name: Tone Frequency
+            constraint:
+              min: 0
+              max: 20000
+              unit: HERTZ
+          - name: Duration
+            constraint:
+              min: 0
+              max: 1000
+              unit: SECOND
+      - name: Beep
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUZZER
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_BUZZER
+    library_dependency: []

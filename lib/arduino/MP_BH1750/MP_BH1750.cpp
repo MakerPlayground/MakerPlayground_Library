@@ -46,3 +46,8 @@ double MP_BH1750::getPercent()
 {
 	return percent;
 }
+
+double MP_BH1750::getIntensity()
+{
+	return lux;
+}

@@ -17,6 +17,7 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
   
@@ -25,6 +26,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
       - SCK
     voltage_level: LEVEL_3v3
@@ -34,6 +37,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
       - MISO
     voltage_level: LEVEL_3v3
@@ -43,6 +48,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
       - MOSI
     voltage_level: LEVEL_3v3
@@ -97,6 +104,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -105,6 +114,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -113,6 +124,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -121,6 +134,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -129,6 +144,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -137,6 +154,9 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - HW_SERIAL_RX
       - PWM_OUT
     voltage_level: LEVEL_3v3
 
@@ -145,5 +165,8 @@ pins:
     pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - HW_SERIAL_TX
       - PWM_OUT
     voltage_level: LEVEL_3v3

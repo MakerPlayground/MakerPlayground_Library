@@ -34,9 +34,6 @@ int MP_TCS3200::init()
 void MP_TCS3200::update(unsigned long current_time)
 {
 	if (next_reading <= current_time) {
-		int red = 0;
-		int green = 0;
-		int blue = 0;
 		digitalWrite(LED,1);
 		digitalWrite(s2, LOW);
 		digitalWrite(s3, LOW);

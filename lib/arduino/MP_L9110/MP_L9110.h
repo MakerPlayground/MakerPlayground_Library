@@ -13,9 +13,7 @@ public:
 	void printStatus();
 
 	void on(char dir[], int speed);
-	void off();
-	//void reverse();                   //not implemented
-	//void set_speed(uint8_t speed);    //not implemented
+	void off();   //not implemented
 
 private:
 	uint8_t inA;

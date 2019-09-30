@@ -1,0 +1,60 @@
+id: Arduinoall-1640
+brand: Arduinoall
+model: GPS Module with Antenna (GPS ATGM336H)
+url: https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-โมดูล-gps-atgm336h-พร้อมสายอากาศ
+type: MODULE
+width: 74
+height: 110
+pin_template: GENERIC_SOFTSERIAL_3v3_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 7.5
+        y: 110
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 21.8
+        y: 110
+        ref_to: GND
+  - name: TX
+    type: WIRE
+    pins:
+      - x: 36
+        y: 110
+        ref_to: TX
+  - name: RX
+    type: WIRE
+    pins:
+      - x: 50.4
+        y: 110
+        ref_to: RX
+compatibility:
+  - name: GPS
+    condition:
+      - name: Compare
+      - name: Data is valid
+      - name: Data is not valid
+    value:
+      - name: Latitude
+        constraint:
+          min: -90
+          max: 90
+          unit: DEGREE
+      - name: Longitude
+        constraint:
+          min: -180
+          max: 180
+          unit: DEGREE
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TINY_GPS
+    library_dependency:
+      - mikalhart/TinyGPSPlus-1.0.2
+  - platform: ARDUINO_ESP8266
+    classname: MP_TINY_GPS
+    library_dependency:
+      - plerup/espsoftwareserial-3.4.2
+      - mikalhart/TinyGPSPlus-1.0.2

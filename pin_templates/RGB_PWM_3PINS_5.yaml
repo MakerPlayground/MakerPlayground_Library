@@ -1,0 +1,20 @@
+pins:
+- pin_name: R
+  pin_function: PWM_IN
+  voltage_level: LEVEL_5
+
+- pin_name: G
+  pin_function: PWM_IN
+  voltage_level: LEVEL_5
+
+- pin_name: B
+  pin_function: PWM_IN
+  voltage_level: LEVEL_5
+
+- pin_name: GND
+  pin_function: GND
+  voltage_level: LEVEL_5
+
+- pin_name: VCC
+  pin_function: VCC
+  voltage_level: LEVEL_5
