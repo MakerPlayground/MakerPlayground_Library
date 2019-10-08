@@ -21,8 +21,10 @@ void analogWrite(uint8_t pin, uint16_t value)
 {
     // do nothing if channel can't be found
     uint8_t channel = getChannel(pin);
-    if (channel == channelCount)
+    if (channel == channelCount) {
+        digitalWrite(pin, (value > 127 ? HIGH : LOW));
         return;
+    }
 
     if (value == 0 || value == 255)
     {
