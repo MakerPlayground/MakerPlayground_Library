@@ -1,0 +1,81 @@
+id: MP-0008
+brand: Maker Playground
+model: Accelerometer/Gyroscope
+url: ''
+type: MODULE
+width: 124
+height: 108
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 79
+        y: 109
+        ref_to: GND
+      - x: 68
+        y: 109
+        ref_to: VCC
+      - x: 57
+        y: 109
+        ref_to: SDA
+      - x: 46
+        y: 109
+        ref_to: SCL
+compatibility:
+- name: Accelerometer
+  condition:
+    - name: Compare
+  value:
+    - name: Accel_X
+      constraint:
+        min: -100.0
+        max: 100.0
+        unit: METERPERSECSQUARE
+    - name: Accel_Y
+      constraint:
+        min: -100.0
+        max: 100.0
+        unit: METERPERSECSQUARE
+    - name: Accel_Z
+      constraint:
+        min: -100.0
+        max: 100.0
+        unit: METERPERSECSQUARE
+    - name: Accel_Magnitude
+      constraint:
+        min: 0.0
+        max: 100.0
+        unit: METERPERSECSQUARE
+- name: Gyroscope
+  condition:
+    - name: Compare
+  value:
+    - name: Gyro_X
+      constraint:
+        min: -200.0
+        max: 200.0
+        unit: RADIUSPERSEC
+    - name: Gyro_Y
+      constraint:
+        min: -200.0
+        max: 200.0
+        unit: RADIUSPERSEC
+    - name: Gyro_Z
+      constraint:
+        min: -200.0
+        max: 200.0
+        unit: RADIUSPERSEC
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LSM6DS3
+    library_dependency:
+      - SparkFun/SparkFun_LSM6DS3_Arduino_Library
+  - platform: ARDUINO_ESP8266
+    classname: MP_LSM6DS3
+    library_dependency:
+      - SparkFun/SparkFun_LSM6DS3_Arduino_Library
+  - platform: ARDUINO_ESP32
+    classname: MP_LSM6DS3
+    library_dependency:
+      - SparkFun/SparkFun_LSM6DS3_Arduino_Library
