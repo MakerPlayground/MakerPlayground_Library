@@ -1,0 +1,39 @@
+id: MP-0013
+brand: Maker Playground
+model: Relay
+url: ''
+type: MODULE
+width: 108
+height: 246
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 37
+        y: 230
+        ref_to: GND
+      - x: 48
+        y: 230
+        ref_to: VCC
+      - x: 59
+        y: 230
+        ref_to: NC
+      - x: 70
+        y: 230
+        ref_to: SIG
+compatibility:
+  - name: Relay Module
+    action:
+      - name: 'On'
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_RELAY
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_RELAY
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_RELAY
+    library_dependency: []

@@ -1,0 +1,56 @@
+id: MP-0009
+brand: Maker Playground
+model: Temperature/Humidity
+url: ''
+type: MODULE
+width: 124
+height: 108
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 79
+        y: 109
+        ref_to: GND
+      - x: 68
+        y: 109
+        ref_to: VCC
+      - x: 57
+        y: 109
+        ref_to: SDA
+      - x: 46
+        y: 109
+        ref_to: SCL
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: 0.0
+          max: 65.0
+          unit: CELSIUS
+  - name: Humidity
+    condition:
+      - name: Compare
+    value:
+      - name: Humidity
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SHT
+    library_dependency:
+      - Sensirion/arduino-sht
+  - platform: ARDUINO_ESP8266
+    classname: MP_SHT
+    library_dependency:
+      - Sensirion/arduino-sht
+  - platform: ARDUINO_ESP32
+    classname: MP_SHT
+    library_dependency:
+      - Sensirion/arduino-sht

@@ -62,30 +62,40 @@ pins:
 - pin_name: PC0
   coding_name: A0
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PC1
   coding_name: A1
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PC2
   coding_name: A2
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PC3
   coding_name: A3
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PC4
   coding_name: A4
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
     - SDA
   voltage_level: LEVEL_5
@@ -93,6 +103,8 @@ pins:
 - pin_name: PC5
   coding_name: A5
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
     - SCL
   voltage_level: LEVEL_5
