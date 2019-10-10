@@ -959,6 +959,16 @@
         false
       ]
     },
+    "breadboard_placement": {
+      "$id": "#/properties/breadboard_placement",
+      "title": "breadboard_placement",
+      "type": "string",
+      "description": "Indicate whether device should be placed on one or both sides of the breadboard.",
+      "enum": [
+        "ONE_SIDE",
+        "TWO_SIDES"
+      ]
+    },
     "pio_boardid": {
       "$id": "#/properties/pio_boardid",
       "type": "string",
