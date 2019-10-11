@@ -23,8 +23,8 @@
         ]
       },
       {
-        "cloud_platform": "AZURE",
-        "classname": "MP_AZURE_ESP",
+        "cloud_platform": "REST",
+        "classname": "MP_REST_ESP",
         "library_dependency": []
       }
     ],
@@ -612,7 +612,64 @@
       "ANALOG_16"
     ],
     "compatibility": [],
-    "integrated_device": [],
+    "integrated_device": [
+      {
+        "name": "Integrated LED",
+        "platforms": [
+          {
+            "platform": "ARDUINO_ESP32",
+            "classname": "MP_LED_AH",
+            "library_dependency": []
+          }
+        ],
+        "port": [
+          {
+            "name": "Port",
+            "type": "INTERNAL",
+            "function": [
+              {
+                "type": "PWM_12",
+                "pintype": "INOUT"
+              }
+            ],
+            "v_min": 0.0,
+            "v_max": 0.0,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "connectivity": [
+          "PWM_12"
+        ],
+        "compatibility": [
+          {
+            "name": "LED",
+            "action": [
+              {
+                "name": "On",
+                "parameter": [
+                  {
+                    "name": "Brightness",
+                    "value": 100.0,
+                    "constraint": {
+                      "min": 0.0,
+                      "max": 100.0,
+                      "unit": "PERCENT"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Off",
+                "parameter": []
+              }
+            ],
+            "condition": [],
+            "value": []
+          }
+        ]
+      }
+    ],
     "platforms": [
       {
         "platform": "ARDUINO_ESP32",
