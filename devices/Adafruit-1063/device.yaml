@@ -5,6 +5,8 @@ url: https://www.adafruit.com/product/1063
 type: MODULE
 width: 80.0
 height: 123.0
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
   - name: OUT

@@ -6,30 +6,31 @@ type: MODULE
 width: 173
 height: 108
 need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
 - name: SCL
   type: WIRE
   pins:
-    - x: 29
+    - x: 28.8
       y: 99
       ref_to: SCL
 - name: SDA
   type: WIRE
   pins:
-    - x: 43.4
+    - x: 43.2
       y: 99
       ref_to: SDA
 - name: GND
   type: WIRE
   pins:
     - ref_to: GND
-      x: 115.4
+      x: 115.2
       y: 99
 - name: VIN
   type: WIRE
   pins:
-    - x: 144.2
+    - x: 144.0
       y: 99
       ref_to: VCC
 compatibility:

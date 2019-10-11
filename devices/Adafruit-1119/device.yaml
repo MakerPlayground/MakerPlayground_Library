@@ -3,27 +3,29 @@ brand: Adafruit
 model: Tactile Switch Button
 url: https://www.adafruit.com/product/1119
 type: MODULE
-width: 119.0
-height: 82.0
+width: 73.0
+height: 145.0
+need_breadboard: true
+breadboard_placement: TWO_SIDES
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
   - name: S1A
     type: WIRE
     pins:
-      - x: 31.785
-        y: 42.489
+      - x: 36.8
+        y: 95.2
         ref_to: SIG
   - name: S1B
     type: WIRE
     pins:
-      - x: 2.984
-        y: 0.002
+      - x: 8
+        y: 52
         ref_to: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 117.42
-        y: 60.299
+      - x: 65.6
+        y: 95.2
         ref_to: VCC
 compatibility:
   - name: Button
