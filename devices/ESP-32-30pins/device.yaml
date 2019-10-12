@@ -16,6 +16,8 @@ support_cloudplatform:
 - cloud_platform: AZURE
   classname: MP_AZURE_ESP
   library_dependency: []
+need_breadboard: true
+breadboard_placement: TWO_SIDES
 pin_template: ESP_32
 width: 291
 height: 159

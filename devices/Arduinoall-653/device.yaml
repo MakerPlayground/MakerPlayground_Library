@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/653/dht11-digital-temperature-and-humidi
 type: MODULE
 width: 68
 height: 159
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
   - name: VIN
