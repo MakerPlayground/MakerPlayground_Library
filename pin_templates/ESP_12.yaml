@@ -4,6 +4,7 @@ pins:
     pin_function: []
   
   - pin_name: ADC
+    coding_name: A0
     voltage_level: LEVEL_1
     pin_function:
       - ANALOG_IN
@@ -137,6 +138,7 @@ pins:
       - SW_SERIAL_RX
       - SW_SERIAL_TX
       - PWM_OUT
+      - SDA
     voltage_level: LEVEL_3v3
 
   - pin_name: IO5
@@ -147,6 +149,7 @@ pins:
       - SW_SERIAL_RX
       - SW_SERIAL_TX
       - PWM_OUT
+      - SCL
     voltage_level: LEVEL_3v3
 
   - pin_name: RXD
