@@ -5,7 +5,9 @@ url: https://www.arduinoall.com/product/261/%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B9%80
 type: MODULE
 width: 114
 height: 182
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_ANALOG_SENSOR_5
 connection_consume:
   - name: VCC
     type: WIRE

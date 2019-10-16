@@ -3,33 +3,35 @@ brand: Arduitronics
 model: 4 digit display LED module clock for Arduino 0.36"
 url: https://www.arduitronics.com/product/220/seven-segment-4-digit-clock-display-0-36-inches-catalex
 type: MODULE
-width: 372
-height: 153
+width: 153
+height: 372
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: TM1637
 connection_consume:
   - name: CLK
     type: WIRE
     pins:
-      - x: 321
-        y: 53.3
+      - x: 99.5
+        y: 321
         ref_to: CLK
   - name: DIO
     type: WIRE
     pins:
-      - x: 321
-        y: 67.8
+      - x: 85.1
+        y: 321
         ref_to: DIO
   - name: VCC
     type: WIRE
     pins:
-      - x: 321
-        y: 82.3
+      - x: 70.7
+        y: 321
         ref_to: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 321
-        y: 96.8
+      - x: 56.3
+        y: 321
         ref_to: GND
 compatibility:
   - name: 7 Segment

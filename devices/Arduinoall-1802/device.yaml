@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/1836/soil-moisture-sensor-v2-for-arduino
 type: MODULE
 width: 124
 height: 320
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
   - name: GND
@@ -16,13 +18,13 @@ connection_consume:
   - name: VCC
     type: WIRE
     pins:
-      - x: 62
+      - x: 62.4
         y: 319
         ref_to: VCC
   - name: SIG
     type: WIRE
     pins:
-      - x: 76
+      - x: 76.8
         y: 319
         ref_to: SIG
 compatibility:

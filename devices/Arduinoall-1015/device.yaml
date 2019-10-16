@@ -5,12 +5,14 @@ url: https://www.arduinoall.com/product/1015/active-buzzer-dc-1-5v-12v-buzzer
 type: MODULE
 width: 158
 height: 155
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
   - name: VCC
     type: WIRE
     pins:
-      - x: 85.742
+      - x: 85.679
         y: 151.8
         ref_to: SIG
   - name: GND

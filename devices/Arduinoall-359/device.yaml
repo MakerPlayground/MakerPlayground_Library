@@ -5,12 +5,14 @@ url: https://www.arduinoall.com/product/366/oled-lcd-led-display-module-128x64-0
 type: MODULE
 width: 154
 height: 154
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
   - name: VCC
     type: WIRE
     pins:
-      - x: 97
+      - x: 96.8
         y: 144.4
         ref_to: VCC
   - name: GND

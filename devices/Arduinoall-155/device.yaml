@@ -6,6 +6,9 @@ type: MODULE
 formfactor: STANDALONE
 width: 198
 height: 198
+## Cannot align on breadboard because the pin distance
+# need_breadboard: true
+# breadboard_placement: TWO_SIDE
 pin_template: TCS3200
 connection_consume:
   - name: VIN

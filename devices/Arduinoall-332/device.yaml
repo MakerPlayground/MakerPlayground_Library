@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/332/rgb-3-color-full-color-ky-016-led-mo
 type: MODULE
 width: 86
 height: 107
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: RGB_PWM_3PINS_5
 connection_consume:
   - name: R
@@ -64,6 +66,6 @@ platforms:
   - platform: ARDUINO_ESP8266
     classname: MP_RGB_LED_CC
     library_dependency: []
-  - platform: ARDUINO_AVR8
+  - platform: ARDUINO_ESP32
     classname: MP_RGB_LED_CC
     library_dependency: []

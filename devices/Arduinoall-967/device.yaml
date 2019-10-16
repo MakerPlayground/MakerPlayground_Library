@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/967/rgb-led-10mm-module-%E0%B9%82%E0%B8%
 type: MODULE
 width: 86
 height: 107
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: RGB_PWM_3PINS_5
 connection_consume:
   - name: R
@@ -28,7 +30,7 @@ connection_consume:
   - name: V
     type: WIRE
     pins:
-      - x: 20.743
+      - x: 20.744
         y: 90.968
         ref_to: VCC
 compatibility:

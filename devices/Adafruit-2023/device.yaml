@@ -5,6 +5,8 @@ url: https://www.adafruit.com/product/2023
 type: MODULE
 width: 116.0
 height: 116.0
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
   - name: VCC

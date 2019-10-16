@@ -5,24 +5,26 @@ url: https://www.arduinoall.com/product/825/dht22-am2302-module-%E0%B9%82%E0%B8%
 type: MODULE
 width: 77
 height: 226
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
   - name: +
     type: WIRE
     pins:
-      - x: 26
+      - x: 26.4
         y: 224
         ref_to: VCC
   - name: out
     type: WIRE
     pins:
-      - x: 40
+      - x: 40.8
         y: 224
         ref_to: SIG
   - name: "-"
     type: WIRE
     pins:
-      - x: 55
+      - x: 55.2
         y: 224
         ref_to: GND
 compatibility:
