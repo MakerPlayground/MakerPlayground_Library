@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/377/%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9
 type: MODULE
 width: 113.378
 height: 351.498
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
   - name: GND

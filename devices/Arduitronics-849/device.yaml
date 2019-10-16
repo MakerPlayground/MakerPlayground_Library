@@ -13,6 +13,8 @@ property:
     constraint:
       - 'true'
       - 'false'
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
   - name: SDA
@@ -24,19 +26,19 @@ connection_consume:
   - name: SCL
     type: WIRE
     pins:
-      - x: 41
+      - x: 40.4
         y: 98
         ref_to: SCL
   - name: GND
     type: WIRE
     pins:
-      - x: 55
+      - x: 54.8
         y: 98
         ref_to: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 69
+      - x: 69.2
         y: 98
         ref_to: VCC
 compatibility:

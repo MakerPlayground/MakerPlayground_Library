@@ -5,6 +5,8 @@ url: https://www.adafruit.com/products/2652
 type: MODULE
 width: 100.8
 height: 108.0
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
   - name: VIN

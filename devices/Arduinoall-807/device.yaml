@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-mo
 type: MODULE
 width: 80
 height: 244
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
   - name: A0
@@ -16,13 +18,13 @@ connection_consume:
   - name: GND
     type: WIRE
     pins:
-      - x: 32.59
+      - x: 32.9
         y: 244
         ref_to: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 60.7
+      - x: 61.7
         y: 244
         ref_to: VCC
 compatibility:

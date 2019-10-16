@@ -5,6 +5,9 @@ url: https://www.arduinoall.com/product/899/micro-pir-human-body-sensing-module-
 type: MODULE
 width: 46
 height: 92
+## Pin distance is not 14.4 pixels
+# need_breadboard: true
+# breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
   - name: VCC

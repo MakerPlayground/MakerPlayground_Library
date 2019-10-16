@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/222/module-mq-2-fc-22-smoke-gas-sensor-m
 type: MODULE
 width: 114
 height: 182
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ANALOG_SENSOR_5
 connection_consume:
   - name: VCC

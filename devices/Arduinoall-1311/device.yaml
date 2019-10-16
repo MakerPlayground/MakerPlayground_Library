@@ -5,6 +5,9 @@ url: https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-à¸šà
 type: MODULE
 width: 124
 height: 150
+## pin distance is not 14.4 pixel
+# need_breadboard: true
+# breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
   - name: GND

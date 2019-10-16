@@ -24,7 +24,7 @@ connection_consume:
   - name: GND
     type: WIRE
     pins:
-      - x: 54.4
+      - x: 44.4
         y: 302.0
         ref_to: GND
 compatibility:

@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/2483/rcw-0001-%E0%B9%82%E0%B8%A1%E0%B8%9
 type: MODULE
 width: 256
 height: 132
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_ULTRASONIC_3v3_5
 connection_consume:
   - name: VIN
@@ -16,19 +18,19 @@ connection_consume:
   - name: TRIG
     type: WIRE
     pins:
-      - x: 120
+      - x: 120.054
         y: 132
         ref_to: TRIG
   - name: ECHO
     type: WIRE
     pins:
-      - x: 134.23
+      - x: 134.454
         y: 132
         ref_to: ECHO
   - name: GND
     type: WIRE
     pins:
-      - x: 148.568
+      - x: 148.854
         y: 132
         ref_to: GND
 compatibility:

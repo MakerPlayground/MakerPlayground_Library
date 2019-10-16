@@ -5,6 +5,8 @@ url: https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenn
 type: MODULE
 width: 74
 height: 110
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
   - name: VCC
@@ -16,19 +18,19 @@ connection_consume:
   - name: GND
     type: WIRE
     pins:
-      - x: 21.8
+      - x: 21.9
         y: 110
         ref_to: GND
   - name: TX
     type: WIRE
     pins:
-      - x: 36
+      - x: 35.3
         y: 110
         ref_to: TX
   - name: RX
     type: WIRE
     pins:
-      - x: 50.4
+      - x: 49.7
         y: 110
         ref_to: RX
 compatibility:

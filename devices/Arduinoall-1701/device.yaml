@@ -3,27 +3,29 @@ brand: Arduinoall
 model: Infrared Barrier tracking avoidance Obstacle Sensor Module
 url: https://www.arduinoall.com/product/1701/infrared-barrier-tracking-avoidance-obstacle-sensor-module-%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%81%E0%B8%B5%E0%B8%94%E0%B8%82%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%9F%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%94
 type: MODULE
-width: 205
-height: 80
+width: 80
+height: 205
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
   - name: OUT
     type: WIRE
     pins:
-      - x: 194
-        y: 54.4
+      - x: 25.3
+        y: 194
         ref_to: SIG
   - name: GND
     type: WIRE
     pins:
-      - x: 194
-        y: 40
+      - x: 39.7
+        y: 194
         ref_to: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 194
-        y: 25.6
+      - x: 54.1
+        y: 194
         ref_to: VCC
 compatibility:
   - name: Presence

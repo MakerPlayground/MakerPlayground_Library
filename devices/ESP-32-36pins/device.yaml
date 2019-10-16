@@ -1,6 +1,6 @@
 id: ESP-32-30pins
 brand: Espressif
-model: DOIT Esp32 DevKit v1 (30 GPIOs)
+model: DOIT Esp32 DevKit v1 (36 GPIOs)
 url: ''
 type: CONTROLLER
 pio_boardid: esp32dev
