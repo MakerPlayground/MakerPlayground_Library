@@ -1,0 +1,368 @@
+id: INEX-IPST-WIFI
+brand: INEX
+model: IPST Wifi
+url: ""
+type: CONTROLLER
+pio_boardid: esp32dev
+width: 316
+height: 522
+pin_template: ESP_32
+cloud_provide:
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_ESP
+    library_dependency:
+    - lamloei/ESP32_Microgear
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_NODEMCU
+    library_dependency:
+    - blynkkk/blynk-library
+  - cloud_platform: AZURE
+    classname: MP_AZURE_ESP
+    library_dependency: []
+connection_provide:
+  - name: I2C bus
+    type: GROVE
+    pins: 
+      - x: 98
+        y: 523
+        ref_to: GND
+      - x: 87
+        y: 523
+        ref_to: VCC
+      - x: 76
+        y: 523
+        ref_to: "21"
+      - x: 65
+        y: 523
+        ref_to: "22"
+  - name: "19"
+    type: INEX3
+    pins:
+      - x: 127
+        y: 523
+        ref_to: GND
+      - x: 139
+        y: 523
+        ref_to: "19"
+      - x: 153
+        y: 523
+        ref_to: VCC
+  - name: "23"
+    type: INEX3
+    pins:
+      - x: 181
+        y: 523
+        ref_to: GND
+      - x: 193
+        y: 523
+        ref_to: "23"
+      - x: 205
+        y: 523
+        ref_to: VCC
+  - name: "5"
+    type: INEX3
+    pins:
+      - x: 127
+        y: 479
+        ref_to: GND
+      - x: 139
+        y: 479
+        ref_to: "5"
+      - x: 153
+        y: 479
+        ref_to: VCC
+  - name: ADC6
+    type: INEX3
+    pins:
+      - x: 201
+        y: 51
+        ref_to: GND
+      - x: 189
+        y: 51
+        ref_to: "34"
+      - x: 177
+        y: 51
+        ref_to: VCC
+  - name: ADC7
+    type: INEX3
+    pins:
+      - x: 255
+        y: 51
+        ref_to: GND
+      - x: 243
+        y: 51
+        ref_to: "35"
+      - x: 231
+        y: 51
+        ref_to: VCC
+  - name: ADC5
+    type: INEX3
+    pins:
+      - x: 201
+        y: 96
+        ref_to: GND
+      - x: 189
+        y: 96
+        ref_to: "33"
+      - x: 177
+        y: 96
+        ref_to: VCC
+  - name: ADC4
+    type: INEX3
+    pins:
+      - x: 255
+        y: 96
+        ref_to: GND
+      - x: 243
+        y: 96
+        ref_to: "32"
+      - x: 231
+        y: 96
+        ref_to: VCC
+  - name: DAC1
+    type: INEX3
+    pins:
+      - x: 309
+        y: 96
+        ref_to: GND
+      - x: 297
+        y: 96
+        ref_to: "26"
+      - x: 285
+        y: 96
+        ref_to: VCC
+  - name: "+"
+    type: WIRE
+    pins:
+      - x: 13
+        y: 361
+        ref_to: VCC
+  - name: C
+    type: WIRE
+    pins:
+      - x: 13
+        y: 375.4
+        ref_to: "22"
+  - name: D
+    type: WIRE
+    pins:
+      - x: 13
+        y: 389.8
+        ref_to: "21"
+  - name: "-"
+    type: WIRE
+    pins:
+      - x: 13
+        y: 344.2
+        ref_to: GND
+integrated_devices:
+  - name: Integrated RGB LED
+    property:
+      - name: Led Count
+        datatype: INTEGER
+        controltype: SPINBOX
+        value: 3
+        constraint:
+          min: 1
+          max: 10000
+          unit: NOT_SPECIFIED
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_WS281X_STRIP
+        library_dependency:
+          - "adafruit/Adafruit_NeoPixel-1.1.8"
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: SIG
+        host_ref_to: "12"
+      - ref_to: VCC
+        host_ref_to: VCC
+    compatibility:
+      - name: RGB LED Strip
+        action:
+          - name: Set Color
+            parameter:
+              - name: Index
+              - name: Red
+              - name: Green
+              - name: Blue
+          - name: Fill Color
+            parameter:
+              - name: Start Index
+              - name: End Index
+              - name: Red
+              - name: Green
+              - name: Blue
+          - name: Set Brightness
+            parameter:
+              - name: Brightness
+          - name: Clear
+            parameter: []
+  - name: Integrated OLED
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: "21"
+      - ref_to: SCL
+        host_ref_to: "22"
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  max: 10
+                  min: 1
+                  unit: NOT_SPECIFIED
+              - name: Text
+              - name: Size
+                constraint:
+                  - 1x
+                  - 2x
+                  - 3x
+              - name: Align
+                value: Left
+                constraint:
+                  - Left
+                  - Center
+                  - Right
+              - name: Color
+                constraint:
+                  - Blue
+                  - Cyan
+                  - Dark Cyan
+                  - Dark Green
+                  - Dark Grey
+                  - Green
+                  - Green Yellow
+                  - Light Grey
+                  - Magenta
+                  - Maroon
+                  - Navy
+                  - Olive
+                  - Orange
+                  - Pink
+                  - Purple
+                  - White
+                  - Red
+                  - Yellow
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_OLED_SSD1306_128x64
+        library_dependency:
+          - "adafruit/Adafruit_SSD1306-1.2.9"
+          - "adafruit/Adafruit-GFX-Library-1.5.2"
+  - name: Integrated Buzzer
+    pin_template: GENERIC_PWM_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "25"
+    compatibility:
+      - name: Buzzer
+        action:
+          - name: Play Tone
+            parameter:
+              - name: Tone Frequency
+                constraint:
+                  max: 20000.0
+                  min: 0.0
+                  unit: HERTZ
+              - name: Duration
+                constraint:
+                  max: 1000.0
+                  min: 0.0
+                  unit: SECOND
+          - name: Beep
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUZZER
+        library_dependency: []
+  - name: Integrated VR
+    pin_template: GENERIC_ANALOG_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "36"
+    compatibility:
+      - name: POT
+        condition:
+          - name: Compare
+        value:
+          - name: Percent
+            constraint:
+              max: 100.0
+              min: 0.0
+              unit: PERCENT
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_TRIMPOT
+        library_dependency: []
+  - name: Integrated Button
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "0"
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press
+          - name: Press and release
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated LED
+    pin_template: GENERIC_PWM_ACTUATOR_3v3_5
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "18"
+    compatibility:
+      - name: LED
+        action:
+          - name: 'On'
+            parameter:
+              - name: Brightness
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: 'Off'
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LED_AH
+        library_dependency: []
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: ""
+    library_dependency: []
