@@ -1,0 +1,47 @@
+id: Sparkfun-COM-09590
+brand: Sparkfun
+model: LED - Basic Red 5mm
+url: https://www.sparkfun.com/products/9590
+type: MODULE
+width: 66
+height: 159
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_PWM_ACTUATOR_3v3_5
+connection_consume:
+  - name: V+
+    type: WIRE
+    pins:
+      - x: 15.0
+        y: 110.0
+        ref_to: SIG
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 58.2
+        y: 153.2
+        ref_to: GND
+compatibility:
+  - name: LED
+    action:
+      - name: 'On'
+        parameter:
+          - name: Brightness
+            constraint:
+              min: 0.0
+              max: 100.0
+              unit: PERCENT
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_LED_AH
+    library_dependency: []
