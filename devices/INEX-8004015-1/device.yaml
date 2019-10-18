@@ -1,0 +1,41 @@
+id: INEX-8004015-1
+brand: INEX
+model: ZX-Switch01
+url: https://inex.co.th/shop/zx-switch01.html
+type: MODULE
+width: 94
+height: 166
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: INEX3
+    pins:
+      - x: 54
+        y: 160.488
+        ref_to: GND
+      - x: 47
+        y: 160.488
+        ref_to: SIG
+      - x: 39
+        y: 160.488
+        ref_to: VCC
+compatibility:
+- name: Button
+  condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+  value: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_BUTTON_AL
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BUTTON_AL
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BUTTON_AL
+  library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_BUTTON_AL
+  library_dependency: []
