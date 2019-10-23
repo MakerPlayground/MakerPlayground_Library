@@ -1,0 +1,44 @@
+id: MP-0014
+brand: Maker Playground
+model: Soil-Moisture Sensor
+url: ''
+type: MODULE
+width: 124
+height: 330
+pin_template: MP_SOIL
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 42
+        y: 323
+        ref_to: GND
+      - x: 55
+        y: 323
+        ref_to: VCC
+      - x: 68
+        y: 323
+        ref_to: EN
+      - x: 81
+        y: 323
+        ref_to: SIG
+compatibility:
+  - name: Soil Moisture
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SOIL_MOISTURE_W_EN
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_SOIL_MOISTURE_W_EN
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_SOIL_MOISTURE_W_EN
+    library_dependency: []

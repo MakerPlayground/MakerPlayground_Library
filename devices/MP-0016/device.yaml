@@ -1,0 +1,42 @@
+id: MP-0016
+brand: Maker Playground
+model: SG90 Servo Motor
+url: https://www.arduitronics.com/product/283/tower-pro-sg90-mini-micro-servo
+type: MODULE
+width: 188
+height: 182
+pin_template: GENERIC_PWM_ACTUATOR_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 45
+        y: 164
+        ref_to: GND
+      - x: 50
+        y: 164
+        ref_to: VCC
+      - x: 55
+        y: 164
+        ref_to: NC
+      - x: 60
+        y: 164
+        ref_to: SIG
+compatibility:
+  - name: Servo
+    action:
+      - name: Move To
+        parameter:
+          - name: Degree
+            constraint:
+              min: 0
+              max: 180
+              unit: DEGREE
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SERVO
+    library_dependency:
+      - arduino-libraries/Servo-1.1.3
+  - platform: ARDUINO_ESP8266
+    classname: MP_SERVO
+    library_dependency: []

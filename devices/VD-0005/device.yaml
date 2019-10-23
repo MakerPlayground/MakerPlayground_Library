@@ -1,0 +1,45 @@
+id: VD-0005
+brand: Blynk
+model: Virtual Slider
+url: ""
+type: VIRTUAL
+cloud_consume: BLYNK
+width: 0
+height: 0
+pin_template: NO_PIN
+property:
+  - name: virtual pin
+    datatype: INTEGER_ENUM
+    controltype: DROPDOWN
+    value: 0
+    constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+compatibility:
+  - name: Virtual Gauge
+    action:
+      - name: Display number
+        parameter:
+          - name: Value
+            value: 0.0
+            constraint:
+              min: -99999999.0
+              max: 99999999.0
+              unit: NOT_SPECIFIED
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BLYNK_VIRTUAL_BUTTON
+    library_dependency: []  
+  - platform: ARDUINO_ESP8266
+    classname: MP_BLYNK_VIRTUAL_BUTTON
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BLYNK_VIRTUAL_BUTTON
+    library_dependency: []
+    

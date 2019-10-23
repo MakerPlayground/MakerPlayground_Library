@@ -10,15 +10,13 @@ int MP_SOIL_MOISTURE_W_EN::init()
 {
 	pinMode(data, INPUT);
 	pinMode(en, OUTPUT);
+	digitalWrite(en, HIGH);
 	return ERR_OK;
 }
 
 void MP_SOIL_MOISTURE_W_EN::update(unsigned long current_time)
 {
-	digitalWrite(en, HIGH);
-	delay(5);
 	this->value = (analogRead(data) / 1023.0) * 100.0;
-	digitalWrite(en, LOW);
 }
 
 void MP_SOIL_MOISTURE_W_EN::printStatus()

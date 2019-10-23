@@ -4,7 +4,6 @@ model: UNO REV3
 url: https://store.arduino.cc/usa/arduino-uno-rev3
 type: CONTROLLER
 pio_boardid: uno
-support_cloudplatform: []
 width: 425
 height: 303
 property: []

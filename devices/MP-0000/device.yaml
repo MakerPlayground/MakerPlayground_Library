@@ -4,12 +4,12 @@ model: BaseBoard
 url: ''
 type: CONTROLLER
 pio_boardid: ATmega328PB
-support_cloudplatform:
-- cloud_platform: BLYNK
-  classname: MP_BLYNK_SERIAL1_WIFI
-  library_dependency:
-  - blynkkk/blynk-library
-  - vshymanskyy/BlynkESP8266
+cloud_provide:
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_SERIAL1_WIFI
+    library_dependency:
+    - blynkkk/blynk-library
+    - vshymanskyy/BlynkESP8266
 width: 392
 height: 346
 property: []
