@@ -34,12 +34,12 @@ compatibility:
               unit: NOT_SPECIFIED
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_BLYNK_VIRTUAL_BUTTON
+    classname: MP_BLYNK_VIRTUAL_GAUGE
     library_dependency: []  
   - platform: ARDUINO_ESP8266
-    classname: MP_BLYNK_VIRTUAL_BUTTON
+    classname: MP_BLYNK_VIRTUAL_GAUGE
     library_dependency: []
   - platform: ARDUINO_ESP32
-    classname: MP_BLYNK_VIRTUAL_BUTTON
+    classname: MP_BLYNK_VIRTUAL_GAUGE
     library_dependency: []
     
