@@ -21,21 +21,34 @@ property:
       - 8
 pin_template: RS485_DEVICE
 connection_consume:
-  - name: KMM_RS_485_1
-    type: MAKER_PLAYGROUND
+  - name: B(-)
+    type: WIRE
+    pins:
+      - x: 1889.0
+        y: 179.0
+        ref_to: "B-"
+        voltage_level: LEVEL_12
+  - name: A(+)
+    type: WIRE
+    pins:
+      - x: 1886.0
+        y: 161.0
+        ref_to: "A+"
+        voltage_level: LEVEL_12
+  - name: GND
+    type: WIRE
     pins:
       - x: 1889.0
         y: 216.0
         ref_to: GND
+        voltage_level: LEVEL_12
+  - name: VCC
+    type: WIRE
+    pins:
       - x: 1889.0
         y: 198.0
         ref_to: VCC
-      - x: 1889.0
-        y: 179.0
-        ref_to: "B-"
-      - x: 1886.0
-        y: 161.0
-        ref_to: "A+"
+        voltage_level: LEVEL_12
 compatibility:
   - name: Soil Moisture
     condition:

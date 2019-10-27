@@ -9,35 +9,97 @@ cloud_provide:
     classname: MP_NETPIE_ESP
     library_dependency:
       - lamloei/ESP32_Microgear
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_NODEMCU
+    library_dependency:
+      - blynkkk/blynk-library
   - cloud_platform: AZURE
     classname: MP_AZURE_ESP
     library_dependency: []
-width: 1205.0
-height: 1016.0
+width: 578.0
+height: 471.0
 property: []
 pin_template: ESP_32
 connection_provide:
-  - name: Port RS485
-    type: MAKER_PLAYGROUND
+  - name: B(-)
+    type: WIRE
     pins:
-      - x: 485.0
-        y: 1012.0
-        voltage_level: LEVEL_12
-        ref_to: GND
-      - x: 530.0
-        y: 1012.0
-        voltage_level: LEVEL_12
-        ref_to: VCC
-      - x: 100.0
-        y: 1012.0
-        voltage_level: LEVEL_12
-        function: RS485_Negative
+      - x: 55
+        y: 470
         ref_to: "3"
-      - x: 145.0
-        y: 1012.0
+        function: RS485_Negative
         voltage_level: LEVEL_12
-        function: RS485_Positive
+  - name: A(+)
+    type: WIRE
+    pins:
+      - x: 84
+        y: 470
         ref_to: "1"
+        function: RS485_Positive
+        voltage_level: LEVEL_12
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 227
+        y: 470
+        ref_to: GND
+        voltage_level: LEVEL_12
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 255
+        y: 470
+        ref_to: VCC
+        voltage_level: LEVEL_12
+  - name: TX
+    type: WIRE
+    pins:
+      - x: 206
+        y: 0
+        ref_to: "1"
+  - name: RX
+    type: WIRE
+    pins:
+      - x: 226
+        y: 0
+        ref_to: "3"
+  - name: D14
+    type: WIRE
+    pins:
+      - x: 246
+        y: 0
+        ref_to: "14"
+  - name: D13
+    type: WIRE
+    pins:
+      - x: 266
+        y: 0
+        ref_to: "13"
+  - name: D12
+    type: WIRE
+    pins:
+      - x: 286
+        y: 0
+        ref_to: "12"
+  - name: 3.3V
+    type: WIRE
+    pins:
+      - x: 306
+        y: 0
+        ref_to: "VCC"
+  - name: 5V
+    type: WIRE
+    pins:
+      - x: 326
+        y: 0
+        ref_to: "VCC"
+        voltage_level: LEVEL_5
+  - name: GND0
+    type: WIRE
+    pins:
+      - x: 346
+        y: 0
+        ref_to: "GND"
 compatibility: []
 platforms:
   - platform: ARDUINO_ESP32
