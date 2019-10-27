@@ -1,15 +1,16 @@
-id: MP-0000
+id: MP-0036
 brand: Maker Playground
-model: BaseBoard
+model: BaseBoard V4
 url: ''
 type: CONTROLLER
 pio_boardid: ATmega328PB
 cloud_provide:
   - cloud_platform: BLYNK
-    classname: MP_BLYNK_SERIAL1_WIFI
-    library_dependency:
-      - blynkkk/blynk-library
-      - vshymanskyy/BlynkESP8266
+    classname: MP_BLYNK_MPBASEBOARD
+    library_dependency: []
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_MPBASEBOARD
+    library_dependency: []
 width: 392
 height: 346
 property: []
@@ -26,10 +27,10 @@ connection_provide:
         ref_to: VCC
       - x: 70
         y: 297
-        ref_to: "PD4"
+        ref_to: "PD3"
       - x: 75
         y: 307
-        ref_to: "PD3"
+        ref_to: "PD2"
   - name: D2
     type: MAKER_PLAYGROUND
     pins:
@@ -41,10 +42,10 @@ connection_provide:
         ref_to: VCC
       - x: 32
         y: 230
-        ref_to: "PD6"
+        ref_to: "PD5"
       - x: 37
         y: 240
-        ref_to: "PD5"
+        ref_to: "PD4"
   - name: D3
     type: MAKER_PLAYGROUND
     pins:
@@ -105,7 +106,7 @@ connection_provide:
       - x: 216
         y: 0
         ref_to: "PC2"
-  - name: I2C (#1)
+  - name: D7/A3
     type: MAKER_PLAYGROUND
     pins:
       - x: 330
@@ -116,15 +117,11 @@ connection_provide:
         ref_to: VCC
       - x: 320
         y: 47
-        ref_to: "PC4"
-        function:
-          - SDA
+        ref_to: "PE3"
       - x: 315
         y: 37
-        ref_to: "PC5"
-        function:
-          - SCL
-  - name: I2C (#2)
+        ref_to: "PE2"
+  - name: D8
     type: MAKER_PLAYGROUND
     pins:
       - x: 370
@@ -135,15 +132,11 @@ connection_provide:
         ref_to: VCC
       - x: 360
         y: 113
-        ref_to: "PC4"
-        function:
-          - SDA
+        ref_to: "PE1"
       - x: 355
         y: 103
-        ref_to: "PC5"
-        function:
-          - SCL
-  - name: I2C (#3)
+        ref_to: "PE0"
+  - name: I2C (#1)
     type: MAKER_PLAYGROUND
     pins:
       - x: 355
@@ -162,7 +155,7 @@ connection_provide:
         ref_to: "PC5"
         function:
           - SCL
-  - name: I2C (#4)
+  - name: I2C (#2)
     type: MAKER_PLAYGROUND
     pins:
       - x: 315
@@ -183,6 +176,6 @@ connection_provide:
           - SCL
 compatibility: []
 platforms:
-- platform: ARDUINO_AVR8
-  classname: ''
-  library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: ''
+    library_dependency: []

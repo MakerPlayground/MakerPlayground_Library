@@ -204,12 +204,16 @@ pins:
 - pin_name: PE2
   coding_name: 25
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
   voltage_level: LEVEL_5
 
 - pin_name: PE3
   coding_name: 26
   pin_function:
+    - DIGITAL_IN
+    - DIGITAL_OUT
     - ANALOG_IN
     - MOSI1
   voltage_level: LEVEL_5

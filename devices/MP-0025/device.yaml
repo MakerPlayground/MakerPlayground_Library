@@ -1,15 +1,16 @@
-id: MP-0000
+id: MP-0025
 brand: Maker Playground
-model: BaseBoard
+model: BaseBoard V3
 url: ''
 type: CONTROLLER
 pio_boardid: ATmega328PB
 cloud_provide:
   - cloud_platform: BLYNK
-    classname: MP_BLYNK_SERIAL1_WIFI
-    library_dependency:
-      - blynkkk/blynk-library
-      - vshymanskyy/BlynkESP8266
+    classname: MP_BLYNK_MPBASEBOARD
+    library_dependency: []
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_MPBASEBOARD
+    library_dependency: []
 width: 392
 height: 346
 property: []
@@ -183,6 +184,6 @@ connection_provide:
           - SCL
 compatibility: []
 platforms:
-- platform: ARDUINO_AVR8
-  classname: ''
-  library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: ''
+    library_dependency: []

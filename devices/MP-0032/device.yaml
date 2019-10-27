@@ -1,0 +1,56 @@
+id: MP-0032
+brand: Maker Playground
+model: Distance v1.0
+url: ''
+type: MODULE
+width: 171
+height: 114
+property:
+- name: Mode
+  datatype: ENUM
+  controltype: DROPDOWN
+  value: High Accuracy
+  constraint:
+    - High Accuracy
+    - High Speed
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 69
+        y: 0
+        ref_to: GND
+      - x: 80
+        y: 0
+        ref_to: VCC
+      - x: 91
+        y: 0
+        ref_to: SDA
+      - x: 102
+        y: 0
+        ref_to: SCL
+compatibility:
+  - name: Distance
+    condition:
+    - name: Compare
+      parameter: []
+    value:
+    - name: Distance
+      constraint:
+        min: 0.3
+        max: 120
+        unit: CENTIMETER
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_VL53L0X
+    library_dependency:
+      - polulu/vl53l0x-arduino-1.0.2
+  - platform: ARDUINO_ESP8266
+    classname: MP_VL53L0X
+    library_dependency:
+      - polulu/vl53l0x-arduino-1.0.2
+  - platform: ARDUINO_ESP32
+    classname: MP_VL53L0X
+    library_dependency:
+      - polulu/vl53l0x-arduino-1.0.2
