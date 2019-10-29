@@ -1,32 +1,24 @@
-id: Arduinoall-825
-brand: Arduinoall
-model: DHT22 Digital Temperature and Humidity Sensor
-url: https://www.arduinoall.com/product/825/dht22-am2302-module-%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B8%B7%E0%B9%89%E0%B8%99-temperature-and-humidity-sensor-module-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9F
+id: INEX-ZX-AM2303
+brand: INEX
+model: AM2303/DHT22 Digital Temperature and Humidity Sensor
+url: https://inex.co.th/shop/zx-am2302.html
 type: MODULE
 width: 77
 height: 226
-need_breadboard: true
-breadboard_placement: ONE_SIDE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
-  - name: +
-    type: WIRE
-    pins:
-      - x: 26.4
-        y: 224
-        ref_to: VCC
-  - name: out
-    type: WIRE
-    pins:
-      - x: 40.8
-        y: 224
-        ref_to: SIG
-  - name: "-"
-    type: WIRE
+  - name: Port
+    type: INEX3
     pins:
       - x: 55.2
         y: 224
         ref_to: GND
+      - x: 40.8
+        y: 224
+        ref_to: SIG
+      - x: 26.4
+        y: 224
+        ref_to: VCC
 compatibility:
   - name: Temperature
     condition:
