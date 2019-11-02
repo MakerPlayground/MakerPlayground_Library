@@ -14,17 +14,15 @@ int MP_BUTTON_AL::init()
 
 void MP_BUTTON_AL::update(unsigned long current_time)
 {
-    if (state == NOTHING && isPress() && current_time - checkpoint >= 30) {
+    if (state == NOTHING && isPress() && current_time >= 30 + checkpoint) {
         state = PRESSED;
-        // checkpoint = millis();
     }
     if (state == PRESSED && isNotPress()) {
         state = JUST_RELEASE;
         checkpoint = millis();
     }
-    if (state == JUST_RELEASE && current_time - checkpoint >= 150) {
+    if (state == JUST_RELEASE && current_time >= 150 + checkpoint) {
         state = NOTHING;
-        // checkpoint = millis();
     }
 }
 
@@ -41,20 +39,7 @@ bool MP_BUTTON_AL::isPress()
 
 bool MP_BUTTON_AL::isPressAndRelease()
 {
-    if (state == JUST_RELEASE) {
-        state = NOTHING;
-        checkpoint = millis();
-        return true;
-    }
-    return false;
-    // if(digitalRead(pin) == LOW)
-    // {
-    //     delay(30);  // debounce
-    //     while (digitalRead(pin) == LOW);
-    //     delay(30);  // debounce
-    //     return true;
-    // }
-    // return false;
+    return state == JUST_RELEASE;
 }
 
 bool MP_BUTTON_AL::isNotPress()

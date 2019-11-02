@@ -19,7 +19,10 @@ public:
 private:
     uint8_t v_pin;
     MP_BLYNK* blynk;
+	unsigned long checkpoint = 0;
     bool bPress = false;
+    enum ButtonState { NOTHING, PRESSED, JUST_RELEASE };
+	ButtonState state = NOTHING;
 };
 
 #endif

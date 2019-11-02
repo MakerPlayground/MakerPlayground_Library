@@ -1,6 +1,6 @@
 id: VD-0005
 brand: Blynk
-model: Virtual Slider
+model: Virtual Gauge
 url: ""
 type: VIRTUAL
 cloud_consume: BLYNK

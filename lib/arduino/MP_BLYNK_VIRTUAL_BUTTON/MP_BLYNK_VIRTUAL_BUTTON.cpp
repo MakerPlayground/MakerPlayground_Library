@@ -12,16 +12,27 @@ int MP_BLYNK_VIRTUAL_BUTTON::init() {
         return ERR_INTERNAL_ERROR;
     if (!blynk->isReady())
         return ERR_CLIENT_NOT_READY;
+    checkpoint = millis();
     return ERR_OK;
 }
 
 void MP_BLYNK_VIRTUAL_BUTTON::printStatus() {
-    Serial.print(F("Button is now "));
+    Serial.print(F("Virtual button is now "));
     Serial.println(bPress ? "pressed" : "released");
 }
 
 void MP_BLYNK_VIRTUAL_BUTTON::update(unsigned long current_time) {
     bPress = blynk->readVirtualPin(v_pin);
+    if (state == NOTHING && bPress && current_time >= 30 + checkpoint) {
+        state = PRESSED;
+    }
+    if (state == PRESSED && !bPress) {
+        state = JUST_RELEASE;
+        checkpoint = millis();
+    }
+    if (state == JUST_RELEASE && current_time >= 150 + checkpoint) {
+        state = NOTHING;
+    }
 }
 
 bool MP_BLYNK_VIRTUAL_BUTTON::isPress() {
@@ -29,15 +40,7 @@ bool MP_BLYNK_VIRTUAL_BUTTON::isPress() {
 }
 
 bool MP_BLYNK_VIRTUAL_BUTTON::isPressAndRelease(){
-    if(bPress)
-    {
-        while (bPress) {
-            blynk->update(millis());
-            update(millis());
-        }
-        return true;
-    }
-    return false;
+    return state == JUST_RELEASE;
 }
 
 bool MP_BLYNK_VIRTUAL_BUTTON::isNotPress(){
