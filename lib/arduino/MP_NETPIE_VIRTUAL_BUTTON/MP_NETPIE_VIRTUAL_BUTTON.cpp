@@ -9,18 +9,29 @@ MP_NETPIE_VIRTUAL_BUTTON::MP_NETPIE_VIRTUAL_BUTTON(char* topic, MP_NETPIE* netpi
 int MP_NETPIE_VIRTUAL_BUTTON::init()
 {
     netpie->subscribe(topic);
+    checkpoint = millis();
     return ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_BUTTON::printStatus()
 {
-    Serial.print(F("Button is "));
+    Serial.print(F("Virtual button is now "));
     Serial.println(bPress ? "pressed": "not pressed");
 }
 
-void MP_NETPIE_VIRTUAL_BUTTON::update(unsigned long time)
+void MP_NETPIE_VIRTUAL_BUTTON::update(unsigned long current_time)
 {
     bPress = (netpie->getValue(topic) != 0);
+    if (state == NOTHING && bPress && current_time >= 30 + checkpoint) {
+        state = PRESSED;
+    }
+    if (state == PRESSED && !bPress) {
+        state = JUST_RELEASE;
+        checkpoint = millis();
+    }
+    if (state == JUST_RELEASE && current_time >= 150 + checkpoint) {
+        state = NOTHING;
+    }
 }
 
 bool MP_NETPIE_VIRTUAL_BUTTON::isPress() {
@@ -29,16 +40,7 @@ bool MP_NETPIE_VIRTUAL_BUTTON::isPress() {
 
 bool MP_NETPIE_VIRTUAL_BUTTON::isPressAndRelease()
 {
-    if(bPress)
-    {
-        while (bPress)
-        {
-            netpie->update(millis());
-            update(millis());
-        }
-        return true;
-    }
-    return false;
+    return state == JUST_RELEASE;
 }
 
 bool MP_NETPIE_VIRTUAL_BUTTON::isNotPress(){

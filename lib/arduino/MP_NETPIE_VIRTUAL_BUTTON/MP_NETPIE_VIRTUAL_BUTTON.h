@@ -20,7 +20,10 @@ public:
 private:
     char* topic;
     MP_NETPIE* netpie;
+    unsigned long checkpoint = 0;
     bool bPress = false;
+    enum ButtonState { NOTHING, PRESSED, JUST_RELEASE };
+	ButtonState state = NOTHING;
 };
 
 #endif 
