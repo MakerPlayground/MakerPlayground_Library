@@ -1,0 +1,28 @@
+id: Blynk-0004
+brand: Blynk
+model: Notification
+url: http://www.makerplayground.io/library/VD-0019
+type: VIRTUAL
+cloud_consume: BLYNK
+pin_template: NO_PIN
+width: 0
+height: 0
+property: []
+compatibility:
+  - name: Notification
+    action:
+    - name: Notify
+      parameter:
+      - name: Message
+        value: ''
+        constraint: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BLYNK_NOTIFICATION
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_BLYNK_NOTIFICATION
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BLYNK_NOTIFICATION
+    library_dependency: []

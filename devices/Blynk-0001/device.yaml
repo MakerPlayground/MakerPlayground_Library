@@ -1,6 +1,6 @@
-id: VD-0004
+id: Blynk-0001
 brand: Blynk
-model: Virtual Slider
+model: Virtual Button
 url: ""
 type: VIRTUAL
 cloud_consume: BLYNK
@@ -22,23 +22,19 @@ property:
       - 6
       - 7
 compatibility:
-  - name: Virtual Slider
+  - name: Virtual Button
     condition:
-      - name: Compare
-    value:
-      - name: Value
-        constraint:
-          min: -99999999.0
-          max: 99999999.0
-          unit: NOT_SPECIFIED
+      - name: Press
+      - name: Press and release
+      - name: Not press
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_BLYNK_VIRTUAL_SLIDER
+    classname: MP_BLYNK_VIRTUAL_BUTTON
     library_dependency: []  
   - platform: ARDUINO_ESP8266
-    classname: MP_BLYNK_VIRTUAL_SLIDER
+    classname: MP_BLYNK_VIRTUAL_BUTTON
     library_dependency: []
   - platform: ARDUINO_ESP32
-    classname: MP_BLYNK_VIRTUAL_SLIDER
+    classname: MP_BLYNK_VIRTUAL_BUTTON
     library_dependency: []
     

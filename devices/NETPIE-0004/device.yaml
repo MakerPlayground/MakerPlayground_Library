@@ -1,7 +1,7 @@
-id: VD-0017
+id: NETPIE-0004
 brand: NETPIE
-model: Virtual Button
-url: http://www.makerplayground.io/library/VD-0017
+model: Virtual Slider
+url: ''
 type: VIRTUAL
 cloud_consume: NETPIE
 width: 0
@@ -14,18 +14,22 @@ property:
     value: ''
     constraint: []
 compatibility:
-  - name: Virtual Button
+  - name: Virtual Slider
     condition:
-      - name: Press
-      - name: Press and release
-      - name: Not press
+      - name: Compare
+    value:
+      - name: Value
+        constraint:
+          min: -99999999
+          max: 99999999
+          unit: NOT_SPECIFIED
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_NETPIE_VIRTUAL_BUTTON
+    classname: MP_NETPIE_VIRTUAL_SLIDER
     library_dependency: []
   - platform: ARDUINO_ESP8266
-    classname: MP_NETPIE_VIRTUAL_BUTTON
+    classname: MP_NETPIE_VIRTUAL_SLIDER
     library_dependency: []
   - platform: ARDUINO_ESP32
-    classname: MP_NETPIE_VIRTUAL_BUTTON
+    classname: MP_NETPIE_VIRTUAL_SLIDER
     library_dependency: []

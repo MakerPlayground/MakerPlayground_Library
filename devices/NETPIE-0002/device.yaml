@@ -1,7 +1,7 @@
-id: VD-0007
+id: NETPIE-0002
 brand: NETPIE
 model: Virtual Gauge
-url: http://www.makerplayground.io/library/VD-0007
+url: ''
 type: VIRTUAL
 pin_template: NO_PIN
 cloud_consume: NETPIE

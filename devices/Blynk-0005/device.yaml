@@ -1,0 +1,73 @@
+id: Blynk-0005
+brand: Blynk
+model: Widget (Map)
+url: http://www.makerplayground.io/library/VD-0020
+type: VIRTUAL
+cloud_consume: BLYNK
+width: 0
+height: 0
+pin_template: NO_PIN
+property:
+  - name: virtual pin
+    datatype: INTEGER_ENUM
+    controltype: DROPDOWN
+    value: 0
+    constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+  - name: map pin index
+    value: 0
+    datatype: INTEGER_ENUM
+    controltype: DROPDOWN
+    constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+compatibility:
+  - name: Map
+    action:
+      - name: Pin Location
+        parameter:
+          - name: Latitude
+            value: 0
+            constraint:
+              min: -90
+              max: 90
+              unit: DEGREE
+          - name: Longitude
+            value: 0
+            constraint:
+              min: -180
+              max: 180
+              unit: DEGREE
+      - name: Clear Pin
+platforms:
+  # Comment out because the malfunction in MP baseboard V3 and V4. To be fixed in the later version
+  # - platform: ARDUINO_AVR8
+  #   classname: MP_BLYNK_WIDGET_MAP
+  #   library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_BLYNK_WIDGET_MAP
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BLYNK_WIDGET_MAP
+    library_dependency: []

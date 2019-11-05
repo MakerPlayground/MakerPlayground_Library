@@ -3,8 +3,7 @@ brand: Azure
 model: IotHub
 url: 'https://azure.microsoft.com/en-us/services/iot-hub/'
 type: VIRTUAL
-formfactor: NONE
-cloud_platform: AZURE
+cloud_consume: AZURE
 width: 0.0
 height: 0.0
 property:
@@ -22,9 +21,9 @@ compatibility:
         parameter:
           - name: data
 platforms:
-- platform: ARDUINO_ESP8266
-  classname: MP_Azure_IoTHub_ESP8266
-  library_dependency:
-  - Azure/azure-iot-arduino-1.0.45
-  - Azure/azure-iot-arduino-protocol-mqtt-1.0.45
-  - Azure/azure-iot-arduino-utility-1.0.45
+  - platform: ARDUINO_ESP8266
+    classname: MP_Azure_IoTHub_ESP8266
+    library_dependency:
+      - Azure/azure-iot-arduino-1.0.45
+      - Azure/azure-iot-arduino-protocol-mqtt-1.0.45
+      - Azure/azure-iot-arduino-utility-1.0.45

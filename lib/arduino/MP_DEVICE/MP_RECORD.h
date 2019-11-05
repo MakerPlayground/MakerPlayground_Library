@@ -13,6 +13,10 @@ public:
         mymap.insert(entry);
     }
 
+    void put(char* k, double v) {
+        mymap.insert(Entry(k, v));
+    }
+
     String asJson() const {
         String str = "{";
         for (auto it=mymap.begin(); it!=mymap.end(); ++it) {

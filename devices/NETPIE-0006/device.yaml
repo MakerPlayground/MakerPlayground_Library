@@ -1,0 +1,27 @@
+id: NETPIE-0006
+brand: Netpie
+model: Notification
+url: ''
+type: VIRTUAL
+cloud_consume: NETPIE
+width: 0
+height: 0
+pin_template: NO_PIN
+compatibility:
+  - name: Notification
+    action:
+      - name: Notify
+        parameter:
+        - name: Message
+          value: ''
+          constraint: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_NETPIE_NOTIFICATION
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_NETPIE_NOTIFICATION
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_NETPIE_NOTIFICATION
+    library_dependency: []
