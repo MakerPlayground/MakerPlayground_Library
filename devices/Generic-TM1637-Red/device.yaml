@@ -1,0 +1,63 @@
+id: Generic-TM1637-Red
+brand: Generic
+model: 4-digit 7-Segment display LED module 0.36"
+url: https://www.arduinoall.com/product/1219/%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B8%82-4-%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-0-36-%E0%B8%AA%E0%B8%B5%E0%B9%81%E0%B8%94%E0%B8%87-tm1637-driver
+type: MODULE
+width: 153
+height: 372
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: TM1637
+connection_consume:
+  - name: CLK
+    type: WIRE
+    pins:
+      - x: 52.5
+        y: 350.7
+        ref_to: CLK
+  - name: DIO
+    type: WIRE
+    pins:
+      - x: 66.9
+        y: 350.7
+        ref_to: DIO
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 81.3
+        y: 350.7
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 95.7
+        y: 350.7
+        ref_to: GND
+compatibility:
+  - name: 7 Segment
+    action:
+      - name: Show Number
+        parameter:
+          - name: Number
+            constraint:
+              min: -999
+              max: 9999
+              unit: NOT_SPECIFIED
+      - name: Show Two Numbers with Colon
+        parameter:
+          - name: Before colon
+            constraint:
+              min: -9
+              max: 99
+              unit: NOT_SPECIFIED
+          - name: After colon
+            constraint:
+              min: -9
+              max: 99
+              unit: NOT_SPECIFIED
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TM1637_DISPLAY
+    library_dependency:
+      - avishorp/TM1637

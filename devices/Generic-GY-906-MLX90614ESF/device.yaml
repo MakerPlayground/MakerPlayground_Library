@@ -1,0 +1,54 @@
+id: Generic-GY-906-MLX90614ESF
+brand: Generic
+model: Infrared Temperature Sensor Module (GY-906 MLX90614ESF)
+url: https://www.arduinoall.com/product/851/gy-906-infrared-temperature-sensor-module-gy-906-mlx90614esf-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AD%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA
+type: MODULE
+width: 62
+height: 114
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: VIN
+    type: WIRE
+    pins:
+      - x: 10.7
+        y: 114
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 25.1
+        y: 114
+        ref_to: GND
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 39.5
+        y: 114
+        ref_to: SCL
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 53.9
+        y: 114
+        ref_to: SDA
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: -40
+          max: 125
+          unit: CELSIUS
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_GY906
+    library_dependency:
+      - adafruit/Adafruit-MLX90614-Library-1.0.0
+  - platform: ARDUINO_ESP8266
+    classname: MP_GY906
+    library_dependency:
+      - adafruit/Adafruit-MLX90614-Library-1.0.0

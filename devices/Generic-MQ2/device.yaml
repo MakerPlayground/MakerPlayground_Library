@@ -1,0 +1,49 @@
+id: Generic-MQ2
+brand: Generic
+model: MQ-2 LPG, Propane and Hydrogen Gas Sensor
+url: https://www.arduinoall.com/product/222/module-mq-2-fc-22-smoke-gas-sensor-mq2-smoke-methane-gas-liquefied-flammable-gas-sensor-module-for-a
+type: MODULE
+width: 114
+height: 182
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_ANALOG_SENSOR_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 35.6
+        y: 171.7
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 50
+        y: 171.1
+        ref_to: GND
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 78.6
+        y: 171.7
+        ref_to: SIG
+compatibility:
+  - name: LPG
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_MQ2
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_MQ2
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_MQ2
+    library_dependency: []

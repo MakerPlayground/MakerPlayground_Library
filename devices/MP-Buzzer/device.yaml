@@ -1,0 +1,53 @@
+id: MP-Buzzer
+brand: Maker Playground
+model: Buzzer
+url: ''
+type: MODULE
+width: 124
+height: 108
+property: []
+pin_template: GENERIC_PWM_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 79
+        y: 110
+        ref_to: GND
+      - x: 68
+        y: 110
+        ref_to: VCC
+      - x: 57
+        y: 110
+        ref_to: NC
+      - x: 46
+        y: 110
+        ref_to: SIG
+compatibility:
+- name: Buzzer
+  action:
+  - name: Play Tone
+    parameter:
+    - name: Tone Frequency
+      constraint:
+        min: 0
+        max: 20000
+        unit: HERTZ
+    - name: Duration
+      constraint:
+        min: 0
+        max: 1000
+        unit: SECOND
+  - name: Beep
+    parameter: []
+  value: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BUZZER
+  library_dependency: []

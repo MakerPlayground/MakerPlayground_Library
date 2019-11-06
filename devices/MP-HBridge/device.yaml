@@ -1,0 +1,51 @@
+id: MP-HBridge
+brand: Maker Playground
+model: H-Bridge DC Motor Driver
+url: ''
+type: MODULE
+formfactor: MP_DEVICE
+width: 108
+height: 250
+property: []
+pin_template: MOTOR_DRIVER_1CH_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 37
+        y: 226
+        ref_to: GND
+      - x: 48
+        y: 226
+        ref_to: VCC
+      - x: 59
+        y: 226
+        ref_to: INB
+      - x: 70
+        y: 226
+        ref_to: INA
+compatibility:
+- name: DC Motor
+  action:
+  - name: 'On'
+    parameter:
+      - name: Direction
+        constraint:
+        - Forward
+        - Backward
+      - name: Speed
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+  value: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_HBRIDGE_DRIVER
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_HBRIDGE_DRIVER
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_HBRIDGE_DRIVER
+    library_dependency: []

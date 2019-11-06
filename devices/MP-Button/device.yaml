@@ -1,0 +1,40 @@
+id: MP-Button
+brand: Maker Playground
+model: Button
+url: ''
+type: MODULE
+width: 124
+height: 108
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 79
+        y: 109
+        ref_to: GND
+      - x: 68
+        y: 109
+        ref_to: VCC
+      - x: 57
+        y: 109
+        ref_to: NC
+      - x: 46
+        y: 109
+        ref_to: SIG
+compatibility:
+  - name: Button
+    condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BUTTON_AL
+    library_dependency: []

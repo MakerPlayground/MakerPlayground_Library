@@ -1,0 +1,50 @@
+id: Generic-LDR
+brand: Generic
+model: Light Dependent Resistor LDR 5MM Photoresistor
+url: https://www.arduinoall.com/product/98/light-dependent-resistor-ldr-5mm-photoresistor
+type: MODULE
+width: 132.212
+height: 40.201
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 7.5
+        y: 30
+        ref_to: VCC
+  - name: SIGNAL
+    type: WIRE
+    pins:
+      - x: 50.7
+        y: 30
+        ref_to: SIG
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 79.5
+        y: 73.2
+        ref_to: GND
+compatibility:
+  - name: Light
+    condition:
+      - name: Compare
+        parameter: []
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LIGHT_SENSOR
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_LIGHT_SENSOR
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_LIGHT_SENSOR
+    library_dependency: []

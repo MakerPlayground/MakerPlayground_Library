@@ -1,0 +1,48 @@
+id: Generic-Switch
+brand: Generic
+model: Tactile Switch (4 pins)
+url: ''
+type: MODULE
+width: 73.0
+height: 145.0
+need_breadboard: true
+breadboard_placement: TWO_SIDES
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: S1A
+    type: WIRE
+    pins:
+      - x: 36.8
+        y: 95.2
+        ref_to: SIG
+  - name: S1B
+    type: WIRE
+    pins:
+      - x: 8
+        y: 52
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 65.6
+        y: 95.2
+        ref_to: VCC
+compatibility:
+  - name: Button
+    condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_BUTTON_AL
+    library_dependency: []

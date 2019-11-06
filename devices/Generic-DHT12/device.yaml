@@ -1,0 +1,59 @@
+id: Generic-DHT12
+brand: Generic
+model: DHT12 Humidity Temperature Sensor Module
+url: https://www.arduitronics.com/product/1705/dht12-humidity-temperature-sensor-module-free-cable-i2c-interface
+type: MODULE
+width: 72
+height: 72
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: VIN
+    type: WIRE
+    pins:
+      - x: 14.5
+        y: 69
+        ref_to: VCC
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 28.9
+        y: 69
+        ref_to: SDA
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 43.3
+        y: 69
+        ref_to: GND
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 57.7
+        y: 69
+        ref_to: SCL
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: 0
+          max: 50
+          unit: CELSIUS
+  - name: Humidity
+    condition:
+      - name: Compare
+    value:
+      - name: Humidity
+        constraint:
+          min: 20
+          max: 80
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_DHT12
+    library_dependency:
+      - dplasa/dht

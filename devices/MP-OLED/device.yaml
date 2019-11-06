@@ -1,0 +1,91 @@
+id: MP-OLED
+brand: Maker Playground
+model: OLED Screen
+url: ''
+type: MODULE
+width: 153
+height: 153
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 93
+        y: 153
+        ref_to: GND
+      - x: 82
+        y: 153
+        ref_to: VCC
+      - x: 71
+        y: 153
+        ref_to: SDA
+      - x: 60
+        y: 153
+        ref_to: SCL
+compatibility:
+  - name: Display
+    action:
+      - name: Show Text
+        parameter:
+        - name: Row
+          constraint:
+            min: 1
+            max: 10
+            unit: NOT_SPECIFIED
+        - name: Text
+          constraint: []
+        - name: Size
+          constraint:
+          - 1x
+          - 2x
+          - 3x
+        - name: Align
+          value: Left
+          constraint:
+          - Left
+          - Center
+          - Right
+        - name: Color
+          constraint:
+            - Blue
+            - Cyan
+            - Dark Cyan
+            - Dark Green
+            - Dark Grey
+            - Green
+            - Green Yellow
+            - Light Grey
+            - Magenta
+            - Maroon
+            - Navy
+            - Olive
+            - Orange
+            - Pink
+            - Purple
+            - White
+            - Red
+            - Yellow
+      - name: Clear Row
+        parameter:
+          - name: Row
+            constraint:
+              min: 1
+              max: 10
+              unit: NOT_SPECIFIED
+      - name: Clear Screen
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2
+  - platform: ARDUINO_ESP8266
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2
+  - platform: ARDUINO_ESP32
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2

@@ -1,0 +1,101 @@
+id: Generic-SSD1306-OLED
+brand: Arduinoall
+model: 0.96" 128x64 White OLED Display Module
+url: https://www.arduinoall.com/product/366/oled-lcd-led-display-module-128x64-0-96-for-arduino-สีขาว
+type: MODULE
+width: 154
+height: 154
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 96.8
+        y: 144.4
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 82.4
+        y: 144.4
+        ref_to: GND
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 68
+        y: 144.4
+        ref_to: SCL
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 53.6
+        y: 144.4
+        ref_to: SDA
+compatibility:
+  - name: Display
+    action:
+    - name: Show Text
+      parameter:
+        - name: Row
+          constraint:
+            min: 1
+            max: 10
+            unit: NOT_SPECIFIED
+        - name: Text
+        - name: Size
+          constraint:
+            - 1x
+            - 2x
+            - 3x
+        - name: Align
+          value: Left
+          constraint:
+            - Left
+            - Center
+            - Right
+        - name: Color
+          constraint:
+            - Blue
+            - Cyan
+            - Dark Cyan
+            - Dark Green
+            - Dark Grey
+            - Green
+            - Green Yellow
+            - Light Grey
+            - Magenta
+            - Maroon
+            - Navy
+            - Olive
+            - Orange
+            - Pink
+            - Purple
+            - White
+            - Red
+            - Yellow
+    - name: Clear Row
+      parameter:
+        - name: Row
+          constraint:
+            min: 1
+            max: 10
+            unit: NOT_SPECIFIED
+    - name: Clear Screen
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2
+  - platform: ARDUINO_ESP8266
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2
+  - platform: ARDUINO_ESP32
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+      - adafruit/Adafruit_SSD1306-1.2.9
+      - adafruit/Adafruit-GFX-Library-1.5.2

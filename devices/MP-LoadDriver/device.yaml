@@ -1,0 +1,44 @@
+id: MP-LoadDriver
+brand: Maker Playground
+model: Load Driver
+url: ''
+type: MODULE
+formfactor: MP_DEVICE
+width: 124
+height: 108
+property: []
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 46
+        y: 101
+        ref_to: GND
+      - x: 57
+        y: 101
+        ref_to: VCC
+      - x: 68
+        y: 101
+        ref_to: NC
+      - x: 79
+        y: 101
+        ref_to: SIG
+compatibility:
+- name: Load Driver
+  action:
+  - name: 'On'
+    parameter: []
+  - name: 'Off'
+    parameter: []
+  value: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_LOAD_DRIVER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LOAD_DRIVER
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LOAD_DRIVER
+  library_dependency: []

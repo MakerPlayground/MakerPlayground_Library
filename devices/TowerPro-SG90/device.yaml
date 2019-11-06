@@ -1,0 +1,39 @@
+id: TowerPro-SG90
+brand: Tower Pro
+model: SG90 Micro Servo
+url: https://www.arduitronics.com/product/283/tower-pro-sg90-mini-micro-servo
+type: MODULE
+width: 188
+height: 182
+pin_template: GENERIC_PWM_ACTUATOR_5
+connection_consume:
+  - name: Port
+    type: INEX3
+    pins:
+      - x: 45
+        y: 164
+        ref_to: GND
+      - x: 50
+        y: 164
+        ref_to: SIG
+      - x: 55
+        y: 164
+        ref_to: VCC
+compatibility:
+  - name: Servo
+    action:
+      - name: Move To
+        parameter:
+          - name: Degree
+            constraint:
+              min: 0
+              max: 180
+              unit: DEGREE
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SERVO
+    library_dependency:
+      - arduino-libraries/Servo-1.1.3
+  - platform: ARDUINO_ESP8266
+    classname: MP_SERVO
+    library_dependency: []

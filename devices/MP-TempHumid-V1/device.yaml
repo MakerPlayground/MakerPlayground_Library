@@ -1,0 +1,57 @@
+id: MP-TempHumid-V1
+brand: Maker Playground
+model: Temperature/Humidity v1
+url: ''
+type: MODULE
+width: 171
+height: 114
+property: []
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 69
+        y: 0
+        ref_to: GND
+      - x: 80
+        y: 0
+        ref_to: VCC
+      - x: 91
+        y: 0
+        ref_to: SDA
+      - x: 102
+        y: 0
+        ref_to: SCL
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: -500
+          max: 500
+          unit: CELSIUS
+  - name: Humidity
+    condition:
+      - name: Compare
+    value:
+      - name: Humidity
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SHT
+    library_dependency:
+    - Sensirion/arduino-sht
+  - platform: ARDUINO_ESP8266
+    classname: MP_SHT
+    library_dependency:
+    - Sensirion/arduino-sht
+  - platform: ARDUINO_ESP32
+    classname: MP_SHT
+    library_dependency:
+    - Sensirion/arduino-sht

@@ -1,0 +1,181 @@
+id: MP-BaseBoard-V4
+brand: Maker Playground
+model: BaseBoard V4
+url: ''
+type: CONTROLLER
+pio_boardid: ATmega328PB
+cloud_provide:
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_MPBASEBOARD
+    library_dependency: []
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_MPBASEBOARD
+    library_dependency: []
+width: 392
+height: 346
+property: []
+pin_template: ATMEGA328PB
+connection_provide:
+  - name: D1
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 60
+        y: 277
+        ref_to: GND
+      - x: 65
+        y: 287
+        ref_to: VCC
+      - x: 70
+        y: 297
+        ref_to: "PD3"
+      - x: 75
+        y: 307
+        ref_to: "PD2"
+  - name: D2
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 22
+        y: 210
+        ref_to: GND
+      - x: 27
+        y: 220
+        ref_to: VCC
+      - x: 32
+        y: 230
+        ref_to: "PD5"
+      - x: 37
+        y: 240
+        ref_to: "PD4"
+  - name: D3
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 37
+        y: 103
+        ref_to: GND
+      - x: 32
+        y: 113
+        ref_to: VCC
+      - x: 27
+        y: 123
+        ref_to: "PD7"
+      - x: 22
+        y: 133
+        ref_to: "PD6"
+  - name: D4
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 75
+        y: 37
+        ref_to: GND
+      - x: 70
+        y: 47
+        ref_to: VCC
+      - x: 65
+        y: 57
+        ref_to: "PB2"
+      - x: 60
+        y: 67
+        ref_to: "PB1"
+  - name: D5/A1
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 172
+        y: 0
+        ref_to: GND
+      - x: 161
+        y: 0
+        ref_to: VCC
+      - x: 150
+        y: 0
+        ref_to: "PC1"
+      - x: 139
+        y: 0
+        ref_to: "PC0"
+  - name: D6/A2
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 249
+        y: 0
+        ref_to: GND
+      - x: 238
+        y: 0
+        ref_to: VCC
+      - x: 227
+        y: 0
+        ref_to: "PC3"
+      - x: 216
+        y: 0
+        ref_to: "PC2"
+  - name: D7/A3
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 330
+        y: 67
+        ref_to: GND
+      - x: 325
+        y: 57
+        ref_to: VCC
+      - x: 320
+        y: 47
+        ref_to: "PE3"
+      - x: 315
+        y: 37
+        ref_to: "PE2"
+  - name: D8
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 370
+        y: 133
+        ref_to: GND
+      - x: 365
+        y: 123
+        ref_to: VCC
+      - x: 360
+        y: 113
+        ref_to: "PE1"
+      - x: 355
+        y: 103
+        ref_to: "PE0"
+  - name: I2C (#1)
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 355
+        y: 240
+        ref_to: GND
+      - x: 360
+        y: 230
+        ref_to: VCC
+      - x: 365
+        y: 220
+        ref_to: "PC4"
+        function:
+          - SDA
+      - x: 370
+        y: 210
+        ref_to: "PC5"
+        function:
+          - SCL
+  - name: I2C (#2)
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 315
+        y: 307
+        ref_to: GND
+      - x: 320
+        y: 297
+        ref_to: VCC
+      - x: 325
+        y: 287
+        ref_to: "PC4"
+        function:
+          - SDA
+      - x: 330
+        y: 277
+        ref_to: "PC5"
+        function:
+          - SCL
+compatibility: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: ''
+    library_dependency: []
