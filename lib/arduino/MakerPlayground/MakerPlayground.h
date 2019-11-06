@@ -4,14 +4,20 @@
 #include <Arduino.h>
 #include "MP_ERROR.h"
 
+#define PR_INFO() Serial.print(F("[[I]] "))
+#define PR_ERR() Serial.print(F("[[E]] "))
+#define PR_VAL() Serial.print(F("[[V]] "))
+#define PR_DEVICE(device) Serial.print("\""); Serial.print(device); Serial.print("\" ")
+#define PR_END() Serial.println(F("\0"))
+
 #define MP_LOG_INTERVAL 1000
-#define MP_LOG(device, name) Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); device.printStatus(); Serial.println('\0');
+#define MP_LOG(device, name) PR_INFO(); PR_DEVICE(F(name)); device.printStatus(); PR_END(); 
+#define MP_LOG_P(device, name) PR_INFO(); PR_DEVICE(F(name)); device->printStatus(); PR_END();
 #ifdef __AVR__
-    #define MP_ERR(name, status_code) Serial.print(F("[[ERROR]] ")); Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); Serial.println(reinterpret_cast<const __FlashStringHelper *>(pgm_read_word(&(ERRORS[status_code])))); Serial.println('\0');
+    #define MP_ERR(name, status_code) PR_ERR(); PR_DEVICE(F(name)); Serial.println(reinterpret_cast<const __FlashStringHelper *>(pgm_read_word(&(ERRORS[status_code])))); PR_END();
 #else
-    #define MP_ERR(name, status_code) Serial.print(F("[[ERROR]] ")); Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); Serial.println(reinterpret_cast<const __FlashStringHelper *>(ERRORS[status_code])); Serial.println('\0');
+    #define MP_ERR(name, status_code) PR_ERR(); PR_DEVICE(F(name)); Serial.println(reinterpret_cast<const __FlashStringHelper *>(ERRORS[status_code])); PR_END();
 #endif
-#define MP_LOG_P(device, name) Serial.print(F("[[")); Serial.print(F(name)); Serial.print(F("]] ")); device->printStatus(); Serial.println('\0');
 
 typedef void (*Task)(void);
 struct Expr {
