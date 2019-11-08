@@ -1,5 +1,5 @@
-#ifndef MP_WS281X_H
-#define MP_WS281X_H
+#ifndef MP_WS281X_GRB_H
+#define MP_WS281X_GRB_H
 
 #include "MP_DEVICE.h"
 #include "Adafruit_NeoPixel.h"
@@ -7,10 +7,10 @@
   #include <avr/power.h>
 #endif
 
-class MP_WS281X
+class MP_WS281X_GRB
 {
 public:
-	MP_WS281X(uint8_t pin);
+	MP_WS281X_GRB(uint8_t pin);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

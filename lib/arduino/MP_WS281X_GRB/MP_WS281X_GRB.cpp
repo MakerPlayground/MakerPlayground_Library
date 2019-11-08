@@ -1,26 +1,26 @@
-#include "MP_WS281X.h"
+#include "MP_WS281X_GRB.h"
 
 #define NUMPIXELS 1
 
-MP_WS281X::MP_WS281X(uint8_t pin)
+MP_WS281X_GRB::MP_WS281X_GRB(uint8_t pin)
 	: pin(pin)
 	, pixels(Adafruit_NeoPixel(NUMPIXELS, pin, NEO_GRB + NEO_KHZ800))
 {
 }
 
-int MP_WS281X::init()
+int MP_WS281X_GRB::init()
 {
 	pixels.begin();
 	off();
 	return ERR_OK;
 }
 
-void MP_WS281X::update(unsigned long current_time) 
+void MP_WS281X_GRB::update(unsigned long current_time) 
 {
 
 }
 
-void MP_WS281X::printStatus() 
+void MP_WS281X_GRB::printStatus() 
 {
 	Serial.print(F("red = "));
 	Serial.println(this->red);
@@ -32,7 +32,7 @@ void MP_WS281X::printStatus()
 	Serial.println(this->brightness);
 }
 
-void MP_WS281X::on(int red, int green, int blue, int brightness)
+void MP_WS281X_GRB::on(int red, int green, int blue, int brightness)
 {
 	this->red = red;
 	this->green = green;
@@ -43,7 +43,7 @@ void MP_WS281X::on(int red, int green, int blue, int brightness)
 	pixels.show();
 }
 
-void MP_WS281X::off()
+void MP_WS281X_GRB::off()
 {
 	this->brightness = 0;
 	this->red = 0;

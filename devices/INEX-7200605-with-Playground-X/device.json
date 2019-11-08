@@ -1368,7 +1368,7 @@
       "platforms": [
         {
           "platform": "ARDUINO_AVR8",
-          "classname": "MP_WS281X",
+          "classname": "MP_WS281X_GRB",
           "library_dependency": [
             "adafruit/Adafruit_NeoPixel-1.1.8"
           ]

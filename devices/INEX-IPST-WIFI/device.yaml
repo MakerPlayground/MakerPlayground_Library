@@ -168,7 +168,7 @@ integrated_devices:
           unit: NOT_SPECIFIED
     platforms:
       - platform: ARDUINO_ESP32
-        classname: MP_WS281X_STRIP
+        classname: MP_WS281X_STRIP_GRB
         library_dependency:
           - "adafruit/Adafruit_NeoPixel-1.1.8"
     pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
