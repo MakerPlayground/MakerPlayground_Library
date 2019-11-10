@@ -5,8 +5,8 @@ url: http://www.makerplayground.io/library/VD-0019
 type: VIRTUAL
 cloud_consume: BLYNK
 pin_template: NO_PIN
-width: 0
-height: 0
+width: 50
+height: 50
 property: []
 compatibility:
   - name: Notification

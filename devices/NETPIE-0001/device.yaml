@@ -5,8 +5,8 @@ url: ''
 type: VIRTUAL
 pin_template: NO_PIN
 cloud_consume: NETPIE
-width: 0
-height: 0
+width: 50
+height: 50
 property:
   - name: topic
     datatype: STRING
