@@ -44,6 +44,21 @@ void MP_APDS9960::update(unsigned long current_time)
 		} else {
 			this->isFailOnReading = false;
 		}
+
+		if (this->isFailOnReading) {
+			cm = 20;
+		} else {
+			double distance = 0.000858238872*x*x - 0.233873883*x + 26.3131278;
+			if(x > 136 || distance < 10 ) {
+				cm = 10;
+			}
+			else if (distance > 20) {
+				cm = 20;
+			}
+			else {
+				cm = distance;
+			}
+		}
 		end_time = current_time;
 	}
 }
@@ -60,18 +75,7 @@ void MP_APDS9960::printStatus()
 
 double MP_APDS9960::getDistance()
 {
-	if ( this->isFailOnReading ) {
-		return 20;
-	} else {
-		double distance = 0.000858238872*x*x - 0.233873883*x + 26.3131278;
-		if(x > 136 || distance < 10 ) {
-			return 10;
-		}
-		else if (distance > 20) {
-			return 20;
-		}
-		return distance;
-	}
+	return cm;
 }
 
 bool MP_APDS9960::isGestureDetected(char c[])

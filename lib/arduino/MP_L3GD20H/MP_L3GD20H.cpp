@@ -24,6 +24,9 @@ void MP_L3GD20H::update(unsigned long current_time)
 	if (end_time == 0 || current_time - end_time > 50) {
 		gyro.getEvent(&event);
 		end_time = current_time;
+		event.gyro.x *= PI;
+		event.gyro.y *= PI;
+		event.gyro.z *= PI;
 	}
 }
 
@@ -41,15 +44,15 @@ void MP_L3GD20H::printStatus()
 
 double MP_L3GD20H::getGyro_X()
 {
-	return event.gyro.x * PI;
+	return event.gyro.x;
 }
 
 double MP_L3GD20H::getGyro_Y()
 {
-	return event.gyro.y * PI;
+	return event.gyro.y;
 }
 
 double MP_L3GD20H::getGyro_Z()
 {
-	return event.gyro.z * PI;
+	return event.gyro.z;
 }

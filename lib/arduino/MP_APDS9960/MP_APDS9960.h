@@ -21,6 +21,7 @@ private:
 	SparkFun_APDS9960 apds;
 	bool isFailOnReading;
 	uint8_t x;
+	double cm = 0.0;
 	unsigned long end_time;
 };
 

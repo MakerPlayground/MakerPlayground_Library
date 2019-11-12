@@ -18,6 +18,7 @@ public:
 private:
 	uint8_t pin;
 	double normal;
+	double soundLevel = 0.0;
 };
 
 #endif

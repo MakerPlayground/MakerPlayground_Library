@@ -22,6 +22,7 @@ public:
 private:
 	Adafruit_ADXL345_Unified accel;
 	sensors_event_t event;
+	double acc_mag = 0.0;
 	unsigned long old_time;
 };
 #endif

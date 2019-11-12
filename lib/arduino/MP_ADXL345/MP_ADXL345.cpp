@@ -34,6 +34,10 @@ void MP_ADXL345::update(unsigned long current_time)
 	if (current_time - old_time > 200) 
 	{
 		accel.getEvent(&event);
+		double acc_x = event.acceleration.x;
+		double acc_y = event.acceleration.y;
+		double acc_z = event.acceleration.z;
+		acc_mag = sqrt(acc_x*acc_x + acc_y*acc_y + acc_z*acc_z);
 		old_time = current_time;
 	}
 }
@@ -50,7 +54,7 @@ void MP_ADXL345::printStatus()
 	Serial.println(event.acceleration.z);
 	
 	Serial.print(F("accel_magnitude = "));
-	Serial.println(this->getAccel_Magnitude());
+	Serial.println(acc_mag);
 }
 
 double MP_ADXL345::getAccel_X()
@@ -70,8 +74,5 @@ double MP_ADXL345::getAccel_Z()
 
 double MP_ADXL345::getAccel_Magnitude()
 {
-	double acc_x = event.acceleration.x;
-	double acc_y = event.acceleration.y;
-	double acc_z = event.acceleration.z;
-	return sqrt(acc_x*acc_x + acc_y*acc_y + acc_z*acc_z);
+	return acc_mag;
 }

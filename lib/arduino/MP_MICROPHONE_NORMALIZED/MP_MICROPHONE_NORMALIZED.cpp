@@ -18,17 +18,6 @@ int MP_MICROPHONE_NORMALIZED::init()
 
 void MP_MICROPHONE_NORMALIZED::update(unsigned long current_time)
 {
-	normal = 0.8 * normal + 0.2 * (analogRead(pin) - normal);
-}
-
-void MP_MICROPHONE_NORMALIZED::printStatus()
-{
-	Serial.print(F("sound level = "));
-	Serial.println(getSoundLevel());
-}
-
-double MP_MICROPHONE_NORMALIZED::getSoundLevel()
-{
 	/* find the range of voltage for some interval */
 	double max = 0;
     double min = 1024;
@@ -41,7 +30,18 @@ double MP_MICROPHONE_NORMALIZED::getSoundLevel()
 
 	/* High range is high sound level */
 	double val = (fabs(max - min) - 100.0) / 3.0;
-	if (val > 100) val = 100;
-	else if (val < 0) val = 0;
-	return val;
+	if (val > 100) soundLevel = 100;
+	else if (val < 0) soundLevel = 0;
+	else soundLevel = val;
+}
+
+void MP_MICROPHONE_NORMALIZED::printStatus()
+{
+	Serial.print(F("sound level = "));
+	Serial.println(getSoundLevel());
+}
+
+double MP_MICROPHONE_NORMALIZED::getSoundLevel()
+{
+	return soundLevel;
 }
