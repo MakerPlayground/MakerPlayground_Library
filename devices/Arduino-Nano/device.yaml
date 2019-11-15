@@ -6,6 +6,8 @@ type: CONTROLLER
 pio_boardid: nanoatmega328
 width: 256
 height: 100
+need_breadboard: true
+breadboard_placement: TWO_SIDES
 property: []
 pin_template: ATMEGA328P
 connection_provide:
