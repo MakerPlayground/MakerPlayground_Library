@@ -1,0 +1,197 @@
+id: Arduino-Nano
+brand: Arduino
+model: Nano
+url: https://store.arduino.cc/usa/arduino-nano
+type: CONTROLLER
+pio_boardid: nanoatmega328
+width: 256
+height: 100
+property: []
+pin_template: ATMEGA328P
+connection_provide:
+  - name: D12
+    type: WIRE
+    pins:
+      - x: 31
+        y: 6
+        ref_to: PB4
+  - name: D11
+    type: WIRE
+    pins:
+      - x: 45.4
+        y: 6
+        ref_to: PB3
+  - name: D10
+    type: WIRE
+    pins:
+      - x: 59.8
+        y: 6
+        ref_to: PB2
+  - name: D9
+    type: WIRE
+    pins:
+      - x: 74.2
+        y: 6
+        ref_to: PB1
+  - name: D8
+    type: WIRE
+    pins:
+      - x: 88.6
+        y: 6
+        ref_to: PB0
+  - name: D7
+    type: WIRE
+    pins:
+      - x: 103.0
+        y: 6
+        ref_to: PD7
+  - name: D6
+    type: WIRE
+    pins:
+      - x: 117.4
+        y: 6
+        ref_to: PD6
+  - name: D5
+    type: WIRE
+    pins:
+      - x: 131.8
+        y: 6
+        ref_to: PD5
+  - name: D4
+    type: WIRE
+    pins:
+      - x: 146.2
+        y: 6
+        ref_to: PD4
+  - name: D3
+    type: WIRE
+    pins:
+      - x: 160.6
+        y: 6
+        ref_to: PD3
+  - name: D2
+    type: WIRE
+    pins:
+      - x: 175.0
+        y: 6
+        ref_to: PD2
+  - name: GND0
+    type: WIRE
+    pins:
+      - x: 189.4
+        y: 6
+        ref_to: GND
+  - name: RST0
+    type: WIRE
+    pins:
+      - x: 203.8
+        y: 6
+        ref_to: PC6
+  - name: RX0
+    type: WIRE
+    pins:
+      - x: 218.2
+        y: 6
+        ref_to: PD0
+  - name: TX0
+    type: WIRE
+    pins:
+      - x: 232.6
+        y: 6
+        ref_to: PD1
+  - name: D13
+    type: WIRE
+    pins:
+      - x: 31
+        y: 92.4
+        ref_to: PB5
+  - name: 3V3
+    type: WIRE
+    pins:
+      - x: 45.4
+        y: 92.4
+        ref_to: VCC
+        voltage_level: LEVEL_3v3
+  # - name: AREF
+  #   type: WIRE
+  #   pins:
+  #     - x: 59.8
+  #       y: 92.4
+  #       ref_to: 
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 74.2
+        y: 92.4
+        ref_to: PC0
+  - name: A1
+    type: WIRE
+    pins:
+      - x: 88.6
+        y: 92.4
+        ref_to: PC1
+  - name: A2
+    type: WIRE
+    pins:
+      - x: 103.0
+        y: 92.4
+        ref_to: PC2
+  - name: A3
+    type: WIRE
+    pins:
+      - x: 117.4
+        y: 92.4
+        ref_to: PC3
+  - name: A4
+    type: WIRE
+    pins:
+      - x: 131.8
+        y: 92.4
+        ref_to: PC4
+  - name: A5
+    type: WIRE
+    pins:
+      - x: 146.2
+        y: 92.4
+        ref_to: PC5
+  - name: A6
+    type: WIRE
+    pins:
+      - x: 160.6
+        y: 92.4
+        ref_to: A6
+  - name: A7
+    type: WIRE
+    pins:
+      - x: 175.0
+        y: 92.4
+        ref_to: A7
+  - name: 5V
+    type: WIRE
+    pins:
+      - x: 189.4
+        y: 92.4
+        ref_to: VCC
+  - name: RST
+    type: WIRE
+    pins:
+      - x: 203.8
+        y: 92.4
+        ref_to: PC6
+  - name: GND1
+    type: WIRE
+    pins:
+      - x: 218.2
+        y: 92.4
+        ref_to: GND
+  # - name: VIN
+  #   type: WIRE
+  #   pins:
+  #     - x: 232.6
+  #       y: 92.4
+  #       ref_to: 
+compatibility: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: ''
+  library_dependency: []

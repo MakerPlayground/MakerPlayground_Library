@@ -99,6 +99,11 @@ pins:
     - SCL
   voltage_level: LEVEL_5
 
+- pin_name: PC6
+  pin_function:
+    - NO_FUNCTION
+  voltage_level: LEVEL_5
+
 # GROUP D
 - pin_name: PD0
   coding_name: 0
