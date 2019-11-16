@@ -61,23 +61,28 @@ pins:
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used.
-  - pin_name: CS0
+  # SDIO CMD / SPI CS0
+  - pin_name: IO11
+    coding_name: 11
     pin_function: []
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used.
-  - pin_name: MISO
-    coding_name: 8
+  # SDIO DATA0 / SPI MISO
+  - pin_name: IO7
+    coding_name: 7
     pin_function: []
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used.
+  # SDIO DATA2 / SPIHD / HSPIHD
   - pin_name: IO9
     coding_name: 9
     pin_function: []
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used. However, INEX AX-Wifi used it as the digital pin
+  # SDIO DATA3 / SPIWD / HSPIWD
   - pin_name: IO10
     coding_name: 10
     pin_function:
@@ -85,13 +90,16 @@ pins:
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used.
-  - pin_name: MOSI
-    coding_name: 11
+  # SDIO DATA1 / SPI MOSI/ U1RXD
+  - pin_name: IO8
+    coding_name: 8
     pin_function: []
     voltage_level: LEVEL_3v3
 
   # This pin is not normally used.
-  - pin_name: SCLK
+  # SDIO SCK / SPI CLK
+  - pin_name: IO6
+    coding_name: 6
     pin_function: []
     voltage_level: LEVEL_3v3
 

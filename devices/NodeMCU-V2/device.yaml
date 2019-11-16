@@ -1,0 +1,210 @@
+id: NodeMCU-V2
+brand: NodeMCU
+model: V2
+url: https://github.com/nodemcu/nodemcu-devkit-v1.0
+type: CONTROLLER
+pio_boardid: nodemcuv2
+width: 274.0
+height: 144.0
+cloud_provide:
+  - cloud_platform: AZURE
+    classname: MP_AZURE_ESP
+    library_dependency: []
+  - cloud_platform: NETPIE
+    classname: MP_NETPIE_ESP
+    library_dependency:
+      - netpieio/microgear-esp8266-arduino
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_NODEMCU
+    library_dependency:
+      - blynkkk/blynk-library
+need_breadboard: true
+breadboard_placement: TWO_SIDES
+compatibility: []
+platforms:
+  - platform: ARDUINO_ESP8266
+    classname: ''
+    library_dependency: []
+pin_template: ESP_12
+connection_provide:
+  # - name: Vin
+  #   type: WIRE
+  #   pins:
+  #     - x: 36
+  #       y: 7
+  #       ref_to: GND
+  - name: GND0
+    type: WIRE
+    pins:
+      - x: 50.4
+        y: 7
+        ref_to: GND
+  - name: RST
+    type: WIRE
+    pins:
+      - x: 64.8
+        y: 7
+        ref_to: RST
+  - name: EN
+    type: WIRE
+    pins:
+      - x: 79.2
+        y: 7
+        ref_to: EN
+  - name: 3v3(0)
+    type: WIRE
+    pins:
+      - x: 93.6
+        y: 7
+        ref_to: VCC
+  - name: GND1
+    type: WIRE
+    pins:
+      - x: 108.0
+        y: 7
+        ref_to: GND
+  - name: CLK
+    type: WIRE
+    pins:
+      - x: 122.4
+        y: 7
+        ref_to: IO6
+  - name: SD0
+    type: WIRE
+    pins:
+      - x: 136.8
+        y: 7
+        ref_to: IO7
+  - name: CMD
+    type: WIRE
+    pins:
+      - x: 151.2
+        y: 7
+        ref_to: IO11
+  - name: SD1
+    type: WIRE
+    pins:
+      - x: 165.6
+        y: 7
+        ref_to: IO8
+  - name: SD2
+    type: WIRE
+    pins:
+      - x: 180.0
+        y: 7
+        ref_to: IO9
+  - name: SD3
+    type: WIRE
+    pins:
+      - x: 194.4
+        y: 7
+        ref_to: IO10
+  - name: RSV0
+    type: WIRE
+    pins:
+      - x: 208.8
+        y: 7
+        ref_to: NF
+  - name: RSV1
+    type: WIRE
+    pins:
+      - x: 223.2
+        y: 7
+        ref_to: NF
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 237.6
+        y: 7
+        ref_to: ADC
+
+  - name: 3v3(1)
+    type: WIRE
+    pins:
+      - x: 36
+        y: 136.6
+        ref_to: VCC
+  - name: GND2
+    type: WIRE
+    pins:
+      - x: 50.4
+        y: 136.6
+        ref_to: GND
+  - name: TX
+    type: WIRE
+    pins:
+      - x: 64.8
+        y: 136.6
+        ref_to: TXD
+  - name: RX
+    type: WIRE
+    pins:
+      - x: 79.2
+        y: 136.6
+        ref_to: RXD
+  - name: D8
+    type: WIRE
+    pins:
+      - x: 93.6
+        y: 136.6
+        ref_to: IO15
+  - name: D7
+    type: WIRE
+    pins:
+      - x: 108.0
+        y: 136.6
+        ref_to: IO13
+  - name: D6
+    type: WIRE
+    pins:
+      - x: 122.4
+        y: 136.6
+        ref_to: IO12
+  - name: D5
+    type: WIRE
+    pins:
+      - x: 136.8
+        y: 136.6
+        ref_to: IO14
+  - name: GND3
+    type: WIRE
+    pins:
+      - x: 151.2
+        y: 136.6
+        ref_to: GND
+  - name: 3v3(2)
+    type: WIRE
+    pins:
+      - x: 165.6
+        y: 136.6
+        ref_to: VCC
+  - name: D4
+    type: WIRE
+    pins:
+      - x: 180.0
+        y: 136.6
+        ref_to: IO2
+  - name: D3
+    type: WIRE
+    pins:
+      - x: 194.4
+        y: 136.6
+        ref_to: IO0
+  - name: D2
+    type: WIRE
+    pins:
+      - x: 208.8
+        y: 136.6
+        ref_to: IO4
+  - name: D1
+    type: WIRE
+    pins:
+      - x: 223.2
+        y: 136.6
+        ref_to: IO5
+  - name: D0
+    type: WIRE
+    pins:
+      - x: 237.6
+        y: 136.6
+        ref_to: IO16
