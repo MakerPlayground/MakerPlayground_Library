@@ -1,0 +1,50 @@
+id: Generic-TRIMPOT
+brand: Generic
+model: TRIMPOT
+url: ''
+type: MODULE
+width: 36
+height: 48
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+need_breadboard: true
+breadboard_placement: TWO_SIDES
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 4
+        y: 46.2
+        ref_to: VCC
+  - name: SIG
+    type: WIRE
+    pins:
+      - x: 18.4
+        y: 3
+        ref_to: SIG
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 32.8
+        y: 46.2
+        ref_to: GND
+compatibility:
+- name: POT
+  condition:
+    - name: Compare
+      parameter: []
+  value:
+    - name: Percent
+      constraint:
+        min: 0.0
+        max: 100.0
+        unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TRIMPOT
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_TRIMPOT
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_TRIMPOT
+    library_dependency: []
