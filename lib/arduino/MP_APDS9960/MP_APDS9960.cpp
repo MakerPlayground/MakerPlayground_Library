@@ -81,14 +81,15 @@ double MP_APDS9960::getDistance()
 bool MP_APDS9960::isGestureDetected(char c[])
 {
 	if ( apds.isGestureAvailable() ) {
-		 int gesture = apds.readGesture();
-		 return (gesture == DIR_UP && c[0] == 'U') 
-			|| (gesture == DIR_DOWN && c[0] == 'D')
-			|| (gesture == DIR_LEFT && c[0] == 'L')
-			|| (gesture == DIR_RIGHT && c[0] == 'R')
-			|| (gesture == DIR_NEAR && c[0] == 'N')
-			|| (gesture == DIR_FAR && c[0] == 'F');
-	 }
+		int gesture = apds.readGesture();
+		return (gesture == DIR_UP && c[0] == 'U') 
+		|| (gesture == DIR_DOWN && c[0] == 'D')
+		|| (gesture == DIR_LEFT && c[0] == 'L')
+		|| (gesture == DIR_RIGHT && c[0] == 'R')
+		|| (gesture == DIR_NEAR && c[0] == 'N')
+		|| (gesture == DIR_FAR && c[0] == 'F');
+	}
+	return false;
 }
 
 bool MP_APDS9960::isGestureNotDetected()
