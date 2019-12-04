@@ -1,0 +1,75 @@
+id: Generic-HX711-4LoadCells
+brand: Generic
+model: HX711 with 4 load cells
+url: ''
+type: MODULE
+width: 256
+height: 132
+pin_template: GENERIC_HX711
+property:
+  - name: scale
+    datatype: DOUBLE
+    controltype: SPINBOX
+    value: 22000
+    constraint:
+      min: -50000
+      max: 50000
+      unit: NOT_SPECIFIED
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 0
+        y: 0
+        ref_to: GND
+  # The order of DT and SCK pins will affect to the codegen. Do keeping them in order.
+  - name: DT
+    type: WIRE
+    pins:
+      - x: 0
+        y: 14.4
+        ref_to: DT
+  - name: SCK
+    type: WIRE
+    pins:
+      - x: 0
+        y: 28.8
+        ref_to: SCK
+  - name: VIN
+    type: WIRE
+    pins:
+      - x: 0
+        y: 43.2
+        ref_to: VCC
+compatibility:
+  - name: Weight
+    action:
+      - name: Set zero weight
+      - name: Set scale
+        parameter:
+          - name: scale
+            constraint:
+              min: -50000
+              max: 50000
+              unit: NOT_SPECIFIED
+    condition:
+      - name: Compare
+    value:
+      - name: Weight
+        constraint:
+          min: -200
+          max: 200
+          unit: KILOGRAM
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_HX711
+    library_dependency:
+    - 'bogde/HX711-0.7.3'
+  - platform: ARDUINO_ESP8266
+    classname: MP_HX711
+    library_dependency:
+    - 'bogde/HX711-0.7.3'
+  - platform: ARDUINO_ESP32
+    classname: MP_HX711
+    library_dependency:
+    - 'bogde/HX711-0.7.3'
