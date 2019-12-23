@@ -3,8 +3,8 @@ brand: Generic
 model: HX711 with 4 load cells
 url: ''
 type: MODULE
-width: 256
-height: 132
+width: 136
+height: 90.7
 pin_template: GENERIC_HX711
 property:
   - name: scale
@@ -19,27 +19,27 @@ connection_consume:
   - name: GND
     type: WIRE
     pins:
-      - x: 0
-        y: 0
+      - x: 126.9
+        y: 23.6
         ref_to: GND
   # The order of DT and SCK pins will affect to the codegen. Do keeping them in order.
   - name: DT
     type: WIRE
     pins:
-      - x: 0
-        y: 14.4
+      - x: 126.9
+        y: 38
         ref_to: DT
   - name: SCK
     type: WIRE
     pins:
-      - x: 0
-        y: 28.8
+      - x: 126.9
+        y: 52.4
         ref_to: SCK
   - name: VIN
     type: WIRE
     pins:
-      - x: 0
-        y: 43.2
+      - x: 126.9
+        y: 66.8
         ref_to: VCC
 compatibility:
   - name: Weight
