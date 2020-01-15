@@ -156,7 +156,8 @@
         "Analog (In)",
         "Digital (In)",
         "Digital (Out)",
-        "PWM (Out)"
+        "PWM (Out)",
+        "MP3 Player"
       ]
     },
     "action_condition": {
@@ -246,7 +247,20 @@
         "Set Color",
         "Fill Color",
         "Set Brightness",
-        "Clear"
+        "Clear",
+        "Play MP3",
+        "Play Next MP3",
+        "Play Previous MP3",
+        "Pause",
+        "Start from pause",
+        "Enable Loop",
+        "Enable Loop All",
+        "Disable Loop",
+        "Disable Loop All",
+        "Set Volume",
+        "Volume Up",
+        "Volume Down",
+        "Set EQ"
       ]
     },
     "values": {
@@ -307,7 +321,10 @@
         "Min",
         "Max",
         "Text",
-        "Intensity"
+        "Intensity",
+        "Volume",
+        "FileCount",
+        "CurrentFileNumber"
       ]
     },
     "units": {
