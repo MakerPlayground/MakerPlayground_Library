@@ -1,0 +1,68 @@
+id: Plantower-PMS7003
+brand: Plantower
+model: PMS7003 - laser dust sensor
+url: http://www.plantower.com/en/content/?110.html
+type: MODULE
+width: 312
+height: 264
+pin_template: GENERIC_SOFTSERIAL_3v3_5
+connection_consume:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 69
+        y: 264
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 81
+        y: 264
+        ref_to: GND
+  - name: TX
+    type: WIRE
+    pins:
+      - x: 45
+        y: 264
+        ref_to: TX
+  - name: RX
+    type: WIRE
+    pins:
+      - x: 57
+        y: 264
+        ref_to: RX
+compatibility:
+  - name: Dust
+    condition:
+      - name: Compare
+        parameter: []
+      - name: Data is valid
+        parameter: []
+      - name: Data is not valid
+        parameter: []
+    value:
+      - name: Atmospheric PM 1.0
+        constraint:
+          min: 0
+          max: 1000
+          unit: MICROGRAMS_PER_CUBIC_METER
+      - name: Atmospheric PM 2.5
+        constraint:
+          min: 0
+          max: 1000
+          unit: MICROGRAMS_PER_CUBIC_METER
+      - name: Atmospheric PM 10
+        constraint:
+          min: 0
+          max: 1000
+          unit: MICROGRAMS_PER_CUBIC_METER
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_PMS7003
+    library_dependency:
+      - fu-hsi/PMS-1.1.0
+  - platform: ARDUINO_ESP8266
+    classname: MP_PMS7003
+    library_dependency:
+      - fu-hsi/PMS-1.1.0
+      - plerup/espsoftwareserial-3.4.2
