@@ -13,21 +13,21 @@ int MP_IR_REFLECTOR::init()
 
 bool MP_IR_REFLECTOR::isDetected()
 {
-	return isDetected;
+	return detected;
 }
 
 bool MP_IR_REFLECTOR::isNotDetected()
 {
-	return !isDetected;
+	return !detected;
 }
 
 void MP_IR_REFLECTOR::update(unsigned long current_time)
 {
-    isDetected = (digitalRead(pin) == LOW);
+    detected = (digitalRead(pin) == LOW);
 }
 
 void MP_IR_REFLECTOR::printStatus()
 {
     Serial.print(F("Obstrucle is "));
-    Serial.println(isDetected ? "detected" : "not detected");
+    Serial.println(detected ? "detected" : "not detected");
 }

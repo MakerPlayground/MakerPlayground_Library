@@ -16,5 +16,6 @@ public:
 
 private:
 	uint8_t pin;
+	bool detected;
 };
 #endif
