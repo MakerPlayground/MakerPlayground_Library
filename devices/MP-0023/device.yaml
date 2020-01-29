@@ -1,0 +1,42 @@
+id: MP-0023
+brand: Maker Playground
+model: Non-invasive AC Current Sensor (30A max)
+url: ''
+type: MODULE
+width: 51
+height: 51
+property: []
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: MAKER_PLAYGROUND
+    pins:
+      - x: 0
+        y: 0
+        ref_to: GND
+      - x: 10
+        y: 0
+        ref_to: VCC
+      - x: 20
+        y: 0
+        ref_to: NC
+      - x: 30
+        y: 0
+        ref_to: SIG
+compatibility:
+  - name: Current
+    condition:
+      - name: Compare
+    value:
+      - name: Ampere
+        constraint:
+          min: 0
+          max: 30
+          unit: AMPERE
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_SCT013_30A
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_SCT013_30A_ESP32
+    library_dependency: []
