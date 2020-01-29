@@ -3,25 +3,25 @@ brand: Maker Playground
 model: Non-invasive AC Current Sensor (30A max)
 url: ''
 type: MODULE
-width: 51
-height: 51
+width: 230
+height: 404
 property: []
 pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 0
-        y: 0
+      - x: 171
+        y: 404
         ref_to: GND
-      - x: 10
-        y: 0
+      - x: 171
+        y: 404
         ref_to: VCC
-      - x: 20
-        y: 0
+      - x: 171
+        y: 404
         ref_to: NC
-      - x: 30
-        y: 0
+      - x: 171
+        y: 404
         ref_to: SIG
 compatibility:
   - name: Current
