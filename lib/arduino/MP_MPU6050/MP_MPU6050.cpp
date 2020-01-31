@@ -75,7 +75,7 @@ double MP_MPU6050::getAccel_X()
 	return accel_x;
 }
 
-double MP_MPU6050::getAcces_Y()
+double MP_MPU6050::getAccel_Y()
 {
 	return accel_y;
 }
