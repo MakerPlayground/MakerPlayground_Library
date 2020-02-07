@@ -27,10 +27,10 @@ connection_provide:
         ref_to: VCC
       - x: 70
         y: 297
-        ref_to: "PD3"
+        ref_to: "PD2"
       - x: 75
         y: 307
-        ref_to: "PD2"
+        ref_to: "PD3"
   - name: D2
     type: MAKER_PLAYGROUND
     pins:
@@ -42,10 +42,10 @@ connection_provide:
         ref_to: VCC
       - x: 32
         y: 230
-        ref_to: "PD5"
+        ref_to: "PD4"
       - x: 37
         y: 240
-        ref_to: "PD4"
+        ref_to: "PD5"
   - name: D3
     type: MAKER_PLAYGROUND
     pins:
@@ -132,10 +132,10 @@ connection_provide:
         ref_to: VCC
       - x: 360
         y: 113
-        ref_to: "PE1"
+        ref_to: "PE0"
       - x: 355
         y: 103
-        ref_to: "PE0"
+        ref_to: "PE1"
   - name: I2C (#1)
     type: MAKER_PLAYGROUND
     pins:
