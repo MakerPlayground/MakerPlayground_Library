@@ -53,8 +53,7 @@ void MP_RGB_LED::off()
 
 void MP_RGB_LED::startFrame()
 {
-	digitalWrite(data,LOW);
-	digitalWrite(clk,LOW);
+	init();
 	transfer(0);
 	transfer(0);
 	transfer(0);
@@ -71,11 +70,11 @@ void MP_RGB_LED::sendColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t bri
 
 void MP_RGB_LED::endFrame(uint16_t count)
 {
-	transfer(0xFF);
-	for (uint16_t i = 0 ; i < 5 + count / 16; i++)
-	{
-		transfer(0);
-	}
+	for (uint16_t i = 0; i < (count + 14)/16; i++)
+    {
+        transfer(0);
+    }
+    init();
 }
 
 void MP_RGB_LED::transfer(uint8_t b)
