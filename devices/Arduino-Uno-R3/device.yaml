@@ -184,8 +184,6 @@ integrated_devices:
     integrated_connection:
       - ref_to: SIG
         host_ref_to: PB5
-      - ref_to: VCC
-        host_ref_to: VCC
       - ref_to: GND
         host_ref_to: GND
     compatibility:
