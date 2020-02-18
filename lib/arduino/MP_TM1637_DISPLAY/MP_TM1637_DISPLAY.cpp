@@ -26,10 +26,17 @@ void MP_TM1637_DISPLAY::printStatus()
 	Serial.println(this->brightness);
 }
 
+void MP_TM1637_DISPLAY::showTwoIntWithColon(int8_t beforeColon, int8_t afterColon)
+{
+	data = beforeColon * 100 + afterColon;
+	display.setBrightness(brightness, true);
+	display.showNumberDec((int) data);
+}
+
 void MP_TM1637_DISPLAY::showData(double value)
 {
 	data = value;
-	display.setBrightness(brightness,true);
+	display.setBrightness(brightness, true);
 	display.showNumberDec((int) value);
 }
 

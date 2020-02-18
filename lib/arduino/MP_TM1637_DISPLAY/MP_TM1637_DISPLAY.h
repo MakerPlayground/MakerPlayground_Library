@@ -13,6 +13,7 @@ public:
 	void printStatus();
 
 	// void showValue(double value);
+	void showTwoIntWithColon(int8_t beforeColon, int8_t afterColon);
 	void showData(double value);
 	void setBrightness(char c[]);
 	void off();
