@@ -17,201 +17,201 @@ cloud_provide:
   classname: MP_AZURE_ESP
   library_dependency: []
 pin_template: ESP_32
-width: 174
-height: 369
+width: 369
+height: 174
 property: []
 connection_provide:
-  - name: VCC
+  - name: VCC0
     type: WIRE
     pins:
-      - x: 184     
-        y: 51
+      - x: 51     
+        y: 26
         ref_to: VCC
   - name: "21"
     type: WIRE
     pins:
-      - x: 184
-        y: 56
+      - x: 66
+        y: 26
         ref_to: "21"
   - name: "22"
     type: WIRE
     pins:
-      - x: 184
-        y: 79
+      - x: 80
+        y: 26
         ref_to: "22"
   - name: "33"
     type: WIRE
     pins:
-      - x: 184
-        y: 93
+      - x: 94
+        y: 26
         ref_to: "33"
-  - name: GND
+  - name: GND0
     type: WIRE
     pins:
-      - x: 184
-        y: 108
+      - x: 109
+        y: 26
         ref_to: GND
   - name: "25"
     type: WIRE
     pins:
-      - x: 184
-        y: 122
+      - x: 123
+        y: 26
         ref_to: "25"
   - name: "27"
     type: WIRE
     pins:
-      - x: 184
-        y: 138
+      - x: 138
+        y: 26
         ref_to: "27"
   - name: "14"
     type: WIRE
     pins:
-      - x: 184
-        y: 151
+      - x: 152
+        y: 26
         ref_to: "14"
-  - name: VCC
+  - name: VCC1
     type: WIRE
     pins:
-      - x: 184
-        y: 165
+      - x: 167
+        y: 26
         ref_to: VCC
   - name: "23"
     type: WIRE
     pins:
-      - x: 184
-        y: 179
+      - x: 180
+        y: 26
         ref_to: "23"
   - name: "19"
     type: WIRE
     pins:
-      - x: 184
-        y: 195
+      - x: 195
+        y: 26
         ref_to: "19"
   - name: "18"
     type: WIRE
     pins:
-      - x: 184
-        y: 209
+      - x: 210
+        y: 26
         ref_to: "18"
-  - name: GND
+  - name: GND1
     type: WIRE
     pins:
-      - x: 184
-        y: 223
+      - x: 224
+        y: 26
         ref_to: GND
   - name: "39"
     type: WIRE
     pins:
-      - x: 184        
-        y: 301
+      - x: 310        
+        y: 26
         ref_to: "39"
-  - name: GND
+  - name: GND2
     type: WIRE
     pins:
-      - x: 184        
-        y: 325
+      - x: 325        
+        y: 26
         ref_to: GND
   - name: VIN0
     type: WIRE
     pins:
-      - x: 163        
-        y: 51
+      - x: 51
+        y: 12        
         ref_to: VIN
   - name: VIN1
     type: WIRE
     pins:
-      - x: 163
-        y: 56
+      - x: 66
+        y: 12
         ref_to: VIN
-  - name: GND
+  - name: GND3
     type: WIRE
     pins:
-      - x: 163
-        y: 79
+      - x: 80
+        y: 12
         ref_to: GND
   - name: "32"
     type: WIRE
     pins:
-      - x: 163     
-        y: 93
+      - x: 94
+        y: 12
         ref_to: "32"
   - name: "34"
     type: WIRE
     pins:
-      - x: 163        
-        y: 108
+      - x: 109
+        y: 12        
         ref_to: "34"
   - name: "26"
     type: WIRE
     pins:
-      - x: 163        
-        y: 122
+      - x: 123
+        y: 12        
         ref_to: "26"
-  - name: "GND"
+  - name: "GND4"
     type: WIRE
     pins:
-      - x: 163
-        y: 138
+      - x: 138
+        y: 12
         ref_to: "GND"
   - name: "13"
     type: WIRE
     pins:
-      - x: 163
-        y: 151
+      - x: 152
+        y: 12
         ref_to: "13"
   - name: "15"
     type: WIRE
     pins:
-      - x: 163
-        y: 165
+      - x: 167
+        y: 12
         ref_to: "15"
-  - name: "GND"
+  - name: "GND5"
     type: WIRE
     pins:
-      - x: 163
-        y: 179
+      - x: 180
+        y: 12
         ref_to: "GND"
   - name: "0"
     type: WIRE
     pins:
-      - x: 163
-        y: 195
+      - x: 195
+        y: 12
         ref_to: "0"
   - name: "5"
     type: WIRE
     pins:
-      - x: 163
-        y: 209
+      - x: 210
+        y: 12
         ref_to: "5"
   - name: "4"
     type: WIRE
     pins:
-      - x: 163
-        y: 223
+      - x: 224
+        y: 12
         ref_to: "4"
-  - name: "GND"
+  - name: "GND6"
     type: WIRE
     pins:
-      - x: 163
-        y: 252
+      - x: 253
+        y: 12
         ref_to: "GND"
-  - name: "GND"
+  - name: "GND7"
     type: WIRE
     pins:
-      - x: 163
-        y: 281
+      - x: 282
+        y: 12
         ref_to: "GND"
   - name: "36"
     type: WIRE
     pins:
-      - x: 163
-        y: 301
+      - x: 310
+        y: 12
         ref_to: "36"
   - name: "35"
     type: WIRE
     pins:
-      - x: 163
-        y: 325
+      - x: 325
+        y: 12
         ref_to: "35"
 integrated_devices:
 - name: Built in IO2
