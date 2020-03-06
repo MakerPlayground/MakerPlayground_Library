@@ -1,0 +1,242 @@
+id: LogiSenses-Senses_Weizen-ESP32
+brand: LogiSenses
+model: Esp32 Senses Weizen
+url: https://www.sensesiot.com
+type: CONTROLLER
+pio_boardid: esp32dev
+cloud_provide:
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/blynk-library
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+pin_template: ESP_32
+width: 174
+height: 369
+property: []
+connection_provide:
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 184     
+        y: 51
+        ref_to: VCC
+  - name: "21"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 56
+        ref_to: "21"
+  - name: "22"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 79
+        ref_to: "22"
+  - name: "33"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 93
+        ref_to: "33"
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 184
+        y: 108
+        ref_to: GND
+  - name: "25"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 122
+        ref_to: "25"
+  - name: "27"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 138
+        ref_to: "27"
+  - name: "14"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 151
+        ref_to: "14"
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 184
+        y: 165
+        ref_to: VCC
+  - name: "23"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 179
+        ref_to: "23"
+  - name: "19"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 195
+        ref_to: "19"
+  - name: "18"
+    type: WIRE
+    pins:
+      - x: 184
+        y: 209
+        ref_to: "18"
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 184
+        y: 223
+        ref_to: GND
+  - name: "39"
+    type: WIRE
+    pins:
+      - x: 184        
+        y: 301
+        ref_to: "39"
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 184        
+        y: 325
+        ref_to: GND
+  - name: VIN0
+    type: WIRE
+    pins:
+      - x: 163        
+        y: 51
+        ref_to: VIN
+  - name: VIN1
+    type: WIRE
+    pins:
+      - x: 163
+        y: 56
+        ref_to: VIN
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 163
+        y: 79
+        ref_to: GND
+  - name: "32"
+    type: WIRE
+    pins:
+      - x: 163     
+        y: 93
+        ref_to: "32"
+  - name: "34"
+    type: WIRE
+    pins:
+      - x: 163        
+        y: 108
+        ref_to: "34"
+  - name: "26"
+    type: WIRE
+    pins:
+      - x: 163        
+        y: 122
+        ref_to: "26"
+  - name: "GND"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 138
+        ref_to: "GND"
+  - name: "13"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 151
+        ref_to: "13"
+  - name: "15"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 165
+        ref_to: "15"
+  - name: "GND"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 179
+        ref_to: "GND"
+  - name: "0"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 195
+        ref_to: "0"
+  - name: "5"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 209
+        ref_to: "5"
+  - name: "4"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 223
+        ref_to: "4"
+  - name: "GND"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 252
+        ref_to: "GND"
+  - name: "GND"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 281
+        ref_to: "GND"
+  - name: "36"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 301
+        ref_to: "36"
+  - name: "35"
+    type: WIRE
+    pins:
+      - x: 163
+        y: 325
+        ref_to: "35"
+integrated_devices:
+- name: Built in IO2
+  pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+  integrated_connection:
+    - ref_to: SIG
+      host_ref_to: "2"
+    - ref_to: GND
+      host_ref_to: GND
+  compatibility:
+    - name: LED
+      action:
+        - name: 'On'
+          parameter:
+            - name: Brightness
+              constraint:
+                min: 0.0
+                max: 100.0
+                unit: PERCENT
+        - name: 'Off'
+  platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_LED_AH
+      library_dependency: []
+platforms:
+- platform: ARDUINO_ESP32
+  classname: ''
+  library_dependency: []
