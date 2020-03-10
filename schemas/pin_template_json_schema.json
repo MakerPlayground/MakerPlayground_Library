@@ -40,7 +40,22 @@
         "AREF",
         "RS485_Negative",
         "RS485_Positive",
-        "NO_FUNCTION"
+        "NO_FUNCTION",
+        "CSI1",
+        "CSI2",
+        "CSI3",
+        "CSI4",
+        "CSI5",
+        "CSI6",
+        "CSI7",
+        "CSI8",
+        "CSI9",
+        "CSI10",
+        "CSI11",
+        "CSI12",
+        "CSI13",
+        "CSI14",
+        "CSI15"
       ]
     },
     "voltage_level": {

@@ -27,11 +27,15 @@ class MP_HC_SR04(MP_Device):
             time.sleep(0.000010)
             self.pi.write(self.trig, pigpio.LOW)
             
+            beforeTime = time.time()
             startTime = stopTime = 0
 
             # save startTime
             while self.pi.read(self.echo) == pigpio.LOW:
                 startTime = time.time()
+                if startTime - beforeTime < 0.3:
+                    self.cm = 0
+                    return
 
             # save time of arrival
             while self.pi.read(self.echo) == pigpio.HIGH and stopTime - startTime < MP_HC_SR04.timeout:

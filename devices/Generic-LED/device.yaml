@@ -43,5 +43,5 @@ platforms:
     classname: MP_LED_AH
     library_dependency: []
   - platform: RASPBERRYPI
-    classname: MP_LED_AH
+    classname: MP_PWM_LED_AH
     library_dependency: []

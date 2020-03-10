@@ -1,16 +1,15 @@
 pins:
   - pin_name: '1'
     voltage_level: LEVEL_3v3
-    function: VCC
+    pin_function: VCC
     
   - pin_name: '2'
     voltage_level: LEVEL_5
-    function: VCC
+    pin_function: VCC
     
   - pin_name: '3'
-    coding_name:
-      - '2'
-    function:
+    coding_name: '2'
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
@@ -19,14 +18,13 @@ pins:
 
   - pin_name: '4'
     voltage_level: LEVEL_5
-    function:
+    pin_function:
       - VCC
 
   - pin_name: '5'
-    coding_name:
-      - '3'
+    coding_name: '3'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
@@ -34,23 +32,21 @@ pins:
 
   - pin_name: '6'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
     
   - pin_name: '7'
-    coding_name:
-      - '4'
+    coding_name: '4'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '8'
-    coding_name:
-      - '14'
+    coding_name: '14'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - HW_SERIAL_TX
       - DIGITAL_IN
       - DIGITAL_OUT
@@ -58,88 +54,80 @@ pins:
 
   - pin_name: '9'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
     
   - pin_name: '10'
-    coding_name:
-      - '15'
+    coding_name: '15'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - HW_SERIAL_RX
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '11'
-    coding_name:
-      - '17'
+    coding_name: '17'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '12'
-    coding_name:
-      - '18'
+    coding_name: '18'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '13'
-    coding_name:
-      - '27'
+    coding_name: '27'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '14'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
     
   - pin_name: '15'
-    coding_name:
-      - '22'
+    coding_name: '22'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '16'
-    coding_name:
-      - '23'
+    coding_name: '23'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '17'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - VCC
 
   - pin_name: '18'
-    coding_name:
-      - '24'
+    coding_name: '24'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '19'
-    coding_name:
-      - '10'
+    coding_name: '10'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
@@ -147,150 +135,137 @@ pins:
 
   - pin_name: '20'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
 
   - pin_name: '21'
-    coding_name:
-      - '9'
+    coding_name: '9'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
       - MISO
 
   - pin_name: '22'
-    coding_name:
-      - '25'
+    coding_name: '25'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '23'
-    coding_name:
-      - '11'
+    coding_name: '11'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
       - SCK
 
   - pin_name: '24'
-    coding_name:
-      - '8'
+    coding_name: '8'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '25'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
 
   - pin_name: '26'
-    coding_name:
-      - '7'
+    coding_name: '7'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '27'
-    function:
+    pin_function:
       - NO_FUNCTION
     voltage_level: LEVEL_3v3_5
 
   - pin_name: '28'
-    function:
+    pin_function:
       - NO_FUNCTION
     voltage_level: LEVEL_3v3_5
 
   - pin_name: '29'
-    coding_name:
-      - '5'
+    coding_name: '5'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '30'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
 
   - pin_name: '31'
-    coding_name:
-      - '6'
+    coding_name: '6'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '32'
-    coding_name:
-      - '12'
+    coding_name: '12'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '33'
-    coding_name:
-      - '13'
+    coding_name: '13'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '34'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
 
   - pin_name: '35'
-    coding_name:
-      - '19'
+    coding_name: '19'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
       - MISO1
 
   - pin_name: '36'
-    coding_name:
-      - '16'
+    coding_name: '16'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
     
   - pin_name: '37'
-    coding_name:
-      - '26'
+    coding_name: '26'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
 
   - pin_name: '38'
-    coding_name:
-      - '20'
+    coding_name: '20'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
@@ -298,14 +273,13 @@ pins:
 
   - pin_name: '39'
     voltage_level: LEVEL_3v3_5
-    function:
+    pin_function:
       - GND
 
   - pin_name: '40'
-    coding_name:
-      - '21'
+    coding_name: '21'
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - DIGITAL_IN
       - DIGITAL_OUT
       - PWM_OUT
@@ -313,75 +287,76 @@ pins:
 
   - pin_name: CSI1
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI1
 
   - pin_name: CSI2
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI2
 
   - pin_name: CSI3
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI3
 
   - pin_name: CSI4
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI4
 
   - pin_name: CSI5
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI5
 
   - pin_name: CSI6
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI6
 
   - pin_name: CSI7
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI7
 
   - pin_name: CSI8
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI8
 
   - pin_name: CSI9
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI9
 
   - pin_name: CSI10
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI10
 
   - pin_name: CSI11
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI11
 
   - pin_name: CSI12
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI12
 
   - pin_name: CSI13
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI13
 
   - pin_name: CSI14
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI14
 
   - pin_name: CSI15
     voltage_level: LEVEL_3v3
-    function:
+    pin_function:
       - CSI15
+      
