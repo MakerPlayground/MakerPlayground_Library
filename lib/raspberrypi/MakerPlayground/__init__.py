@@ -1,6 +1,7 @@
 import time
+import signal
+import functools
 import pigpio
-import netifaces
 import asyncio
 import websockets
 
@@ -10,13 +11,6 @@ class Expr:
         self.value = value
         self.interval = interval
         self.latestUpdateTime = latestUpdateTime
-
-def get_ipv4_list():
-    ipv4_list = []
-    for interface in netifaces.interfaces():
-        for link in netifaces.ifaddresses(interface)[netifaces.AF_INET]:
-            ipv4_list.append(link['addr'])
-    return ipv4_list
 
 def create_receive_cmd(do_action_fn):
     if do_action_fn is None:
@@ -57,21 +51,57 @@ class InteractiveServer:
 
     @staticmethod
     def start(do_action_fn=None, message_fn=None):
-        for ipv4 in get_ipv4_list():
-            print(f"running on {ipv4}:6213")
-            asyncio.get_event_loop().run_until_complete(websockets.serve(create_ws_handler(do_action_fn, message_fn, InteractiveServer.m_delay), ipv4, 6213))
+        # for ipv4 in get_ipv4_list():
+            # print(f"running on {ipv4}:6213")
+        asyncio.get_event_loop().run_until_complete(websockets.serve(create_ws_handler(do_action_fn, message_fn, InteractiveServer.m_delay), None, 6213))
         asyncio.get_event_loop().run_forever()
 
 class MPRunner:
 
     m_delay = 1      # message log delay (second)
+    message_fn = lambda: 'Message is not set yet'
 
     @staticmethod
-    def start(main_fn, message_log_fn):
-        for ipv4 in get_ipv4_list():
-            asyncio.get_event_loop().run_until_complete(websockets.serve(create_ws_handler(None, message_log_fn, MPRunner.m_delay), ipv4, 6213))
-        asyncio.get_event_loop().run_until_complete(main_fn())
-        asyncio.get_event_loop().run_forever()
+    def log(msg):
+        asyncio.get_event_loop().call_soon(functools.partial(print, msg, flush=True)) 
+
+    @staticmethod
+    async def handler(websocket, path):
+        MPRunner.log(f"New monitor connected from {websocket.remote_address}")
+        try:
+            while True:
+                msg = MPRunner.message_fn()
+                await websocket.send(msg)
+                await asyncio.sleep(MPRunner.m_delay)
+        except websockets.exceptions.ConnectionClosedOK:
+            MPRunner.log(f"Connection {websocket.remote_address} is closed")
+
+    @staticmethod
+    async def device_monitor_server(stop):
+        async with websockets.serve(MPRunner.handler, None, 6213) as server:
+            await stop
+            server.close()
+            await server.wait_closed()
+
+    @staticmethod
+    async def server_with_main(main_fn):
+        loop = asyncio.get_event_loop()
+        stop = loop.create_future()
+
+        loop.add_signal_handler(signal.SIGINT, lambda: stop.set_result(None))
+
+        main_future = asyncio.ensure_future(main_fn())
+        server_future = asyncio.ensure_future(MPRunner.device_monitor_server(stop))
+
+        _, pending = await asyncio.wait([main_future, server_future], return_when=asyncio.FIRST_COMPLETED)
+        for task in pending:
+            task.cancel()
+
+    @staticmethod
+    def start(main_fn, message_log_fn=None):
+        if message_log_fn is not None:
+            MPRunner.message_fn = message_log_fn
+        asyncio.run(MPRunner.server_with_main(main_fn))
 
 class MP:
     currentNode = lambda: None
@@ -144,24 +174,28 @@ class MP:
     def map(x: float, in_min: float, in_max: float, out_min: float, out_max: float):
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
-# if __name__ == '__main__':
-#     def do_action(message):
-#         print(message)
-#     def gen_message():
-#         ret_val = "'aaaa'"
-#         for device_name, device in MP.devices.items():
-#             ret_val += "[[{0}]] {1}\0".format(device_name, device.getStatus())
-#         print(ret_val)
-#         return ret_val
-#     async def do_something():
-#         pass
-#     async def main():
-#         while(True):
-#             await asyncio.sleep(0)
-#             MP.update()
-#             time.sleep(1)
-#             print(444)
+if __name__ == '__main__':
 
-#     MPRunner.start(main, gen_message)
-#     # # TODO: allow only one interactive session, close the connection after the websocket is closed.
-#     # InteractiveServer.start(do_action_fn=do_action, message_fn=gen_message)
+    def do_action(message):
+        print(message)
+
+    def gen_message():
+        ret_val = "'test_message: '"
+        for device_name, device in MP.devices.items():
+            ret_val += "[[{0}]] {1}\0".format(device_name, device.getStatus())
+        print(ret_val)
+        return ret_val
+
+    async def do_something():
+        pass
+
+    async def main():
+        while(True):
+            await asyncio.sleep(0)
+            MP.update()
+            print("main is running")
+
+    MPRunner.start(main, gen_message)
+    # MPRunner.start(main)
+    # # TODO: allow only one interactive session, close the connection after the websocket is closed.
+    # InteractiveServer.start(do_action_fn=do_action, message_fn=gen_message)
