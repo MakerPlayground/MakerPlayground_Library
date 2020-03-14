@@ -1,0 +1,36 @@
+id: M5Stack-Relay
+brand: M5Stack
+model: Relay
+url: https://www.seeedstudio.com/Grove-Relay-p-769.html
+type: MODULE
+width: 138
+height: 271
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 265.5
+        ref_to: GND
+      - x: 64
+        y: 265.5
+        ref_to: VCC
+      - x: 75
+        y: 265.5
+        ref_to: SIG
+      - x: 86.5
+        y: 265.5
+        ref_to: NC
+compatibility:
+  - name: Relay Module
+    action:
+      - name: 'On'
+        parameter: []
+      - name: 'Off'
+        parameter: []
+    value: []
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_RELAY
+  library_dependency: []
