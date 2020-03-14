@@ -1,0 +1,38 @@
+id: M5Stack-Angle
+brand: M5Stack
+model: Angle
+url: https://docs.m5stack.com/#/en/unit/angle
+type: MODULE
+width: 138
+height: 184
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 178
+        ref_to: GND
+      - x: 64
+        y: 178
+        ref_to: VCC
+      - x: 75
+        y: 178
+        ref_to: NC
+      - x: 86.5
+        y: 178
+        ref_to: SIG
+compatibility:
+  - name: POT
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_TRIMPOT
+  library_dependency: []

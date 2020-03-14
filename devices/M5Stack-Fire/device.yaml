@@ -228,30 +228,30 @@ integrated_devices:
       - platform: ARDUINO_ESP32
         classname: MP_BUTTON_AL
         library_dependency: []
-  - name: Integrated LED Bar
-    pin_template: GENERIC_PWM_ACTUATOR_3v3
-    integrated_connection:
-      - ref_to: VCC
-        host_ref_to: VCC 
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: "15"
-    compatibility:
-      - name: LED
-        action:
-          - name: 'On'
-            parameter:
-              - name: Brightness
-                constraint:
-                  min: 0.0
-                  max: 100.0
-                  unit: PERCENT
-          - name: 'Off'
-    platforms:
-      - platform: ARDUINO_ESP32
-        classname: MP_LED_AH
-        library_dependency: []
+  # - name: Integrated LED Bar
+  #   pin_template: GENERIC_PWM_ACTUATOR_3v3
+  #   integrated_connection:
+  #     - ref_to: VCC
+  #       host_ref_to: VCC 
+  #     - ref_to: GND
+  #       host_ref_to: GND
+  #     - ref_to: SIG
+  #       host_ref_to: "15"
+  #   compatibility:
+  #     - name: LED
+  #       action:
+  #         - name: 'On'
+  #           parameter:
+  #             - name: Brightness
+  #               constraint:
+  #                 min: 0.0
+  #                 max: 100.0
+  #                 unit: PERCENT
+  #         - name: 'Off'
+  #   platforms:
+  #     - platform: ARDUINO_ESP32
+  #       classname: MP_LED_AH
+  #       library_dependency: []
   - name: Integrated Microphone
     pin_template: GENERIC_ANALOG_SENSOR_3v3
     integrated_connection: 
