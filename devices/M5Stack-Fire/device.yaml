@@ -78,14 +78,15 @@ integrated_devices:
         host_ref_to: "23"
       - ref_to: CLK
         host_ref_to: "18"
-      - ref_to: CS_LCD
-        host_ref_to: "14"
-      - ref_to: DC
-        host_ref_to: "27"
-      - ref_to: RST
-        host_ref_to: "33"
-      - ref_to: BL
-        host_ref_to: "32"
+    #comment out because libeary fixed port
+      # - ref_to: CS_LCD
+      #   host_ref_to: "14"
+      # - ref_to: DC
+      #   host_ref_to: "27"
+      # - ref_to: RST
+      #   host_ref_to: "33"
+      # - ref_to: BL
+      #   host_ref_to: "32"
     compatibility:
       - name: Display
         action:
