@@ -1,0 +1,41 @@
+id: M5Stack-PIR
+brand: M5Stack
+model: PIR
+url: https://docs.m5stack.com/#/en/unit/pir
+type: MODULE
+formfactor: GROVE
+width: 138
+height: 184
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 178
+        ref_to: GND
+      - x: 64
+        y: 178
+        ref_to: VCC
+      - x: 75
+        y: 178
+        ref_to: SIG
+      - x: 86.5
+        y: 178
+        ref_to: NC
+compatibility:
+  - name: Presence
+    action:
+      - name: Detect Human
+        parameter:
+          - name: isDetected
+            constraint: []
+      - name: No Human
+        parameter:
+          - name: isNotDetected
+            constraint: []
+    value: []
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_PIR
+  library_dependency: []
