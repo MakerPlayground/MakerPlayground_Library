@@ -1,0 +1,35 @@
+id: M5Stack-Button
+brand: M5Stack
+model: Button
+url: https://docs.m5stack.com/#/en/unit/button
+type: MODULE
+width: 138
+height: 184
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 178
+        ref_to: GND
+      - x: 64
+        y: 178
+        ref_to: VCC
+      - x: 75
+        y: 178
+        ref_to: NC
+      - x: 86.5
+        y: 178
+        ref_to: SIG
+compatibility:
+  - name: Button
+    condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+    value: []
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_BUTTON_AL
+  library_dependency: []
