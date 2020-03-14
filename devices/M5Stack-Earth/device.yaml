@@ -1,0 +1,38 @@
+id: M5Stack-Earth
+brand: M5Stack
+model: Earth
+url: https://docs.m5stack.com/#/en/unit/earth
+type: MODULE
+width: 138
+height: 383
+pin_template: MP_SOIL
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 378.5
+        ref_to: GND
+      - x: 64
+        y: 378.5
+        ref_to: VCC
+      - x: 75
+        y: 378.5
+        ref_to: SIG
+      - x: 86.5
+        y: 378.5
+        ref_to: EN
+compatibility:
+  - name: Soil Moisture
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_SOIL_MOISTURE_INV
+  library_dependency: []
