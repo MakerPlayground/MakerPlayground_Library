@@ -1,0 +1,69 @@
+id: M5Stack-ENV
+brand: M5Stack
+model: ENV
+url: https://docs.m5stack.com/#/en/unit/env
+type: MODULE
+width: 138
+height: 184
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 52.5 
+        y: 179
+        ref_to: GND
+      - x: 64
+        y: 179
+        ref_to: VCC
+      - x: 75
+        y: 179
+        ref_to: SDA
+      - x: 86.5
+        y: 179
+        ref_to: SCL
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: 20
+          max: 60
+          unit: CELSIUS
+  - name: Humidity
+    condition:
+      - name: Compare
+    value:
+      - name: Humidity
+        constraint:
+          min: 20
+          max: 95
+          unit: PERCENT
+  - name: Pressuremeter
+    condition:
+      - name: Compare
+    value:
+      - name: Pressure
+        constraint:
+          min: 300
+          max: 1100
+          unit: HECTOPASCAL
+  - name: Altimeter
+    condition:
+      - name: Compare
+    value:
+      - name: Altitude
+        constraint:
+          min: -698.43
+          max: 9165.37
+          unit: METER
+platforms:
+- platform: ARDUINO_ESP32
+  classname: MP_M5STACK_ENV
+  library_dependency:
+  - dplasa/dht
+  - adafruit/Adafruit_BMP280_Library-1.0.2
+  - adafruit/Adafruit_Sensor
+  - M5Stack/M5Stack-0.2.5
