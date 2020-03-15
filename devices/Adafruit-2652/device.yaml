@@ -1,6 +1,6 @@
 id: Adafruit-2652
 brand: Adafruit
-model: Adafruit BME280 I2C or SPI Temperature Humidity Pressure Sensor
+model: BME280 I2C or SPI Temperature Humidity Pressure Sensor
 url: https://www.adafruit.com/products/2652
 type: MODULE
 width: 100.8
