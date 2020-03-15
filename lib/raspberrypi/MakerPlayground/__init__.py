@@ -132,6 +132,7 @@ class MPRunner:
 class MP:
     currentNode = lambda: None
     devices = {}
+    memory = {}
     expressions = {}
     tasks = {}
     
