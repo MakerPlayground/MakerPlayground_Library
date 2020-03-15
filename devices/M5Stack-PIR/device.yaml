@@ -19,22 +19,15 @@ connection_consume:
         ref_to: VCC
       - x: 75
         y: 178
-        ref_to: SIG
+        ref_to: NC
       - x: 86.5
         y: 178
-        ref_to: NC
+        ref_to: SIG
 compatibility:
   - name: Presence
-    action:
+    condition:
       - name: Detect Human
-        parameter:
-          - name: isDetected
-            constraint: []
       - name: No Human
-        parameter:
-          - name: isNotDetected
-            constraint: []
-    value: []
 platforms:
 - platform: ARDUINO_ESP32
   classname: MP_PIR

@@ -66,3 +66,8 @@ platforms:
     library_dependency:
       - fu-hsi/PMS-1.1.0
       - plerup/espsoftwareserial-3.4.2
+  - platform: ARDUINO_ESP32
+    classname: MP_PMS7003
+    library_dependency:
+      - fu-hsi/PMS-1.1.0
+      - plerup/espsoftwareserial-master

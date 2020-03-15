@@ -55,16 +55,16 @@ connection_provide:
     type: GROVE
     pins:
       - x: 1
-        y: 188
+        y: 225
         ref_to: GND
       - x: 1
-        y: 202
+        y: 217
         ref_to: VCC
       - x: 1
-        y: 217
+        y: 202
         ref_to: "21"
-      - x: 225
-        y: 1
+      - x: 1
+        y: 188 
         ref_to: "22"
 integrated_devices:
   - name: Integrated TFT LCD

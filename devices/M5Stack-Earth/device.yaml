@@ -5,7 +5,7 @@ url: https://docs.m5stack.com/#/en/unit/earth
 type: MODULE
 width: 138
 height: 383
-pin_template: MP_SOIL
+pin_template: MP_SOIL_M5
 connection_consume:
   - name: Port
     type: GROVE
@@ -18,10 +18,10 @@ connection_consume:
         ref_to: VCC
       - x: 75
         y: 378.5
-        ref_to: SIG
+        ref_to: NC
       - x: 86.5
         y: 378.5
-        ref_to: EN
+        ref_to: SIGA
 compatibility:
   - name: Soil Moisture
     condition:
