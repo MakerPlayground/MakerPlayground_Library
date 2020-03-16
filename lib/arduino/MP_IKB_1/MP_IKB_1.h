@@ -5,14 +5,15 @@
 #include <Wire.h>
 
 #define IKB1_I2C_ADDR 0x48
-#define IKB1_MODE_OUTPUT 0x01
-#define IKB1_MODE_INPUT 0x02
+#define IKB1_INPUT_ONLY 0x00
+#define IKB1_OUTPUT_ONLY 0x01
+#define IKB1_BOTH 0x02
 
 class MP_IKB_1
 {
 public:
 
-	MP_IKB_1();
+	MP_IKB_1(uint8_t mode0, uint8_t mode1, uint8_t mode2, uint8_t mode3, uint8_t mode4, uint8_t mode5, uint8_t mode6, uint8_t mode7);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

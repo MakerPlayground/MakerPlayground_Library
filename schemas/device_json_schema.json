@@ -419,7 +419,8 @@
         "IMAGE",
         "AZURE_COGNITIVE_KEY",
         "AZURE_IOTHUB_KEY",
-        "RECORD"
+        "RECORD",
+        "STRING_INT_ENUM"
       ]
     },
     "controltype": {
@@ -483,7 +484,7 @@
         {
           "type": "array",
           "items": {
-            "type": ["string", "integer"]
+            "type": ["string", "integer", "object"]
           }
         }
       ]
