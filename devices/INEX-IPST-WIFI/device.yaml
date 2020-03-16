@@ -200,7 +200,7 @@ integrated_devices:
               - name: Brightness
           - name: Clear
             parameter: []
-  - name: Integrated OLED
+  - name: Integrated OLED Display
     pin_template: GENERIC_I2C_DEVICE_3v3
     integrated_connection:
       - ref_to: GND
