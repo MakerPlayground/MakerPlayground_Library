@@ -8,6 +8,8 @@
 #define IKB1_INPUT_ONLY 0x00
 #define IKB1_OUTPUT_ONLY 0x01
 #define IKB1_BOTH 0x02
+#define IKB1_MOTOR_FORWARD 1
+#define IKB1_MOTOR_BACKWARD 0
 
 class MP_IKB_1
 {
@@ -35,6 +37,10 @@ public:
     /* Servo */
     void moveServo(uint8_t channel, int degree);
     void freeServo(uint8_t channel);
+
+    /* DC Motor */
+    void motorOn(uint8_t channel, int direction, int percent);
+    void motorOff(uint8_t channel);
 
 private:
     double getA_Percent(uint8_t pin);

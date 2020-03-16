@@ -363,3 +363,36 @@ compatibility:
               - 4
               - 5
               - 6
+  - name: DC Motor Driver
+    description: An external module to drive the motor with enough current.
+    action:
+      - name: 'On'
+        funcname: 'on'
+        parameter:
+          - name: Channel
+            value: 1
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+          - name: Direction
+            value: Forward
+          - name: Speed
+            value: 100
+            constraint:
+              min: 0
+              max: 100
+              unit: PERCENT
+      - name: 'Off'
+        funcname: 'off'
+        parameter:
+          - name: Channel
+            value: 1
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+            datatype: INTEGER_ENUM
+            controltype: DROPDOWN

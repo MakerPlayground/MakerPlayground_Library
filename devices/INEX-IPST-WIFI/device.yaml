@@ -4,8 +4,8 @@ model: IPST Wifi
 url: ""
 type: CONTROLLER
 pio_boardid: esp32dev
-width: 316
-height: 522
+width: 324
+height: 572
 pin_template: ESP_32
 cloud_provide:
   - cloud_platform: NETPIE

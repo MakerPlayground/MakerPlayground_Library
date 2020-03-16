@@ -152,3 +152,25 @@ void MP_IKB_1::freeServo(uint8_t channel)
     Wire.write((uint8_t) -1);
     Wire.endTransmission();
 }
+
+void MP_IKB_1::motorOn(uint8_t channel, int direction, int percent)
+{
+    if (channel < 1 || channel > 4) { return; }
+    
+    uint8_t speed = percent;
+    if (direction == IKB1_MOTOR_BACKWARD) { speed *= -1; }
+    
+    Wire.beginTransmission(IKB1_I2C_ADDR);
+    Wire.write((byte) (0x20 | (1 << (channel-1))));
+    Wire.write((uint8_t) speed);
+    Wire.endTransmission();
+}
+
+void MP_IKB_1::motorOff(uint8_t channel)
+{
+    if (channel < 1 || channel > 4) { return; }
+    Wire.beginTransmission(IKB1_I2C_ADDR);
+    Wire.write((byte) (0x20 | (1 << (channel-1))));
+    Wire.write((uint8_t) 0);
+    Wire.endTransmission();
+}
