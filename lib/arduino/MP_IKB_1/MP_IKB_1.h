@@ -18,6 +18,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
+    /* GPIO */
     void digitalOut(uint8_t pin, uint8_t logic);
     bool isHigh(uint8_t pin);
     bool isLow(uint8_t pin);
@@ -30,6 +31,10 @@ public:
     double getA5_Percent();
     double getA6_Percent();
     double getA7_Percent();
+
+    /* Servo */
+    void moveServo(uint8_t channel, int degree);
+    void freeServo(uint8_t channel);
 
 private:
     double getA_Percent(uint8_t pin);
