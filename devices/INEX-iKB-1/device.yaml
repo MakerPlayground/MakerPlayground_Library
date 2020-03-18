@@ -105,22 +105,49 @@ platforms:
   - platform: ARDUINO_ESP32
     classname: MP_IKB_1
     library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_IKB_1
+    library_dependency: []
 connection_consume:
-  - name: I2C Bus
-    type: GROVE
+  - name: GND
+    type: WIRE
     pins:
       - x: 44
         y: 227
         ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
       - x: 44
         y: 216
         ref_to: VCC
+  - name: SDA
+    type: WIRE
+    pins:
       - x: 44
         y: 204
         ref_to: SDA
+  - name: SCL
+    type: WIRE
+    pins:
       - x: 44
         y: 193
         ref_to: SCL
+  # - name: I2C Bus
+  #   type: GROVE
+  #   pins:
+  #     - x: 44
+  #       y: 227
+  #       ref_to: GND
+  #     - x: 44
+  #       y: 216
+  #       ref_to: VCC
+  #     - x: 44
+  #       y: 204
+  #       ref_to: SDA
+  #     - x: 44
+  #       y: 193
+  #       ref_to: SCL
 connection_provide:
   - name: IO0
     type: INEX3

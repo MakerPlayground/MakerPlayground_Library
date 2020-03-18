@@ -22,14 +22,16 @@ class MPInteractive:
 
     @staticmethod
     def log(msg):
-        asyncio.get_event_loop().call_soon(functools.partial(print, msg, flush=True)) 
+        asyncio.get_event_loop().call_soon(functools.partial(print, str(msg), flush=True)) 
 
     @staticmethod
     async def receive_handler(websocket, path):
         try:
             async for message in websocket:
-                MPInteractive.action_fn(message)
-        except:
+                asyncio.get_event_loop().call_soon(functools.partial(MPInteractive.action_fn, message)) 
+                MPInteractive.log(message)
+        except Exception as ex:
+            MPInteractive.log(ex)
             MPInteractive.log(f"Receive handler for {websocket.remote_address} is stopped.")
 
     @staticmethod
@@ -39,7 +41,8 @@ class MPInteractive:
                 msg = MPInteractive.message_fn()
                 await websocket.send(msg)
                 await asyncio.sleep(MPInteractive.m_delay)
-        except:
+        except Exception as ex:
+            MPInteractive.log(ex)
             MPInteractive.log(f"Send handler for {websocket.remote_address} is stopped.")
 
     @staticmethod
@@ -135,6 +138,7 @@ class MP:
     memory = {}
     expressions = {}
     tasks = {}
+    c_args = {}
     
     latestLogTime = 0.
     currentTime = 0.
