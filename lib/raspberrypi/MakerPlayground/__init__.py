@@ -51,8 +51,8 @@ class MPInteractive:
         receive_cmd_future = asyncio.ensure_future(MPInteractive.receive_handler(websocket, path))
         send_cmd_future = asyncio.ensure_future(MPInteractive.send_handler(websocket, path))
         _, pending = await asyncio.wait([receive_cmd_future, send_cmd_future], return_when=asyncio.FIRST_COMPLETED)
-        for task in pending:
-            task.cancel()
+        # for task in pending:
+        #     task.cancel()
 
     @staticmethod
     async def server(stop):

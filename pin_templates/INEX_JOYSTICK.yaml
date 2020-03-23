@@ -1,0 +1,25 @@
+pins:
+  - pin_name: UP
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+  - pin_name: DOWN
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+  - pin_name: LEFT
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+  - pin_name: RIGHT
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+  - pin_name: CENTER
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+  - pin_name: GND
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - GND

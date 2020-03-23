@@ -1,0 +1,607 @@
+id: Raspberry-Pi-3-Model-B-Plus-with-leafHAT
+brand: Raspberry Pi
+model: 3 Model B+ with leafHAT
+url: https://inex.co.th/shop/leafhat-gpio.html
+type: CONTROLLER
+pio_boardid: ''
+width: 500
+height: 334
+pin_template: RASPBERRYPI_MODEL_B_PLUS
+connection_provide:
+  - name: 3V3 (1)
+    type: WIRE
+    pins:
+      - x: 43
+        y: 76
+        ref_to: '1'
+  - name: 5V (1)
+    type: WIRE
+    pins:
+      - x: 43
+        y: 68
+        ref_to: '2'
+  - name: '2'
+    type: WIRE
+    pins:
+      - x: 57
+        y: 76
+        ref_to: '3'
+  - name: 5V (2)
+    type: WIRE
+    pins:
+      - x: 57
+        y: 68
+        ref_to: '4'
+  - name: '3'
+    type: WIRE
+    pins:
+      - x: 72
+        y: 76
+        ref_to: '5'
+  - name: GND1
+    type: WIRE
+    pins:
+      - x: 72
+        y: 68
+        ref_to: '6'
+  - name: '4'
+    type: WIRE
+    pins:
+      - x: 86
+        y: 76
+        ref_to: '7'
+  - name: '14'
+    type: WIRE
+    pins:
+      - x: 86
+        y: 68
+        ref_to: '8'
+  - name: GND2
+    type: WIRE
+    pins:
+      - x: 102
+        y: 76
+        ref_to: '9'
+  - name: '15'
+    type: WIRE
+    pins:
+      - x: 102
+        y: 68
+        ref_to: '10'
+  - name: '17'
+    type: WIRE
+    pins:
+      - x: 116
+        y: 76
+        ref_to: '11'
+  - name: '18'
+    type: WIRE
+    pins:
+      - x: 116
+        y: 68
+        ref_to: '12'
+  - name: '27'
+    type: WIRE
+    pins:
+      - x: 130
+        y: 76
+        ref_to: '13'
+  - name: GND3
+    type: WIRE
+    pins:
+      - x: 130
+        y: 68
+        ref_to: '14'
+  - name: '22'
+    type: WIRE
+    pins:
+      - x: 144
+        y: 76
+        ref_to: '15'
+  - name: '23'
+    type: WIRE
+    pins:
+      - x: 144
+        y: 68
+        ref_to: '16'
+  - name: '3V3 (2)'
+    type: WIRE
+    pins:
+      - x: 159
+        y: 76
+        ref_to: '17'
+  - name: '24'
+    type: WIRE
+    pins:
+      - x: 159
+        y: 68
+        ref_to: '18'
+  - name: '10'
+    type: WIRE
+    pins:
+      - x: 174
+        y: 76
+        ref_to: '19'
+  - name: GND4
+    type: WIRE
+    pins:
+      - x: 174
+        y: 68
+        ref_to: '20'
+  - name: '9'
+    type: WIRE
+    pins:
+      - x: 189
+        y: 76
+        ref_to: '21'
+  - name: '25'
+    type: WIRE
+    pins:
+      - x: 189
+        y: 68
+        ref_to: '22'
+  - name: '11'
+    type: WIRE
+    pins:
+      - x: 203
+        y: 76
+        ref_to: '23'
+  - name: '8'
+    type: WIRE
+    pins:
+      - x: 203
+        y: 68
+        ref_to: '24'
+  - name: GND5
+    type: WIRE
+    pins:
+      - x: 218
+        y: 76
+        ref_to: '25'
+  - name: '7'
+    type: WIRE
+    pins:
+      - x: 218
+        y: 68
+        ref_to: '26'
+  - name: NOP1
+    type: WIRE
+    pins:
+      - x: 232
+        y: 76
+        ref_to: '27'
+  - name: NOP2
+    type: WIRE
+    pins:
+      - x: 232
+        y: 68
+        ref_to: '28'
+  - name: '5'
+    type: WIRE
+    pins:
+      - x: 247
+        y: 76
+        ref_to: '29'
+  - name: GND6
+    type: WIRE
+    pins:
+      - x: 247
+        y: 68
+        ref_to: '30'
+  - name: '6'
+    type: WIRE
+    pins:
+      - x: 262
+        y: 76
+        ref_to: '31'
+  - name: '12'
+    type: WIRE
+    pins:
+      - x: 262
+        y: 68
+        ref_to: '32'
+  - name: '13'
+    type: WIRE
+    pins:
+      - x: 276
+        y: 76
+        ref_to: '33'
+  - name: GND7
+    type: WIRE
+    pins:
+      - x: 276
+        y: 68
+        ref_to: '34'
+  - name: '19'
+    type: WIRE
+    pins:
+      - x: 291
+        y: 76
+        ref_to: '35'
+  - name: '16'
+    type: WIRE
+    pins:
+      - x: 291
+        y: 68
+        ref_to: '36'
+  - name: '26'
+    type: WIRE
+    pins:
+      - x: 305
+        y: 76
+        ref_to: '37'
+  - name: '20'
+    type: WIRE
+    pins:
+      - x: 305
+        y: 68
+        ref_to: '38'
+  - name: GND8
+    type: WIRE
+    pins:
+      - x: 320
+        y: 76
+        ref_to: '39'
+  - name: '21'
+    type: WIRE
+    pins:
+      - x: 320
+        y: 68
+        ref_to: '40'
+  - name: Camera
+    type: CSI
+    pins:
+      - x: 250.0
+        y: 211.0
+        ref_to: CSI1
+      - x: 250.0
+        y: 216.4
+        ref_to: CSI2
+      - x: 250.0
+        y: 221.8
+        ref_to: CSI3
+      - x: 250.0
+        y: 227.2
+        ref_to: CSI4
+      - x: 250.0
+        y: 232.6
+        ref_to: CSI4
+      - x: 250.0
+        y: 238.0
+        ref_to: CSI5
+      - x: 250.0
+        y: 243.4
+        ref_to: CSI6
+      - x: 250.0
+        y: 248.8
+        ref_to: CSI7
+      - x: 250.0
+        y: 254.2
+        ref_to: CSI8
+      - x: 250.0
+        y: 259.6
+        ref_to: CSI9
+      - x: 250.0
+        y: 265.0
+        ref_to: CSI10
+      - x: 250.0
+        y: 270.4
+        ref_to: CSI11
+      - x: 250.0
+        y: 275.8
+        ref_to: CSI12
+      - x: 250.0
+        y: 281.2
+        ref_to: CSI13
+      - x: 250.0
+        y: 286.6
+        ref_to: CSI14
+      - x: 250.0
+        y: 292.0
+        ref_to: CSI15
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 156
+        y: 148
+        ref_to: '6'
+  - name: 3V3
+    type: WIRE
+    pins:
+      - x: 171
+        y: 148
+        ref_to: '1'
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 188
+        y: 148
+        ref_to: '5'
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 201
+        y: 148
+        ref_to: '3'
+  - name: One Wire
+    type: INEX3
+    pins:
+      - x: 338
+        y: 241
+        ref_to: '6'
+      - x: 338
+        y: 228
+        ref_to: '7'
+      - x: 338
+        y: 217
+        ref_to: '1'
+  - name: D5
+    type: INEX3
+    pins:
+      - x: 338
+        y: 191
+        ref_to: '6'
+      - x: 338
+        y: 179
+        ref_to: '29'
+      - x: 338
+        y: 167
+        ref_to: '1'
+  - name: D27
+    type: INEX3
+    pins:
+      - x: 338
+        y: 141
+        ref_to: '6'
+      - x: 338
+        y: 129
+        ref_to: '13'
+      - x: 338
+        y: 118
+        ref_to: '1'
+  - name: D26
+    type: INEX3
+    pins:
+      - x: 338
+        y: 141
+        ref_to: '6'
+      - x: 338
+        y: 129
+        ref_to: '37'
+      - x: 338
+        y: 118
+        ref_to: '1'
+  - name: D25
+    type: INEX3
+    pins:
+      - x: 266
+        y: 141
+        ref_to: '6'
+      - x: 266
+        y: 129
+        ref_to: '22'
+      - x: 266
+        y: 118
+        ref_to: '1'
+  - name: D24
+    type: INEX3
+    pins:
+      - x: 228
+        y: 141
+        ref_to: '6'
+      - x: 228
+        y: 129
+        ref_to: '18'
+      - x: 228
+        y: 118
+        ref_to: '1'
+  - name: RXD
+    type: INEX3
+    pins:
+      - x: 130
+        y: 118
+        ref_to: '6'
+      - x: 130
+        y: 129
+        ref_to: '10'
+      - x: 130
+        y: 141
+        ref_to: '1'
+  - name: TXD
+    type: INEX3
+    pins:
+      - x: 90
+        y: 118
+        ref_to: '6'
+      - x: 90
+        y: 129
+        ref_to: '8'
+      - x: 90
+        y: 141
+        ref_to: '1'
+  - name: SDA Port
+    type: INEX3
+    pins:
+      - x: 56
+        y: 118
+        ref_to: '6'
+      - x: 56
+        y: 129
+        ref_to: '3'
+      - x: 56
+        y: 141
+        ref_to: '1'
+  - name: SCL Port
+    type: INEX3
+    pins:
+      - x: 56
+        y: 168
+        ref_to: '6'
+      - x: 56
+        y: 179
+        ref_to: '5'
+      - x: 56
+        y: 191
+        ref_to: '1'
+compatibility: []
+integrated_device:
+- name: Integrated Button
+  pin_template: GENERIC_DIGITAL_SENSOR_3v3
+  integrated_connection:
+    - ref_to: SIG
+      host_ref_to: '33'
+    - ref_to: VCC
+      host_ref_to: '1'
+    - ref_to: GND
+      host_ref_to: '6'
+  compatibility:
+    - name: Button
+      condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+  platform:
+    - platform: RASPBERRYPI
+      classname: MP_BUTTON_AL
+      library_dependency: []
+- name: Integrated Joystick
+  pin_template: INEX_JOYSTICK
+  integrated_connection:
+    - ref_to: UP
+      host_ref_to: '31'
+    - ref_to: LEFT
+      host_ref_to: '11'
+    - ref_to: RIGHT
+      host_ref_to: '12'
+    - ref_to: CENTER
+      host_ref_to: '11'
+    - ref_to: DOWN
+      host_ref_to: '16'
+    - ref_to: GND
+      host_ref_to: '6'
+  compatibility:
+    - name: Joystick
+      condition:
+      - name: Press up
+      - name: Not press up
+      - name: Press down
+      - name: Not press down
+      - name: Press left
+      - name: Not press left
+      - name: Press right
+      - name: Not press right
+      - name: Press middle
+      - name: Not press middle
+      - name: Not press all
+  platforms:
+    - platform: RASPBERRYPI
+      classname: MP_LEAFHAT_JOYSTICK
+      library_dependency: []
+- name: Integrated WS2812
+  pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+  platforms:
+  - platform: RASPBERRYPI
+    classname: MP_WS281X
+    library_dependency: []
+  integrated_connection:
+  - ref_to: VCC
+    host_ref_to: '1'
+  - ref_to: GND
+    host_ref_to: '6'
+  - ref_to: SIG
+    host_ref_to: '32'
+  compatibility:
+  - name: RGB LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Red
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Green
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Blue
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Brightness
+        constraint:
+          min: 0
+          max: 100
+          unit: NOT_SPECIFIED
+  - name: 'Off'      
+- name: Integrated OLED Display
+  platforms:
+  - platform: RASPBERRYPI
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency: []
+  pin_template: GENERIC_I2C_DEVICE_3v3
+  integrated_connection:
+  - ref_to: VCC
+    host_ref_to: '1'
+  - ref_to: GND
+    host_ref_to: '6'
+  - ref_to: SDA
+    host_ref_to: '3'
+  - ref_to: SCL
+    host_ref_to: '5'
+  compatibility:
+  - name: Display
+    action:
+    - name: Show Text
+      parameter:
+      - name: Row
+        constraint:
+          min: 1
+          max: 7
+          unit: NOT_SPECIFIED
+      - name: Text
+      - name: Size
+        constraint:
+        - 1x
+        - 2x
+        - 3x
+      - name: Align
+        value: Left
+        constraint:
+        - Left
+        - Center
+        - Right
+      - name: Color
+        constraint:
+        - Blue
+        - Cyan
+        - Dark Cyan
+        - Dark Green
+        - Dark Grey
+        - Green
+        - Green Yellow
+        - Light Grey
+        - Magenta
+        - Maroon
+        - Navy
+        - Olive
+        - Orange
+        - Pink
+        - Purple
+        - White
+        - Red
+        - Yellow
+    - name: Clear Row
+      parameter:
+      - name: Row
+        constraint:
+          min: 1
+          max: 10
+          unit: NOT_SPECIFIED
+    - name: Clear Screen
+platforms:
+- platform: RASPBERRYPI
+  classname: ''
+  library_dependency: []
