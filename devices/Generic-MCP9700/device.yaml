@@ -1,0 +1,50 @@
+id: Generic-MCP9700
+brand: Generic
+model: MCP9700/9700A Thermistor IC
+url: http://ww1.microchip.com/downloads/en/DeviceDoc/20001942G.pdf
+type: MODULE
+width: 34
+height: 66
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 31.8
+        y: 64
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 3
+        y: 64
+        ref_to: VCC
+  - name: SIG
+    type: WIRE
+    pins:
+      - x: 17.4
+        y: 64
+        ref_to: SIG
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+        parameter: []
+    value:
+      - name: Temperature
+        constraint:
+          min: -40
+          max: 150
+          unit: CELSIUS
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_MCP9700
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_MCP9700
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_MCP9700
+    library_dependency: []
