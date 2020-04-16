@@ -113,6 +113,7 @@
         "Energy Meter",
         "Flame",
         "Gesture",
+        "GPIO Expander",
         "GPS",
         "Gyroscope",
         "Humidity",
@@ -131,6 +132,7 @@
         "7 Segment",
         "Buzzer",
         "DC Motor",
+        "DC Motor Driver",
         "Display",
         "LED",
         "Load Driver",
@@ -138,6 +140,7 @@
         "RGB LED",
         "RGB LED Strip",
         "Servo",
+        "Servo Controller",
         "Container",
         "Counter",
         "Statistics",
@@ -177,6 +180,8 @@
         "Clear Row",
         "Clear Screen",
         "Move To",
+        "Move Servo",
+        "Free Servo",
         "Set to",
         "Count up by 1",
         "Count down by 1",
@@ -260,7 +265,10 @@
         "Set Volume",
         "Volume Up",
         "Volume Down",
-        "Set EQ"
+        "Set EQ",
+        "Digital Out",
+        "Is Digital High",
+        "Is Digital Low"
       ]
     },
     "values": {
@@ -324,7 +332,39 @@
         "Intensity",
         "Volume",
         "FileCount",
-        "CurrentFileNumber"
+        "CurrentFileNumber",
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "A0 Percent",
+        "A1 Percent",
+        "A2 Percent",
+        "A3 Percent",
+        "A4 Percent",
+        "A5 Percent",
+        "A6 Percent",
+        "A7 Percent",
+        "A8 Percent",
+        "A9 Percent",
+        "A10 Percent",
+        "A11 Percent",
+        "A12 Percent",
+        "A13 Percent",
+        "A14 Percent",
+        "A15 Percent"
       ]
     },
     "units": {
@@ -383,7 +423,8 @@
         "IMAGE",
         "AZURE_COGNITIVE_KEY",
         "AZURE_IOTHUB_KEY",
-        "RECORD"
+        "RECORD",
+        "STRING_INT_ENUM"
       ]
     },
     "controltype": {
@@ -447,7 +488,7 @@
         {
           "type": "array",
           "items": {
-            "type": ["string", "integer"]
+            "type": ["string", "integer", "object"]
           }
         }
       ]

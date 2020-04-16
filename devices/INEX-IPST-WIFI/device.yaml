@@ -4,8 +4,8 @@ model: IPST Wifi
 url: ""
 type: CONTROLLER
 pio_boardid: esp32dev
-width: 316
-height: 522
+width: 324
+height: 572
 pin_template: ESP_32
 cloud_provide:
   - cloud_platform: NETPIE
@@ -200,7 +200,7 @@ integrated_devices:
               - name: Brightness
           - name: Clear
             parameter: []
-  - name: Integrated OLED
+  - name: Integrated OLED Display
     pin_template: GENERIC_I2C_DEVICE_3v3
     integrated_connection:
       - ref_to: GND

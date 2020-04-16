@@ -1,0 +1,425 @@
+id: INEX-iKB-1
+brand: INEX
+model: iKB-1 universal I/O controller board
+url: https://inex.co.th/shop/ikb-1-board.html
+type: MODULE
+width: 572
+height: 324
+pin_template: IKB_1
+property:
+  - name: Mode I/O 0
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 1
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 2
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 3
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 4
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 5
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 6
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+  - name: Mode I/O 7
+    value: BOTH
+    constraint:
+      - key: INPUT ONLY
+        value: 0
+      - key: OUTPUT ONLY
+        value: 1
+      - key: BOTH
+        value: 2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_IKB_1
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_IKB_1
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_IKB_1
+    library_dependency: []
+  # - platform: RASPBERRYPI
+  #   classname: MP_IKB_1
+  #   library_dependency: []
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 44
+        y: 227
+        ref_to: GND
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 44
+        y: 216
+        ref_to: VCC
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 44
+        y: 204
+        ref_to: SDA
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 44
+        y: 193
+        ref_to: SCL
+  # - name: I2C Bus
+  #   type: GROVE
+  #   pins:
+  #     - x: 44
+  #       y: 227
+  #       ref_to: GND
+  #     - x: 44
+  #       y: 216
+  #       ref_to: VCC
+  #     - x: 44
+  #       y: 204
+  #       ref_to: SDA
+  #     - x: 44
+  #       y: 193
+  #       ref_to: SCL
+connection_provide:
+  - name: IO0
+    type: INEX3
+    pins:
+      - x: 113
+        y: 34
+        ref_to: GND
+      - x: 101
+        y: 34
+        ref_to: IO0
+      - x: 89
+        y: 34
+        ref_to: VCC
+  - name: IO1
+    type: INEX3
+    pins:
+      - x: 113
+        y: 77
+        ref_to: GND
+      - x: 101
+        y: 77
+        ref_to: IO0
+      - x: 89
+        y: 77
+        ref_to: VCC
+  - name: IO2
+    type: INEX3
+    pins:
+      - x: 164
+        y: 34
+        ref_to: GND
+      - x: 153
+        y: 34
+        ref_to: IO0
+      - x: 141
+        y: 34
+        ref_to: VCC
+  - name: IO3
+    type: INEX3
+    pins:
+      - x: 164
+        y: 77
+        ref_to: GND
+      - x: 153
+        y: 77
+        ref_to: IO0
+      - x: 141
+        y: 77
+        ref_to: VCC
+  - name: IO4
+    type: INEX3
+    pins:
+      - x: 216
+        y: 34
+        ref_to: GND
+      - x: 205
+        y: 34
+        ref_to: IO0
+      - x: 193
+        y: 34
+        ref_to: VCC
+  - name: IO5
+    type: INEX3
+    pins:
+      - x: 216
+        y: 77
+        ref_to: GND
+      - x: 205
+        y: 77
+        ref_to: IO0
+      - x: 193
+        y: 77
+        ref_to: VCC
+  - name: IO6
+    type: INEX3
+    pins:
+      - x: 269
+        y: 34
+        ref_to: GND
+      - x: 257
+        y: 34
+        ref_to: IO0
+      - x: 245
+        y: 34
+        ref_to: VCC
+  - name: IO7
+    type: INEX3
+    pins:
+      - x: 269
+        y: 77
+        ref_to: GND
+      - x: 257
+        y: 77
+        ref_to: IO0
+      - x: 245
+        y: 77
+        ref_to: VCC
+compatibility:
+  - name: GPIO Expander
+    action:
+      - name: Digital Out
+        funcname: digitalOut
+        parameter:
+          - name: Pin Number
+            value: 0
+            constraint:
+              - 0
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+              - 7
+          - name: Logic
+            value: 1
+            constraint:
+              - 1
+              - 0
+    condition:
+      - name: Compare
+      - name: Is Digital High
+        funcname: isHigh
+        parameter:
+          - name: Pin Number
+            value: 0
+            constraint:
+              - 0
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+              - 7
+              - 8
+              - 9
+              - 10
+              - 11
+              - 12
+              - 13
+              - 14
+              - 15
+      - name: Is Digital Low
+        funcname: isLow
+        parameter:
+          - name: Pin Number
+            value: 0
+            constraint:
+              - 0
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+              - 7
+              - 8
+              - 9
+              - 10
+              - 11
+              - 12
+              - 13
+              - 14
+              - 15
+    value:
+      - name: A0 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A1 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A2 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A3 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A4 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A5 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A6 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+      - name: A7 Percent
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+  - name: Servo Controller
+    action:
+      - name: Move Servo
+        parameter:
+          - name: Channel
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+          - name: To Angle
+            constraint:
+              min: 0
+              max: 180
+              unit: DEGREE
+      - name: Free Servo
+        parameter:
+          - name: Channel
+            value: 1
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+  - name: DC Motor Driver
+    description: An external module to drive the motor with enough current.
+    action:
+      - name: 'On'
+        funcname: 'on'
+        parameter:
+          - name: Channel
+            value: 1
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+          - name: Direction
+            value: Forward
+          - name: Speed
+            value: 100
+            constraint:
+              min: 0
+              max: 100
+              unit: PERCENT
+      - name: 'Off'
+        funcname: 'off'
+        parameter:
+          - name: Channel
+            value: 1
+            constraint:
+              - 1
+              - 2
+              - 3
+              - 4
+            datatype: INTEGER_ENUM
+            controltype: DROPDOWN
