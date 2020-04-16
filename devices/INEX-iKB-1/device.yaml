@@ -105,9 +105,9 @@ platforms:
   - platform: ARDUINO_ESP32
     classname: MP_IKB_1
     library_dependency: []
-  - platform: RASPBERRYPI
-    classname: MP_IKB_1
-    library_dependency: []
+  # - platform: RASPBERRYPI
+  #   classname: MP_IKB_1
+  #   library_dependency: []
 connection_consume:
   - name: GND
     type: WIRE
