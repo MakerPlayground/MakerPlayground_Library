@@ -30,9 +30,10 @@ else:
     print('Error: can\'t get verion number from (git rev-parse --short HEAD)')
     exit(1)
 print (f'version = {version_string}')
-compatibility['version'] = version_string
 
-# retreive previous version informatin
+current_version = {'version': version_string, 'min_mp_version': compatibility['min_mp_version'], 'release-date': compatibility['release-date']}
+
+# retrieve previous version information
 print('Getting version information from the server...')
 with urllib.request.urlopen('https://makerplayground.z23.web.core.windows.net/library/version.json') as response:
     if response.status != 200:
@@ -43,19 +44,19 @@ with urllib.request.urlopen('https://makerplayground.z23.web.core.windows.net/li
 # generate version.json
 print('Generating version.json...')
 with open('version.json', 'w') as file:
-    if len(versions) != 0 and versions[0]['min_mp_version'] == compatibility['min_mp_version']:
+    if len(versions) != 0 and versions[0]['min_mp_version'] == current_version['min_mp_version']:
         print('Replacing last entry...')
-        versions[0] = compatibility
+        versions[0] = current_version
     else:
         print('Insert new entry...')
-        versions.insert(0, compatibility)
+        versions.insert(0, current_version)
     json.dump(versions, file)
 
 # generate library archive (ignore empty subdirectory)
 print('Generating library.zip...')
 dir_to_zip = ['devices', 'lib', 'lib_ext', 'pin_templates']
 with zipfile.ZipFile(version_string + '.zip', 'w', zipfile.ZIP_DEFLATED) as releaseZip:
-    releaseZip.write('version.json', os.path.join('library', 'version.json'))
+    releaseZip.writestr(os.path.join('library', 'version.json'), json.dumps(current_version))
     for dir_name in dir_to_zip:
         for root, dirs, files in os.walk(dir_name):
             for filename in files:
