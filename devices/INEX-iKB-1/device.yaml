@@ -9,6 +9,7 @@ pin_template: IKB_1
 property:
   - name: Mode I/O 0
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -20,6 +21,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 1
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -31,6 +33,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 2
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -42,6 +45,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 3
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -53,6 +57,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 4
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -64,6 +69,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 5
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -75,6 +81,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 6
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0
@@ -86,6 +93,7 @@ property:
     controltype: DROPDOWN
   - name: Mode I/O 7
     value: BOTH
+    optional: true
     constraint:
       - key: INPUT ONLY
         value: 0

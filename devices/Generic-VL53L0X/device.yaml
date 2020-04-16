@@ -8,6 +8,7 @@ height: 98
 property:
   - name: Mode
     datatype: ENUM
+    optional: true
     controltype: DROPDOWN
     value: High Accuracy
     constraint:
