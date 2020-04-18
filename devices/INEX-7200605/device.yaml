@@ -1,0 +1,252 @@
+id: INEX-7200605
+brand: INEX
+model: i-Duino R3B
+url: https://inex.co.th/shop/i-duino-uno-r3b.html
+type: CONTROLLER
+pio_boardid: ATmega328PB
+width: 389
+height: 334
+property: []
+pin_template: ATMEGA328PB
+connection_provide:
+  - name: '0'
+    type: WIRE
+    pins:
+      - x: 362.56
+        y: 29.4
+        ref_to: PD0
+  - name: '1'
+    type: WIRE
+    pins:
+      - x: 348.16
+        y: 29.4
+        ref_to: PD1
+  - name: '2'
+    type: WIRE
+    pins:
+      - x: 333.74
+        y: 29.4
+        ref_to: PD2
+  - name: '3'
+    type: WIRE
+    pins:
+      - x: 319.36
+        y: 29.4
+        ref_to: PD3
+  - name: '4'
+    type: WIRE
+    pins:
+      - x: 304.96
+        y: 29.4
+        ref_to: PD4
+  - name: '5'
+    type: WIRE
+    pins:
+      - x: 290.56
+        y: 29.4
+        ref_to: PD5
+  - name: '6'
+    type: WIRE
+    pins:
+      - x: 276.16
+        y: 29.4
+        ref_to: PD6
+  - name: '7'
+    type: WIRE
+    pins:
+      - x: 261.74
+        y: 29.4
+        ref_to: PD7
+  - name: '8'
+    type: WIRE
+    pins:
+      - x: 238.6
+        y: 29.4
+        ref_to: PB0
+  - name: '9'
+    type: WIRE
+    pins:
+      - x: 224.2
+        y: 29.4
+        ref_to: PB1
+  - name: '10'
+    type: WIRE
+    pins:
+      - x: 209.78
+        y: 29.4
+        ref_to: PB2
+  - name: '11'
+    type: WIRE
+    pins:
+      - x: 195.38
+        y: 29.4
+        ref_to: PB3
+  - name: '12'
+    type: WIRE
+    pins:
+      - x: 181
+        y: 29.4
+        ref_to: PB4
+  - name: '13'
+    type: WIRE
+    pins:
+      - x: 166.6
+        y: 29.4
+        ref_to: PB5
+  - name: GND0
+    type: WIRE
+    pins:
+      - x: 152.2
+        y: 29.4
+        ref_to: GND
+  # - name: AREF
+  #   type: WIRE
+  #   pins:
+  #     - x: 137.8
+  #       y: 29.4
+  #       ref_to: AREF
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 123.4
+        y: 29.4
+        ref_to: PC4
+  - name: SCL
+    type: WIRE
+    pins:
+      - x: 109
+        y: 29.4
+        ref_to: PC5
+  # - name: VIO
+  #   type: WIRE
+  #   pins:
+  #     - x: 171.36
+  #       y: 303
+  #       ref_to: 
+  # - name: RESET
+  #   type: WIRE
+  #   pins:
+  #     - x: 185.76
+  #       y: 303
+  #       ref_to: 
+  - name: 3.3V
+    type: WIRE
+    pins:
+      - x: 200.16
+        y: 303
+        ref_to: VCC
+        voltage_level: LEVEL_3v3
+  - name: 5V
+    type: WIRE
+    pins:
+      - x: 214.56
+        y: 303
+        ref_to: VCC
+  - name: GND1
+    type: WIRE
+    pins:
+      - x: 228.96
+        y: 303
+        ref_to: GND
+  - name: GND2
+    type: WIRE
+    pins:
+      - x: 243.36
+        y: 303
+        ref_to: GND
+  # - name: VIN
+  #   type: WIRE
+  #   pins:
+  #     - x: 257.76
+  #       y: 303
+  #       ref_to: 
+  - name: A0
+    type: WIRE
+    pins:
+      - x: 286.56
+        y: 303
+        ref_to: PC0
+  - name: A1
+    type: WIRE
+    pins:
+      - x: 300.96
+        y: 303
+        ref_to: PC1
+  - name: A2
+    type: WIRE
+    pins:
+      - x: 315.36
+        y: 303
+        ref_to: PC2
+  - name: A3
+    type: WIRE
+    pins:
+      - x: 329.76
+        y: 303
+        ref_to: PC3
+  - name: A4
+    type: WIRE
+    pins:
+      - x: 344.16
+        y: 303
+        ref_to: PC4
+  - name: A5
+    type: WIRE
+    pins:
+      - x: 358.56
+        y: 303
+        ref_to: PC5
+  - name: A6
+    type: WIRE
+    pins:
+      - x: 99.36
+        y: 303
+        ref_to: PE2
+  - name: A7
+    type: WIRE
+    pins:
+      - x: 113.76
+        y: 303
+        ref_to: PE3
+  - name: '22'
+    type: WIRE
+    pins:
+      - x: 128.16
+        y: 303
+        ref_to: PE0
+  - name: '23'
+    type: WIRE
+    pins:
+      - x: 142.56
+        y: 303
+        ref_to: PE1
+integrated_devices:
+  - name: Integrated LED
+    pin_template: GENERIC_DIGITAL_ACTUATOR_5
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: PB5
+    compatibility:
+    - name: LED
+      action:
+      - name: 'On'
+        parameter:
+        - name: Brightness
+          value: 100
+          constraint:
+            min: 0
+            max: 100
+            unit: PERCENT
+      - name: 'Off'
+    platforms:
+    - platform: ARDUINO_AVR8
+      classname: MP_LED_AH
+      library_dependency: []
+platforms:
+- platform: ARDUINO_AVR8
+  classname: ''
+  library_dependency: []
