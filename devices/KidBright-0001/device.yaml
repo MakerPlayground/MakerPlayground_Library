@@ -373,6 +373,51 @@ integrated_devices:
         constraint: []
       - name: Year
         constraint: []
+
+  - name: Integrated Dot Matrix
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_8x16MiniMatrix
+      library_dependency:
+      - adafruit/Adafruit_LED_Backpack-1.1.6
+      - adafruit/Adafruit-GFX-Library-1.7.6
+    pin_template: GENERIC_I2C_DEVICE_3v3_5
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '21'
+      - ref_to: SCL
+        host_ref_to: '22'
+    compatibility:
+      - name: Dot Matrix
+        action:
+          - name: Show Text
+            parameter:
+              - name: text
+              - name: text size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+              - name: rotation
+                value: NONE
+                constraint:
+                  - key: NONE
+                    value: 0
+                  - key: 90 DEGREES
+                    value: 90
+                  - key: 180 DEGREES
+                    value: 180
+                  - key: 270 DEGREES
+                    value: 270
+          - name: Clear
+            funcname: clear
+
 platforms:
 - platform: ARDUINO_ESP32
   classname: ''
