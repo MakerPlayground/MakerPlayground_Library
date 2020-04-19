@@ -1,0 +1,379 @@
+id: KidBright-0001
+brand: KidBright
+model: 32 V1.3
+url: https://www.kid-bright.org/
+type: CONTROLLER
+pio_boardid: esp32dev
+width: 425
+height: 303
+property: []
+pin_template: ESP_32
+cloud_provide:
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/blynk-library
+connection_provide:
+  - name: '5V (0)'
+    type: WIRE
+    pins:
+      - x: 43
+        y: 71
+        ref_to: VCC
+  - name: '5V (1)'
+    type: WIRE
+    pins:
+      - x: 115
+        y: 71
+        ref_to: VCC
+  - name: 'IN1'
+    type: WIRE
+    pins:
+      - x: 43
+        y: 151
+        ref_to: '32'
+  - name: 'IN2'
+    type: WIRE
+    pins:
+      - x: 115
+        y: 151
+        ref_to: '33'
+  - name: 'IN3'
+    type: WIRE
+    pins:
+      - x: 43
+        y: 231
+        ref_to: '34'
+  - name: 'IN4'
+    type: WIRE
+    pins:
+      - x: 115
+        y: 231
+        ref_to: '35'
+  - name: 'OUT1'
+    type: WIRE
+    pins:
+      - x: 43
+        y: 311
+        ref_to: '26'
+  - name: 'OUT2'
+    type: WIRE
+    pins:
+      - x: 115
+        y: 311
+        ref_to: '27'
+  - name: 'GND (0)'
+    type: WIRE
+    pins:
+      - x: 43
+        y: 391
+        ref_to: 'GND'
+  - name: 'GND (1)'
+    type: WIRE
+    pins:
+      - x: 115
+        y: 391
+        ref_to: 'GND'
+  - name: '1'
+    type: WIRE
+    pins:
+      - x: 65
+        y: 434
+        ref_to: '32'
+  - name: '2'
+    type: WIRE
+    pins:
+      - x: 85
+        y: 434
+        ref_to: '33'
+  - name: '3'
+    type: WIRE
+    pins:
+      - x: 105
+        y: 434
+        ref_to: '34'
+  - name: '4'
+    type: WIRE
+    pins:
+      - x: 125
+        y: 434
+        ref_to: '35'
+  - name: 'GND (2)'
+    type: WIRE
+    pins:
+      - x: 145
+        y: 434
+        ref_to: 'GND'
+  - name: '21'
+    type: WIRE
+    pins:
+      - x: 165
+        y: 434
+        ref_to: '21'
+  - name: '23'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 434
+        ref_to: '23'
+  - name: 'GND (3)'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 414
+        ref_to: 'GND'
+  - name: 'GND (4)'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 394
+        ref_to: 'GND'
+  - name: '19'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 374
+        ref_to: '19'
+  - name: '18'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 354
+        ref_to: '18'
+  - name: 'SDA0'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 334
+        ref_to: '21'
+  - name: 'SCL0'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 314
+        ref_to: '22'
+  - name: '3V3'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 294
+        ref_to: 'VCC'
+  - name: '5V'
+    type: WIRE
+    pins:
+      - x: 185
+        y: 274
+        ref_to: 'VCC'
+        voltage_level: LEVEL_5
+  - name: IO0
+    type: WIRE
+    pins:
+      - x: 508
+        y: 246
+        ref_to: '0'
+  - name: GND (5)
+    type: WIRE
+    pins:
+      - x: 528
+        y: 246
+        ref_to: GND
+  # KIDBRIGHT [GND, SDA, SCL, 3V3, 5V]
+  - name: Port
+    type: KIDBRIGHT
+    pins:
+      - x: 698
+        y: 121
+        ref_to: GND
+      - x: 698
+        y: 141
+        ref_to: '4'
+      - x: 698
+        y: 161
+        ref_to: '5'
+      - x: 698
+        y: 181
+        ref_to: VCC
+      - x: 698
+        y: 201
+        ref_to: VCC
+        voltage_level: LEVEL_5
+
+integrated_devices:
+  - name: Integrated Button (S1)
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUTTON_AL
+      library_dependency: []
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '16'
+    compatibility:
+    - name: Button
+      condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+
+  - name: Integrated Button (S2)
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUTTON_AL
+      library_dependency: []
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '14'
+    compatibility:
+    - name: Button
+      condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+
+  - name: Integrated Light Sensor
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_LIGHT_SENSOR_KIDBRIGHT
+      library_dependency: []
+    pin_template: GENERIC_ANALOG_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '36'
+    compatibility:
+    - name: Light
+      condition:
+      - name: Compare
+      value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+
+  - name: Integrated Buzzer
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUZZER
+      library_dependency: []
+    pin_template: GENERIC_PWM_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '13'
+    compatibility:
+    - name: Buzzer
+      action:
+      - name: Play Tone
+        parameter:
+        - name: Tone Frequency
+          constraint:
+            min: 0
+            max: 20000
+            unit: HERTZ
+        - name: Duration
+          constraint:
+            min: 0
+            max: 1000
+            unit: SECOND
+      - name: Beep
+
+  - name: Integrated Temperature Sensor
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '4'
+      - ref_to: SCL
+        host_ref_to: '5'
+    compatibility:
+      - name: Temperature
+        condition:
+          - name: Compare
+        value:
+          - name: Temperature
+            dataType: DOUBLE
+            constraint:
+              min: -500
+              max: 500
+              unit: CELSIUS
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LM73_I2C1_ESP32
+        library_dependency: []
+
+  - name: Integrated RTC
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_RTC_MCP4971x
+      library_dependency:
+      - jetstreamc/mcp7941x_arduino_ESP32_I2C1
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '4'
+      - ref_to: SCL
+        host_ref_to: '5'
+    compatibility:
+    - name: RTC
+      action:
+      - name: Set DateTime
+        parameter:
+        - name: datetime
+          constraint: []
+      condition:
+      - name: Compare
+      - name: Check Day
+        parameter:
+        - name: Day
+          constraint:
+          - Sunday
+          - Monday
+          - Tuesday
+          - Wednesday
+          - Thursday
+          - Friday
+          - Saturday
+      value:
+      - name: Hour
+        constraint: []
+      - name: Minute
+        constraint: []
+      - name: Second
+        constraint: []
+      - name: Date
+        constraint: []
+      - name: Month
+        constraint: []
+      - name: Year
+        constraint: []
+platforms:
+- platform: ARDUINO_ESP32
+  classname: ''
+  library_dependency: []
