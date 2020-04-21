@@ -2,6 +2,7 @@ import subprocess
 import json
 import zipfile
 import os
+import hashlib
 import urllib.request
 
 # read compatibility file
@@ -33,6 +34,27 @@ print (f'version = {version_string}')
 
 current_version = {'version': version_string, 'min_mp_version': compatibility['min_mp_version'], 'release-date': compatibility['release-date']}
 
+# generate library archive (ignore empty subdirectory)
+print('Generating library.zip...')
+dir_to_zip = ['devices', 'lib', 'lib_ext', 'pin_templates']
+with zipfile.ZipFile(version_string + '.zip', 'w', zipfile.ZIP_DEFLATED) as releaseZip:
+    releaseZip.writestr(os.path.join('library', 'version.json'), json.dumps(current_version))
+    for dir_name in dir_to_zip:
+        for root, dirs, files in os.walk(dir_name):
+            for filename in files:
+                path = os.path.join(root, filename)
+                releaseZip.write(path, os.path.join('library', path))
+
+# calculate and append hash
+hasher = hashlib.sha256()
+with open(version_string + '.zip', 'rb') as file:
+    while True:
+        chunk = file.read(hasher.block_size)
+        if not chunk:
+            break
+        hasher.update(chunk)
+current_version['sha256'] = hasher.hexdigest()
+
 # retrieve previous version information
 print('Getting version information from the server...')
 with urllib.request.urlopen('https://makerplayground.z23.web.core.windows.net/library/version.json') as response:
@@ -51,15 +73,3 @@ with open('version.json', 'w') as file:
         print('Insert new entry...')
         versions.insert(0, current_version)
     json.dump(versions, file)
-
-# generate library archive (ignore empty subdirectory)
-print('Generating library.zip...')
-dir_to_zip = ['devices', 'lib', 'lib_ext', 'pin_templates']
-with zipfile.ZipFile(version_string + '.zip', 'w', zipfile.ZIP_DEFLATED) as releaseZip:
-    releaseZip.writestr(os.path.join('library', 'version.json'), json.dumps(current_version))
-    for dir_name in dir_to_zip:
-        for root, dirs, files in os.walk(dir_name):
-            for filename in files:
-                path = os.path.join(root, filename)
-                releaseZip.write(path, os.path.join('library', path))
-
