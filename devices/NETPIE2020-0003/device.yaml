@@ -1,0 +1,31 @@
+id: NETPIE2020-0003
+brand: NETPIE
+model: Virtual Button 2020
+url: ''
+type: VIRTUAL
+cloud_consume: NETPIE2020
+width: 50
+height: 50
+pin_template: NO_PIN
+property:
+  - name: topic
+    datatype: STRING
+    controltype: TEXTBOX
+    value: ''
+    constraint: []
+compatibility:
+  - name: Virtual Button
+    condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_NETPIE2020_VIRTUAL_BUTTON
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_NETPIE2020_VIRTUAL_BUTTON
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_NETPIE2020_VIRTUAL_BUTTON
+    library_dependency: []

@@ -1,0 +1,30 @@
+id: NETPIE2020-0001
+brand: NETPIE
+model: Virtual LED 2020
+url: ''
+type: VIRTUAL
+pin_template: NO_PIN
+cloud_consume: NETPIE2020
+width: 50
+height: 50
+property:
+  - name: topic
+    datatype: STRING
+    controltype: TEXTBOX
+    value: ''
+    constraint: []
+compatibility:
+  - name: Virtual LED
+    action:
+    - name: 'On'
+    - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_NETPIE2020_VIRTUAL_LED
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_NETPIE2020_VIRTUAL_LED
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_NETPIE2020_VIRTUAL_LED
+    library_dependency: []
