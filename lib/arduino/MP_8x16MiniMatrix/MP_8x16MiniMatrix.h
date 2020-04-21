@@ -19,6 +19,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 	
+    void showBitmap(const char* base16);
     void showText(const char* text, uint8_t text_size, int rotation);
 	void clear();
 
@@ -30,6 +31,8 @@ private:
     int8_t textScrollStart;
     int8_t textScrollStop;
     int8_t textScrollCurrent;
+
+    uint8_t bmp[16] = {};
 
     unsigned long last_update;
 };

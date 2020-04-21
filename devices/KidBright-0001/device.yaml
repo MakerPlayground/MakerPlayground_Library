@@ -394,6 +394,10 @@ integrated_devices:
     compatibility:
       - name: Dot Matrix
         action:
+          - name: Show Bitmap
+            funcname: showBitmap
+            parameter:
+              - name: data
           - name: Show Text
             parameter:
               - name: text
