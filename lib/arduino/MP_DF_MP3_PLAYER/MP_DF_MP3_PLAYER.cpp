@@ -139,21 +139,20 @@ void MP_DF_MP3_PLAYER::volumeDown()
     myDFPlayer.volumeDown();
 }
 
-void MP_DF_MP3_PLAYER::setEQ(char * EQ)
+void MP_DF_MP3_PLAYER::setEQ(uint8_t EQ)
 {
-    if (!strcmp("NORMAL", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
-    } else if (!strcmp("POP", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
-    } else if (!strcmp("ROCK", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
-    } else if (!strcmp("JAZZ", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
-    } else if (!strcmp("CLASSIC", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
-    } else if (!strcmp("BASS", EQ)) {
-        myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
+    if (EQ < 0 || EQ > 5) { 
+        return; 
     }
+    uint8_t EQ_list[] = {
+        DFPLAYER_EQ_NORMAL,
+        DFPLAYER_EQ_POP,
+        DFPLAYER_EQ_ROCK,
+        DFPLAYER_EQ_JAZZ,
+        DFPLAYER_EQ_CLASSIC,
+        DFPLAYER_EQ_BASS
+    };
+    myDFPlayer.EQ(EQ_list[EQ]);
 }
 
 int MP_DF_MP3_PLAYER::getVolume()

@@ -78,13 +78,20 @@ compatibility:
       - name: Set EQ
         parameter:
           - name: EQ
+            value: NORMAL
             constraint:
-              - NORMAL
-              - POP
-              - ROCK
-              - JAZZ
-              - CLASSIC
-              - BASS
+              - key: NORMAL
+                value: 0
+              - key: POP
+                value: 1
+              - key: ROCK
+                value: 2
+              - key: JAZZ
+                value: 3
+              - key: CLASSIC
+                value: 4
+              - key: BASS
+                value: 5
     value:
       - name: Volume
         constraint:

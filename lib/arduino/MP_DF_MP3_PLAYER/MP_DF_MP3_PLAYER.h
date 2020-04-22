@@ -25,7 +25,7 @@ public:
     void setVolume(int volume);
     void volumeUp();
     void volumeDown();
-    void setEQ(char * EQ);
+    void setEQ(uint8_t EQ);
 
     int getVolume();
     int getFileCount();
