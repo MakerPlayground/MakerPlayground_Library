@@ -65,13 +65,26 @@ compatibility:
       - name: Detect Color
         parameter:
         - name: Color
+          value: Red
           constraint:
-          - Red
-          - Green
-          - Blue
-          - Cyan
-          - Magenta
-          - Yellow
+            - key: Red
+              value: 0
+            - key: Green
+              value: 1
+            - key: Blue
+              value: 2
+            - key: Cyan
+              value: 3
+            - key: Magenta
+              value: 4
+            - key: Orange
+              value: 5
+            - key: Violet
+              value: 6
+            - key: White
+              value: 7
+            - key: Yellow
+              value: 8
     value: []
 platforms:
   - platform: ARDUINO_AVR8

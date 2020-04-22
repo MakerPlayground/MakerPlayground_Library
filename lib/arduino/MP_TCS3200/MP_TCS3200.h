@@ -12,7 +12,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	bool isColor(char color[]);
+	bool isColor(uint8_t color);
 
 private:
 	uint8_t s0;
@@ -28,6 +28,7 @@ private:
 	
 	unsigned long next_reading = 0;
 
+	int8_t color_code = -1;
 	String current_color;
 };
 

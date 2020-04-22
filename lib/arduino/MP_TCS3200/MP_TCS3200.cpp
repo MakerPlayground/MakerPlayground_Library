@@ -56,41 +56,51 @@ void MP_TCS3200::update(unsigned long current_time)
 		if(hsv[2]>97&&hsv[1]<5)
 		{
 			current_color = "White";
+			color_code = 7;
 		}
 		else if((hsv[0]>=330 || hsv[0]<15))
 		{
 			current_color = "Red";
+			color_code = 0;
 		}
 		else if((hsv[0]>=15 && hsv[0]<25))
 		{
 			current_color = "Orange";
+			color_code = 5;
 		}
 		else if((hsv[0]>=25 && hsv[0]<75)) //30
 		{
 			current_color = "Yellow";
+			color_code = 8;
 		}
 		else if((hsv[0]>=75 && hsv[0]<165))//135
 		{
 			current_color = "Green";
+			color_code = 1;
 		}
 		else if((hsv[0]>=165 && hsv[0]<220)) //210
 		{
 			current_color = "Cyan";
+			color_code = 3;
 		}
 		else if((hsv[0]>=220 && hsv[0]<235)) //225
 		{
 			current_color = "Blue";
+			color_code = 2;
 		}
 		else if((hsv[0]>=235 && hsv[0]<270))
 		{
 			current_color = "Violet";
+			color_code = 6;
 		}
 		else if((hsv[0]>=270 && hsv[0]<330))
 		{
 			current_color = "Magenta";
+			color_code = 4;
 		}
 		else {
 			current_color = "unknown";
+			color_code = -1;
 		}
 		next_reading = current_time + 100;
 	}
@@ -110,9 +120,9 @@ void MP_TCS3200::printStatus()
 	Serial.println(current_color);
 }
 
-bool MP_TCS3200::isColor(char color[])
+bool MP_TCS3200::isColor(uint8_t color)
 {
-	return current_color.equals(String(color));
+	return color_code == color;
 }
 
 int rgb2hsv(int r,int g,int b,double out[])
