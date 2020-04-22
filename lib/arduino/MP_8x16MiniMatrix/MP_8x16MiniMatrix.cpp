@@ -60,7 +60,7 @@ void MP_8x16MiniMatrix::showBitmap(const char* base16) {
     int column_count = 0;
     int line_count = 0;
     int i = 0;
-    while (ptr != '\0' && i < 16) {
+    while (ptr != '\0' && i < 16 && line_count < 8) {
         
         /* clip if the data row exceeds the dotmatrix row */
         if (line_count >= 8) {
@@ -155,6 +155,17 @@ void MP_8x16MiniMatrix::showBitmap(const char* base16) {
         ptr++;
         i = tiktok ? (i+1) : i;
         tiktok = !tiktok;
+    }
+
+    while (line_count < 8) {
+        while (column_count < 16) {
+            bmp[i] = (tiktok ? bmp[i] << 4 : 0) | 0B00000000;
+            column_count += 4;
+            i = tiktok ? (i+1) : i;
+            tiktok = !tiktok;
+        }
+        line_count++;
+        column_count = 0;
     }
 }
 
