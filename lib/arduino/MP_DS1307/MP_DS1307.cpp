@@ -36,14 +36,8 @@ void MP_DS1307::setDateTime(MP_DATETIME t) {
     Rtc.SetDateTime(RtcDateTime(t.getYear(), t.getMonth(), t.getDate(), t.getHour(), t.getMinute(), t.getSecond()));
 }
 
-bool MP_DS1307::checkDayOfWeek(char* dayName) {
-    return (strcmp(dayName, "Sunday") == 0 && now.DayOfWeek() == 0) || 
-            (strcmp(dayName, "Monday") == 0 && now.DayOfWeek() == 1) || 
-            (strcmp(dayName, "Tuesday") == 0 && now.DayOfWeek() == 2) || 
-            (strcmp(dayName, "Wednesday") == 0 && now.DayOfWeek() == 3) || 
-            (strcmp(dayName, "Thursday") == 0 && now.DayOfWeek() == 4) || 
-            (strcmp(dayName, "Friday") == 0 && now.DayOfWeek() == 5) || 
-            (strcmp(dayName, "Saturday") == 0 && now.DayOfWeek() == 6);
+bool MP_DS1307::checkDayOfWeek(uint8_t day) {
+    return now.DayOfWeek() == day-1;  // Reindex Sunday = 1 -> 0, Saturday = 7 -> 6
 }
 
 uint8_t MP_DS1307::getHour() {

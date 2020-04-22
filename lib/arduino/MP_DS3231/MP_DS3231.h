@@ -30,7 +30,7 @@ public:
 	void printStatus();
     
     void setDateTime(MP_DATETIME datetime);
-    bool checkDayOfWeek(char* dayName);
+    bool checkDayOfWeek(uint8_t day);
     uint8_t getHour();
     uint8_t getMinute();
     uint8_t getSecond();
