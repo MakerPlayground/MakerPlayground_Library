@@ -16,6 +16,10 @@ cloud_provide:
 - cloud_platform: AZURE
   classname: MP_AZURE_ESP
   library_dependency: []
+- cloud_platform: NETPIE2020
+  classname: MP_NETPIE2020_ESP
+  library_dependency:
+  - knolleary/pubsubclient-2.7
 need_breadboard: true
 breadboard_placement: TWO_SIDES
 pin_template: ESP_32
@@ -252,6 +256,29 @@ connection_provide:
       - x: 268.4
         y: 135.8
         ref_to: "GND"
+integrated_devices:
+- name: Built in IO2
+  pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+  integrated_connection:
+    - ref_to: SIG
+      host_ref_to: "2"
+    - ref_to: GND
+      host_ref_to: GND
+  compatibility:
+    - name: LED
+      action:
+        - name: 'On'
+          parameter:
+            - name: Brightness
+              constraint:
+                min: 0.0
+                max: 100.0
+                unit: PERCENT
+        - name: 'Off'
+  platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_LED_AH
+      library_dependency: []
 platforms:
 - platform: ARDUINO_ESP32
   classname: ''

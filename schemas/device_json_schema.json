@@ -21,6 +21,7 @@
       "enum": [
         "BLYNK",
         "NETPIE",
+        "NETPIE2020",
         "REST",
         "AZURE"
       ]
