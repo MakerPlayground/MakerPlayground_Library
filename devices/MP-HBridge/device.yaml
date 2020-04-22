@@ -30,9 +30,12 @@ compatibility:
   - name: 'On'
     parameter:
       - name: Direction
+        value: Forward
         constraint:
-        - Forward
-        - Backward
+        - key: Forward
+          value: 1
+        - key: Backward
+          value: 0
       - name: Speed
         constraint:
           min: 0

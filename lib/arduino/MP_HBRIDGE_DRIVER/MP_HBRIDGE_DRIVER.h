@@ -11,7 +11,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void on(char dir[], int speed);
+	void on(uint8_t dir, int speed);
 	void off();
 
 private:

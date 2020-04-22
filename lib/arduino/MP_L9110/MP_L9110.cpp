@@ -27,10 +27,11 @@ void MP_L9110::printStatus()
 	Serial.println(status);
 }
 
-void MP_L9110::on(char dir[], int speed)
+void MP_L9110::on(uint8_t dir, int speed)
 {
 	speed = map(speed, 0, 100, 0, 255);
-	if (strcmp(dir, "Forward") == 0)
+	// Forward - 1, Backward - 0
+	if (dir == 1)
 	{
 		analogWrite(inA, speed);
 		digitalWrite(inB, LOW);
