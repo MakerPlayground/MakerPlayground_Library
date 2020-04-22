@@ -3,10 +3,8 @@
 #include <VL53L0X.h>
 
 #define LONG_RANGE
-//#define HIGH_SPEED
-//#define HIGH_ACCURACY
 
-MP_VL53L0X::MP_VL53L0X(String mode)
+MP_VL53L0X::MP_VL53L0X(uint8_t mode)
     : mode(mode)
 {
 }
@@ -26,17 +24,12 @@ int MP_VL53L0X::init()
     sensor.setVcselPulsePeriod(VL53L0X::VcselPeriodFinalRange, 14);
 #endif
 
-// #if defined HIGH_SPEED
-    if (String("High Speed").equals(mode)) {
-        // reduce timing budget to 20 ms (default is about 33 ms)
-        sensor.setMeasurementTimingBudget(20000);
+    if (mode == 1) { // HIGH_SPEED
+        sensor.setMeasurementTimingBudget(20000);   // reduce timing budget to 20 ms (default is about 33 ms)
     }
-// #elif defined HIGH_ACCURACY
-    else if (String("High Accuracy").equals(mode)) {
-        // increase timing budget to 200 ms
-        sensor.setMeasurementTimingBudget(200000);
+    else if (mode == 0) { // HIGH_ACCURACY
+        sensor.setMeasurementTimingBudget(200000);  // increase timing budget to 200 ms
     }
-// #endif
     return ERR_OK;
 }
 

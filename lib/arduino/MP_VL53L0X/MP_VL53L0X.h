@@ -8,7 +8,7 @@
 class MP_VL53L0X
 {
 public:
-    MP_VL53L0X(String mode);
+    MP_VL53L0X(uint8_t mode);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
@@ -20,7 +20,7 @@ private:
     VL53L0X sensor;
     bool isTimeOut = false;
     unsigned long nextReading;
-    String mode;
+    uint8_t mode;
 };
 
 #endif

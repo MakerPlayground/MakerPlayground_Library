@@ -7,13 +7,15 @@ width: 128
 height: 98
 property:
   - name: Mode
-    datatype: ENUM
+    datatype: STRING_INT_ENUM
     optional: true
     controltype: DROPDOWN
     value: High Accuracy
     constraint:
-      - High Accuracy
-      - High Speed
+      - key: High Accuracy
+        value: 0
+      - key: High Speed
+        value: 1
 ## pin distance is not 14.4 pixels
 # need_breadboard: true
 # breadboard_placement: ONE_SIDE

@@ -7,13 +7,15 @@ width: 171
 height: 114
 property:
 - name: Mode
-  datatype: ENUM
+  datatype: STRING_INT_ENUM
   optional: true
   controltype: DROPDOWN
   value: High Accuracy
   constraint:
-    - High Accuracy
-    - High Speed
+    - key: High Accuracy
+      value: 0
+    - key: High Speed
+      value: 1
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
   - name: Port
