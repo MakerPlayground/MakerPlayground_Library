@@ -22,7 +22,7 @@ class MP_OLED_SSD1306_128x64(MP_Device):
     FONT_3X = ImageFont.truetype(FONT_FILE_PATH, 3 * CHAR_HEIGHT_1X)
 
     class Entry:
-        def __init__(self, x: int = -1, message: str = '', size: int = 1, align: str = 'left'):
+        def __init__(self, x: int = -1, message: str = '', size: int = 1, align: int = 0):
             self.x = x
             self.message = message
             self.size = size
@@ -64,15 +64,14 @@ class MP_OLED_SSD1306_128x64(MP_Device):
     def showTextAtRow(self, row, text, size, align, color):
         row_index = int(row - 1)
         if row_index >= 0 and row_index < MP_OLED_SSD1306_128x64.MAX_ENTRY_COUNT:
-            sizeInt = { '1x': 1, '2x': 2, '3x': 3 }[size]
             self.entries[row_index].message = str(text)
-            self.entries[row_index].size = sizeInt
-            if align == 'Left':
+            self.entries[row_index].size = size
+            if align == 0:
                 self.entries[row_index].x = 0
-            elif align == 'Center':
-                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * sizeInt * len(self.entries[row_index].message))) // 2
-            elif align == 'Right':
-                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * sizeInt * len(self.entries[row_index].message)))
+            elif align == 1:
+                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * size * len(self.entries[row_index].message))) // 2
+            elif align == 2:
+                self.entries[row_index].x = (MP_OLED_SSD1306_128x64.SCREEN_WIDTH - (MP_OLED_SSD1306_128x64.CHAR_WIDTH_1X * size * len(self.entries[row_index].message)))
             self._show()
 
     def clearRow(self, row):

@@ -16,7 +16,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color);
+	void showTextAtRow(uint8_t row, const char* text, uint8_t size, uint8_t align, uint8_t color);
 	void clearRow(uint8_t row);
 	void clearScreen();
 

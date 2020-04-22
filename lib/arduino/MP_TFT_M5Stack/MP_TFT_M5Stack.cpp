@@ -30,38 +30,37 @@ void MP_TFT_M5Stack::printStatus()
 {
 }
 
-void MP_TFT_M5Stack::showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color) {
+void MP_TFT_M5Stack::showTextAtRow(uint8_t row, const char* text, uint8_t size, uint8_t align, uint8_t color) {
     uint8_t rowIndex = row - 1;
     if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
     {
         int currentX = 0;
         int currentY = 0;
-        uint8_t sizeInt = (strcmp(size, "1x") == 0) ? 1 : ((strcmp(size, "2x") == 0) ? 2 : ((strcmp(size, "3x") == 0) ? 3 : 1));
         
-        if (strcmp(align, "Left") == 0)
+        if (align == 0) // left
         {
             currentX = 0;
         }
-        else if (strcmp(align, "Center") == 0)
+        else if (align == 1) // center
         {
-            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text))) / 2;
+            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * size * strlen(text))) / 2;
         }
-        else if (strcmp(align, "Right") == 0)
+        else if (align == 2) // right
         {
-            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text));
+            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * size * strlen(text));
         }
         currentY = rowIndex * ROW_HEIGHT;
 
-        display.fillRect(0, rowIndex * ROW_HEIGHT + 1, SCREEN_WIDTH, (sizeInt > row_heights[rowIndex] ? sizeInt : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
-        row_heights[rowIndex] = sizeInt;
+        display.fillRect(0, rowIndex * ROW_HEIGHT + 1, SCREEN_WIDTH, (size > row_heights[rowIndex] ? size : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
+        row_heights[rowIndex] = size;
 
-        if (strcmp(size, "1x") == 0) {
+        if (size == 1) {
             display.setTextSize(1);
             display.setFreeFont(&FreeMonoBold9pt7b);
-        } else if(strcmp(size, "2x") == 0) {
+        } else if(size == 2) {
             display.setTextSize(1);
             display.setFreeFont(&FreeMonoBold18pt7b);
-        } else if(strcmp(size, "3x") == 0) {
+        } else if(size == 3) {
             display.setTextSize(3);
             display.setFreeFont(&FreeMonoBold9pt7b);
         }
@@ -84,58 +83,30 @@ void MP_TFT_M5Stack::clearScreen() {
     initRowHeights();
 }
 
-const GFXfont * MP_TFT_M5Stack::getFontFromSizeName(const char* size)
+uint16_t MP_TFT_M5Stack::getColorFromColorName(uint8_t color)
 {
-    if (strcmp(size, "1x") == 0) {
-        return &FreeMonoBold9pt7b;
-    } else if(strcmp(size, "2x") == 0) {
-        return &FreeMonoBold18pt7b;
-    } else if(strcmp(size, "3x") == 0) {
-        return &FreeMonoBold18pt7b;
-    }
-    return &FreeMonoBold9pt7b;
-}
-
-uint16_t MP_TFT_M5Stack::getColorFromColorName(const char* color)
-{
-    if (strcmp(color, "Navy") == 0) {
-        return TFT_NAVY;
-    } else if (strcmp(color, "Dark Green") == 0) {
-        return TFT_DARKGREEN;
-    } else if (strcmp(color, "Dark Cyan") == 0) {
-        return TFT_DARKCYAN;
-    } else if (strcmp(color, "Maroon") == 0) {
-        return TFT_MAROON;
-    } else if (strcmp(color, "Purple") == 0) {
-        return TFT_PURPLE;
-    } else if (strcmp(color, "Olive") == 0) {
-        return TFT_OLIVE;
-    } else if (strcmp(color, "Light Grey") == 0) {
-        return TFT_LIGHTGREY;
-    } else if (strcmp(color, "Dark Grey") == 0) {
-        return TFT_DARKGREY;
-    } else if (strcmp(color, "Blue") == 0) {
-        return TFT_BLUE;
-    } else if (strcmp(color, "Green") == 0) {
-        return TFT_GREEN;
-    } else if (strcmp(color, "Cyan") == 0) {
-        return TFT_CYAN;
-    } else if (strcmp(color, "Red") == 0) {
-        return TFT_RED;
-    } else if (strcmp(color, "Magenta") == 0) {
-        return TFT_MAGENTA;
-    } else if (strcmp(color, "Yellow") == 0) {
-        return TFT_YELLOW;
-    } else if (strcmp(color, "White") == 0) {
-        return TFT_WHITE;
-    } else if (strcmp(color, "Orange") == 0) {
-        return TFT_ORANGE;
-    } else if (strcmp(color, "Green Yellow") == 0) {
-        return TFT_GREENYELLOW;
-    } else if (strcmp(color, "Pink") == 0) {
-        return TFT_PINK;
-    }
-    return TFT_WHITE;
+    if (color < 0 || color > 17) return TFT_WHITE;
+    const uint16_t colors[] = {
+        TFT_BLUE,         /* 0 */
+        TFT_CYAN,
+        TFT_DARKCYAN,
+        TFT_DARKGREEN,
+        TFT_DARKGREY,
+        TFT_GREEN,        /* 5 */
+        TFT_GREENYELLOW,
+        TFT_LIGHTGREY,
+        TFT_MAGENTA,
+        TFT_MAROON,
+        TFT_NAVY,         /* 10 */
+        TFT_OLIVE,
+        TFT_ORANGE,
+        TFT_PINK,
+        TFT_PURPLE,
+        TFT_WHITE,        /* 15 */
+        TFT_RED,
+        TFT_YELLOW
+    };
+    return colors[color];
 }
 
 void MP_TFT_M5Stack::initRowHeights()

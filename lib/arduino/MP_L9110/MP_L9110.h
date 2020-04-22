@@ -12,7 +12,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void on(uint8_t dir[], int speed);
+	void on(uint8_t dir, int speed);
 	void off();   //not implemented
 
 private:

@@ -36,35 +36,40 @@ void MP_OLED_SSD1306_128x64::printStatus()
 {
 }
 
-void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, const char* text, const char* size, const char* align, const char* color)
+// size - 1, 2, 3
+// align
+//     left - 0
+//     center - 1
+//     right - 2
+// color - ignore (always white)
+void MP_OLED_SSD1306_128x64::showTextAtRow(uint8_t row, const char* text, uint8_t size, uint8_t align, uint8_t color)
 {
     uint8_t rowIndex = row - 1;
     if (rowIndex >= 0 && rowIndex < MAX_ENTRY_COUNT)
     {
         int8_t currentX = 0;
         int8_t currentY = 0;
-        uint8_t sizeInt = (strcmp(size, "1x") == 0) ? 1 : ((strcmp(size, "2x") == 0) ? 2 : ((strcmp(size, "3x") == 0) ? 3 : 1));
         
-        if (strcmp(align, "Left") == 0)
+        if (align == 0)  //left
         {
             currentX = 0;
         }
-        else if (strcmp(align, "Center") == 0)
+        else if (align == 1) // center
         {
-            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text))) / 2;
+            currentX = (SCREEN_WIDTH - (CHAR_WIDTH_1X * size * strlen(text))) / 2;
         }
-        else if (strcmp(align, "Right") == 0)
+        else if (align == 2) // right
         {
-            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * sizeInt * strlen(text));
+            currentX = SCREEN_WIDTH - (CHAR_WIDTH_1X * size * strlen(text));
         }
         currentY = rowIndex * ROW_HEIGHT;
         
-        display.fillRect(0, rowIndex * ROW_HEIGHT, SCREEN_WIDTH, (sizeInt > row_heights[rowIndex] ? sizeInt : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
-        display.setTextSize(sizeInt);
+        display.fillRect(0, rowIndex * ROW_HEIGHT, SCREEN_WIDTH, (size > row_heights[rowIndex] ? size : row_heights[rowIndex]) * ROW_HEIGHT, BLACK);
+        display.setTextSize(size);
         display.setCursor(currentX, currentY);
         display.print(text);
         display.display();
-        row_heights[rowIndex] = sizeInt;
+        row_heights[rowIndex] = size;
     }
 }
 
