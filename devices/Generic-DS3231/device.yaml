@@ -38,7 +38,7 @@ compatibility:
     action:
       - name: Set DateTime
         parameter:
-          - name: datetime
+          - name: Date & Time
             constraint: []
     condition:
       - name: Compare

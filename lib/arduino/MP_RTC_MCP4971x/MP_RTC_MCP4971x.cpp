@@ -23,18 +23,13 @@ void MP_RTC_MCP4971x::update(unsigned long current_time) {
     }
 }
 
-void MP_RTC_MCP4971x::setDateTime(MP_DATETIME t) {
+void MP_RTC_MCP4971x::setDateTime(const char * date_time) {
+    MP_DATETIME t = MP_DATETIME(date_time);
     rtc.setDateTime(t.getSecond(), t.getMinute(), t.getHour(), t.getDayOfWeek(), t.getDate(), t.getMonth(), t.getYear()-2000);
 }
 
-bool MP_RTC_MCP4971x::checkDayOfWeek(char* dayName) {
-    return (strcmp(dayName, "Sunday") == 0 && dayOfWeek == 1) || 
-            (strcmp(dayName, "Monday") == 0 && dayOfWeek == 2) || 
-            (strcmp(dayName, "Tuesday") == 0 && dayOfWeek == 3) || 
-            (strcmp(dayName, "Wednesday") == 0 && dayOfWeek == 4) || 
-            (strcmp(dayName, "Thursday") == 0 && dayOfWeek == 5) || 
-            (strcmp(dayName, "Friday") == 0 && dayOfWeek == 6) || 
-            (strcmp(dayName, "Saturday") == 0 && dayOfWeek == 7);
+bool MP_RTC_MCP4971x::checkDayOfWeek(uint8_t day) {
+    return dayOfWeek == day;
 }
 
 uint8_t MP_RTC_MCP4971x::getHour() {

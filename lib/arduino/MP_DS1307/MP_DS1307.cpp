@@ -32,7 +32,8 @@ void MP_DS1307::update(unsigned long current_time) {
     }
 }
 
-void MP_DS1307::setDateTime(MP_DATETIME t) {
+void MP_DS1307::setDateTime(const char * date_time) {
+    MP_DATETIME t = MP_DATETIME(date_time);
     Rtc.SetDateTime(RtcDateTime(t.getYear(), t.getMonth(), t.getDate(), t.getHour(), t.getMinute(), t.getSecond()));
 }
 

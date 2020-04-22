@@ -28,7 +28,7 @@ compatibility:
     action:
     - name: Set DateTime
       parameter:
-        - name: datetime
+        - name: Date & Time
     condition:
       - name: Compare
       - name: Check Day
