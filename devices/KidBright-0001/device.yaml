@@ -4,8 +4,8 @@ model: 32 V1.3
 url: https://www.kid-bright.org/
 type: CONTROLLER
 pio_boardid: esp32dev
-width: 425
-height: 303
+width: 510
+height: 289
 property: []
 pin_template: ESP_32
 cloud_provide:
@@ -21,184 +21,184 @@ connection_provide:
   - name: '5V (0)'
     type: WIRE
     pins:
-      - x: 43
-        y: 71
+      - x: 28
+        y: 43
         ref_to: VCC
   - name: '5V (1)'
     type: WIRE
     pins:
-      - x: 115
-        y: 71
+      - x: 73
+        y: 43
         ref_to: VCC
-  - name: 'IN1'
+  - name: 'IN1 (Banana)'
     type: WIRE
     pins:
-      - x: 43
-        y: 151
+      - x: 28
+        y: 94
         ref_to: '32'
-  - name: 'IN2'
+  - name: 'IN2 (Banana)'
     type: WIRE
     pins:
-      - x: 115
-        y: 151
+      - x: 73
+        y: 94
         ref_to: '33'
-  - name: 'IN3'
+  - name: 'IN3 (Banana)'
     type: WIRE
     pins:
-      - x: 43
-        y: 231
+      - x: 28
+        y: 146
         ref_to: '34'
-  - name: 'IN4'
+  - name: 'IN4 (Banana)'
     type: WIRE
     pins:
-      - x: 115
-        y: 231
+      - x: 73
+        y: 146
         ref_to: '35'
-  - name: 'OUT1'
+  - name: 'OUT1 (Banana)'
     type: WIRE
     pins:
-      - x: 43
-        y: 311
+      - x: 28
+        y: 198
         ref_to: '26'
-  - name: 'OUT2'
+  - name: 'OUT2 (Banana)'
     type: WIRE
     pins:
-      - x: 115
-        y: 311
+      - x: 73
+        y: 198
         ref_to: '27'
   - name: 'GND (0)'
     type: WIRE
     pins:
-      - x: 43
-        y: 391
+      - x: 28
+        y: 249
         ref_to: 'GND'
   - name: 'GND (1)'
     type: WIRE
     pins:
-      - x: 115
-        y: 391
+      - x: 73
+        y: 249
         ref_to: 'GND'
-  - name: '1'
+  - name: 'IN1 (Header)'
     type: WIRE
     pins:
-      - x: 65
-        y: 434
+      - x: 41.311
+        y: 278
         ref_to: '32'
-  - name: '2'
+  - name: 'IN2 (Header)'
     type: WIRE
     pins:
-      - x: 85
-        y: 434
+      - x: 54.3518
+        y: 278
         ref_to: '33'
-  - name: '3'
+  - name: 'IN3 (Header)'
     type: WIRE
     pins:
-      - x: 105
-        y: 434
+      - x: 67.3927
+        y: 278
         ref_to: '34'
-  - name: '4'
+  - name: 'IN4 (Header)'
     type: WIRE
     pins:
-      - x: 125
-        y: 434
+      - x: 80.4336
+        y: 278
         ref_to: '35'
   - name: 'GND (2)'
     type: WIRE
     pins:
-      - x: 145
-        y: 434
+      - x: 93.4745
+        y: 278
         ref_to: 'GND'
-  - name: '21'
+  - name: 'OUT2 (Header)'
     type: WIRE
     pins:
-      - x: 165
-        y: 434
-        ref_to: '21'
-  - name: '23'
+      - x: 106.5154
+        y: 278
+        ref_to: '27'
+  - name: 'OUT1 (Header)'
     type: WIRE
     pins:
-      - x: 185
-        y: 434
-        ref_to: '23'
+      - x: 119.5563
+        y: 278
+        ref_to: '26'
   - name: 'GND (3)'
     type: WIRE
     pins:
-      - x: 185
-        y: 414
+      - x: 119.5563
+        y: 264.9932
         ref_to: 'GND'
-  - name: 'GND (4)'
+  - name: '23'
     type: WIRE
     pins:
-      - x: 185
-        y: 394
-        ref_to: 'GND'
+      - x: 119.5563
+        y: 251.9629
+        ref_to: '23'
   - name: '19'
     type: WIRE
     pins:
-      - x: 185
-        y: 374
+      - x: 119.5563
+        y: 238.9327
         ref_to: '19'
   - name: '18'
     type: WIRE
     pins:
-      - x: 185
-        y: 354
+      - x: 119.5563
+        y: 225.9024
         ref_to: '18'
   - name: 'SDA0'
     type: WIRE
     pins:
-      - x: 185
-        y: 334
+      - x: 119.5563
+        y: 212.8718
         ref_to: '21'
   - name: 'SCL0'
     type: WIRE
     pins:
-      - x: 185
-        y: 314
+      - x: 119.5563
+        y: 199.8416
         ref_to: '22'
   - name: '3V3'
     type: WIRE
     pins:
-      - x: 185
-        y: 294
+      - x: 119.5563
+        y: 186.8113
         ref_to: 'VCC'
   - name: '5V'
     type: WIRE
     pins:
-      - x: 185
-        y: 274
+      - x: 119.5563
+        y: 173.7811
         ref_to: 'VCC'
         voltage_level: LEVEL_5
   - name: IO0
     type: WIRE
     pins:
-      - x: 508
-        y: 246
+      - x: 325.102
+        y: 157.7823
         ref_to: '0'
-  - name: GND (5)
+  - name: GND (4)
     type: WIRE
     pins:
-      - x: 528
-        y: 246
+      - x: 338.4241
+        y: 157.7823
         ref_to: GND
   # KIDBRIGHT [GND, SDA, SCL, 3V3, 5V]
-  - name: Port
+  - name: KB Chain
     type: KIDBRIGHT
     pins:
-      - x: 698
-        y: 121
+      - x: 447.0278
+        y: 77.0844
         ref_to: GND
-      - x: 698
-        y: 141
+      - x: 447.0278
+        y: 89.894
         ref_to: '4'
-      - x: 698
-        y: 161
+      - x: 447.0278
+        y: 102.7035
         ref_to: '5'
-      - x: 698
-        y: 181
+      - x: 447.0278
+        y: 115.5131
         ref_to: VCC
-      - x: 698
-        y: 201
+      - x: 447.0278
+        y: 128.3226
         ref_to: VCC
         voltage_level: LEVEL_5
 
