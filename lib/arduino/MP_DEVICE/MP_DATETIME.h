@@ -14,6 +14,69 @@ public:
         YY = year;
     }
 
+    MP_DATETIME(const char * date_time) {
+        char buffer[20];
+        int start_i = 0;
+        int stop_i = 0;
+        /* YEAR */
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        YY = atoi(buffer);
+        
+        /* MONTH */
+        stop_i++;
+        start_i = stop_i;
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        MM = atoi(buffer);
+        
+        /* DATE */
+        stop_i++;
+        start_i = stop_i;
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        DD = atoi(buffer);
+        
+        /* HOUR */
+        stop_i++;
+        start_i = stop_i;
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        hh = atoi(buffer);
+
+        /* MINUTE */
+        stop_i++;
+        start_i = stop_i;
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        mm = atoi(buffer);
+
+        /* SECOND */
+        stop_i++;
+        start_i = stop_i;
+        while(date_time[stop_i] >= '0' && date_time[stop_i] <= '9') {
+            stop_i++;
+        }
+        strncpy(buffer, &date_time[start_i], stop_i - start_i);
+        buffer[stop_i - start_i] = '\0';
+        ss = atoi(buffer);
+    }
+
     uint8_t getSecond() {
         return ss;
     }
@@ -44,6 +107,9 @@ public:
     }
 
 private:
+
+    MP_DATETIME() {}
+
     uint8_t ss;         // 0-59
     uint8_t mm;         // 0-59
     uint8_t hh;         // 0-23

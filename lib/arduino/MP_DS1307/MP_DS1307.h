@@ -29,7 +29,7 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
     
-    void setDateTime(MP_DATETIME datetime);
+    void setDateTime(const char* date_time);
     bool checkDayOfWeek(uint8_t day);
     uint8_t getHour();
     uint8_t getMinute();
