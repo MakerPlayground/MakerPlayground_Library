@@ -404,27 +404,27 @@ integrated_devices:
           - name: Show Bitmap
             funcname: showBitmap
             parameter:
-              - name: data
+              - name: Data
           - name: Show Text
             parameter:
-              - name: text
-              - name: text size
+              - name: Text
+              - name: Size
                 value: 1x
                 constraint:
                   - key: 1x
                     value: 1
                   - key: 2x
                     value: 2
-              - name: rotation
-                value: NONE
+              - name: Rotation
+                value: "0\u00B0"
                 constraint:
-                  - key: NONE
+                  - key: "0\u00B0"
                     value: 0
-                  - key: 90 DEGREES
+                  - key: "90\u00B0 CCW"
                     value: 90
-                  - key: 180 DEGREES
+                  - key: "180\u00B0 CCW"
                     value: 180
-                  - key: 270 DEGREES
+                  - key: "270\u00B0 CCW"
                     value: 270
           - name: Clear
             funcname: clear
