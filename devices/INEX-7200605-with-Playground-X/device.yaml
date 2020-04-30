@@ -476,7 +476,7 @@ integrated_devices:
         classname: MP_LED_AH
         library_dependency: []
   - name: Integrated Piezo
-    pin_template: GENERIC_PWM_ACTUATOR_3v3_5
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
     integrated_connection:
       - ref_to: GND
         host_ref_to: GND
