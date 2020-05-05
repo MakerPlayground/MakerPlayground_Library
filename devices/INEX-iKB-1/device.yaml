@@ -113,9 +113,9 @@ platforms:
   - platform: ARDUINO_ESP32
     classname: MP_IKB_1
     library_dependency: []
-  # - platform: RASPBERRYPI
-  #   classname: MP_IKB_1
-  #   library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_IKB_1
+    library_dependency: []
 connection_consume:
   - name: GND
     type: WIRE
@@ -271,10 +271,12 @@ compatibility:
               - 6
               - 7
           - name: Logic
-            value: 1
+            value: HIGH
             constraint:
-              - 1
-              - 0
+              - key: HIGH
+                value: 1
+              - key: Low
+                value: 0
     condition:
       - name: Compare
       - name: Is Digital High
