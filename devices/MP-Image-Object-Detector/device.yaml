@@ -1,0 +1,28 @@
+id: MP-Image-Object-Detector
+brand: Custom
+model: Image Object Detector
+url: ""
+type: VIRTUAL
+width: 50
+height: 50
+pin_template: NO_PIN
+compatibility:
+- name: Image Object Detector
+  condition:
+    - name: Found
+      parameter:
+        - name: Label
+    - name: Found In Region
+      parameter:
+        - name: Label
+        - name: Region (Top)
+        - name: Region (Bottom)
+        - name: Region (Left)
+        - name: Region (Right)
+  value:
+    - name: Image with bound
+      constraint: []
+platforms:
+- platform: RASPBERRYPI
+  classname: MP_IMAGE_OBJECT_DETECTOR
+  library_dependency: []

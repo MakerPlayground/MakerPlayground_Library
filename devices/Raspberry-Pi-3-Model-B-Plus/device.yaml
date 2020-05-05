@@ -269,39 +269,36 @@ connection_provide:
         ref_to: CSI4
       - x: 250.0
         y: 232.6
-        ref_to: CSI4
-      - x: 250.0
-        y: 238.0
         ref_to: CSI5
       - x: 250.0
-        y: 243.4
+        y: 238.0
         ref_to: CSI6
       - x: 250.0
-        y: 248.8
+        y: 243.4
         ref_to: CSI7
       - x: 250.0
-        y: 254.2
+        y: 248.8
         ref_to: CSI8
       - x: 250.0
-        y: 259.6
+        y: 254.2
         ref_to: CSI9
       - x: 250.0
-        y: 265.0
+        y: 259.6
         ref_to: CSI10
       - x: 250.0
-        y: 270.4
+        y: 265.0
         ref_to: CSI11
       - x: 250.0
-        y: 275.8
+        y: 270.4
         ref_to: CSI12
       - x: 250.0
-        y: 281.2
+        y: 275.8
         ref_to: CSI13
       - x: 250.0
-        y: 286.6
+        y: 281.2
         ref_to: CSI14
       - x: 250.0
-        y: 292.0
+        y: 286.6
         ref_to: CSI15
 compatibility: []
 platforms:

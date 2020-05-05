@@ -163,7 +163,8 @@
         "Digital (In)",
         "Digital (Out)",
         "PWM (Out)",
-        "MP3 Player"
+        "MP3 Player",
+        "Image Object Detector"
       ]
     },
     "action_condition": {
@@ -249,6 +250,7 @@
         "Before",
         "Found",
         "Not Found",
+        "Found In Region",
         "Has Text",
         "Has No Text",
         "Receive HIGH logic",
@@ -272,7 +274,8 @@
         "Set EQ",
         "Digital Out",
         "Is Digital High",
-        "Is Digital Low"
+        "Is Digital Low",
+        "Is Active"
       ]
     },
     "values": {
@@ -291,6 +294,7 @@
         "Percent",
         "Altitude",
         "Image",
+        "Image with bound",
         "Ampere",
         "Distance",
         "Atmospheric PM 1.0",
