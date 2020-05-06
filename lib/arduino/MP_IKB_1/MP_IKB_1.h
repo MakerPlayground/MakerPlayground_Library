@@ -15,7 +15,7 @@ class MP_IKB_1
 {
 public:
 
-	MP_IKB_1(uint8_t mode0, uint8_t mode1, uint8_t mode2, uint8_t mode3, uint8_t mode4, uint8_t mode5, uint8_t mode6, uint8_t mode7);
+	MP_IKB_1();
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
@@ -45,7 +45,6 @@ public:
 private:
     double getA_Percent(uint8_t pin);
     double getValue(uint8_t pin);
-    uint8_t modes[8] = {0};
     uint8_t values[8] = {0};
     unsigned long nextReading = 0;
 };

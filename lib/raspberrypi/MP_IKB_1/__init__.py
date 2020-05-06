@@ -14,8 +14,7 @@ class MP_IKB_1(MP_Device):
 
     delay = 0.005
 
-    def __init__(self, mode0, mode1, mode2, mode3, mode4, mode5, mode6, mode7):
-        self.modes = [mode0, mode1, mode2, mode3, mode4, mode5, mode6, mode7]
+    def __init__(self):
         self.values = [0, 0, 0, 0, 0, 0, 0, 0]
         self.pi = pigpio.pi()
         self.nextReading = 0
@@ -31,24 +30,18 @@ class MP_IKB_1(MP_Device):
         if currentTime >= self.nextReading:
             self.nextReading = currentTime + 0.100
             for i in range(8):
-                if self.modes[i] != MP_IKB_1.OUTPUT_ONLY:
-                    self.values[i] = self.getA_Percent(i)
+                self.values[i] = self.getA_Percent(i)
             
     def getStatus(self):
         return ""
 
     def digitalOut(self, pin, logic):
-        # MPInteractive.log(f"pin: {pin}    logic: {logic}")
-        if self.modes[pin] == MP_IKB_1.INPUT_ONLY:
-            return
         time.sleep(MP_IKB_1.delay)
         handle = self.pi.i2c_open(1, MP_IKB_1.I2C_ADDR)
         if logic == 0:
-            # MPInteractive.log(f"pin: {pin}    logic: {logic}")
             self.pi.i2c_write_byte_data(handle, 0x08 | pin, 0)
             self.values[pin] = 0
         else:
-            # MPInteractive.log(f"pin: {pin}    logic: {logic}")
             self.pi.i2c_write_byte_data(handle, 0x08 | pin, 1)
             self.values[pin] = 1
         self.pi.i2c_close(handle)
@@ -61,16 +54,14 @@ class MP_IKB_1(MP_Device):
         return self.getValue(pin) < 50
 
     def getA_Percent(self, pin):
+        if not MPInteractive.is_freeze_sensor:
+            handle = self.pi.i2c_open(1, MP_IKB_1.I2C_ADDR)
+            time.sleep(MP_IKB_1.delay)
+            self.pi.i2c_write_byte_data(handle, 0x08 | pin, 5)
+            time.sleep(MP_IKB_1.delay)
+            self.values[pin] = self.pi.i2c_read_byte(handle)
+            self.pi.i2c_close(handle)
 
-        if self.modes[pin] == MP_IKB_1.OUTPUT_ONLY:
-            return self.values[pin]
-
-        handle = self.pi.i2c_open(1, MP_IKB_1.I2C_ADDR)
-        time.sleep(MP_IKB_1.delay)
-        self.pi.i2c_write_byte_data(handle, 0x08 | pin, 5)
-        time.sleep(MP_IKB_1.delay)
-        self.values[pin] = self.pi.i2c_read_byte(handle)
-        self.pi.i2c_close(handle)
         return self.values[pin]
 
 

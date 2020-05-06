@@ -1,7 +1,6 @@
 #include "MP_IKB_1.h"
 
-MP_IKB_1::MP_IKB_1(uint8_t mode0, uint8_t mode1, uint8_t mode2, uint8_t mode3, uint8_t mode4, uint8_t mode5, uint8_t mode6, uint8_t mode7)
-    :modes {mode0, mode1, mode2, mode3, mode4, mode5, mode6, mode7}
+MP_IKB_1::MP_IKB_1()
 {
 }
 
@@ -32,10 +31,7 @@ void MP_IKB_1::update(unsigned long current_time)
     {
         nextReading = current_time + 50;
         for(uint8_t i=0; i<8; i++) {
-            if (modes[i] != IKB1_OUTPUT_ONLY && !MPInteractive.isFreezeSensor())
-            {
-                values[i] = getA_Percent(i);
-            }
+            values[i] = getA_Percent(i);
         }
     }
 }
@@ -46,8 +42,6 @@ void MP_IKB_1::printStatus()
 
 void MP_IKB_1::digitalOut(uint8_t pin, uint8_t logic) 
 {
-    if (modes[pin] == IKB1_INPUT_ONLY) { return; }
-
     Wire.beginTransmission(IKB1_I2C_ADDR);
     Wire.write((byte) (0x08 | pin));
     if (logic == 0) {
@@ -73,28 +67,26 @@ bool MP_IKB_1::isLow(uint8_t pin)
 
 double MP_IKB_1::getA_Percent(uint8_t pin)
 {
-    if (modes[pin] == IKB1_OUTPUT_ONLY) { return values[pin]; }
-
-    Wire.beginTransmission(IKB1_I2C_ADDR);
-    Wire.write((byte) (0x08 | pin));
-    Wire.write((byte) 5);
-    Wire.endTransmission();
-    Wire.requestFrom(IKB1_I2C_ADDR, 1);
-    while(Wire.available() < 1 && millis() <= nextReading);
-    if (Wire.available())
+    if (!MPInteractive.isFreezeSensor())
     {
-        byte value = Wire.read();
-        return value;
+        Wire.beginTransmission(IKB1_I2C_ADDR);
+        Wire.write((byte) (0x08 | pin));
+        Wire.write((byte) 5);
+        Wire.endTransmission();
+        Wire.requestFrom(IKB1_I2C_ADDR, 1);
+        while(Wire.available() < 1 && millis() <= nextReading);
+        if (Wire.available())
+        {
+            values[pin] = Wire.read();
+        }
     }
+    
     return values[pin];
 }
 
 double MP_IKB_1::getValue(uint8_t pin)
 {
-    if (!MPInteractive.isFreezeSensor())
-    {
-        values[pin] = getA_Percent(pin);
-    }
+    values[pin] = getA_Percent(pin);
     return values[pin];
 }
 
