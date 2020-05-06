@@ -32,7 +32,7 @@ void MP_IKB_1::update(unsigned long current_time)
     {
         nextReading = current_time + 50;
         for(uint8_t i=0; i<8; i++) {
-            if (modes[i] != IKB1_OUTPUT_ONLY)
+            if (modes[i] != IKB1_OUTPUT_ONLY && !MPInteractive.isFreezeSensor())
             {
                 values[i] = getA_Percent(i);
             }
@@ -91,7 +91,10 @@ double MP_IKB_1::getA_Percent(uint8_t pin)
 
 double MP_IKB_1::getValue(uint8_t pin)
 {
-    values[pin] = getA_Percent(pin);
+    if (!MPInteractive.isFreezeSensor())
+    {
+        values[pin] = getA_Percent(pin);
+    }
     return values[pin];
 }
 
