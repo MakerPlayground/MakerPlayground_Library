@@ -14,7 +14,8 @@ class Expr:
 
 class MPInteractive:
 
-    m_delay = 0.1      # message log delay (second)
+    sensor_rate = 0.1      # message log delay (second)
+    is_freeze_sensor = False
 
     update_fn = lambda: None
     message_fn = lambda: ''
@@ -38,9 +39,12 @@ class MPInteractive:
     async def send_handler(websocket, path):
         try:
             while True:
-                msg = MPInteractive.message_fn()
-                await websocket.send(msg)
-                await asyncio.sleep(MPInteractive.m_delay)
+                if MPInteractive.is_freeze_sensor:
+                    await asyncio.sleep(0.5)
+                else:
+                    msg = MPInteractive.message_fn()
+                    await websocket.send(msg)
+                    await asyncio.sleep(MPInteractive.sensor_rate)
         except Exception as ex:
             MPInteractive.log(ex)
             MPInteractive.log(f"Send handler for {websocket.remote_address} is stopped.")
