@@ -45,7 +45,7 @@ property:
     - 180
     - 270
 connection_consume:
-  - name: Camera
+  - name: Port
     type: CSI
     pins:
       - x: 17.5

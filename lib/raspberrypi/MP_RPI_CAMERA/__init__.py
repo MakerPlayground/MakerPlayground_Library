@@ -6,12 +6,12 @@ from PIL import Image
 
 class MP_RPI_CAMERA(MP_Device):
 
-    def __init__(self, max_fps, rotation):
+    def __init__(self, sensor_mode, max_fps, rotation):
         self.last_capture_time = 0
         self.min_seconds_wait_per_capture = 1.0 / max_fps
         self.stream = io.BytesIO()
         self.image = None
-        self.camera = PiCamera(sensor_mode=2)
+        self.camera = PiCamera(sensor_mode=sensor_mode)
         self.camera.rotation = rotation
 
     def update(self, currentTime):
