@@ -7,7 +7,7 @@ width: 116
 height: 114
 pin_template: RPI_CAMERA
 property:
-- name: Camera Mode
+- name: Capture
   value: 640x480 42-60 fps
   # see more: https://picamera.readthedocs.io/en/release-1.13/fov.html#sensor-modes
   constraint:
@@ -27,14 +27,6 @@ property:
       value: 7
   datatype: STRING_INT_ENUM
   controltype: DROPDOWN
-- name: Maximum Capture Rate (fps)
-  value: 25
-  datatype: DOUBLE
-  controltype: SPINBOX
-  constraint:
-    min: 0.1
-    max: 60
-    unit: NOT_SPECIFIED
 - name: Rotation
   value: 0
   datatype: INTEGER_ENUM

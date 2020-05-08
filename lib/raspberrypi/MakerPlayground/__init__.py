@@ -1,4 +1,6 @@
 import time
+import io
+import base64
 import signal
 import functools
 import pigpio
@@ -43,8 +45,13 @@ class MPInteractive:
                     await asyncio.sleep(0.5)
                 else:
                     msg = MPInteractive.message_fn()
+                    start_time = time.time()
                     await websocket.send(msg)
-                    await asyncio.sleep(MPInteractive.sensor_rate)
+                    end_time = time.time()
+                    if MPInteractive.sensor_rate < end_time - start_time:
+                        await asyncio.sleep(0)
+                    else:
+                        await asyncio.sleep(MPInteractive.sensor_rate - (end_time - start_time))
         except Exception as ex:
             MPInteractive.log(ex)
             MPInteractive.log(f"Send handler for {websocket.remote_address} is stopped.")
@@ -135,6 +142,15 @@ class MPRunner:
         if message_log_fn:
             MPRunner.message_fn = message_log_fn
         asyncio.run(MPRunner.server_with_main(main_fn))
+
+class MPImage:
+    
+    @staticmethod
+    def get_preview_base64(image):
+        outstream = io.BytesIO()
+        preview = image.resize((160, 120))
+        image.save(outstream, format='jpeg')
+        return base64.b64encode(outstream.getvalue()).decode("utf-8")
 
 class MP:
     currentNode = lambda: None
