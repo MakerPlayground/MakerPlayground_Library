@@ -18,7 +18,7 @@ connection_consume:
   - name: GND
     type: WIRE
     pins:
-      - x: 63.9
+      - x: 49.5
         y: 171.1
         ref_to: GND
   - name: A0
