@@ -1,6 +1,6 @@
-id: LogiSenses-Senses_Weizen-ESP32
+id: LogiSenses-Senses_Weizen
 brand: LogiSenses
-model: Esp32 Senses Weizen
+model: Senses Weizen
 url: https://www.sensesiot.com
 type: CONTROLLER
 pio_boardid: esp32dev
