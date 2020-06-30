@@ -1,6 +1,6 @@
 id: DOIT-ESP32-30pins
 brand: DOIT
-model: Esp32 DevKit v1 (30 GPIOs)
+model: ESP32 DevKit v1 (30 GPIOs)
 url: ''
 type: CONTROLLER
 pio_boardid: esp32dev
