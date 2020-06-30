@@ -1,6 +1,6 @@
 id: NETPIE-0001
-brand: NETPIE
-model: Virtual LED
+brand: NETPIE 2015
+model: Freeboard LED
 url: ''
 type: VIRTUAL
 pin_template: NO_PIN
