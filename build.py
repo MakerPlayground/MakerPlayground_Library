@@ -4,6 +4,7 @@ import zipfile
 import os
 import hashlib
 import urllib.request
+from datetime import datetime, timezone, timedelta
 
 # read compatibility file
 compatibility = {}
@@ -12,15 +13,13 @@ with open('compatibility.txt', 'r') as file:
     for line in file.readlines():
         tmp = line.split('=')
         compatibility[tmp[0].strip()] = tmp[1].strip()
-if ('min_mp_version' not in compatibility) or ('release-date' not in compatibility):
+if 'min_mp_version' not in compatibility:
     print('Error: content of compatibility.txt is not valid. Please create a compatibility file with the following content')
     print()
     print('min_mp_version=<version string e.g. 0.6.0-beta1-40-g249238b4>')
-    print('release-date=<release date e.g. 2020-04-16>')
     print()
     exit(1)
-print(f"minimum support mp version = {compatibility['min_mp_version']}") 
-print(f"release date = {compatibility['release-date']}") 
+print(f"minimum support mp version = {compatibility['min_mp_version']}")
 
 # get versions string from git hash
 print('Getting version string from git hash...')
@@ -32,7 +31,10 @@ else:
     exit(1)
 print (f'version = {version_string}')
 
-current_version = {'version': version_string, 'min_mp_version': compatibility['min_mp_version'], 'release-date': compatibility['release-date']}
+# get current datetime
+release_date = datetime.now(timezone(timedelta(hours=7))).isoformat()
+
+current_version = {'version': version_string, 'min_mp_version': compatibility['min_mp_version'], 'release-date': release_date}
 
 # generate library archive (ignore empty subdirectory)
 print('Generating library.zip...')
