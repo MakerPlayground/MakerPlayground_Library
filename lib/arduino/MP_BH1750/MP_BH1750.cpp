@@ -4,8 +4,8 @@
 
 MP_BH1750::MP_BH1750(bool addr_pull_up)
 	:lightMeter(addr_pull_up ? 0x5C : 0x23)
-	, percent(0)
 	, lux(0)
+	, percent(0)
 {
 }
 
