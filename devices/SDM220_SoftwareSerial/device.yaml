@@ -1,0 +1,99 @@
+id: SDM220_SoftwareSerial
+brand: Eastron
+model: SDM220 - Single Phase Energy/Power Meter
+url: http://www.eastrongroup.com/productsview/49.html
+type: MODULE
+width: 204
+height: 760
+pin_template: GENERIC_SOFTSERIAL_3v3_5
+connection_consume:
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 115.5
+        y: 7.58
+        ref_to: GND
+  - name: TXD
+    type: WIRE
+    pins:
+      - x: 144.58
+        y: 7.58
+        ref_to: TX
+  - name: RXD
+    type: WIRE
+    pins:
+      - x: 130.22
+        y: 7.58
+        ref_to: RX
+  - name: VCC
+    type: WIRE
+    pins:
+      - x: 159
+        y: 7.58
+        ref_to: VCC
+compatibility:
+  - name: Energy Meter
+    condition:
+      - name: Compare
+    value:
+      - name: Current
+        constraint:
+          min: 0
+          max: 60
+          unit: AMPERE
+      - name: Voltage
+        constraint:
+          min: 0
+          max: 300
+          unit: VOLT
+      - name: Power
+        constraint:
+          min: 0
+          max: 20000
+          unit: WATT
+      - name: Frequency
+        constraint:
+          min: 0
+          max: 100
+          unit: HERTZ
+      - name: Active Apparent Power
+        constraint:
+          min: 0
+          max: 20000
+          unit: VOLT_AMPERE
+      - name: Reactive Apparent Power
+        constraint:
+          min: 0
+          max: 20000
+          unit: VOLT_AMPERE_REACTIVE
+      - name: Total Active Energy
+        constraint:
+          min: 0
+          max: 300000
+          unit: KILO_WATT_HOUR
+      - name: Total Reactive Energy
+        constraint:
+          min: 0
+          max: 300000
+          unit: KILO_VOLT_AMPERE_REACTIVE_HOUR
+      - name: Power Factor
+        constraint:
+          min: -1
+          max: 1
+          unit: POWER_FACTOR
+      - name: Phase Angle
+        constraint:
+          min: -90
+          max: 90
+          unit: DEGREE
+platforms:
+- platform: ARDUINO_ESP8266
+  classname: MP_SDM_SOFTSERIAL
+  library_dependency:
+    - "plerup/espsoftwareserial-6.8.5"
+    - "reaper7/SDM_Energy_Meter-2.0.7"
+- platform: ARDUINO_ESP32
+  classname: MP_SDM_SOFTSERIAL
+  library_dependency:
+    - "plerup/espsoftwareserial-6.8.5"
+    - "reaper7/SDM_Energy_Meter-2.0.7"

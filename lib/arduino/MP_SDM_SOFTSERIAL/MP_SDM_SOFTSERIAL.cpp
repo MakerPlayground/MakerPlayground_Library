@@ -1,8 +1,7 @@
 #include "MP_SDM_SOFTSERIAL.h"
 
 MP_SDM_SOFTSERIAL::MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx)
-    : ss(SoftwareSerial(device_tx, device_rx))
-	, sdm(SDM(ss, 9600, NOT_A_PIN))
+	: sdm(SDM(ss, 9600, NOT_A_PIN, SWSERIAL_8N1, device_tx, device_rx))
 {
 }
 
