@@ -288,7 +288,7 @@ Port type is defined to let the MakerPlayground software calculates the correct 
 |M5STACK|[GND, VCC, DATA2, DATA1]|
 |KIDBRIGHT|[GND, SDA, SCL, 3V3, 5V]|
 |INEX3|[GND, DATA, VCC]|
-|INEX_SERVO|[GND, VCC, DATA]|
+|JR_SERVO|[GND, VCC, DATA]|
 |CSI|[CSI1, CSI2, CSI3, ..., CSI15]|
 |UNO_SHIELD|Not defined yet|
 

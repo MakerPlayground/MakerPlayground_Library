@@ -292,7 +292,7 @@ connection_provide:
         y: 263
         ref_to: VCC
   - name: SV1
-    type: INEX_SERVO
+    type: JR_SERVO
     pins:
       - x: 391
         y: 11.0
@@ -304,7 +304,7 @@ connection_provide:
         y: 39.8
         ref_to: PB1
   - name: SV2
-    type: INEX_SERVO
+    type: JR_SERVO
     pins:
       - x: 405.4
         y: 11.0
