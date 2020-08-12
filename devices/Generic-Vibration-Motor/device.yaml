@@ -35,11 +35,11 @@ compatibility:
       - name: 'Off'
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_LOAD_DRIVER
+    classname: MP_LOAD_DRIVER_AH
     library_dependency: []
   - platform: ARDUINO_ESP8266
-    classname: MP_LOAD_DRIVER
+    classname: MP_LOAD_DRIVER_AH
     library_dependency: []
   - platform: ARDUINO_ESP32
-    classname: MP_LOAD_DRIVER
+    classname: MP_LOAD_DRIVER_AH
     library_dependency: []
