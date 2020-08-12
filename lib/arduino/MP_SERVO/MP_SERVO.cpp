@@ -8,7 +8,11 @@ MP_SERVO::MP_SERVO(uint8_t pin)
 int MP_SERVO::init()
 {
     this->degree = 0;
+#ifdef ESP32
+    myservo.attach(pin, getChannel(pin));
+#else
     myservo.attach(pin);
+#endif
     return ERR_OK;
 }
 
