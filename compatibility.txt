@@ -1,1 +1,1 @@
-min_mp_version=0.6.0-beta1-40-g249238b4
+min_mp_version=0.6.1-2-gf1364c1b

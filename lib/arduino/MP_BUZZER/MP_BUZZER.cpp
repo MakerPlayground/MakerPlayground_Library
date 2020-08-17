@@ -9,8 +9,6 @@ MP_BUZZER::MP_BUZZER(uint8_t pin)
 
 int MP_BUZZER::init()
 {
-	pinMode(this->pin, OUTPUT);
-	noTone(this->pin);
 	return ERR_OK;
 }
 
