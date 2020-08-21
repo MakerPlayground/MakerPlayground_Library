@@ -1,4 +1,4 @@
-id: KidBright-0001
+id: KidBright-V1_3
 brand: KidBright
 model: 32 V1.3
 url: https://www.kid-bright.org/
@@ -183,7 +183,7 @@ connection_provide:
         ref_to: GND
   # KIDBRIGHT [GND, SDA, SCL, 3V3, 5V]
   - name: KB Chain
-    type: KIDBRIGHT
+    type: KB_CHAIN
     pins:
       - x: 447.0278
         y: 77.0844
