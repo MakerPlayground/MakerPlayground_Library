@@ -58,5 +58,5 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_L3GD20H
   library_dependency:
-  - adafruit/Adafruit_Sensor
+  - adafruit/Adafruit_Sensor-1.1.4
   - adafruit/Adafruit_L3GD20_U

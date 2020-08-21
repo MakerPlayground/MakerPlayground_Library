@@ -65,5 +65,5 @@ platforms:
   library_dependency:
   - dplasa/dht
   - adafruit/Adafruit_BMP280_Library-1.0.2
-  - adafruit/Adafruit_Sensor
+  - adafruit/Adafruit_Sensor-1.1.4
   - M5Stack/M5Stack-0.2.5

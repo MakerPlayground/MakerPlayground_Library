@@ -1,0 +1,608 @@
+id: KidBright-V1_5i
+brand: KidBright
+model: 32 V1.5i
+url: https://inex.co.th/home/product/บอร์ด-kidbright32-v1-5i/
+type: CONTROLLER
+pio_boardid: esp32dev
+width: 558
+height: 316
+property: []
+pin_template: ESP_32
+cloud_provide:
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/blynk-library
+connection_provide:
+  - name: '3V3 (Banana)'
+    type: WIRE
+    pins:
+      - x: 30.6
+        y: 47.12
+        ref_to: VCC
+  - name: 'GND (Banana)'
+    type: WIRE
+    pins:
+      - x: 80.08
+        y: 47.12
+        ref_to: GND
+  - name: 'IN1 (Banana)'
+    type: WIRE
+    pins:
+      - x: 30.6
+        y: 103.4
+        ref_to: '32'
+  - name: 'IN2 (Banana)'
+    type: WIRE
+    pins:
+      - x: 80.08
+        y: 103.4
+        ref_to: '33'
+  - name: 'IN3 (Banana)'
+    type: WIRE
+    pins:
+      - x: 30.6
+        y: 160.24
+        ref_to: '34'
+  - name: 'IN4 (Banana)'
+    type: WIRE
+    pins:
+      - x: 80.08
+        y: 160.24
+        ref_to: '35'
+  - name: 'OUT1 (Banana)'
+    type: WIRE
+    pins:
+      - x: 30.6
+        y: 217.94
+        ref_to: '26'
+  - name: 'OUT2 (Banana)'
+    type: WIRE
+    pins:
+      - x: 80.08
+        y: 217.94
+        ref_to: '27'
+
+  - name: '3V3_1'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 58
+        ref_to: 'VCC'
+  - name: 'GND_1'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 72.4
+        ref_to: 'GND'
+  - name: 'IO23'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 86.8
+        ref_to: '23'
+  - name: 'IO19'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 101.2
+        ref_to: '19'
+  - name: 'IO18'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 115.6
+        ref_to: '18'
+  - name: 'SDA0'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 130
+        ref_to: '21'
+  - name: 'SCL0'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 144.4
+        ref_to: '22'
+  - name: '3V3_2'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 158.8
+        ref_to: 'VCC'
+  - name: 'GND_2'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 173.2
+        ref_to: 'GND'
+  - name: 'VIN'
+    type: WIRE
+    pins:
+      - x: 124
+        y: 187.6
+        ref_to: 'VCC'
+        voltage_level: LEVEL_5
+
+  - name: 'I1'
+    type: INEX3
+    pins:
+      - x: 19.52
+        y: 259.62
+        ref_to: GND
+      - x: 30.6
+        y: 259.62
+        ref_to: "32"
+      - x: 41.56
+        y: 259.62
+        ref_to: VCC
+  - name: 'I2'
+    type: INEX3
+    pins:
+      - x: 65.6
+        y: 259.62
+        ref_to: GND
+      - x: 76.68
+        y: 259.62
+        ref_to: "33"
+      - x: 87.64
+        y: 259.62
+        ref_to: VCC
+  - name: 'I3'
+    type: INEX3
+    pins:
+      - x: 19.30
+        y: 295.94
+        ref_to: GND
+      - x: 30.49
+        y: 295.94
+        ref_to: "34"
+      - x: 41.46
+        y: 295.94
+        ref_to: VCC
+  - name: 'I4'
+    type: INEX3
+    pins:
+      - x: 65.6
+        y: 295.94
+        ref_to: GND
+      - x: 76.68
+        y: 295.94
+        ref_to: "35"
+      - x: 87.65
+        y: 295.94
+        ref_to: VCC
+  - name: 'O1'
+    type: INEX3
+    pins:
+      - x: 111.9
+        y: 259.62
+        ref_to: GND
+      - x: 123.2
+        y: 259.62
+        ref_to: "26"
+      - x: 134.06
+        y: 259.62
+        ref_to: VCC
+  - name: 'O2'
+    type: INEX3
+    pins:
+      - x: 111.9
+        y: 295.94
+        ref_to: GND
+      - x: 123.2
+        y: 295.94
+        ref_to: "27"
+      - x: 134.06
+        y: 295.94
+        ref_to: VCC
+
+  - name: 'Servo 1'
+    type: JR_SERVO
+    pins:
+      - x: 447.96
+        y: 307.51
+        ref_to: GND
+      - x: 447.96
+        y: 293.12
+        ref_to: VCC
+      - x: 447.96
+        y: 278.72
+        ref_to: "15"
+  - name: 'Servo 2'
+    type: JR_SERVO
+    pins:
+      - x: 433.79
+        y: 307.51
+        ref_to: GND
+      - x: 433.79
+        y: 293.12
+        ref_to: VCC
+      - x: 433.79
+        y: 278.72
+        ref_to: "17"
+
+  - name: 'KB Chain'
+    type: KB_CHAIN
+    pins:
+      - x: 486.39
+        y: 84.54
+        ref_to: GND
+      - x: 486.39
+        y: 98.58
+        ref_to: '4'
+      - x: 486.39
+        y: 112.62
+        ref_to: '5'
+      - x: 486.39
+        y: 126.67
+        ref_to: VCC
+      - x: 486.39
+        y: 140.71
+        ref_to: VCC
+        voltage_level: LEVEL_5
+
+integrated_devices:
+  - name: Integrated Button (S1)
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUTTON_AL
+      library_dependency: []
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '16'
+    compatibility:
+    - name: Button
+      condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+
+  - name: Integrated Button (S2)
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUTTON_AL
+      library_dependency: []
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '14'
+    compatibility:
+    - name: Button
+      condition:
+      - name: Press
+      - name: Press and release
+      - name: Not press
+
+  - name: Integrated Light Sensor
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_LIGHT_SENSOR_KIDBRIGHT
+      library_dependency: []
+    pin_template: GENERIC_ANALOG_SENSOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '36'
+    compatibility:
+    - name: Light
+      condition:
+      - name: Compare
+      value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+
+  - name: Integrated Buzzer
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_BUZZER
+      library_dependency: []
+    pin_template: GENERIC_PWM_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '13'
+    compatibility:
+    - name: Buzzer
+      action:
+      - name: Play Tone
+        parameter:
+        - name: Tone Frequency
+          constraint:
+            min: 0
+            max: 20000
+            unit: HERTZ
+        - name: Duration
+          constraint:
+            min: 0
+            max: 1000
+            unit: SECOND
+      - name: Beep
+
+  - name: Integrated Temperature Sensor
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '4'
+      - ref_to: SCL
+        host_ref_to: '5'
+    compatibility:
+      - name: Temperature
+        condition:
+          - name: Compare
+        value:
+          - name: Temperature
+            dataType: DOUBLE
+            constraint:
+              min: -500
+              max: 500
+              unit: CELSIUS
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LM73_I2C1_ESP32
+        library_dependency: []
+
+  - name: Integrated USB Switcher
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LOAD_DRIVER_AL
+        library_dependency: []
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '25'
+    compatibility:
+      - name: Load Driver
+        action:
+          - name: 'On'
+            parameter: []
+          - name: 'Off'
+            parameter: []
+
+  - name: Integrated RTC
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_RTC_MCP4971x
+      library_dependency:
+      - jetstreamc/mcp7941x_arduino_ESP32_I2C1
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '4'
+      - ref_to: SCL
+        host_ref_to: '5'
+    compatibility:
+    - name: RTC
+      action:
+      - name: Set DateTime
+        parameter:
+        - name: Date & Time
+          constraint: []
+      condition:
+      - name: Compare
+      - name: Check Day
+        parameter:
+        - name: Day
+          constraint:
+          - key: Sunday
+            value: 1
+          - key: Monday
+            value: 2
+          - key: Tuesday
+            value: 3
+          - key: Wednesday
+            value: 4
+          - key: Thursday
+            value: 5
+          - key: Friday
+            value: 6
+          - key: Saturday
+            value: 7
+      value:
+      - name: Hour
+        constraint: []
+      - name: Minute
+        constraint: []
+      - name: Second
+        constraint: []
+      - name: Date
+        constraint: []
+      - name: Month
+        constraint: []
+      - name: Year
+        constraint: []
+
+  - name: Integrated Dot Matrix
+    platforms:
+    - platform: ARDUINO_ESP32
+      classname: MP_8x16MiniMatrix
+      library_dependency:
+      - adafruit/Adafruit_LED_Backpack-1.1.6
+      - adafruit/Adafruit-GFX-Library-1.7.6
+    pin_template: GENERIC_I2C_DEVICE_3v3_5
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: '21'
+      - ref_to: SCL
+        host_ref_to: '22'
+    compatibility:
+      - name: Dot Matrix
+        action:
+          - name: Show Bitmap
+            funcname: showBitmap
+            parameter:
+              - name: Data
+          - name: Show Text
+            parameter:
+              - name: Text
+              - name: Size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+              - name: Rotation
+                value: "0\u00B0"
+                constraint:
+                  - key: "0\u00B0"
+                    value: 0
+                  - key: "90\u00B0 CCW"
+                    value: 90
+                  - key: "180\u00B0 CCW"
+                    value: 180
+                  - key: "270\u00B0 CCW"
+                    value: 270
+          - name: Clear
+            funcname: clear
+
+  - name: Integrated Accelerometer
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LSM303_Accel_I2C1
+        library_dependency:
+          - adafruit/Adafruit_LSM303_Accel-1.1.4
+          - adafruit/Adafruit_Sensor-1.1.4
+          - adafruit/Adafruit_BusIO-1.4.1
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: "21"
+      - ref_to: SCL
+        host_ref_to: "22"
+    compatibility:
+      - name: Accelerometer
+        condition:
+          - name: Compare
+        value:
+          - name: Accel_X
+            constraint:
+              min: -100
+              max: 100
+              unit: METERPERSECSQUARE
+          - name: Accel_Y
+            constraint:
+              min: -100
+              max: 100
+              unit: METERPERSECSQUARE
+          - name: Accel_Z
+            constraint:
+              min: -100
+              max: 100
+              unit: METERPERSECSQUARE
+          - name: Accel_Magnitude
+            constraint:
+              min: 0
+              max: 100
+              unit: METERPERSECSQUARE
+
+  - name: Integrated Magnetometer
+    platforms:
+        - platform: ARDUINO_ESP32
+          classname: MP_LIS2MDL_I2C1
+          library_dependency:
+            - adafruit/Adafruit_LIS2MDL-2.1.3
+            - adafruit/Adafruit_Sensor-1.1.4
+            - adafruit/Adafruit_BusIO-1.4.1
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: "21"
+      - ref_to: SCL
+        host_ref_to: "22"
+    compatibility:
+      - name: Magnetometer
+        condition:
+          - name: Compare
+          - name: Direction
+            parameter:
+            - name: Direction
+              constraint:
+                - key: North
+                  value: 0
+                - key: NorthEast
+                  value: 1
+                - key: East
+                  value: 2
+                - key: SouthEast
+                  value: 3
+                - key: South
+                  value: 4
+                - key: SouthWest
+                  value: 5
+                - key: West
+                  value: 6
+                - key: NorthWest
+                  value: 7
+        value:
+          - name: Mag_X
+            constraint:
+              min: -200
+              max: 200
+              unit: MICROTESLA
+          - name: Mag_Y
+            constraint:
+              min: -200
+              max: 200
+              unit: MICROTESLA
+          - name: Mag_Z
+            constraint:
+              min: -200
+              max: 200
+              unit: MICROTESLA
+          - name: Heading
+            constraint:
+              min: 0
+              max: 360
+              unit: DEGREE
+platforms:
+- platform: ARDUINO_ESP32
+  classname: ''
+  library_dependency: []

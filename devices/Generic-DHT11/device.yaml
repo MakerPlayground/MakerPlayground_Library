@@ -50,15 +50,15 @@ platforms:
   - platform: ARDUINO_AVR8
     classname: MP_DHT11
     library_dependency:
-      - adafruit/Adafruit_Sensor
+      - adafruit/Adafruit_Sensor-1.1.4
       - adafruit/DHT-sensor-library-1.3.3
   - platform: ARDUINO_ESP8266
     classname: MP_DHT11
     library_dependency:
-      - adafruit/Adafruit_Sensor
+      - adafruit/Adafruit_Sensor-1.1.4
       - adafruit/DHT-sensor-library-1.3.3
   - platform: ARDUINO_ESP32
     classname: MP_DHT11
     library_dependency:
-      - adafruit/Adafruit_Sensor
+      - adafruit/Adafruit_Sensor-1.1.4
       - adafruit/DHT-sensor-library-1.3.3

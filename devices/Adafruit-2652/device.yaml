@@ -75,4 +75,4 @@ platforms:
     classname: MP_BME280
     library_dependency:
       - adafruit/Adafruit_BME280_Library
-      - adafruit/Adafruit_Sensor
+      - adafruit/Adafruit_Sensor-1.1.4

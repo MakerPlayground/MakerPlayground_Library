@@ -52,14 +52,14 @@ platforms:
   classname: MP_LIS3DH
   library_dependency:
     - adafruit/Adafruit_LIS3DH-1.0.4
-    - adafruit/Adafruit_Sensor
+    - adafruit/Adafruit_Sensor-1.1.4
 - platform: ARDUINO_ESP8266
   classname: MP_LIS3DH
   library_dependency:
     - adafruit/Adafruit_LIS3DH-1.0.4
-    - adafruit/Adafruit_Sensor
+    - adafruit/Adafruit_Sensor-1.1.4
 - platform: ARDUINO_ESP32
   classname: MP_LIS3DH
   library_dependency:
     - adafruit/Adafruit_LIS3DH-1.0.4
-    - adafruit/Adafruit_Sensor
+    - adafruit/Adafruit_Sensor-1.1.4
