@@ -1,12 +1,12 @@
-#ifndef MP_LOAD_DRIVER_H
-#define MP_LOAD_DRIVER_H
+#ifndef MP_LOAD_DRIVER_AL_H
+#define MP_LOAD_DRIVER_AL_H
 
 #include "MP_DEVICE.h"
 
-class MP_LOAD_DRIVER
+class MP_LOAD_DRIVER_AL
 {
 public:
-	MP_LOAD_DRIVER(uint8_t pin);
+	MP_LOAD_DRIVER_AL(uint8_t pin);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

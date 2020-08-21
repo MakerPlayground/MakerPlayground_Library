@@ -1,11 +1,11 @@
-id: TowerPro-SG90
-brand: Tower Pro
-model: SG90 Micro Servo
-url: https://www.arduitronics.com/product/283/tower-pro-sg90-mini-micro-servo
+id: TIANKONGRC-TS90A
+brand: TianKongRC
+model: TS90A (Analog Micro Servo 9g 3-6V)
+url: https://th.cytron.io/c-motor-and-motor-driver/c-dc-motor/c-servo-motor/p-analog-micro-servo-9g-3v-6v?src=category
 type: MODULE
 width: 278
 height: 184
-pin_template: GENERIC_PWM_ACTUATOR_5
+pin_template: GENERIC_PWM_ACTUATOR_3v3_5
 connection_consume:
   - name: GND
     type: WIRE
