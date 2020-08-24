@@ -8,7 +8,7 @@ MP_SOIL_MOISTURE::MP_SOIL_MOISTURE(uint8_t pin)
 int MP_SOIL_MOISTURE::init()
 {
 	pinMode(pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SOIL_MOISTURE::update(unsigned long current_time)

@@ -6,7 +6,7 @@ VD_NUMBER_CONTAINER::VD_NUMBER_CONTAINER()
 
 int VD_NUMBER_CONTAINER::init() 
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_NUMBER_CONTAINER::update(unsigned long current_time) 

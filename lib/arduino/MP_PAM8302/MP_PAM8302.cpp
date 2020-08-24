@@ -8,7 +8,7 @@ MP_PAM8302::MP_PAM8302(uint8_t speakerPin)
 int MP_PAM8302::init()
 {
 	pinMode(speakerPin, OUTPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_PAM8302::update(unsigned long current_time)

@@ -10,9 +10,9 @@ MP_GY906::MP_GY906()
 int MP_GY906::init()
 {
 	if (!mlx.begin()) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_GY906::update(unsigned long current_time)

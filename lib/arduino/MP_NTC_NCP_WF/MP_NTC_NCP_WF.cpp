@@ -10,7 +10,7 @@ int MP_NTC_NCP_WF::init()
 {
     this->celcius = 25;
 	pinMode(this->pin, INPUT);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_NTC_NCP_WF::update(unsigned long current_time)

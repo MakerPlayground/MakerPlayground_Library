@@ -8,7 +8,7 @@ int VD_TIMER::init()
 {
     this->isStarted = false;
     this->second = 0;
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_TIMER::update(unsigned long current_time) 

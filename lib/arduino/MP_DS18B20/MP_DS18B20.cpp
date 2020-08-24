@@ -17,7 +17,7 @@ int MP_DS18B20::init()
     sensors.begin();
     numberOfDevices = sensors.getDeviceCount();
     if (numberOfDevices < 1) {
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
     }
     // for(int i=0;i<numberOfDevices; i++) {
     //     if(sensors.getAddress(tempDeviceAddress, i)) {
@@ -30,9 +30,9 @@ int MP_DS18B20::init()
         sensors.setResolution(tempDeviceAddress, TEMPERATURE_PRECISION);
     } else {
         // Found ghost device
-        return ERR_CONFIG_DEVICE;
+        return MP_ERR_CONFIG_DEVICE;
     }
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_DS18B20::update(unsigned long current_time) {

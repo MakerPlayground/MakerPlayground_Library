@@ -10,7 +10,7 @@ int MP_LIGHT_SENSOR_KIDBRIGHT::init()
 	pinMode(this->pin, INPUT);
 	analogReadResolution(10);
   	analogSetAttenuation(ADC_0db);	// acceptable range from 0-1v
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LIGHT_SENSOR_KIDBRIGHT::update(unsigned long current_time) 

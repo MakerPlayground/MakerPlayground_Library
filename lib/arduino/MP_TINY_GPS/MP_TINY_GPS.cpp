@@ -10,7 +10,7 @@ int MP_TINY_GPS::init()
 {
 	isGPSDetected = false;
 	ss.begin(GPSBaud);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TINY_GPS::update(unsigned long current_time) 

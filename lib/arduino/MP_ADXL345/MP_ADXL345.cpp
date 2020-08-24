@@ -10,7 +10,7 @@ int MP_ADXL345::init()
 	/* Initialise the sensor */
 	if(!accel.begin())
 	{
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 
 	/* Set the range to whatever is appropriate for your project */
@@ -26,7 +26,7 @@ int MP_ADXL345::init()
 	// displayDataRate();
 	// displayRange();
 	old_time = 0;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_ADXL345::update(unsigned long current_time)

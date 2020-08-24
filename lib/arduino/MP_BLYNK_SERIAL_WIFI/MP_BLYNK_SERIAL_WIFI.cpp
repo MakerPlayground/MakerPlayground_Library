@@ -29,24 +29,24 @@ int MP_BLYNK_SERIAL_WIFI::init()
     delay(10);
 
     if (espSerial.kick()) {
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
     }
 
     Blynk.config(wifi, auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
     
     if (!connectWifi()) {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
 
     if (!testPing()) {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
     if (!Blynk.connect()) {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
     
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 bool MP_BLYNK_SERIAL_WIFI::connectWifi()

@@ -14,7 +14,7 @@ MP_7SEG_SOFTSERIAL::MP_7SEG_SOFTSERIAL(uint8_t tx)
 int MP_7SEG_SOFTSERIAL::init()
 {
 	serial.begin(9600);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_7SEG_SOFTSERIAL::update(unsigned long current_time) 

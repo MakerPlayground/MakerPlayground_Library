@@ -12,9 +12,9 @@ int MP_DHT12::init()
 	dht::ReadStatus chk = sensor.read();
 	if(chk != dht::OK)
 	{
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_DHT12::update(unsigned long current_time)

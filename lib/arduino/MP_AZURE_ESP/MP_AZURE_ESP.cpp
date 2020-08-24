@@ -9,7 +9,7 @@ MP_AZURE_ESP::MP_AZURE_ESP(const char* ssid, const char* pass)
 int MP_AZURE_ESP::init()
 {
     WiFi.begin(ssid, pass);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_AZURE_ESP::update(unsigned long currentTime)

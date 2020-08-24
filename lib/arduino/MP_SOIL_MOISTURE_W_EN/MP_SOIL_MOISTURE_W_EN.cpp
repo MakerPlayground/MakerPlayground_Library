@@ -11,7 +11,7 @@ int MP_SOIL_MOISTURE_W_EN::init()
 	pinMode(data, INPUT);
 	pinMode(en, OUTPUT);
 	digitalWrite(en, HIGH);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SOIL_MOISTURE_W_EN::update(unsigned long current_time)

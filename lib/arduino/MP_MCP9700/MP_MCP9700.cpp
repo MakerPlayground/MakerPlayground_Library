@@ -9,7 +9,7 @@ int MP_MCP9700::init()
 {
 	pinMode(pin, INPUT);
     digitalWrite(pin, LOW);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MCP9700::update(unsigned long current_time)

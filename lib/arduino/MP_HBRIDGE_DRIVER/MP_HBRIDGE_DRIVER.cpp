@@ -12,7 +12,7 @@ int MP_HBRIDGE_DRIVER::init()
 	digitalWrite(inA, LOW);
 	pinMode(inB, OUTPUT);
 	digitalWrite(inB, LOW);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_HBRIDGE_DRIVER::update(unsigned long current_time) 

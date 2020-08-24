@@ -11,9 +11,9 @@ int MP_LSM6DS3::init()
 {
 	end_time = 0;
 	if(imu.begin() != IMU_SUCCESS) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LSM6DS3::update(unsigned long current_time) 

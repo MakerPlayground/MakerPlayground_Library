@@ -8,7 +8,7 @@ MP_IR_REFLECTOR::MP_IR_REFLECTOR(uint8_t pin)
 int MP_IR_REFLECTOR::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 bool MP_IR_REFLECTOR::isDetected()

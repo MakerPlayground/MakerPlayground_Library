@@ -9,7 +9,7 @@ MP_REST_ESP::MP_REST_ESP(const char* ssid, const char* pass)
 int MP_REST_ESP::init()
 {
     WiFi.begin(ssid, pass);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_REST_ESP::update(unsigned long currentTime)

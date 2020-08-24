@@ -32,14 +32,14 @@ int MP_BLYNK_NODEMCU::init()
     Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
     
     if (!connectWifi()) {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
 
     if (!Blynk.connect()) {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
     
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 bool MP_BLYNK_NODEMCU::connectWifi()

@@ -8,7 +8,7 @@ MP_WATER_SENSOR::MP_WATER_SENSOR(uint8_t pin)
 
 int MP_WATER_SENSOR::init()
 {
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_WATER_SENSOR::update(unsigned long current_time)

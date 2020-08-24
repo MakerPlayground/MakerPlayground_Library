@@ -38,7 +38,7 @@ int MP_BLYNK_MPBASEBOARD::init()
     Serial1.println(pass);
     if (!checkResponse())
     {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
 
     // connect to blynk
@@ -46,10 +46,10 @@ int MP_BLYNK_MPBASEBOARD::init()
     Serial1.println(auth);
     if (!checkResponse())
     {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_BLYNK_MPBASEBOARD::printStatus()

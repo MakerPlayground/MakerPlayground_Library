@@ -42,7 +42,7 @@ int MP_NETPIE_ESP::init()
         }
     }
     else {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
 
     // initialize the microgear
@@ -51,7 +51,7 @@ int MP_NETPIE_ESP::init()
     // connect to NETPIE
     microgear.connect(appId);
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_NETPIE_ESP::printStatus()

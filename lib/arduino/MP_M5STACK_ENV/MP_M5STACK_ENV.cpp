@@ -14,13 +14,13 @@ int MP_M5STACK_ENV::init()
 	dht::ReadStatus chk = sensor.read();
 	if(chk != dht::OK)
 	{
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	Wire.begin();
 	if (!bmp.begin(0x76)) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_M5STACK_ENV::update(unsigned long current_time)

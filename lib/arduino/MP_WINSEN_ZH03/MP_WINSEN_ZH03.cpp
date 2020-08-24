@@ -19,7 +19,7 @@ int MP_WINSEN_ZH03::init()
 	{
         ss.write(configCommand[i]);
     }
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_WINSEN_ZH03::update(unsigned long current_time)

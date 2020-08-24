@@ -9,7 +9,7 @@ MP_NETPIE_VIRTUAL_SLIDER::MP_NETPIE_VIRTUAL_SLIDER(char* topic, MP_NETPIE* netpi
 int MP_NETPIE_VIRTUAL_SLIDER::init()
 {
     netpie->subscribe(topic);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_SLIDER::printStatus()

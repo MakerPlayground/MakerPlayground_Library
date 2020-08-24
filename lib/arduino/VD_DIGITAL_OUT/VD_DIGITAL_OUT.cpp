@@ -12,7 +12,7 @@ int VD_DIGITAL_OUT::init()
     isTxHigh = false;
     digitalWrite(txPin, LOW);
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_DIGITAL_OUT::update(unsigned long current_time) 

@@ -11,7 +11,7 @@ int MP_DHT11::init()
 	this->humidity = 0;
 	this->celcius = 0;
 	sensor.begin();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_DHT11::update(unsigned long current_time)

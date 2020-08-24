@@ -13,7 +13,7 @@ int MP_SCT013_30A_ESP32::init()
 {
 	pinMode(this->pin, INPUT);
   	analogSetPinAttenuation(this->pin, ADC_0db);	// acceptable range from 0-1v
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SCT013_30A_ESP32::update(unsigned long currentTime)

@@ -38,9 +38,9 @@ int MP_CAMERA_OV2640_ESP32::init()
 
 	err = camera_init(&config);
     if (err != ESP_OK)
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_CAMERA_OV2640_ESP32::update(unsigned long current_time) 

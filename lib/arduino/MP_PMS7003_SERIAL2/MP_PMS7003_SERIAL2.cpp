@@ -11,7 +11,7 @@ int MP_PMS7003_SERIAL2::init()
 {
     Serial2.begin(9600);
 	pms.activeMode();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_PMS7003_SERIAL2::update(unsigned long current_time)

@@ -11,22 +11,22 @@ int MP_APDS9960::init()
 
 	// Initialize APDS-9960 (configure I2C and initial values)
 	if ( !apds.init() ) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 
 	// Adjust the Proximity sensor gain
 	if ( !apds.setProximityGain(PGAIN_2X) ) {
-		return ERR_CONFIG_DEVICE;
+		return MP_ERR_CONFIG_DEVICE;
 	}
 
 	// Start running the APDS-9960 proximity sensor (no interrupts)
 	if ( !apds.enableProximitySensor(false) ) {
-		return ERR_CONFIG_DEVICE;
+		return MP_ERR_CONFIG_DEVICE;
 	}
 	
 	//Serial.println(F("APDS-9960 initialization complete"));
 	//Serial.println(F("Proximity sensor is now running"));
-	return ERR_OK;
+	return MP_ERR_OK;
 
 //    // Start running the APDS-9960 gesture sensor engine
 //    if ( apds.enableGestureSensor(false) ) {

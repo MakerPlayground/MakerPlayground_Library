@@ -9,7 +9,7 @@ MP_TM1637_DISPLAY::MP_TM1637_DISPLAY(uint8_t clk, uint8_t dio)
 
 int MP_TM1637_DISPLAY::init()
 {
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TM1637_DISPLAY::update(unsigned long current_time)

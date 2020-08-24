@@ -10,7 +10,7 @@ int MP_LOAD_DRIVER_AL::init()
 	pinMode(pin, OUTPUT);
 	digitalWrite(pin, HIGH);
 	isOn = false;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LOAD_DRIVER_AL::update(unsigned long current_time) 

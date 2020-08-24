@@ -8,7 +8,7 @@ MP_NETPIE_NOTIFICATION::MP_NETPIE_NOTIFICATION(MP_NETPIE* netpie)
 
 int MP_NETPIE_NOTIFICATION::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_NETPIE_NOTIFICATION::printStatus() {

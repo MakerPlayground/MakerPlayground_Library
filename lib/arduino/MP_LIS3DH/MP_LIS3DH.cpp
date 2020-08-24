@@ -9,10 +9,10 @@ int MP_LIS3DH::init()
 {
 	end_time = 0;
 	if(!lis.begin(0x18)) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	lis.setRange(LIS3DH_RANGE_4_G);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LIS3DH::update(unsigned long current_time) 

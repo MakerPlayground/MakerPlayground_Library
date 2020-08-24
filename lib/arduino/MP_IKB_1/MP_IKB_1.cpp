@@ -20,9 +20,9 @@ int MP_IKB_1::init()
             digitalOut(pin, 0);
         }
         
-        return ERR_OK;
+        return MP_ERR_OK;
     }
-    return ERR_CONNECT_DEVICE;
+    return MP_ERR_CONNECT_DEVICE;
 }
 
 void MP_IKB_1::update(unsigned long current_time)

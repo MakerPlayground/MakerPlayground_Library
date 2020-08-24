@@ -3,14 +3,14 @@
 
 #include <Arduino.h>
 
-#define ERR_OK                  0
-#define ERR_CONNECT_WIFI        1
-#define ERR_CONNECT_SERVER      2
-#define ERR_CLIENT_NOT_READY    3
-#define ERR_CONNECT_DEVICE      4
-#define ERR_CONFIG_DEVICE       5
-#define ERR_INTERNAL_ERROR      6
-#define ERR_CONNECTION_OR_SDCARD   7
+#define MP_ERR_OK                     0
+#define MP_ERR_CONNECT_WIFI           1
+#define MP_ERR_CONNECT_SERVER         2
+#define MP_ERR_CLIENT_NOT_READY       3
+#define MP_ERR_CONNECT_DEVICE         4
+#define MP_ERR_CONFIG_DEVICE          5
+#define MP_ERR_INTERNAL_ERROR         6
+#define MP_ERR_CONNECTION_OR_SDCARD   7
 
 const char ok[] PROGMEM = "OK";
 const char error1[] PROGMEM = "Can't connect to Wifi";

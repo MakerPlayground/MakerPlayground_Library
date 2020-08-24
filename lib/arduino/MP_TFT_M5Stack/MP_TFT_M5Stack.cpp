@@ -19,7 +19,7 @@ int MP_TFT_M5Stack::init()
     display.begin();
     display.setTextWrap(false);
     clearScreen();
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_TFT_M5Stack::update(unsigned long current_time)

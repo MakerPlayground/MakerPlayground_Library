@@ -22,9 +22,9 @@ int MP_PAJ7620U2::init()
 {
     uint8_t status = paj7620Init();
     if (status != 0) {
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
     }
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_PAJ7620U2::update(unsigned long current_time)

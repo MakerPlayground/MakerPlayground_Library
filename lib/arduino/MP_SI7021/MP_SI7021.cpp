@@ -10,12 +10,12 @@ int MP_SI7021::init()
 	sensor = Adafruit_Si7021();
 
 	if (!sensor.begin()) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 
 	this->end_time = 0;
 	this->update(0);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SI7021::update(unsigned long current_time)

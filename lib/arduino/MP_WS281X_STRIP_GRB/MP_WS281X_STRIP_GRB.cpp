@@ -11,7 +11,7 @@ int MP_WS281X_STRIP_GRB::init()
 	pixels.begin();
 	pixels.setBrightness(255);
 	clear();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_WS281X_STRIP_GRB::update(unsigned long current_time)

@@ -20,7 +20,7 @@ MP_Azure_CustomVisionServices::MP_Azure_CustomVisionServices(String azureRegion,
 
 int MP_Azure_CustomVisionServices::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_Azure_CustomVisionServices::update(unsigned long currentTime)

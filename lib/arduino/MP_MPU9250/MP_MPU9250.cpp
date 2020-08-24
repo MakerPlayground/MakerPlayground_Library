@@ -15,7 +15,7 @@ int MP_MPU9250::init()
     imu.calibrateMPU9250(imu.gyroBias, imu.accelBias);
     imu.initMPU9250();
     imu.initAK8963(imu.magCalibration);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MPU9250::update(unsigned long current_time)

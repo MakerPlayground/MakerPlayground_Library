@@ -9,7 +9,7 @@ int MP_PIR::init()
 {
 	isMotionDetected = false;
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_PIR::update(unsigned long current_time)

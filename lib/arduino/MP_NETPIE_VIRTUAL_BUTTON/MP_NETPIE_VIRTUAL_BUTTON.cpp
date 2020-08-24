@@ -10,7 +10,7 @@ int MP_NETPIE_VIRTUAL_BUTTON::init()
 {
     netpie->subscribe(topic);
     checkpoint = millis();
-    return ERR_OK;
+    return MP_ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_BUTTON::printStatus()

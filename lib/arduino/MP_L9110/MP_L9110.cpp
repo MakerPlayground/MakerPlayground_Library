@@ -13,7 +13,7 @@ int MP_L9110::init()
 	pinMode(inB, OUTPUT);
 	digitalWrite(inA, LOW);
 	digitalWrite(inB, LOW);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_L9110::update(unsigned long current_time)

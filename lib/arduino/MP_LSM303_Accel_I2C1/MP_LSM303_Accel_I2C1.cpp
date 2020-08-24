@@ -9,11 +9,11 @@ int MP_LSM303_Accel_I2C1::init()
 	end_time = 0;
 	Wire1.begin(4, 5);
 	if(!accel.begin(LSM303_ADDRESS_ACCEL, &Wire1)) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	accel.setRange(LSM303_RANGE_4G);
 	accel.setMode(LSM303_MODE_NORMAL);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LSM303_Accel_I2C1::update(unsigned long current_time) 

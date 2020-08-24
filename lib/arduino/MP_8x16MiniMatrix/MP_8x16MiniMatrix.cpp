@@ -9,7 +9,7 @@ int MP_8x16MiniMatrix::init()
 {
     matrix.begin(0x70);  // pass in the address
     last_update = 0;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_8x16MiniMatrix::update(unsigned long current_time) 

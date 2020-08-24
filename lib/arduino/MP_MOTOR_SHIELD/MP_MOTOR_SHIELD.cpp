@@ -9,7 +9,7 @@ int MP_MOTOR_SHIELD::init()
 {
 	AFMS.begin();
 	direction = RELEASE;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MOTOR_SHIELD::update(unsigned long current_time)

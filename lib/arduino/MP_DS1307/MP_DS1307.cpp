@@ -16,7 +16,7 @@ int MP_DS1307::init() {
         Rtc.SetIsRunning(true);
     }
     Rtc.SetSquareWavePin(DS1307SquareWaveOut_Low); 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_DS1307::update(unsigned long current_time) {

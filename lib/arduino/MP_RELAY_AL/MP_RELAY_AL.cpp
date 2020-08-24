@@ -10,7 +10,7 @@ int MP_RELAY_AL::init()
 	pinMode(pin, OUTPUT);
 	digitalWrite(pin, HIGH);
 	this->isOn = false;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_RELAY_AL::update(unsigned long current_time)

@@ -8,7 +8,7 @@ MP_FLYINGFISH_FLAME_DETECTOR::MP_FLYINGFISH_FLAME_DETECTOR(uint8_t pin)
 int MP_FLYINGFISH_FLAME_DETECTOR::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_FLYINGFISH_FLAME_DETECTOR::printStatus()

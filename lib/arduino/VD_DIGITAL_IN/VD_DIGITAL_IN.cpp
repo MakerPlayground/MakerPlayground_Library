@@ -8,7 +8,7 @@ VD_DIGITAL_IN::VD_DIGITAL_IN(uint8_t rxPin):
 int VD_DIGITAL_IN::init() 
 {
     pinMode(rxPin, INPUT);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_DIGITAL_IN::update(unsigned long current_time) 

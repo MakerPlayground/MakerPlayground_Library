@@ -8,9 +8,9 @@ int MP_SHT::init()
 {
 	Wire.begin();
 	if (sht.init()) {
-		return ERR_OK;
+		return MP_ERR_OK;
 	} else {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 }
 

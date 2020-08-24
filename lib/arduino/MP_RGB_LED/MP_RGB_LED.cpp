@@ -12,7 +12,7 @@ int MP_RGB_LED::init()
 	pinMode(data, OUTPUT);
 	digitalWrite(clk, LOW);
 	pinMode(clk,OUTPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_RGB_LED::update(unsigned long current_time) 

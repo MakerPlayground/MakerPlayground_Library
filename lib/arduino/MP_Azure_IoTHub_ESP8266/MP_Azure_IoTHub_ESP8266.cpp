@@ -30,10 +30,10 @@ int MP_Azure_IoTHub_ESP8266::init()
     iotHubClientHandle = IoTHubClient_LL_CreateFromConnectionString(connectionString, MQTT_Protocol);
     if (iotHubClientHandle == NULL)
     {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void sendCallback(IOTHUB_CLIENT_CONFIRMATION_RESULT result, void *userContextCallback)

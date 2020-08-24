@@ -17,7 +17,7 @@ int MP_OLED_SSD1306_128x64::init()
 {
     if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
     {
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
     }
     display.clearDisplay();
     display.display();
@@ -25,7 +25,7 @@ int MP_OLED_SSD1306_128x64::init()
     display.setTextColor(WHITE);
     display.cp437();
     initRowHeights();
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_OLED_SSD1306_128x64::update(unsigned long current_time)

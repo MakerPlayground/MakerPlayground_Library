@@ -7,7 +7,7 @@ MP_SHARP_GP2D120X::MP_SHARP_GP2D120X(uint8_t pin)
 
 int MP_SHARP_GP2D120X::init()  
 {	
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_SHARP_GP2D120X::update(unsigned long current_time)

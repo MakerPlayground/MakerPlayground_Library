@@ -20,7 +20,7 @@ int MP_TFT_WioTerminal::init()
     display.setRotation(3);
     display.setTextWrap(false);
     clearScreen();
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_TFT_WioTerminal::update(unsigned long current_time)

@@ -8,7 +8,7 @@ MP_SDM_SOFTSERIAL::MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx)
 int MP_SDM_SOFTSERIAL::init()
 {
     sdm.begin();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SDM_SOFTSERIAL::update(unsigned long current_time)

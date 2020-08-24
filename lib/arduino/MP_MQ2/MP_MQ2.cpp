@@ -8,7 +8,7 @@ MP_MQ2::MP_MQ2(uint8_t pin)
 int MP_MQ2::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MQ2::printStatus()

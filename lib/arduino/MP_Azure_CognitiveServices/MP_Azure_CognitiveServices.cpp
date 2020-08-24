@@ -19,7 +19,7 @@ MP_Azure_CognitiveServices::MP_Azure_CognitiveServices(String azureRegion, Strin
 
 int MP_Azure_CognitiveServices::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_Azure_CognitiveServices::update(unsigned long currentTime)

@@ -12,7 +12,7 @@ int MP_HX711::init()
 	scale.begin(dt_pin, sck_pin);
     scale.set_scale(scale_factor);
     scale.tare();
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_HX711::setZero()

@@ -11,11 +11,11 @@ MP_TCS34725::MP_TCS34725()
 int MP_TCS34725::init()
 {
 	if (!tcs.begin()) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	this->end_time = 0;
 	this->update(0);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TCS34725::update(unsigned long current_time)

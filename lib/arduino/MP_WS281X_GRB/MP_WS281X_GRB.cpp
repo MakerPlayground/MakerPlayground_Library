@@ -12,7 +12,7 @@ int MP_WS281X_GRB::init()
 {
 	pixels.begin();
 	off();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_WS281X_GRB::update(unsigned long current_time) 

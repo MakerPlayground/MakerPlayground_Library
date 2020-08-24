@@ -9,7 +9,7 @@ MP_LM73_I2C1_ESP32::MP_LM73_I2C1_ESP32()
 int MP_LM73_I2C1_ESP32::init()
 {
 	Wire1.begin(4, 5);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LM73_I2C1_ESP32::update(unsigned long current_time) 

@@ -9,7 +9,7 @@ MP_BUZZER::MP_BUZZER(uint8_t pin)
 
 int MP_BUZZER::init()
 {
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_BUZZER::update(unsigned long current_time) 

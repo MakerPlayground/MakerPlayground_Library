@@ -13,7 +13,7 @@ int MP_SERVO::init()
 #else
     myservo.attach(pin);
 #endif
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_SERVO::update(unsigned long current_time) 

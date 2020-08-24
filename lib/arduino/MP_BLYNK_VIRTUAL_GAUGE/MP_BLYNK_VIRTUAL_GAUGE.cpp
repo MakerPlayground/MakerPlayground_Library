@@ -9,10 +9,10 @@ MP_BLYNK_VIRTUAL_GAUGE::MP_BLYNK_VIRTUAL_GAUGE(uint8_t v_pin, MP_BLYNK* blynk) :
 
 int MP_BLYNK_VIRTUAL_GAUGE::init() {
     if (!blynk)
-        return ERR_INTERNAL_ERROR;
+        return MP_ERR_INTERNAL_ERROR;
     if (!blynk->isReady())
-        return ERR_CLIENT_NOT_READY;
-    return ERR_OK;
+        return MP_ERR_CLIENT_NOT_READY;
+    return MP_ERR_OK;
 }
 
 void MP_BLYNK_VIRTUAL_GAUGE::printStatus() {

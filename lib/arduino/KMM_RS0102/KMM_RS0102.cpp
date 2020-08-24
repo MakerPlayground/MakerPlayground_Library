@@ -7,7 +7,7 @@ KMM_RS0102::KMM_RS0102(uint8_t device_id)
 
 int KMM_RS0102::init()
 {
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void KMM_RS0102::update(unsigned long current_time)

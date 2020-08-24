@@ -28,7 +28,7 @@ int MP_TCS3200::init()
 	digitalWrite(s1, HIGH);
 	digitalWrite(LED, LOW);
 	
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TCS3200::update(unsigned long current_time)

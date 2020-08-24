@@ -8,7 +8,7 @@ MP_NETPIE_VIRTUAL_GAUGE::MP_NETPIE_VIRTUAL_GAUGE(char* topic, MP_NETPIE* netpie)
 
 int MP_NETPIE_VIRTUAL_GAUGE::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_GAUGE::printStatus()

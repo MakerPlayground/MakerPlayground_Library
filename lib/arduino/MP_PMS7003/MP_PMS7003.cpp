@@ -12,7 +12,7 @@ int MP_PMS7003::init()
 {
     ss.begin(9600);
 	pms.activeMode();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_PMS7003::update(unsigned long current_time)

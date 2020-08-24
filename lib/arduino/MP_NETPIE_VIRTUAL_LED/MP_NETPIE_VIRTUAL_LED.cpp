@@ -8,7 +8,7 @@ MP_NETPIE_VIRTUAL_LED::MP_NETPIE_VIRTUAL_LED(char* topic, MP_NETPIE* netpie)
 
 int MP_NETPIE_VIRTUAL_LED::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
     
 void MP_NETPIE_VIRTUAL_LED::update(unsigned long time)

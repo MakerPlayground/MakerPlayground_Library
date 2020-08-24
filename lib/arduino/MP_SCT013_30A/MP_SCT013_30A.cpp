@@ -12,7 +12,7 @@ MP_SCT013_30A::MP_SCT013_30A(uint8_t pin)
 int MP_SCT013_30A::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_SCT013_30A::update(unsigned long currentTime)

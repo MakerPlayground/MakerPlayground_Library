@@ -8,7 +8,7 @@ MP_TRIMPOT::MP_TRIMPOT(uint8_t pin)
 int MP_TRIMPOT::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TRIMPOT::update(unsigned long current_time) 

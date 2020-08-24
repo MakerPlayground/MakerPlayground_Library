@@ -12,9 +12,9 @@ int MP_LIS2MDL_I2C1::init()
 	Wire1.begin(4, 5);
 	lis2mdl.enableAutoRange(true);
 	if(!lis2mdl.begin(0x1E, &Wire1)) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LIS2MDL_I2C1::update(unsigned long current_time) 

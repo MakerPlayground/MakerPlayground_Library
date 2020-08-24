@@ -9,7 +9,7 @@ int MP_RELAY::init()
 {
 	pinMode(pin, OUTPUT);
 	this->isOn = false;
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_RELAY::update(unsigned long current_time)

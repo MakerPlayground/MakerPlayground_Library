@@ -13,7 +13,7 @@ int MP_VL53L0X::init()
 {
     Wire.begin();
     if(!sensor.init()) {
-        return ERR_CONNECT_DEVICE;
+        return MP_ERR_CONNECT_DEVICE;
     }
     sensor.setTimeout(500);
 #if defined(LONG_RANGE)
@@ -30,7 +30,7 @@ int MP_VL53L0X::init()
     else if (mode == 0) { // HIGH_ACCURACY
         sensor.setMeasurementTimingBudget(200000);  // increase timing budget to 200 ms
     }
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_VL53L0X::update(unsigned long current_time)

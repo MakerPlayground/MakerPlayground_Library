@@ -13,7 +13,7 @@ int MP_MICROPHONE_NORMALIZED::init()
 	{
 		normal = 0.8 * normal + 0.2 * (analogRead(pin) - normal);
 	}
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MICROPHONE_NORMALIZED::update(unsigned long current_time)

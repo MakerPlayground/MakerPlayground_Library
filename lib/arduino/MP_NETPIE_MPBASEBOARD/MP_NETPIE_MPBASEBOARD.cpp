@@ -27,7 +27,7 @@ int MP_NETPIE_MPBASEBOARD::init()
     Serial1.println(password);
     if (!checkResponse())
     {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
 
     // connect to netpie
@@ -41,10 +41,10 @@ int MP_NETPIE_MPBASEBOARD::init()
     Serial1.println(appId);
     if (!checkResponse())
     {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_NETPIE_MPBASEBOARD::printStatus()

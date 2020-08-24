@@ -8,7 +8,7 @@ MP_LIGHT_SENSOR::MP_LIGHT_SENSOR(uint8_t pin)
 int MP_LIGHT_SENSOR::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LIGHT_SENSOR::update(unsigned long current_time) 

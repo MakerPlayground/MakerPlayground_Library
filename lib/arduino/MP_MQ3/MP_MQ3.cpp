@@ -8,7 +8,7 @@ MP_MQ3::MP_MQ3(uint8_t pin)
 int MP_MQ3::init()
 {
 	pinMode(this->pin, INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_MQ3::printStatus()

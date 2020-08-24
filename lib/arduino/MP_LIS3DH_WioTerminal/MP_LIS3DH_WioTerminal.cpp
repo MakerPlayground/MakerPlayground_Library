@@ -9,12 +9,12 @@ int MP_LIS3DH_WioTerminal::init()
 	end_time = 0;
 	lis.begin(Wire1);
 	if (!lis) {
-	    return ERR_CONNECT_DEVICE;
+	    return MP_ERR_CONNECT_DEVICE;
 	}
     delay(100);
     lis.setOutputDataRate(LIS3DHTR_DATARATE_50HZ);
     lis.setFullScaleRange(LIS3DHTR_RANGE_4G);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LIS3DH_WioTerminal::update(unsigned long current_time) 

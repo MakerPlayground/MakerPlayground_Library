@@ -16,7 +16,7 @@ int MP_JOYSTICK_5PIN_AL::init()
 	pinMode(rightPin, INPUT_PULLUP);
 	pinMode(pressPin, INPUT_PULLUP);
 	pinMode(downPin, INPUT_PULLUP);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_JOYSTICK_5PIN_AL::update(unsigned long current_time)

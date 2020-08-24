@@ -7,11 +7,11 @@ MP_TMP007::MP_TMP007()
 int MP_TMP007::init()
 {
 	if (!tmp007.begin()) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	this->end_time = 0;
 	this->update(0);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_TMP007::update(unsigned long current_time)

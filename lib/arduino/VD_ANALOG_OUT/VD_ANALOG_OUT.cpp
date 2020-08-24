@@ -8,7 +8,7 @@ VD_ANALOG_OUT::VD_ANALOG_OUT(uint8_t txPin):
 int VD_ANALOG_OUT::init() 
 {
     pinMode(txPin, OUTPUT);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_ANALOG_OUT::update(unsigned long current_time) 

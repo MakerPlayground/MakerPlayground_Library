@@ -9,10 +9,10 @@ int MP_DF_MP3_PLAYER::init()
 {
     mySoftwareSerial.begin(9600);
     if (!myDFPlayer.begin(mySoftwareSerial)) {  //Use softwareSerial to communicate with mp3.
-        return ERR_CONNECTION_OR_SDCARD;
+        return MP_ERR_CONNECTION_OR_SDCARD;
     }
     myDFPlayer.volume(30);
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_DF_MP3_PLAYER::update(unsigned long current_time)

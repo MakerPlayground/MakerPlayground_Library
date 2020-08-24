@@ -17,7 +17,7 @@ int VD_STATISTIC::init()
     SD = 0;
     maxValue = -3.4028235E+38;
     minValue = 3.4028235E+38;
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void VD_STATISTIC::update(unsigned long current_time) 

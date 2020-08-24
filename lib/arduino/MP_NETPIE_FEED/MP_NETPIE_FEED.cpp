@@ -11,7 +11,7 @@ MP_NETPIE_FEED::MP_NETPIE_FEED(char* feedId, char* apiKey, MP_NETPIE* netpie)
 
 int MP_NETPIE_FEED::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
     
 void MP_NETPIE_FEED::printStatus()

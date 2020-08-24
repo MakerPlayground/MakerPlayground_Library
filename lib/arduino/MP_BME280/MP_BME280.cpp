@@ -8,11 +8,11 @@ MP_BME280::MP_BME280()
 int MP_BME280::init()
 {
 	if (!bme.begin()) {
-		return ERR_CONNECT_DEVICE;
+		return MP_ERR_CONNECT_DEVICE;
 	}
 	this->end_time = 0;
 	this->update(0);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_BME280::update(unsigned long current_time)

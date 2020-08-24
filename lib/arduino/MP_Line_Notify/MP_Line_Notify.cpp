@@ -13,7 +13,7 @@ MP_Line_Notify::MP_Line_Notify(String token, MP_REST* rest)
 
 int MP_Line_Notify::init()
 {
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_Line_Notify::update(unsigned long currentTime)

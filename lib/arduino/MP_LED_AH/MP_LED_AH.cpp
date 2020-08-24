@@ -9,7 +9,7 @@ int MP_LED_AH::init()
 {
 	pinMode(this->pin, OUTPUT);
 	analogWrite(this->pin, 0);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_LED_AH::update(unsigned long current_time) 

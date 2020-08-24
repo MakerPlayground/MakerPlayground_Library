@@ -7,7 +7,7 @@ MP_HC_SR04::MP_HC_SR04(uint8_t trig, uint8_t echo)
 
 int MP_HC_SR04::init()  
 {	
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 void MP_HC_SR04::update(unsigned long current_time)

@@ -87,18 +87,18 @@ int MP_BLYNK_SERIAL1_WIFI::initConnection()
     Blynk.config(this->wifi, this->auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
 
     if (!connectWifi()) {
-        return ERR_CONNECT_WIFI;
+        return MP_ERR_CONNECT_WIFI;
     }
     
     if (!testPing()) {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
     if (!Blynk.connect()) {
-        return ERR_CONNECT_SERVER;
+        return MP_ERR_CONNECT_SERVER;
     }
 
-    return ERR_OK;
+    return MP_ERR_OK;
 }
 
 

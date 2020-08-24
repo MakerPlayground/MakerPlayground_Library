@@ -9,7 +9,7 @@ int MP_BUTTON_AL::init()
 {
 	pinMode(pin, INPUT_PULLUP);
     checkpoint = millis();
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_BUTTON_AL::update(unsigned long current_time)

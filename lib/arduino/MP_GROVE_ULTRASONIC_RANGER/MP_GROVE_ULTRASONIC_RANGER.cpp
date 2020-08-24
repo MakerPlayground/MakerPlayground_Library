@@ -10,7 +10,7 @@ int MP_GROVE_ULTRASONIC_RANGER::init()
 {
 	this->cm = 0;
 	pinMode(this->pin,INPUT);
-	return ERR_OK;
+	return MP_ERR_OK;
 }
 
 void MP_GROVE_ULTRASONIC_RANGER::update(unsigned long current_time)
