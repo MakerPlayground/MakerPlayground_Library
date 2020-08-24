@@ -12,7 +12,7 @@ cloud_provide:
   - cloud_platform: BLYNK
     classname: MP_BLYNK_NODEMCU
     library_dependency:
-    - blynkkk/blynk-library
+    - blynkkk/Blynk-0.6.1
 width: 142
 height: 238
 pin_template: ESP_12

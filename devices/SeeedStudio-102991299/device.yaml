@@ -7,7 +7,16 @@ pio_boardid: seeed_wio_terminal
 width: 410
 height: 326
 pin_template: ATSAMD51
-cloud_provide: []
+cloud_provide:
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_WIOTERMINAL
+    library_dependency:
+      - blynkkk/Blynk-0.6.1
+      - SeeedStudio/esp-at-lib-1.1
+      - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
+      - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
+      - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
+      - adafruit/Adafruit_ZeroDMA-1.0.8
 property: []
 connection_provide:
   - name: LEFT

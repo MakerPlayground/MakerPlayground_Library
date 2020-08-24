@@ -16,7 +16,7 @@ cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_NODEMCU
   library_dependency:
-  - blynkkk/blynk-library
+  - blynkkk/Blynk-0.6.1
 connection_provide:
   - name: '5V (0)'
     type: WIRE

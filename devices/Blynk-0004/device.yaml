@@ -26,3 +26,6 @@ platforms:
   - platform: ARDUINO_ESP32
     classname: MP_BLYNK_NOTIFICATION
     library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BLYNK_NOTIFICATION
+    library_dependency: []
