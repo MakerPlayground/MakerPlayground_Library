@@ -117,6 +117,7 @@ connection_provide:
       - x: 237.6
         y: 7
         ref_to: ADC
+        voltage_level: LEVEL_3v3
 
   - name: 3v3(1)
     type: WIRE
