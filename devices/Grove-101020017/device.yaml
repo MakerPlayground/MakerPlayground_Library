@@ -1,0 +1,48 @@
+id: Grove-101020017
+brand: SeeedStudio
+model: Grove - Rotary Angle Sensor
+url: https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html
+type: MODULE
+width: 132
+height: 114
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 45.28
+        y: 93.22
+        ref_to: GND
+      - x: 56.5
+        y: 93.22
+        ref_to: VCC
+      - x: 67.8
+        y: 93.22
+        ref_to: NC
+      - x: 78.92
+        y: 93.22
+        ref_to: SIG
+compatibility:
+- name: POT
+  condition:
+    - name: Compare
+      parameter: []
+  value:
+    - name: Percent
+      constraint:
+        min: 0.0
+        max: 100.0
+        unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TRIMPOT
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_TRIMPOT
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_TRIMPOT
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_TRIMPOT
+    library_dependency: []
