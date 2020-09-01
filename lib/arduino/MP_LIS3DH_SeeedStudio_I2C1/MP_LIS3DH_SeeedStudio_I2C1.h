@@ -1,15 +1,15 @@
-#ifndef MP_LIS3DH_WioTerminal_H
-#define MP_LIS3DH_WioTerminal_H
+#ifndef MP_LIS3DH_SeeedStudio_I2C1_H
+#define MP_LIS3DH_SeeedStudio_I2C1_H
 
 #include "MP_DEVICE.h"
 
 #include "LIS3DHTR.h"
 #include <Wire.h>
 
-class MP_LIS3DH_WioTerminal
+class MP_LIS3DH_SeeedStudio_I2C1
 {
 public:
-	MP_LIS3DH_WioTerminal();
+	MP_LIS3DH_SeeedStudio_I2C1();
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

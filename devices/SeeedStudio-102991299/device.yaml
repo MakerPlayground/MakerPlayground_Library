@@ -341,7 +341,7 @@ integrated_devices:
       count: ""
     platforms:
       - platform: ARDUINO_ATSAMD51
-        classname: MP_LIS3DH_WioTerminal
+        classname: MP_LIS3DH_SeeedStudio_I2C1
         library_dependency:
           - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.0
 platforms:
