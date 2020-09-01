@@ -22,33 +22,35 @@ connection_provide:
   - name: LEFT
     type: GROVE
     pins:
-      - x: 42.53
+      - x: 119.02
         y: 326
         ref_to: GND
-      - x: 48.19
+      - x: 107.7
         y: 326
         ref_to: VCC
-      - x: 53.85
+      - x: 96.38
         y: 326
         ref_to: "SDA"
-      - x: 59.51
+      - x: 85.06
         y: 326
         ref_to: "SCL"
+
   - name: RIGHT
     type: GROVE
     pins:
-      - x: 144.58
+      - x: 323.12
         y: 326
         ref_to: GND
-      - x: 150.24
+      - x: 311.8
         y: 326
         ref_to: VCC
-      - x: 155.9
+      - x: 300.48
         y: 326
         ref_to: "1"
-      - x: 161.56
+      - x: 289.16
         y: 326
         ref_to: "0"
+
 integrated_devices:
   - name: Integrated TFT LCD
     pin_template: NO_PIN
