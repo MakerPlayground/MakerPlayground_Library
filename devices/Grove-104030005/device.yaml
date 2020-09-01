@@ -1,0 +1,51 @@
+id: Grove-104030005
+brand: SeeedStudio
+model: Grove LED Socket Kit (Red, Green, White)
+url: https://www.seeedstudio.com/Grove-Red-LED-p-1144.html
+type: MODULE
+width: 132
+height: 114
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 46.2
+        y: 93.8
+        ref_to: GND
+      - x: 57.4
+        y: 93.8
+        ref_to: VCC
+      - x: 68.6
+        y: 93.8
+        ref_to: NC
+      - x: 80
+        y: 93.8
+        ref_to: SIG
+compatibility:
+  - name: LED
+    action:
+      - name: 'On'
+        parameter:
+          - name: Brightness
+            constraint:
+              min: 0.0
+              max: 100.0
+              unit: PERCENT
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_LED_AH
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_PWM_LED_AH
+    library_dependency: []
