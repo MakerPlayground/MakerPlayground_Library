@@ -25,7 +25,7 @@ void MP_LIS3DH_SeeedStudio_I2C1::update(unsigned long current_time)
 		this->accel_x = lis.getAccelerationX() * GRAVITY;
 		this->accel_y = lis.getAccelerationY() * GRAVITY;
 		this->accel_z = lis.getAccelerationZ() * GRAVITY;
-		this->accel_mag = sqrt(this.accel_x * this.accel_x + this.accel_y * this.accel_y + this.accel_z * this.accel_z);
+		this->accel_mag = sqrt(this->accel_x * this->accel_x + this->accel_y * this->accel_y + this->accel_z * this->accel_z);
 		end_time = current_time;
 	}
 }
