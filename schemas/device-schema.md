@@ -225,6 +225,7 @@ The development platform supported in MakerPlayground software
 |ARDUINO_AVR8|The arduino development platform for AVR 8 bits such as ATMEGA328P, ATMEGA328PB|
 |ARDUINO_ESP8266|The arduino development platform for ESP8266|
 |ARDUINO_ESP32|The arduino development platform for ESP32|
+|ARDUINO_ATSAMD51|The arduino development platform for ATSAMD51|
 |RASPBERRYPI|The python development platform with the raspberrypi built-in libraries|
 
 ### **Cloud Platforms**
