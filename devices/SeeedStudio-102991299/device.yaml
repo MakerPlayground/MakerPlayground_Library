@@ -24,6 +24,7 @@ cloud_provide:
       - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
       - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
       - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
+      - SeeedStudio/Seeed_Arduino_mbedtls-1.1
       - SeeedStudio/Seeed_Arduino_atWiFiClientSecure-1.0.0
       - adafruit/Adafruit_ZeroDMA-1.0.8
 property: []
