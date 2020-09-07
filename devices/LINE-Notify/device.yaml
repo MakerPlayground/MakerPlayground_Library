@@ -1,0 +1,41 @@
+id: LINE-Notify
+brand: LINE
+model: Notify API
+pin_template: NO_PIN
+url: https://notify-bot.line.me/en/
+cloud_consume: REST
+type: VIRTUAL
+width: 0
+height: 0
+property:
+- name: token
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
+port:
+- name: Port
+  type: VIRTUAL
+  function:
+  - type: NOT_CONNECTED
+    pintype: NOT_CONNECTED
+  v_min: 5
+  v_max: 5
+  x: 0
+  y: 0
+compatibility:
+- name: Notification
+  action:
+  - name: Notify
+    parameter:
+    - name: Message
+      constraint: []
+  condition: []
+  value: []
+platforms:
+- platform: ARDUINO_ESP8266
+  classname: MP_Line_Notify
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_Line_Notify
+  library_dependency: []

@@ -5,17 +5,20 @@ url: ""
 type: CONTROLLER
 pio_boardid: esp32dev
 cloud_provide:
-  - cloud_platform: NETPIE
-    classname: MP_NETPIE_ESP
-    library_dependency:
-      - lamloei/ESP32_Microgear
-  - cloud_platform: BLYNK
-    classname: MP_BLYNK_NODEMCU
-    library_dependency:
-      - blynkkk/Blynk-0.6.1
-  - cloud_platform: AZURE
-    classname: MP_AZURE_ESP
-    library_dependency: []
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+    - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+    - blynkkk/Blynk-0.6.1
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
 width: 578.0
 height: 471.0
 property: []
