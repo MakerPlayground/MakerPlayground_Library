@@ -11,6 +11,7 @@
         "ARDUINO_AVR8",
         "ARDUINO_ESP8266",
         "ARDUINO_ESP32",
+        "ARDUINO_ATSAMD51",
         "RASPBERRYPI"
       ]
     },

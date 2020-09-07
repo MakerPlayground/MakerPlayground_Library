@@ -8,17 +8,20 @@ width: 284
 height: 284
 pin_template: ESP_32
 cloud_provide:
-  - cloud_platform: NETPIE
-    classname: MP_NETPIE_ESP
-    library_dependency:
-    - lamloei/ESP32_Microgear
-  - cloud_platform: BLYNK
-    classname: MP_BLYNK_NODEMCU
-    library_dependency:
-    - blynkkk/Blynk-0.6.1
-  - cloud_platform: AZURE
-    classname: MP_AZURE_ESP
-    library_dependency: []
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/Blynk-0.6.1
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
 property: []
 connection_provide:
   - name: B

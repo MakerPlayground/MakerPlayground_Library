@@ -16,6 +16,9 @@ cloud_provide:
 - cloud_platform: AZURE
   classname: MP_AZURE_ESP
   library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
 need_breadboard: true
 breadboard_placement: TWO_SIDES
 pin_template: ESP_32

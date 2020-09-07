@@ -17,6 +17,12 @@ cloud_provide:
   classname: MP_BLYNK_NODEMCU
   library_dependency:
   - blynkkk/Blynk-0.6.1
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
 connection_provide:
   - name: '3V3 (Banana)'
     type: WIRE
