@@ -1,14 +1,14 @@
 id: LINE-Notify
 brand: LINE
-model: Notify API
+model: Notify
 pin_template: NO_PIN
 url: https://notify-bot.line.me/en/
 cloud_consume: REST
 type: VIRTUAL
-width: 0
-height: 0
+width: 50
+height: 50
 property:
-- name: token
+- name: Token
   datatype: STRING
   controltype: TEXTBOX
   value: ''
