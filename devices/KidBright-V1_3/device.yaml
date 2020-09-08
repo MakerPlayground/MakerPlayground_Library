@@ -330,6 +330,27 @@ integrated_devices:
         classname: MP_LM73_I2C1_ESP32
         library_dependency: []
 
+  - name: Integrated USB Switcher
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LOAD_DRIVER_AL
+        library_dependency: []
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '25'
+    compatibility:
+      - name: Load Driver
+        action:
+          - name: 'On'
+            parameter: []
+          - name: 'Off'
+            parameter: []
+
   - name: Integrated RTC
     platforms:
     - platform: ARDUINO_ESP32
