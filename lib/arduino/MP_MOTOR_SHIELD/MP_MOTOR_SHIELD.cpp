@@ -2,13 +2,14 @@
 
 MP_MOTOR_SHIELD::MP_MOTOR_SHIELD()
 {
-	myMotor = AFMS.getMotor(1);
+
 }
 
 int MP_MOTOR_SHIELD::init()
 {
 	AFMS.begin();
 	direction = RELEASE;
+	myMotor = AFMS.getMotor(1);
 	return MP_ERR_OK;
 }
 
@@ -34,13 +35,17 @@ void MP_MOTOR_SHIELD::printStatus()
 	}
 }
 
-void MP_MOTOR_SHIELD::on(char dir[], double speed)
+
+// dir == 1 Forward
+// dir == 0 Backward
+void MP_MOTOR_SHIELD::motorOn(uint8_t ch,  uint8_t dir, double speed)
 {
+	myMotor = AFMS.getMotor(ch);
 	this->speed = (uint8_t) (speed * 8.0 / 100.0);
-	if(strcmp(dir, "Forward") == 0) {
+	if(dir == 1) {
 		direction = FORWARD;
 	}
-	else if(strcmp(dir, "Backward") == 0) {
+	else if(dir == 0) {
 		direction = BACKWARD;
 	}
 	else {
@@ -71,8 +76,9 @@ void MP_MOTOR_SHIELD::on(char dir[], double speed)
 // 	myMotor->setSpeed(speed);
 // }
 
-void MP_MOTOR_SHIELD::off()
+void MP_MOTOR_SHIELD::motorOff(uint8_t ch)
 {
+	myMotor = AFMS.getMotor(ch);
 	myMotor->setSpeed(0);
 	myMotor->run(RELEASE);
 }

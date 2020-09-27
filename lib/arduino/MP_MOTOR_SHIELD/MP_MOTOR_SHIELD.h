@@ -14,10 +14,10 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void on(char dir[], uint8_t speed);
+	void motorOn(uint8_t ch,  uint8_t dir, double speed);
 	void reverse();
 	void set_speed(uint8_t speed);
-	void off();
+	void motorOff(uint8_t ch);
 
 private:
 	Adafruit_MotorShield AFMS = Adafruit_MotorShield();

@@ -1,0 +1,71 @@
+---
+id: Adafruit-1438
+brand: Adafruit
+model: Adafruit Motor/Stepper/Servo Shield for Arduino v2 Kit - v2.3
+url: https://www.adafruit.com/product/1438
+type: MODULE
+width: 400
+height: 304
+pin_template: GENERIC_I2C_DEVICE_5
+connection_consume:
+- name: SDA
+  type: WIRE
+  pins: 
+    - x: 131
+      y: 15
+      ref_to: SDA  
+- name: SCL
+  type: WIRE
+  pins: 
+  - x: 117
+    y: 15
+    ref_to: SCL
+- name: 5V
+  type: WIRE
+  pins: 
+  - x: 226
+    y: 287
+    ref_to: VCC
+- name: GND
+  type: WIRE
+  pins: 
+  - x: 241
+    y: 287
+    ref_to: GND
+compatibility:
+- name: DC Motor Driver
+  action:
+  - name: 'On'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+        - 1
+        - 2
+        - 3
+        - 4
+    - name: Direction
+      constraint:
+      - key: Forward
+        value: 1
+      - key: Backward
+        value: 0
+    - name: Speed
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: 'Off'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+        - 1
+        - 2
+        - 3
+        - 4
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_MOTOR_SHIELD
+  library_dependency:
+  - adafruit/Adafruit_Motor_Shield_V2_Library
