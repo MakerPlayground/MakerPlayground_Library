@@ -23,7 +23,7 @@ def PR_VAL(device):
 def PR_DEVICE(device):
     print("\"" + device + "\" ", end='')
 
-def PR_END(device):
+def PR_END():
     print("\0")
 
 # logging

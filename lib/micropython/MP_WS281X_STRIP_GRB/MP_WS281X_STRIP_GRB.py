@@ -1,6 +1,6 @@
 from machine import Pin
 from neopixel import NeoPixel
-import MakerPlayground.MakerPlayground as mp
+import MakerPlayground as mp
 
 class MP_WS281X_STRIP_GRB:
     def __init__(self, pin, numPixel):
