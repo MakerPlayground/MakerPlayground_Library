@@ -1,0 +1,66 @@
+id: Grove-114020121
+brand: SeeedStudio
+model: Grove 3-Axis Digital Accelerometer (LIS3DHTR)
+url: https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html
+type: MODULE
+width: 163
+height: 137
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 103.2
+        y: 21
+        ref_to: GND
+      - x: 88.8
+        y: 21
+        ref_to: VCC
+      - x: 74.4
+        y: 21
+        ref_to: SDA
+      - x: 60
+        y: 21
+        ref_to: SCL
+compatibility:
+  - name: Accelerometer
+    condition:
+      - name: Compare
+    value:
+      - name: Accel_X
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Y
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Z
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Magnitude
+        constraint:
+          min: 0
+          max: 100
+          unit: METERPERSECSQUARE
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_LIS3DHTR
+  library_dependency:
+    - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.1
+- platform: ARDUINO_ESP8266
+  classname: MP_LIS3DHTR
+  library_dependency:
+    - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.1
+- platform: ARDUINO_ESP32
+  classname: MP_LIS3DHTR
+  library_dependency:
+    - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.1
+- platform: ARDUINO_ATSAMD51
+  classname: MP_LIS3DHTR
+  library_dependency:
+    - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.1
