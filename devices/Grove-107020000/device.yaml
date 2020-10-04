@@ -1,0 +1,54 @@
+id: Grove-107020000
+brand: SeeedStudio
+model: Grove Active Buzzer
+url: https://www.seeedstudio.com/Grove-Buzzer.html
+type: MODULE
+width: 132
+height: 114
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 48.99
+        y: 94.71
+        ref_to: GND
+      - x: 60.33
+        y: 94.71
+        ref_to: VCC
+      - x: 71.66
+        y: 94.71
+        ref_to: NC
+      - x: 83
+        y: 94.71
+        ref_to: SIG
+compatibility:
+  - name: Buzzer
+    action:
+      - name: Play Tone
+        parameter:
+          - name: Tone Frequency
+            constraint:
+              min: 0
+              max: 20000
+              unit: HERTZ
+          - name: Duration
+            constraint:
+              min: 0
+              max: 1000
+              unit: SECOND
+      - name: Beep
+        parameter: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUZZER_ACTIVE_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_BUZZER_ACTIVE_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_BUZZER_ACTIVE_AH
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BUZZER_ACTIVE_AH
+    library_dependency: []
