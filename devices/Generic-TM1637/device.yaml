@@ -7,20 +7,20 @@ width: 153
 height: 372
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: TM1637
+pin_template: GENERIC_DIGITAL_DUALPIN_3v3_5
 connection_consume:
   - name: CLK
     type: WIRE
     pins:
       - x: 99.5
         y: 321
-        ref_to: CLK
+        ref_to: SIG1
   - name: DIO
     type: WIRE
     pins:
       - x: 85.1
         y: 321
-        ref_to: DIO
+        ref_to: SIG2
   - name: VCC
     type: WIRE
     pins:
