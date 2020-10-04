@@ -1,0 +1,48 @@
+id: Grove-101020010
+brand: SeeedStudio
+model: Grove Ultrasonic Ranger
+url: https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html
+type: MODULE
+width: 226
+height: 114
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 96.38
+        y: 98.3
+        ref_to: GND
+      - x: 107.72
+        y: 98.3
+        ref_to: VCC
+      - x: 119.06
+        y: 98.3
+        ref_to: NC
+      - x: 130.40
+        y: 98.3
+        ref_to: SIG
+compatibility:
+  - name: Distance
+    condition:
+      - name: Compare
+    value:
+      - name: Distance
+        constraint:
+          min: 2
+          max: 450
+          unit: CENTIMETER
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_GROVE_ULTRASONIC_RANGER
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_GROVE_ULTRASONIC_RANGER
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_GROVE_ULTRASONIC_RANGER
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_GROVE_ULTRASONIC_RANGER
+    library_dependency: []
+
