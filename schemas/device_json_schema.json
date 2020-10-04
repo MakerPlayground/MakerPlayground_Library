@@ -316,6 +316,7 @@
         "Mag_X",
         "Mag_Y",
         "Mag_Z",
+        "Heading",
         "Pressure",
         "Hour",
         "Minute",
