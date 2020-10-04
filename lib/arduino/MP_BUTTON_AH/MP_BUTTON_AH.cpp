@@ -7,7 +7,7 @@ MP_BUTTON_AH::MP_BUTTON_AH(uint8_t pin)
 
 int MP_BUTTON_AH::init()
 {
-	pinMode(pin, INPUT_PULLUP);
+	pinMode(pin, INPUT);
     checkpoint = millis();
 	return MP_ERR_OK;
 }
