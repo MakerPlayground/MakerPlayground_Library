@@ -1,0 +1,57 @@
+id: Grove-111020044
+brand: SeeedStudio
+model: Grove Red LED Button
+url: https://www.seeedstudio.com/Grove-Red-LED-Button.html
+type: MODULE
+width: 134
+height: 238
+pin_template: GENERIC_DIGITAL_DUALPIN_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 84
+        y: 238
+        ref_to: GND
+      - x: 72.67
+        y: 238
+        ref_to: VCC
+      - x: 61.33
+        y: 238
+        ref_to: SIG2
+      - x: 50
+        y: 238
+        ref_to: SIG1
+compatibility:
+  - name: Button
+    condition:
+      - name: Press
+        parameter: []
+      - name: Press and release
+        parameter: []
+      - name: Not press
+        parameter: []
+    value: []
+  - name: LED
+    action:
+      - name: 'On'
+        parameter:
+          - name: Brightness
+            constraint:
+              min: 0.0
+              max: 100.0
+              unit: PERCENT
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_GROVE_LEDBUTTON
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_GROVE_LEDBUTTON
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_GROVE_LEDBUTTON
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_GROVE_LEDBUTTON
+    library_dependency: []
