@@ -1,0 +1,42 @@
+id: Grove-105020003
+brand: SeeedStudio
+model: Grove Vibration Motor
+url: https://www.seeedstudio.com/Grove-Vibration-Motor.html
+type: MODULE
+width: 114
+height: 132
+pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 74
+        y: 99.38
+        ref_to: GND
+      - x: 62.67
+        y: 99.38
+        ref_to: VCC
+      - x: 51.33
+        y: 99.38
+        ref_to: NC
+      - x: 40
+        y: 99.38
+        ref_to: SIG
+compatibility:
+  - name: Load Driver
+    action:
+      - name: 'On'
+      - name: 'Off'
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LOAD_DRIVER_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_LOAD_DRIVER_AH
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_LOAD_DRIVER_AH
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_LOAD_DRIVER_AH
+    library_dependency: []
