@@ -10,17 +10,17 @@ connection_consume:
   - name: Port
     type: GROVE
     pins:
-      - x: 46.2
-        y: 93.8
+      - x: 48.99
+        y: 94.71
         ref_to: GND
-      - x: 57.4
-        y: 93.8
+      - x: 60.33
+        y: 94.71
         ref_to: VCC
-      - x: 68.6
-        y: 93.8
+      - x: 71.66
+        y: 94.71
         ref_to: NC
-      - x: 80
-        y: 93.8
+      - x: 83
+        y: 94.71
         ref_to: SIG
 compatibility:
   - name: LED
