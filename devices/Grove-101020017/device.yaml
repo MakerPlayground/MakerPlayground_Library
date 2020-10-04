@@ -1,6 +1,6 @@
 id: Grove-101020017
 brand: SeeedStudio
-model: Grove - Rotary Angle Sensor
+model: Grove Rotary Angle Sensor
 url: https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html
 type: MODULE
 width: 132
@@ -10,17 +10,17 @@ connection_consume:
   - name: Port
     type: GROVE
     pins:
-      - x: 45.28
-        y: 93.22
+      - x: 48.99
+        y: 94.71
         ref_to: GND
-      - x: 56.5
-        y: 93.22
+      - x: 60.33
+        y: 94.71
         ref_to: VCC
-      - x: 67.8
-        y: 93.22
+      - x: 71.66
+        y: 94.71
         ref_to: NC
-      - x: 78.92
-        y: 93.22
+      - x: 83
+        y: 94.71
         ref_to: SIG
 compatibility:
 - name: POT
