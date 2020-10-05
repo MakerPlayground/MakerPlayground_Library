@@ -8,8 +8,7 @@ MP_LIGHT_SENSOR_KIDBRIGHT::MP_LIGHT_SENSOR_KIDBRIGHT(uint8_t pin)
 int MP_LIGHT_SENSOR_KIDBRIGHT::init()
 {
 	pinMode(this->pin, INPUT);
-	analogReadResolution(10);
-  	analogSetAttenuation(ADC_0db);	// acceptable range from 0-1v
+  analogSetAttenuation(ADC_0db);	// acceptable range from 0-1v
 	return MP_ERR_OK;
 }
 

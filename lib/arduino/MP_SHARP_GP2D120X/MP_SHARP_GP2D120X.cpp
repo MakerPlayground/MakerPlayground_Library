@@ -12,7 +12,7 @@ int MP_SHARP_GP2D120X::init()
 
 void MP_SHARP_GP2D120X::update(unsigned long current_time)
 {
-    int value = analogRead(18);
+    int value = analogRead(pin);
     cm = 2076.0 / ((value < 16 ? 16 : value) - 11.0);
     if(cm < 4) cm = 4;
     if(cm > 30) cm = 30;
