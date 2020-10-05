@@ -1,0 +1,48 @@
+---
+id: Grove-101020044
+brand: SeeedStudio
+model: Grove - Alcohol Sensor
+url: https://www.seeedstudio.com/Grove-Gas-Sensor-MQ3.html
+type: MODULE
+pin_template: MQ303A
+width: 312
+height: 176
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 27
+        y: 64
+        ref_to: GND
+      - x: 27
+        y: 78.4
+        ref_to: VCC
+      - x: 27
+        y: 92.8
+        ref_to: SEL
+      - x: 27
+        y: 107.2
+        ref_to: DAT
+compatibility:
+  - name: Alcohol
+    condition:
+      - name: Compare
+    value:
+      - name: Percent
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_MQ303A
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_MQ303A
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_MQ303A
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_MQ303A
+    library_dependency: []

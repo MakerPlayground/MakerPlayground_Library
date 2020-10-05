@@ -1,0 +1,13 @@
+pins:
+  - pin_name: GND
+    voltage_level: LEVEL_5
+    pin_function: GND
+  - pin_name: VCC
+    voltage_level: LEVEL_5
+    pin_function: VCC
+  - pin_name: SEL
+    voltage_level: LEVEL_5
+    pin_function: DIGITAL_IN
+  - pin_name: DAT
+    voltage_level: LEVEL_5
+    pin_function: ANALOG_OUT
