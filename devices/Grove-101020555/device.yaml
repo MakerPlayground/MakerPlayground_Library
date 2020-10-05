@@ -1,0 +1,59 @@
+id: Grove-101020555
+brand: SeeedStudio
+model: Grove - 1-Wire Thermocouple Amplifier (MAX31850K)
+url: https://www.seeedstudio.com/Grove-1-Wire-Thermocouple-Amplifier-MAX31850K.html
+type: MODULE
+width: 303
+height: 171
+pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 13
+        y: 64
+        ref_to: GND
+      - x: 13
+        y: 78.4
+        ref_to: VCC
+      - x: 13
+        y: 92.8
+        ref_to: NC
+      - x: 13
+        y: 107.2
+        ref_to: SIG
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint: 
+          min: -50.0
+          max: 600.0
+          unit: CELSIUS
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_MAX31850K
+    library_dependency:
+      - SeeedStudio/Seeed_MAX31850K-master
+      - milesburton/Arduino-Temperature-Control-Library-3.8.0
+      - PaulStoffregen/OneWire-2.3.4
+  - platform: ARDUINO_ESP8266
+    classname: MP_MAX31850K
+    library_dependency:
+      - SeeedStudio/Seeed_MAX31850K-master
+      - milesburton/Arduino-Temperature-Control-Library-3.8.0
+      - PaulStoffregen/OneWire-2.3.4
+  - platform: ARDUINO_ESP32
+    classname: MP_MAX31850K
+    library_dependency:
+      - SeeedStudio/Seeed_MAX31850K-master
+      - milesburton/Arduino-Temperature-Control-Library-3.8.0
+      - PaulStoffregen/OneWire-2.3.4
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_MAX31850K
+    library_dependency:
+      - SeeedStudio/Seeed_MAX31850K-master
+      - milesburton/Arduino-Temperature-Control-Library-3.8.0
+      - PaulStoffregen/OneWire-2.3.4
