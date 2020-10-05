@@ -1,0 +1,60 @@
+id: Grove-101990644
+brand: SeeedStudio
+model: Grove - AHT20 I2C Industrial Grade Temperature and Humidity Sensor
+url: https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html
+type: MODULE
+width: 137
+height: 164
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 21
+        y: 60
+        ref_to: GND
+      - x: 21
+        y: 74.4
+        ref_to: VCC
+      - x: 21
+        y: 88.8
+        ref_to: SDA
+      - x: 21
+        y: 103.2
+        ref_to: SCL
+compatibility:
+  - name: Temperature
+    condition:
+      - name: Compare
+    value:
+      - name: Temperature
+        constraint:
+          min: -40
+          max: 85
+          unit: CELSIUS
+  - name: Humidity
+    condition:
+      - name: Compare
+    value:
+      - name: Humidity
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_ATH20
+  library_dependency:
+    - SeeedStudio/ATH20_Arduino_Library
+- platform: ARDUINO_ESP8266
+  classname: MP_ATH20
+  library_dependency:
+    - SeeedStudio/ATH20_Arduino_Library
+- platform: ARDUINO_ESP32
+  classname: MP_ATH20
+  library_dependency:
+    - SeeedStudio/ATH20_Arduino_Library
+- platform: ARDUINO_ATSAMD51
+  classname: MP_ATH20
+  library_dependency:
+    - SeeedStudio/ATH20_Arduino_Library
