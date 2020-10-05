@@ -1,0 +1,277 @@
+id: M5Stack-M5StickC
+brand: M5Stack
+model: M5StickC
+url: https://m5stack.com/products/stick-c
+type: CONTROLLER
+pio_boardid: m5stick-c
+width: 136
+height: 266
+pin_template: ESP_32
+cloud_provide:
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/Blynk-0.6.1
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
+property: []
+connection_provide:
+  - name: GROVE
+    type: GROVE
+    pins:
+      - x: 76.505
+        y: 266
+        ref_to: GND
+      - x: 70.835
+        y: 266
+        ref_to: VCC
+      - x: 65.165
+        y: 266
+        ref_to: "32"
+      - x: 59.495
+        y: 266
+        ref_to: "33"
+integrated_devices:
+  - name: Integrated TFT LCD
+    pin_template: NO_PIN
+    integrated_connection: []
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+              - name: Text
+              - name: Size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+                  - key: 3x
+                    value: 3
+              - name: Align
+                value: Left
+                constraint:
+                  - key: Left
+                    value: 0
+                  - key: Center
+                    value: 1
+                  - key: Right
+                    value: 2
+              - name: Color
+                value: White
+                constraint:
+                  - key: Blue
+                    value: 0
+                  - key: Cyan
+                    value: 1
+                  - key: Dark Cyan
+                    value: 2
+                  - key: Dark Green
+                    value: 3
+                  - key: Dark Grey
+                    value: 4
+                  - key: Green
+                    value: 5
+                  - key: Green Yellow
+                    value: 6
+                  - key: Light Grey
+                    value: 7
+                  - key: Magenta
+                    value: 8
+                  - key: Maroon
+                    value: 9
+                  - key: Navy
+                    value: 10
+                  - key: Olive
+                    value: 11
+                  - key: Orange
+                    value: 12
+                  - key: Pink
+                    value: 13
+                  - key: Purple
+                    value: 14
+                  - key: White
+                    value: 15
+                  - key: Red
+                    value: 16
+                  - key: Yellow
+                    value: 17
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_TFT_M5StickC
+        library_dependency: 
+         - M5Stack/M5StickC-0.2.0
+  - name: Integrated Button A
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "37"
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press
+          - name: Press and release
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated Button B
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "39"
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press
+          - name: Press and release
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+  - name: Integrated LED
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
+    integrated_connection:
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: SIG
+        host_ref_to: "10"
+    compatibility:
+      - name: LED
+        action:
+          - name: 'On'
+            parameter:
+              - name: Brightness
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: 'Off'
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_LED_AL
+        library_dependency: []
+#  - name: Integrated Microphone
+#    pin_template: GENERIC_ANALOG_SENSOR_3v3
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "34"
+#    compatibility:
+#    - name: Sound
+#      condition:
+#       - name: Compare
+#      value:
+#       - name: SoundLevel
+#         constraint:
+#          min: 0.0
+#          max: 100.0
+#          unit: PERCENT
+#    platforms:
+#     - platform: ARDUINO_ESP32
+#       classname:
+#       library_dependency: []
+  - name: Integrated 6-DOF IMU
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: "21"
+      - ref_to: SCL
+        host_ref_to: "22"
+    compatibility:
+    - name: Accelerometer
+      condition:
+      - name: Compare
+      value:
+      - name: Accel_X
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Y
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Z
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Magnitude
+        constraint:
+          min: 0
+          max: 100
+          unit: METERPERSECSQUARE
+      count: ""
+    - name: Gyroscope
+      condition:
+      - name: Compare
+      value:
+      - name: Gyro_X
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      - name: Gyro_Y
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      - name: Gyro_Z
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      count: ""
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_IMU_M5StickC
+        library_dependency:
+        - M5Stack/M5StickC-0.2.0
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: ""
+    library_dependency: []
