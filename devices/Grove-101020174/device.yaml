@@ -1,0 +1,50 @@
+id: Grove-101020174
+brand: SeeedStudio
+model: Grove Infrared Reflective Sensor v1.2
+url: https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1-2.html
+type: MODULE
+width: 184
+height: 154
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 111
+        y: 26
+        ref_to: GND
+      - x: 97.6
+        y: 26
+        ref_to: VCC
+      - x: 83.2
+        y: 26
+        ref_to: NC
+      - x: 68.8
+        y: 26
+        ref_to: SIG
+compatibility:
+  - name: Reflector
+    condition:
+      - name: Compare
+    value:
+      - name: Reflectance
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_PERCENT_REFLECTANCE
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_PERCENT_REFLECTANCE
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_PERCENT_REFLECTANCE
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_PERCENT_REFLECTANCE
+    library_dependency: []
+  - platform: RASPBERRYPI
+    classname: MP_PERCENT_REFLECTANCE
+    library_dependency: []
