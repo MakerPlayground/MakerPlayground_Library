@@ -1,10 +1,11 @@
-id: Generic-VL53L0X
-brand: Generic
-model: Laser Ranging Distance Sensor
-url: https://www.arduinoall.com/product/1584/vl53l0x-v2-laser-ranging-distance-sensor-เซนเซอร์วัดระยะทางด้วยแสงเลเซอร์-0-3-120-เซนติเมตร
+id: Grove-101020532
+brand: SeeedStudio
+model: Grove Time of Flight Distance Sensor (VL53L0X)
+url: https://www.seeedstudio.com/Grove-Time-of-Flight-Distance-Sensor-VL53L0X.html
 type: MODULE
-width: 128
-height: 98
+width: 175
+height: 147
+pin_template: GENERIC_I2C_DEVICE_3v3_5
 property:
   - name: Mode
     datatype: STRING_INT_ENUM
@@ -26,35 +27,22 @@ property:
         value: 1
       - key: 'No'
         value: 0
-## Since pin distance is not 14.4 pixels, we cannot put it on breadboard
-# need_breadboard: true
-# breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
-  - name: VCC
-    type: WIRE
+  - name: Port
+    type: GROVE
     pins:
-      - x: 34.054
-        y: 98
-        ref_to: VCC
-  - name: GND
-    type: WIRE
-    pins:
-      - x: 45.798
-        y: 98
+      - x: 108
+        y: 31
         ref_to: GND
-  - name: SCL
-    type: WIRE
-    pins:
-      - x: 57.542
-        y: 98
-        ref_to: SCL
-  - name: SDA
-    type: WIRE
-    pins:
-      - x: 69.286
-        y: 98
+      - x: 93.6
+        y: 31
+        ref_to: VCC
+      - x: 79.2
+        y: 31
         ref_to: SDA
+      - x: 64.8
+        y: 21
+        ref_to: SCL
 compatibility:
   - name: Distance
     condition:

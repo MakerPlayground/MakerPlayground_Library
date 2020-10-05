@@ -8,7 +8,7 @@
 class MP_VL53L0X
 {
 public:
-    MP_VL53L0X(uint8_t mode);
+    MP_VL53L0X(uint8_t mode, uint8_t useLongRange);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
@@ -21,6 +21,7 @@ private:
     bool isTimeOut = false;
     unsigned long nextReading;
     uint8_t mode;
+    uint8_t useLongRange;
 };
 
 #endif
