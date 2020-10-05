@@ -12,6 +12,15 @@ property:
     controltype: TEXTBOX
     value: '0x300000'
     constraint: []
+  - name: Input Size
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+    value: '320x240'
+    constraint:
+      - key: '224x224'
+        value: 0
+      - key: '320x240'
+        value: 1
   - name: Model Anchor
     datatype: STRING
     controltype: TEXTBOX
@@ -46,6 +55,7 @@ property:
     controltype: TEXTBOX
     value: '-'
     constraint: []
+#    optional: true
 #  - name: Max FPS
 #    datatype: DOUBLE
 #    controltype: SPINBOX

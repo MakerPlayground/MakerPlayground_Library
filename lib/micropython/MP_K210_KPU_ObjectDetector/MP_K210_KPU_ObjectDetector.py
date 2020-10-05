@@ -2,8 +2,14 @@ import KPU as kpu
 import MakerPlayground as mp
 
 class MP_K210_KPU_ObjectDetector:
-    def __init__(self, address, anchor, threshold, nmsThreshold, numAnchor, outputShape):
+    def __init__(self, address, modelSize, anchor, threshold, nmsThreshold, numAnchor, outputShape):
         self.address = address
+        if modelSize == 0:
+            self.modelWidth = 224
+            self.modelHeight = 224
+        else:
+            self.modelWidth = 320
+            self.modelHeight = 240
         self.anchor = anchor
         self.threshold = threshold
         self.nmsThreshold = nmsThreshold
@@ -26,8 +32,9 @@ class MP_K210_KPU_ObjectDetector:
         pass
 
     def detect(self, image):
-        image = image.resize(224, 224)
-        image.pix_to_ai()
+        if self.modelWidth != image.width() or self.modelHeight != image.height():
+            image = image.resize(self.modelWidth, self.modelHeight)
+            image.pix_to_ai()
         self.width = image.width()
         self.height = image.height()
         self.result = kpu.run_yolo2(self.task, image)
