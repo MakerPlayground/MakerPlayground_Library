@@ -1,30 +1,30 @@
 ---
-id: Grove-101020055
+id: Grove-101020006
 brand: SeeedStudio
-model: Grove - Gas Sensor(MQ2) - Combustible Gas, Smoke
-url: https://www.seeedstudio.com/Grove-Gas-Sensor-MQ2.html
+model: Grove - Gas Sensor(MQ3) - Alcohol
+url: https://www.seeedstudio.com/Grove-Gas-Sensor-MQ3.html
 type: MODULE
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
-width: 292
-height: 166
+width: 315
+height: 177
 connection_consume:
   - name: Port
     type: GROVE
     pins:
-      - x: 44
-        y: 105.4
+      - x: 47
+        y: 108
         ref_to: GND
-      - x: 44
-        y: 91.0
+      - x: 47
+        y: 93.6
         ref_to: VCC
-      - x: 44
-        y: 76.6
+      - x: 47
+        y: 79.2
         ref_to: NC
-      - x: 44
-        y: 62.2
+      - x: 47
+        y: 64.8
         ref_to: SIG
 compatibility:
-  - name: LPG
+  - name: Alcohol
     condition:
       - name: Compare
     value:
@@ -35,14 +35,14 @@ compatibility:
           unit: PERCENT
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_MQ2
+    classname: MP_MQ3
     library_dependency: []
   - platform: ARDUINO_ESP8266
-    classname: MP_MQ2
+    classname: MP_MQ3
     library_dependency: []
   - platform: ARDUINO_ESP32
-    classname: MP_MQ2
+    classname: MP_MQ3
     library_dependency: []
   - platform: ARDUINO_ATSAMD51
-    classname: MP_MQ2
+    classname: MP_MQ3
     library_dependency: []
