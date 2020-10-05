@@ -13,13 +13,13 @@ int MP_MQ2::init()
 
 void MP_MQ2::printStatus()
 {
-    Serial.print(F("percent = "));
+  Serial.print(F("percent = "));
 	Serial.println(percent);
 }
 
 void MP_MQ2::update(unsigned long time)
 {
-    percent = (analogRead(pin)/1023.0)*100;
+  percent = (analogRead(pin)/1023.0)*100;
 }
 
 double MP_MQ2::getPercent()

@@ -16,8 +16,7 @@ public:
 
 private:
 	uint8_t pin;
-	int percent = 0;
-	
+	double percent = 0;
 };
 
 #endif
