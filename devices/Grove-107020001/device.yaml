@@ -1,26 +1,27 @@
-id: Generic-Buzzer
-brand: Generic
-model: Active Buzzer DC 1.5V-12V
-url: https://www.arduinoall.com/product/1015/active-buzzer-dc-1-5v-12v-buzzer
+id: Grove-107020001
+brand: SeeedStudio
+model: Grove - Speaker
+url: https://www.seeedstudio.com/Grove-Speaker-p-1445.html
 type: MODULE
-width: 158
-height: 155
-need_breadboard: true
-breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+width: 311
+height: 176
+pin_template: GENERIC_PWM_ACTUATOR_3v3_5
 connection_consume:
-  - name: VCC
-    type: WIRE
+  - name: Port
+    type: GROVE
     pins:
-      - x: 85.679
-        y: 151.8
-        ref_to: SIG
-  - name: GND
-    type: WIRE
-    pins:
-      - x: 71.279
-        y: 151.8
+      - x: 43
+        y: 65
         ref_to: GND
+      - x: 43
+        y: 79.4
+        ref_to: VCC
+      - x: 43
+        y: 93.8
+        ref_to: NC
+      - x: 43
+        y: 108.2
+        ref_to: SIG
 compatibility:
   - name: Buzzer
     action:
@@ -48,8 +49,5 @@ platforms:
     classname: MP_BUZZER
     library_dependency: []
   - platform: ARDUINO_ATSAMD51
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: RASPBERRYPI
     classname: MP_BUZZER
     library_dependency: []
