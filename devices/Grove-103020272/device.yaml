@@ -1,0 +1,114 @@
+id: Grove-103020272
+brand: SeeedStudio
+model: Grove - I2C Hub (6 Port)
+url: https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html
+type: MODULE
+formfactor: STANDALONE
+width: 331
+height: 186
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port0
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+  - name: Port1
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+  - name: Port2
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+  - name: Port3
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+  - name: Port4
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+  - name: Port5
+    type: GROVE
+    pins:
+      - x: 29
+        y: 68
+        ref_to: GND
+      - x: 29
+        y: 92.4
+        ref_to: VCC
+      - x: 29
+        y: 106.8
+        ref_to: SDA
+      - x: 29
+        y: 121.2
+        ref_to: SCL
+compatibility: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: ""
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: ""
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: ""
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: ""
+    library_dependency: []
