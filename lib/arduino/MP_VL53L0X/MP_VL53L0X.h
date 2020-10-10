@@ -19,7 +19,7 @@ private:
     double cm = 0.0;
     VL53L0X sensor;
     bool isTimeOut = false;
-    unsigned long nextReading;
+    unsigned long nextReading = 0;
     uint8_t mode;
     uint8_t useLongRange;
 };

@@ -150,6 +150,7 @@
         "Counter",
         "Statistics",
         "Timer",
+        "UV Sensor",
         "Image Recognizer",
         "Image to Text",
         "Map",
