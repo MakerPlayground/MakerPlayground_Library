@@ -15,7 +15,7 @@ MP_IMU_M5StickC::MP_IMU_M5StickC()
 
 int MP_IMU_M5StickC::init()
 {
-    M5.begin();
+    M5.begin(true, true, false);
     M5.IMU.Init();
 	return MP_ERR_OK;
 }

@@ -14,7 +14,7 @@ MP_TFT_M5StickC::MP_TFT_M5StickC()
 
 int MP_TFT_M5StickC::init()
 {
-    M5.begin();
+    M5.begin(true, true, false);
     M5.Lcd.setRotation(3);
     clearScreen();
     return MP_ERR_OK;
