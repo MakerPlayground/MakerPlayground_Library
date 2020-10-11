@@ -1,7 +1,7 @@
 #include "MP_VEML6070_270kOhm.h"
 
 MP_VEML6070_270kOhm::MP_VEML6070_270kOhm(uint8_t readingMode)
-    : uv(Adafruit_VEML6070()
+    : uv(Adafruit_VEML6070())
     , uvIndex(0.0)
     , nextReading(0)
     , readingMode(readingMode)
@@ -17,7 +17,6 @@ int MP_VEML6070_270kOhm::init()
     } else if(readingMode == 3) {
         uv.begin(VEML6070_4_T);
     }
-
 	return MP_ERR_OK;
 }
 
@@ -26,7 +25,7 @@ void MP_VEML6070_270kOhm::update(unsigned long current_time)
     if (current_time >= nextReading)
     {
         nextReading = current_time + 50;        // next reading should happen at least 50ms later otherwise the sound
-        this->value = uv.readUV();
+        value = uv.readUV();
         convergeValue();
     }
 }
@@ -58,7 +57,7 @@ bool MP_VEML6070_270kOhm::checkRiskLevel(uint8_t risk)
     return false; 
 }
 
-double MP_VEML6070_270kOhm::getUV_Index()
+uint8_t MP_VEML6070_270kOhm::getUV_Index()
 { 
 	return uvIndex;
 }
@@ -69,88 +68,88 @@ void MP_VEML6070_270kOhm::printStatus()
 	Serial.print(uvIndex);
 }
 
-void convergeValue()
+void MP_VEML6070_270kOhm::convergeValue()
 {
     if(readingMode == 1) {
-        if(this->value >= 0 && this->value <= 186) {
+        if(value >= 0 && value <= 186) {
             uvIndex = 0;
-        } else if(this->value >= 187 && this->value <= 372) {
+        } else if(value >= 187 && value <= 372) {
             uvIndex = 1;
-        } else if(this->value >= 373 && this->value <= 560) {
+        } else if(value >= 373 && value <= 560) {
             uvIndex = 2;
-        } else if(this->value >= 561 && this->value <= 747) {
+        } else if(value >= 561 && value <= 747) {
             uvIndex = 3;
-        } else if(this->value >= 748 && this->value <= 933) {
+        } else if(value >= 748 && value <= 933) {
             uvIndex = 4;
-        } else if(this->value >= 934 && this->value <= 1120) {
+        } else if(value >= 934 && value <= 1120) {
             uvIndex = 5;
-        } else if(this->value >= 1121 && this->value <= 1307) {
+        } else if(value >= 1121 && value <= 1307) {
             uvIndex = 6;
-        } else if(this->value >= 1306 && this->value <= 1494) {
+        } else if(value >= 1306 && value <= 1494) {
             uvIndex = 7;
-        } else if(this->value >= 1495 && this->value <= 1681) {
+        } else if(value >= 1495 && value <= 1681) {
             uvIndex = 8;
-        } else if(this->value >= 1682 && this->value <= 1868) {
+        } else if(value >= 1682 && value <= 1868) {
             uvIndex = 9;
-        } else if(this->value >= 1869 && this->value <= 2055) {
+        } else if(value >= 1869 && value <= 2055) {
             uvIndex = 10;
-        } else if(this->value > 2055) {
+        } else if(value > 2055) {
             uvIndex = 11;
         } else {
             uvIndex = 0;
         }
     } else if(readingMode == 2) {
-        if(this->value >= 0 && this->value <= 373) {
+        if(value >= 0 && value <= 373) {
             uvIndex = 0;
-        } else if(this->value >= 374 && this->value <= 747) {
+        } else if(value >= 374 && value <= 747) {
             uvIndex = 1;
-        } else if(this->value >= 748 && this->value <= 1120) {
+        } else if(value >= 748 && value <= 1120) {
             uvIndex = 2;
-        } else if(this->value >= 1121 && this->value <= 1494) {
+        } else if(value >= 1121 && value <= 1494) {
             uvIndex = 3;
-        } else if(this->value >= 1495 && this->value <= 1868) {
+        } else if(value >= 1495 && value <= 1868) {
             uvIndex = 4;
-        } else if(this->value >= 1869 && this->value <= 2241) {
+        } else if(value >= 1869 && value <= 2241) {
             uvIndex = 5;
-        } else if(this->value >= 2242 && this->value <= 2615) {
+        } else if(value >= 2242 && value <= 2615) {
             uvIndex = 6;
-        } else if(this->value >= 2616 && this->value <= 2988) {
+        } else if(value >= 2616 && value <= 2988) {
             uvIndex = 7;
-        } else if(this->value >= 2989 && this->value <= 3362) {
+        } else if(value >= 2989 && value <= 3362) {
             uvIndex = 8;
-        } else if(this->value >= 3363 && this->value <= 3735) {
+        } else if(value >= 3363 && value <= 3735) {
             uvIndex = 9;
-        } else if(this->value >= 3736 && this->value <= 4108) {
+        } else if(value >= 3736 && value <= 4108) {
             uvIndex = 10;
-        } else if(this->value > 4108) {
+        } else if(value > 4108) {
             uvIndex = 11;
         } else {
             uvIndex = 0;
         }
     } else if(readingMode == 3) {
-        if(this->value >= 0 && this->value <= 746) {
+        if(value >= 0 && value <= 746) {
             uvIndex = 0;
-        } else if(this->value >= 747 && this->value <= 1493) {
+        } else if(value >= 747 && value <= 1493) {
             uvIndex = 1;
-        } else if(this->value >= 1494 && this->value <= 2240) {
+        } else if(value >= 1494 && value <= 2240) {
             uvIndex = 2;
-        } else if(this->value >= 2241 && this->value <= 2987) {
+        } else if(value >= 2241 && value <= 2987) {
             uvIndex = 3;
-        } else if(this->value >= 2988 && this->value <= 3734) {
+        } else if(value >= 2988 && value <= 3734) {
             uvIndex = 4;
-        } else if(this->value >= 3735 && this->value <= 4482) {
+        } else if(value >= 3735 && value <= 4482) {
             uvIndex = 5;
-        } else if(this->value >= 4483 && this->value <= 5229) {
+        } else if(value >= 4483 && value <= 5229) {
             uvIndex = 6;
-        } else if(this->value >= 5230 && this->value <= 5976) {
+        } else if(value >= 5230 && value <= 5976) {
             uvIndex = 7;
-        } else if(this->value >= 5977 && this->value <= 6723) {
+        } else if(value >= 5977 && value <= 6723) {
             uvIndex = 8;
-        } else if(this->value >= 6724 && this->value <= 7469) {
+        } else if(value >= 6724 && value <= 7469) {
             uvIndex = 9;
-        } else if(this->value >= 7470 && this->value <= 8216) {
+        } else if(value >= 7470 && value <= 8216) {
             uvIndex = 10;
-        } else if(this->value > 8216) {
+        } else if(value > 8216) {
             uvIndex = 11;
         } else {
             uvIndex = 0;

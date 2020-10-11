@@ -14,16 +14,15 @@ public:
 	void printStatus();
 	
 	bool checkRiskLevel(uint8_t risk);
-    double getUV_Index();
+  uint8_t getUV_Index();
 
 private:
 	Adafruit_VEML6070 uv;
-    uint8_t readingMode;
-    double value;
-	double uvIndex;
-    unsigned long nextReading;
-
-    void convergeValue();
+	uint8_t readingMode;
+	double value;
+	uint8_t uvIndex;
+	unsigned long nextReading;
+	void convergeValue();
 };
 
 #endif
