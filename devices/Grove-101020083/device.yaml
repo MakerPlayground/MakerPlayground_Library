@@ -30,6 +30,7 @@ compatibility:
   - name: Swipe Left
   - name: Swipe Right
   - name: Move Forward
+  - name: Move Backward
   - name: Spin Clockwise
   - name: Spin Counter Clockwise
   - name: Waving

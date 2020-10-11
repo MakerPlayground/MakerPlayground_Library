@@ -29,6 +29,7 @@ private:
 	uint8_t data;
 	uint16_t result;
 	unsigned long end_time;
+	unsigned long next_reading = 0;
 };
 
 #endif

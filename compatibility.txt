@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 min_mp_version=0.6.2-6-g4a7512e5
+=======
+min_mp_version=0.6.2-5-g9c1be4e9
+>>>>>>> - Fix code bugs on LSM6DS3 and PAJ7620U2

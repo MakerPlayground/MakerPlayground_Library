@@ -144,50 +144,50 @@ void MP_PAJ7620U2::printStatus()
 
 bool MP_PAJ7620U2::isSwipeUp()
 {
-    return (state == DONE) && (result == GES_UP_FLAG);
+    return result == GES_UP_FLAG;
 }
 
 bool MP_PAJ7620U2::isSwipeDown()
 {
-    return (state == DONE) && (result == GES_DOWN_FLAG);
+    return result == GES_DOWN_FLAG;
 }
 
 bool MP_PAJ7620U2::isSwipeLeft()
 {
-    return (state == DONE) && (result == GES_LEFT_FLAG);
+    return result == GES_LEFT_FLAG;
 }
 
 bool MP_PAJ7620U2::isSwipeRight()
 {
-    return (state == DONE) && (result == GES_RIGHT_FLAG);
+    return result == GES_RIGHT_FLAG;
 }
 
 bool MP_PAJ7620U2::isMoveForward()
 {
-    return (state == DONE) && (result == GES_FORWARD_FLAG);
+    return result == GES_FORWARD_FLAG;
 }
 
 bool MP_PAJ7620U2::isMoveBackward()
 {
-    return (state == DONE) && (result == GES_BACKWARD_FLAG);
+    return result == GES_BACKWARD_FLAG;
 }
 
 bool MP_PAJ7620U2::isSpinClockwise()
 {
-    return (state == DONE) && (result == GES_CLOCKWISE_FLAG);
+    return result == GES_CLOCKWISE_FLAG;
 }
 
 bool MP_PAJ7620U2::isSpinCounterClockwise()
 {
-    return (state == DONE) && (result == GES_COUNT_CLOCKWISE_FLAG);
+    return result == GES_COUNT_CLOCKWISE_FLAG;
 }
 
 bool MP_PAJ7620U2::isWave()
 {
-    return (state == DONE) && (result == MY_GES_WAV_FLAG);
+    return result == MY_GES_WAV_FLAG;
 }
 
 bool MP_PAJ7620U2::isNotDetected()
 {
-    return (state == DONE) && (result == 0);
+    return result == 0;
 }

@@ -24,14 +24,14 @@ public:
 	double getGyro_Z();
 
 private:
-	LSM6DS3 imu;
-	double accel_x;
-	double accel_y;
-	double accel_z;
-	double accel_mag;
-	double gyro_x;
-	double gyro_y;
-	double gyro_z;	
+	LSM6DS3 imu = LSM6DS3(I2C_MODE, 0x6A);
+	double accel_x = 0.0;
+	double accel_y = 0.0;
+	double accel_z = 0.0;
+	double accel_mag = 0.0;
+	double gyro_x = 0.0;
+	double gyro_y = 0.0;
+	double gyro_z = 0.0;
 	unsigned long end_time;
 };
 

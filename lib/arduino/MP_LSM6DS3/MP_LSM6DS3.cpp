@@ -3,7 +3,6 @@
 #define GRAVITY 9.80665
 
 MP_LSM6DS3::MP_LSM6DS3()
-	:imu(LSM6DS3(I2C_MODE,0x6A))
 {
 }
 

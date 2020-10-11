@@ -70,16 +70,16 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_LSM6DS3
   library_dependency:
-    - SparkFun/SparkFun_LSM6DS3_Arduino_Library-V_1.0.1
+    - SeeedStudio/Accelerometer_And_Gyroscope_LSM6DS3-1.0.1
 - platform: ARDUINO_ESP8266
   classname: MP_LSM6DS3
   library_dependency:
-    - SparkFun/SparkFun_LSM6DS3_Arduino_Library-V_1.0.1
+    - SeeedStudio/Accelerometer_And_Gyroscope_LSM6DS3-1.0.1
 - platform: ARDUINO_ESP32
   classname: MP_LSM6DS3
   library_dependency:
-    - SparkFun/SparkFun_LSM6DS3_Arduino_Library-V_1.0.1
+    - SeeedStudio/Accelerometer_And_Gyroscope_LSM6DS3-1.0.1
 - platform: ARDUINO_ATSAMD51
   classname: MP_LSM6DS3
   library_dependency:
-    - SparkFun/SparkFun_LSM6DS3_Arduino_Library-V_1.0.1
+    - SeeedStudio/Accelerometer_And_Gyroscope_LSM6DS3-1.0.1
