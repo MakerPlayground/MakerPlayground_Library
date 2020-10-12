@@ -1,0 +1,37 @@
+id: Blynk_BLE-Virtual_Slider
+brand: Blynk
+model: Virtual Slider (BLE)
+url: https://docs.blynk.cc/#widgets-controllers-slider
+type: VIRTUAL
+cloud_consume: BLYNK_BLE
+width: 50
+height: 50
+pin_template: NO_PIN
+property:
+  - name: virtual pin
+    datatype: INTEGER_ENUM
+    controltype: DROPDOWN
+    value: 0
+    constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+compatibility:
+  - name: Virtual Slider
+    condition:
+      - name: Compare
+    value:
+      - name: Value
+        constraint:
+          min: -99999999.0
+          max: 99999999.0
+          unit: NOT_SPECIFIED
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: MP_BLYNK_VIRTUAL_SLIDER
+    library_dependency: []

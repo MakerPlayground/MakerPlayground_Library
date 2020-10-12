@@ -1,7 +1,7 @@
-id: Blynk-0004
+id: Blynk-Notification
 brand: Blynk
 model: Notification
-url: http://www.makerplayground.io/library/VD-0019
+url: https://docs.blynk.cc/#widgets-notifications-push-notifications
 type: VIRTUAL
 cloud_consume: BLYNK
 pin_template: NO_PIN

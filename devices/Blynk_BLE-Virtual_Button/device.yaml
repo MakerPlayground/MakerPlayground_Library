@@ -1,9 +1,9 @@
-id: Blynk-0001
+id: Blynk_BLE-Virtual_Button
 brand: Blynk
-model: Virtual Button
-url: ""
+model: Virtual Button (BLE)
+url: https://docs.blynk.cc/#widgets-controllers-button
 type: VIRTUAL
-cloud_consume: BLYNK
+cloud_consume: BLYNK_BLE
 width: 50
 height: 50
 pin_template: NO_PIN
@@ -28,16 +28,6 @@ compatibility:
       - name: Press and release
       - name: Not press
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BLYNK_VIRTUAL_BUTTON
-    library_dependency: []  
-  - platform: ARDUINO_ESP8266
-    classname: MP_BLYNK_VIRTUAL_BUTTON
-    library_dependency: []
   - platform: ARDUINO_ESP32
     classname: MP_BLYNK_VIRTUAL_BUTTON
     library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_BLYNK_VIRTUAL_BUTTON
-    library_dependency: []
-    

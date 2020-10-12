@@ -1,9 +1,9 @@
-id: Blynk-0003
+id: Blynk_BLE-Virtual_Gauge
 brand: Blynk
-model: Virtual Gauge
-url: ""
+model: Virtual Gauge (BLE)
+url: https://docs.blynk.cc/#widgets-displays-gauge
 type: VIRTUAL
-cloud_consume: BLYNK
+cloud_consume: BLYNK_BLE
 width: 50
 height: 50
 pin_template: NO_PIN
@@ -33,16 +33,6 @@ compatibility:
               max: 99999999.0
               unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BLYNK_VIRTUAL_GAUGE
-    library_dependency: []  
-  - platform: ARDUINO_ESP8266
-    classname: MP_BLYNK_VIRTUAL_GAUGE
-    library_dependency: []
   - platform: ARDUINO_ESP32
     classname: MP_BLYNK_VIRTUAL_GAUGE
     library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_BLYNK_VIRTUAL_GAUGE
-    library_dependency: []
-    
