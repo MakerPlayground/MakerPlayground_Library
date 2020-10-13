@@ -79,7 +79,7 @@ void MP_DF_MP3_PLAYER::printStatus()
     }
 }
 
-void MP_DF_MP3_PLAYER::playMP3(int index) 
+void MP_DF_MP3_PLAYER::playMP3ByIndex(int index)
 {
     myDFPlayer.play(index);
 }
@@ -126,7 +126,7 @@ void MP_DF_MP3_PLAYER::disableLoopAll()
 
 void MP_DF_MP3_PLAYER::setVolume(int volume)
 {
-    myDFPlayer.volume(volume);
+    myDFPlayer.volume(map(volume, 0, 100, 0, 30));
 }
 
 void MP_DF_MP3_PLAYER::volumeUp()
@@ -157,7 +157,7 @@ void MP_DF_MP3_PLAYER::setEQ(uint8_t EQ)
 
 int MP_DF_MP3_PLAYER::getVolume()
 {
-    return myDFPlayer.readVolume();
+    return map(myDFPlayer.readVolume(), 0, 30, 0, 100);
 }
 
 int MP_DF_MP3_PLAYER::getFileCount()
