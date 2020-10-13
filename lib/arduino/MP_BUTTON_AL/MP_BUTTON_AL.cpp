@@ -8,41 +8,48 @@ MP_BUTTON_AL::MP_BUTTON_AL(uint8_t pin)
 int MP_BUTTON_AL::init()
 {
 	pinMode(pin, INPUT_PULLUP);
-    checkpoint = millis();
+    checkpoint = 0;
 	return MP_ERR_OK;
 }
 
 void MP_BUTTON_AL::update(unsigned long current_time)
 {
-    if (state == NOTHING && isPress() && current_time >= 30 + checkpoint) {
+    if (state == RELEASED && (digitalRead(pin) == LOW) && current_time >= 30 + checkpoint) {
         state = PRESSED;
+        checkpoint = millis();
     }
-    if (state == PRESSED && isNotPress()) {
+    else if (state == PRESSED && (digitalRead(pin) == HIGH) && current_time >= 30 + checkpoint) {
         state = JUST_RELEASE;
         checkpoint = millis();
     }
-    if (state == JUST_RELEASE && current_time >= 150 + checkpoint) {
-        state = NOTHING;
+    else if (state == JUST_RELEASE && current_time >= 150 + checkpoint) {
+        state = RELEASED;
+        checkpoint = millis();
     }
 }
 
 void MP_BUTTON_AL::printStatus() 
 {
 	Serial.print(F("Button is "));
-	Serial.println((digitalRead(pin) == LOW) ? F("pressed"): F("not pressed"));
+	Serial.println(isPress() ? F("pressed"): F("not pressed"));
 }
 
 bool MP_BUTTON_AL::isPress()
 {
-    return (digitalRead(pin) == LOW);
+    return state == PRESSED; // (digitalRead(pin) == LOW);
 }
 
 bool MP_BUTTON_AL::isPressAndRelease()
 {
-    return state == JUST_RELEASE;
+    if (state == JUST_RELEASE) {
+        state = RELEASED;
+        checkpoint = millis();
+        return true;
+    }
+    return false;
 }
 
 bool MP_BUTTON_AL::isNotPress()
 {
-    return (digitalRead(pin) == HIGH);
+    return state == RELEASED; // (digitalRead(pin) == HIGH);
 }

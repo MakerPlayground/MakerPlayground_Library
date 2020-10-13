@@ -18,8 +18,8 @@ public:
 private:
 	uint8_t pin;
 	unsigned long checkpoint;
-	enum ButtonState { NOTHING, PRESSED, JUST_RELEASE };
-	ButtonState state = NOTHING;
+	enum ButtonState { RELEASED, PRESSED, JUST_RELEASE };
+	ButtonState state = RELEASED;
 };
 
 #endif
