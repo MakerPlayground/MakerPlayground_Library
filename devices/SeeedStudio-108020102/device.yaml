@@ -1,0 +1,73 @@
+id: SeeedStudio-108020102
+brand: SeeedStudio
+model: Grove - 16-Channel PWM Driver (PCA9685)
+url: https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-PCA9685.html
+type: MODULE
+width: 359
+height: 248
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 26
+        y: 108
+        ref_to: GND
+      - x: 26
+        y: 119.3
+        ref_to: VCC
+      - x: 26
+        y: 130.6
+        ref_to: SDA
+      - x: 26
+        y: 141.9
+        ref_to: SCL
+compatibility:
+  - name: Servo Controller
+    action:
+    - name: Move Servo
+      parameter:
+        - name: Channel
+          value: 1
+          constraint:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+        - name: To Angle
+          value: 90
+          constraint:
+            min: 0
+            max: 200
+            unit: DEGREE
+          datatype: INTEGER
+          controltype: SPINBOX
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_PCA9685
+    library_dependency:
+      - SeeedStudio/Seeed_PCA9685-0.0.1
+  - platform: ARDUINO_ESP8266
+    classname: MP_PCA9685
+    library_dependency:
+      - SeeedStudio/Seeed_PCA9685-0.0.1
+  - platform: ARDUINO_ESP32
+    classname: MP_PCA9685
+    library_dependency:
+      - SeeedStudio/Seeed_PCA9685-0.0.1
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_PCA9685
+    library_dependency:
+      - SeeedStudio/Seeed_PCA9685-0.0.1
