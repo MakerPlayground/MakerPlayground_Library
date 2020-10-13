@@ -1,32 +1,27 @@
-id: Generic-DHT11
-brand: Generic
-model: DHT11 Digital Temperature and Humidity Sensor
-url: https://www.arduinoall.com/product/653/dht11-digital-temperature-and-humidity-sensor-dht11-%E0%B9%81%E0%B8%9A%E0%B8%9A-pcb-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9F
+id: Grove-101020011
+brand: SeeedStudio
+model: Grove - Temperature & Humidity Sensor (DHT11)
+url: https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html
 type: MODULE
-width: 68
-height: 159
-need_breadboard: true
-breadboard_placement: ONE_SIDE
+width: 238
+height: 134
 pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
-  - name: VIN
-    type: WIRE
+  - name: Port
+    type: GROVE
     pins:
-      - x: 19.6
-        y: 158
-        ref_to: VCC
-  - name: OUT
-    type: WIRE
-    pins:
-      - x: 34
-        y: 158
-        ref_to: SIG
-  - name: GND
-    type: WIRE
-    pins:
-      - x: 48.4
-        y: 158
+      - x: 36
+        y: 51
         ref_to: GND
+      - x: 36
+        y: 62.3
+        ref_to: VCC
+      - x: 36
+        y: 73.6
+        ref_to: NC
+      - x: 36
+        y: 84.9
+        ref_to: SIG
 compatibility:
   - name: Temperature
     condition:
@@ -41,11 +36,11 @@ compatibility:
     condition:
       - name: Compare
     value:
-      - name: Humidity
-        constraint:
-          min: 20
-          max: 80
-          unit: PERCENT
+    - name: Humidity
+      constraint:
+        min: 20
+        max: 80
+        unit: PERCENT
 platforms:
   - platform: ARDUINO_AVR8
     classname: MP_DHT11
