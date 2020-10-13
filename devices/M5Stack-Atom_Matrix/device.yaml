@@ -1,0 +1,252 @@
+id: M5Stack-Atom_Matrix
+brand: M5Stack
+model: ATOM Matrix
+url: https://m5stack.com/products/atom-matrix-esp32-development-kit
+type: CONTROLLER
+pio_boardid: m5stick-c
+width: 136
+height: 136
+pin_template: ESP_32
+cloud_provide:
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - lamloei/ESP32_Microgear
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/Blynk-0.6.1
+- cloud_platform: BLYNK_BLE
+  classname: MP_BLYNK_ESP32_BLE
+  library_dependency:
+    - blynkkk/Blynk-0.6.1
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: REST
+  classname: MP_REST_ESP
+  library_dependency: []
+property: []
+connection_provide:
+  - name: GROVE
+    type: GROVE
+    pins:
+      - x: 85.01
+        y: 136
+        ref_to: GND
+      - x: 73.67
+        y: 136
+        ref_to: VCC
+      - x: 62.33
+        y: 136
+        ref_to: "26"
+      - x: 50.99
+        y: 136
+        ref_to: "32"
+
+  - name: 21
+    type: WIRE
+    pins:
+      - x: 0
+        y: 78.4
+        ref_to: "21"
+  - name: 25
+    type: WIRE
+    pins:
+      - x: 0
+        y: 92.8
+        ref_to: "25"
+  - name: 5V
+    type: WIRE
+    pins:
+      - x: 0
+        y: 107.2
+        ref_to: "VCC"
+        voltage_level: LEVEL_5
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 0
+        y: 121.6
+        ref_to: "GND"
+
+  - name: 3V3
+    type: WIRE
+    pins:
+      - x: 136
+        y: 64
+        ref_to: "VCC"
+  - name: 22
+    type: WIRE
+    pins:
+      - x: 136
+        y: 78.4
+        ref_to: "22"
+  - name: 19
+    type: WIRE
+    pins:
+      - x: 136
+        y: 92.8
+        ref_to: "19"
+  - name: 23
+    type: WIRE
+    pins:
+      - x: 136
+        y: 107.2
+        ref_to: "23"
+  - name: 33
+    type: WIRE
+    pins:
+      - x: 136
+        y: 121.6
+        ref_to: "33"
+integrated_devices:
+  - name: Integrated Button
+    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+    integrated_connection: 
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: "39"
+    compatibility:
+      - name: Button
+        condition:
+          - name: Press
+          - name: Press and release
+          - name: Not press
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_BUTTON_AL
+        library_dependency: []
+
+  - name: Integrated 6-DOF IMU
+    pin_template: GENERIC_I2C_DEVICE_3v3
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SDA
+        host_ref_to: "25"
+      - ref_to: SCL
+        host_ref_to: "21"
+    compatibility:
+    - name: Accelerometer
+      condition:
+      - name: Compare
+      value:
+      - name: Accel_X
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Y
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Z
+        constraint:
+          min: -100
+          max: 100
+          unit: METERPERSECSQUARE
+      - name: Accel_Magnitude
+        constraint:
+          min: 0
+          max: 100
+          unit: METERPERSECSQUARE
+      count: ""
+    - name: Gyroscope
+      condition:
+      - name: Compare
+      value:
+      - name: Gyro_X
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      - name: Gyro_Y
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      - name: Gyro_Z
+        constraint:
+          min: -200
+          max: 200
+          unit: RADIUSPERSEC
+      count: ""
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_IMU_M5Atom
+        library_dependency:
+          - M5Stack/M5Atom-custom
+          - FastLED/FastLED-3.3.3
+
+  - name: Integrated Dot Matrix
+    platforms:
+      - platform: ARDUINO_ESP32
+        classname: MP_RGB_DOTMATRIX_M5ATOM
+        library_dependency:
+          - M5Stack/M5Atom-custom
+          - FastLED/FastLED-3.3.3
+    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
+    integrated_connection:
+      - ref_to: GND
+        host_ref_to: GND
+      - ref_to: VCC
+        host_ref_to: VCC
+      - ref_to: SIG
+        host_ref_to: '27'
+    compatibility:
+      - name: RGB Dot Matrix
+        action:
+          - name: Show Bitmap
+            funcname: showBitmap
+            parameter:
+              - name: Data
+          - name: Show Text
+            parameter:
+              - name: Text
+              - name: Size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+              - name: Rotation
+                value: "0\u00B0"
+                constraint:
+                  - key: "0\u00B0"
+                    value: 0
+                  - key: "90\u00B0 CCW"
+                    value: 90
+                  - key: "180\u00B0 CCW"
+                    value: 180
+                  - key: "270\u00B0 CCW"
+                    value: 270
+              - name: Color (Red)
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+              - name: Color (Green)
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+              - name: Color (Blue)
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+          - name: Clear
+            funcname: clear
+
+platforms:
+  - platform: ARDUINO_ESP32
+    classname: ""
+    library_dependency: []
