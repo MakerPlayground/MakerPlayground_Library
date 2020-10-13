@@ -166,7 +166,8 @@
         "Digital (In)",
         "Digital (Out)",
         "PWM (Out)",
-        "MP3 Player"
+        "MP3 Player",
+        "FET"
       ]
     },
     "action_condition": {

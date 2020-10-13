@@ -1,0 +1,42 @@
+id: SeeedStudio-103020008
+brand: SeeedStudio
+model: Grove - MOSFET for Arduino
+url: https://www.seeedstudio.com/Grove-MOSFET.html
+type: MODULE
+width: 242
+height: 137
+pin_template: GENERIC_DIGITAL_ACTUATOR_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 18
+        y: 53
+        ref_to: GND
+      - x: 18
+        y: 64.3
+        ref_to: VCC
+      - x: 18
+        y: 75.6
+        ref_to: NC
+      - x: 18
+        y: 86.9
+        ref_to: SIG
+compatibility:
+  - name: FET
+    action:
+      - name: "On"
+      - name: "Off"
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_RELAY
+    library_dependency: []
+  - platform: ARDUINO_ESP8266
+    classname: MP_RELAY
+    library_dependency: []
+  - platform: ARDUINO_ESP32
+    classname: MP_RELAY
+    library_dependency: []
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_RELAY
+    library_dependency: []
