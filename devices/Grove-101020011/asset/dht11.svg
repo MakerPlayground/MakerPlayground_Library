@@ -169,8 +169,8 @@
 <text id="XMLID_137_" transform="matrix(1 0 0 1 15.8991 17.5082)" class="st22 st20 st21">J2</text>
 <text id="XMLID_145_" transform="matrix(1 0 0 1 28.2262 27.5111)" class="st19 st20 st23">GND</text>
 <text id="XMLID_143_" transform="matrix(1 0 0 1 28.2262 33.3236)" class="st19 st20 st23">VCC</text>
-<text id="XMLID_142_" transform="matrix(1 0 0 1 28.2262 39.1361)" class="st19 st20 st23">SDA</text>
-<text id="XMLID_139_" transform="matrix(1 0 0 1 28.2262 44.9486)" class="st19 st20 st23">SCL</text>
+<text id="XMLID_142_" transform="matrix(1 0 0 1 28.2262 39.1361)" class="st19 st20 st23">NC</text>
+<text id="XMLID_139_" transform="matrix(1 0 0 1 28.2262 44.9486)" class="st19 st20 st23">SIG</text>
 <g id="XMLID_135_">
 	<text transform="matrix(1 0 0 1 78.7901 13.8653)" class="st22 st20 st21">U1</text>
 </g>
