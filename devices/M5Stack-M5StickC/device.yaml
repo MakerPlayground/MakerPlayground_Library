@@ -43,6 +43,54 @@ connection_provide:
       - x: 59.495
         y: 266
         ref_to: "33"
+  - name: 5V In
+    type: WIRE
+    pins:
+      - x: 15
+        y: 0
+        ref_to: NF
+  - name: 3V3
+    type: WIRE
+    pins:
+      - x: 30
+        y: 0
+        ref_to: VCC
+  - name: BAT
+    type: WIRE
+    pins:
+      - x: 45
+        y: 0
+        ref_to: NF
+  - name: G0
+    type: WIRE
+    pins:
+      - x: 60
+        y: 0
+        ref_to: "0"
+  - name: G36
+    type: WIRE
+    pins:
+      - x: 75
+        y: 0
+        ref_to: "36"
+  - name: G26
+    type: WIRE
+    pins:
+      - x: 90
+        y: 0
+        ref_to: "26"
+  - name: 5V Out
+    type: WIRE
+    pins:
+      - x: 105
+        y: 0
+        ref_to: NF
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 120
+        y: 0
+        ref_to: GND
 integrated_devices:
   - name: Integrated TFT LCD
     pin_template: NO_PIN

@@ -54,6 +54,10 @@ platforms:
   classname: MP_ATH20
   library_dependency:
     - SeeedStudio/ATH20_Arduino_Library
+- platform: ARDUINO_ATSAMD21
+  classname: MP_ATH20
+  library_dependency:
+    - SeeedStudio/ATH20_Arduino_Library
 - platform: ARDUINO_ATSAMD51
   classname: MP_ATH20
   library_dependency:

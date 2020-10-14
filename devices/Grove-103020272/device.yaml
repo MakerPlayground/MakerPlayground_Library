@@ -109,6 +109,9 @@ platforms:
   - platform: ARDUINO_ESP32
     classname: ""
     library_dependency: []
+  - platform: ARDUINO_ATSAMD21
+    classname: ""
+    library_dependency: []
   - platform: ARDUINO_ATSAMD51
     classname: ""
     library_dependency: []

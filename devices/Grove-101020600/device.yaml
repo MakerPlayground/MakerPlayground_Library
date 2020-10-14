@@ -76,6 +76,10 @@ platforms:
     classname: MP_VEML6070_270kOhm
     library_dependency:
       - adafruit/Adafruit_VEML6070-1.0.4
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_VEML6070_270kOhm
+    library_dependency:
+      - adafruit/Adafruit_VEML6070-1.0.4
   - platform: ARDUINO_ATSAMD51
     classname: MP_VEML6070_270kOhm
     library_dependency:

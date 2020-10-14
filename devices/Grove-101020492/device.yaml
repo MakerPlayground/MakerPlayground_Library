@@ -80,6 +80,10 @@ platforms:
   classname: MP_BMM150
   library_dependency:
     - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_BMM150
+  library_dependency:
+    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
 - platform: ARDUINO_ATSAMD51
   classname: MP_BMM150
   library_dependency:

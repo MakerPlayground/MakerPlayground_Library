@@ -45,6 +45,9 @@ platforms:
   - platform: ARDUINO_ATSAMD51
     classname: MP_PERCENT_REFLECTANCE
     library_dependency: []
-  - platform: RASPBERRYPI
+  - platform: ARDUINO_ATSAMD21
     classname: MP_PERCENT_REFLECTANCE
     library_dependency: []
+  # - platform: RASPBERRYPI
+  #   classname: MP_PERCENT_REFLECTANCE
+  #   library_dependency: []

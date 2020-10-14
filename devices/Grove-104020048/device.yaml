@@ -65,6 +65,10 @@ platforms:
     classname: MP_CHAINABLELED_P9813
     library_dependency:
       - pjpmarques/ChainableLED-1.3
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_CHAINABLELED_P9813
+    library_dependency:
+      - pjpmarques/ChainableLED-1.3
   - platform: ARDUINO_ATSAMD51
     classname: MP_CHAINABLELED_P9813
     library_dependency:

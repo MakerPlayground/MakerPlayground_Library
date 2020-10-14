@@ -11,6 +11,7 @@
         "ARDUINO_AVR8",
         "ARDUINO_ESP8266",
         "ARDUINO_ESP32",
+        "ARDUINO_ATSAMD21",
         "ARDUINO_ATSAMD51",
         "RASPBERRYPI"
       ]
@@ -23,7 +24,8 @@
         "BLYNK",
         "NETPIE",
         "REST",
-        "AZURE"
+        "AZURE",
+        "BLYNK_BLE"
       ]
     },
     "pin_function": {
@@ -116,6 +118,7 @@
         "Dust",
         "Energy Meter",
         "Flame",
+        "Fingerprint",
         "Gesture",
         "GPIO Expander",
         "GPS",
@@ -166,8 +169,7 @@
         "Digital (In)",
         "Digital (Out)",
         "PWM (Out)",
-        "MP3 Player",
-        "FET"
+        "MP3 Player"
       ]
     },
     "action_condition": {
@@ -276,7 +278,17 @@
         "Set EQ",
         "Digital Out",
         "Is Digital High",
-        "Is Digital Low"
+        "Is Digital Low",
+        "Add Fingerprint",
+        "Validate Fingerprint",
+        "Delete Fingerprint",
+        "Delete All Fingerprints",
+        "Add Success",
+        "Add Fail",
+        "Validate Success",
+        "Validate Fail",
+        "Delete Success",
+        "Delete Fail"
       ]
     },
     "values": {

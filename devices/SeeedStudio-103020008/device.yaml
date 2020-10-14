@@ -23,7 +23,7 @@ connection_consume:
         y: 86.9
         ref_to: SIG
 compatibility:
-  - name: FET
+  - name: Load Driver
     action:
       - name: "On"
       - name: "Off"

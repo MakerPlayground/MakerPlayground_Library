@@ -47,3 +47,11 @@ platforms:
     classname: MP_SERVO
     library_dependency:
       - RoboticsBrno/ServoESP32-1.0.3
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_SERVO
+    library_dependency:
+      - arduino-libraries/Servo-1.1.7
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_SERVO
+    library_dependency:
+      - arduino-libraries/Servo-1.1.7

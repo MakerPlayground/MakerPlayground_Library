@@ -48,6 +48,10 @@ platforms:
   classname: MP_PAJ7620U2
   library_dependency:
   - SeeedStudio/Gesture_PAJ7620-1.0.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PAJ7620U2
+  library_dependency:
+  - SeeedStudio/Gesture_PAJ7620-1.0.0
 - platform: ARDUINO_ATSAMD51
   classname: MP_PAJ7620U2
   library_dependency:
