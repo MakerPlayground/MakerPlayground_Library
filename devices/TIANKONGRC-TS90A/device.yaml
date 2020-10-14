@@ -50,8 +50,8 @@ platforms:
   - platform: ARDUINO_ATSAMD21
     classname: MP_SERVO
     library_dependency:
-      - arduino-libraries/Servo-1.1.7
+      - PaintYourDragon/Servo-master
   - platform: ARDUINO_ATSAMD51
     classname: MP_SERVO
     library_dependency:
-      - arduino-libraries/Servo-1.1.7
+      - PaintYourDragon/Servo-master
