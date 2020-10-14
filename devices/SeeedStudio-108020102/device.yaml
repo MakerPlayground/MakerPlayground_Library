@@ -67,6 +67,10 @@ platforms:
     classname: MP_PCA9685
     library_dependency:
       - SeeedStudio/Seeed_PCA9685-0.0.1
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_PCA9685
+    library_dependency:
+      - SeeedStudio/Seeed_PCA9685-0.0.1
   - platform: ARDUINO_ATSAMD51
     classname: MP_PCA9685
     library_dependency:
