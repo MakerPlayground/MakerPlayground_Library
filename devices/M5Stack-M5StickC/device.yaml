@@ -91,6 +91,41 @@ connection_provide:
       - x: 120
         y: 0
         ref_to: GND
+  - name: HAT
+    type: M5HAT
+    pins:
+      - x: 120
+        y: 0
+        ref_to: GND
+      
+      - x: 105
+        y: 0
+        ref_to: NF
+      
+      - x: 90
+        y: 0
+        ref_to: "26"
+        
+      - x: 75
+        y: 0
+        ref_to: "36"
+        
+      - x: 60
+        y: 0
+        ref_to: "0"
+        
+      - x: 45
+        y: 0
+        ref_to: NF
+        
+      - x: 30
+        y: 0
+        ref_to: VCC
+        
+      - x: 15
+        y: 0
+        ref_to: NF
+      
 integrated_devices:
   - name: Integrated TFT LCD
     pin_template: NO_PIN
