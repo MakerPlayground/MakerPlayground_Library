@@ -1,0 +1,54 @@
+id: Grove-316010005
+brand: SeeedStudio
+model: Grove - Servo Motor
+url: https://www.seeedstudio.com/Grove-Servo-p-1241.html
+type: MODULE
+width: 278
+height: 184
+pin_template: GENERIC_PWM_ACTUATOR_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 0
+        y: 139
+        ref_to: GND
+      - x: 0
+        y: 153
+        ref_to: VCC  
+      - x: 0
+        y: 153
+        ref_to: NC
+      - x: 0
+        y: 167
+        ref_to: SIG
+compatibility:
+- name: Servo
+  action:
+  - name: Move To
+    parameter:
+    - name: Degree
+      constraint:
+        min: 0
+        max: 180
+        unit: DEGREE
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_SERVO
+  library_dependency:
+  - arduino-libraries/Servo-1.1.3
+- platform: ARDUINO_ESP8266
+  classname: MP_SERVO
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_SERVO
+  library_dependency:
+  - RoboticsBrno/ServoESP32-1.0.3
+- platform: ARDUINO_ATSAMD21
+  classname: MP_SERVO
+  library_dependency:
+  - arduino-libraries/Servo-1.1.7
+- platform: ARDUINO_ATSAMD51
+  classname: MP_SERVO
+  library_dependency:
+  - arduino-libraries/Servo-1.1.7
