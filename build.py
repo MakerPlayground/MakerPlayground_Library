@@ -39,13 +39,15 @@ current_version = {'version': version_string, 'min_mp_version': compatibility['m
 # generate library archive (ignore empty subdirectory)
 print('Generating library.zip...')
 dir_to_zip = ['devices', 'lib', 'lib_ext', 'pin_templates']
+ignore_ext = ['.svg', '.ai']
 with zipfile.ZipFile(version_string + '.zip', 'w', zipfile.ZIP_DEFLATED) as releaseZip:
     releaseZip.writestr(os.path.join('library', 'version.json'), json.dumps(current_version))
     for dir_name in dir_to_zip:
         for root, dirs, files in os.walk(dir_name):
             for filename in files:
-                path = os.path.join(root, filename)
-                releaseZip.write(path, os.path.join('library', path))
+                if os.path.splitext(filename)[1] not in ignore_ext:
+                    path = os.path.join(root, filename)
+                    releaseZip.write(path, os.path.join('library', path))
 
 # calculate and append hash
 hasher = hashlib.sha256()
