@@ -49,3 +49,8 @@ platforms:
     library_dependency:
       - plerup/espsoftwareserial-3.4.2
       - mikalhart/TinyGPSPlus-1.0.2
+  - platform: ARDUINO_ESP32
+    classname: MP_TINY_GPS
+    library_dependency:
+      - plerup/espsoftwareserial-6.8.5
+      - mikalhart/TinyGPSPlus-1.0.2

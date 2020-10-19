@@ -1,7 +1,7 @@
 #include "MP_TINY_GPS.h"
 
 MP_TINY_GPS::MP_TINY_GPS(uint8_t gps_tx, uint8_t gps_rx, int baud)
-	:ss(SoftwareSerial(gps_tx, gps_rx))
+	:ss(gps_tx, gps_rx)
 	,GPSBaud(baud)
 {
 }
@@ -23,7 +23,7 @@ void MP_TINY_GPS::update(unsigned long current_time)
 	// }
 	// isGPSDetected = !(gps.charsProcessed() < 10);
 	while(ss.available() > 0) {
-		gps.encode(ss.read());
+	    gps.encode(ss.read());
 	}
 	if (gps.location.isValid() && gps.location.isUpdated()) {
 		lat = gps.location.lat();
