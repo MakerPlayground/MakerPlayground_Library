@@ -271,7 +271,7 @@
           value: 1
           constraint:
             min: 1
-            max: 20
+            max: 32
             unit: NOT_SPECIFIED
           datatype: INTEGER
           controltype: SPINBOX
@@ -343,6 +343,98 @@
               value: 17
           datatype: STRING_INT_ENUM
           controltype: DROPDOWN
+    - name: Show Image
+      funcname: showImage
+      parameter:
+        - name: Image
+          value: ''
+          constraint: []
+          datatype: IMAGE
+          controltype: IMAGE_SELECTOR
+    - name: Draw Rectangle
+      funcname: drawRectangle
+      parameter:
+        - name: Left
+          value: 0
+          constraint:
+            min: 0
+            max: 1
+            unit: NOT_SPECIFIED
+          datatype: DOUBLE
+          controltype: SPINBOX
+        - name: Top
+          value: 0
+          constraint:
+            min: 0
+            max: 1
+            unit: NOT_SPECIFIED
+          datatype: DOUBLE
+          controltype: SPINBOX
+        - name: Right
+          value: 0
+          constraint:
+            min: 0
+            max: 1
+            unit: NOT_SPECIFIED
+          datatype: DOUBLE
+          controltype: SPINBOX
+        - name: Bottom
+          value: 0
+          constraint:
+            min: 0
+            max: 1
+            unit: NOT_SPECIFIED
+          datatype: DOUBLE
+          controltype: SPINBOX
+        - name: Color
+          value: White
+          constraint:
+            - key: Blue
+              value: 0
+            - key: Cyan
+              value: 1
+            - key: Dark Cyan
+              value: 2
+            - key: Dark Green
+              value: 3
+            - key: Dark Grey
+              value: 4
+            - key: Green
+              value: 5
+            - key: Green Yellow
+              value: 6
+            - key: Light Grey
+              value: 7
+            - key: Magenta
+              value: 8
+            - key: Maroon
+              value: 9
+            - key: Navy
+              value: 10
+            - key: Olive
+              value: 11
+            - key: Orange
+              value: 12
+            - key: Pink
+              value: 13
+            - key: Purple
+              value: 14
+            - key: White
+              value: 15
+            - key: Red
+              value: 16
+            - key: Yellow
+              value: 17
+          datatype: STRING_INT_ENUM
+          controltype: DROPDOWN
+        - name: Thickness
+          value: 1
+          constraint:
+            min: 0
+            max: 10
+            unit: NOT_SPECIFIED
+          datatype: DOUBLE
+          controltype: SPINBOX
     - name: Clear Row
       funcname: clearRow
       parameter:
