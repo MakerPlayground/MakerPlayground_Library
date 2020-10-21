@@ -1,0 +1,57 @@
+id: SeeedStudio-101020030
+brand: SeeedStudio
+model: Grove - Digital Light Sensor - TSL2561
+url: https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html
+type: MODULE
+width: 136
+height: 114
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+    - name: Port
+      type: GROVE
+      pins:
+        - x: 53.5
+          y: 20
+          pin_function: GND
+        - x: 63.5
+          y: 20
+          pin_function: VCC
+        - x: 76.5
+          y: 20
+          pin_function: SDA
+        - x: 87.5
+          y: 20
+          pin_function: SCL
+compatibility:
+  - name: Light
+    condition:
+      - name: Compare
+    value:
+      - name: Intensity
+        constraint:
+          min: 0.1
+          max: 40000
+          unit: LUX
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TSL2561
+    library_dependency:
+      - SeeedStudio/Grove_Digital_Light_Sensor-1.0.0
+  - platform: ARDUINO_ESP8266
+    classname: MP_TSL2561
+    library_dependency:
+      - SeeedStudio/Grove_Digital_Light_Sensor-1.0.0
+  - platform: ARDUINO_ESP32
+    classname: MP_TSL2561
+    library_dependency:
+      - SeeedStudio/Grove_Digital_Light_Sensor-1.0.0
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_TSL2561
+    library_dependency:
+      - SeeedStudio/Grove_Digital_Light_Sensor-1.0.0
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_TSL2561
+    library_dependency:
+      - SeeedStudio/Grove_Digital_Light_Sensor-1.0.0
