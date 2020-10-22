@@ -134,7 +134,7 @@ void MP_IKB_1::moveServo(uint8_t channel, int degree)
 {
     if (channel < 1 || channel > 6) { return; }
     Wire.beginTransmission(IKB1_I2C_ADDR);
-    Wire.write((byte) (0x40 | (1 << (channel-1))));
+    Wire.write((byte) (0x40 | (1 << channel)));
     Wire.write((uint8_t) degree);
     Wire.endTransmission();
 }
@@ -143,7 +143,7 @@ void MP_IKB_1::freeServo(uint8_t channel)
 {
     if (channel < 1 || channel > 6) { return; }
     Wire.beginTransmission(IKB1_I2C_ADDR);
-    Wire.write((byte) (0x40 | (1 << (channel-1))));
+    Wire.write((byte) (0x40 | (1 << channel)));
     Wire.write((uint8_t) -1);
     Wire.endTransmission();
 }

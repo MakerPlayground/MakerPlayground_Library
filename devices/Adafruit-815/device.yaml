@@ -1,27 +1,38 @@
-id: SeeedStudio-108020102
-brand: SeeedStudio
-model: Grove - 16-Channel PWM Driver (PCA9685)
-url: https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-PCA9685.html
+id: Adafruit-815
+brand: Adafruit
+model: 16-Channel 12-bit PWM/Servo Driver
+url: https://www.adafruit.com/product/815
 type: MODULE
-width: 359
-height: 248
+width: 144
+height: 352
+need_breadboard: true
+breadboard_placement: ONE_SIDE
 pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
-  - name: Port
-    type: GROVE
+  - name: SCL
+    type: WIRE
     pins:
-      - x: 26
-        y: 108
-        ref_to: GND
-      - x: 26
-        y: 119.3
-        ref_to: VCC
-      - x: 26
-        y: 130.6
-        ref_to: SDA
-      - x: 26
-        y: 141.9
+      - x: 64
+        y: 342
         ref_to: SCL
+  - name: SDA
+    type: WIRE
+    pins:
+      - x: 78.4
+        y: 342
+        ref_to: SDA
+  - name: VIN
+    type: WIRE
+    pins:
+      - x: 92.8
+        y: 342
+        ref_to: VCC
+  - name: GND
+    type: WIRE
+    pins:
+      - x: 35.2
+        y: 342
+        ref_to: GND
 compatibility:
   - name: Servo Controller
     action:
@@ -56,22 +67,22 @@ compatibility:
           controltype: SPINBOX
 platforms:
   - platform: ARDUINO_AVR8
-    classname: MP_PCA9685
+    classname: MP_SERVO_PCA9685
     library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
   - platform: ARDUINO_ESP8266
-    classname: MP_PCA9685
+    classname: MP_SERVO_PCA9685
     library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
   - platform: ARDUINO_ESP32
-    classname: MP_PCA9685
+    classname: MP_SERVO_PCA9685
     library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
   - platform: ARDUINO_ATSAMD21
-    classname: MP_PCA9685
+    classname: MP_SERVO_PCA9685
     library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
   - platform: ARDUINO_ATSAMD51
-    classname: MP_PCA9685
+    classname: MP_SERVO_PCA9685
     library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0

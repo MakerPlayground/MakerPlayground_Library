@@ -281,12 +281,12 @@ compatibility:
         parameter:
           - name: Channel
             constraint:
+              - 0
               - 1
               - 2
               - 3
               - 4
               - 5
-              - 6
           - name: To Angle
             constraint:
               min: 0
@@ -295,14 +295,14 @@ compatibility:
       - name: Free Servo
         parameter:
           - name: Channel
-            value: 1
+            value: 0
             constraint:
+              - 0
               - 1
               - 2
               - 3
               - 4
               - 5
-              - 6
   - name: DC Motor Driver
     description: An external module to drive the motor with enough current.
     action:

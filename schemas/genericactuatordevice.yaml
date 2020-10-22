@@ -498,8 +498,9 @@
       funcname: moveServo
       parameter:
         - name: Channel
-          value: 1
+          value: 0
           constraint:
+            - 0
             - 1
             - 2
             - 3
@@ -510,13 +511,18 @@
             - 8
             - 9
             - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
           datatype: INTEGER_ENUM
           controltype: DROPDOWN
         - name: To Angle
           value: 90
           constraint:
             min: 0
-            max: 200
+            max: 180
             unit: DEGREE
           datatype: INTEGER
           controltype: SPINBOX
@@ -524,8 +530,9 @@
       funcname: freeServo
       parameter:
         - name: Channel
-          value: 1
+          value: 0
           constraint:
+            - 0
             - 1
             - 2
             - 3
@@ -536,6 +543,11 @@
             - 8
             - 9
             - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
           datatype: INTEGER_ENUM
           controltype: DROPDOWN
 - name: DC Motor Driver
