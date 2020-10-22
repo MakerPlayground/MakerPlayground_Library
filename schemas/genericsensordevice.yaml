@@ -704,3 +704,25 @@
         min: 0
         max: 254
         unit: NOT_SPECIFIED
+- name: NFC
+  description: NFC reader and writer
+  condition:
+    - name: Check Tag UID
+      funcname: checkTagUid
+      parameter:
+        - name: UID
+          value: ""
+          constraint: []
+          datatype: STRING
+          controltype: TEXTBOX
+    - name: Found Tag
+      funcname: foundTag
+    - name: Not Found Tag
+      funcname: notFoundTag
+  value:
+    - name: UID
+      dataType: STRING
+      constraint: []
+    - name: Tag Type
+      dataType: STRING
+      constraint: []

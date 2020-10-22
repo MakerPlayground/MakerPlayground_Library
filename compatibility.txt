@@ -1,1 +1,1 @@
-min_mp_version=0.6.2-18-g6d1aaa70
+min_mp_version=0.6.2-27-gecd15b3a

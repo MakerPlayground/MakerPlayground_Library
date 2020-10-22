@@ -128,6 +128,7 @@
         "Light",
         "LPG",
         "Magnetometer",
+        "NFC",
         "POT",
         "Presence",
         "Pressuremeter",
@@ -288,7 +289,10 @@
         "Validate Success",
         "Validate Fail",
         "Delete Success",
-        "Delete Fail"
+        "Delete Fail",
+        "Check Tag UID",
+        "Found Tag",
+        "Not Found Tag"
       ]
     },
     "values": {
@@ -386,7 +390,9 @@
         "A12 Percent",
         "A13 Percent",
         "A14 Percent",
-        "A15 Percent"
+        "A15 Percent",
+        "UID",
+        "Tag Type"
       ]
     },
     "units": {
