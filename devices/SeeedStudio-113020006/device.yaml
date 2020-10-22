@@ -1,0 +1,68 @@
+id: SeeedStudio-113020006
+brand: SeeedStudio
+model: Grove - NFC (UART Interface)
+url: https://www.seeedstudio.com/Grove-NFC.html
+type: MODULE
+width: 668
+height: 344
+pin_template: GENERIC_SOFTSERIAL_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 16
+        y: 176
+        ref_to: GND
+      - x: 16
+        y: 187.3
+        ref_to: VCC
+      - x: 16
+        y: 198.6
+        ref_to: RX
+      - x: 16
+        y: 209.9
+        ref_to: TX
+compatibility:
+  - name: NFC
+    description: NFC reader and writer
+    condition:
+      - name: Check Tag UID
+        funcname: checkTagUid
+        parameter:
+          - name: UID
+            value: ""
+            constraint: []
+            datatype: STRING
+            controltype: TEXTBOX
+      - name: Found Tag
+        funcname: foundTag
+      - name: Not Found Tag
+        funcname: notFoundTag
+    value:
+      - name: UID
+        dataType: STRING
+        constraint: []
+      - name: Tag Type
+        dataType: STRING
+        constraint: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_PN532_SoftSerial
+    library_dependency:
+      - SeeedStudio/Seeed_Arduino_NFC-1.0.1
+  - platform: ARDUINO_ESP8266
+    classname: MP_PN532_SoftSerial
+    library_dependency:
+      - SeeedStudio/Seeed_Arduino_NFC-1.0.1
+  - platform: ARDUINO_ESP32
+    classname: MP_PN532_SoftSerial
+    library_dependency:
+      - SeeedStudio/Seeed_Arduino_NFC-1.0.1
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_PN532_SoftSerial
+    library_dependency:
+      - SeeedStudio/Seeed_Arduino_NFC-1.0.1
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_PN532_SoftSerial
+    library_dependency:
+      - SeeedStudio/Seeed_Arduino_NFC-1.0.1
