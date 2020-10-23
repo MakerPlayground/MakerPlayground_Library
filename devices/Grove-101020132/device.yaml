@@ -1,0 +1,52 @@
+---
+id: Grove-101020132
+brand: SeeedStudio
+model: Grove - Light Sensor v1.2 - LS06-S phototransistor
+url: https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html
+type: MODULE
+pin_template: GENERIC_ANALOG_SENSOR_3v3_5
+width: 112
+height: 134
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 19
+        y: 49
+        ref_to: GND
+      - x: 19
+        y: 60.3
+        ref_to: VCC
+      - x: 19
+        y: 71.6
+        ref_to: NC
+      - x: 19
+        y: 82.9
+        ref_to: SIG
+compatibility:
+- name: Light
+  condition:
+  - name: Compare
+    parameter: []
+  value:
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
