@@ -1,7 +1,7 @@
 id: Cytron-maker-uno
 brand: Cytron
 model: Maker UNO R1
-url: https://th.cytron.io/p-maker-uno-simplifying-arduino-for-education?r=1
+url: https://cytron.io/p-maker-uno-simplifying-arduino-for-education
 type: CONTROLLER
 pio_boardid: uno
 width: 397

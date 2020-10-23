@@ -1,0 +1,67 @@
+id: Cytron-SN-HPM2.5-MOD
+brand: Cytron
+model: Honeywell PM2.5 Particle Sensor Module
+url: https://cytron.io/p-honeywell-pm2.5-particle-sensor-module
+type: MODULE
+width: 694
+height: 370
+pin_template: GENERIC_SOFTSERIAL_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 20
+        y: 289
+        ref_to: GND
+      - x: 20
+        y: 300.3
+        ref_to: VCC
+      - x: 20
+        y: 311.6
+        ref_to: RX
+      - x: 20
+        y: 322.9
+        ref_to: TX
+compatibility:
+  - name: Dust
+    condition:
+      - name: Compare
+        parameter: []
+      - name: Data is valid
+        parameter: []
+      - name: Data is not valid
+        parameter: []
+    value:
+      - name: Atmospheric PM 2.5
+        constraint:
+          min: 0
+          max: 1000
+          unit: MICROGRAMS_PER_CUBIC_METER
+      - name: Atmospheric PM 10
+        constraint:
+          min: 0
+          max: 1000
+          unit: MICROGRAMS_PER_CUBIC_METER
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_HPM32322550_SOFTSERIAL
+    library_dependency:
+      - CytronTechnologies/pm25-master
+  - platform: ARDUINO_ESP8266
+    classname: MP_HPM32322550_SOFTSERIAL
+    library_dependency:
+      - CytronTechnologies/pm25-master
+      - plerup/espsoftwareserial-3.4.2
+  - platform: ARDUINO_ESP32
+    classname: MP_HPM32322550_SOFTSERIAL
+    library_dependency:
+      - CytronTechnologies/pm25-master
+      - plerup/espsoftwareserial-6.8.5
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_HPM32322550_SOFTSERIAL
+    library_dependency:
+      - CytronTechnologies/pm25-master
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_HPM32322550_SOFTSERIAL
+    library_dependency:
+      - CytronTechnologies/pm25-master

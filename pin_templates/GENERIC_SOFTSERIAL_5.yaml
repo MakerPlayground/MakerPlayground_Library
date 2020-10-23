@@ -1,0 +1,20 @@
+pins:
+  - pin_name: VCC
+    pin_function: VCC
+    voltage_level: LEVEL_5
+
+  - pin_name: GND
+    pin_function: GND
+    voltage_level: LEVEL_5
+
+  - pin_name: TX
+    pin_function: SW_SERIAL_TX
+    voltage_level: LEVEL_5
+
+  - pin_name: RX
+    pin_function: SW_SERIAL_RX
+    voltage_level: LEVEL_5
+    
+  - pin_name: NC
+    pin_function: NO_FUNCTION
+    voltage_level: LEVEL_5
