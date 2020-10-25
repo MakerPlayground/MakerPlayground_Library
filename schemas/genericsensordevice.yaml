@@ -262,8 +262,48 @@
               value: 7
             - key: Yellow
               value: 8
+            - key: Black
+              value: 9
           datatype: STRING_INT_ENUM
           controltype: DROPDOWN
+  value:
+    - name: Red
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Green
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Blue
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Hue
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 360
+        unit: NOT_SPECIFIED
+    - name: Saturation
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Value
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+      
 - name: Pressuremeter
   description: Pressuremeter is a sensor to measure pressure. \nRelated project:\n\tAtmosphere
     detector

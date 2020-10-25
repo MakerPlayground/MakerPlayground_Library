@@ -26,17 +26,18 @@ void MP_TCS34725::update(unsigned long current_time)
 		tcs.getRawData(&red, &green, &blue, &clear);
 		tcs.setInterrupt(true);  // turn off LED
 
-		// Figure out some basic hex code for visualization
-		float r, g, b;
-		r = ((float) red) / clear; 
-		g = ((float) green) / clear; 
-		b = ((float) blue) / clear;
+		double r, g, b;
+		r = 255.0 * red / clear; 
+		g = 255.0 * green / clear; 
+		b = 255.0 * blue / clear;
 
-		RGBtoHSV(r, g, b, &h, &s, &v);
+		rgb2hsv(r, g, b, &h, &s, &v);
 
-		this->red = r * 256;
-		this->green = g * 256;
-		this->blue = b * 256;
+		red = (uint16_t) r;
+		green = (uint16_t) g;
+		blue = (uint16_t) b;
+
+		color_code = hsv2ColorCode(h, s, v);
 
 		end_time = current_time;
 	}
@@ -69,62 +70,107 @@ void MP_TCS34725::printStatus()
 	Serial.println(this->v);
 }
 
-int MP_TCS34725::isColor(char color[])
+bool MP_TCS34725::isColor(uint8_t color)
 {
-	if (strcmp(color, "Red") == 0) {
-		return (h < 60 || h > 300);
-	} else if (strcmp(color, "Green") == 0) {
-		return (h < 180 && h > 60);
-	} else if (strcmp(color, "Blue") == 0) {
-		return (h < 320 && h > 180);
-	} else {
-		return 0;
-	}
+	return color == color_code;
 }
 
-float MAX (float r, float g, float b)
-{
-	float temp = r;
-	if (g > temp)
-		temp = g;
-	if (b > temp)
-		temp = b;
-	return temp;
+double MP_TCS34725::getRed() {
+	return red;
 }
 
-float MIN (float r, float g, float b)
-{
-	float temp = r;
-	if (g < temp)
-		temp = g;
-	if (b < temp)
-		temp = b;
-	return temp;
+double MP_TCS34725::getGreen() {
+	return green;
 }
 
-void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v )
+double MP_TCS34725::getBlue() {
+	return blue;
+}
+
+double MP_TCS34725::getHue() {
+	return h;
+}
+
+double MP_TCS34725::getSaturation() {
+	return s;
+}
+
+double MP_TCS34725::getValue() {
+	return v;
+}
+
+// range of r, g, b is [0, 255]
+// range of h is [0, 360]
+// range of s is [0, 255]
+// range of v is [0, 255]
+void MP_TCS34725::rgb2hsv(double r, double g, double b, double *h, double *s, double *v )
 {
 	float min, max, delta;
-	min = MIN( r, g, b );
-	max = MAX( r, g, b );
-	*v = max;       // v
+
+	min = r < g ? r : g;
+	min = min  < b ? min  : b;
+
+	max = r > g ? r : g;
+	max = max  > b ? max  : b;
+
+	*v = max;
 	delta = max - min;
 
-	if( max != 0 )
-		*s = delta / max;   // s
-	else {
-		// r = g = b = 0    // s = 0, v is undefined
+	if (delta < 0.00001)
+	{
 		*s = 0;
-		*h = -1;
+		*h = 0; // undefined, maybe nan?
 		return;
 	}
-	if( r == max )
-		*h = ( g - b ) / delta;   // between yellow & magenta
-	else if( g == max )
-		*h = 2 + ( b - r ) / delta; // between cyan & yellow
+	if( max > 0.0 ) { // NOTE: if Max is == 0, this divide would cause a crash
+		*s = (delta / max) * 255.0;
+	} 
+	else {
+		// if max is 0, then r = g = b = 0
+		// s = 0, h is undefined
+		*s = 0.0;
+		*h = NAN;                      // its now undefined
+		return;
+	}
+	if( r >= max )                         // > is bogus, just keeps compilor happy
+		*h = ( g - b ) / delta;        // between yellow & magenta
+	else if( g >= max )
+		*h = 2.0 + ( b - r ) / delta;  // between cyan & yellow
 	else
-		*h = 4 + ( r - g ) / delta; // between magenta & cyan
-	*h *= 60;       // degrees
-	if( *h < 0 )
-		*h += 360;
+		*h = 4.0 + ( r - g ) / delta;  // between magenta & cyan
+
+	*h *= 60.0;                        // degrees
+
+	if( *h < 0.0 )
+		*h += 360.0;
+
+	return;
+}
+
+uint8_t MP_TCS34725::hsv2ColorCode(double h, double s, double v) {
+	uint8_t color_code;
+	if(v>250) {
+		color_code = 7;
+	} else if (v < 5) {
+		color_code = 9;
+	} else if(h>=330 || h<15) {
+		color_code = 0;
+	} else if(h>=15 && h<25) {
+		color_code = 5;
+	} else if(h>=25 && h<75) {
+		color_code = 8;
+	} else if(h>=75 && h<165) {
+		color_code = 1;
+	} else if(h>=165 && h<220) {
+		color_code = 3;
+	} else if(h>=220 && h<235) {
+		color_code = 2;
+	} else if(h>=235 && h<270) {
+		color_code = 6;
+	} else if(h>=270 && h<330) {
+		color_code = 4;
+	} else {
+		color_code = -1;
+	}
+	return color_code;
 }

@@ -14,6 +14,13 @@ public:
 
 	bool isColor(uint8_t color);
 
+	double getRed();
+	double getGreen();
+	double getBlue();
+	double getHue();
+	double getSaturation();
+	double getValue();
+
 private:
 	uint8_t s0;
 	uint8_t s1;
@@ -25,11 +32,13 @@ private:
 	int red = 0;
 	int green = 0;
 	int blue = 0;
-	
+	double hsv[3];
+
 	unsigned long next_reading = 0;
 
 	int8_t color_code = -1;
 	String current_color;
+	int rgb2hsv(int r,int g,int b,double out[]);
 };
 
 #endif

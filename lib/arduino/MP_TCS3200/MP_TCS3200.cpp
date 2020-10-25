@@ -47,16 +47,21 @@ void MP_TCS3200::update(unsigned long current_time)
 		green = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
 		digitalWrite(LED,0);
 
-		double hsv[3] ;
-		rgb2hsv(255-red,255-green,255-blue,hsv);
-		hsv[1]*=100;
-		hsv[2]*=100;
-		hsv[2]/=255;
+		red = 255-red;
+		green = 255-green;
+		blue = 255-blue;
 
-		if(hsv[2]>97&&hsv[1]<5)
+		rgb2hsv(red, green, blue, hsv);
+
+		if(hsv[2]>250)
 		{
 			current_color = "White";
 			color_code = 7;
+		}
+		else if(hsv[2]<5)
+		{
+			current_color = "Black";
+			color_code = 9;
 		}
 		else if((hsv[0]>=330 || hsv[0]<15))
 		{
@@ -125,7 +130,31 @@ bool MP_TCS3200::isColor(uint8_t color)
 	return color_code == color;
 }
 
-int rgb2hsv(int r,int g,int b,double out[])
+double MP_TCS3200::getRed() {
+	return red;
+}
+
+double MP_TCS3200::getGreen() {
+	return green;
+}
+
+double MP_TCS3200::getBlue() {
+	return blue;
+}
+
+double MP_TCS3200::getHue() {
+	return hsv[0];
+}
+
+double MP_TCS3200::getSaturation() {
+	return hsv[1];
+}
+
+double MP_TCS3200::getValue() {
+	return hsv[2];
+}
+
+int MP_TCS3200::rgb2hsv(int r,int g,int b,double out[])
 {
 	double min, max, delta;
 
@@ -145,7 +174,7 @@ int rgb2hsv(int r,int g,int b,double out[])
 		return 0;
 	}
 	if( max > 0.0 ) { // NOTE: if Max is == 0, this divide would cause a crash
-		out[1] = (delta / max);            // s
+		out[1] = (delta / max) * 255.0;            // s
 	} 
 	else {
 		// if max is 0, then r = g = b = 0

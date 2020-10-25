@@ -1,0 +1,104 @@
+id: SeeedStudio-101020341
+brand: SeeedStudio
+model: Grove - I2C Color Sensor V2
+url: https://www.seeedstudio.com/Grove-I2C-Color-Sensor-V2.html
+type: MODULE
+width: 233
+height: 130
+pin_template: GENERIC_I2C_DEVICE_3v3_5
+connection_consume:
+  - name: Port
+    type: GROVE
+    pins:
+      - x: 15
+        y: 48
+        ref_to: GND
+      - x: 15
+        y: 59.3
+        ref_to: VCC
+      - x: 15
+        y: 70.6
+        ref_to: SDA
+      - x: 15
+        y: 81.9
+        ref_to: SCL
+compatibility:
+  - name: Color
+    condition:
+      - name: Detect Color
+        parameter:
+        - name: Color
+          value: Red
+          constraint:
+            - key: Red
+              value: 0
+            - key: Green
+              value: 1
+            - key: Blue
+              value: 2
+            - key: Cyan
+              value: 3
+            - key: Magenta
+              value: 4
+            - key: Orange
+              value: 5
+            - key: Violet
+              value: 6
+            # - key: White
+            #   value: 7
+            - key: Yellow
+              value: 8
+            # - key: Black
+            #   value: 9
+    value:
+      - name: Red
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Green
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Blue
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Hue
+        constraint:
+          min: 0
+          max: 360
+          unit: NOT_SPECIFIED
+      - name: Saturation
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Value
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TCS34725
+    library_dependency: 
+      - Adafruit/Adafruit_TCS34725-1.3.3
+  - platform: ARDUINO_ESP8266
+    classname: MP_TCS34725
+    library_dependency: 
+      - Adafruit/Adafruit_TCS34725-1.3.3
+  - platform: ARDUINO_ESP32
+    classname: MP_TCS34725
+    library_dependency: 
+      - Adafruit/Adafruit_TCS34725-1.3.3
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_TCS34725
+    library_dependency: 
+      - Adafruit/Adafruit_TCS34725-1.3.3
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_TCS34725
+    library_dependency: 
+      - Adafruit/Adafruit_TCS34725-1.3.3

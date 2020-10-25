@@ -392,7 +392,12 @@
         "A14 Percent",
         "A15 Percent",
         "UID",
-        "Tag Type"
+        "Tag Type",
+        "Red",
+        "Green",
+        "Blue",
+        "Hue",
+        "Saturation"
       ]
     },
     "units": {
