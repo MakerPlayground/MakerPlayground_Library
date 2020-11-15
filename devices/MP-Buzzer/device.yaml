@@ -6,23 +6,25 @@ type: MODULE
 width: 124
 height: 108
 property: []
-pin_template: GENERIC_PWM_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 79
-        y: 110
-        ref_to: GND
-      - x: 68
-        y: 110
-        ref_to: VCC
-      - x: 57
-        y: 110
-        ref_to: NC
-      - x: 46
-        y: 110
-        ref_to: SIG
+    - x: 79
+      y: 110
+      pin_function: GND
+    - x: 68
+      y: 110
+      pin_function: VCC
+    - x: 57
+      y: 110
+      pin_function: NO_FUNCTION
+    - x: 46
+      y: 110
+      pin_function: PWM_IN
 compatibility:
 - name: Buzzer
   action:

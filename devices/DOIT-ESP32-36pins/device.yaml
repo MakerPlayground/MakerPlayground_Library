@@ -16,7 +16,7 @@ cloud_provide:
 - cloud_platform: BLYNK_BLE
   classname: MP_BLYNK_ESP32_BLE
   library_dependency:
-    - blynkkk/Blynk-0.6.1
+  - blynkkk/Blynk-0.6.1
 - cloud_platform: AZURE
   classname: MP_AZURE_ESP
   library_dependency: []
@@ -30,216 +30,218 @@ width: 291
 height: 159
 property: []
 connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
   - name: VP
     type: WIRE
     pins:
-      - x: 274.286
-        y: 7.2
-        ref_to: "36"
+    - x: 274.286
+      y: 7.2
+      ref_to: '36'
   - name: VN
     type: WIRE
     pins:
-      - x: 259.886
-        y: 7.2
-        ref_to: "39"
-  - name: "34"
+    - x: 259.886
+      y: 7.2
+      ref_to: '39'
+  - name: '34'
     type: WIRE
     pins:
-      - x: 256.486
-        y: 7.2
-        ref_to: "34"
-  - name: "35"
+    - x: 256.486
+      y: 7.2
+      ref_to: '34'
+  - name: '35'
     type: WIRE
     pins:
-      - x: 231.086
-        y: 7.2
-        ref_to: "35"
-  - name: "32"
+    - x: 231.086
+      y: 7.2
+      ref_to: '35'
+  - name: '32'
     type: WIRE
     pins:
-      - x: 216.686
-        y: 7.2
-        ref_to: "32"
-  - name: "33"
+    - x: 216.686
+      y: 7.2
+      ref_to: '32'
+  - name: '33'
     type: WIRE
     pins:
-      - x: 202.286
-        y: 7.2
-        ref_to: "33"
-  - name: "25"
+    - x: 202.286
+      y: 7.2
+      ref_to: '33'
+  - name: '25'
     type: WIRE
     pins:
-      - x: 187.886
-        y: 7.2
-        ref_to: "25"
-  - name: "26"
+    - x: 187.886
+      y: 7.2
+      ref_to: '25'
+  - name: '26'
     type: WIRE
     pins:
-      - x: 173.486
-        y: 7.2
-        ref_to: "26"
-  - name: "27"
+    - x: 173.486
+      y: 7.2
+      ref_to: '26'
+  - name: '27'
     type: WIRE
     pins:
-      - x: 159.086
-        y: 7.2
-        ref_to: "27"
-  - name: "14"
+    - x: 159.086
+      y: 7.2
+      ref_to: '27'
+  - name: '14'
     type: WIRE
     pins:
-      - x: 144.686
-        y: 7.2
-        ref_to: "14"
-  - name: "12"
+    - x: 144.686
+      y: 7.2
+      ref_to: '14'
+  - name: '12'
     type: WIRE
     pins:
-      - x: 130.286
-        y: 7.2
-        ref_to: "12"
-  - name: "13"
+    - x: 130.286
+      y: 7.2
+      ref_to: '12'
+  - name: '13'
     type: WIRE
     pins:
-      - x: 115.886
-        y: 7.2
-        ref_to: "13"
-  - name: "9"
+    - x: 115.886
+      y: 7.2
+      ref_to: '13'
+  - name: '9'
     type: WIRE
     pins:
-      - x: 101.486
-        y: 7.2
-        ref_to: "9"
-  - name: "10"
+    - x: 101.486
+      y: 7.2
+      ref_to: '9'
+  - name: '10'
     type: WIRE
     pins:
-      - x: 87.086
-        y: 7.2
-        ref_to: "10"
-  - name: "11"
+    - x: 87.086
+      y: 7.2
+      ref_to: '10'
+  - name: '11'
     type: WIRE
     pins:
-      - x: 78.686
-        y: 7.2
-        ref_to: "11"
+    - x: 78.686
+      y: 7.2
+      ref_to: '11'
   - name: GND
     type: WIRE
     pins:
-      - x: 58.286
-        y: 7.2
-        ref_to: GND
+    - x: 58.286
+      y: 7.2
+      ref_to: GND
   - name: VIN
     type: WIRE
     pins:
-      - x: 43.886
-        y: 7.2
-        ref_to: VIN
+    - x: 43.886
+      y: 7.2
+      ref_to: VIN
   - name: VCC
     type: WIRE
     pins:
-      - x: 43.886
-        y: 151.54
-        ref_to: VCC
-  - name: "6"
+    - x: 43.886
+      y: 151.54
+      ref_to: VCC
+  - name: '6'
     type: WIRE
     pins:
-      - x: 58.286
-        y: 151.54
-        ref_to: "6"
-  - name: "7"
+    - x: 58.286
+      y: 151.54
+      ref_to: '6'
+  - name: '7'
     type: WIRE
     pins:
-      - x: 72.686
-        y: 151.54
-        ref_to: "7"
-  - name: "8"
+    - x: 72.686
+      y: 151.54
+      ref_to: '7'
+  - name: '8'
     type: WIRE
     pins:
-      - x: 87.086
-        y: 151.54
-        ref_to: "8"
-  - name: "0"
+    - x: 87.086
+      y: 151.54
+      ref_to: '8'
+  - name: '0'
     type: WIRE
     pins:
-      - x: 101.486
-        y: 151.54
-        ref_to: "0"
-  - name: "15"
+    - x: 101.486
+      y: 151.54
+      ref_to: '0'
+  - name: '15'
     type: WIRE
     pins:
-      - x: 115.886
-        y: 7.2
-        ref_to: "15"
-  - name: "2"
+    - x: 115.886
+      y: 7.2
+      ref_to: '15'
+  - name: '2'
     type: WIRE
     pins:
-      - x: 130.286
-        y: 151.54
-        ref_to: "2"
-  - name: "4"
+    - x: 130.286
+      y: 151.54
+      ref_to: '2'
+  - name: '4'
     type: WIRE
     pins:
-      - x: 144.686
-        y: 151.54
-        ref_to: "4"
-  - name: "16"
+    - x: 144.686
+      y: 151.54
+      ref_to: '4'
+  - name: '16'
     type: WIRE
     pins:
-      - x: 159.086
-        y: 151.54
-        ref_to: "16"
-  - name: "17"
+    - x: 159.086
+      y: 151.54
+      ref_to: '16'
+  - name: '17'
     type: WIRE
     pins:
-      - x: 173.486
-        y: 151.54
-        ref_to: "17"
-  - name: "5"
+    - x: 173.486
+      y: 151.54
+      ref_to: '17'
+  - name: '5'
     type: WIRE
     pins:
-      - x: 187.886
-        y: 151.54
-        ref_to: "5"
-  - name: "18"
+    - x: 187.886
+      y: 151.54
+      ref_to: '5'
+  - name: '18'
     type: WIRE
     pins:
-      - x: 202.286
-        y: 151.54
-        ref_to: "18"
-  - name: "19"
+    - x: 202.286
+      y: 151.54
+      ref_to: '18'
+  - name: '19'
     type: WIRE
     pins:
-      - x: 216.686
-        y: 151.54
-        ref_to: "19"
-  - name: "21"
+    - x: 216.686
+      y: 151.54
+      ref_to: '19'
+  - name: '21'
     type: WIRE
     pins:
-      - x: 231.086
-        y: 151.54
-        ref_to: "21"
-  - name: "3"
+    - x: 231.086
+      y: 151.54
+      ref_to: '21'
+  - name: '3'
     type: WIRE
     pins:
-      - x: 245.486
-        y: 151.54
-        ref_to: "3"
-  - name: "1"
+    - x: 245.486
+      y: 151.54
+      ref_to: '3'
+  - name: '1'
     type: WIRE
     pins:
-      - x: 259.886
-        y: 151.54
-        ref_to: "1"
-  - name: "22"
+    - x: 259.886
+      y: 151.54
+      ref_to: '1'
+  - name: '22'
     type: WIRE
     pins:
-      - x: 274.286
-        y: 151.54
-        ref_to: "22"
-  - name: "23"
+    - x: 274.286
+      y: 151.54
+      ref_to: '22'
+  - name: '23'
     type: WIRE
     pins:
-      - x: 288.686
-        y: 151.54
-        ref_to: "23"
+    - x: 288.686
+      y: 151.54
+      ref_to: '23'
 platforms:
 - platform: ARDUINO_ESP32
   classname: ''

@@ -7,57 +7,63 @@ width: 153
 height: 372
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_DUALPIN_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: CLK
     type: WIRE
     pins:
-      - x: 52.5
-        y: 350.7
-        ref_to: SIG1
+    - x: 52.5
+      y: 350.7
+      pin_function:
+      - DIGITAL_OUT
+      - DIGITAL_IN
   - name: DIO
     type: WIRE
     pins:
-      - x: 66.9
-        y: 350.7
-        ref_to: SIG2
+    - x: 66.9
+      y: 350.7
+      pin_function:
+      - DIGITAL_OUT
+      - DIGITAL_IN
   - name: VCC
     type: WIRE
     pins:
-      - x: 81.3
-        y: 350.7
-        ref_to: VCC
+    - x: 81.3
+      y: 350.7
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 95.7
-        y: 350.7
-        ref_to: GND
+    - x: 95.7
+      y: 350.7
+      pin_function: GND
 compatibility:
-  - name: 7 Segment
-    action:
-      - name: Show Number
-        parameter:
-          - name: Number
-            constraint:
-              min: -999
-              max: 9999
-              unit: NOT_SPECIFIED
-      - name: Show Two Numbers with Colon
-        parameter:
-          - name: Before colon
-            constraint:
-              min: -9
-              max: 99
-              unit: NOT_SPECIFIED
-          - name: After colon
-            constraint:
-              min: -9
-              max: 99
-              unit: NOT_SPECIFIED
-      - name: 'Off'
+- name: 7 Segment
+  action:
+  - name: Show Number
+    parameter:
+    - name: Number
+      constraint:
+        min: -999
+        max: 9999
+        unit: NOT_SPECIFIED
+  - name: Show Two Numbers with Colon
+    parameter:
+    - name: Before colon
+      constraint:
+        min: -9
+        max: 99
+        unit: NOT_SPECIFIED
+    - name: After colon
+      constraint:
+        min: -9
+        max: 99
+        unit: NOT_SPECIFIED
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TM1637_DISPLAY
-    library_dependency:
-      - avishorp/TM1637
+- platform: ARDUINO_AVR8
+  classname: MP_TM1637_DISPLAY
+  library_dependency:
+  - avishorp/TM1637

@@ -5,334 +5,324 @@ url: https://inex.co.th/shop/ikb-1-board.html
 type: MODULE
 width: 572
 height: 324
-pin_template: IKB_1
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_IKB_1
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_IKB_1
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_IKB_1
-    library_dependency: []
-  - platform: RASPBERRYPI
-    classname: MP_IKB_1
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_IKB_1
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_IKB_1
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_IKB_1
+  library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_IKB_1
+  library_dependency: []
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 3.3
+  items:
   - name: GND
     type: WIRE
     pins:
-      - x: 44
-        y: 227
-        ref_to: GND
+    - x: 44
+      y: 227
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 44
-        y: 216
-        ref_to: VCC
+    - x: 44
+      y: 216
+      pin_function: VCC
   - name: SDA
     type: WIRE
     pins:
-      - x: 44
-        y: 204
-        ref_to: SDA
+    - x: 44
+      y: 204
+      pin_function: SDA
   - name: SCL
     type: WIRE
     pins:
-      - x: 44
-        y: 193
-        ref_to: SCL
-  # - name: I2C Bus
-  #   type: GROVE
-  #   pins:
-  #     - x: 44
-  #       y: 227
-  #       ref_to: GND
-  #     - x: 44
-  #       y: 216
-  #       ref_to: VCC
-  #     - x: 44
-  #       y: 204
-  #       ref_to: SDA
-  #     - x: 44
-  #       y: 193
-  #       ref_to: SCL
-connection_provide:
-  - name: IO0
-    type: INEX3
-    pins:
-      - x: 113
-        y: 34
-        ref_to: GND
-      - x: 101
-        y: 34
-        ref_to: IO0
-      - x: 89
-        y: 34
-        ref_to: VCC
-  - name: IO1
-    type: INEX3
-    pins:
-      - x: 113
-        y: 77
-        ref_to: GND
-      - x: 101
-        y: 77
-        ref_to: IO0
-      - x: 89
-        y: 77
-        ref_to: VCC
-  - name: IO2
-    type: INEX3
-    pins:
-      - x: 164
-        y: 34
-        ref_to: GND
-      - x: 153
-        y: 34
-        ref_to: IO0
-      - x: 141
-        y: 34
-        ref_to: VCC
-  - name: IO3
-    type: INEX3
-    pins:
-      - x: 164
-        y: 77
-        ref_to: GND
-      - x: 153
-        y: 77
-        ref_to: IO0
-      - x: 141
-        y: 77
-        ref_to: VCC
-  - name: IO4
-    type: INEX3
-    pins:
-      - x: 216
-        y: 34
-        ref_to: GND
-      - x: 205
-        y: 34
-        ref_to: IO0
-      - x: 193
-        y: 34
-        ref_to: VCC
-  - name: IO5
-    type: INEX3
-    pins:
-      - x: 216
-        y: 77
-        ref_to: GND
-      - x: 205
-        y: 77
-        ref_to: IO0
-      - x: 193
-        y: 77
-        ref_to: VCC
-  - name: IO6
-    type: INEX3
-    pins:
-      - x: 269
-        y: 34
-        ref_to: GND
-      - x: 257
-        y: 34
-        ref_to: IO0
-      - x: 245
-        y: 34
-        ref_to: VCC
-  - name: IO7
-    type: INEX3
-    pins:
-      - x: 269
-        y: 77
-        ref_to: GND
-      - x: 257
-        y: 77
-        ref_to: IO0
-      - x: 245
-        y: 77
-        ref_to: VCC
+    - x: 44
+      y: 193
+      pin_function: SCL
+# TODO: implement pin_template for this device
+# connection_provide:
+#   voltage_level: LEVEL_3v3
+#   items:
+#   - name: IO0
+#     type: INEX3
+#     pins:
+#     - x: 113
+#       y: 34
+#       ref_to: GND
+#     - x: 101
+#       y: 34
+#       ref_to: IO0
+#     - x: 89
+#       y: 34
+#       ref_to: VCC
+#   - name: IO1
+#     type: INEX3
+#     pins:
+#     - x: 113
+#       y: 77
+#       ref_to: GND
+#     - x: 101
+#       y: 77
+#       ref_to: IO0
+#     - x: 89
+#       y: 77
+#       ref_to: VCC
+#   - name: IO2
+#     type: INEX3
+#     pins:
+#     - x: 164
+#       y: 34
+#       ref_to: GND
+#     - x: 153
+#       y: 34
+#       ref_to: IO0
+#     - x: 141
+#       y: 34
+#       ref_to: VCC
+#   - name: IO3
+#     type: INEX3
+#     pins:
+#     - x: 164
+#       y: 77
+#       ref_to: GND
+#     - x: 153
+#       y: 77
+#       ref_to: IO0
+#     - x: 141
+#       y: 77
+#       ref_to: VCC
+#   - name: IO4
+#     type: INEX3
+#     pins:
+#     - x: 216
+#       y: 34
+#       ref_to: GND
+#     - x: 205
+#       y: 34
+#       ref_to: IO0
+#     - x: 193
+#       y: 34
+#       ref_to: VCC
+#   - name: IO5
+#     type: INEX3
+#     pins:
+#     - x: 216
+#       y: 77
+#       ref_to: GND
+#     - x: 205
+#       y: 77
+#       ref_to: IO0
+#     - x: 193
+#       y: 77
+#       ref_to: VCC
+#   - name: IO6
+#     type: INEX3
+#     pins:
+#     - x: 269
+#       y: 34
+#       ref_to: GND
+#     - x: 257
+#       y: 34
+#       ref_to: IO0
+#     - x: 245
+#       y: 34
+#       ref_to: VCC
+#   - name: IO7
+#     type: INEX3
+#     pins:
+#     - x: 269
+#       y: 77
+#       ref_to: GND
+#     - x: 257
+#       y: 77
+#       ref_to: IO0
+#     - x: 245
+#       y: 77
+#       ref_to: VCC
 compatibility:
-  - name: GPIO Expander
-    action:
-      - name: Digital Out
-        funcname: digitalOut
-        parameter:
-          - name: Pin Number
-            value: 0
-            constraint:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-              - 6
-              - 7
-          - name: Logic
-            value: HIGH
-            constraint:
-              - key: HIGH
-                value: 1
-              - key: Low
-                value: 0
-    condition:
-      - name: Compare
-      - name: Is Digital High
-        funcname: isHigh
-        parameter:
-          - name: Pin Number
-            value: 0
-            constraint:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-              - 6
-              - 7
-              - 8
-              - 9
-              - 10
-              - 11
-              - 12
-              - 13
-              - 14
-              - 15
-      - name: Is Digital Low
-        funcname: isLow
-        parameter:
-          - name: Pin Number
-            value: 0
-            constraint:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-              - 6
-              - 7
-              - 8
-              - 9
-              - 10
-              - 11
-              - 12
-              - 13
-              - 14
-              - 15
-    value:
-      - name: A0 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A1 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A2 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A3 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A4 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A5 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A6 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: A7 Percent
-        dataType: DOUBLE
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-  - name: Servo Controller
-    action:
-      - name: Move Servo
-        parameter:
-          - name: Channel
-            constraint:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-          - name: To Angle
-            constraint:
-              min: 0
-              max: 180
-              unit: DEGREE
-      - name: Free Servo
-        parameter:
-          - name: Channel
-            value: 0
-            constraint:
-              - 0
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-  - name: DC Motor Driver
-    description: An external module to drive the motor with enough current.
-    action:
-      - name: 'On'
-        funcname: 'on'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-              - 3
-              - 4
-          - name: Direction
-            value: Forward
-          - name: Speed
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-      - name: 'Off'
-        funcname: 'off'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-              - 3
-              - 4
-            datatype: INTEGER_ENUM
-            controltype: DROPDOWN
+- name: GPIO Expander
+  action:
+  - name: Digital Out
+    funcname: digitalOut
+    parameter:
+    - name: Pin Number
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    - name: Logic
+      value: HIGH
+      constraint:
+      - key: HIGH
+        value: 1
+      - key: Low
+        value: 0
+  condition:
+  - name: Compare
+  - name: Is Digital High
+    funcname: isHigh
+    parameter:
+    - name: Pin Number
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+  - name: Is Digital Low
+    funcname: isLow
+    parameter:
+    - name: Pin Number
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+  value:
+  - name: A0 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A1 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A2 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A3 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A4 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A5 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A6 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: A7 Percent
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+- name: Servo Controller
+  action:
+  - name: Move Servo
+    parameter:
+    - name: Channel
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    - name: To Angle
+      constraint:
+        min: 0
+        max: 180
+        unit: DEGREE
+  - name: Free Servo
+    parameter:
+    - name: Channel
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+- name: DC Motor Driver
+  description: An external module to drive the motor with enough current.
+  action:
+  - name: 'On'
+    funcname: 'on'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+      - 3
+      - 4
+    - name: Direction
+      value: Forward
+    - name: Speed
+      value: 100
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: 'Off'
+    funcname: 'off'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+      - 3
+      - 4
+      datatype: INTEGER_ENUM
+      controltype: DROPDOWN

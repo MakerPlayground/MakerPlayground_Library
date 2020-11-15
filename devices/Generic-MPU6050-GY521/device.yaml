@@ -6,116 +6,93 @@ type: MODULE
 width: 114.0
 height: 88.0
 property:
-  - name: AD0 High
-    datatype: BOOLEAN_ENUM
-    controltype: DROPDOWN
-    value: 'false'
-    constraint:
-      - 'true'
-      - 'false'
+- name: AD0 High
+  datatype: BOOLEAN_ENUM
+  controltype: DROPDOWN
+  value: 'false'
+  constraint:
+  - 'true'
+  - 'false'
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 2.2
-        y: 77.6
-        ref_to: VCC
+    - x: 2.2
+      y: 77.6
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 16.6
-        y: 77.6
-        ref_to: GND
+    - x: 16.6
+      y: 77.6
+      pin_function: GND
   - name: SCL
     type: WIRE
     pins:
-      - x: 31
-        y: 77.6
-        ref_to: SCL
+    - x: 31
+      y: 77.6
+      pin_function: SCL
   - name: SDA
     type: WIRE
     pins:
-      - x: 45.4
-        y: 77.6
-        ref_to: SDA
-  # These connection can cause the device connection logic failed because the logic needs all connections to be connected.
-  # - name: XDA
-  #   type: WIRE
-  #   pins:
-  #     - x: 79.866
-  #       y: 105.526
-  #       ref_to: 
-  # - name: XCL
-  #   type: WIRE
-  #   pins:
-  #     - x: 94.866
-  #       y: 105.526
-  #       ref_to: 
-  # - name: ADO
-  #   type: WIRE
-  #   pins:
-  #     - x: 108.866
-  #       y: 105.526
-  #       ref_to: 
-  # - name: INT
-  #   type: WIRE
-  #   pins:
-  #     - x: 123.866
-  #       y: 105.526
-  #       ref_to: 
+    - x: 45.4
+      y: 77.6
+      pin_function: SDA
 compatibility:
-  - name: Accelerometer
-    condition:
-      - name: Compare
-        parameter: []
-    value:
-      - name: Accel_X
-        constraint:
-          min: -35
-          max: 35
-          unit: METERPERSECSQUARE
-      - name: Accel_Y
-        constraint:
-          min: -35
-          max: 35
-          unit: METERPERSECSQUARE
-      - name: Accel_Z
-        constraint:
-          min: -35
-          max: 35
-          unit: METERPERSECSQUARE
-      - name: Accel_Magnitude
-        constraint:
-          min: 0
-          max: 60
-          unit: METERPERSECSQUARE
-  - name: Gyroscope
-    condition:
-      - name: Compare
-        parameter: []
-    value:
-      - name: Gyro_X
-        constraint:
-          min: -2000
-          max: 2000
-          unit: DEGREEPERSEC
-      - name: Gyro_Y
-        constraint:
-          min: -2000
-          max: 2000
-          unit: DEGREEPERSEC
-      - name: Gyro_Z
-        constraint:
-          min: -2000
-          max: 2000
-          unit: DEGREEPERSEC
+- name: Accelerometer
+  condition:
+  - name: Compare
+    parameter: []
+  value:
+  - name: Accel_X
+    constraint:
+      min: -35
+      max: 35
+      unit: METERPERSECSQUARE
+  - name: Accel_Y
+    constraint:
+      min: -35
+      max: 35
+      unit: METERPERSECSQUARE
+  - name: Accel_Z
+    constraint:
+      min: -35
+      max: 35
+      unit: METERPERSECSQUARE
+  - name: Accel_Magnitude
+    constraint:
+      min: 0
+      max: 60
+      unit: METERPERSECSQUARE
+- name: Gyroscope
+  condition:
+  - name: Compare
+    parameter: []
+  value:
+  - name: Gyro_X
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
+  - name: Gyro_Y
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
+  - name: Gyro_Z
+    constraint:
+      min: -2000
+      max: 2000
+      unit: DEGREEPERSEC
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MPU6050
-    library_dependency:
-      - i2cdevlib/Arduino/MPU6050
-      - i2cdevlib/Arduino/I2Cdev
-      - Wire
+- platform: ARDUINO_AVR8
+  classname: MP_MPU6050
+  library_dependency:
+  - i2cdevlib/Arduino/MPU6050
+  - i2cdevlib/Arduino/I2Cdev
+  - Wire

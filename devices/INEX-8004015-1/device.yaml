@@ -5,26 +5,28 @@ url: https://inex.co.th/shop/zx-switch01.html
 type: MODULE
 width: 94
 height: 166
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: INEX3
     pins:
-      - x: 54
-        y: 160.488
-        ref_to: GND
-      - x: 47
-        y: 160.488
-        ref_to: SIG
-      - x: 39
-        y: 160.488
-        ref_to: VCC
+    - x: 54
+      y: 160.488
+      pin_function: GND
+    - x: 47
+      y: 160.488
+      pin_function: DIGITAL_OUT
+    - x: 39
+      y: 160.488
+      pin_function: VCC
 compatibility:
 - name: Button
   condition:
-    - name: Press
-    - name: Press and release
-    - name: Not press
+  - name: Press
+  - name: Press and release
+  - name: Not press
   value: []
 platforms:
 - platform: ARDUINO_AVR8

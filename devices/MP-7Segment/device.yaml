@@ -5,52 +5,54 @@ url: ''
 type: MODULE
 width: 108.0
 height: 308.0
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 37
-        y: 292
-        ref_to: GND
-      - x: 48
-        y: 292
-        ref_to: VCC
-      - x: 59
-        y: 292
-        ref_to: NC
-      - x: 70
-        y: 292
-        ref_to: SIG
+    - x: 37
+      y: 292
+      pin_function: GND
+    - x: 48
+      y: 292
+      pin_function: VCC
+    - x: 59
+      y: 292
+      pin_function: NO_FUNCTION
+    - x: 70
+      y: 292
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: 7 Segment
-    action:
-      - name: Show Number
-        parameter:
-          - name: Number
-            constraint:
-              min: -999.0
-              max: 9999.0
-              unit: NOT_SPECIFIED
-      - name: Show Two Numbers with Colon
-        parameter:
-          - name: Before colon
-            constraint:
-              min: -9
-              max: 99
-              unit: NOT_SPECIFIED
-          - name: After colon
-            constraint:
-              min: -9
-              max: 99
-              unit: NOT_SPECIFIED
-      - name: 'Off'
+- name: 7 Segment
+  action:
+  - name: Show Number
+    parameter:
+    - name: Number
+      constraint:
+        min: -999.0
+        max: 9999.0
+        unit: NOT_SPECIFIED
+  - name: Show Two Numbers with Colon
+    parameter:
+    - name: Before colon
+      constraint:
+        min: -9
+        max: 99
+        unit: NOT_SPECIFIED
+    - name: After colon
+      constraint:
+        min: -9
+        max: 99
+        unit: NOT_SPECIFIED
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_7SEG_SOFTSERIAL
-    library_dependency:
-      - nickgammon/SendOnlySoftwareSerial
-  - platform: ARDUINO_ESP8266
-    classname: MP_7SEG_SOFTSERIAL
-    library_dependency:
-      - plerup/espsoftwareserial-3.4.2
+- platform: ARDUINO_AVR8
+  classname: MP_7SEG_SOFTSERIAL
+  library_dependency:
+  - nickgammon/SendOnlySoftwareSerial
+- platform: ARDUINO_ESP8266
+  classname: MP_7SEG_SOFTSERIAL
+  library_dependency:
+  - plerup/espsoftwareserial-3.4.2

@@ -7,72 +7,74 @@ width: 100.8
 height: 108.0
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VIN
     type: WIRE
     pins:
-      - x: 7.2
-        y: 93.599
-        ref_to: VCC
+    - x: 7.2
+      y: 93.599
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 36.0
-        y: 93.599
-        ref_to: GND
+    - x: 36.0
+      y: 93.599
+      pin_function: GND
   - name: SCK
     type: WIRE
     pins:
-      - x: 50.4
-        y: 93.599
-        ref_to: SCL
+    - x: 50.4
+      y: 93.599
+      pin_function: SCL
   - name: SDI
     type: WIRE
     pins:
-      - x: 79.2
-        y: 93.599
-        ref_to: SDA
+    - x: 79.2
+      y: 93.599
+      pin_function: SDA
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-    value:
-      - name: Temperature
-        constraint:
-          min: -40.0
-          max: 85.0
-          unit: CELSIUS
+    constraint:
+      min: -40.0
+      max: 85.0
+      unit: CELSIUS
+- name: Humidity
+  condition:
+  - name: Compare
+  value:
   - name: Humidity
-    condition:
-      - name: Compare
-    value:
-      - name: Humidity
-        constraint:
-          min: 0.0
-          max: 100.0
-          unit: PERCENT
-  - name: Pressuremeter
-    condition:
-      - name: Compare
-    value:
-      - name: Pressure
-        constraint:
-          min: 300.0
-          max: 1100.0
-          unit: HECTOPASCAL
-  - name: Altimeter
-    condition:
-      - name: Compare
-    value:
-      - name: Altitude
-        constraint:
-          min: -698.43
-          max: 9165.37
-          unit: METER
+    constraint:
+      min: 0.0
+      max: 100.0
+      unit: PERCENT
+- name: Pressuremeter
+  condition:
+  - name: Compare
+  value:
+  - name: Pressure
+    constraint:
+      min: 300.0
+      max: 1100.0
+      unit: HECTOPASCAL
+- name: Altimeter
+  condition:
+  - name: Compare
+  value:
+  - name: Altitude
+    constraint:
+      min: -698.43
+      max: 9165.37
+      unit: METER
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BME280
-    library_dependency:
-      - adafruit/Adafruit_BME280_Library
-      - adafruit/Adafruit_Sensor-1.1.4
+- platform: ARDUINO_AVR8
+  classname: MP_BME280
+  library_dependency:
+  - adafruit/Adafruit_BME280_Library
+  - adafruit/Adafruit_Sensor-1.1.4

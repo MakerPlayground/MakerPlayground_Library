@@ -7,102 +7,99 @@ width: 90.0
 height: 142.0
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 66.368
-        y: 131.838
-        ref_to: VCC
+    - x: 66.368
+      y: 131.838
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 23.388
-        y: 131.838
-        ref_to: GND
+    - x: 23.388
+      y: 131.838
+      pin_function: GND
   - name: SCL
     type: WIRE
     pins:
-      - x: 52.554
-        y: 131.838
-        ref_to: SCL
+    - x: 52.554
+      y: 131.838
+      pin_function: SCL
   - name: SDA
     type: WIRE
     pins:
-      - x: 38.154
-        y: 131.838
-        ref_to: SDA
+    - x: 38.154
+      y: 131.838
+      pin_function: SDA
 compatibility:
-  - name: RTC
-    action:
-      - name: Set DateTime
-        parameter:
-          - name: Date & Time
-            constraint: []
-    condition:
-      - name: Compare
-      - name: Check Day
-        parameter:
-          - name: Day
-            value: Monday
-            constraint:
-              - key: Sunday
-                value: 1
-              - key: Monday
-                value: 2
-              - key: Tuesday
-                value: 3
-              - key: Wednesday
-                value: 4
-              - key: Thursday
-                value: 5
-              - key: Friday
-                value: 6
-              - key: Saturday
-                value: 7
-    value:
-      - name: Hour
-        constraint:
-          min: 0
-          max: 23
-          unit: NOT_SPECIFIED
-      - name: Minute
-        constraint:
-          min: 0
-          max: 59
-          unit: NOT_SPECIFIED
-      - name: Second
-        constraint:
-          min: 0
-          max: 59
-          unit: NOT_SPECIFIED
-      - name: Date
-        constraint:
-          min: 1
-          max: 31
-          unit: NOT_SPECIFIED
-      - name: Month
-        constraint:
-          min: 1
-          max: 12
-          unit: NOT_SPECIFIED
-      - name: Year
-        constraint:
-          min: 2000
-          max: 5000
-          unit: NOT_SPECIFIED
+- name: RTC
+  action:
+  - name: Set DateTime
+    parameter:
+    - name: Date & Time
+      constraint: []
+  condition:
+  - name: Compare
+  - name: Check Day
+    parameter:
+    - name: Day
+      value: Monday
+      constraint:
+      - key: Sunday
+        value: 1
+      - key: Monday
+        value: 2
+      - key: Tuesday
+        value: 3
+      - key: Wednesday
+        value: 4
+      - key: Thursday
+        value: 5
+      - key: Friday
+        value: 6
+      - key: Saturday
+        value: 7
+  value:
+  - name: Hour
+    constraint:
+      min: 0
+      max: 23
+      unit: NOT_SPECIFIED
+  - name: Minute
+    constraint:
+      min: 0
+      max: 59
+      unit: NOT_SPECIFIED
+  - name: Second
+    constraint:
+      min: 0
+      max: 59
+      unit: NOT_SPECIFIED
+  - name: Date
+    constraint:
+      min: 1
+      max: 31
+      unit: NOT_SPECIFIED
+  - name: Month
+    constraint:
+      min: 1
+      max: 12
+      unit: NOT_SPECIFIED
+  - name: Year
+    constraint:
+      min: 2000
+      max: 5000
+      unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_DS3231
-    library_dependency:
-      - Makuna/Rtc-2.3.0
-  - platform: ARDUINO_ESP8266
-    classname: MP_DS3231
-    library_dependency:
-      - Makuna/Rtc-2.3.0
-  # To be tested
-  # - platform: ARDUINO_ESP32
-  #   classname: MP_DS3231
-  #   library_dependency:
-  #     - Makuna/Rtc-2.3.0
+- platform: ARDUINO_AVR8
+  classname: MP_DS3231
+  library_dependency:
+  - Makuna/Rtc-2.3.0
+- platform: ARDUINO_ESP8266
+  classname: MP_DS3231
+  library_dependency:
+  - Makuna/Rtc-2.3.0

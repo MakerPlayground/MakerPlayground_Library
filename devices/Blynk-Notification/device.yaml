@@ -4,28 +4,27 @@ model: Notification
 url: https://docs.blynk.cc/#widgets-notifications-push-notifications
 type: VIRTUAL
 cloud_consume: BLYNK
-pin_template: NO_PIN
 width: 50
 height: 50
 property: []
 compatibility:
-  - name: Notification
-    action:
-    - name: Notify
-      parameter:
-      - name: Message
-        value: ''
-        constraint: []
+- name: Notification
+  action:
+  - name: Notify
+    parameter:
+    - name: Message
+      value: ''
+      constraint: []
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BLYNK_NOTIFICATION
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_BLYNK_NOTIFICATION
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_BLYNK_NOTIFICATION
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_BLYNK_NOTIFICATION
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_BLYNK_NOTIFICATION
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BLYNK_NOTIFICATION
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BLYNK_NOTIFICATION
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_BLYNK_NOTIFICATION
+  library_dependency: []

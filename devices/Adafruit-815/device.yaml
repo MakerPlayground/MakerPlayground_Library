@@ -7,82 +7,84 @@ width: 144
 height: 352
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: SCL
     type: WIRE
     pins:
-      - x: 64
-        y: 342
-        ref_to: SCL
+    - x: 64
+      y: 342
+      pin_function: SCL
   - name: SDA
     type: WIRE
     pins:
-      - x: 78.4
-        y: 342
-        ref_to: SDA
+    - x: 78.4
+      y: 342
+      pin_function: SDA
   - name: VIN
     type: WIRE
     pins:
-      - x: 92.8
-        y: 342
-        ref_to: VCC
+    - x: 92.8
+      y: 342
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 35.2
-        y: 342
-        ref_to: GND
+    - x: 35.2
+      y: 342
+      pin_function: GND
 compatibility:
-  - name: Servo Controller
-    action:
-    - name: Move Servo
-      parameter:
-        - name: Channel
-          value: 0
-          constraint:
-            - 0
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-            - 6
-            - 7
-            - 8
-            - 9
-            - 10
-            - 11
-            - 12
-            - 13
-            - 14
-            - 15
-        - name: To Angle
-          value: 90
-          constraint:
-            min: 0
-            max: 180
-            unit: DEGREE
-          datatype: INTEGER
-          controltype: SPINBOX
+- name: Servo Controller
+  action:
+  - name: Move Servo
+    parameter:
+    - name: Channel
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    - name: To Angle
+      value: 90
+      constraint:
+        min: 0
+        max: 180
+        unit: DEGREE
+      datatype: INTEGER
+      controltype: SPINBOX
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_SERVO_PCA9685
-    library_dependency:
-      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
-  - platform: ARDUINO_ESP8266
-    classname: MP_SERVO_PCA9685
-    library_dependency:
-      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
-  - platform: ARDUINO_ESP32
-    classname: MP_SERVO_PCA9685
-    library_dependency:
-      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_SERVO_PCA9685
-    library_dependency:
-      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_SERVO_PCA9685
-    library_dependency:
-      - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
+- platform: ARDUINO_AVR8
+  classname: MP_SERVO_PCA9685
+  library_dependency:
+  - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
+- platform: ARDUINO_ESP8266
+  classname: MP_SERVO_PCA9685
+  library_dependency:
+  - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
+- platform: ARDUINO_ESP32
+  classname: MP_SERVO_PCA9685
+  library_dependency:
+  - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_SERVO_PCA9685
+  library_dependency:
+  - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0
+- platform: ARDUINO_ATSAMD51
+  classname: MP_SERVO_PCA9685
+  library_dependency:
+  - adafruit/Adafruit-PWM-Servo-Driver-Library-2.4.0

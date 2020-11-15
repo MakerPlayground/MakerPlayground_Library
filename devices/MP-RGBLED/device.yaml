@@ -7,23 +7,25 @@ formfactor: MP_DEVICE
 width: 124
 height: 108
 property: []
-pin_template: MAKER_PLAYGROUND_RGB_LED
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 79
-        y: 110
-        ref_to: GND
-      - x: 68
-        y: 110
-        ref_to: VCC
-      - x: 57
-        y: 110
-        ref_to: SIG2
-      - x: 46
-        y: 110
-        ref_to: SIG1
+    - x: 79
+      y: 110
+      pin_function: GND
+    - x: 68
+      y: 110
+      pin_function: VCC
+    - x: 57
+      y: 110
+      pin_function: DIGITAL_IN
+    - x: 46
+      y: 110
+      pin_function: DIGITAL_IN
 compatibility:
 - name: RGB LED
   action:

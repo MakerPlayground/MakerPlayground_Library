@@ -7,37 +7,39 @@ width: 80.0
 height: 123.0
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: OUT
     type: WIRE
     pins:
-      - x: 21.646
-        y: 110.924
-        ref_to: SIG
+    - x: 21.646
+      y: 110.924
+      pin_function: ANALOG_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 36.046
-        y: 110.924
-        ref_to: GND
+    - x: 36.046
+      y: 110.924
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 50.446
-        y: 110.924
-        ref_to: VCC
+    - x: 50.446
+      y: 110.924
+      pin_function: VCC
 compatibility:
-  - name: Sound
-    condition:
-      - name: Compare
-    value:
-      - name: SoundLevel
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
+- name: Sound
+  condition:
+  - name: Compare
+  value:
+  - name: SoundLevel
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MICROPHONE
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_MICROPHONE
+  library_dependency: []

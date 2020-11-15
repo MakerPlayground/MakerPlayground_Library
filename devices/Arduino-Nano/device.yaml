@@ -11,212 +11,201 @@ breadboard_placement: TWO_SIDES
 property: []
 pin_template: ATMEGA328P
 connection_provide:
+  voltage_level: LEVEL_5
+  items:
   - name: D12
     type: WIRE
     pins:
-      - x: 31
-        y: 6
-        ref_to: PB4
+    - x: 31
+      y: 6
+      ref_to: PB4
   - name: D11
     type: WIRE
     pins:
-      - x: 45.4
-        y: 6
-        ref_to: PB3
+    - x: 45.4
+      y: 6
+      ref_to: PB3
   - name: D10
     type: WIRE
     pins:
-      - x: 59.8
-        y: 6
-        ref_to: PB2
+    - x: 59.8
+      y: 6
+      ref_to: PB2
   - name: D9
     type: WIRE
     pins:
-      - x: 74.2
-        y: 6
-        ref_to: PB1
+    - x: 74.2
+      y: 6
+      ref_to: PB1
   - name: D8
     type: WIRE
     pins:
-      - x: 88.6
-        y: 6
-        ref_to: PB0
+    - x: 88.6
+      y: 6
+      ref_to: PB0
   - name: D7
     type: WIRE
     pins:
-      - x: 103.0
-        y: 6
-        ref_to: PD7
+    - x: 103.0
+      y: 6
+      ref_to: PD7
   - name: D6
     type: WIRE
     pins:
-      - x: 117.4
-        y: 6
-        ref_to: PD6
+    - x: 117.4
+      y: 6
+      ref_to: PD6
   - name: D5
     type: WIRE
     pins:
-      - x: 131.8
-        y: 6
-        ref_to: PD5
+    - x: 131.8
+      y: 6
+      ref_to: PD5
   - name: D4
     type: WIRE
     pins:
-      - x: 146.2
-        y: 6
-        ref_to: PD4
+    - x: 146.2
+      y: 6
+      ref_to: PD4
   - name: D3
     type: WIRE
     pins:
-      - x: 160.6
-        y: 6
-        ref_to: PD3
+    - x: 160.6
+      y: 6
+      ref_to: PD3
   - name: D2
     type: WIRE
     pins:
-      - x: 175.0
-        y: 6
-        ref_to: PD2
+    - x: 175.0
+      y: 6
+      ref_to: PD2
   - name: GND0
     type: WIRE
     pins:
-      - x: 189.4
-        y: 6
-        ref_to: GND
+    - x: 189.4
+      y: 6
+      ref_to: GND
   - name: RST0
     type: WIRE
     pins:
-      - x: 203.8
-        y: 6
-        ref_to: PC6
+    - x: 203.8
+      y: 6
+      ref_to: PC6
   - name: RX0
     type: WIRE
     pins:
-      - x: 218.2
-        y: 6
-        ref_to: PD0
+    - x: 218.2
+      y: 6
+      ref_to: PD0
   - name: TX0
     type: WIRE
     pins:
-      - x: 232.6
-        y: 6
-        ref_to: PD1
+    - x: 232.6
+      y: 6
+      ref_to: PD1
   - name: D13
     type: WIRE
     pins:
-      - x: 31
-        y: 92.4
-        ref_to: PB5
+    - x: 31
+      y: 92.4
+      ref_to: PB5
   - name: 3V3
     type: WIRE
     pins:
-      - x: 45.4
-        y: 92.4
-        ref_to: VCC
-        voltage_level: LEVEL_3v3
-  # - name: AREF
-  #   type: WIRE
-  #   pins:
-  #     - x: 59.8
-  #       y: 92.4
-  #       ref_to: 
+    - x: 45.4
+      y: 92.4
+      ref_to: VCC
+      voltage_level: LEVEL_3v3
   - name: A0
     type: WIRE
     pins:
-      - x: 74.2
-        y: 92.4
-        ref_to: PC0
+    - x: 74.2
+      y: 92.4
+      ref_to: PC0
   - name: A1
     type: WIRE
     pins:
-      - x: 88.6
-        y: 92.4
-        ref_to: PC1
+    - x: 88.6
+      y: 92.4
+      ref_to: PC1
   - name: A2
     type: WIRE
     pins:
-      - x: 103.0
-        y: 92.4
-        ref_to: PC2
+    - x: 103.0
+      y: 92.4
+      ref_to: PC2
   - name: A3
     type: WIRE
     pins:
-      - x: 117.4
-        y: 92.4
-        ref_to: PC3
+    - x: 117.4
+      y: 92.4
+      ref_to: PC3
   - name: A4
     type: WIRE
     pins:
-      - x: 131.8
-        y: 92.4
-        ref_to: PC4
+    - x: 131.8
+      y: 92.4
+      ref_to: PC4
   - name: A5
     type: WIRE
     pins:
-      - x: 146.2
-        y: 92.4
-        ref_to: PC5
+    - x: 146.2
+      y: 92.4
+      ref_to: PC5
   - name: A6
     type: WIRE
     pins:
-      - x: 160.6
-        y: 92.4
-        ref_to: A6
+    - x: 160.6
+      y: 92.4
+      ref_to: A6
   - name: A7
     type: WIRE
     pins:
-      - x: 175.0
-        y: 92.4
-        ref_to: A7
+    - x: 175.0
+      y: 92.4
+      ref_to: A7
   - name: 5V
     type: WIRE
     pins:
-      - x: 189.4
-        y: 92.4
-        ref_to: VCC
+    - x: 189.4
+      y: 92.4
+      ref_to: VCC
   - name: RST
     type: WIRE
     pins:
-      - x: 203.8
-        y: 92.4
-        ref_to: PC6
+    - x: 203.8
+      y: 92.4
+      ref_to: PC6
   - name: GND1
     type: WIRE
     pins:
-      - x: 218.2
-        y: 92.4
-        ref_to: GND
-  # - name: VIN
-  #   type: WIRE
-  #   pins:
-  #     - x: 232.6
-  #       y: 92.4
-  #       ref_to: 
+    - x: 218.2
+      y: 92.4
+      ref_to: GND
 integrated_devices:
-  - name: Built in LED
-    pin_template: GENERIC_DIGITAL_ACTUATOR_5
-    integrated_connection:
-      - ref_to: SIG
-        host_ref_to: PB5
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: GND
-        host_ref_to: GND
-    compatibility:
-      - name: LED
-        action:
-          - name: 'On'
-            parameter:
-              - name: Brightness
-                constraint:
-                  min: 0.0
-                  max: 100.0
-                  unit: PERCENT
-          - name: 'Off'
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_LED_AH
-        library_dependency: []
+- name: Built in LED
+  integrated_connection:
+  - host_ref_to: PB5
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: GND
+    pin_function: GND
+  compatibility:
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 compatibility: []
 platforms:
 - platform: ARDUINO_AVR8

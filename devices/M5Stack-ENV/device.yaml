@@ -5,60 +5,62 @@ url: https://docs.m5stack.com/#/en/unit/env
 type: MODULE
 width: 138
 height: 184
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 52.5 
-        y: 179
-        ref_to: GND
-      - x: 64
-        y: 179
-        ref_to: VCC
-      - x: 75
-        y: 179
-        ref_to: SDA
-      - x: 86.5
-        y: 179
-        ref_to: SCL
+    - x: 52.5
+      y: 179
+      pin_function: GND
+    - x: 64
+      y: 179
+      pin_function: VCC
+    - x: 75
+      y: 179
+      pin_function: SDA
+    - x: 86.5
+      y: 179
+      pin_function: SCL
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-    value:
-      - name: Temperature
-        constraint:
-          min: 20
-          max: 60
-          unit: CELSIUS
+    constraint:
+      min: 20
+      max: 60
+      unit: CELSIUS
+- name: Humidity
+  condition:
+  - name: Compare
+  value:
   - name: Humidity
-    condition:
-      - name: Compare
-    value:
-      - name: Humidity
-        constraint:
-          min: 20
-          max: 95
-          unit: PERCENT
-  - name: Pressuremeter
-    condition:
-      - name: Compare
-    value:
-      - name: Pressure
-        constraint:
-          min: 300
-          max: 1100
-          unit: HECTOPASCAL
-  - name: Altimeter
-    condition:
-      - name: Compare
-    value:
-      - name: Altitude
-        constraint:
-          min: -698.43
-          max: 9165.37
-          unit: METER
+    constraint:
+      min: 20
+      max: 95
+      unit: PERCENT
+- name: Pressuremeter
+  condition:
+  - name: Compare
+  value:
+  - name: Pressure
+    constraint:
+      min: 300
+      max: 1100
+      unit: HECTOPASCAL
+- name: Altimeter
+  condition:
+  - name: Compare
+  value:
+  - name: Altitude
+    constraint:
+      min: -698.43
+      max: 9165.37
+      unit: METER
 platforms:
 - platform: ARDUINO_ESP32
   classname: MP_M5STACK_ENV

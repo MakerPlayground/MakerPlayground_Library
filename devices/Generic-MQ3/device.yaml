@@ -7,47 +7,48 @@ width: 114
 height: 182
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_ANALOG_SENSOR_5
 connection_consume:
+  min_voltage: 5
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 35.1
-        y: 171.7
-        ref_to: VCC
+    - x: 35.1
+      y: 171.7
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 49.5
-        y: 171.1
-        ref_to: GND
+    - x: 49.5
+      y: 171.1
+      pin_function: GND
   - name: A0
     type: WIRE
     pins:
-      - x: 78.3
-        y: 171.1
-        ref_to: SIG
+    - x: 78.3
+      y: 171.1
+      pin_function: ANALOG_OUT
 compatibility:
-  - name: Alcohol
-    condition:
-      - name: Compare
-    value:
-      - name: Percent
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
+- name: Alcohol
+  condition:
+  - name: Compare
+  value:
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MQ3
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_MQ3
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_MQ3
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_MQ3
-    library_dependency: []
-
+- platform: ARDUINO_AVR8
+  classname: MP_MQ3
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_MQ3
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_MQ3
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_MQ3
+  library_dependency: []

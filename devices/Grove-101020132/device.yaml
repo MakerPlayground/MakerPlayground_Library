@@ -1,28 +1,29 @@
----
 id: Grove-101020132
 brand: SeeedStudio
 model: Grove - Light Sensor v1.2 - LS06-S phototransistor
 url: https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html
 type: MODULE
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 width: 112
 height: 134
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 19
-        y: 49
-        ref_to: GND
-      - x: 19
-        y: 60.3
-        ref_to: VCC
-      - x: 19
-        y: 71.6
-        ref_to: NC
-      - x: 19
-        y: 82.9
-        ref_to: SIG
+    - x: 19
+      y: 49
+      pin_function: GND
+    - x: 19
+      y: 60.3
+      pin_function: VCC
+    - x: 19
+      y: 71.6
+      pin_function: NO_FUNCTION
+    - x: 19
+      y: 82.9
+      pin_function: ANALOG_OUT
 compatibility:
 - name: Light
   condition:

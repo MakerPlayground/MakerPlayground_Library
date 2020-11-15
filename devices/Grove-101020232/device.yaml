@@ -5,47 +5,53 @@ url: https://www.seeedstudio.com/Grove-Speech-Recognizer.html
 type: MODULE
 width: 238
 height: 134
-pin_template: GENERIC_DIGITAL_DUALPIN_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 16.22
-        y: 46.91
-        ref_to: GND
-      - x: 16.22
-        y: 58.96
-        ref_to: VCC
-      - x: 16.22
-        y: 71.1
-        ref_to: SIG2
-      - x: 16.22
-        y: 83.04
-        ref_to: SIG1
+    - x: 16.22
+      y: 46.91
+      pin_function: GND
+    - x: 16.22
+      y: 58.96
+      pin_function: VCC
+    - x: 16.22
+      y: 71.1
+      pin_function:
+      - DIGITAL_OUT
+      - DIGITAL_IN
+    - x: 16.22
+      y: 83.04
+      pin_function:
+      - DIGITAL_OUT
+      - DIGITAL_IN
 compatibility:
-  - name: Speech Recognizer
-    condition:
-      - name: Recognize
-        funcname: recognize
-        parameter:
-          - name: Word
-            value: ''
-            constraint: []
+- name: Speech Recognizer
+  condition:
+  - name: Recognize
+    funcname: recognize
+    parameter:
+    - name: Word
+      value: ''
+      constraint: []
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_GROVE_SPEECH_RECOGNIZER
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_GROVE_SPEECH_RECOGNIZER
-    library_dependency:
-      - plerup/espsoftwareserial-6.8.5
-  - platform: ARDUINO_ESP32
-    classname: MP_GROVE_SPEECH_RECOGNIZER
-    library_dependency:
-      - plerup/espsoftwareserial-6.8.5
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_GROVE_SPEECH_RECOGNIZER
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_GROVE_SPEECH_RECOGNIZER
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_GROVE_SPEECH_RECOGNIZER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_GROVE_SPEECH_RECOGNIZER
+  library_dependency:
+  - plerup/espsoftwareserial-6.8.5
+- platform: ARDUINO_ESP32
+  classname: MP_GROVE_SPEECH_RECOGNIZER
+  library_dependency:
+  - plerup/espsoftwareserial-6.8.5
+- platform: ARDUINO_ATSAMD21
+  classname: MP_GROVE_SPEECH_RECOGNIZER
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_GROVE_SPEECH_RECOGNIZER
+  library_dependency: []

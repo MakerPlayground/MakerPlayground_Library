@@ -1,4 +1,3 @@
----
 id: MP-Buzzer-V1
 brand: Maker Playground
 model: Buzzer v1.0
@@ -8,46 +7,48 @@ formfactor: MP_DEVICE
 width: 171
 height: 120
 property: []
-pin_template: GENERIC_PWM_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 102
-        y: 116
-        ref_to: GND
-      - x: 91
-        y: 119
-        ref_to: VCC
-      - x: 80
-        y: 119
-        ref_to: NC
-      - x: 69
-        y: 116
-        ref_to: SIG
+    - x: 102
+      y: 116
+      pin_function: GND
+    - x: 91
+      y: 119
+      pin_function: VCC
+    - x: 80
+      y: 119
+      pin_function: NO_FUNCTION
+    - x: 69
+      y: 116
+      pin_function: PWM_IN
 compatibility:
 - name: Buzzer
   action:
-    - name: Play Tone
-      parameter:
-      - name: Tone Frequency
-        constraint:
-          min: 0
-          max: 20000
-          unit: HERTZ
-      - name: Duration
-        constraint:
-          min: 0
-          max: 1000
-          unit: SECOND
-    - name: Beep
+  - name: Play Tone
+    parameter:
+    - name: Tone Frequency
+      constraint:
+        min: 0
+        max: 20000
+        unit: HERTZ
+    - name: Duration
+      constraint:
+        min: 0
+        max: 1000
+        unit: SECOND
+  - name: Beep
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_BUZZER
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BUZZER
+  library_dependency: []

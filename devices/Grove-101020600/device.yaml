@@ -3,84 +3,86 @@ brand: SeeedStudio
 model: Grove - I2C UV light Sensor - VEML6070
 url: https://www.seeedstudio.com/Grove-I2C-UV-Sensor-VEML6070.html
 type: MODULE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 width: 141
 height: 168
 property:
-  - name: Reading Mode
-    optional: true
-    value: in 125 ms
-    constraint:
-      - key: in 125 ms
-        value: 1
-      - key: in 250 ms
-        value: 2
-      - key: in 500 ms
-        value: 3
-    datatype: STRING_INT_ENUM
-    controltype: DROPDOWN
+- name: Reading Mode
+  optional: true
+  value: in 125 ms
+  constraint:
+  - key: in 125 ms
+    value: 1
+  - key: in 250 ms
+    value: 2
+  - key: in 500 ms
+    value: 3
+  datatype: STRING_INT_ENUM
+  controltype: DROPDOWN
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 26
-        y: 61.5
-        ref_to: GND
-      - x: 26
-        y: 75.5
-        ref_to: VCC
-      - x: 26
-        y: 90
-        ref_to: SDA
-      - x: 26
-        y: 104
-        ref_to: SCL
+    - x: 26
+      y: 61.5
+      pin_function: GND
+    - x: 26
+      y: 75.5
+      pin_function: VCC
+    - x: 26
+      y: 90
+      pin_function: SDA
+    - x: 26
+      y: 104
+      pin_function: SCL
 compatibility:
-  - name: UV Sensor
-    condition:
-      - name: Compare
-        funcname: ''
-      - name: Check Risk Level
-        funcname: checkRiskLevel
-        parameter:
-          - name: Risk Level
-            value: Low
-            constraint:
-              - key: Low
-                value: 1
-              - key: Moderate
-                value: 2
-              - key: High
-                value: 3
-              - key: Very High
-                value: 4
-              - key: Extreme
-                value: 5
-    value:
-    - name: UV Index
-      dataType: DOUBLE
+- name: UV Sensor
+  condition:
+  - name: Compare
+    funcname: ''
+  - name: Check Risk Level
+    funcname: checkRiskLevel
+    parameter:
+    - name: Risk Level
+      value: Low
       constraint:
-        min: 0
-        max: 11
-        unit: NOT_SPECIFIED
+      - key: Low
+        value: 1
+      - key: Moderate
+        value: 2
+      - key: High
+        value: 3
+      - key: Very High
+        value: 4
+      - key: Extreme
+        value: 5
+  value:
+  - name: UV Index
+    dataType: DOUBLE
+    constraint:
+      min: 0
+      max: 11
+      unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_VEML6070_270kOhm
-    library_dependency: 
-      - adafruit/Adafruit_VEML6070-1.0.4
-  - platform: ARDUINO_ESP8266
-    classname: MP_VEML6070_270kOhm
-    library_dependency:
-      - adafruit/Adafruit_VEML6070-1.0.4
-  - platform: ARDUINO_ESP32
-    classname: MP_VEML6070_270kOhm
-    library_dependency:
-      - adafruit/Adafruit_VEML6070-1.0.4
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_VEML6070_270kOhm
-    library_dependency:
-      - adafruit/Adafruit_VEML6070-1.0.4
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_VEML6070_270kOhm
-    library_dependency:
-      - adafruit/Adafruit_VEML6070-1.0.4
+- platform: ARDUINO_AVR8
+  classname: MP_VEML6070_270kOhm
+  library_dependency:
+  - adafruit/Adafruit_VEML6070-1.0.4
+- platform: ARDUINO_ESP8266
+  classname: MP_VEML6070_270kOhm
+  library_dependency:
+  - adafruit/Adafruit_VEML6070-1.0.4
+- platform: ARDUINO_ESP32
+  classname: MP_VEML6070_270kOhm
+  library_dependency:
+  - adafruit/Adafruit_VEML6070-1.0.4
+- platform: ARDUINO_ATSAMD21
+  classname: MP_VEML6070_270kOhm
+  library_dependency:
+  - adafruit/Adafruit_VEML6070-1.0.4
+- platform: ARDUINO_ATSAMD51
+  classname: MP_VEML6070_270kOhm
+  library_dependency:
+  - adafruit/Adafruit_VEML6070-1.0.4

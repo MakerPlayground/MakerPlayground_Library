@@ -703,7 +703,6 @@
       "title": "pin_object",
       "description": "The definition of the pin that is physically appeared on the device. It might be a pin header, pin hole, or pin that is sealed by the port. The pin is normally inherited from the pin in the pin_template defining in the Device Object section. The defined pin is able to be connected by or to the pin in other devices. In some board, the multiple pins are referenced to the same point in the circuit. Those pins will inherited from the same pin of the pin template. The function and voltage level of the pin are also inherited from referencing pin. However, you can overwrite the default function and/or voltage_level by defining those properties. This is the scenario when user wants to limit the pin functions such as A4 and A5 pins in Arduino UNO which are appropiate for ANALOG but not for I2C connection. Another example is a pin of the device that has a built-in level shifter circuit.",
       "required": [
-        "ref_to",
         "x",
         "y"
       ],
@@ -777,19 +776,12 @@
       "type": "object",
       "description": "The connection mapping defined the connection between the pin of the device to pin of the hosted device. However, the connection is connected inside the board so the X, Y position is not needed.",
       "required": [
-        "ref_to",
+        "pin_function",
         "host_ref_to"
       ],
       "properties": {
-        "ref_to": {
-          "title": "ref_to",
-          "description": "The pin name in the pin_template of the integrated device",
-          "type": "string",
-          "example": [
-            "DIGITAL_IN",
-            "VCC",
-            "GND"
-          ]
+        "pin_function": {
+          "$ref": "#/definitions/pin_function"
         },
         "host_ref_to": {
           "title": "ref_to",
@@ -874,7 +866,6 @@
       "type": "object",
       "required": [
         "name",
-        "pin_template",
         "integrated_connection",
         "compatibility",
         "platforms"
@@ -895,58 +886,6 @@
           "items": {
             "$ref": "#/definitions/property_object"
           }
-        },
-        "pin_template": {
-          "$id": "#/definitions/integrated_device_object/properties/pin_template",
-          "type": "string",
-          "title": "pin_template",
-          "description": "Name of the pin template file (without extension) that the device is relied on",
-          "examples": [
-            "ATMEGA328P"
-          ],
-          "enum": [
-            "ATMEGA328P",
-            "ATMEGA328PB",
-            "ATSAMD51",
-            "ESP_12",
-            "ESP_32",
-            "GENERIC_ANALOG_SENSOR_3v3",
-            "GENERIC_ANALOG_SENSOR_3v3_5",
-            "GENERIC_ANALOG_SENSOR_5",
-            "GENERIC_DIGITAL_ACTUATOR_3v3",
-            "GENERIC_DIGITAL_ACTUATOR_3v3_5",
-            "GENERIC_DIGITAL_ACTUATOR_5",
-            "GENERIC_DIGITAL_DUALPIN_3v3_5",
-            "GENERIC_DIGITAL_SENSOR_3v3",
-            "GENERIC_DIGITAL_SENSOR_3v3_5",
-            "GENERIC_DIGITAL_SENSOR_5",
-            "GENERIC_HX711",
-            "GENERIC_I2C_DEVICE_3v3",
-            "GENERIC_I2C_DEVICE_3v3_5",
-            "GENERIC_I2C_DEVICE_5",
-            "GENERIC_PWM_ACTUATOR_3v3",
-            "GENERIC_PWM_ACTUATOR_3v3_5",
-            "GENERIC_PWM_ACTUATOR_5",
-            "GENERIC_SOFTSERIAL_3v3_5",
-            "GENERIC_SOFTSERIAL_5",
-            "GENERIC_ULTRASONIC_3v3_5",
-            "IKB_1",
-            "INEX_JOYSTICK",
-            "M5_DISPLAY_TFCARD",
-            "MAKER_PLAYGROUND_RGB_LED",
-            "MOTOR_DRIVER_1CH_3v3_5",
-            "MOTOR_DRIVER_2CH_3v3_5",
-            "MP_SOIL",
-            "MP_SOIL_M5",
-            "MQ303A",
-            "NO_PIN",
-            "RASPBERRYPI_MODEL_B_PLUS",
-            "RASPBERRYPI_MODEL_B_PLUS_WITH_GROVE_HAT",
-            "RGB_PWM_3PINS_5",
-            "RS485_DEVICE",
-            "TCS3200",
-            "TM1637"
-          ]
         },
         "integrated_connection": {
           "$id": "#/definitions/integrated_device_object/properties/integrated_connection",
@@ -1182,20 +1121,81 @@
     },
     "connection_consume": {
       "$id": "#/properties/connection_consume",
-      "type": "array",
+      "type": "object",
       "title": "connection_consume",
-      "description": "Array of Connection Object (the ports appeared on the device). MakerPlayground will completely map them to the available ports of the controller or other devices. The order of the item in the array is belonged to the constructure of implementation class.",
-      "items": {
-        "$ref": "#/definitions/connection_object"
+      "required": [
+        "items",
+        "min_voltage",
+        "max_voltage"
+      ],
+      "properties": {
+        "min_voltage": {
+          "$id": "#/properties/connection_consume/properties/min_voltage",
+          "type": "number",
+          "title": "min_voltage",
+          "example": [
+            3.3
+          ]
+        },
+        "max_voltage": {
+          "$id": "#/properties/connection_consume/properties/min_voltage",
+          "type": "number",
+          "title": "min_voltage",
+          "example": [
+            5
+          ]
+        },
+        "voltage_level": {
+          "$ref": "#/definitions/voltage_level"
+        },
+        "items": {
+          "$id": "#/properties/connection_consume/properties/items",
+          "type": "array",
+          "title": "items",
+          "description": "connection items",
+          "items": {
+            "$ref": "#/definitions/connection_object"
+          }
+        }
       }
     },
     "connection_provide": {
       "$id": "#/properties/connection_provide",
-      "type": "array",
+      "type": "object",
       "title": "connection_provide",
-      "description": "Array of Connection Object (the ports appeared on the device). In MakerPlayground, these ports will supply their functions to other device or module.",
-      "items": {
-        "$ref": "#/definitions/connection_object"
+      "required": [
+        "voltage_level",
+        "items"
+      ],
+      "properties": {
+        "min_voltage": {
+          "$id": "#/properties/connection_provide/properties/min_voltage",
+          "type": "number",
+          "title": "min_voltage",
+          "example": [
+            3.3
+          ]
+        },
+        "max_voltage": {
+          "$id": "#/properties/connection_provide/properties/min_voltage",
+          "type": "number",
+          "title": "min_voltage",
+          "example": [
+            5
+          ]
+        },
+        "voltage_level": {
+          "$ref": "#/definitions/voltage_level"
+        },
+        "items": {
+          "$id": "#/properties/connection_provide/properties/items",
+          "type": "array",
+          "title": "items",
+          "description": "connection items",
+          "items": {
+            "$ref": "#/definitions/connection_object"
+          }
+        }
       }
     },
     "compatibility": {

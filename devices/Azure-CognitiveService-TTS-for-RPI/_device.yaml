@@ -6,37 +6,35 @@ type: VIRTUAL
 width: 0.0
 height: 0.0
 property:
-  - name: Key
-    datatype: AZURE_COGNITIVE_KEY
-    controltype: AZURE_WIZARD
-    constraint: []
-  - name: Max Translations / Minute
-    datatype: DOUBLE
-    controltype: SPINBOX
-    constraint:
-      min: 1
-      max: 30
-      unit: NOT_SPECIFIED
-    value: 10
-pin_template: NO_PIN
-connection_consume: []
+- name: Key
+  datatype: AZURE_COGNITIVE_KEY
+  controltype: AZURE_WIZARD
+  constraint: []
+- name: Max Translations / Minute
+  datatype: DOUBLE
+  controltype: SPINBOX
+  constraint:
+    min: 1
+    max: 30
+    unit: NOT_SPECIFIED
+  value: 10
 compatibility:
-  - name: Text to Speech
-    action:
-      - name: Convert to sound file
-        parameter:
-          - name: text
-            value: "Hello world"
-            constraint: []
-          - name: save file name
-            value: temp.wav
-            constraint: []
-      - name: Convert and play sound
-        parameter:
-          - name: text
-            value: "Hello world"
-            constraint: []
+- name: Text to Speech
+  action:
+  - name: Convert to sound file
+    parameter:
+    - name: text
+      value: Hello world
+      constraint: []
+    - name: save file name
+      value: temp.wav
+      constraint: []
+  - name: Convert and play sound
+    parameter:
+    - name: text
+      value: Hello world
+      constraint: []
 platforms:
-  - platform: RASPBERRYPI
-    classname: MP_Azure_Cognitive_Service_TTS
-    library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_Azure_Cognitive_Service_TTS
+  library_dependency: []

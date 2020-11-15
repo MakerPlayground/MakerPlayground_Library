@@ -7,59 +7,61 @@ width: 86
 height: 107
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: RGB_PWM_3PINS_5
 connection_consume:
+  min_voltage: 5
+  max_voltage: 5
+  items:
   - name: R
     type: WIRE
     pins:
-      - x: 35.144
-        y: 90.968
-        ref_to: R
+    - x: 35.144
+      y: 90.968
+      pin_function: PWM_IN
   - name: G
     type: WIRE
     pins:
-      - x: 63.944
-        y: 90.968
-        ref_to: G
+    - x: 63.944
+      y: 90.968
+      pin_function: PWM_IN
   - name: B
     type: WIRE
     pins:
-      - x: 49.544
-        y: 90.968
-        ref_to: B
+    - x: 49.544
+      y: 90.968
+      pin_function: PWM_IN
   - name: V
     type: WIRE
     pins:
-      - x: 20.744
-        y: 90.968
-        ref_to: VCC
+    - x: 20.744
+      y: 90.968
+      pin_function: VCC
 compatibility:
-  - name: RGB LED
-    action:
-      - name: 'On'
-        parameter:
-          - name: Red
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Green
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Blue
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Brightness
-            constraint:
-              min: 0
-              max: 100
-              unit: NOT_SPECIFIED
-      - name: 'Off'
+- name: RGB LED
+  action:
+  - name: 'On'
+    parameter:
+    - name: Red
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Green
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Blue
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+    - name: Brightness
+      constraint:
+        min: 0
+        max: 100
+        unit: NOT_SPECIFIED
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_RGB_LED_CA
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_RGB_LED_CA
+  library_dependency: []

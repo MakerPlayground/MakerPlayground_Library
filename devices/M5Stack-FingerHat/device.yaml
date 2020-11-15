@@ -5,66 +5,68 @@ url: https://m5stack.com/products/m5stickc-fingerprint-hatf1020sc
 type: MODULE
 width: 138
 height: 386
-pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: HAT
     type: M5HAT
     pins:
-      - x: 119
-        y: 204
-        ref_to: GND
-      - x: 104.6
-        y: 204
-        ref_to: NC
-      - x: 90.2
-        y: 204
-        ref_to: RX
-      - x: 75.8
-        y: 204
-        ref_to: NC
-      - x: 61.4
-        y: 204
-        ref_to: TX
-      - x: 47
-        y: 204
-        ref_to: NC
-      - x: 32.6
-        y: 204
-        ref_to: VCC
-      - x: 18.2
-        y: 204
-        ref_to: NC
+    - x: 119
+      y: 204
+      pin_function: GND
+    - x: 104.6
+      y: 204
+      pin_function: NO_FUNCTION
+    - x: 90.2
+      y: 204
+      pin_function: SW_SERIAL_RX
+    - x: 75.8
+      y: 204
+      pin_function: NO_FUNCTION
+    - x: 61.4
+      y: 204
+      pin_function: SW_SERIAL_TX
+    - x: 47
+      y: 204
+      pin_function: NO_FUNCTION
+    - x: 32.6
+      y: 204
+      pin_function: VCC
+    - x: 18.2
+      y: 204
+      pin_function: NO_FUNCTION
 compatibility:
-  - name: Fingerprint
-    action:
-      - name: Add Fingerprint
-        funcname: add
-      - name: Validate Fingerprint
-        funcname: validate
-      - name: Delete Fingerprint
-        funcname: delete
-        parameter:
-          - name: Index
-            value: 0
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-      - name: Delete All Fingerprints
-        funcname: deleteAll
-    condition:
-      - name: Add Success
-      - name: Add Fail
-      - name: Validate Success
-      - name: Validate Fail
-      - name: Delete Success
-      - name: Delete Fail
-    value:
-      - name: Finger Count
-        constraint:
-          min: 0
-          max: 254
-          unit: NOT_SPECIFIED
+- name: Fingerprint
+  action:
+  - name: Add Fingerprint
+    funcname: add
+  - name: Validate Fingerprint
+    funcname: validate
+  - name: Delete Fingerprint
+    funcname: delete
+    parameter:
+    - name: Index
+      value: 0
+      constraint:
+        min: 0
+        max: 255
+        unit: NOT_SPECIFIED
+  - name: Delete All Fingerprints
+    funcname: deleteAll
+  condition:
+  - name: Add Success
+  - name: Add Fail
+  - name: Validate Success
+  - name: Validate Fail
+  - name: Delete Success
+  - name: Delete Fail
+  value:
+  - name: Finger Count
+    constraint:
+      min: 0
+      max: 254
+      unit: NOT_SPECIFIED
 platforms:
 - platform: ARDUINO_ESP32
   classname: MP_M5STACK_FINGERHAT

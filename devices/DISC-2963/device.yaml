@@ -1,7 +1,7 @@
 id: DISC-2963
 brand: GRAVITECH
 model: Ayarafun/LamLoei Node32 Lite
-url: 'https://www.gravitechthai.com/product-detail.php?WP=qUEcoauypUEgoaqiGTAgG2rDqYyc4UuzpPMgZ3qCGWOghJstqUOcWatjpR9gxUr5GBOgMTqcqTIcqUuupTAgLaq1GUAgWzpjqR9cxUv5pBOgMUqcGTIgqTquqTAcWat3pQSgG3rDGYyg4TqxqTycM3tzpQugZKpmGQAgG2rDqYyc4Uuw'
+url: https://www.gravitechthai.com/product-detail.php?WP=qUEcoauypUEgoaqiGTAgG2rDqYyc4UuzpPMgZ3qCGWOghJstqUOcWatjpR9gxUr5GBOgMTqcqTIcqUuupTAgLaq1GUAgWzpjqR9cxUv5pBOgMUqcGTIgqTquqTAcWat3pQSgG3rDGYyg4TqxqTycM3tzpQugZKpmGQAgG2rDqYyc4Uuw
 type: CONTROLLER
 pio_boardid: esp32dev
 cloud_provide:
@@ -26,235 +26,236 @@ width: 278
 height: 144
 property: []
 connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
   - name: RAW
     type: WIRE
     pins:
-      - x: 9.2
-        y: 6.4
-        ref_to: "NF"
+    - x: 9.2
+      y: 6.4
+      ref_to: NF
   - name: IO11
     type: WIRE
     pins:
-      - x: 23.6
-        y: 6.4
-        ref_to: "11"
+    - x: 23.6
+      y: 6.4
+      ref_to: '11'
   - name: IO10
     type: WIRE
     pins:
-      - x: 38
-        y: 6.4
-        ref_to: "10"
+    - x: 38
+      y: 6.4
+      ref_to: '10'
   - name: IO09
     type: WIRE
     pins:
-      - x: 52.4
-        y: 6.4
-        ref_to: "9"
+    - x: 52.4
+      y: 6.4
+      ref_to: '9'
   - name: IO13
     type: WIRE
     pins:
-      - x: 66.8
-        y: 6.4
-        ref_to: "13"
+    - x: 66.8
+      y: 6.4
+      ref_to: '13'
   - name: GND1
     type: WIRE
     pins:
-      - x: 81.2
-        y: 6.4
-        ref_to: "GND"
+    - x: 81.2
+      y: 6.4
+      ref_to: GND
   - name: IO12
     type: WIRE
     pins:
-      - x: 95.6
-        y: 6.4
-        ref_to: "12"
+    - x: 95.6
+      y: 6.4
+      ref_to: '12'
   - name: IO14
     type: WIRE
     pins:
-      - x: 110.0
-        y: 6.4
-        ref_to: "14"
+    - x: 110.0
+      y: 6.4
+      ref_to: '14'
   - name: IO27
     type: WIRE
     pins:
-      - x: 124.4
-        y: 6.4
-        ref_to: "27"
+    - x: 124.4
+      y: 6.4
+      ref_to: '27'
   - name: IO26
     type: WIRE
     pins:
-      - x: 138.8
-        y: 6.4
-        ref_to: "26"
+    - x: 138.8
+      y: 6.4
+      ref_to: '26'
   - name: IO25
     type: WIRE
     pins:
-      - x: 153.2
-        y: 6.4
-        ref_to: "25"
+    - x: 153.2
+      y: 6.4
+      ref_to: '25'
   - name: IO33
     type: WIRE
     pins:
-      - x: 167.6
-        y: 6.4
-        ref_to: "33"
+    - x: 167.6
+      y: 6.4
+      ref_to: '33'
   - name: IO32
     type: WIRE
     pins:
-      - x: 182.0
-        y: 6.4
-        ref_to: "32"
+    - x: 182.0
+      y: 6.4
+      ref_to: '32'
   - name: IO35
     type: WIRE
     pins:
-      - x: 196.4
-        y: 6.4
-        ref_to: "35"
+    - x: 196.4
+      y: 6.4
+      ref_to: '35'
   - name: IO34
     type: WIRE
     pins:
-      - x: 210.8
-        y: 6.4
-        ref_to: "34"
+    - x: 210.8
+      y: 6.4
+      ref_to: '34'
   - name: IO39
     type: WIRE
     pins:
-      - x: 225.2
-        y: 6.4
-        ref_to: "39"
+    - x: 225.2
+      y: 6.4
+      ref_to: '39'
   - name: IO36
     type: WIRE
     pins:
-      - x: 239.6
-        y: 6.4
-        ref_to: "36"
+    - x: 239.6
+      y: 6.4
+      ref_to: '36'
   - name: EN
     type: WIRE
     pins:
-      - x: 254
-        y: 6.4
-        ref_to: "EN"
+    - x: 254
+      y: 6.4
+      ref_to: EN
   - name: 3V3
     type: WIRE
     pins:
-      - x: 268.4
-        y: 6.4
-        ref_to: "VCC"
-
+    - x: 268.4
+      y: 6.4
+      ref_to: VCC
   - name: IO06
     type: WIRE
     pins:
-      - x: 9.2
-        y: 135.8
-        ref_to: "6"
+    - x: 9.2
+      y: 135.8
+      ref_to: '6'
   - name: IO07
     type: WIRE
     pins:
-      - x: 23.6
-        y: 135.8
-        ref_to: "7"
+    - x: 23.6
+      y: 135.8
+      ref_to: '7'
   - name: IO08
     type: WIRE
     pins:
-      - x: 38
-        y: 135.8
-        ref_to: "8"
+    - x: 38
+      y: 135.8
+      ref_to: '8'
   - name: IO15
     type: WIRE
     pins:
-      - x: 52.4
-        y: 135.8
-        ref_to: "15"
+    - x: 52.4
+      y: 135.8
+      ref_to: '15'
   - name: IO02
     type: WIRE
     pins:
-      - x: 66.8
-        y: 135.8
-        ref_to: "2"
+    - x: 66.8
+      y: 135.8
+      ref_to: '2'
   - name: IO00
     type: WIRE
     pins:
-      - x: 81.2
-        y: 135.8
-        ref_to: "0"
+    - x: 81.2
+      y: 135.8
+      ref_to: '0'
   - name: IO04
     type: WIRE
     pins:
-      - x: 95.6
-        y: 135.8
-        ref_to: "4"
+    - x: 95.6
+      y: 135.8
+      ref_to: '4'
   - name: IO16
     type: WIRE
     pins:
-      - x: 110
-        y: 135.8
-        ref_to: "16"
+    - x: 110
+      y: 135.8
+      ref_to: '16'
   - name: IO17
     type: WIRE
     pins:
-      - x: 124.4
-        y: 135.8
-        ref_to: "17"
+    - x: 124.4
+      y: 135.8
+      ref_to: '17'
   - name: IO05
     type: WIRE
     pins:
-      - x: 138.8
-        y: 135.8
-        ref_to: "5"
+    - x: 138.8
+      y: 135.8
+      ref_to: '5'
   - name: IO18
     type: WIRE
     pins:
-      - x: 153.2
-        y: 135.8
-        ref_to: "18"
+    - x: 153.2
+      y: 135.8
+      ref_to: '18'
   - name: IO19
     type: WIRE
     pins:
-      - x: 167.6
-        y: 135.8
-        ref_to: "19"
+    - x: 167.6
+      y: 135.8
+      ref_to: '19'
   - name: GND2
     type: WIRE
     pins:
-      - x: 182
-        y: 135.8
-        ref_to: "GND"
+    - x: 182
+      y: 135.8
+      ref_to: GND
   - name: IO21
     type: WIRE
     pins:
-      - x: 196.4
-        y: 135.8
-        ref_to: "21"
+    - x: 196.4
+      y: 135.8
+      ref_to: '21'
   - name: IO03
     type: WIRE
     pins:
-      - x: 210.8
-        y: 135.8
-        ref_to: "3"
+    - x: 210.8
+      y: 135.8
+      ref_to: '3'
   - name: IO01
     type: WIRE
     pins:
-      - x: 225.2
-        y: 135.8
-        ref_to: "1"
+    - x: 225.2
+      y: 135.8
+      ref_to: '1'
   - name: IO22
     type: WIRE
     pins:
-      - x: 239.6
-        y: 135.8
-        ref_to: "22"
+    - x: 239.6
+      y: 135.8
+      ref_to: '22'
   - name: IO23
     type: WIRE
     pins:
-      - x: 254.0
-        y: 135.8
-        ref_to: "23"
+    - x: 254.0
+      y: 135.8
+      ref_to: '23'
   - name: GND
     type: WIRE
     pins:
-      - x: 268.4
-        y: 135.8
-        ref_to: "GND"
+    - x: 268.4
+      y: 135.8
+      ref_to: GND
 platforms:
 - platform: ARDUINO_ESP32
   classname: ''

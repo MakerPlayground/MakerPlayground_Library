@@ -7,63 +7,65 @@ width: 68
 height: 159
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VIN
     type: WIRE
     pins:
-      - x: 19.6
-        y: 158
-        ref_to: VCC
+    - x: 19.6
+      y: 158
+      pin_function: VCC
   - name: OUT
     type: WIRE
     pins:
-      - x: 34
-        y: 158
-        ref_to: SIG
+    - x: 34
+      y: 158
+      pin_function: DIGITAL_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 48.4
-        y: 158
-        ref_to: GND
+    - x: 48.4
+      y: 158
+      pin_function: GND
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-    value:
-      - name: Temperature
-        constraint:
-          min: 0
-          max: 50
-          unit: CELSIUS
+    constraint:
+      min: 0
+      max: 50
+      unit: CELSIUS
+- name: Humidity
+  condition:
+  - name: Compare
+  value:
   - name: Humidity
-    condition:
-      - name: Compare
-    value:
-      - name: Humidity
-        constraint:
-          min: 20
-          max: 80
-          unit: PERCENT
+    constraint:
+      min: 20
+      max: 80
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_DHT11
-    library_dependency:
-      - adafruit/Adafruit_Sensor-1.1.4
-      - adafruit/DHT-sensor-library-1.4.0
-  - platform: ARDUINO_ESP8266
-    classname: MP_DHT11
-    library_dependency:
-      - adafruit/Adafruit_Sensor-1.1.4
-      - adafruit/DHT-sensor-library-1.4.0
-  - platform: ARDUINO_ESP32
-    classname: MP_DHT11
-    library_dependency:
-      - adafruit/Adafruit_Sensor-1.1.4
-      - adafruit/DHT-sensor-library-1.4.0
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_DHT11
-    library_dependency:
-      - adafruit/Adafruit_Sensor-1.1.4
-      - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_AVR8
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ESP8266
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ESP32
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0

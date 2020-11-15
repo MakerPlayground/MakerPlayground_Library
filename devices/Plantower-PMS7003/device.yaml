@@ -5,69 +5,71 @@ url: http://www.plantower.com/en/content/?110.html
 type: MODULE
 width: 312
 height: 264
-pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 69
-        y: 264
-        ref_to: VCC
+    - x: 69
+      y: 264
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 81
-        y: 264
-        ref_to: GND
+    - x: 81
+      y: 264
+      pin_function: GND
   - name: TX
     type: WIRE
     pins:
-      - x: 45
-        y: 264
-        ref_to: TX
+    - x: 45
+      y: 264
+      pin_function: SW_SERIAL_TX
   - name: RX
     type: WIRE
     pins:
-      - x: 57
-        y: 264
-        ref_to: RX
+    - x: 57
+      y: 264
+      pin_function: SW_SERIAL_RX
 compatibility:
-  - name: Dust
-    condition:
-      - name: Compare
-        parameter: []
-      - name: Data is valid
-        parameter: []
-      - name: Data is not valid
-        parameter: []
-    value:
-      - name: Atmospheric PM 1.0
-        constraint:
-          min: 0
-          max: 1000
-          unit: MICROGRAMS_PER_CUBIC_METER
-      - name: Atmospheric PM 2.5
-        constraint:
-          min: 0
-          max: 1000
-          unit: MICROGRAMS_PER_CUBIC_METER
-      - name: Atmospheric PM 10
-        constraint:
-          min: 0
-          max: 1000
-          unit: MICROGRAMS_PER_CUBIC_METER
+- name: Dust
+  condition:
+  - name: Compare
+    parameter: []
+  - name: Data is valid
+    parameter: []
+  - name: Data is not valid
+    parameter: []
+  value:
+  - name: Atmospheric PM 1.0
+    constraint:
+      min: 0
+      max: 1000
+      unit: MICROGRAMS_PER_CUBIC_METER
+  - name: Atmospheric PM 2.5
+    constraint:
+      min: 0
+      max: 1000
+      unit: MICROGRAMS_PER_CUBIC_METER
+  - name: Atmospheric PM 10
+    constraint:
+      min: 0
+      max: 1000
+      unit: MICROGRAMS_PER_CUBIC_METER
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_PMS7003
-    library_dependency:
-      - fu-hsi/PMS-1.1.0
-  - platform: ARDUINO_ESP8266
-    classname: MP_PMS7003
-    library_dependency:
-      - fu-hsi/PMS-1.1.0
-      - plerup/espsoftwareserial-3.4.2
-  - platform: ARDUINO_ESP32
-    classname: MP_PMS7003
-    library_dependency:
-      - fu-hsi/PMS-1.1.0
-      - plerup/espsoftwareserial-master
+- platform: ARDUINO_AVR8
+  classname: MP_PMS7003
+  library_dependency:
+  - fu-hsi/PMS-1.1.0
+- platform: ARDUINO_ESP8266
+  classname: MP_PMS7003
+  library_dependency:
+  - fu-hsi/PMS-1.1.0
+  - plerup/espsoftwareserial-3.4.2
+- platform: ARDUINO_ESP32
+  classname: MP_PMS7003
+  library_dependency:
+  - fu-hsi/PMS-1.1.0
+  - plerup/espsoftwareserial-master

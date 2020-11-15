@@ -6,41 +6,43 @@ type: MODULE
 width: 171
 height: 114
 property: []
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 69
-        y: 0
-        ref_to: GND
-      - x: 80
-        y: 0
-        ref_to: VCC
-      - x: 91
-        y: 0
-        ref_to: NC
-      - x: 102
-        y: 0
-        ref_to: SIG
+    - x: 69
+      y: 0
+      pin_function: GND
+    - x: 80
+      y: 0
+      pin_function: VCC
+    - x: 91
+      y: 0
+      pin_function: NO_FUNCTION
+    - x: 102
+      y: 0
+      pin_function: DIGITAL_IN
 compatibility:
 - name: LED
   action:
-    - name: 'On'
-      parameter:
-      - name: Brightness
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-    - name: 'Off'
+  - name: 'On'
+    parameter:
+    - name: Brightness
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_LED_AH
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LED_AH
+  library_dependency: []

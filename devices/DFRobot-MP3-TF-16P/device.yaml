@@ -7,109 +7,114 @@ width: 182
 height: 127
 need_breadboard: true
 breadboard_placement: TWO_SIDES
-pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: RX
     type: WIRE
     pins:
-      - x: 0
-        y: 107.07
-        ref_to: RX
+    - x: 0
+      y: 107.07
+      pin_function: SW_SERIAL_RX
   - name: TX
     type: WIRE
     pins:
-      - x: 100.80
-        y: 107.07
-        ref_to: TX
+    - x: 100.8
+      y: 107.07
+      pin_function: SW_SERIAL_TX
   - name: VCC
     type: WIRE
     pins:
-      - x: 72
-        y: 107.07
-        ref_to: VCC
+    - x: 72
+      y: 107.07
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 158.4
-        y: 107.07
-        ref_to: GND
-connection_provide:
-  - name: NC
-    type: WIRE
-    pins:
-      - x: 72
-        y: 6.29
-        ref_to: NC
+    - x: 158.4
+      y: 107.07
+      pin_function: GND
+# TODO: implement the pin_template for this device
+# connection_provide:
+#   voltage_level: LEVEL_5
+#   items:
+#   - name: NC
+#     type: WIRE
+#     pins:
+#     - x: 72
+#       y: 6.29
+#       ref_to: NC
 compatibility:
-  - name: MP3 Player
-    action:
-      - name: Play MP3
-        parameter:
-        - name: Index
-          value: 1
-          constraint:
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-            - 6
-            - 7
-            - 8
-            - 9
-            - 10
-      - name: Play Next MP3
-      - name: Play Previous MP3
-      - name: Pause
-      - name: Start from pause
-      - name: Enable Loop
-      - name: Enable Loop All
-      - name: Disable Loop
-      - name: Disable Loop All
-      - name: Set Volume
-        parameter: 
-          - name: volume
-            constraint:
-              min: 0
-              max: 30
-              unit: NOT_SPECIFIED
-      - name: Volume Up
-      - name: Volume Down
-      - name: Set EQ
-        parameter:
-          - name: EQ
-            value: NORMAL
-            constraint:
-              - key: NORMAL
-                value: 0
-              - key: POP
-                value: 1
-              - key: ROCK
-                value: 2
-              - key: JAZZ
-                value: 3
-              - key: CLASSIC
-                value: 4
-              - key: BASS
-                value: 5
-    value:
-      - name: Volume
-        constraint:
-          min: 0
-          max: 30
-          unit: NOT_SPECIFIED
-      - name: FileCount
-        constraint:
-          min: 0
-          max: 65535
-          unit: NOT_SPECIFIED
-      - name: CurrentFileNumber
-        constraint:
-          min: 0
-          max: 65535
-          unit: NOT_SPECIFIED
+- name: MP3 Player
+  action:
+  - name: Play MP3
+    parameter:
+    - name: Index
+      value: 1
+      constraint:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+  - name: Play Next MP3
+  - name: Play Previous MP3
+  - name: Pause
+  - name: Start from pause
+  - name: Enable Loop
+  - name: Enable Loop All
+  - name: Disable Loop
+  - name: Disable Loop All
+  - name: Set Volume
+    parameter:
+    - name: volume
+      constraint:
+        min: 0
+        max: 30
+        unit: NOT_SPECIFIED
+  - name: Volume Up
+  - name: Volume Down
+  - name: Set EQ
+    parameter:
+    - name: EQ
+      value: NORMAL
+      constraint:
+      - key: NORMAL
+        value: 0
+      - key: POP
+        value: 1
+      - key: ROCK
+        value: 2
+      - key: JAZZ
+        value: 3
+      - key: CLASSIC
+        value: 4
+      - key: BASS
+        value: 5
+  value:
+  - name: Volume
+    constraint:
+      min: 0
+      max: 30
+      unit: NOT_SPECIFIED
+  - name: FileCount
+    constraint:
+      min: 0
+      max: 65535
+      unit: NOT_SPECIFIED
+  - name: CurrentFileNumber
+    constraint:
+      min: 0
+      max: 65535
+      unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_DF_MP3_PLAYER
-    library_dependency:
-      - DFRobot/DFRobotDFPlayerMini-1.0.5
+- platform: ARDUINO_AVR8
+  classname: MP_DF_MP3_PLAYER
+  library_dependency:
+  - DFRobot/DFRobotDFPlayerMini-1.0.5

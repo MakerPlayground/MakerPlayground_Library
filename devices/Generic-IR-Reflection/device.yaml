@@ -7,38 +7,40 @@ width: 80
 height: 205
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: OUT
     type: WIRE
     pins:
-      - x: 25.3
-        y: 194
-        ref_to: SIG
+    - x: 25.3
+      y: 194
+      pin_function: DIGITAL_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 39.7
-        y: 194
-        ref_to: GND
+    - x: 39.7
+      y: 194
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 54.1
-        y: 194
-        ref_to: VCC
+    - x: 54.1
+      y: 194
+      pin_function: VCC
 compatibility:
-  - name: Presence
-    condition:
-      - name: Detect Human
-      - name: No Human
+- name: Presence
+  condition:
+  - name: Detect Human
+  - name: No Human
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_IR_REFLECTOR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_IR_REFLECTOR
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_IR_REFLECTOR
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_IR_REFLECTOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_IR_REFLECTOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_IR_REFLECTOR
+  library_dependency: []

@@ -7,44 +7,46 @@ width: 66
 height: 159
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_PWM_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: V+
     type: WIRE
     pins:
-      - x: 15.0
-        y: 110.0
-        ref_to: SIG
+    - x: 15.0
+      y: 110.0
+      pin_function: PWM_IN
   - name: GND
     type: WIRE
     pins:
-      - x: 58.2
-        y: 153.2
-        ref_to: GND
+    - x: 58.2
+      y: 153.2
+      pin_function: GND
 compatibility:
-  - name: LED
-    action:
-      - name: 'On'
-        parameter:
-          - name: Brightness
-            constraint:
-              min: 0.0
-              max: 100.0
-              unit: PERCENT
-      - name: 'Off'
+- name: LED
+  action:
+  - name: 'On'
+    parameter:
+    - name: Brightness
+      constraint:
+        min: 0.0
+        max: 100.0
+        unit: PERCENT
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_LED_AH
-    library_dependency: []
-  - platform: RASPBERRYPI
-    classname: MP_PWM_LED_AH
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_LED_AH
+  library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_PWM_LED_AH
+  library_dependency: []

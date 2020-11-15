@@ -3,28 +3,27 @@ brand: NETPIE 2015
 model: Freeboard LED
 url: ''
 type: VIRTUAL
-pin_template: NO_PIN
 cloud_consume: NETPIE
 width: 50
 height: 50
 property:
-  - name: topic
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
+- name: topic
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
 compatibility:
-  - name: Virtual LED
-    action:
-    - name: 'On'
-    - name: 'Off'
+- name: Virtual LED
+  action:
+  - name: 'On'
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_NETPIE_VIRTUAL_LED
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_NETPIE_VIRTUAL_LED
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_NETPIE_VIRTUAL_LED
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_NETPIE_VIRTUAL_LED
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_NETPIE_VIRTUAL_LED
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_NETPIE_VIRTUAL_LED
+  library_dependency: []

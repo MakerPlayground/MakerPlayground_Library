@@ -6,119 +6,118 @@ type: MODULE
 formfactor: STANDALONE
 width: 198
 height: 198
-## Cannot align on breadboard because the pin distance
-# need_breadboard: true
-# breadboard_placement: TWO_SIDE
-pin_template: TCS3200
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VIN
     type: WIRE
     pins:
-      - x: 9.688
-        y: 62.938
-        ref_to: VCC
+    - x: 9.688
+      y: 62.938
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 9.688
-        y: 135.063
-        ref_to: GND
+    - x: 9.688
+      y: 135.063
+      pin_function: GND
   - name: S0
     type: WIRE
     pins:
-      - x: 9.688
-        y: 99.0
-        ref_to: S0
+    - x: 9.688
+      y: 99.0
+      pin_function: DIGITAL_IN
   - name: S1
     type: WIRE
     pins:
-      - x: 9.688
-        y: 81.0
-        ref_to: S1
+    - x: 9.688
+      y: 81.0
+      pin_function: DIGITAL_IN
   - name: S2
     type: WIRE
     pins:
-      - x: 187.375
-        y: 98.813
-        ref_to: S2
+    - x: 187.375
+      y: 98.813
+      pin_function: DIGITAL_IN
   - name: S3
     type: WIRE
     pins:
-      - x: 187.375
-        y: 80.813
-        ref_to: S3
+    - x: 187.375
+      y: 80.813
+      pin_function: DIGITAL_IN
   - name: OUT
     type: WIRE
     pins:
-      - x: 187.375
-        y: 116.813
-        ref_to: OUT
+    - x: 187.375
+      y: 116.813
+      pin_function: DIGITAL_OUT
   - name: LED
     type: WIRE
     pins:
-      - x: 9.688
-        y: 117.0
-        ref_to: LED
+    - x: 9.688
+      y: 117.0
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: Color
-    condition:
-      - name: Detect Color
-        parameter:
-        - name: Color
-          value: Red
-          constraint:
-            - key: Red
-              value: 0
-            - key: Green
-              value: 1
-            - key: Blue
-              value: 2
-            - key: Cyan
-              value: 3
-            - key: Magenta
-              value: 4
-            - key: Orange
-              value: 5
-            - key: Violet
-              value: 6
-            - key: White
-              value: 7
-            - key: Yellow
-              value: 8
-            - key: Black
-              value: 9
-    value:
-      - name: Red
-        constraint:
-          min: 0
-          max: 255
-          unit: NOT_SPECIFIED
-      - name: Green
-        constraint:
-          min: 0
-          max: 255
-          unit: NOT_SPECIFIED
-      - name: Blue
-        constraint:
-          min: 0
-          max: 255
-          unit: NOT_SPECIFIED
-      - name: Hue
-        constraint:
-          min: 0
-          max: 360
-          unit: NOT_SPECIFIED
-      - name: Saturation
-        constraint:
-          min: 0
-          max: 255
-          unit: NOT_SPECIFIED
-      - name: Value
-        constraint:
-          min: 0
-          max: 255
-          unit: NOT_SPECIFIED
+- name: Color
+  condition:
+  - name: Detect Color
+    parameter:
+    - name: Color
+      value: Red
+      constraint:
+      - key: Red
+        value: 0
+      - key: Green
+        value: 1
+      - key: Blue
+        value: 2
+      - key: Cyan
+        value: 3
+      - key: Magenta
+        value: 4
+      - key: Orange
+        value: 5
+      - key: Violet
+        value: 6
+      - key: White
+        value: 7
+      - key: Yellow
+        value: 8
+      - key: Black
+        value: 9
+  value:
+  - name: Red
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Green
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Blue
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Hue
+    constraint:
+      min: 0
+      max: 360
+      unit: NOT_SPECIFIED
+  - name: Saturation
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Value
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TCS3200
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_TCS3200
+  library_dependency: []

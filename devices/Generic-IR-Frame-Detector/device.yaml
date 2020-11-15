@@ -1,46 +1,50 @@
 id: Generic-IR-Frame-Detector
 brand: Generic
 model: Infrared IR Flame Detector Sensor Module
-url: https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-เซนเซอร์-ตรวจจับเปลวไฟด้วย-infrared
+url: "https://www.arduinoall.com/product/835/infrared-ir-flame-detector-sensor-module-\u0E40\
+  \u0E0B\u0E19\u0E40\u0E0B\u0E2D\u0E23\u0E4C-\u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\u0E1A\
+  \u0E40\u0E1B\u0E25\u0E27\u0E44\u0E1F\u0E14\u0E49\u0E27\u0E22-infrared"
 type: MODULE
 width: 80
 height: 244
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: A0
     type: WIRE
     pins:
-      - x: 18.5
-        y: 244
-        ref_to: SIG
+    - x: 18.5
+      y: 244
+      pin_function: ANALOG_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 32.9
-        y: 244
-        ref_to: GND
+    - x: 32.9
+      y: 244
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 61.7
-        y: 244
-        ref_to: VCC
+    - x: 61.7
+      y: 244
+      pin_function: VCC
 compatibility:
-  - name: Flame
-    condition:
-      - name: Compare
-    value:
-      - name: Percent
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
+- name: Flame
+  condition:
+  - name: Compare
+  value:
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_FLYINGFISH_FLAME_DETECTOR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_FLYINGFISH_FLAME_DETECTOR
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_FLYINGFISH_FLAME_DETECTOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_FLYINGFISH_FLAME_DETECTOR
+  library_dependency: []

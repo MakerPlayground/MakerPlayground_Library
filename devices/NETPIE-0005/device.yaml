@@ -6,30 +6,29 @@ type: VIRTUAL
 cloud_consume: NETPIE
 width: 50
 height: 50
-pin_template: NO_PIN
 property:
-  - name: Feed ID
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
-  - name: API Key
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
+- name: Feed ID
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
+- name: API Key
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
 compatibility:
-  - name: Telemetry
-    action:
-      - name: Send Telemetry
-        parameter:
-          - name: data
-            value: ''
-            constraint: []
+- name: Telemetry
+  action:
+  - name: Send Telemetry
+    parameter:
+    - name: data
+      value: ''
+      constraint: []
 platforms:
-  - platform: ARDUINO_ESP8266
-    classname: MP_NETPIE_FEED
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_NETPIE_FEED
-    library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_NETPIE_FEED
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_NETPIE_FEED
+  library_dependency: []

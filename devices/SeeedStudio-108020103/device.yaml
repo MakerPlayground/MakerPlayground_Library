@@ -5,66 +5,69 @@ url: https://www.seeedstudio.com/Grove-I2C-Motor-Driver-TB6612FNG-p-3220.html
 type: MODULE
 width: 334
 height: 230
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 26
-        y: 100
-        ref_to: GND
-      - x: 26
-        y: 111.3
-        ref_to: VCC
-      - x: 26
-        y: 122.6
-        ref_to: SDA
-      - x: 26
-        y: 133.9
-        ref_to: SCL
-connection_provide: []
+    - x: 26
+      y: 100
+      pin_function: GND
+    - x: 26
+      y: 111.3
+      pin_function: VCC
+    - x: 26
+      y: 122.6
+      pin_function: SDA
+    - x: 26
+      y: 133.9
+      pin_function: SCL
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items: []
 compatibility:
-  - name: DC Motor Driver
-    action:
-      - name: 'On'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-          - name: Direction
-            value: Forward
-          - name: Speed
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-      - name: 'Off'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-            datatype: INTEGER_ENUM
-            controltype: DROPDOWN
-# TODO: Add Stepper Motor
+- name: DC Motor Driver
+  action:
+  - name: 'On'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+    - name: Direction
+      value: Forward
+    - name: Speed
+      value: 100
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: 'Off'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+      datatype: INTEGER_ENUM
+      controltype: DROPDOWN
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TB6612FNG
-    library_dependency:
-      - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
-  - platform: ARDUINO_ESP8266
-    classname: MP_TB6612FNG
-    library_dependency:
-      - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
-  - platform: ARDUINO_ESP32
-    classname: MP_TB6612FNG
-    library_dependency:
-      - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_TB6612FNG
-    library_dependency:
-      - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+- platform: ARDUINO_AVR8
+  classname: MP_TB6612FNG
+  library_dependency:
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+- platform: ARDUINO_ESP8266
+  classname: MP_TB6612FNG
+  library_dependency:
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+- platform: ARDUINO_ESP32
+  classname: MP_TB6612FNG
+  library_dependency:
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+- platform: ARDUINO_ATSAMD51
+  classname: MP_TB6612FNG
+  library_dependency:
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2

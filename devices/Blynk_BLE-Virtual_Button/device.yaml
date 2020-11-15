@@ -6,28 +6,27 @@ type: VIRTUAL
 cloud_consume: BLYNK_BLE
 width: 50
 height: 50
-pin_template: NO_PIN
 property:
-  - name: virtual pin
-    datatype: INTEGER_ENUM
-    controltype: DROPDOWN
-    value: 0
-    constraint:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
+- name: virtual pin
+  datatype: INTEGER_ENUM
+  controltype: DROPDOWN
+  value: 0
+  constraint:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
 compatibility:
-  - name: Virtual Button
-    condition:
-      - name: Press
-      - name: Press and release
-      - name: Not press
+- name: Virtual Button
+  condition:
+  - name: Press
+  - name: Press and release
+  - name: Not press
 platforms:
-  - platform: ARDUINO_ESP32
-    classname: MP_BLYNK_VIRTUAL_BUTTON
-    library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BLYNK_VIRTUAL_BUTTON
+  library_dependency: []

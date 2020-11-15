@@ -7,53 +7,55 @@ width: 86.4
 height: 100.8
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VIN
     type: WIRE
     pins:
-      - x: 14.4
-        y: 86.401
-        ref_to: VCC
+    - x: 14.4
+      y: 86.401
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 43.2
-        y: 86.401
-        ref_to: GND
+    - x: 43.2
+      y: 86.401
+      pin_function: GND
   - name: SCL
     type: WIRE
     pins:
-      - x: 57.6
-        y: 86.401
-        ref_to: SCL
+    - x: 57.6
+      y: 86.401
+      pin_function: SCL
   - name: SDA
     type: WIRE
     pins:
-      - x: 72.0
-        y: 86.401
-        ref_to: SDA
+    - x: 72.0
+      y: 86.401
+      pin_function: SDA
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-    value:
-      - name: Temperature
-        constraint:
-          min: -10.0
-          max: 85.0
-          unit: CELSIUS
+    constraint:
+      min: -10.0
+      max: 85.0
+      unit: CELSIUS
+- name: Humidity
+  condition:
+  - name: Compare
+  value:
   - name: Humidity
-    condition:
-      - name: Compare
-    value:
-      - name: Humidity
-        constraint:
-          min: 0.0
-          max: 80.0
-          unit: PERCENT
+    constraint:
+      min: 0.0
+      max: 80.0
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_SI7021
-    library_dependency:
-      - adafruit/Adafruit_Si7021
+- platform: ARDUINO_AVR8
+  classname: MP_SI7021
+  library_dependency:
+  - adafruit/Adafruit_Si7021

@@ -1,7 +1,6 @@
 id: LINE-Notify
 brand: LINE
 model: Notify
-pin_template: NO_PIN
 url: https://notify-bot.line.me/en/
 cloud_consume: REST
 type: VIRTUAL

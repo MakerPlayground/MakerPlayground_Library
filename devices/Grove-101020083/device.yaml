@@ -3,25 +3,27 @@ brand: SeeedStudio
 model: Grove - Gesture Sensor
 url: https://www.seeedstudio.com/Grove-Gesture-PAJ7620U2.html
 type: MODULE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 width: 169
 height: 142
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 64
-        y: 117
-        ref_to: GND
-      - x: 78.4
-        y: 117
-        ref_to: VCC
-      - x: 92.8
-        y: 117
-        ref_to: SDA
-      - x: 107.2
-        y: 117
-        ref_to: SCL
+    - x: 64
+      y: 117
+      pin_function: GND
+    - x: 78.4
+      y: 117
+      pin_function: VCC
+    - x: 92.8
+      y: 117
+      pin_function: SDA
+    - x: 107.2
+      y: 117
+      pin_function: SCL
 compatibility:
 - name: Gesture
   condition:

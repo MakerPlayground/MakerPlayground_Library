@@ -7,44 +7,46 @@ width: 116.0
 height: 116.0
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 14.5
-        y: 101.5
-        ref_to: VCC
+    - x: 14.5
+      y: 101.5
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 28.9
-        y: 101.5
-        ref_to: GND
+    - x: 28.9
+      y: 101.5
+      pin_function: GND
   - name: SDA
     type: WIRE
     pins:
-      - x: 43.3
-        y: 101.5
-        ref_to: SDA
+    - x: 43.3
+      y: 101.5
+      pin_function: SDA
   - name: SCL
     type: WIRE
     pins:
-      - x: 57.7
-        y: 101.5
-        ref_to: SCL
+    - x: 57.7
+      y: 101.5
+      pin_function: SCL
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-    value:
-      - name: Temperature
-        constraint: 
-          min: -40.0
-          max: 125.0
-          unit: CELSIUS
+    constraint:
+      min: -40.0
+      max: 125.0
+      unit: CELSIUS
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TMP007
-    library_dependency:
-      - adafruit/Adafruit_TMP007_Library
+- platform: ARDUINO_AVR8
+  classname: MP_TMP007
+  library_dependency:
+  - adafruit/Adafruit_TMP007_Library

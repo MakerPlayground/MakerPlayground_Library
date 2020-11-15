@@ -5,35 +5,37 @@ url: ''
 type: MODULE
 width: 108
 height: 246
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 37
-        y: 230
-        ref_to: GND
-      - x: 48
-        y: 230
-        ref_to: VCC
-      - x: 59
-        y: 230
-        ref_to: NC
-      - x: 70
-        y: 230
-        ref_to: SIG
+    - x: 37
+      y: 230
+      pin_function: GND
+    - x: 48
+      y: 230
+      pin_function: VCC
+    - x: 59
+      y: 230
+      pin_function: NO_FUNCTION
+    - x: 70
+      y: 230
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: Relay Module
-    action:
-      - name: 'On'
-      - name: 'Off'
+- name: Relay Module
+  action:
+  - name: 'On'
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_RELAY
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_RELAY
+  library_dependency: []

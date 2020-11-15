@@ -6,41 +6,43 @@ type: MODULE
 formfactor: MP_DEVICE
 width: 124
 height: 108
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 46
-        y: 101
-        ref_to: GND
-      - x: 57
-        y: 101
-        ref_to: VCC
-      - x: 68
-        y: 101
-        ref_to: NC
-      - x: 79
-        y: 101
-        ref_to: SIG
+    - x: 46
+      y: 101
+      pin_function: GND
+    - x: 57
+      y: 101
+      pin_function: VCC
+    - x: 68
+      y: 101
+      pin_function: NO_FUNCTION
+    - x: 79
+      y: 101
+      pin_function: ANALOG_OUT
 compatibility:
 - name: Light
   condition:
-    - name: Compare
-      parameter: []
+  - name: Compare
+    parameter: []
   value:
-    - name: Percent
-      constraint:
-        min: 0
-        max: 100
-        unit: PERCENT
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_LIGHT_SENSOR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_LIGHT_SENSOR
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_LIGHT_SENSOR
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LIGHT_SENSOR
+  library_dependency: []

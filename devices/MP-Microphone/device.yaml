@@ -5,40 +5,42 @@ url: ''
 type: MODULE
 width: 124
 height: 108
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 46
-        y: 109
-        ref_to: GND
-      - x: 57
-        y: 109
-        ref_to: VCC
-      - x: 68
-        y: 109
-        ref_to: NC
-      - x: 79
-        y: 109
-        ref_to: SIG
+    - x: 46
+      y: 109
+      pin_function: GND
+    - x: 57
+      y: 109
+      pin_function: VCC
+    - x: 68
+      y: 109
+      pin_function: NO_FUNCTION
+    - x: 79
+      y: 109
+      pin_function: ANALOG_OUT
 compatibility:
 - name: Sound
   condition:
-    - name: Compare
+  - name: Compare
   value:
-    - name: SoundLevel
-      constraint:
-        min: 0.0
-        max: 100.0
-        unit: PERCENT
+  - name: SoundLevel
+    constraint:
+      min: 0.0
+      max: 100.0
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MICROPHONE_NORMALIZED
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_MICROPHONE_NORMALIZED
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_MICROPHONE_NORMALIZED
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_MICROPHONE_NORMALIZED
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_MICROPHONE_NORMALIZED
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_MICROPHONE_NORMALIZED
+  library_dependency: []

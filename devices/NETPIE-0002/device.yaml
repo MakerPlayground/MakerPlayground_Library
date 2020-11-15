@@ -3,7 +3,6 @@ brand: NETPIE 2015
 model: Freeboard Gauge
 url: ''
 type: VIRTUAL
-pin_template: NO_PIN
 cloud_consume: NETPIE
 width: 50
 height: 50
@@ -14,26 +13,26 @@ property:
   value: ''
   constraint: []
 compatibility:
-  - name: Virtual Gauge
-    action:
-      - name: Display number
-        parameter:
-          - name: Value
-            value: 0
-            constraint:
-              min: -99999999
-              max: 99999999
-              unit: NOT_SPECIFIED
-            datatype: DOUBLE
-            controltype: SPINBOX
-    value: []
+- name: Virtual Gauge
+  action:
+  - name: Display number
+    parameter:
+    - name: Value
+      value: 0
+      constraint:
+        min: -99999999
+        max: 99999999
+        unit: NOT_SPECIFIED
+      datatype: DOUBLE
+      controltype: SPINBOX
+  value: []
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_NETPIE_VIRTUAL_GAUGE
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_NETPIE_VIRTUAL_GAUGE
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_NETPIE_VIRTUAL_GAUGE
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_NETPIE_VIRTUAL_GAUGE
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_NETPIE_VIRTUAL_GAUGE
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_NETPIE_VIRTUAL_GAUGE
+  library_dependency: []

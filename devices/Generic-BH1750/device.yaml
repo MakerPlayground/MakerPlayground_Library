@@ -6,66 +6,68 @@ type: MODULE
 width: 79
 height: 105
 property:
-  - name: Pull-Up ADDR
-    datatype: BOOLEAN_ENUM
-    controltype: DROPDOWN
-    value: 'false'
-    constraint:
-      - 'true'
-      - 'false'
+- name: Pull-Up ADDR
+  datatype: BOOLEAN_ENUM
+  controltype: DROPDOWN
+  value: 'false'
+  constraint:
+  - 'true'
+  - 'false'
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: SDA
     type: WIRE
     pins:
-      - x: 26
-        y: 98
-        ref_to: SDA
+    - x: 26
+      y: 98
+      pin_function: SDA
   - name: SCL
     type: WIRE
     pins:
-      - x: 40.4
-        y: 98
-        ref_to: SCL
+    - x: 40.4
+      y: 98
+      pin_function: SCL
   - name: GND
     type: WIRE
     pins:
-      - x: 54.8
-        y: 98
-        ref_to: GND
+    - x: 54.8
+      y: 98
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 69.2
-        y: 98
-        ref_to: VCC
+    - x: 69.2
+      y: 98
+      pin_function: VCC
 compatibility:
-  - name: Light
-    condition:
-      - name: Compare
-    value:
-      - name: Percent
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
-      - name: Intensity
-        constraint:
-          min: 0
-          max: 65535
-          unit: LUX
+- name: Light
+  condition:
+  - name: Compare
+  value:
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
+  - name: Intensity
+    constraint:
+      min: 0
+      max: 65535
+      unit: LUX
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BH1750
-    library_dependency:
-      - claws/BH1750
-  - platform: ARDUINO_ESP8266
-    classname: MP_BH1750
-    library_dependency:
-      - claws/BH1750
-  - platform: ARDUINO_ESP32
-    classname: MP_BH1750
-    library_dependency:
-      - claws/BH1750
+- platform: ARDUINO_AVR8
+  classname: MP_BH1750
+  library_dependency:
+  - claws/BH1750
+- platform: ARDUINO_ESP8266
+  classname: MP_BH1750
+  library_dependency:
+  - claws/BH1750
+- platform: ARDUINO_ESP32
+  classname: MP_BH1750
+  library_dependency:
+  - claws/BH1750

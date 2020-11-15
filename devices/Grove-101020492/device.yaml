@@ -5,86 +5,88 @@ url: https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html
 type: MODULE
 width: 171
 height: 141
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 105
-        y: 25
-        ref_to: GND
-      - x: 90.6
-        y: 25
-        ref_to: VCC
-      - x: 76.2
-        y: 25
-        ref_to: SDA
-      - x: 61.8
-        y: 25
-        ref_to: SCL
+    - x: 105
+      y: 25
+      pin_function: GND
+    - x: 90.6
+      y: 25
+      pin_function: VCC
+    - x: 76.2
+      y: 25
+      pin_function: SDA
+    - x: 61.8
+      y: 25
+      pin_function: SCL
 compatibility:
-  - name: Magnetometer
-    condition:
-      - name: Compare
-      - name: Direction
-        parameter:
-        - name: Direction
-          constraint:
-            - key: North
-              value: 0
-            - key: NorthEast
-              value: 1
-            - key: East
-              value: 2
-            - key: SouthEast
-              value: 3
-            - key: South
-              value: 4
-            - key: SouthWest
-              value: 5
-            - key: West
-              value: 6
-            - key: NorthWest
-              value: 7
-    value:
-      - name: Mag_X
-        constraint:
-          min: -200
-          max: 200
-          unit: MICROTESLA
-      - name: Mag_Y
-        constraint:
-          min: -200
-          max: 200
-          unit: MICROTESLA
-      - name: Mag_Z
-        constraint:
-          min: -200
-          max: 200
-          unit: MICROTESLA
-      - name: Heading
-        constraint:
-          min: 0
-          max: 360
-          unit: DEGREE
+- name: Magnetometer
+  condition:
+  - name: Compare
+  - name: Direction
+    parameter:
+    - name: Direction
+      constraint:
+      - key: North
+        value: 0
+      - key: NorthEast
+        value: 1
+      - key: East
+        value: 2
+      - key: SouthEast
+        value: 3
+      - key: South
+        value: 4
+      - key: SouthWest
+        value: 5
+      - key: West
+        value: 6
+      - key: NorthWest
+        value: 7
+  value:
+  - name: Mag_X
+    constraint:
+      min: -200
+      max: 200
+      unit: MICROTESLA
+  - name: Mag_Y
+    constraint:
+      min: -200
+      max: 200
+      unit: MICROTESLA
+  - name: Mag_Z
+    constraint:
+      min: -200
+      max: 200
+      unit: MICROTESLA
+  - name: Heading
+    constraint:
+      min: 0
+      max: 360
+      unit: DEGREE
 platforms:
 - platform: ARDUINO_AVR8
   classname: MP_BMM150
   library_dependency:
-    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+  - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
 - platform: ARDUINO_ESP8266
   classname: MP_BMM150
   library_dependency:
-    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+  - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
 - platform: ARDUINO_ESP32
   classname: MP_BMM150
   library_dependency:
-    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+  - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
 - platform: ARDUINO_ATSAMD21
   classname: MP_BMM150
   library_dependency:
-    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+  - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
 - platform: ARDUINO_ATSAMD51
   classname: MP_BMM150
   library_dependency:
-    - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0
+  - SeeedStudio/Grove_3_Axis_Compass_V2.0_BMM150-1.0.0

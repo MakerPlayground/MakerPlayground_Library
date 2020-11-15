@@ -5,71 +5,72 @@ url: ''
 type: MODULE
 width: 136
 height: 90.7
-pin_template: GENERIC_HX711
 property:
-  - name: scale
-    datatype: DOUBLE
-    controltype: SPINBOX
-    value: 22000
-    constraint:
-      min: -50000
-      max: 50000
-      unit: NOT_SPECIFIED
+- name: scale
+  datatype: DOUBLE
+  controltype: SPINBOX
+  value: 22000
+  constraint:
+    min: -50000
+    max: 50000
+    unit: NOT_SPECIFIED
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: GND
     type: WIRE
     pins:
-      - x: 126.9
-        y: 23.6
-        ref_to: GND
-  # The order of DT and SCK pins will affect to the codegen. Do keeping them in order.
+    - x: 126.9
+      y: 23.6
+      pin_function: GND
   - name: DT
     type: WIRE
     pins:
-      - x: 126.9
-        y: 38
-        ref_to: DT
+    - x: 126.9
+      y: 38
+      pin_function: DIGITAL_OUT
   - name: SCK
     type: WIRE
     pins:
-      - x: 126.9
-        y: 52.4
-        ref_to: SCK
+    - x: 126.9
+      y: 52.4
+      pin_function: DIGITAL_IN
   - name: VIN
     type: WIRE
     pins:
-      - x: 126.9
-        y: 66.8
-        ref_to: VCC
+    - x: 126.9
+      y: 66.8
+      pin_function: VCC
 compatibility:
+- name: Weight
+  action:
+  - name: Set zero weight
+  - name: Set scale
+    parameter:
+    - name: scale
+      constraint:
+        min: -50000
+        max: 50000
+        unit: NOT_SPECIFIED
+  condition:
+  - name: Compare
+  value:
   - name: Weight
-    action:
-      - name: Set zero weight
-      - name: Set scale
-        parameter:
-          - name: scale
-            constraint:
-              min: -50000
-              max: 50000
-              unit: NOT_SPECIFIED
-    condition:
-      - name: Compare
-    value:
-      - name: Weight
-        constraint:
-          min: -200
-          max: 200
-          unit: KILOGRAM
+    constraint:
+      min: -200
+      max: 200
+      unit: KILOGRAM
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_HX711
-    library_dependency:
-    - 'bogde/HX711-0.7.3'
-  - platform: ARDUINO_ESP8266
-    classname: MP_HX711
-    library_dependency:
-    - 'bogde/HX711-0.7.3'
-  - platform: ARDUINO_ESP32
-    classname: MP_HX711
-    library_dependency:
-    - 'bogde/HX711-0.7.3'
+- platform: ARDUINO_AVR8
+  classname: MP_HX711
+  library_dependency:
+  - bogde/HX711-0.7.3
+- platform: ARDUINO_ESP8266
+  classname: MP_HX711
+  library_dependency:
+  - bogde/HX711-0.7.3
+- platform: ARDUINO_ESP32
+  classname: MP_HX711
+  library_dependency:
+  - bogde/HX711-0.7.3

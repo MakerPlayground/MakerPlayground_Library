@@ -5,529 +5,531 @@ url: https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html
 type: CONTROLLER
 pio_boardid: ''
 cloud_provide:
-  - cloud_platform: AZURE
-    classname: ''
-    library_dependency: []
+- cloud_platform: AZURE
+  classname: ''
+  library_dependency: []
 width: 500
 height: 334
 pin_template: RASPBERRYPI_MODEL_B_PLUS_WITH_GROVE_HAT
 connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
   - name: '1'
     type: WIRE
     pins:
-      - x: 48.0
-        y: 28.0
-        ref_to: '1'
+    - x: 48.0
+      y: 28.0
+      ref_to: '1'
   - name: '2'
     type: WIRE
     pins:
-      - x: 48.0
-        y: 13.0
-        ref_to: '2'
+    - x: 48.0
+      y: 13.0
+      ref_to: '2'
   - name: '3'
     type: WIRE
     pins:
-      - x: 63.0
-        y: 28.0
-        ref_to: '3'
+    - x: 63.0
+      y: 28.0
+      ref_to: '3'
   - name: '4'
     type: WIRE
     pins:
-      - x: 63.0
-        y: 13.0
-        ref_to: '4'
+    - x: 63.0
+      y: 13.0
+      ref_to: '4'
   - name: '5'
     type: WIRE
     pins:
-      - x: 77.0
-        y: 28.0
-        ref_to: '5'
+    - x: 77.0
+      y: 28.0
+      ref_to: '5'
   - name: '6'
     type: WIRE
     pins:
-      - x: 77.0
-        y: 13.0
-        ref_to: '6'
+    - x: 77.0
+      y: 13.0
+      ref_to: '6'
   - name: '7'
     type: WIRE
     pins:
-      - x: 91.0
-        y: 28.0
-        ref_to: '7'
+    - x: 91.0
+      y: 28.0
+      ref_to: '7'
   - name: '8'
     type: WIRE
     pins:
-      - x: 91.0
-        y: 13.0
-        ref_to: '8'
+    - x: 91.0
+      y: 13.0
+      ref_to: '8'
   - name: '9'
     type: WIRE
     pins:
-      - x: 105.0
-        y: 28.0
-        ref_to: '9'
+    - x: 105.0
+      y: 28.0
+      ref_to: '9'
   - name: '10'
     type: WIRE
     pins:
-      - x: 105.0
-        y: 13.0
-        ref_to: '10'
+    - x: 105.0
+      y: 13.0
+      ref_to: '10'
   - name: '11'
     type: WIRE
     pins:
-      - x: 119.0
-        y: 28.0
-        ref_to: '11'
+    - x: 119.0
+      y: 28.0
+      ref_to: '11'
   - name: '12'
     type: WIRE
     pins:
-      - x: 119.0
-        y: 13.0
-        ref_to: '12'
+    - x: 119.0
+      y: 13.0
+      ref_to: '12'
   - name: '13'
     type: WIRE
     pins:
-      - x: 134.0
-        y: 28.0
-        ref_to: '13'
+    - x: 134.0
+      y: 28.0
+      ref_to: '13'
   - name: '14'
     type: WIRE
     pins:
-      - x: 134.0
-        y: 13.0
-        ref_to: '14'
+    - x: 134.0
+      y: 13.0
+      ref_to: '14'
   - name: '15'
     type: WIRE
     pins:
-      - x: 148.0
-        y: 28.0
-        ref_to: '15'
+    - x: 148.0
+      y: 28.0
+      ref_to: '15'
   - name: '16'
     type: WIRE
     pins:
-      - x: 148.0
-        y: 13.0
-        ref_to: '16'
+    - x: 148.0
+      y: 13.0
+      ref_to: '16'
   - name: '17'
     type: WIRE
     pins:
-      - x: 162.0
-        y: 28.0
-        ref_to: '17'
+    - x: 162.0
+      y: 28.0
+      ref_to: '17'
   - name: '18'
     type: WIRE
     pins:
-      - x: 162.0
-        y: 13.0
-        ref_to: '18'
+    - x: 162.0
+      y: 13.0
+      ref_to: '18'
   - name: '19'
     type: WIRE
     pins:
-      - x: 177.0
-        y: 28.0
-        ref_to: '19'
+    - x: 177.0
+      y: 28.0
+      ref_to: '19'
   - name: '20'
     type: WIRE
     pins:
-      - x: 177.0
-        y: 13.0
-        ref_to: '20'
+    - x: 177.0
+      y: 13.0
+      ref_to: '20'
   - name: '21'
     type: WIRE
     pins:
-      - x: 191.0
-        y: 28.0
-        ref_to: '21'
+    - x: 191.0
+      y: 28.0
+      ref_to: '21'
   - name: '22'
     type: WIRE
     pins:
-      - x: 191.0
-        y: 13.0
-        ref_to: '22'
+    - x: 191.0
+      y: 13.0
+      ref_to: '22'
   - name: '23'
     type: WIRE
     pins:
-      - x: 205.0
-        y: 28.0
-        ref_to: '23'
+    - x: 205.0
+      y: 28.0
+      ref_to: '23'
   - name: '24'
     type: WIRE
     pins:
-      - x: 205.0
-        y: 13.0
-        ref_to: '24'
+    - x: 205.0
+      y: 13.0
+      ref_to: '24'
   - name: '25'
     type: WIRE
     pins:
-      - x: 219.0
-        y: 28.0
-        ref_to: '25'
+    - x: 219.0
+      y: 28.0
+      ref_to: '25'
   - name: '26'
     type: WIRE
     pins:
-      - x: 219.0
-        y: 13.0
-        ref_to: '26'
+    - x: 219.0
+      y: 13.0
+      ref_to: '26'
   - name: '27'
     type: WIRE
     pins:
-      - x: 234.0
-        y: 28.0
-        ref_to: '27'
+    - x: 234.0
+      y: 28.0
+      ref_to: '27'
   - name: '28'
     type: WIRE
     pins:
-      - x: 234.0
-        y: 13.0
-        ref_to: '28'
+    - x: 234.0
+      y: 13.0
+      ref_to: '28'
   - name: '29'
     type: WIRE
     pins:
-      - x: 248.0
-        y: 28.0
-        ref_to: '29'
+    - x: 248.0
+      y: 28.0
+      ref_to: '29'
   - name: '30'
     type: WIRE
     pins:
-      - x: 248.0
-        y: 13.0
-        ref_to: '30'
+    - x: 248.0
+      y: 13.0
+      ref_to: '30'
   - name: '31'
     type: WIRE
     pins:
-      - x: 262.0
-        y: 28.0
-        ref_to: '31'
+    - x: 262.0
+      y: 28.0
+      ref_to: '31'
   - name: '32'
     type: WIRE
     pins:
-      - x: 262.0
-        y: 13.0
-        ref_to: '32'
+    - x: 262.0
+      y: 13.0
+      ref_to: '32'
   - name: '33'
     type: WIRE
     pins:
-      - x: 276.0
-        y: 28.0
-        ref_to: '33'
+    - x: 276.0
+      y: 28.0
+      ref_to: '33'
   - name: '34'
     type: WIRE
     pins:
-      - x: 276.0
-        y: 13.0
-        ref_to: '34'
+    - x: 276.0
+      y: 13.0
+      ref_to: '34'
   - name: '35'
     type: WIRE
     pins:
-      - x: 291.0
-        y: 28.0
-        ref_to: '35'
+    - x: 291.0
+      y: 28.0
+      ref_to: '35'
   - name: '36'
     type: WIRE
     pins:
-      - x: 291.0
-        y: 13.0
-        ref_to: '36'
+    - x: 291.0
+      y: 13.0
+      ref_to: '36'
   - name: '37'
     type: WIRE
     pins:
-      - x: 305.0
-        y: 28.0
-        ref_to: '37'
+    - x: 305.0
+      y: 28.0
+      ref_to: '37'
   - name: '38'
     type: WIRE
     pins:
-      - x: 305.0
-        y: 13.0
-        ref_to: '38'
+    - x: 305.0
+      y: 13.0
+      ref_to: '38'
   - name: '39'
     type: WIRE
     pins:
-      - x: 320.0
-        y: 28.0
-        ref_to: '39'
+    - x: 320.0
+      y: 28.0
+      ref_to: '39'
   - name: '40'
     type: WIRE
     pins:
-      - x: 320.0
-        y: 13.0
-        ref_to: '40'
+    - x: 320.0
+      y: 13.0
+      ref_to: '40'
   - name: Camera
     type: CSI
     pins:
-      - x: 250.0
-        y: 211.0
-        ref_to: CSI1
-      - x: 250.0
-        y: 216.4
-        ref_to: CSI2
-      - x: 250.0
-        y: 221.8
-        ref_to: CSI3
-      - x: 250.0
-        y: 227.2
-        ref_to: CSI4
-      - x: 250.0
-        y: 232.6
-        ref_to: CSI4
-      - x: 250.0
-        y: 238.0
-        ref_to: CSI5
-      - x: 250.0
-        y: 243.4
-        ref_to: CSI6
-      - x: 250.0
-        y: 248.8
-        ref_to: CSI7
-      - x: 250.0
-        y: 254.2
-        ref_to: CSI8
-      - x: 250.0
-        y: 259.6
-        ref_to: CSI9
-      - x: 250.0
-        y: 265.0
-        ref_to: CSI10
-      - x: 250.0
-        y: 270.4
-        ref_to: CSI11
-      - x: 250.0
-        y: 275.8
-        ref_to: CSI12
-      - x: 250.0
-        y: 281.2
-        ref_to: CSI13
-      - x: 250.0
-        y: 286.6
-        ref_to: CSI14
-      - x: 250.0
-        y: 292.0
-        ref_to: CSI15
+    - x: 250.0
+      y: 211.0
+      ref_to: CSI1
+    - x: 250.0
+      y: 216.4
+      ref_to: CSI2
+    - x: 250.0
+      y: 221.8
+      ref_to: CSI3
+    - x: 250.0
+      y: 227.2
+      ref_to: CSI4
+    - x: 250.0
+      y: 232.6
+      ref_to: CSI4
+    - x: 250.0
+      y: 238.0
+      ref_to: CSI5
+    - x: 250.0
+      y: 243.4
+      ref_to: CSI6
+    - x: 250.0
+      y: 248.8
+      ref_to: CSI7
+    - x: 250.0
+      y: 254.2
+      ref_to: CSI8
+    - x: 250.0
+      y: 259.6
+      ref_to: CSI9
+    - x: 250.0
+      y: 265.0
+      ref_to: CSI10
+    - x: 250.0
+      y: 270.4
+      ref_to: CSI11
+    - x: 250.0
+      y: 275.8
+      ref_to: CSI12
+    - x: 250.0
+      y: 281.2
+      ref_to: CSI13
+    - x: 250.0
+      y: 286.6
+      ref_to: CSI14
+    - x: 250.0
+      y: 292.0
+      ref_to: CSI15
   - name: PWM
     type: GROVE
     pins:
-      - x: 56
-        y: 105
-        ref_to: '6'
-      - x: 56
-        y: 91
-        ref_to: '2'
-      - x: 56
-        y: 77
-        ref_to: '33'
-      - x: 56
-        y: 63
-        ref_to: '32'
+    - x: 56
+      y: 105
+      ref_to: '6'
+    - x: 56
+      y: 91
+      ref_to: '2'
+    - x: 56
+      y: 77
+      ref_to: '33'
+    - x: 56
+      y: 63
+      ref_to: '32'
   - name: D5
     type: GROVE
     pins:
-      - x: 114
-        y: 105
-        ref_to: '6'
-      - x: 114
-        y: 91
-        ref_to: '2'
-      - x: 114
-        y: 77
-        ref_to: '31'
-      - x: 114
-        y: 63
-        ref_to: '29'
+    - x: 114
+      y: 105
+      ref_to: '6'
+    - x: 114
+      y: 91
+      ref_to: '2'
+    - x: 114
+      y: 77
+      ref_to: '31'
+    - x: 114
+      y: 63
+      ref_to: '29'
   - name: D16
     type: GROVE
     pins:
-      - x: 169
-        y: 105
-        ref_to: '6'
-      - x: 169
-        y: 91
-        ref_to: '2'
-      - x: 169
-        y: 77
-        ref_to: '11'
-      - x: 169
-        y: 63
-        ref_to: '36'
+    - x: 169
+      y: 105
+      ref_to: '6'
+    - x: 169
+      y: 91
+      ref_to: '2'
+    - x: 169
+      y: 77
+      ref_to: '11'
+    - x: 169
+      y: 63
+      ref_to: '36'
   - name: D18
     type: GROVE
     pins:
-      - x: 230
-        y: 105
-        ref_to: '6'
-      - x: 230
-        y: 91
-        ref_to: '2'
-      - x: 230
-        y: 77
-        ref_to: '35'
-      - x: 230
-        y: 63
-        ref_to: '12'
+    - x: 230
+      y: 105
+      ref_to: '6'
+    - x: 230
+      y: 91
+      ref_to: '2'
+    - x: 230
+      y: 77
+      ref_to: '35'
+    - x: 230
+      y: 63
+      ref_to: '12'
   - name: D22
     type: GROVE
     pins:
-      - x: 118
-        y: 202
-        ref_to: '6'
-      - x: 118
-        y: 188
-        ref_to: '2'
-      - x: 118
-        y: 174
-        ref_to: '16'
-      - x: 118
-        y: 160
-        ref_to: '15'
+    - x: 118
+      y: 202
+      ref_to: '6'
+    - x: 118
+      y: 188
+      ref_to: '2'
+    - x: 118
+      y: 174
+      ref_to: '16'
+    - x: 118
+      y: 160
+      ref_to: '15'
   - name: D24
     type: GROVE
     pins:
-      - x: 177
-        y: 202
-        ref_to: '6'
-      - x: 177
-        y: 188
-        ref_to: '2'
-      - x: 177
-        y: 174
-        ref_to: '22'
-      - x: 177
-        y: 160
-        ref_to: '18'
+    - x: 177
+      y: 202
+      ref_to: '6'
+    - x: 177
+      y: 188
+      ref_to: '2'
+    - x: 177
+      y: 174
+      ref_to: '22'
+    - x: 177
+      y: 160
+      ref_to: '18'
   - name: D26
     type: GROVE
     pins:
-      - x: 234
-        y: 202
-        ref_to: '6'
-      - x: 234
-        y: 188
-        ref_to: '2'
-      - x: 234
-        y: 174
-        ref_to: '13'
-      - x: 234
-        y: 160
-        ref_to: '37'
+    - x: 234
+      y: 202
+      ref_to: '6'
+    - x: 234
+      y: 188
+      ref_to: '2'
+    - x: 234
+      y: 174
+      ref_to: '13'
+    - x: 234
+      y: 160
+      ref_to: '37'
   - name: UART
     type: GROVE
     pins:
-      - x: 67
-        y: 202
-        ref_to: '6'
-      - x: 67
-        y: 188
-        ref_to: '2'
-      - x: 67
-        y: 174
-        ref_to: '8'
-      - x: 67
-        y: 160
-        ref_to: '10'
+    - x: 67
+      y: 202
+      ref_to: '6'
+    - x: 67
+      y: 188
+      ref_to: '2'
+    - x: 67
+      y: 174
+      ref_to: '8'
+    - x: 67
+      y: 160
+      ref_to: '10'
   - name: I2C1
     type: GROVE
     pins:
-      - x: 103
-        y: 293
-        ref_to: '6'
-      - x: 103
-        y: 279
-        ref_to: '2'
-      - x: 103
-        y: 265
-        ref_to: '3'
-      - x: 103
-        y: 251
-        ref_to: '5'
+    - x: 103
+      y: 293
+      ref_to: '6'
+    - x: 103
+      y: 279
+      ref_to: '2'
+    - x: 103
+      y: 265
+      ref_to: '3'
+    - x: 103
+      y: 251
+      ref_to: '5'
   - name: I2C2
     type: GROVE
     pins:
-      - x: 159
-        y: 293
-        ref_to: '6'
-      - x: 159
-        y: 279
-        ref_to: '2'
-      - x: 159
-        y: 265
-        ref_to: '3'
-      - x: 159
-        y: 251
-        ref_to: '5'
+    - x: 159
+      y: 293
+      ref_to: '6'
+    - x: 159
+      y: 279
+      ref_to: '2'
+    - x: 159
+      y: 265
+      ref_to: '3'
+    - x: 159
+      y: 251
+      ref_to: '5'
   - name: I2C3
     type: GROVE
     pins:
-      - x: 214
-        y: 293
-        ref_to: '6'
-      - x: 214
-        y: 279
-        ref_to: '2'
-      - x: 214
-        y: 265
-        ref_to: '3'
-      - x: 214
-        y: 251
-        ref_to: '5'
+    - x: 214
+      y: 293
+      ref_to: '6'
+    - x: 214
+      y: 279
+      ref_to: '2'
+    - x: 214
+      y: 265
+      ref_to: '3'
+    - x: 214
+      y: 251
+      ref_to: '5'
   - name: A0
     type: GROVE
     pins:
-      - x: 293
-        y: 104
-        ref_to: '6'
-      - x: 293
-        y: 90
-        ref_to: '2'
-      - x: 293
-        y: 76
-        ref_to: 'A1'
-      - x: 293
-        y: 62
-        ref_to: 'A0'
+    - x: 293
+      y: 104
+      ref_to: '6'
+    - x: 293
+      y: 90
+      ref_to: '2'
+    - x: 293
+      y: 76
+      ref_to: A1
+    - x: 293
+      y: 62
+      ref_to: A0
   - name: A2
     type: GROVE
     pins:
-      - x: 351
-        y: 104
-        ref_to: '6'
-      - x: 351
-        y: 90
-        ref_to: '2'
-      - x: 351
-        y: 76
-        ref_to: 'A3'
-      - x: 351
-        y: 62
-        ref_to: 'A2'
+    - x: 351
+      y: 104
+      ref_to: '6'
+    - x: 351
+      y: 90
+      ref_to: '2'
+    - x: 351
+      y: 76
+      ref_to: A3
+    - x: 351
+      y: 62
+      ref_to: A2
   - name: A4
     type: GROVE
     pins:
-      - x: 273
-        y: 201
-        ref_to: '6'
-      - x: 273
-        y: 187
-        ref_to: '2'
-      - x: 293
-        y: 173
-        ref_to: 'A5'
-      - x: 293
-        y: 159
-        ref_to: 'A4'
+    - x: 273
+      y: 201
+      ref_to: '6'
+    - x: 273
+      y: 187
+      ref_to: '2'
+    - x: 293
+      y: 173
+      ref_to: A5
+    - x: 293
+      y: 159
+      ref_to: A4
   - name: A6
     type: GROVE
     pins:
-      - x: 351
-        y: 201
-        ref_to: '6'
-      - x: 351
-        y: 187
-        ref_to: '2'
-      - x: 351
-        y: 173
-        ref_to: 'A6'
-      - x: 351
-        y: 159
-        ref_to: 'A7'
+    - x: 351
+      y: 201
+      ref_to: '6'
+    - x: 351
+      y: 187
+      ref_to: '2'
+    - x: 351
+      y: 173
+      ref_to: A6
+    - x: 351
+      y: 159
+      ref_to: A7
 compatibility: []
 platforms:
 - platform: RASPBERRYPI

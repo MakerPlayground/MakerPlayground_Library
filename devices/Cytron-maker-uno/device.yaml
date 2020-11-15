@@ -9,494 +9,482 @@ height: 349
 property: []
 pin_template: ATMEGA328P
 connection_provide:
+  voltage_level: LEVEL_5
+  items:
   - name: '0'
     type: WIRE
     pins:
-      - x: 363.5
-        y: 37.5
-        ref_to: PD0
+    - x: 363.5
+      y: 37.5
+      ref_to: PD0
   - name: '1'
     type: WIRE
     pins:
-      - x: 349
-        y: 37.5
-        ref_to: PD1
+    - x: 349
+      y: 37.5
+      ref_to: PD1
   - name: '2'
     type: WIRE
     pins:
-      - x: 334.5
-        y: 37.5
-        ref_to: PD2
+    - x: 334.5
+      y: 37.5
+      ref_to: PD2
   - name: '3'
     type: WIRE
     pins:
-      - x: 320.5
-        y: 37.5
-        ref_to: PD3
+    - x: 320.5
+      y: 37.5
+      ref_to: PD3
   - name: '4'
     type: WIRE
     pins:
-      - x: 306
-        y: 37.5
-        ref_to: PD4
+    - x: 306
+      y: 37.5
+      ref_to: PD4
   - name: '5'
     type: WIRE
     pins:
-      - x: 291.5
-        y: 37.5
-        ref_to: PD5
+    - x: 291.5
+      y: 37.5
+      ref_to: PD5
   - name: '6'
     type: WIRE
     pins:
-      - x: 277
-        y: 37.5
-        ref_to: PD6
+    - x: 277
+      y: 37.5
+      ref_to: PD6
   - name: '7'
     type: WIRE
     pins:
-      - x: 262.5
-        y: 37.5
-        ref_to: PD7
+    - x: 262.5
+      y: 37.5
+      ref_to: PD7
   - name: '8'
     type: WIRE
     pins:
-      - x: 241
-        y: 37.5
-        ref_to: PB0
+    - x: 241
+      y: 37.5
+      ref_to: PB0
   - name: '9'
     type: WIRE
     pins:
-      - x: 226.5
-        y: 37.5
-        ref_to: PB1
+    - x: 226.5
+      y: 37.5
+      ref_to: PB1
   - name: '10'
     type: WIRE
     pins:
-      - x: 212.5
-        y: 37.5
-        ref_to: PB2
+    - x: 212.5
+      y: 37.5
+      ref_to: PB2
   - name: '11'
     type: WIRE
     pins:
-      - x: 198.5
-        y: 37.5
-        ref_to: PB3
+    - x: 198.5
+      y: 37.5
+      ref_to: PB3
   - name: '12'
     type: WIRE
     pins:
-      - x: 183.5
-        y: 37.5
-        ref_to: PB4
+    - x: 183.5
+      y: 37.5
+      ref_to: PB4
   - name: '13'
     type: WIRE
     pins:
-      - x: 169.5
-        y: 37.5
-        ref_to: PB5
+    - x: 169.5
+      y: 37.5
+      ref_to: PB5
   - name: GND0
     type: WIRE
     pins:
-      - x: 155
-        y: 37.5
-        ref_to: GND
+    - x: 155
+      y: 37.5
+      ref_to: GND
   - name: SDA
     type: WIRE
     pins:
-      - x: 126.5
-        y: 37.5
-        ref_to: PC4
-        function: SDA
+    - x: 126.5
+      y: 37.5
+      ref_to: PC4
+      function: SDA
   - name: SCL
     type: WIRE
     pins:
-      - x: 112       
-        y: 37.5
-        ref_to: PC5
-        function: SCL
+    - x: 112
+      y: 37.5
+      ref_to: PC5
+      function: SCL
   - name: 3.3V
     type: WIRE
     pins:
-      - x: 205
-        y: 308
-        ref_to: VCC
-        voltage_level: LEVEL_3v3
+    - x: 205
+      y: 308
+      ref_to: VCC
+      voltage_level: LEVEL_3v3
   - name: 5V
     type: WIRE
     pins:
-      - x: 220
-        y: 308
-        ref_to: VCC
+    - x: 220
+      y: 308
+      ref_to: VCC
   - name: GND1
     type: WIRE
     pins:
-      - x: 234
-        y: 308
-        ref_to: GND
+    - x: 234
+      y: 308
+      ref_to: GND
   - name: GND2
     type: WIRE
     pins:
-      - x: 247
-        y: 308
-        ref_to: GND
+    - x: 247
+      y: 308
+      ref_to: GND
   - name: GND3
     type: WIRE
     pins:
-      - x: 262.5
-        y: 308
-        ref_to: GND
+    - x: 262.5
+      y: 308
+      ref_to: GND
   - name: A0
     type: WIRE
     pins:
-      - x: 292.5
-        y: 308
-        ref_to: PC0
+    - x: 292.5
+      y: 308
+      ref_to: PC0
   - name: A1
     type: WIRE
     pins:
-      - x: 305.5
-        y: 308
-        ref_to: PC1
+    - x: 305.5
+      y: 308
+      ref_to: PC1
   - name: A2
     type: WIRE
     pins:
-      - x: 320
-        y: 308
-        ref_to: PC2
+    - x: 320
+      y: 308
+      ref_to: PC2
   - name: A3
     type: WIRE
     pins:
-      - x: 334.5
-        y: 308
-        ref_to: PC3
+    - x: 334.5
+      y: 308
+      ref_to: PC3
   - name: A4
     type: WIRE
     pins:
-      - x: 349
-        y: 308
-        ref_to: PC4
-        function:
-        - ANALOG_IN
+    - x: 349
+      y: 308
+      ref_to: PC4
+      function:
+      - ANALOG_IN
   - name: A5
     type: WIRE
     pins:
-      - x: 363.5
-        y: 308
-        ref_to: PC5
-        function:
-        - ANALOG_IN
+    - x: 363.5
+      y: 308
+      ref_to: PC5
+      function:
+      - ANALOG_IN
 integrated_devices:
 - name: Built in LED P2
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD2
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD2
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P3
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD3
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD3
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P4
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD4
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD4
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P5
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD5
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD5
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P6
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD6
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD6
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P7
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD7
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD7
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P8
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB0
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB0
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P9
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB1
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB1
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P10
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB2
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB2
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P11
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB3
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB3
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P12
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB4
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB4
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Built in LED P13
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB5
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB5
+    pin_function: DIGITAL_IN
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: LED
-      action:
-        - name: 'On'
-          parameter:
-            - name: Brightness
-              constraint:
-                min: 0.0
-                max: 100.0
-                unit: PERCENT
-        - name: 'Off'
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        constraint:
+          min: 0.0
+          max: 100.0
+          unit: PERCENT
+    - name: 'Off'
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_LED_AH
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
 - name: Buit in BUTTON
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PD2
-    - ref_to: VCC
-      host_ref_to: VCC
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PD2
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: Button
-      condition:
-        - name: Press
-        - name: Press and release
-        - name: Not press
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_BUTTON_AL
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
 - name: Buit in Buzzer
-  pin_template: GENERIC_DIGITAL_ACTUATOR_5
   integrated_connection:
-    - ref_to: SIG
-      host_ref_to: PB0
-    - ref_to: VCC
-      host_ref_to: VCC
-    - ref_to: GND
-      host_ref_to: GND
+  - host_ref_to: PB0
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: GND
+    pin_function: GND
   compatibility:
-    - name: Buzzer
-      action:
-        - name: Play Tone
-          parameter:
-          - name: Tone Frequency
-            constraint:
-              min: 0
-              max: 20000
-              unit: HERTZ
-          - name: Duration
-            constraint:
-              min: 0
-              max: 1000
-              unit: SECOND
-        - name: Beep
+  - name: Buzzer
+    action:
+    - name: Play Tone
+      parameter:
+      - name: Tone Frequency
+        constraint:
+          min: 0
+          max: 20000
+          unit: HERTZ
+      - name: Duration
+        constraint:
+          min: 0
+          max: 1000
+          unit: SECOND
+    - name: Beep
   platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_BUZZER
-      library_dependency: []
+  - platform: ARDUINO_AVR8
+    classname: MP_BUZZER
+    library_dependency: []
 compatibility: []
 platforms:
 - platform: ARDUINO_AVR8

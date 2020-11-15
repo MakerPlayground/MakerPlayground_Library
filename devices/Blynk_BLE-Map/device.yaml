@@ -6,61 +6,60 @@ type: VIRTUAL
 cloud_consume: BLYNK_BLE
 width: 50
 height: 50
-pin_template: NO_PIN
 property:
-  - name: virtual pin
-    datatype: INTEGER_ENUM
-    controltype: DROPDOWN
-    value: 0
-    constraint:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-  - name: map pin index
-    value: 0
-    datatype: INTEGER_ENUM
-    controltype: DROPDOWN
-    constraint:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
-      - 12
-      - 13
-      - 14
-      - 15
+- name: virtual pin
+  datatype: INTEGER_ENUM
+  controltype: DROPDOWN
+  value: 0
+  constraint:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+- name: map pin index
+  value: 0
+  datatype: INTEGER_ENUM
+  controltype: DROPDOWN
+  constraint:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
 compatibility:
-  - name: Map
-    action:
-      - name: Pin Location
-        parameter:
-          - name: Latitude
-            value: 0
-            constraint:
-              min: -90
-              max: 90
-              unit: DEGREE
-          - name: Longitude
-            value: 0
-            constraint:
-              min: -180
-              max: 180
-              unit: DEGREE
-      - name: Clear Pin
+- name: Map
+  action:
+  - name: Pin Location
+    parameter:
+    - name: Latitude
+      value: 0
+      constraint:
+        min: -90
+        max: 90
+        unit: DEGREE
+    - name: Longitude
+      value: 0
+      constraint:
+        min: -180
+        max: 180
+        unit: DEGREE
+  - name: Clear Pin
 platforms:
-  - platform: ARDUINO_ESP32
-    classname: MP_BLYNK_WIDGET_MAP
-    library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BLYNK_WIDGET_MAP
+  library_dependency: []

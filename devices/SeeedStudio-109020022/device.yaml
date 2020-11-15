@@ -5,52 +5,54 @@ url: https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html
 type: MODULE
 width: 372
 height: 266
-pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 356
-        y: 187
-        ref_to: GND
-      - x: 356
-        y: 198.3
-        ref_to: VCC
-      - x: 356
-        y: 209.6
-        ref_to: RX
-      - x: 356
-        y: 220.9
-        ref_to: TX
+    - x: 356
+      y: 187
+      pin_function: GND
+    - x: 356
+      y: 198.3
+      pin_function: VCC
+    - x: 356
+      y: 209.6
+      pin_function: SW_SERIAL_RX
+    - x: 356
+      y: 220.9
+      pin_function: SW_SERIAL_TX
 compatibility:
-  - name: GPS
-    condition:
-      - name: Compare
-      - name: Data is valid
-      - name: Data is not valid
-    value:
-      - name: Latitude
-        constraint:
-          min: -90
-          max: 90
-          unit: DEGREE
-      - name: Longitude
-        constraint:
-          min: -180
-          max: 180
-          unit: DEGREE
+- name: GPS
+  condition:
+  - name: Compare
+  - name: Data is valid
+  - name: Data is not valid
+  value:
+  - name: Latitude
+    constraint:
+      min: -90
+      max: 90
+      unit: DEGREE
+  - name: Longitude
+    constraint:
+      min: -180
+      max: 180
+      unit: DEGREE
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TINY_GPS
-    library_dependency:
-      - mikalhart/TinyGPSPlus-1.0.2
-  - platform: ARDUINO_ESP8266
-    classname: MP_TINY_GPS
-    library_dependency:
-      - plerup/espsoftwareserial-3.4.2
-      - mikalhart/TinyGPSPlus-1.0.2
-  - platform: ARDUINO_ESP32
-    classname: MP_TINY_GPS
-    library_dependency:
-      - plerup/espsoftwareserial-6.8.5
-      - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_AVR8
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ESP8266
+  classname: MP_TINY_GPS
+  library_dependency:
+  - plerup/espsoftwareserial-3.4.2
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ESP32
+  classname: MP_TINY_GPS
+  library_dependency:
+  - plerup/espsoftwareserial-6.8.5
+  - mikalhart/TinyGPSPlus-1.0.2

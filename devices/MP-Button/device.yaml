@@ -5,36 +5,38 @@ url: ''
 type: MODULE
 width: 124
 height: 108
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: MAKER_PLAYGROUND
     pins:
-      - x: 79
-        y: 109
-        ref_to: GND
-      - x: 68
-        y: 109
-        ref_to: VCC
-      - x: 57
-        y: 109
-        ref_to: NC
-      - x: 46
-        y: 109
-        ref_to: SIG
+    - x: 79
+      y: 109
+      pin_function: GND
+    - x: 68
+      y: 109
+      pin_function: VCC
+    - x: 57
+      y: 109
+      pin_function: NO_FUNCTION
+    - x: 46
+      y: 109
+      pin_function: DIGITAL_OUT
 compatibility:
-  - name: Button
-    condition:
-      - name: Press
-      - name: Press and release
-      - name: Not press
+- name: Button
+  condition:
+  - name: Press
+  - name: Press and release
+  - name: Not press
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BUTTON_AL
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_BUTTON_AL
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_BUTTON_AL
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_BUTTON_AL
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BUTTON_AL
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BUTTON_AL
+  library_dependency: []

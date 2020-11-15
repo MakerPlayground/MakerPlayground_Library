@@ -1,46 +1,47 @@
 id: SeeedStudio-103020005
 brand: SeeedStudio
 model: Relay
-url: 'https://www.seeedstudio.com/Grove-Relay.html'
+url: https://www.seeedstudio.com/Grove-Relay.html
 type: MODULE
 width: 235
 height: 137
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 22.5
-        y: 52.5
-        ref_to: GND
-      - x: 22.5
-        y: 63
-        ref_to: VCC
-      - x: 22.5
-        y: 75
-        ref_to: NC
-      - x: 22.5
-        y: 86.5
-        ref_to: SIG
+    - x: 22.5
+      y: 52.5
+      pin_function: GND
+    - x: 22.5
+      y: 63
+      pin_function: VCC
+    - x: 22.5
+      y: 75
+      pin_function: NO_FUNCTION
+    - x: 22.5
+      y: 86.5
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: Relay Module
-    action:
-      - name: 'On'
-      - name: 'Off'
+- name: Relay Module
+  action:
+  - name: 'On'
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_RELAY
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_RELAY
-    library_dependency: []
-
+- platform: ARDUINO_AVR8
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_RELAY
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_RELAY
+  library_dependency: []

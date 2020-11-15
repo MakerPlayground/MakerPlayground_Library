@@ -7,44 +7,46 @@ width: 34
 height: 66
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: GND
     type: WIRE
     pins:
-      - x: 31.8
-        y: 64
-        ref_to: GND
+    - x: 31.8
+      y: 64
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 3
-        y: 64
-        ref_to: VCC
+    - x: 3
+      y: 64
+      pin_function: VCC
   - name: SIG
     type: WIRE
     pins:
-      - x: 17.4
-        y: 64
-        ref_to: SIG
+    - x: 17.4
+      y: 64
+      pin_function: ANALOG_OUT
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+    parameter: []
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-        parameter: []
-    value:
-      - name: Temperature
-        constraint:
-          min: -40
-          max: 150
-          unit: CELSIUS
+    constraint:
+      min: -40
+      max: 150
+      unit: CELSIUS
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MCP9700
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_MCP9700
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_MCP9700
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_MCP9700
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_MCP9700
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_MCP9700
+  library_dependency: []

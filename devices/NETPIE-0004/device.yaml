@@ -6,30 +6,29 @@ type: VIRTUAL
 cloud_consume: NETPIE
 width: 50
 height: 50
-pin_template: NO_PIN
 property:
-  - name: topic
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
+- name: topic
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
 compatibility:
-  - name: Virtual Slider
-    condition:
-      - name: Compare
-    value:
-      - name: Value
-        constraint:
-          min: -99999999
-          max: 99999999
-          unit: NOT_SPECIFIED
+- name: Virtual Slider
+  condition:
+  - name: Compare
+  value:
+  - name: Value
+    constraint:
+      min: -99999999
+      max: 99999999
+      unit: NOT_SPECIFIED
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_NETPIE_VIRTUAL_SLIDER
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_NETPIE_VIRTUAL_SLIDER
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_NETPIE_VIRTUAL_SLIDER
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_NETPIE_VIRTUAL_SLIDER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_NETPIE_VIRTUAL_SLIDER
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_NETPIE_VIRTUAL_SLIDER
+  library_dependency: []

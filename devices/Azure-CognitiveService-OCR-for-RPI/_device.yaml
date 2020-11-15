@@ -6,38 +6,36 @@ type: VIRTUAL
 width: 0.0
 height: 0.0
 property:
-  - name: Key
-    constraint: []
-    datatype: AZURE_COGNITIVE_KEY
-    controltype: AZURE_WIZARD
-    value: ""
-  - name: Max Translations / Minute
-    constraint:
-      min: 1
-      max: 30
-      unit: NOT_SPECIFIED
-    datatype: DOUBLE
-    controltype: SPINBOX
-    value: 10
-pin_template: NO_PIN
-connection_consume: []
+- name: Key
+  constraint: []
+  datatype: AZURE_COGNITIVE_KEY
+  controltype: AZURE_WIZARD
+  value: ''
+- name: Max Translations / Minute
+  constraint:
+    min: 1
+    max: 30
+    unit: NOT_SPECIFIED
+  datatype: DOUBLE
+  controltype: SPINBOX
+  value: 10
 compatibility:
-  - name: Image to Text
-    action:
-      - name: Convert to Text
-        parameter:
-          - name: Image
-      - name: Convert to Text File
-        parameter:
-          - name: Image
-          - name: File name
-    condition:
-      - name: Has Text
-      - name: Has No Text
-    value:
-      - name: Text
-        constraint: []
+- name: Image to Text
+  action:
+  - name: Convert to Text
+    parameter:
+    - name: Image
+  - name: Convert to Text File
+    parameter:
+    - name: Image
+    - name: File name
+  condition:
+  - name: Has Text
+  - name: Has No Text
+  value:
+  - name: Text
+    constraint: []
 platforms:
-  - platform: RASPBERRYPI
-    classname: MP_Azure_Cognitive_Service_OCR
-    library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_Azure_Cognitive_Service_OCR
+  library_dependency: []

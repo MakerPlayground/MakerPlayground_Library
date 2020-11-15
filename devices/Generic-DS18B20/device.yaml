@@ -6,55 +6,57 @@ type: MODULE
 formfactor: STANDALONE
 width: 80
 height: 302
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 35.6
-        y: 302.0
-        ref_to: VCC
+    - x: 35.6
+      y: 302.0
+      pin_function: VCC
   - name: SIG
     type: WIRE
     pins:
-      - x: 40.0
-        y: 302.0
-        ref_to: SIG
+    - x: 40.0
+      y: 302.0
+      pin_function: DIGITAL_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 44.4
-        y: 302.0
-        ref_to: GND
+    - x: 44.4
+      y: 302.0
+      pin_function: GND
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+    parameter: []
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-        parameter: []
-    value:
-      - name: Temperature
-        constraint:
-          min: -55
-          max: 125
-          unit: CELSIUS
+    constraint:
+      min: -55
+      max: 125
+      unit: CELSIUS
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_DS18B20
-    library_dependency:
-      - milesburton/Arduino-Temperature-Control-Library-3.8.0
-      - PaulStoffregen/OneWire-2.3.4
-  - platform: ARDUINO_ESP8266
-    classname: MP_DS18B20
-    library_dependency:
-      - milesburton/Arduino-Temperature-Control-Library-3.8.0
-      - PaulStoffregen/OneWire-2.3.4
-  - platform: ARDUINO_ESP32
-    classname: MP_DS18B20
-    library_dependency:
-      - milesburton/Arduino-Temperature-Control-Library-3.8.0
-      - PaulStoffregen/OneWire-2.3.4
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_DS18B20
-    library_dependency:
-      - milesburton/Arduino-Temperature-Control-Library-3.8.0
-      - PaulStoffregen/OneWire-2.3.4
+- platform: ARDUINO_AVR8
+  classname: MP_DS18B20
+  library_dependency:
+  - milesburton/Arduino-Temperature-Control-Library-3.8.0
+  - PaulStoffregen/OneWire-2.3.4
+- platform: ARDUINO_ESP8266
+  classname: MP_DS18B20
+  library_dependency:
+  - milesburton/Arduino-Temperature-Control-Library-3.8.0
+  - PaulStoffregen/OneWire-2.3.4
+- platform: ARDUINO_ESP32
+  classname: MP_DS18B20
+  library_dependency:
+  - milesburton/Arduino-Temperature-Control-Library-3.8.0
+  - PaulStoffregen/OneWire-2.3.4
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DS18B20
+  library_dependency:
+  - milesburton/Arduino-Temperature-Control-Library-3.8.0
+  - PaulStoffregen/OneWire-2.3.4

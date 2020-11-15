@@ -1,45 +1,46 @@
 id: Generic-Vibration-Motor
 brand: Generic
 model: Vibration Motor Module (Catalex)
-url: https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-บอร์ดทดลองมอเตอร์สั่น
+url: "https://www.arduinoall.com/product/1346/vibration-motor-module-catalex-\u0E1A\
+  \u0E2D\u0E23\u0E4C\u0E14\u0E17\u0E14\u0E25\u0E2D\u0E07\u0E21\u0E2D\u0E40\u0E15\u0E2D\
+  \u0E23\u0E4C\u0E2A\u0E31\u0E48\u0E19"
 type: MODULE
 width: 124
 height: 150
-## pin distance is not 14.4 pixel
-# need_breadboard: true
-# breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: GND
     type: WIRE
     pins:
-      - x: 49
-        y: 150
-        ref_to: GND
+    - x: 49
+      y: 150
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 61.1
-        y: 150
-        ref_to: VCC
+    - x: 61.1
+      y: 150
+      pin_function: VCC
   - name: SIG
     type: WIRE
     pins:
-      - x: 73.1
-        y: 150
-        ref_to: SIG
+    - x: 73.1
+      y: 150
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: Load Driver
-    action:
-      - name: 'On'
-      - name: 'Off'
+- name: Load Driver
+  action:
+  - name: 'On'
+  - name: 'Off'
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_LOAD_DRIVER_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_LOAD_DRIVER_AH
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_LOAD_DRIVER_AH
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_LOAD_DRIVER_AH
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_LOAD_DRIVER_AH
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_LOAD_DRIVER_AH
+  library_dependency: []

@@ -5,42 +5,43 @@ url: https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html
 type: MODULE
 width: 138
 height: 114
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 86
-        y: 114
-        ref_to: GND
-      - x: 74.67
-        y: 114
-        ref_to: VCC
-      - x: 63.33
-        y: 114
-        ref_to: NC
-      - x: 52
-        y: 114
-        ref_to: SIG
+    - x: 86
+      y: 114
+      pin_function: GND
+    - x: 74.67
+      y: 114
+      pin_function: VCC
+    - x: 63.33
+      y: 114
+      pin_function: NO_FUNCTION
+    - x: 52
+      y: 114
+      pin_function: DIGITAL_IN
 compatibility:
-  - name: Presence
-    condition:
-      - name: Detect Human
-      - name: No Human
+- name: Presence
+  condition:
+  - name: Detect Human
+  - name: No Human
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_PIR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_PIR
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_PIR
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_PIR
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_PIR
-    library_dependency: []
-
+- platform: ARDUINO_AVR8
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PIR
+  library_dependency: []

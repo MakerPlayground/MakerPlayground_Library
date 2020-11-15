@@ -5,49 +5,48 @@ url: https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1-2.html
 type: MODULE
 width: 184
 height: 154
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 111
-        y: 26
-        ref_to: GND
-      - x: 97.6
-        y: 26
-        ref_to: VCC
-      - x: 83.2
-        y: 26
-        ref_to: NC
-      - x: 68.8
-        y: 26
-        ref_to: SIG
+    - x: 111
+      y: 26
+      pin_function: GND
+    - x: 97.6
+      y: 26
+      pin_function: VCC
+    - x: 83.2
+      y: 26
+      pin_function: NO_FUNCTION
+    - x: 68.8
+      y: 26
+      pin_function: ANALOG_OUT
 compatibility:
-  - name: Reflector
-    condition:
-      - name: Compare
-    value:
-      - name: Reflectance
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
+- name: Reflector
+  condition:
+  - name: Compare
+  value:
+  - name: Reflectance
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_PERCENT_REFLECTANCE
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_PERCENT_REFLECTANCE
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_PERCENT_REFLECTANCE
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_PERCENT_REFLECTANCE
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_PERCENT_REFLECTANCE
-    library_dependency: []
-  # - platform: RASPBERRYPI
-  #   classname: MP_PERCENT_REFLECTANCE
-  #   library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_PERCENT_REFLECTANCE
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_PERCENT_REFLECTANCE
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_PERCENT_REFLECTANCE
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PERCENT_REFLECTANCE
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PERCENT_REFLECTANCE
+  library_dependency: []

@@ -8,663 +8,630 @@ width: 769
 height: 334
 pin_template: ATMEGA328PB
 connection_provide:
+  voltage_level: LEVEL_5
+  items:
   - name: '0'
     type: WIRE
     pins:
-      - x: 742.56
-        y: 29.4
-        ref_to: PD0
+    - x: 742.56
+      y: 29.4
+      ref_to: PD0
   - name: '1'
     type: WIRE
     pins:
-      - x: 728.16
-        y: 29.4
-        ref_to: PD1
+    - x: 728.16
+      y: 29.4
+      ref_to: PD1
   - name: '2'
     type: WIRE
     pins:
-      - x: 713.74
-        y: 29.4
-        ref_to: PD2
+    - x: 713.74
+      y: 29.4
+      ref_to: PD2
   - name: '3'
     type: WIRE
     pins:
-      - x: 699.36
-        y: 29.4
-        ref_to: PD3
+    - x: 699.36
+      y: 29.4
+      ref_to: PD3
   - name: '4'
     type: WIRE
     pins:
-      - x: 684.96
-        y: 29.4
-        ref_to: PD4
+    - x: 684.96
+      y: 29.4
+      ref_to: PD4
   - name: '5'
     type: WIRE
     pins:
-      - x: 670.56
-        y: 29.4
-        ref_to: PD5
+    - x: 670.56
+      y: 29.4
+      ref_to: PD5
   - name: '6'
     type: WIRE
     pins:
-      - x: 656.16
-        y: 29.4
-        ref_to: PD6
+    - x: 656.16
+      y: 29.4
+      ref_to: PD6
   - name: '7'
     type: WIRE
     pins:
-      - x: 641.74
-        y: 29.4
-        ref_to: PD7
+    - x: 641.74
+      y: 29.4
+      ref_to: PD7
   - name: '8'
     type: WIRE
     pins:
-      - x: 618.6
-        y: 29.4
-        ref_to: PB0
+    - x: 618.6
+      y: 29.4
+      ref_to: PB0
   - name: '9'
     type: WIRE
     pins:
-      - x: 604.2
-        y: 29.4
-        ref_to: PB1
+    - x: 604.2
+      y: 29.4
+      ref_to: PB1
   - name: '10'
     type: WIRE
     pins:
-      - x: 589.78
-        y: 29.4
-        ref_to: PB2
+    - x: 589.78
+      y: 29.4
+      ref_to: PB2
   - name: '11'
     type: WIRE
     pins:
-      - x: 575.38
-        y: 29.4
-        ref_to: PB3
+    - x: 575.38
+      y: 29.4
+      ref_to: PB3
   - name: '12'
     type: WIRE
     pins:
-      - x: 561
-        y: 29.4
-        ref_to: PB4
+    - x: 561
+      y: 29.4
+      ref_to: PB4
   - name: '13'
     type: WIRE
     pins:
-      - x: 546.6
-        y: 29.4
-        ref_to: PB5
+    - x: 546.6
+      y: 29.4
+      ref_to: PB5
   - name: GND0
     type: WIRE
     pins:
-      - x: 532.2
-        y: 29.4
-        ref_to: GND
-  # - name: AREF
-  #   type: WIRE
-  #   pins:
-  #     - x: 517.8
-  #       y: 29.4
-  #       ref_to: AREF
+    - x: 532.2
+      y: 29.4
+      ref_to: GND
   - name: SDA
     type: WIRE
     pins:
-      - x: 503.4
-        y: 29.4
-        ref_to: PC4
+    - x: 503.4
+      y: 29.4
+      ref_to: PC4
   - name: SCL
     type: WIRE
     pins:
-      - x: 489
-        y: 29.4
-        ref_to: PC5
-  # - name: VIO
-  #   type: WIRE
-  #   pins:
-  #     - x: 551.36
-  #       y: 303
-  #       ref_to: 
-  # - name: RESET
-  #   type: WIRE
-  #   pins:
-  #     - x: 565.76
-  #       y: 303
-  #       ref_to: 
+    - x: 489
+      y: 29.4
+      ref_to: PC5
   - name: 3.3V
     type: WIRE
     pins:
-      - x: 580.16
-        y: 303
-        ref_to: VCC
-        voltage_level: LEVEL_3v3
+    - x: 580.16
+      y: 303
+      ref_to: VCC
+      voltage_level: LEVEL_3v3
   - name: 5V
     type: WIRE
     pins:
-      - x: 594.56
-        y: 303
-        ref_to: VCC
+    - x: 594.56
+      y: 303
+      ref_to: VCC
   - name: GND1
     type: WIRE
     pins:
-      - x: 608.96
-        y: 303
-        ref_to: GND
+    - x: 608.96
+      y: 303
+      ref_to: GND
   - name: GND2
     type: WIRE
     pins:
-      - x: 623.36
-        y: 303
-        ref_to: GND
-  # - name: VIN
-  #   type: WIRE
-  #   pins:
-  #     - x: 637.76
-  #       y: 303
-  #       ref_to: 
+    - x: 623.36
+      y: 303
+      ref_to: GND
   - name: A0
     type: WIRE
     pins:
-      - x: 666.56
-        y: 303
-        ref_to: PC0
+    - x: 666.56
+      y: 303
+      ref_to: PC0
   - name: A1
     type: WIRE
     pins:
-      - x: 680.96
-        y: 303
-        ref_to: PC1
+    - x: 680.96
+      y: 303
+      ref_to: PC1
   - name: A2
     type: WIRE
     pins:
-      - x: 695.36
-        y: 303
-        ref_to: PC2
+    - x: 695.36
+      y: 303
+      ref_to: PC2
   - name: A3
     type: WIRE
     pins:
-      - x: 709.76
-        y: 303
-        ref_to: PC3
+    - x: 709.76
+      y: 303
+      ref_to: PC3
   - name: A4
     type: WIRE
     pins:
-      - x: 724.16
-        y: 303
-        ref_to: PC4
+    - x: 724.16
+      y: 303
+      ref_to: PC4
   - name: A5
     type: WIRE
     pins:
-      - x: 738.56
-        y: 303
-        ref_to: PC5
+    - x: 738.56
+      y: 303
+      ref_to: PC5
   - name: A6
     type: WIRE
     pins:
-      - x: 479.36
-        y: 303
-        ref_to: PE2
+    - x: 479.36
+      y: 303
+      ref_to: PE2
   - name: A7
     type: WIRE
     pins:
-      - x: 493.76
-        y: 303
-        ref_to: PE3
+    - x: 493.76
+      y: 303
+      ref_to: PE3
   - name: '22'
     type: WIRE
     pins:
-      - x: 508.16
-        y: 303
-        ref_to: PE0
+    - x: 508.16
+      y: 303
+      ref_to: PE0
   - name: '23'
     type: WIRE
     pins:
-      - x: 522.56
-        y: 303
-        ref_to: PE1
+    - x: 522.56
+      y: 303
+      ref_to: PE1
   - name: 20/A6
     type: INEX3
     pins:
-      - x: 424
-        y: 314
-        ref_to: GND
-      - x: 436
-        y: 314
-        ref_to: PE2
-      - x: 448
-        y: 314
-        ref_to: VCC
+    - x: 424
+      y: 314
+      ref_to: GND
+    - x: 436
+      y: 314
+      ref_to: PE2
+    - x: 448
+      y: 314
+      ref_to: VCC
   - name: 11-TxD1
     type: INEX3
     pins:
-      - x: 692
-        y: 75
-        ref_to: GND
-      - x: 680
-        y: 75
-        ref_to: PB3
-      - x: 668
-        y: 75
-        ref_to: VCC
+    - x: 692
+      y: 75
+      ref_to: GND
+    - x: 680
+      y: 75
+      ref_to: PB3
+    - x: 668
+      y: 75
+      ref_to: VCC
   - name: 12-RxD1
     type: INEX3
     pins:
-      - x: 692
-        y: 115
-        ref_to: GND
-      - x: 680
-        y: 115
-        ref_to: PB4
-      - x: 668
-        y: 115
-        ref_to: VCC
+    - x: 692
+      y: 115
+      ref_to: GND
+    - x: 680
+      y: 115
+      ref_to: PB4
+    - x: 668
+      y: 115
+      ref_to: VCC
   - name: 18-SDA
     type: INEX3
     pins:
-      - x: 743
-        y: 75
-        ref_to: GND
-      - x: 731
-        y: 75
-        ref_to: PC4
-      - x: 719
-        y: 75
-        ref_to: VCC
+    - x: 743
+      y: 75
+      ref_to: GND
+    - x: 731
+      y: 75
+      ref_to: PC4
+    - x: 719
+      y: 75
+      ref_to: VCC
   - name: 19-SCL
     type: INEX3
     pins:
-      - x: 743
-        y: 115
-        ref_to: GND
-      - x: 731
-        y: 115
-        ref_to: PC5
-      - x: 719
-        y: 115
-        ref_to: VCC
+    - x: 743
+      y: 115
+      ref_to: GND
+    - x: 731
+      y: 115
+      ref_to: PC5
+    - x: 719
+      y: 115
+      ref_to: VCC
   - name: 15-DHT
     type: INEX3
     pins:
-      - x: 399
-        y: 239
-        ref_to: GND
-      - x: 399
-        y: 251
-        ref_to: PC1
-      - x: 399
-        y: 263
-        ref_to: VCC
+    - x: 399
+      y: 239
+      ref_to: GND
+    - x: 399
+      y: 251
+      ref_to: PC1
+    - x: 399
+      y: 263
+      ref_to: VCC
   - name: SV1
     type: JR_SERVO
     pins:
-      - x: 391
-        y: 11.0
-        ref_to: GND
-      - x: 391
-        y: 25.4
-        ref_to: VCC
-      - x: 391
-        y: 39.8
-        ref_to: PB1
+    - x: 391
+      y: 11.0
+      ref_to: GND
+    - x: 391
+      y: 25.4
+      ref_to: VCC
+    - x: 391
+      y: 39.8
+      ref_to: PB1
   - name: SV2
     type: JR_SERVO
     pins:
-      - x: 405.4
-        y: 11.0
-        ref_to: GND
-      - x: 405.4
-        y: 25.4
-        ref_to: VCC
-      - x: 405.4
-        y: 39.8
-        ref_to: PB2
+    - x: 405.4
+      y: 11.0
+      ref_to: GND
+    - x: 405.4
+      y: 25.4
+      ref_to: VCC
+    - x: 405.4
+      y: 39.8
+      ref_to: PB2
 integrated_devices:
-  - name: Integrated SW1
-    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
-    platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_BUTTON_AL
-      library_dependency: []
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PD7
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: Button
-        condition:
-          - name: Press
-          - name: Press and release
-          - name: Not press
-  - name: Integrated SW2
-    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
-    platforms:
-    - platform: ARDUINO_AVR8
-      classname: MP_BUTTON_AL
-      library_dependency: []
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PB0
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: Button
-        condition:
-          - name: Press
-          - name: Press and release
-          - name: Not press
-  - name: Integrated VR1
-    pin_template: GENERIC_ANALOG_SENSOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PC2
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: POT
-        condition:
-          - name: Compare
-        value:
-          - name: Percent
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_TRIMPOT
-        library_dependency: []
-  - name: Integrated VR2
-    pin_template: GENERIC_ANALOG_SENSOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PC3
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: POT
-        condition:
-          - name: Compare
-        value:
-          - name: Percent
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_TRIMPOT
-        library_dependency: []
-  - name: Integrated LED1 (13)
-    pin_template: GENERIC_DIGITAL_ACTUATOR_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PB5
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: LED
-        action:
-        - name: 'On'
-          parameter:
-          - name: Brightness
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-        - name: 'Off'
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_LED_AH
-        library_dependency: []
-  - name: Integrated LED2 (22)
-    pin_template: GENERIC_DIGITAL_ACTUATOR_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PE0
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: LED
-        action:
-        - name: 'On'
-          parameter:
-          - name: Brightness
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-        - name: 'Off'
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_LED_AH
-        library_dependency: []
-  - name: Integrated LED3 (23)
-    pin_template: GENERIC_DIGITAL_ACTUATOR_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PE1
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: LED
-        action:
-        - name: 'On'
-          parameter:
-          - name: Brightness
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-        - name: 'Off'
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_LED_AH
-        library_dependency: []
-  - name: Integrated Piezo
-    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PD4
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: Buzzer
-        action:
-        - name: Beep
-        - name: Play Tone
-          parameter:
-          - name: Tone Frequency
-            value: 2000
-            constraint:
-              min: 0
-              max: 20000
-              unit: HERTZ
-          - name: Duration
-            value: 2
-            constraint:
-              min: 0
-              max: 1000
-              unit: SECOND
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_BUZZER
-        library_dependency: []
-  - name: Integrated OLED
-    pin_template: GENERIC_I2C_DEVICE_3v3_5
-    integrated_connection:
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SDA
-        host_ref_to: PC4
-      - ref_to: SCL
-        host_ref_to: PC5
-    compatibility:
-    - name: Display
-      action:
-      - name: Show Text
-        parameter:
-          - name: Row
-            constraint:
-              min: 1
-              max: 10
-              unit: NOT_SPECIFIED
-          - name: Text
-          - name: Size
-            value: 1x
-            constraint:
-              - key: 1x
-                value: 1
-              - key: 2x
-                value: 2
-              - key: 3x
-                value: 3
-          - name: Align
-            value: Left
-            constraint:
-              - key: Left
-                value: 0
-              - key: Center
-                value: 1
-              - key: Right
-                value: 2
-          - name: Color
-            value: White
-            constraint:
-              - key: Blue
-                value: 0
-              - key: Cyan
-                value: 1
-              - key: Dark Cyan
-                value: 2
-              - key: Dark Green
-                value: 3
-              - key: Dark Grey
-                value: 4
-              - key: Green
-                value: 5
-              - key: Green Yellow
-                value: 6
-              - key: Light Grey
-                value: 7
-              - key: Magenta
-                value: 8
-              - key: Maroon
-                value: 9
-              - key: Navy
-                value: 10
-              - key: Olive
-                value: 11
-              - key: Orange
-                value: 12
-              - key: Pink
-                value: 13
-              - key: Purple
-                value: 14
-              - key: White
-                value: 15
-              - key: Red
-                value: 16
-              - key: Yellow
-                value: 17
-      - name: Clear Row
-        parameter:
-          - name: Row
-            constraint:
-              min: 1
-              max: 10
-              unit: NOT_SPECIFIED
-      - name: Clear Screen
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_OLED_SSD1306_128x64
-        library_dependency:
-        - adafruit/Adafruit_SSD1306-1.2.9
-        - adafruit/Adafruit-GFX-Library-1.5.2
-  - name: Integrated RGB LED
-    pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SIG
-        host_ref_to: PD2
-      - ref_to: VCC
-        host_ref_to: VCC
-    compatibility:
-      - name: RGB LED
-        action:
-        - name: 'On'
-          parameter:
-          - name: Red
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Green
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Blue
-            constraint:
-              min: 0
-              max: 255
-              unit: NOT_SPECIFIED
-          - name: Brightness
-            constraint:
-              min: 0
-              max: 100
-              unit: NOT_SPECIFIED
-        - name: 'Off'
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_WS281X_GRB
-        library_dependency:
-        - adafruit/Adafruit_NeoPixel-1.1.8
-  - name: Integrated Light Sensor
-    pin_template: GENERIC_I2C_DEVICE_3v3_5
-    integrated_connection:
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: SDA
-        host_ref_to: PC4
-      - ref_to: SCL
-        host_ref_to: PC5
-    compatibility:
-      - name: Light
-        condition:
-          - name: Compare
-        value:
-          - name: Percent
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-    platforms:
-      - platform: ARDUINO_AVR8
-        classname: MP_BH1750
-        library_dependency:
-          - claws/BH1750
+- name: Integrated SW1
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PD7
+    pin_function: DIGITAL_OUT
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+- name: Integrated SW2
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUTTON_AL
+    library_dependency: []
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PB0
+    pin_function: DIGITAL_OUT
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+- name: Integrated VR1
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PC2
+    pin_function: ANALOG_OUT
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: POT
+    condition:
+    - name: Compare
+    value:
+    - name: Percent
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TRIMPOT
+    library_dependency: []
+- name: Integrated VR2
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PC3
+    pin_function: ANALOG_OUT
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: POT
+    condition:
+    - name: Compare
+    value:
+    - name: Percent
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_TRIMPOT
+    library_dependency: []
+- name: Integrated LED1 (13)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PB5
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        value: 100
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+    - name: 'Off'
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
+- name: Integrated LED2 (22)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PE0
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        value: 100
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+    - name: 'Off'
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
+- name: Integrated LED3 (23)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PE1
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Brightness
+        value: 100
+        constraint:
+          min: 0
+          max: 100
+          unit: PERCENT
+    - name: 'Off'
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_LED_AH
+    library_dependency: []
+- name: Integrated Piezo
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PD4
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: Buzzer
+    action:
+    - name: Beep
+    - name: Play Tone
+      parameter:
+      - name: Tone Frequency
+        value: 2000
+        constraint:
+          min: 0
+          max: 20000
+          unit: HERTZ
+      - name: Duration
+        value: 2
+        constraint:
+          min: 0
+          max: 1000
+          unit: SECOND
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BUZZER
+    library_dependency: []
+- name: Integrated OLED
+  integrated_connection:
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PC4
+    pin_function: SDA
+  - host_ref_to: PC5
+    pin_function: SCL
+  compatibility:
+  - name: Display
+    action:
+    - name: Show Text
+      parameter:
+      - name: Row
+        constraint:
+          min: 1
+          max: 10
+          unit: NOT_SPECIFIED
+      - name: Text
+      - name: Size
+        value: 1x
+        constraint:
+        - key: 1x
+          value: 1
+        - key: 2x
+          value: 2
+        - key: 3x
+          value: 3
+      - name: Align
+        value: Left
+        constraint:
+        - key: Left
+          value: 0
+        - key: Center
+          value: 1
+        - key: Right
+          value: 2
+      - name: Color
+        value: White
+        constraint:
+        - key: Blue
+          value: 0
+        - key: Cyan
+          value: 1
+        - key: Dark Cyan
+          value: 2
+        - key: Dark Green
+          value: 3
+        - key: Dark Grey
+          value: 4
+        - key: Green
+          value: 5
+        - key: Green Yellow
+          value: 6
+        - key: Light Grey
+          value: 7
+        - key: Magenta
+          value: 8
+        - key: Maroon
+          value: 9
+        - key: Navy
+          value: 10
+        - key: Olive
+          value: 11
+        - key: Orange
+          value: 12
+        - key: Pink
+          value: 13
+        - key: Purple
+          value: 14
+        - key: White
+          value: 15
+        - key: Red
+          value: 16
+        - key: Yellow
+          value: 17
+    - name: Clear Row
+      parameter:
+      - name: Row
+        constraint:
+          min: 1
+          max: 10
+          unit: NOT_SPECIFIED
+    - name: Clear Screen
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_OLED_SSD1306_128x64
+    library_dependency:
+    - adafruit/Adafruit_SSD1306-1.2.9
+    - adafruit/Adafruit-GFX-Library-1.5.2
+- name: Integrated RGB LED
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PD2
+    pin_function: DIGITAL_IN
+  - host_ref_to: VCC
+    pin_function: VCC
+  compatibility:
+  - name: RGB LED
+    action:
+    - name: 'On'
+      parameter:
+      - name: Red
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Green
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Blue
+        constraint:
+          min: 0
+          max: 255
+          unit: NOT_SPECIFIED
+      - name: Brightness
+        constraint:
+          min: 0
+          max: 100
+          unit: NOT_SPECIFIED
+    - name: 'Off'
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_WS281X_GRB
+    library_dependency:
+    - adafruit/Adafruit_NeoPixel-1.1.8
+- name: Integrated Light Sensor
+  integrated_connection:
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: PC4
+    pin_function: SDA
+  - host_ref_to: PC5
+    pin_function: SCL
+  compatibility:
+  - name: Light
+    condition:
+    - name: Compare
+    value:
+    - name: Percent
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_BH1750
+    library_dependency:
+    - claws/BH1750
 platforms:
 - platform: ARDUINO_AVR8
   classname: ''

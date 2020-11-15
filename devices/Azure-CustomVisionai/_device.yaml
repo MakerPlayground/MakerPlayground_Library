@@ -8,64 +8,62 @@ cloud_platform: AZURE
 width: 0.0
 height: 0.0
 property:
-  - name: Region
-    datatype: ENUM
-    controltype: DROPDOWN
-    value: ''
-    constraint:
-      - westus2
-      - eastus
-      - eastus2
-      - southcentralus
-      - nouthcentralus
-      - westeurope
-      - northeurope
-      - southeastasia
-      - australiaeast
-      - centralindia
-      - uksouth
-      - japaneast
-  - name: Prediction Key
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
-  - name: Project Id
-    datatype: STRING
-    controltype: TEXTBOX
-    value: ''
-    constraint: []
-  - name: Request interval
-    datatype: DOUBLE
-    controltype: SPINBOX
-    value: 3.0
-    constraint:
-      min: 0.0
-      max: 1000000.0
-      unit: SECOND
-pin_template: NO_PIN
-connection_consume: []
+- name: Region
+  datatype: ENUM
+  controltype: DROPDOWN
+  value: ''
+  constraint:
+  - westus2
+  - eastus
+  - eastus2
+  - southcentralus
+  - nouthcentralus
+  - westeurope
+  - northeurope
+  - southeastasia
+  - australiaeast
+  - centralindia
+  - uksouth
+  - japaneast
+- name: Prediction Key
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
+- name: Project Id
+  datatype: STRING
+  controltype: TEXTBOX
+  value: ''
+  constraint: []
+- name: Request interval
+  datatype: DOUBLE
+  controltype: SPINBOX
+  value: 3.0
+  constraint:
+    min: 0.0
+    max: 1000000.0
+    unit: SECOND
 compatibility:
-  - name: Image Recognizer
-    condition:
-      - name: Found
-        parameter:
-          - name: Image
-          - name: Class
-          - name: Minimum Probability
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-      - name: Not Found
-        parameter:
-          - name: Image
-          - name: Class
-          - name: Minimum Probability
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
+- name: Image Recognizer
+  condition:
+  - name: Found
+    parameter:
+    - name: Image
+    - name: Class
+    - name: Minimum Probability
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: Not Found
+    parameter:
+    - name: Image
+    - name: Class
+    - name: Minimum Probability
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
 platforms:
 - platform: ARDUINO_ESP32
   classname: MP_Azure_CustomVisionServices

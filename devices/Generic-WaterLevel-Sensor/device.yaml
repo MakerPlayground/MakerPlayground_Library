@@ -7,38 +7,40 @@ width: 113.378
 height: 351.498
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: GND
     type: WIRE
     pins:
-      - x: 44.417
-        y: 341.748
-        ref_to: GND
+    - x: 44.417
+      y: 341.748
+      pin_function: GND
   - name: VCC
     type: WIRE
     pins:
-      - x: 58.817
-        y: 341.748
-        ref_to: VCC
+    - x: 58.817
+      y: 341.748
+      pin_function: VCC
   - name: S
     type: WIRE
     pins:
-      - x: 73.217
-        y: 341.748
-        ref_to: SIG
+    - x: 73.217
+      y: 341.748
+      pin_function: ANALOG_OUT
 compatibility:
-  - name: Water
-    condition:
-      - name: Detect Water
-      - name: No Water
+- name: Water
+  condition:
+  - name: Detect Water
+  - name: No Water
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_WATER_SENSOR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_WATER_SENSOR
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_WATER_SENSOR
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_WATER_SENSOR
+  library_dependency: []

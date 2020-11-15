@@ -7,61 +7,63 @@ formfactor: STANDALONE
 width: 331
 height: 186
 property:
-  - name: Mode
-    datatype: STRING_INT_ENUM
-    controltype: DROPDOWN
-    value: Object Temperature
-    constraint:
-      - key: Object Temperature
-        value: 0
-      - key: Ambient Temperature
-        value: 1
-pin_template: GENERIC_I2C_DEVICE_3v3_5
+- name: Mode
+  datatype: STRING_INT_ENUM
+  controltype: DROPDOWN
+  value: Object Temperature
+  constraint:
+  - key: Object Temperature
+    value: 0
+  - key: Ambient Temperature
+    value: 1
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 29
-        y: 68
-        ref_to: GND
-      - x: 29
-        y: 92.4
-        ref_to: VCC
-      - x: 29
-        y: 106.8
-        ref_to: SDA
-      - x: 29
-        y: 121.2
-        ref_to: SCL
+    - x: 29
+      y: 68
+      pin_function: GND
+    - x: 29
+      y: 92.4
+      pin_function: VCC
+    - x: 29
+      y: 106.8
+      pin_function: SDA
+    - x: 29
+      y: 121.2
+      pin_function: SCL
 compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+    parameter: []
+  value:
   - name: Temperature
-    condition:
-      - name: Compare
-        parameter: []
-    value:
-      - name: Temperature
-        constraint:
-          min: -40
-          max: 85
-          unit: CELSIUS
+    constraint:
+      min: -40
+      max: 85
+      unit: CELSIUS
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_MLX90615
-    library_dependency:
-    - skiselev/MLX90615-master
-  - platform: ARDUINO_ESP8266
-    classname: MP_MLX90615
-    library_dependency:
-    - skiselev/MLX90615-master
-  - platform: ARDUINO_ESP32
-    classname: MP_MLX90615
-    library_dependency:
-    - skiselev/MLX90615-master
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_MLX90615
-    library_dependency:
-    - skiselev/MLX90615-master
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_MLX90615
-    library_dependency:
-    - skiselev/MLX90615-master
+- platform: ARDUINO_AVR8
+  classname: MP_MLX90615
+  library_dependency:
+  - skiselev/MLX90615-master
+- platform: ARDUINO_ESP8266
+  classname: MP_MLX90615
+  library_dependency:
+  - skiselev/MLX90615-master
+- platform: ARDUINO_ESP32
+  classname: MP_MLX90615
+  library_dependency:
+  - skiselev/MLX90615-master
+- platform: ARDUINO_ATSAMD21
+  classname: MP_MLX90615
+  library_dependency:
+  - skiselev/MLX90615-master
+- platform: ARDUINO_ATSAMD51
+  classname: MP_MLX90615
+  library_dependency:
+  - skiselev/MLX90615-master

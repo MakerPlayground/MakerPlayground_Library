@@ -5,48 +5,48 @@ url: https://www.seeedstudio.com/Grove-Moisture-Sensor.html
 type: MODULE
 width: 138
 height: 340
-pin_template: GENERIC_ANALOG_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 52
-        y: 340
-        ref_to: GND
-      - x: 63.33
-        y: 340
-        ref_to: VCC
-      - x: 74.67
-        y: 340
-        ref_to: NC
-      - x: 86
-        y: 340
-        ref_to: SIG
+    - x: 52
+      y: 340
+      pin_function: GND
+    - x: 63.33
+      y: 340
+      pin_function: VCC
+    - x: 74.67
+      y: 340
+      pin_function: NO_FUNCTION
+    - x: 86
+      y: 340
+      pin_function: ANALOG_OUT
 compatibility:
-  - name: Soil Moisture
-    condition:
-      - name: Compare
-    value:
-      - name: Percent
-        constraint:
-          min: 0
-          max: 100
-          unit: PERCENT
+- name: Soil Moisture
+  condition:
+  - name: Compare
+  value:
+  - name: Percent
+    constraint:
+      min: 0
+      max: 100
+      unit: PERCENT
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_SOIL_MOISTURE
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_SOIL_MOISTURE
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_SOIL_MOISTURE
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_SOIL_MOISTURE
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_SOIL_MOISTURE
-    library_dependency: []
-
-
+- platform: ARDUINO_AVR8
+  classname: MP_SOIL_MOISTURE
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_SOIL_MOISTURE
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_SOIL_MOISTURE
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_SOIL_MOISTURE
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_SOIL_MOISTURE
+  library_dependency: []

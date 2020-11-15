@@ -5,73 +5,75 @@ url: https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-PCA9685.html
 type: MODULE
 width: 359
 height: 248
-pin_template: GENERIC_I2C_DEVICE_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: Port
     type: GROVE
     pins:
-      - x: 26
-        y: 108
-        ref_to: GND
-      - x: 26
-        y: 119.3
-        ref_to: VCC
-      - x: 26
-        y: 130.6
-        ref_to: SDA
-      - x: 26
-        y: 141.9
-        ref_to: SCL
+    - x: 26
+      y: 108
+      pin_function: GND
+    - x: 26
+      y: 119.3
+      pin_function: VCC
+    - x: 26
+      y: 130.6
+      pin_function: SDA
+    - x: 26
+      y: 141.9
+      pin_function: SCL
 compatibility:
-  - name: Servo Controller
-    action:
-    - name: Move Servo
-      parameter:
-        - name: Channel
-          value: 0
-          constraint:
-            - 0
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-            - 6
-            - 7
-            - 8
-            - 9
-            - 10
-            - 11
-            - 12
-            - 13
-            - 14
-            - 15
-        - name: To Angle
-          value: 90
-          constraint:
-            min: 0
-            max: 180
-            unit: DEGREE
-          datatype: INTEGER
-          controltype: SPINBOX
+- name: Servo Controller
+  action:
+  - name: Move Servo
+    parameter:
+    - name: Channel
+      value: 0
+      constraint:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    - name: To Angle
+      value: 90
+      constraint:
+        min: 0
+        max: 180
+        unit: DEGREE
+      datatype: INTEGER
+      controltype: SPINBOX
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_PCA9685
-    library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
-  - platform: ARDUINO_ESP8266
-    classname: MP_PCA9685
-    library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
-  - platform: ARDUINO_ESP32
-    classname: MP_PCA9685
-    library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
-  - platform: ARDUINO_ATSAMD21
-    classname: MP_PCA9685
-    library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_PCA9685
-    library_dependency:
-      - jetstreamc/Seeed_PCA9685-master
+- platform: ARDUINO_AVR8
+  classname: MP_PCA9685
+  library_dependency:
+  - jetstreamc/Seeed_PCA9685-master
+- platform: ARDUINO_ESP8266
+  classname: MP_PCA9685
+  library_dependency:
+  - jetstreamc/Seeed_PCA9685-master
+- platform: ARDUINO_ESP32
+  classname: MP_PCA9685
+  library_dependency:
+  - jetstreamc/Seeed_PCA9685-master
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PCA9685
+  library_dependency:
+  - jetstreamc/Seeed_PCA9685-master
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PCA9685
+  library_dependency:
+  - jetstreamc/Seeed_PCA9685-master

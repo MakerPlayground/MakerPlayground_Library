@@ -7,49 +7,51 @@ width: 158
 height: 155
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_ACTUATOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 85.679
-        y: 151.8
-        ref_to: SIG
+    - x: 85.679
+      y: 151.8
+      pin_function: DIGITAL_IN
   - name: GND
     type: WIRE
     pins:
-      - x: 71.279
-        y: 151.8
-        ref_to: GND
+    - x: 71.279
+      y: 151.8
+      pin_function: GND
 compatibility:
-  - name: Buzzer
-    action:
-      - name: Play Tone
-        parameter:
-          - name: Tone Frequency
-            constraint:
-              min: 0
-              max: 20000
-              unit: HERTZ
-          - name: Duration
-            constraint:
-              min: 0
-              max: 1000
-              unit: SECOND
-      - name: Beep
+- name: Buzzer
+  action:
+  - name: Play Tone
+    parameter:
+    - name: Tone Frequency
+      constraint:
+        min: 0
+        max: 20000
+        unit: HERTZ
+    - name: Duration
+      constraint:
+        min: 0
+        max: 1000
+        unit: SECOND
+  - name: Beep
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_BUZZER
-    library_dependency: []
-  - platform: RASPBERRYPI
-    classname: MP_BUZZER
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_BUZZER
+  library_dependency: []
+- platform: RASPBERRYPI
+  classname: MP_BUZZER
+  library_dependency: []

@@ -8,353 +8,344 @@ width: 410
 height: 326
 pin_template: ATSAMD51
 cloud_provide:
-  - cloud_platform: BLYNK
-    classname: MP_BLYNK_WIOTERMINAL
-    library_dependency:
-      - blynkkk/Blynk-0.6.1
-      - SeeedStudio/esp-at-lib-1.1
-      - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
-      - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
-      - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
-      - adafruit/Adafruit_ZeroDMA-1.0.8
-  - cloud_platform: REST
-    classname: MP_REST_WIOTERMINAL
-    library_dependency:
-      - SeeedStudio/esp-at-lib-1.1
-      - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
-      - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
-      - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
-      - SeeedStudio/Seeed_Arduino_mbedtls-1.1
-      - SeeedStudio/Seeed_Arduino_atWiFiClientSecure-1.0.0
-      - adafruit/Adafruit_ZeroDMA-1.0.8
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_WIOTERMINAL
+  library_dependency:
+  - blynkkk/Blynk-0.6.1
+  - SeeedStudio/esp-at-lib-1.1
+  - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
+  - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
+  - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
+  - adafruit/Adafruit_ZeroDMA-1.0.8
+- cloud_platform: REST
+  classname: MP_REST_WIOTERMINAL
+  library_dependency:
+  - SeeedStudio/esp-at-lib-1.1
+  - SeeedStudio/Seeed_Arduino_atUnified-1.0.0
+  - SeeedStudio/Seeed_Arduino_atWiFi-1.0.0
+  - SeeedStudio/Seeed_Arduino_FreeRTOS-1.1
+  - SeeedStudio/Seeed_Arduino_mbedtls-1.1
+  - SeeedStudio/Seeed_Arduino_atWiFiClientSecure-1.0.0
+  - adafruit/Adafruit_ZeroDMA-1.0.8
 property: []
 connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
   - name: LEFT
     type: GROVE
     pins:
-      - x: 119.02
-        y: 326
-        ref_to: GND
-      - x: 107.7
-        y: 326
-        ref_to: VCC
-      - x: 96.38
-        y: 326
-        ref_to: "SDA"
-      - x: 85.06
-        y: 326
-        ref_to: "SCL"
-
+    - x: 119.02
+      y: 326
+      ref_to: GND
+    - x: 107.7
+      y: 326
+      ref_to: VCC
+    - x: 96.38
+      y: 326
+      ref_to: SDA
+    - x: 85.06
+      y: 326
+      ref_to: SCL
   - name: RIGHT
     type: GROVE
     pins:
-      - x: 323.12
-        y: 326
-        ref_to: GND
-      - x: 311.8
-        y: 326
-        ref_to: VCC
-      - x: 300.48
-        y: 326
-        ref_to: "1"
-      - x: 289.16
-        y: 326
-        ref_to: "0"
-
+    - x: 323.12
+      y: 326
+      ref_to: GND
+    - x: 311.8
+      y: 326
+      ref_to: VCC
+    - x: 300.48
+      y: 326
+      ref_to: '1'
+    - x: 289.16
+      y: 326
+      ref_to: '0'
 integrated_devices:
-  - name: Integrated TFT LCD
-    pin_template: NO_PIN
-    integrated_connection: []
-    compatibility:
-      - name: Display
-        action:
-          - name: Show Text
-            parameter:
-              - name: Row
-                constraint:
-                  min: 1
-                  max: 10
-                  unit: NOT_SPECIFIED
-              - name: Text
-              - name: Size
-                value: 1x
-                constraint:
-                  - key: 1x
-                    value: 1
-                  - key: 2x
-                    value: 2
-                  - key: 3x
-                    value: 3
-              - name: Align
-                value: Left
-                constraint:
-                  - key: Left
-                    value: 0
-                  - key: Center
-                    value: 1
-                  - key: Right
-                    value: 2
-              - name: Color
-                value: White
-                constraint:
-                  - key: Blue
-                    value: 0
-                  - key: Cyan
-                    value: 1
-                  - key: Dark Cyan
-                    value: 2
-                  - key: Dark Green
-                    value: 3
-                  - key: Dark Grey
-                    value: 4
-                  - key: Green
-                    value: 5
-                  - key: Green Yellow
-                    value: 6
-                  - key: Light Grey
-                    value: 7
-                  - key: Magenta
-                    value: 8
-                  - key: Maroon
-                    value: 9
-                  - key: Navy
-                    value: 10
-                  - key: Olive
-                    value: 11
-                  - key: Orange
-                    value: 12
-                  - key: Pink
-                    value: 13
-                  - key: Purple
-                    value: 14
-                  - key: White
-                    value: 15
-                  - key: Red
-                    value: 16
-                  - key: Yellow
-                    value: 17
-          - name: Clear Row
-            parameter:
-              - name: Row
-                constraint:
-                  min: 1
-                  max: 10
-                  unit: NOT_SPECIFIED
-          - name: Clear Screen
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_TFT_WioTerminal
-        library_dependency:
-         - SeeedStudio/Seeed_Arduino_LCD-master
-         - adafruit/Adafruit_ZeroDMA-1.0.8
-  - name: Integrated Buzzer
-    pin_template: GENERIC_PWM_ACTUATOR_3v3
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "12"
-    compatibility:
-      - name: Buzzer
-        action:
-          - name: Play Tone
-            parameter:
-              - name: Tone Frequency
-                constraint:
-                  max: 20000.0
-                  min: 0.0
-                  unit: HERTZ
-              - name: Duration
-                constraint:
-                  max: 1000.0
-                  min: 0.0
-                  unit: SECOND
-          - name: Beep
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_BUZZER
-        library_dependency: []
-  - name: Integrated Button (Left)
-    pin_template: GENERIC_DIGITAL_SENSOR_3v3
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "30"
-    compatibility:
-      - name: Button
-        condition:
-          - name: Press
-          - name: Press and release
-          - name: Not press
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_BUTTON_AL
-        library_dependency: []
-  - name: Integrated Button (Center)
-    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "29"
-    compatibility:
-      - name: Button
-        condition:
-          - name: Press
-          - name: Press and release
-          - name: Not press
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_BUTTON_AL
-        library_dependency: []
-  - name: Integrated Button (Right)
-    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "28"
-    compatibility:
-      - name: Button
-        condition:
-          - name: Press
-          - name: Press and release
-          - name: Not press
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_BUTTON_AL
-        library_dependency: []
-  - name: Integrated Microphone
-    pin_template: GENERIC_ANALOG_SENSOR_3v3
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "39"
-    compatibility:
-    - name: Sound
-      condition:
-       - name: Compare
-      value:
-       - name: SoundLevel
-         constraint:
-          min: 0.0
-          max: 100.0
-          unit: PERCENT
-    platforms:
-     - platform: ARDUINO_ATSAMD51
-       classname: MP_MICROPHONE_NORMALIZED
-       library_dependency: []
-  - name: Integrated Light Sensor
-    pin_template: GENERIC_ANALOG_SENSOR_3v3
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SIG
-        host_ref_to: "27"
-    compatibility:
-      - name: Light
-        condition:
-          - name: Compare
-        value:
-          - name: Percent
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-    platforms:
-     - platform: ARDUINO_ATSAMD51
-       classname: MP_LIGHT_SENSOR
-       library_dependency: []
-  - name: Integrated Joystick
-    pin_template: INEX_JOYSTICK
-    integrated_connection:
-      - ref_to: UP
-        host_ref_to: '31'
-      - ref_to: LEFT
-        host_ref_to: '32'
-      - ref_to: RIGHT
-        host_ref_to: '33'
-      - ref_to: CENTER
-        host_ref_to: '35'
-      - ref_to: DOWN
-        host_ref_to: '34'
-      - ref_to: GND
-        host_ref_to: 'GND'
-    compatibility:
-      - name: Joystick
-        condition:
-          - name: Press up
-          - name: Not press up
-          - name: Press down
-          - name: Not press down
-          - name: Press left
-          - name: Not press left
-          - name: Press right
-          - name: Not press right
-          - name: Press middle
-          - name: Not press middle
-          - name: Not press all
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_JOYSTICK_5PIN_AL
-        library_dependency: []
-  - name: Integrated 3-Axis Accelerometer
-    pin_template: GENERIC_I2C_DEVICE_3v3
-    integrated_connection:
-      - ref_to: GND
-        host_ref_to: GND
-      - ref_to: VCC
-        host_ref_to: VCC
-      - ref_to: SDA
-        host_ref_to: SDA
-      - ref_to: SCL
-        host_ref_to: SCL
-    compatibility:
-    - name: Accelerometer
-      condition:
-      - name: Compare
-      value:
-      - name: Accel_X
+- name: Integrated TFT LCD
+  integrated_connection: []
+  compatibility:
+  - name: Display
+    action:
+    - name: Show Text
+      parameter:
+      - name: Row
         constraint:
-          min: -100
-          max: 100
-          unit: METERPERSECSQUARE
-      - name: Accel_Y
+          min: 1
+          max: 10
+          unit: NOT_SPECIFIED
+      - name: Text
+      - name: Size
+        value: 1x
         constraint:
-          min: -100
-          max: 100
-          unit: METERPERSECSQUARE
-      - name: Accel_Z
+        - key: 1x
+          value: 1
+        - key: 2x
+          value: 2
+        - key: 3x
+          value: 3
+      - name: Align
+        value: Left
         constraint:
-          min: -100
-          max: 100
-          unit: METERPERSECSQUARE
-      - name: Accel_Magnitude
+        - key: Left
+          value: 0
+        - key: Center
+          value: 1
+        - key: Right
+          value: 2
+      - name: Color
+        value: White
         constraint:
-          min: 0
-          max: 100
-          unit: METERPERSECSQUARE
-      count: ""
-    platforms:
-      - platform: ARDUINO_ATSAMD51
-        classname: MP_LIS3DH_SeeedStudio_I2C1
-        library_dependency:
-          - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.0
-platforms:
+        - key: Blue
+          value: 0
+        - key: Cyan
+          value: 1
+        - key: Dark Cyan
+          value: 2
+        - key: Dark Green
+          value: 3
+        - key: Dark Grey
+          value: 4
+        - key: Green
+          value: 5
+        - key: Green Yellow
+          value: 6
+        - key: Light Grey
+          value: 7
+        - key: Magenta
+          value: 8
+        - key: Maroon
+          value: 9
+        - key: Navy
+          value: 10
+        - key: Olive
+          value: 11
+        - key: Orange
+          value: 12
+        - key: Pink
+          value: 13
+        - key: Purple
+          value: 14
+        - key: White
+          value: 15
+        - key: Red
+          value: 16
+        - key: Yellow
+          value: 17
+    - name: Clear Row
+      parameter:
+      - name: Row
+        constraint:
+          min: 1
+          max: 10
+          unit: NOT_SPECIFIED
+    - name: Clear Screen
+  platforms:
   - platform: ARDUINO_ATSAMD51
-    classname: ""
+    classname: MP_TFT_WioTerminal
+    library_dependency:
+    - SeeedStudio/Seeed_Arduino_LCD-master
+    - adafruit/Adafruit_ZeroDMA-1.0.8
+- name: Integrated Buzzer
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '12'
+    pin_function: PWM_IN
+  compatibility:
+  - name: Buzzer
+    action:
+    - name: Play Tone
+      parameter:
+      - name: Tone Frequency
+        constraint:
+          max: 20000.0
+          min: 0.0
+          unit: HERTZ
+      - name: Duration
+        constraint:
+          max: 1000.0
+          min: 0.0
+          unit: SECOND
+    - name: Beep
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BUZZER
     library_dependency: []
+- name: Integrated Button (Left)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '30'
+    pin_function: DIGITAL_OUT
+  compatibility:
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BUTTON_AL
+    library_dependency: []
+- name: Integrated Button (Center)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '29'
+    pin_function: DIGITAL_OUT
+  compatibility:
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BUTTON_AL
+    library_dependency: []
+- name: Integrated Button (Right)
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '28'
+    pin_function: DIGITAL_OUT
+  compatibility:
+  - name: Button
+    condition:
+    - name: Press
+    - name: Press and release
+    - name: Not press
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_BUTTON_AL
+    library_dependency: []
+- name: Integrated Microphone
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '39'
+    pin_function: ANALOG_OUT
+  compatibility:
+  - name: Sound
+    condition:
+    - name: Compare
+    value:
+    - name: SoundLevel
+      constraint:
+        min: 0.0
+        max: 100.0
+        unit: PERCENT
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_MICROPHONE_NORMALIZED
+    library_dependency: []
+- name: Integrated Light Sensor
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: '27'
+    pin_function: ANALOG_OUT
+  compatibility:
+  - name: Light
+    condition:
+    - name: Compare
+    value:
+    - name: Percent
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_LIGHT_SENSOR
+    library_dependency: []
+- name: Integrated Joystick
+  integrated_connection:
+  - host_ref_to: '31'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '32'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '33'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '35'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '34'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: GND
+    pin_function: GND
+  compatibility:
+  - name: Joystick
+    condition:
+    - name: Press up
+    - name: Not press up
+    - name: Press down
+    - name: Not press down
+    - name: Press left
+    - name: Not press left
+    - name: Press right
+    - name: Not press right
+    - name: Press middle
+    - name: Not press middle
+    - name: Not press all
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_JOYSTICK_5PIN_AL
+    library_dependency: []
+- name: Integrated 3-Axis Accelerometer
+  integrated_connection:
+  - host_ref_to: GND
+    pin_function: GND
+  - host_ref_to: VCC
+    pin_function: VCC
+  - host_ref_to: SDA
+    pin_function: SDA
+  - host_ref_to: SCL
+    pin_function: SCL
+  compatibility:
+  - name: Accelerometer
+    condition:
+    - name: Compare
+    value:
+    - name: Accel_X
+      constraint:
+        min: -100
+        max: 100
+        unit: METERPERSECSQUARE
+    - name: Accel_Y
+      constraint:
+        min: -100
+        max: 100
+        unit: METERPERSECSQUARE
+    - name: Accel_Z
+      constraint:
+        min: -100
+        max: 100
+        unit: METERPERSECSQUARE
+    - name: Accel_Magnitude
+      constraint:
+        min: 0
+        max: 100
+        unit: METERPERSECSQUARE
+    count: ''
+  platforms:
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_LIS3DH_SeeedStudio_I2C1
+    library_dependency:
+    - SeeedStudio/Seeed_Arduino_LIS3DHTR-1.2.0
+platforms:
+- platform: ARDUINO_ATSAMD51
+  classname: ''
+  library_dependency: []

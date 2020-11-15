@@ -1,42 +1,44 @@
 id: Generic-Micro-PIR
 brand: Generic
 model: Micro PIR human body sensing module
-url: https://www.arduinoall.com/product/899/micro-pir-human-body-sensing-module-pir-module-infrared-module-เซนเซอร์-pir-ตรวจจับความเคลื่อนไหวของ
+url: "https://www.arduinoall.com/product/899/micro-pir-human-body-sensing-module-pir-module-infrared-module-\u0E40\
+  \u0E0B\u0E19\u0E40\u0E0B\u0E2D\u0E23\u0E4C-pir-\u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\
+  \u0E1A\u0E04\u0E27\u0E32\u0E21\u0E40\u0E04\u0E25\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E2B\
+  \u0E27\u0E02\u0E2D\u0E07"
 type: MODULE
 width: 46
 height: 92
-## Pin distance is not 14.4 pixels
-# need_breadboard: true
-# breadboard_placement: ONE_SIDE
-pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 13.7
-        y: 92
-        ref_to: VCC
+    - x: 13.7
+      y: 92
+      pin_function: VCC
   - name: OUT
     type: WIRE
     pins:
-      - x: 22.5
-        y: 92
-        ref_to: SIG
+    - x: 22.5
+      y: 92
+      pin_function: DIGITAL_OUT
   - name: GND
     type: WIRE
     pins:
-      - x: 31.3
-        y: 92
-        ref_to: GND
+    - x: 31.3
+      y: 92
+      pin_function: GND
 compatibility:
-  - name: Presence
-    condition:
-      - name: Detect Human
-      - name: No Human
+- name: Presence
+  condition:
+  - name: Detect Human
+  - name: No Human
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_PIR
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_PIR
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_PIR
+  library_dependency: []

@@ -1,62 +1,66 @@
 id: Generic-ATGM336H
 brand: Generic
 model: GPS Module with Antenna (GPS ATGM336H)
-url: https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-โมดูล-gps-atgm336h-พร้อมสายอากาศ
+url: "https://www.arduinoall.com/product/1675/gps-atgm336h-gps-module-with-antenna-replacement-neo-6m-neo-m8n-\u0E42\
+  \u0E21\u0E14\u0E39\u0E25-gps-atgm336h-\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E2A\u0E32\
+  \u0E22\u0E2D\u0E32\u0E01\u0E32\u0E28"
 type: MODULE
 width: 74
 height: 110
 need_breadboard: true
 breadboard_placement: ONE_SIDE
-pin_template: GENERIC_SOFTSERIAL_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: VCC
     type: WIRE
     pins:
-      - x: 7.5
-        y: 110
-        ref_to: VCC
+    - x: 7.5
+      y: 110
+      pin_function: VCC
   - name: GND
     type: WIRE
     pins:
-      - x: 21.9
-        y: 110
-        ref_to: GND
+    - x: 21.9
+      y: 110
+      pin_function: GND
   - name: TX
     type: WIRE
     pins:
-      - x: 35.3
-        y: 110
-        ref_to: TX
+    - x: 35.3
+      y: 110
+      pin_function: SW_SERIAL_TX
   - name: RX
     type: WIRE
     pins:
-      - x: 49.7
-        y: 110
-        ref_to: RX
+    - x: 49.7
+      y: 110
+      pin_function: SW_SERIAL_RX
 compatibility:
-  - name: GPS
-    condition:
-      - name: Compare
-      - name: Data is valid
-      - name: Data is not valid
-    value:
-      - name: Latitude
-        constraint:
-          min: -90
-          max: 90
-          unit: DEGREE
-      - name: Longitude
-        constraint:
-          min: -180
-          max: 180
-          unit: DEGREE
+- name: GPS
+  condition:
+  - name: Compare
+  - name: Data is valid
+  - name: Data is not valid
+  value:
+  - name: Latitude
+    constraint:
+      min: -90
+      max: 90
+      unit: DEGREE
+  - name: Longitude
+    constraint:
+      min: -180
+      max: 180
+      unit: DEGREE
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_TINY_GPS
-    library_dependency:
-      - mikalhart/TinyGPSPlus-1.0.2
-  - platform: ARDUINO_ESP8266
-    classname: MP_TINY_GPS
-    library_dependency:
-      - plerup/espsoftwareserial-3.4.2
-      - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_AVR8
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ESP8266
+  classname: MP_TINY_GPS
+  library_dependency:
+  - plerup/espsoftwareserial-3.4.2
+  - mikalhart/TinyGPSPlus-1.0.2

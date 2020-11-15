@@ -5,81 +5,83 @@ url: https://cytron.io/p-maker-drive-simplifying-h-bridge-motor-driver-for-begin
 type: MODULE
 width: 200
 height: 244
-pin_template: MOTOR_DRIVER_2CH_3v3_5
 connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
   - name: M1A
     type: WIRE
     pins:
-      - x: 181
-        y: 86
-        ref_to: M1A
+    - x: 181
+      y: 86
+      pin_function: PWM_IN
   - name: M1B
     type: WIRE
     pins:
     - x: 181
       y: 97.3
-      ref_to: M1B
+      pin_function: PWM_IN
   - name: 5VO
     type: WIRE
     pins:
     - x: 181
       y: 108.6
-      ref_to: NC
+      pin_function: NO_FUNCTION
   - name: GND
     type: WIRE
     pins:
     - x: 181
       y: 119.9
-      ref_to: GND
+      pin_function: GND
   - name: M2A
     type: WIRE
     pins:
     - x: 181
       y: 131.2
-      ref_to: M2A
+      pin_function: PWM_IN
   - name: M2B
     type: WIRE
     pins:
     - x: 181
       y: 142.5
-      ref_to: M2B
+      pin_function: PWM_IN
 compatibility:
-  - name: DC Motor Driver
-    action:
-      - name: 'On'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-          - name: Direction
-            value: Forward
-          - name: Speed
-            value: 100
-            constraint:
-              min: 0
-              max: 100
-              unit: PERCENT
-      - name: 'Off'
-        parameter:
-          - name: Channel
-            value: 1
-            constraint:
-              - 1
-              - 2
-            datatype: INTEGER_ENUM
-            controltype: DROPDOWN
+- name: DC Motor Driver
+  action:
+  - name: 'On'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+    - name: Direction
+      value: Forward
+    - name: Speed
+      value: 100
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
+  - name: 'Off'
+    parameter:
+    - name: Channel
+      value: 1
+      constraint:
+      - 1
+      - 2
+      datatype: INTEGER_ENUM
+      controltype: DROPDOWN
 platforms:
-  - platform: ARDUINO_AVR8
-    classname: MP_HBRIDGE_DRIVER_2CH
-    library_dependency: []
-  - platform: ARDUINO_ESP8266
-    classname: MP_HBRIDGE_DRIVER_2CH
-    library_dependency: []
-  - platform: ARDUINO_ESP32
-    classname: MP_HBRIDGE_DRIVER_2CH
-    library_dependency: []
-  - platform: ARDUINO_ATSAMD51
-    classname: MP_HBRIDGE_DRIVER_2CH
-    library_dependency: []
+- platform: ARDUINO_AVR8
+  classname: MP_HBRIDGE_DRIVER_2CH
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_HBRIDGE_DRIVER_2CH
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_HBRIDGE_DRIVER_2CH
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_HBRIDGE_DRIVER_2CH
+  library_dependency: []
