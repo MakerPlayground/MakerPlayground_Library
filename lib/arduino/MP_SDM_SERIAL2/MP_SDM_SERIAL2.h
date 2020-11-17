@@ -7,7 +7,7 @@
 class MP_SDM_SERIAL2
 {
 public:
-	MP_SDM_SERIAL2();
+	MP_SDM_SERIAL2(int baudrate);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();

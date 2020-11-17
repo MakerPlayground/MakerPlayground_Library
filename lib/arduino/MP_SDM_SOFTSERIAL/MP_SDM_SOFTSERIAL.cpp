@@ -1,7 +1,7 @@
 #include "MP_SDM_SOFTSERIAL.h"
 
-MP_SDM_SOFTSERIAL::MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx)
-	: sdm(SDM(ss, 9600, NOT_A_PIN, SWSERIAL_8N1, device_tx, device_rx))
+MP_SDM_SOFTSERIAL::MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx, int baudrate)
+	: sdm(SDM(ss, baudrate, NOT_A_PIN, SWSERIAL_8N1, device_tx, device_rx))
 {
 }
 

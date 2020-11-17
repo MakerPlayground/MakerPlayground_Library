@@ -6,6 +6,15 @@ type: MODULE
 width: 204
 height: 760
 pin_template: GENERIC_SOFTSERIAL_3v3_5
+property:
+  - name: Baudrate
+    datatype: INTEGER
+    controltype: SPINBOX
+    value: 9600
+    constraint:
+      min: 0
+      max: 10000000
+      unit: NOT_SPECIFIED
 connection_consume:
   - name: GND
     type: WIRE

@@ -1,7 +1,7 @@
 #include "MP_SDM_SERIAL2.h"
 
-MP_SDM_SERIAL2::MP_SDM_SERIAL2()
-	: sdm(SDM(Serial2, 9600, NOT_A_PIN, SERIAL_8N1, false))
+MP_SDM_SERIAL2::MP_SDM_SERIAL2(int baudrate)
+	: sdm(SDM(Serial2, baudrate, NOT_A_PIN, SERIAL_8N1, false))
 {
 }
 

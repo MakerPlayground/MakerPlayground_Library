@@ -8,7 +8,7 @@
 class MP_SDM_SOFTSERIAL
 {
 public:
-	MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx);
+	MP_SDM_SOFTSERIAL(uint8_t device_tx, uint8_t device_rx, int baudrate);
 	int init();
 	void update(unsigned long current_time);
 	void printStatus();
