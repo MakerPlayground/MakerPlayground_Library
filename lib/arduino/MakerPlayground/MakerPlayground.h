@@ -11,11 +11,11 @@
   #define MPSerial Serial
 #endif
 
-#define PR_DEVICE(device) MPSerial.print("\""); MPSerial.print(device); MPSerial.print("\""); MPSerial.write(0);
-#define PR_INFO(device) MPSerial.print(F("[[I]]")); MPSerial.write(0); PR_DEVICE(device);
-#define PR_ERR(device) MPSerial.print(F("[[E]]")); MPSerial.write(0); PR_DEVICE(device);
-#define PR_VAL(device) MPSerial.print(F("[[V]]")); MPSerial.write(0); PR_DEVICE(device);
-#define PR_END() MPSerial.println(F("\0"))
+#define PR_DEVICE(device) MPSerial.print("\""); MPSerial.print(device); MPSerial.print("\""); MPSerial.write('\0');
+#define PR_INFO(device) MPSerial.print(F("[[I]]")); MPSerial.write('\0'); PR_DEVICE(device);
+#define PR_ERR(device) MPSerial.print(F("[[E]]")); MPSerial.write('\0'); PR_DEVICE(device);
+#define PR_VAL(device) MPSerial.print(F("[[V]]")); MPSerial.write('\0'); PR_DEVICE(device);
+#define PR_END() MPSerial.println('\0')
 
 #define MP_LOG_INTERVAL 1000
 #define MP_LOG(device, name) PR_INFO(F(name)); device.printStatus(); PR_END(); 
