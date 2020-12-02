@@ -16,6 +16,7 @@ public:
 private:
 	uint8_t pin;
 	double cm;
+	unsigned long latestReadTime;
 };
 
 #endif

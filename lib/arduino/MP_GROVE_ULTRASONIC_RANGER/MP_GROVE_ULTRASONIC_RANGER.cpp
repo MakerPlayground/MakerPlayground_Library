@@ -1,12 +1,15 @@
 #include "MP_GROVE_ULTRASONIC_RANGER.h"
 
+#define READ_INTERVAL 50 // ms
+
 MP_GROVE_ULTRASONIC_RANGER::MP_GROVE_ULTRASONIC_RANGER(uint8_t pin)
   : pin(pin)
+  , latestReadTime(0)
 {
-  
+
 }
 
-int MP_GROVE_ULTRASONIC_RANGER::init() 
+int MP_GROVE_ULTRASONIC_RANGER::init()
 {
 	this->cm = 0;
 	pinMode(this->pin,INPUT);
@@ -15,17 +18,19 @@ int MP_GROVE_ULTRASONIC_RANGER::init()
 
 void MP_GROVE_ULTRASONIC_RANGER::update(unsigned long current_time)
 {
-	double RangeInCentimeters = 0.0;
-	pinMode(this->pin, OUTPUT);
-	digitalWrite(this->pin, LOW);
-	delayMicroseconds(2);
-	digitalWrite(this->pin, HIGH);
-	delayMicroseconds(5);
-	digitalWrite(this->pin,LOW);
-	pinMode(this->pin,INPUT);
-	double duration = pulseIn(this->pin,HIGH);
-	RangeInCentimeters = duration/29/2;
-	this->cm = RangeInCentimeters;
+	if (current_time - latestReadTime > READ_INTERVAL)
+	{
+		pinMode(this->pin, OUTPUT);
+		digitalWrite(this->pin, LOW);
+		delayMicroseconds(2);
+		digitalWrite(this->pin, HIGH);
+		delayMicroseconds(5);
+		digitalWrite(this->pin,LOW);
+		pinMode(this->pin,INPUT);
+		long duration = pulseIn(this->pin,HIGH);
+		this->cm = duration / 58.0;
+		latestReadTime = current_time;
+	}
 }
 
 void MP_GROVE_ULTRASONIC_RANGER::printStatus()
