@@ -1,5 +1,6 @@
 import subprocess
 import json
+import yaml
 import zipfile
 import os
 import hashlib
@@ -77,3 +78,32 @@ with open('version.json', 'w') as file:
         print('Insert new entry...')
         versions.insert(0, current_version)
     json.dump(versions, file)
+
+# generate device_list.json
+print('Generating device_list.json...')
+devices = []
+for dir_name in sorted(os.listdir('devices')):
+    yaml_path = os.path.join('devices', dir_name, 'device.yaml')
+    if os.path.isfile(yaml_path):
+        with open(yaml_path, 'r') as file:
+            device = yaml.safe_load(file)
+            device_metadata = { 'brand': device['brand'], 'model': device['model'], 'url': device['url'], 'type': set(), 'platform': [] }
+            # list all supported generic types
+            if device['type'] == 'MODULE' or device['type'] == 'VIRTUAL':
+                for compatibility in device['compatibility']:
+                    device_metadata['type'].add(compatibility['name'])
+            elif device['type'] == 'CONTROLLER':
+                if 'integrated_devices' in device:
+                    for integrated_device in device['integrated_devices']:
+                        for compatibility in integrated_device['compatibility']:
+                            device_metadata['type'].add(compatibility['name'])
+            else:
+                print (f"Warning: found unsupport type = {device['type']} in {yaml_path}")
+                continue
+            # list all supported platforms
+            for platform in device['platforms']:
+                device_metadata['platform'].append(platform['platform'])
+            device_metadata['type'] = sorted(device_metadata['type'])
+            devices.append(device_metadata)
+with open('device_list.json', 'w', encoding='utf-8') as file:
+    json.dump({'version': version_string, 'release-date': release_date, 'devices': devices}, file)
