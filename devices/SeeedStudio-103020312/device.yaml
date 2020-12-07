@@ -1,0 +1,255 @@
+id: SeeedStudio-103020312
+brand: SeeedStudio
+model: XIAO with Grove Shield
+url: https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html
+type: CONTROLLER
+pio_boardid: seeed_xiao
+width: 344
+height: 144
+property: []
+pin_template: SEEEDUINO_XIAO
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
+    - name: "0"
+      type: WIRE
+      pins:
+        - x: 25.1
+          y: 138.33
+          ref_to: "0"
+    - name: "1"
+      type: WIRE
+      pins:
+        - x: 39.5
+          y: 138.33
+          ref_to: "1"
+    - name: "2"
+      type: WIRE
+      pins:
+        - x: 53.9
+          y: 138.33
+          ref_to: "2"
+    - name: "3"
+      type: WIRE
+      pins:
+        - x: 68.3
+          y: 138.33
+          ref_to: "3"
+    - name: "4"
+      type: WIRE
+      pins:
+        - x: 82.7
+          y: 138.33
+          ref_to: "4"
+    - name: "5"
+      type: WIRE
+      pins:
+        - x: 97.1
+          y: 138.33
+          ref_to: "5"
+    - name: "6"
+      type: WIRE
+      pins:
+        - x: 111.5
+          y: 138.33
+          ref_to: "6"
+
+    - name: "7"
+      type: WIRE
+      pins:
+        - x: 111.5
+          y: 5.67
+          ref_to: "7"
+    - name: "8"
+      type: WIRE
+      pins:
+        - x: 97.1
+          y: 5.67
+          ref_to: "8"
+    - name: "9"
+      type: WIRE
+      pins:
+        - x: 82.7
+          y: 5.67
+          ref_to: "9"
+    - name: "10"
+      type: WIRE
+      pins:
+        - x: 68.3
+          y: 5.67
+          ref_to: "10"
+    - name: 3V3
+      type: WIRE
+      pins:
+        - x: 53.9
+          y: 5.67
+          ref_to: VCC
+          voltage_level: LEVEL_3v3
+    - name: GND
+      type: WIRE
+      pins:
+        - x: 39.5
+          y: 5.67
+          ref_to: GND
+    - name: 5V
+      type: WIRE
+      pins:
+        - x: 25.1
+          y: 5.67
+          ref_to: VCC
+          voltage_level: LEVEL_5
+
+    - name: Port 0/1
+      type: GROVE
+      pins:
+        - x: 152.72
+          y: 14.83
+          ref_to: GND
+        - x: 152.72
+          y: 26.17
+          ref_to: VCC
+        - x: 152.72
+          y: 37.51
+          ref_to: 1
+        - x: 152.72
+          y: 48.85
+          ref_to: 0
+
+    - name: Port 1/2
+      type: GROVE
+      pins:
+        - x: 201.1
+          y: 14.83
+          ref_to: GND
+        - x: 201.1
+          y: 26.17
+          ref_to: VCC
+        - x: 201.1
+          y: 37.51
+          ref_to: 2
+        - x: 201.1
+          y: 48.85
+          ref_to: 1
+
+    - name: Port 2/3
+      type: GROVE
+      pins:
+        - x: 259.68
+          y: 14.83
+          ref_to: GND
+        - x: 259.68
+          y: 26.17
+          ref_to: VCC
+        - x: 259.68
+          y: 37.51
+          ref_to: 3
+        - x: 259.68
+          y: 48.85
+          ref_to: 2
+
+    - name: Port I2C2
+      type: GROVE
+      pins:
+        - x: 308.06
+          y: 14.83
+          ref_to: GND
+        - x: 308.06
+          y: 26.17
+          ref_to: VCC
+        - x: 308.06
+          y: 37.51
+          ref_to: 4
+        - x: 308.06
+          y: 48.85
+          ref_to: 5
+
+    - name: Port I2C1
+      type: GROVE
+      pins:
+        - x: 152.72
+          y: 94.75
+          ref_to: GND
+        - x: 152.72
+          y: 106.1
+          ref_to: VCC
+        - x: 152.72
+          y: 117.43
+          ref_to: 4
+        - x: 152.72
+          y: 128.77
+          ref_to: 5
+
+    - name: Port UART
+      type: GROVE
+      pins:
+        - x: 201.1
+          y: 94.75
+          ref_to: GND
+        - x: 201.1
+          y: 106.1
+          ref_to: VCC
+        - x: 201.1
+          y: 117.43
+          ref_to: 6
+        - x: 201.1
+          y: 128.77
+          ref_to: 7
+
+    - name: Port 8/9
+      type: GROVE
+      pins:
+        - x: 259.68
+          y: 94.75
+          ref_to: GND
+        - x: 259.68
+          y: 106.1
+          ref_to: VCC
+        - x: 259.68
+          y: 117.43
+          ref_to: 9
+        - x: 259.68
+          y: 128.77
+          ref_to: 8
+
+    - name: Port 9/10
+      type: GROVE
+      pins:
+        - x: 308.06
+          y: 94.75
+          ref_to: GND
+        - x: 308.06
+          y: 106.1
+          ref_to: VCC
+        - x: 308.06
+          y: 117.43
+          ref_to: 10
+        - x: 308.06
+          y: 128.77
+          ref_to: 9
+
+integrated_devices:
+  - name: Built in LED
+    integrated_connection:
+      - host_ref_to: 13
+        pin_function: DIGITAL_IN
+      - host_ref_to: GND
+        pin_function: GND
+    compatibility:
+      - name: LED
+        action:
+          - name: "On"
+            parameter:
+              - name: Brightness
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: "Off"
+    platforms:
+      - platform: ARDUINO_ATSAMD21
+        classname: MP_LED_AL
+        library_dependency: []
+platforms:
+  - platform: ARDUINO_ATSAMD21
+    classname: ""
+    library_dependency: []

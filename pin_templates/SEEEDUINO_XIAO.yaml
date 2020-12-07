@@ -1,0 +1,137 @@
+pins:
+  - pin_name: "0"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+
+  - pin_name: "1"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+
+  - pin_name: "2"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+
+  - pin_name: "3"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+  
+  - pin_name: "4"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - SDA
+  
+  - pin_name: "5"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - SCL
+
+  - pin_name: "6"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - HW_SERIAL_TX
+
+  - pin_name: "7"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - HW_SERIAL_RX
+
+  - pin_name: "8"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - SCK
+
+  - pin_name: "9"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - MISO
+
+  - pin_name: "10"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_IN
+      - DIGITAL_OUT
+      - PWM_OUT
+      - ANALOG_IN
+      - SW_SERIAL_RX
+      - SW_SERIAL_TX
+      - MOSI
+  
+  - pin_name: "13"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - DIGITAL_OUT
+      - PWM_OUT
+
+  - pin_name: "GND"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - GND
+
+  - pin_name: "VCC"
+    voltage_level: LEVEL_3v3
+    pin_function:
+      - VCC
+
+  - pin_name: "NF"
+    voltage_level: LEVEL_3v3
+    pin_function: NO_FUNCTION
