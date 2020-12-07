@@ -180,6 +180,9 @@ integrated_devices:
     classname: MP_WS281X_STRIP_GRB
     library_dependency:
     - adafruit/Adafruit_NeoPixel-1.1.8
+  - platform: MICROPYTHON
+    classname: MP_WS281X_STRIP_GRB
+    library_dependency: []
   integrated_connection:
   - host_ref_to: GND
     pin_function: GND
@@ -394,4 +397,7 @@ integrated_devices:
 platforms:
 - platform: ARDUINO_ESP32
   classname: ''
+  library_dependency: []
+- platform: MICROPYTHON
+  classname: ""
   library_dependency: []

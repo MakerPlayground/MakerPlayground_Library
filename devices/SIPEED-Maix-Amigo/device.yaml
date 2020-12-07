@@ -1,0 +1,417 @@
+id: SIPEED-Maix-Amigo
+brand: SIPEED
+model: Maix Amigo
+url: https://www.seeedstudio.com/Sipeed-Maix-Amigo-p-4689.html
+type: CONTROLLER
+pio_boardid: '' # platform specific setting?
+width: 352
+height: 584
+pin_template: K210
+property: []
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items: []
+#  - name: B
+#    type: GROVE
+#    pins:
+#      - x: 75
+#        y: 1
+#        ref_to: GND
+#      - x: 90
+#        y: 1
+#        ref_to: VCC
+#      - x: 104
+#        y: 1
+#        ref_to: "26"
+#      - x: 118
+#        y: 1
+#        ref_to: "36"
+#  - name: C
+#    type: GROVE
+#    pins:
+#      - x: 183
+#        y: 1
+#        ref_to: GND
+#      - x: 196
+#        y: 1
+#        ref_to: VCC
+#      - x: 211
+#        y: 1
+#        ref_to: "17"
+#      - x: 225
+#        y: 1
+#        ref_to: "16"
+#  - name: A (I2C)
+#    type: GROVE
+#    pins:
+#      - x: 1
+#        y: 225
+#        ref_to: GND
+#      - x: 1
+#        y: 217
+#        ref_to: VCC
+#      - x: 1
+#        y: 202
+#        ref_to: "21"
+#      - x: 1
+#        y: 188
+#        ref_to: "22"
+integrated_devices:
+  - name: Integrated TFT LCD
+    pin_template: NO_PIN
+    integrated_connection: []
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 32
+                  unit: NOT_SPECIFIED
+              - name: Text
+              - name: Size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+                  - key: 3x
+                    value: 3
+              - name: Align
+                value: Left
+                constraint:
+                  - key: Left
+                    value: 0
+                  - key: Center
+                    value: 1
+                  - key: Right
+                    value: 2
+              - name: Color
+                value: White
+                constraint:
+                  - key: Blue
+                    value: 0
+                  - key: Cyan
+                    value: 1
+                  - key: Dark Cyan
+                    value: 2
+                  - key: Dark Green
+                    value: 3
+                  - key: Dark Grey
+                    value: 4
+                  - key: Green
+                    value: 5
+                  - key: Green Yellow
+                    value: 6
+                  - key: Light Grey
+                    value: 7
+                  - key: Magenta
+                    value: 8
+                  - key: Maroon
+                    value: 9
+                  - key: Navy
+                    value: 10
+                  - key: Olive
+                    value: 11
+                  - key: Orange
+                    value: 12
+                  - key: Pink
+                    value: 13
+                  - key: Purple
+                    value: 14
+                  - key: White
+                    value: 15
+                  - key: Red
+                    value: 16
+                  - key: Yellow
+                    value: 17
+          - name: Show Image
+            parameter:
+              - name: Image
+          - name: Draw Rectangle
+            parameter:
+              - name: Left
+                constraint:
+                  min: 0
+                  max: 1
+                  unit: NOT_SPECIFIED
+              - name: Top
+                constraint:
+                  min: 0
+                  max: 1
+                  unit: NOT_SPECIFIED
+              - name: Right
+                constraint:
+                  min: 0
+                  max: 1
+                  unit: NOT_SPECIFIED
+              - name: Bottom
+                constraint:
+                  min: 0
+                  max: 1
+                  unit: NOT_SPECIFIED
+              - name: Color
+                value: White
+                constraint:
+                  - key: Blue
+                    value: 0
+                  - key: Cyan
+                    value: 1
+                  - key: Dark Cyan
+                    value: 2
+                  - key: Dark Green
+                    value: 3
+                  - key: Dark Grey
+                    value: 4
+                  - key: Green
+                    value: 5
+                  - key: Green Yellow
+                    value: 6
+                  - key: Light Grey
+                    value: 7
+                  - key: Magenta
+                    value: 8
+                  - key: Maroon
+                    value: 9
+                  - key: Navy
+                    value: 10
+                  - key: Olive
+                    value: 11
+                  - key: Orange
+                    value: 12
+                  - key: Pink
+                    value: 13
+                  - key: Purple
+                    value: 14
+                  - key: White
+                    value: 15
+                  - key: Red
+                    value: 16
+                  - key: Yellow
+                    value: 17
+              - name: Thickness
+                constraint:
+                  min: 0
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 10
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+    platforms:
+      - platform: MICROPYTHON
+        classname: MP_TFT_SIPEED_AMIGO
+        library_dependency: []
+  - name: Integrated Camera (Front)
+    pin_template: NO_PIN
+    integrated_connection: []
+    compatibility:
+      - name: Camera
+        value:
+        - name: Image
+    platforms:
+      - platform: MICROPYTHON
+        classname: MP_CAMERA_SIPEED_AMIGO_FRONT
+        library_dependency: []
+#  - name: Integrated Buzzer
+#    pin_template: GENERIC_PWM_ACTUATOR_3v3
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "25"
+#    compatibility:
+#      - name: Buzzer
+#        action:
+#          - name: Play Tone
+#            parameter:
+#              - name: Tone Frequency
+#                constraint:
+#                  max: 20000.0
+#                  min: 0.0
+#                  unit: HERTZ
+#              - name: Duration
+#                constraint:
+#                  max: 1000.0
+#                  min: 0.0
+#                  unit: SECOND
+#          - name: Beep
+#    platforms:
+#      - platform: ARDUINO_ESP32
+#        classname: MP_BUZZER
+#        library_dependency: []
+#  - name: Integrated Button A
+#    pin_template: GENERIC_DIGITAL_SENSOR_3v3
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "39"
+#    compatibility:
+#      - name: Button
+#        condition:
+#          - name: Press
+#          - name: Press and release
+#          - name: Not press
+#    platforms:
+#      - platform: ARDUINO_ESP32
+#        classname: MP_BUTTON_AL
+#        library_dependency: []
+#  - name: Integrated Button B
+#    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "38"
+#    compatibility:
+#      - name: Button
+#        condition:
+#          - name: Press
+#          - name: Press and release
+#          - name: Not press
+#    platforms:
+#      - platform: ARDUINO_ESP32
+#        classname: MP_BUTTON_AL
+#        library_dependency: []
+#  - name: Integrated Button C
+#    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "37"
+#    compatibility:
+#      - name: Button
+#        condition:
+#          - name: Press
+#          - name: Press and release
+#          - name: Not press
+#    platforms:
+#      - platform: ARDUINO_ESP32
+#        classname: MP_BUTTON_AL
+#        library_dependency: []
+#  - name: Integrated Microphone
+#    pin_template: GENERIC_ANALOG_SENSOR_3v3
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SIG
+#        host_ref_to: "34"
+#    compatibility:
+#    - name: Sound
+#      condition:
+#       - name: Compare
+#      value:
+#       - name: SoundLevel
+#         constraint:
+#          min: 0.0
+#          max: 100.0
+#          unit: PERCENT
+#    platforms:
+#     - platform: ARDUINO_ESP32
+#       classname: MP_MICROPHONE_NORMALIZED
+#       library_dependency: []
+#  - name: Integrated 9-DOF IMU
+#    pin_template: GENERIC_I2C_DEVICE_3v3
+#    integrated_connection:
+#      - ref_to: GND
+#        host_ref_to: GND
+#      - ref_to: VCC
+#        host_ref_to: VCC
+#      - ref_to: SDA
+#        host_ref_to: "21"
+#      - ref_to: SCL
+#        host_ref_to: "22"
+#    compatibility:
+#    - name: Accelerometer
+#      condition:
+#      - name: Compare
+#      value:
+#      - name: Accel_X
+#        constraint:
+#          min: -100
+#          max: 100
+#          unit: METERPERSECSQUARE
+#      - name: Accel_Y
+#        constraint:
+#          min: -100
+#          max: 100
+#          unit: METERPERSECSQUARE
+#      - name: Accel_Z
+#        constraint:
+#          min: -100
+#          max: 100
+#          unit: METERPERSECSQUARE
+#      - name: Accel_Magnitude
+#        constraint:
+#          min: 0
+#          max: 100
+#          unit: METERPERSECSQUARE
+#      count: ""
+#    - name: Gyroscope
+#      condition:
+#      - name: Compare
+#      value:
+#      - name: Gyro_X
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: RADIUSPERSEC
+#      - name: Gyro_Y
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: RADIUSPERSEC
+#      - name: Gyro_Z
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: RADIUSPERSEC
+#      count: ""
+#    - name: Magnetometer
+#      condition:
+#      - name: Compare
+#      value:
+#      - name: Mag_X
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: MICROTESLA
+#      - name: Mag_Y
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: MICROTESLA
+#      - name: Mag_Z
+#        constraint:
+#          min: -200
+#          max: 200
+#          unit: MICROTESLA
+#      count: ""
+#    platforms:
+#      - platform: ARDUINO_ESP32
+#        classname: MP_MPU9250
+#        library_dependency:
+#        - M5Stack/M5Stack-0.2.5
+platforms:
+  - platform: MICROPYTHON
+    classname: ""
+    library_dependency: []

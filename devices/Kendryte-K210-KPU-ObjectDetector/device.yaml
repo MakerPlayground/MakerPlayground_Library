@@ -1,0 +1,198 @@
+id: Kendryte-K210-KPU-ObjectDetector
+brand: Kendryte
+model: K210 KPU Object Detector
+url: ""
+type: VIRTUAL
+width: 50
+height: 50
+pin_template: NO_PIN
+property:
+  - name: Model Address
+    datatype: STRING
+    controltype: TEXTBOX
+    value: '0x300000'
+    constraint: []
+  - name: Input Size
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+    value: '320x240'
+    constraint:
+      - key: '224x224'
+        value: 0
+      - key: '320x240'
+        value: 1
+  - name: Model Anchor
+    datatype: STRING
+    controltype: TEXTBOX
+    value: ''
+    constraint: []
+  - name: Threshold
+    constraint:
+      min: 0
+      max: 1
+      unit: NOT_SPECIFIED
+    datatype: DOUBLE
+    controltype: SPINBOX
+    value: 0.5
+  - name: NMS Threshold
+    constraint:
+      min: 0
+      max: 1
+      unit: NOT_SPECIFIED
+    datatype: DOUBLE
+    controltype: SPINBOX
+    value: 0.3
+  - name: Num Anchor
+    constraint:
+      min: 0
+      max: 50
+      unit: NOT_SPECIFIED
+    datatype: INTEGER
+    controltype: SPINBOX
+    value: 5
+  - name: Output Shape
+    datatype: STRING
+    controltype: TEXTBOX
+    value: '-'
+    constraint: []
+#    optional: true
+#  - name: Max FPS
+#    datatype: DOUBLE
+#    controltype: SPINBOX
+#    constraint:
+#      min: 1
+#      max: 60
+#      unit: NOT_SPECIFIED
+#    value: 10
+compatibility:
+  - name: Object Detector
+    action:
+      - name: Detect
+        parameter:
+          - name: Image
+    condition:
+      - name: Compare
+      - name: Contain Detection
+        parameter:
+          - name: Class Id
+          - name: Min Confidence
+          - name: X Min
+          - name: Y Min
+          - name: X Max
+          - name: Y Max
+      - name: Not Contain Detection
+        parameter:
+          - name: Class Id
+          - name: Min Confidence
+          - name: X Min
+          - name: Y Min
+          - name: X Max
+          - name: Y Max
+      - name: Has Detection
+      - name: No Detection
+    value:
+      - name: ClassID_1
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+      - name: Left_1
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Top_1
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Right_1
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Bottom_1
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: ClassID_2
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+      - name: Left_2
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Top_2
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Right_2
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Bottom_2
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: ClassID_3
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+      - name: Left_3
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Top_3
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Right_3
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Bottom_3
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: ClassID_4
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+      - name: Left_4
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Top_4
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Right_4
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Bottom_4
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+platforms:
+  - platform: MICROPYTHON
+    classname: MP_K210_KPU_ObjectDetector
+    library_dependency: []
+    
