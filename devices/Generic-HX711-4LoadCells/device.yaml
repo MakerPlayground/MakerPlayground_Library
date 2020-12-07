@@ -74,3 +74,11 @@ platforms:
   classname: MP_HX711
   library_dependency:
   - bogde/HX711-0.7.3
+- platform: ARDUINO_ATSAMD21
+  classname: MP_HX711
+  library_dependency:
+  - bogde/HX711-0.7.3
+- platform: ARDUINO_ATSAMD51
+  classname: MP_HX711
+  library_dependency:
+  - bogde/HX711-0.7.3

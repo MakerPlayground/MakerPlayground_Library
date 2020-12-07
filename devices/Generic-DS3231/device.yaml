@@ -103,3 +103,15 @@ platforms:
   classname: MP_DS3231
   library_dependency:
   - Makuna/Rtc-2.3.0
+- platform: ARDUINO_ESP32
+  classname: MP_DS3231
+  library_dependency:
+  - Makuna/Rtc-2.3.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_DS3231
+  library_dependency:
+  - Makuna/Rtc-2.3.0
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DS3231
+  library_dependency:
+  - Makuna/Rtc-2.3.0

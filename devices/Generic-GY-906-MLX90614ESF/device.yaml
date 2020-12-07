@@ -54,3 +54,15 @@ platforms:
   classname: MP_GY906
   library_dependency:
   - adafruit/Adafruit-MLX90614-Library-1.0.0
+- platform: ARDUINO_ESP32
+  classname: MP_GY906
+  library_dependency:
+  - adafruit/Adafruit-MLX90614-Library-1.0.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_GY906
+  library_dependency:
+  - adafruit/Adafruit-MLX90614-Library-1.0.0
+- platform: ARDUINO_ATSAMD51
+  classname: MP_GY906
+  library_dependency:
+  - adafruit/Adafruit-MLX90614-Library-1.0.0

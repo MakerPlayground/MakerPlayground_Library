@@ -1,14 +1,15 @@
-id: Generic-HC-SR04
+id: Generic-HC-SR04P
 brand: Generic
-model: Ultrasonic Sensor Module (HC-SR04)
-url: "https://www.arduitronics.com/product/20/ultrasonic-sensor-module-hc-sr04-5v"
+model: Ultrasonic Sensor Module HC-SR04P
+url: "https://www.arduinoall.com/product/1533/ultrasonic-sensor-module-hc-sr04p-\u0E42\
+  \u0E21\u0E14\u0E39\u0E25-ultrasonic-hc-sr04-p"
 type: MODULE
 width: 256
 height: 132
 need_breadboard: true
 breadboard_placement: ONE_SIDE
 connection_consume:
-  min_voltage: 5
+  min_voltage: 3.3
   max_voltage: 5
   items:
   - name: VIN

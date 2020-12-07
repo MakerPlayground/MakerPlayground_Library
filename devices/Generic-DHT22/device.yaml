@@ -64,6 +64,16 @@ platforms:
   library_dependency:
   - adafruit/Adafruit_Sensor-1.1.4
   - adafruit/DHT-sensor-library-1.3.3
+- platform: ARDUINO_ATSAMD21
+  classname: MP_DHT22
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.3.3
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DHT22
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.3.3
 - platform: RASPBERRYPI
   classname: MP_DHT22
   info_message:

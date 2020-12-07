@@ -42,3 +42,9 @@ platforms:
 - platform: ARDUINO_ESP32
   classname: MP_PIR
   library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PIR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PIR
+  library_dependency: []

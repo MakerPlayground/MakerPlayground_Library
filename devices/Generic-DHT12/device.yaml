@@ -59,3 +59,19 @@ platforms:
   classname: MP_DHT12
   library_dependency:
   - dplasa/dht
+- platform: ARDUINO_ESP8266
+  classname: MP_DHT12
+  library_dependency:
+  - dplasa/dht
+- platform: ARDUINO_ESP32
+  classname: MP_DHT12
+  library_dependency:
+  - dplasa/dht
+- platform: ARDUINO_ATSAMD21
+  classname: MP_DHT12
+  library_dependency:
+  - dplasa/dht
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DHT12
+  library_dependency:
+  - dplasa/dht
