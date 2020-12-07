@@ -56,3 +56,11 @@ platforms:
   library_dependency:
   - plerup/espsoftwareserial-6.8.5
   - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ATSAMD21
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ATSAMD51
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2

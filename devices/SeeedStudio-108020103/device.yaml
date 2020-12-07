@@ -58,16 +58,20 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_TB6612FNG
   library_dependency:
-  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-master-2020-12-08
 - platform: ARDUINO_ESP8266
   classname: MP_TB6612FNG
   library_dependency:
-  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-master-2020-12-08
 - platform: ARDUINO_ESP32
   classname: MP_TB6612FNG
   library_dependency:
-  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-master-2020-12-08
+- platform: ARDUINO_ATSAMD21
+  classname: MP_TB6612FNG
+  library_dependency:
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-master-2020-12-08
 - platform: ARDUINO_ATSAMD51
   classname: MP_TB6612FNG
   library_dependency:
-  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-0.0.2
+  - SeeedStudio/Grove_Motor_Driver_TB6612FNG-master-2020-12-08
