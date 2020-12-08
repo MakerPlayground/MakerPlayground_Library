@@ -6,7 +6,7 @@ type: MODULE
 width: 242
 height: 137
 connection_consume:
-  min_voltage: 5
+  min_voltage: 3.3
   max_voltage: 5
   items:
   - name: Port
