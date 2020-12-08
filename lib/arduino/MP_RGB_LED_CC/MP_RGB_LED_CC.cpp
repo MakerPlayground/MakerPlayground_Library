@@ -32,7 +32,7 @@ void MP_RGB_LED_CC::printStatus()
 	Serial.println(this->brightness);
 }
 
-void MP_RGB_LED_CC::on(int red, int green, int blue, int brightness)
+void MP_RGB_LED_CC::on(uint8_t red, uint8_t green, uint8_t blue, uint8_t brightness)
 {
 	this->red = red;
 	this->green = green;

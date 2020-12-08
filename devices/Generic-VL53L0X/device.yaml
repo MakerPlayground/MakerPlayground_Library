@@ -80,6 +80,10 @@ platforms:
   classname: MP_VL53L0X
   library_dependency:
   - pololu/vl53l0x-arduino-1.3.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_VL53L0X
+  library_dependency:
+  - pololu/vl53l0x-arduino-1.3.0
 - platform: ARDUINO_ATSAMD51
   classname: MP_VL53L0X
   library_dependency:

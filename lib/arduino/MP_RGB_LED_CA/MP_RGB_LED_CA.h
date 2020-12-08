@@ -1,5 +1,5 @@
-#ifndef MP_RGB_LED_CA
-#define MP_RGB_LED_CA
+#ifndef MP_RGB_LED_CA_H
+#define MP_RGB_LED_CA_H
 
 #include "MP_DEVICE.h"
 
@@ -12,14 +12,17 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 	
-	void on(int red, int green, int blue, int brightness);
+	void on(uint8_t red, uint8_t green, uint8_t blue, uint8_t brightness);
 	void off();
 
 private:
 	uint8_t r;
 	uint8_t g;
 	uint8_t b;
-	const String tag;
+	uint8_t red = 0;
+	uint8_t green = 0;
+	uint8_t blue = 0;
+	uint8_t brightness = 0;
 };
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef MP_WATER_SENSOR
-#define MP_WATER_SENSOR
+#ifndef MP_WATER_SENSOR_H
+#define MP_WATER_SENSOR_H
 
 #include "MP_DEVICE.h"
 
@@ -11,7 +11,6 @@ public:
 	void update(unsigned long current_time);
 	void printStatus();
 
-	void init();
 	bool isWet();
 	bool isDry();
 

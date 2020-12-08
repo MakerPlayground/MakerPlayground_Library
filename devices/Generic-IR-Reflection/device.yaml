@@ -44,3 +44,9 @@ platforms:
 - platform: ARDUINO_ESP32
   classname: MP_IR_REFLECTOR
   library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_IR_REFLECTOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_IR_REFLECTOR
+  library_dependency: []

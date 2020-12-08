@@ -128,3 +128,13 @@ platforms:
   library_dependency:
   - adafruit/Adafruit_SSD1306-1.2.9
   - adafruit/Adafruit-GFX-Library-1.5.2
+- platform: ARDUINO_ATSAMD21
+  classname: MP_OLED_SSD1306_128x64
+  library_dependency:
+  - adafruit/Adafruit_SSD1306-1.2.9
+  - adafruit/Adafruit-GFX-Library-1.5.2
+- platform: ARDUINO_ATSAMD51
+  classname: MP_OLED_SSD1306_128x64
+  library_dependency:
+  - adafruit/Adafruit_SSD1306-1.2.9
+  - adafruit/Adafruit-GFX-Library-1.5.2

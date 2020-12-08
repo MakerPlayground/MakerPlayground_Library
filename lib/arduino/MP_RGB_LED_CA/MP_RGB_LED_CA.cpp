@@ -29,10 +29,10 @@ void MP_RGB_LED_CA::printStatus()
 	Serial.print(F("blue = "));
 	Serial.println(this->blue);
 	Serial.print(F("brightness = "));
-	Serial.println(this->brightness);
+	Serial.println(brightness);
 }
 
-void MP_RGB_LED_CA::on(int red, int green, int blue, int brightness)
+void MP_RGB_LED_CA::on(uint8_t red, uint8_t green, uint8_t blue, uint8_t brightness)
 {
 	this->red = red;
 	this->green = green;

@@ -67,3 +67,19 @@ platforms:
   classname: MP_TM1637_DISPLAY
   library_dependency:
   - avishorp/TM1637
+- platform: ARDUINO_ESP32
+  classname: MP_TM1637_DISPLAY
+  library_dependency:
+  - avishorp/TM1637
+- platform: ARDUINO_ESP8266
+  classname: MP_TM1637_DISPLAY
+  library_dependency:
+  - avishorp/TM1637
+- platform: ARDUINO_ATSAMD21
+  classname: MP_TM1637_DISPLAY
+  library_dependency:
+  - avishorp/TM1637
+- platform: ARDUINO_ATSAMD51
+  classname: MP_TM1637_DISPLAY
+  library_dependency:
+  - avishorp/TM1637

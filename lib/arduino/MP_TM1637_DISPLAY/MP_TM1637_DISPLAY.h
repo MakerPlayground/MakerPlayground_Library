@@ -19,8 +19,8 @@ public:
 	void off();
 
 private:
+	TM1637Display display;
 	double data;
 	uint8_t brightness;
-	TM1637Display display;
 };
 #endif
