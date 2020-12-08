@@ -20,10 +20,10 @@ connection_consume:
       pin_function: VCC
     - x: 20
       y: 311.6
-      pin_function: SW_SERIAL_RX
+      pin_function: SW_SERIAL_TX
     - x: 20
       y: 322.9
-      pin_function: SW_SERIAL_TX
+      pin_function: SW_SERIAL_RX
 compatibility:
 - name: Dust
   condition:
