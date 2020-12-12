@@ -220,6 +220,17 @@ integrated_devices:
       - platform: MICROPYTHON_K210
         classname: MP_CAMERA_SIPEED_AMIGO_FRONT
         library_dependency: []
+  - name: Integrated Camera (Back)
+    pin_template: NO_PIN
+    integrated_connection: []
+    compatibility:
+      - name: Camera
+        value:
+          - name: Image
+    platforms:
+      - platform: MICROPYTHON_K210
+        classname: MP_CAMERA_SIPEED_AMIGO_BACK
+        library_dependency: []
 #  - name: Integrated Buzzer
 #    pin_template: GENERIC_PWM_ACTUATOR_3v3
 #    integrated_connection:

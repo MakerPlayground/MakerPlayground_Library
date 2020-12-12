@@ -1,14 +1,14 @@
 import sensor, utime
 import MakerPlayground as mp
 
-class MP_CAMERA_SIPEED_AMIGO_FRONT:
+class MP_CAMERA_SIPEED_AMIGO_BACK:
     UPDATE_INTERVAL = 50
 
     def __init__(self):
         pass
 
     def init(self):
-        sensor.reset(choice=2)
+        sensor.reset(choice=1)
         sensor.set_pixformat(sensor.YUV422)
         sensor.set_framesize(sensor.QVGA)
         sensor.set_hmirror(1)
@@ -20,7 +20,7 @@ class MP_CAMERA_SIPEED_AMIGO_FRONT:
         return mp.ERR_OK
 
     def update(self, currentTime):
-        if utime.ticks_diff(currentTime, self.latestUpdateTime) > MP_CAMERA_SIPEED_AMIGO_FRONT.UPDATE_INTERVAL:
+        if utime.ticks_diff(currentTime, self.latestUpdateTime) > MP_CAMERA_SIPEED_AMIGO_BACK.UPDATE_INTERVAL:
             self.img = sensor.snapshot()
             self.latestUpdateTime = currentTime
 
