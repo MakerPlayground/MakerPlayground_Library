@@ -1,0 +1,75 @@
+id: Kendryte-K210-KPU-PreTrainedObjectDetector
+brand: Kendryte
+model: K210 KPU Pre-trained Object Detector
+url: ""
+type: VIRTUAL
+width: 50
+height: 50
+pin_template: NO_PIN
+property:
+  - name: Model
+    datatype: K210_OBJDETECT_MODEL
+    controltype: K210_OBJDETECT_MODEL_SELECTOR
+    value: ''
+    constraint: []
+compatibility:
+  - name: Object Detector
+    action:
+      - name: Detect
+        parameter:
+          - name: Image
+    condition:
+      - name: Compare
+      - name: Contain Detection
+        parameter:
+          - name: Class Id
+          - name: Min Confidence
+          - name: X Min
+          - name: Y Min
+          - name: X Max
+          - name: Y Max
+      - name: Not Contain Detection
+        parameter:
+          - name: Class Id
+          - name: Min Confidence
+          - name: X Min
+          - name: Y Min
+          - name: X Max
+          - name: Y Max
+      - name: Has Detection
+      - name: No Detection
+    value:
+      - name: ClassID
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+      - name: Left
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Top
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Right
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Bottom
+        constraint:
+          min: 0
+          max: 1
+          unit: NOT_SPECIFIED
+      - name: Object Count
+        constraint:
+          min: 0
+          max: 2000
+          unit: NOT_SPECIFIED
+platforms:
+  - platform: MICROPYTHON_K210
+    classname: MP_K210_KPU_ObjectDetector
+    library_dependency: []
