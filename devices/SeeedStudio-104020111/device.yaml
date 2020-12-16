@@ -105,3 +105,19 @@ platforms:
   classname: MP_LCD_RGB_BACKLIGHT
   library_dependency:
     - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
+- platform: ARDUINO_ESP8266
+  classname: MP_LCD_RGB_BACKLIGHT
+  library_dependency:
+    - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
+- platform: ARDUINO_ESP32
+  classname: MP_LCD_RGB_BACKLIGHT
+  library_dependency:
+    - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
+- platform: ARDUINO_ATSAMD21
+  classname: MP_LCD_RGB_BACKLIGHT
+  library_dependency:
+    - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
+- platform: ARDUINO_ATSAMD51
+  classname: MP_LCD_RGB_BACKLIGHT
+  library_dependency:
+    - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
