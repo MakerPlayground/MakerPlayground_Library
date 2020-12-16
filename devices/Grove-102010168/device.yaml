@@ -348,17 +348,17 @@ connection_provide:
   - name: I2C (2)
     type: GROVE
     pins:
-    - x: 333
-      y: 58
+    - x: 264
+      y: 219
       ref_to: GND
-    - x: 333
-      y: 69
+    - x: 264
+      y: 230
       ref_to: VCC
-    - x: 333
-      y: 80
+    - x: 264
+      y: 241
       ref_to: PC4
-    - x: 333
-      y: 91
+    - x: 264
+      y: 252
       ref_to: PC5
 platforms:
 - platform: ARDUINO_AVR8

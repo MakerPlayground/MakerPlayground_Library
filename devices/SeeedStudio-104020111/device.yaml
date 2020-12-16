@@ -1,0 +1,107 @@
+id: SeeedStudio-104020111
+brand: SeeedStudio
+model: Grove - 16x2 LCD (White on Blue)
+url: "https://www.seeedstudio.com/Grove-16x2-LCD-White-on-Blue.html"
+type: MODULE
+width: 391
+height: 195
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: Port
+    type: GROVE
+    pins:
+    - x: 84
+      y: 153
+      pin_function: GND
+    - x: 84
+      y: 164
+      pin_function: VCC
+    - x: 84
+      y: 175
+      pin_function: SDA
+    - x: 84
+      y: 186
+      pin_function: SCL
+compatibility:
+- name: Display
+  action:
+  - name: Show Text
+    parameter:
+    - name: Row
+      constraint:
+        min: 1
+        max: 10
+        unit: NOT_SPECIFIED
+    - name: Text
+    - name: Size
+      value: 1x
+      constraint:
+      - key: 1x
+        value: 1
+      - key: 2x
+        value: 2
+      - key: 3x
+        value: 3
+    - name: Align
+      value: Left
+      constraint:
+      - key: Left
+        value: 0
+      - key: Center
+        value: 1
+      - key: Right
+        value: 2
+    - name: Color
+      value: White
+      constraint:
+      - key: Blue
+        value: 0
+      - key: Cyan
+        value: 1
+      - key: Dark Cyan
+        value: 2
+      - key: Dark Green
+        value: 3
+      - key: Dark Grey
+        value: 4
+      - key: Green
+        value: 5
+      - key: Green Yellow
+        value: 6
+      - key: Light Grey
+        value: 7
+      - key: Magenta
+        value: 8
+      - key: Maroon
+        value: 9
+      - key: Navy
+        value: 10
+      - key: Olive
+        value: 11
+      - key: Orange
+        value: 12
+      - key: Pink
+        value: 13
+      - key: Purple
+        value: 14
+      - key: White
+        value: 15
+      - key: Red
+        value: 16
+      - key: Yellow
+        value: 17
+  - name: Clear Row
+    parameter:
+    - name: Row
+      constraint:
+        min: 1
+        max: 10
+        unit: NOT_SPECIFIED
+  - name: Clear Screen
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_LCD_RGB_BACKLIGHT
+  library_dependency:
+    - SeeedStudio/Grove_LCD_RGB_Backlight-master-2020-12-16
