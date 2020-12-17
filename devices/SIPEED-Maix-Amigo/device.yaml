@@ -6,7 +6,7 @@ type: CONTROLLER
 pio_boardid: '' # platform specific setting?
 width: 352
 height: 584
-pin_template: K210
+pin_template: SIPEED_AMIGO
 property: []
 connection_provide:
   voltage_level: LEVEL_3v3
@@ -22,10 +22,10 @@ connection_provide:
           ref_to: VCC
         - x: 104.53
           y: 584
-          ref_to: "5"
+          ref_to: "7"
         - x: 115.87
           y: 584
-          ref_to: "4"
+          ref_to: "9"
     - name: CENTER
       type: GROVE
       pins:
@@ -37,10 +37,10 @@ connection_provide:
           ref_to: VCC
         - x: 182.49
           y: 584
-          ref_to: "3"
+          ref_to: "27"
         - x: 193.83
           y: 584
-          ref_to: "2"
+          ref_to: "24"
     - name: RIGHT
       type: GROVE
       pins:
@@ -52,10 +52,10 @@ connection_provide:
           ref_to: VCC
         - x: 259.23
           y: 584
-          ref_to: "1"
+          ref_to: "20"
         - x: 270.57
           y: 584
-          ref_to: "0"
+          ref_to: "23"
 integrated_devices:
   - name: Integrated TFT LCD
     pin_template: NO_PIN

@@ -1,5 +1,5 @@
 pins:
-  - pin_name: "0"
+  - pin_name: "9"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
@@ -8,7 +8,7 @@ pins:
       - SW_SERIAL_TX
       - SW_SERIAL_RX
 
-  - pin_name: "1"
+  - pin_name: "7"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
@@ -17,7 +17,7 @@ pins:
       - SW_SERIAL_TX
       - SW_SERIAL_RX
 
-  - pin_name: "2"
+  - pin_name: "24"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
@@ -26,7 +26,7 @@ pins:
       - SW_SERIAL_TX
       - SW_SERIAL_RX
 
-  - pin_name: "3"
+  - pin_name: "27"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
@@ -35,7 +35,7 @@ pins:
       - SW_SERIAL_TX
       - SW_SERIAL_RX
 
-  - pin_name: "4"
+  - pin_name: "23"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
@@ -44,7 +44,7 @@ pins:
       - SW_SERIAL_TX
       - SW_SERIAL_RX
 
-  - pin_name: "5"
+  - pin_name: "20"
     voltage_level: LEVEL_3v3
     pin_function:
       - PWM_OUT
