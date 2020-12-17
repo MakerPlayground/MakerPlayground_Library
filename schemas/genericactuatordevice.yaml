@@ -492,6 +492,39 @@
     - name: Clear
       funcname: clear
       parameter: []
+- name: Audio Player
+  description: An audio player
+  action:
+    - name: Play
+      funcname: play
+      parameter:
+        - name: File name
+          value: ''
+          constraint: []
+          datatype: STRING
+          controltype: TEXTBOX
+    - name: Set Volume
+      funcname: setVolume
+      parameter:
+        - name: volume
+          value: 50
+          constraint:
+            min: 0
+            max: 100
+            unit: PERCENT
+          datatype: INTEGER
+          controltype: SPINBOX
+    - name: Volume Up
+      funcname: volumeUp
+    - name: Volume Down
+      funcname: volumeDown
+  value:
+    - name: Volume
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT
 - name: MP3 Player
   description: An MP3 player
   action:
