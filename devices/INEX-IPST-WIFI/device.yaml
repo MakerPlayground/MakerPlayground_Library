@@ -180,7 +180,7 @@ integrated_devices:
     classname: MP_WS281X_STRIP_GRB
     library_dependency:
     - adafruit/Adafruit_NeoPixel-1.1.8
-  - platform: MICROPYTHON
+  - platform: MICROPYTHON_ESP32
     classname: MP_WS281X_STRIP_GRB
     library_dependency: []
   integrated_connection:
@@ -398,6 +398,8 @@ platforms:
 - platform: ARDUINO_ESP32
   classname: ''
   library_dependency: []
-- platform: MICROPYTHON
+- platform: MICROPYTHON_ESP32
+  firmware:
+    - 'micropython/esp32_idf3_spiram/esp32spiram-idf3-20200902-v1.13.bin'
   classname: ""
   library_dependency: []

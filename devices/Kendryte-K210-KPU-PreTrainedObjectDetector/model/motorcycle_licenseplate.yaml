@@ -1,0 +1,11 @@
+name: 'License Plate (Motorcycle)'
+model_filename: 'motorcycle_licenseplate'
+address: 6291456
+model_size: '224x224'
+anchor: '0.45, 0.50, 0.67, 0.77, 0.91, 1.08, 1.38, 1.31, 2.45, 2.19'
+threshold: 0.3
+nms_threshold: 0.3
+num_anchor: 5
+output_shape: '0,7,7,30'
+class: 
+  - 'License Plate'

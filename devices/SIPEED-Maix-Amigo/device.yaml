@@ -206,7 +206,7 @@ integrated_devices:
                   unit: NOT_SPECIFIED
           - name: Clear Screen
     platforms:
-      - platform: MICROPYTHON
+      - platform: MICROPYTHON_K210
         classname: MP_TFT_SIPEED_AMIGO
         library_dependency: []
   - name: Integrated Camera (Front)
@@ -217,7 +217,7 @@ integrated_devices:
         value:
         - name: Image
     platforms:
-      - platform: MICROPYTHON
+      - platform: MICROPYTHON_K210
         classname: MP_CAMERA_SIPEED_AMIGO_FRONT
         library_dependency: []
 #  - name: Integrated Buzzer
@@ -412,6 +412,8 @@ integrated_devices:
 #        library_dependency:
 #        - M5Stack/M5Stack-0.2.5
 platforms:
-  - platform: MICROPYTHON
+  - platform: MICROPYTHON_K210
+    firmware:
+      - "micropython/k210/maixpy_v0.5.1_124_ga3f708c_minimum_with_kmodel_v4_support.bin"
     classname: ""
     library_dependency: []
