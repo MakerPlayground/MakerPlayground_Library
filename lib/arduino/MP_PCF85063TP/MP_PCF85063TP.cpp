@@ -33,7 +33,7 @@ void MP_PCF85063TP::setDateTime(const char * date_time) {
 }
 
 bool MP_PCF85063TP::checkDayOfWeek(uint8_t day) {
-    return RTclock.dayOfWeek == day;  // Reindex Sunday = 1 -> 0, Saturday = 7 -> 6
+    return RTclock.dayOfWeek + 1 == day;  // Reindex Sunday = 1 -> 0, Saturday = 7 -> 6
 }
 
 uint8_t MP_PCF85063TP::getHour() {
