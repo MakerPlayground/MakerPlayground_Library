@@ -1,4 +1,4 @@
-#define TIMEOUT 2000
+#define TIMEOUT 1000
 
 #include "MP_GROVE_SPEECH_RECOGNIZER.h"
 
@@ -64,7 +64,6 @@ bool MP_GROVE_SPEECH_RECOGNIZER::recognize(const char* word)
     if (cmd != 255)
     {
         bool result = (strcmp(word, voiceBuffer[cmd - 1]) == 0);
-        cmd = 255;
         return result;
     }
     return false;
