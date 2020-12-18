@@ -149,9 +149,9 @@ void MP_TCS34725::rgb2hsv(double r, double g, double b, double *h, double *s, do
 
 uint8_t MP_TCS34725::hsv2ColorCode(double h, double s, double v) {
 	uint8_t color_code;
-	if(v>250) {
+	if (s < 50 && v > 80) {
 		color_code = 7;
-	} else if (v < 5) {
+	} else if (s > 125 && v < 100) {
 		color_code = 9;
 	} else if(h>=330 || h<15) {
 		color_code = 0;
