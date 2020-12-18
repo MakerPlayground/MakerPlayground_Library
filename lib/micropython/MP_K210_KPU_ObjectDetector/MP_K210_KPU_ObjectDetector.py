@@ -48,7 +48,7 @@ class MP_K210_KPU_ObjectDetector:
         maxX = maxX * self.width
         maxY = maxY * self.height
         for r in self.result:
-            box_xmin = self.width - r.rect()[0] - r.rect()[2]
+            box_xmin = r.rect()[0]
             box_ymin = r.rect()[1]
             box_xmax = box_xmin + r.rect()[2]
             box_ymax = box_ymin + r.rect()[3]
@@ -76,7 +76,7 @@ class MP_K210_KPU_ObjectDetector:
 
     def getLeft(self):
         if self.result and len(self.result) >= 1:
-            return (self.width - self.result[0].rect()[0] - self.result[0].rect()[2]) / self.width
+            return self.result[0].rect()[0] / self.width
         else:
             return 0
 
@@ -88,7 +88,7 @@ class MP_K210_KPU_ObjectDetector:
 
     def getRight(self):
         if self.result and len(self.result) >= 1:
-            return (self.width - self.result[0].rect()[0]) / self.width
+            return (self.result[0].rect()[0] + self.result[0].rect()[2]) / self.width
         else:
             return 0
 
