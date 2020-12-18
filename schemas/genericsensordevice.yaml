@@ -899,123 +899,39 @@
     - name: No Detection
       funcname: noDetection
   value:
-    - name: ClassID_1
+    - name: ClassID
       dataType: INTEGER
       constraint:
         min: 0
         max: 2000
         unit: NOT_SPECIFIED
-    - name: Left_1
+    - name: Left
       dataType: DOUBLE
       constraint:
         min: 0
         max: 1
         unit: NOT_SPECIFIED
-    - name: Top_1
+    - name: Top
       dataType: DOUBLE
       constraint:
         min: 0
         max: 1
         unit: NOT_SPECIFIED
-    - name: Right_1
+    - name: Right
       dataType: DOUBLE
       constraint:
         min: 0
         max: 1
         unit: NOT_SPECIFIED
-    - name: Bottom_1
+    - name: Bottom
       dataType: DOUBLE
       constraint:
         min: 0
         max: 1
         unit: NOT_SPECIFIED
-    - name: ClassID_2
+    - name: Object Count
       dataType: INTEGER
       constraint:
         min: 0
         max: 2000
-        unit: NOT_SPECIFIED
-    - name: Left_2
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Top_2
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Right_2
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Bottom_2
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: ClassID_3
-      dataType: INTEGER
-      constraint:
-        min: 0
-        max: 2000
-        unit: NOT_SPECIFIED
-    - name: Left_3
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Top_3
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Right_3
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Bottom_3
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: ClassID_4
-      dataType: INTEGER
-      constraint:
-        min: 0
-        max: 2000
-        unit: NOT_SPECIFIED
-    - name: Left_4
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Top_4
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Right_4
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
-        unit: NOT_SPECIFIED
-    - name: Bottom_4
-      dataType: DOUBLE
-      constraint:
-        min: 0
-        max: 1
         unit: NOT_SPECIFIED

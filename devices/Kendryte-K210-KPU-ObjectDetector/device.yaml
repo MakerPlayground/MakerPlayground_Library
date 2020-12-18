@@ -91,105 +91,35 @@ compatibility:
       - name: Has Detection
       - name: No Detection
     value:
-      - name: ClassID_1
+      - name: ClassID
         constraint:
           min: 0
           max: 2000
           unit: NOT_SPECIFIED
-      - name: Left_1
+      - name: Left
         constraint:
           min: 0
           max: 1
           unit: NOT_SPECIFIED
-      - name: Top_1
+      - name: Top
         constraint:
           min: 0
           max: 1
           unit: NOT_SPECIFIED
-      - name: Right_1
+      - name: Right
         constraint:
           min: 0
           max: 1
           unit: NOT_SPECIFIED
-      - name: Bottom_1
+      - name: Bottom
         constraint:
           min: 0
           max: 1
           unit: NOT_SPECIFIED
-      - name: ClassID_2
+      - name: Object Count
         constraint:
           min: 0
           max: 2000
-          unit: NOT_SPECIFIED
-      - name: Left_2
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Top_2
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Right_2
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Bottom_2
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: ClassID_3
-        constraint:
-          min: 0
-          max: 2000
-          unit: NOT_SPECIFIED
-      - name: Left_3
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Top_3
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Right_3
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Bottom_3
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: ClassID_4
-        constraint:
-          min: 0
-          max: 2000
-          unit: NOT_SPECIFIED
-      - name: Left_4
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Top_4
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Right_4
-        constraint:
-          min: 0
-          max: 1
-          unit: NOT_SPECIFIED
-      - name: Bottom_4
-        constraint:
-          min: 0
-          max: 1
           unit: NOT_SPECIFIED
 platforms:
   - platform: MICROPYTHON_K210

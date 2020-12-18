@@ -54,3 +54,6 @@ platforms:
   classname: MP_SERVO
   library_dependency:
   - PaintYourDragon/Servo-master
+- platform: MICROPYTHON_K210
+  classname: MP_SERVO
+  library_dependency: []

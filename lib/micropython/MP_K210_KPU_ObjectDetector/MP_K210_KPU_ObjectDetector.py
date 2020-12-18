@@ -48,7 +48,7 @@ class MP_K210_KPU_ObjectDetector:
         maxX = maxX * self.width
         maxY = maxY * self.height
         for r in self.result:
-            box_xmin = self.width - r.rect()[0] - r.rect()[2]
+            box_xmin = r.rect()[0]
             box_ymin = r.rect()[1]
             box_xmax = box_xmin + r.rect()[2]
             box_ymax = box_ymin + r.rect()[3]
@@ -68,122 +68,38 @@ class MP_K210_KPU_ObjectDetector:
     def noDetection(self):
         return not self.result
 
-    def getClassID_1(self):
+    def getClassID(self):
         if self.result and len(self.result) >= 1:
             return self.result[0].classid()
         else:
             return -1
 
-    def getLeft_1(self):
+    def getLeft(self):
         if self.result and len(self.result) >= 1:
-            return (self.width - self.result[0].rect()[0] - self.result[0].rect()[2]) / self.width
+            return self.result[0].rect()[0] / self.width
         else:
             return 0
 
-    def getTop_1(self):
+    def getTop(self):
         if self.result and len(self.result) >= 1:
             return self.result[0].rect()[1] / self.height
         else:
             return 0
 
-    def getRight_1(self):
+    def getRight(self):
         if self.result and len(self.result) >= 1:
-            return (self.width - self.result[0].rect()[0]) / self.width
+            return (self.result[0].rect()[0] + self.result[0].rect()[2]) / self.width
         else:
             return 0
 
-    def getBottom_1(self):
+    def getBottom(self):
         if self.result and len(self.result) >= 1:
             return (self.result[0].rect()[1] + self.result[0].rect()[3]) / self.height
         else:
             return 0
-
-    def getClassID_2(self):
-        if self.result and len(self.result) >= 2:
-            return self.result[1].classid()
-        else:
-            return -1
-
-    def getLeft_2(self):
-        if self.result and len(self.result) >= 2:
-            return (self.width - self.result[1].rect()[0] - self.result[1].rect()[2]) / self.width
-        else:
-            return 0
-
-    def getTop_2(self):
-        if self.result and len(self.result) >= 2:
-            return self.result[1].rect()[1] / self.height
-        else:
-            return 0
-
-    def getRight_2(self):
-        if self.result and len(self.result) >= 2:
-            return (self.width - self.result[1].rect()[0]) / self.width
-        else:
-            return 0
-
-    def getBottom_2(self):
-        if self.result and len(self.result) >= 2:
-            return (self.result[1].rect()[1] + self.result[1].rect()[3]) / self.height
-        else:
-            return 0
-
-    def getClassID_3(self):
-        if self.result and len(self.result) >= 3:
-            return self.result[2].classid()
-        else:
-            return -1
-
-    def getLeft_3(self):
-        if self.result and len(self.result) >= 3:
-            return (self.width - self.result[2].rect()[0] - self.result[2].rect()[2]) / self.width
-        else:
-            return 0
-
-    def getTop_3(self):
-        if self.result and len(self.result) >= 3:
-            return self.result[2].rect()[1] / self.height
-        else:
-            return 0
-
-    def getRight_3(self):
-        if self.result and len(self.result) >= 3:
-            return (self.width - self.result[2].rect()[0]) / self.width
-        else:
-            return 0
-
-    def getBottom_3(self):
-        if self.result and len(self.result) >= 3:
-            return (self.result[2].rect()[1] + self.result[2].rect()[3]) / self.height
-        else:
-            return 0
-
-    def getClassID_4(self):
-        if self.result and len(self.result) >= 4:
-            return self.result[3].classid()
-        else:
-            return -1
-
-    def getLeft_4(self):
-        if self.result and len(self.result) >= 4:
-            return (self.width - self.result[3].rect()[0] - self.result[3].rect()[2]) / self.width
-        else:
-            return 0
-
-    def getTop_4(self):
-        if self.result and len(self.result) >= 4:
-            return self.result[3].rect()[1] / self.height
-        else:
-            return 0
-
-    def getRight_4(self):
-        if self.result and len(self.result) >= 4:
-            return (self.width - self.result[3].rect()[0]) / self.width
-        else:
-            return 0
-
-    def getBottom_4(self):
-        if self.result and len(self.result) >= 4:
-            return (self.result[3].rect()[1] + self.result[3].rect()[3]) / self.height
+    
+    def getObject_Count(self):
+        if self.result:
+            return len(self.result)
         else:
             return 0
