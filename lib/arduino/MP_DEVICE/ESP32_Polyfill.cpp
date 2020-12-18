@@ -14,9 +14,10 @@ uint8_t getChannel(uint8_t pin)
     for (channel = 0; channel < channelCount; channel++)
         if (channelOwner[channel] == pin)
             return channel;
-    // otherwise, we find a free channel for this pin
+    // otherwise, we find a free and reserved channel for this pin
     for (channel = 0; channel < channelCount; channel++)
         if (channelOwner[channel] == 255)
+            channelOwner[channel] = pin;
             return channel;
     // if we reach this line, every channels have been allocated thus we return error (channelCount)
     return channelCount;
