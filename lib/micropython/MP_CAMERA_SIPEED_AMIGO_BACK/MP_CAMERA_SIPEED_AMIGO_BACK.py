@@ -1,5 +1,6 @@
 import sensor, utime
 import MakerPlayground as mp
+import gc
 
 class MP_CAMERA_SIPEED_AMIGO_BACK:
     UPDATE_INTERVAL = 50
@@ -23,6 +24,7 @@ class MP_CAMERA_SIPEED_AMIGO_BACK:
         if utime.ticks_diff(currentTime, self.latestUpdateTime) > MP_CAMERA_SIPEED_AMIGO_BACK.UPDATE_INTERVAL:
             self.img = sensor.snapshot()
             self.latestUpdateTime = currentTime
+            gc.collect()
 
     def printStatus(self):
         pass
