@@ -1,6 +1,4 @@
-// #include <M5StickC.h>
 #include "finger.h"
-
 
 FingerPrint::FingerPrint(void){
 

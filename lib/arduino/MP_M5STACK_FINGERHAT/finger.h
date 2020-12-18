@@ -1,6 +1,8 @@
 #ifndef __TFS_M64_H
 #define __TFS_M64_H
- 
+
+#include <Arduino.h>
+
 #define TRUE  1
 #define FALSE 0
  
