@@ -65,17 +65,17 @@ compatibility:
       controltype: DROPDOWN
 platforms:
 - platform: ARDUINO_AVR8
-  classname: MP_HBRIDGE_DRIVER_2CH
+  classname: MP_HBRIDGE_DRIVER_1CH
   library_dependency: []
 - platform: ARDUINO_ESP8266
-  classname: MP_HBRIDGE_DRIVER_2CH
+  classname: MP_HBRIDGE_DRIVER_1CH
   library_dependency: []
 - platform: ARDUINO_ESP32
-  classname: MP_HBRIDGE_DRIVER_2CH
+  classname: MP_HBRIDGE_DRIVER_1CH
   library_dependency: []
 - platform: ARDUINO_ATSAMD21
-  classname: MP_HBRIDGE_DRIVER_2CH
+  classname: MP_HBRIDGE_DRIVER_1CH
   library_dependency: []
 - platform: ARDUINO_ATSAMD51
-  classname: MP_HBRIDGE_DRIVER_2CH
+  classname: MP_HBRIDGE_DRIVER_1CH
   library_dependency: []
