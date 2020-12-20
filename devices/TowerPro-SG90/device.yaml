@@ -41,19 +41,22 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_SERVO
   library_dependency:
-  - arduino-libraries/Servo-1.1.3
+    - arduino-libraries/Servo-1.1.7
 - platform: ARDUINO_ESP8266
   classname: MP_SERVO
   library_dependency: []
 - platform: ARDUINO_ESP32
   classname: MP_SERVO
   library_dependency:
-  - RoboticsBrno/ServoESP32-1.0.3
+    - RoboticsBrno/ServoESP32-1.0.3
 - platform: ARDUINO_ATSAMD21
   classname: MP_SERVO
   library_dependency:
-  - arduino-libraries/Servo-1.1.7
+    - arduino-libraries/Servo-1.1.7
 - platform: ARDUINO_ATSAMD51
   classname: MP_SERVO
   library_dependency:
-  - arduino-libraries/Servo-1.1.7
+    - adafruit/Servo-adafruit_samd51-2020-12-20
+- platform: MICROPYTHON_K210
+  classname: MP_SERVO
+  library_dependency: []
