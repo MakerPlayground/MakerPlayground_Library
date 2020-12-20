@@ -1,0 +1,5 @@
+ARDUINO_AVR8: atmelavr
+ARDUINO_ESP8266: espressif8266
+ARDUINO_ESP32: espressif32
+ARDUINO_ATSAMD21: https://github.com/MakerPlayground/platform-atmelsam.git
+ARDUINO_ATSAMD51: https://github.com/MakerPlayground/platform-atmelsam.git
