@@ -93,6 +93,7 @@ for dir_name in sorted(os.listdir('devices')):
                 for compatibility in device['compatibility']:
                     device_metadata['type'].add(compatibility['name'])
             elif device['type'] == 'CONTROLLER':
+                device_metadata['type'].add('Controller')
                 if 'integrated_devices' in device:
                     for integrated_device in device['integrated_devices']:
                         for compatibility in integrated_device['compatibility']:
