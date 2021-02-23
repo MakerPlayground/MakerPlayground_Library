@@ -935,3 +935,21 @@
         min: 0
         max: 2000
         unit: NOT_SPECIFIED
+- name: Pulse Oximetry
+  description: Pulse Oximetry Sensor is used to measure the heart rate.
+  condition:
+    - name: Compare
+      funcname: ''
+  value:
+    - name: Heart Rate
+      dataType: DOUBLE
+      constraint:
+        min: 0
+        max: 300
+        unit: BPM
+    - name: SpO2
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 100
+        unit: PERCENT

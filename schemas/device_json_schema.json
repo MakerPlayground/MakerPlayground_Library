@@ -132,6 +132,7 @@
         "POT",
         "Presence",
         "Pressuremeter",
+        "Pulse Oximetry",
         "RTC",
         "Soil Moisture",
         "Sound",
@@ -336,6 +337,7 @@
         "Mag_Y",
         "Mag_Z",
         "Heading",
+        "Heart Rate",
         "Pressure",
         "Hour",
         "Minute",
@@ -349,6 +351,7 @@
         "Value",
         "Average",
         "SD",
+        "SpO2",
         "Variance",
         "Weight",
         "Count",
@@ -932,7 +935,6 @@
     "type",
     "width",
     "height",
-    "pin_template",
     "platforms"
   ],
   "properties": {
