@@ -125,6 +125,7 @@
         "Gyroscope",
         "Humidity",
         "Joystick",
+        "Keypad",
         "Light",
         "LPG",
         "Magnetometer",
@@ -201,6 +202,9 @@
         "Add new",
         "Clear all data",
         "Initialize timer",
+        "Found Character",
+        "Found Number",
+        "Found Nothing",
         "Stop Timer",
         "Convert to Text",
         "Convert to Text File",
@@ -400,7 +404,8 @@
         "Green",
         "Blue",
         "Hue",
-        "Saturation"
+        "Saturation",
+        "Number"
       ]
     },
     "units": {

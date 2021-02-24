@@ -1,0 +1,117 @@
+id: Generic-PCF8574-Keypad
+brand: Generic
+model: PCF8574 I2C Matrix 4x4 Keypad
+url: 'https://www.allnewstep.com/product/2306/i2c-matrix-4x4-keypad-%E0%B8%84%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%94-%E0%B8%9B%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%81%E0%B8%94-4x4-%E0%B9%81%E0%B8%9A%E0%B8%9A-i2c'
+type: MODULE
+width: 341
+height: 546
+property:
+  - name: Jumper A0
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+    value: '-'
+    constraint:
+    - key: '-'
+      value: 0
+    - key: '+'
+      value: 1
+  - name: Jumper A1
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+    value: '-'
+    constraint:
+    - key: '-'
+      value: 0
+    - key: '+'
+      value: 1
+  - name: Jumper A2
+    datatype: STRING_INT_ENUM
+    controltype: DROPDOWN
+    value: '-'
+    constraint:
+    - key: '-'
+      value: 0
+    - key: '+'
+      value: 1
+connection_consume:
+  min_voltage: 2.5
+  max_voltage: 6
+  items:
+  - name: VCC
+    type: WIRE
+    pins:
+    - x: 314
+      y: 524.2
+      pin_function: VCC
+  - name: GND
+    type: WIRE
+    pins:
+    - x: 314
+      y: 509.8
+      pin_function: GND
+  - name: SDA
+    type: WIRE
+    pins:
+    - x: 314
+      y: 495.4
+      pin_function: SDA
+  - name: SCL
+    type: WIRE
+    pins:
+    - x: 314
+      y: 481
+      pin_function: SCL
+compatibility:
+- name: Keypad
+  condition:
+    - name: Found Character
+      funcname: 'foundCharacter'
+      parameter:
+        - name: Character
+          value: '#'
+          constraint:
+            - '*'
+            - '#'
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+          datatype: STRING_ENUM
+          controltype: DROPDOWN
+    - name: Found Number
+      funcname: 'foundNumber'
+    - name: Found Nothing
+      funcname: 'foundNothing'
+  value:
+    - name: Number
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 9
+        unit: NOT_SPECIFIED
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_PCF8574_Keypad
+  library_dependency: 
+    - joeyoung/arduino_keypads_23-02-2021_Keypad_I2C
+    - Chris--A/Keypad-3.1.1
+- platform: ARDUINO_ESP8266
+  classname: MP_PCF8574_Keypad
+  library_dependency: 
+    - joeyoung/arduino_keypads_23-02-2021_Keypad_I2C
+    - Chris--A/Keypad-3.1.1
+- platform: ARDUINO_ESP32
+  classname: MP_PCF8574_Keypad
+  library_dependency: 
+    - joeyoung/arduino_keypads_23-02-2021_Keypad_I2C
+    - Chris--A/Keypad-3.1.1
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PCF8574_Keypad
+  library_dependency: 
+    - joeyoung/arduino_keypads_23-02-2021_Keypad_I2C
+    - Chris--A/Keypad-3.1.1
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PCF8574_Keypad
+  library_dependency: 
+    - joeyoung/arduino_keypads_23-02-2021_Keypad_I2C
+    - Chris--A/Keypad-3.1.1

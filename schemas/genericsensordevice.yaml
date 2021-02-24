@@ -953,3 +953,31 @@
         min: 0
         max: 100
         unit: PERCENT
+- name: Keypad
+  description: Keypad is used for inputting number.
+  condition:
+    - name: Found Character
+      funcname: 'foundCharacter'
+      parameter:
+        - name: Character
+          value: '#'
+          constraint:
+            - '*'
+            - '#'
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+          datatype: STRING_ENUM
+          controltype: DROPDOWN
+    - name: Found Number
+      funcname: 'foundNumber'
+    - name: Found Nothing
+      funcname: 'foundNothing'
+  value:
+    - name: Number
+      dataType: INTEGER
+      constraint:
+        min: 0
+        max: 9
+        unit: NOT_SPECIFIED
