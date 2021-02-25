@@ -981,3 +981,27 @@
         min: 0
         max: 9
         unit: NOT_SPECIFIED
+- name: RFID
+  description: RFID reader
+  condition:
+    - name: Check Tag UID
+      funcname: checkTagUid
+      parameter:
+        - name: UID
+          value: ""
+          constraint: []
+          datatype: STRING
+          controltype: TEXTBOX
+    - name: Found Tag
+      funcname: foundTag
+    - name: Not Found Tag
+      funcname: notFoundTag
+  value:
+    - name: UID
+      dataType: STRING
+      constraint: []
+    - name: Reader Version
+      dataType: STRING
+      constraint: []
+    
+    

@@ -148,6 +148,7 @@
         "Load Driver",
         "Reflector",
         "Relay Module",
+        "RFID",
         "RGB LED",
         "RGB LED Strip",
         "Servo",
@@ -405,7 +406,8 @@
         "Blue",
         "Hue",
         "Saturation",
-        "Number"
+        "Number",
+        "Reader Version"
       ]
     },
     "units": {

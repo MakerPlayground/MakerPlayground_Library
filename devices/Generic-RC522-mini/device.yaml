@@ -1,0 +1,79 @@
+id: Generic-RC522-mini
+brand: Generic
+model: RC522-mini RFID module 13.56mhz
+url: https://www.allnewstep.com/product/3343/%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%A3-rfid-13-56mhz-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-rfid-rc522-mini-version-rfid-13-56mhz-ic-card-induction-module-
+type: MODULE
+width: 210
+height: 138
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 3.3
+  items:
+  - name: VIN
+    type: WIRE
+    pins:
+    - x: 201
+      y: 109
+      pin_function: VCC
+  - name: RST
+    type: WIRE
+    pins:
+    - x: 201
+      y: 94.6
+      pin_function: DIGITAL_IN
+  - name: GND
+    type: WIRE
+    pins:
+    - x: 201
+      y: 80.2
+      pin_function: GND
+  - name: SCL
+    type: WIRE
+    pins:
+    - x: 201
+      y: 22.6
+      pin_function: SCL
+  - name: SDA
+    type: WIRE
+    pins:
+    - x: 201
+      y: 8.2
+      pin_function: SDA
+compatibility:
+- name: RFID
+  condition:
+    - name: Check Tag UID
+      parameter:
+        - name: UID
+          value: ''
+          constraint: []
+    - name: Found Tag
+    - name: Not Found Tag
+  value:
+    - name: UID
+      dataType: STRING
+      constraint: []
+    - name: Reader Version
+      dataType: STRING
+      constraint: []
+platforms:
+  - platform: ARDUINO_AVR8
+    classname: MP_RC522_I2C
+    library_dependency:
+    - semaf/MFRC522_I2C_Library_25-02-2021
+  - platform: ARDUINO_ESP8266
+    classname: MP_RC522_I2C
+    library_dependency:
+    - semaf/MFRC522_I2C_Library_25-02-2021
+  - platform: ARDUINO_ESP32
+    classname: MP_RC522_I2C
+    library_dependency:
+    - semaf/MFRC522_I2C_Library_25-02-2021
+  - platform: ARDUINO_ATSAMD21
+    classname: MP_RC522_I2C
+    library_dependency:
+    - semaf/MFRC522_I2C_Library_25-02-2021
+  - platform: ARDUINO_ATSAMD51
+    classname: MP_RC522_I2C
+    library_dependency:
+    - semaf/MFRC522_I2C_Library_25-02-2021
