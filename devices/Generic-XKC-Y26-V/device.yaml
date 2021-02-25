@@ -1,0 +1,56 @@
+id: Generic-XKC-Y26-V
+brand: Generic
+model: XKC-Y26-V Non contact liquid water sensor
+url: https://www.allnewstep.com/product/2799/non-contact-liquid-water-xkc-y26-v-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B9%89%E0%B8%B3-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%A7-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA-non-contack-liquid-level
+type: MODULE
+width: 583
+height: 577
+connection_consume:
+  min_voltage: 5
+  max_voltage: 24
+  items:
+  - name: VCC
+    type: WIRE
+    pins:
+    - x: 54
+      y: 394
+      pin_function: VCC
+  - name: SIG
+    type: WIRE
+    pins:
+    - x: 53
+      y: 408.4
+      pin_function: DIGITAL_OUT
+  - name: GND
+    type: WIRE
+    pins:
+    - x: 52
+      y: 422.8
+      pin_function: GND
+  # - name: Mode
+  #   type: WIRE
+  #   pins:
+  #   - x: 51
+  #     y: 437.2
+  #     pin_function: NO_FUNCTION
+compatibility:
+- name: Water
+  condition:
+  - name: Detect Water
+  - name: No Water
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_WATER_SENSOR
+  library_dependency: []
