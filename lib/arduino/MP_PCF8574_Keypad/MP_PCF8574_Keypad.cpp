@@ -1,15 +1,16 @@
 #include "MP_PCF8574_Keypad.h"
 
-#define REFRESH_INTERVAL 50
+#define REFRESH_INTERVAL 200
 
 MP_PCF8574_Keypad::MP_PCF8574_Keypad(uint8_t a0_reg, uint8_t a1_reg, uint8_t a2_reg)
-    : addr(0x38 + a0_reg + (a1_reg >> 1) + (a2_reg >> 2))
-    , i2cKeypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS, addr)
+    : addr(0x20 + (a0_reg) + (a1_reg >> 1) + (a2_reg >> 2))
+    , i2cKeypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS, addr, PCF8574)
 {
 
 }
 
 int MP_PCF8574_Keypad::init() {
+    Wire.begin();
     i2cKeypad.begin( makeKeymap(hexaKeys) );
     return MP_ERR_OK;
 }
@@ -37,11 +38,11 @@ void MP_PCF8574_Keypad::update(unsigned long current_time) {
         char key = i2cKeypad.getKey();
         hasChar = false;
         hasNum = false;
-        if (key && '0' <= key && key <= '9') {
+        if (key != NO_KEY && '0' <= key && key <= '9') {
             hasKey = true;
             hasNum = true;
             numValue = (key - '0');
-        } else if (key) {
+        } else if (key != NO_KEY) {
             hasKey = true;
             hasChar = true;
             charValue = key;

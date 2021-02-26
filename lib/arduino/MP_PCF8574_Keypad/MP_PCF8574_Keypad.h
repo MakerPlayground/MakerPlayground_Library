@@ -4,8 +4,8 @@
 #include "Arduino.h"
 #include "MP_DEVICE.h"
 
-#include <Keypad.h>        // GDY120705
 #include <Keypad_I2C.h>
+#include <Keypad.h>        // GDY120705
 #include <Wire.h>
 
 class MP_PCF8574_Keypad {
@@ -32,8 +32,9 @@ private:
         {'7','8','9','C'},
         {'*','0','#','D'}
     };
-    byte rowPins[ROWS] = {0, 1, 2, 3}; //connect to the row pinouts of the keypad
-    byte colPins[COLS] = {4, 5, 6, 7}; //connect to the column pinouts of the keypad
+
+    byte rowPins[ROWS] = {0, 1, 2, 3};
+    byte colPins[COLS] = {4, 5, 6, 7};
 
     //Initialisierung von Keypad
     bool hasKey = false;
@@ -42,7 +43,7 @@ private:
     uint8_t numValue = 0;
     char charValue = '\0';
 
-    uint8_t addr = 0x38;
+    uint8_t addr = 0x20;
     Keypad_I2C i2cKeypad;
 };
 
