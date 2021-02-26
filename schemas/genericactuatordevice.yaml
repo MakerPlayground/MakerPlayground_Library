@@ -544,6 +544,16 @@
             - 8
             - 9
             - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            - 20
           datatype: INTEGER_ENUM
           controltype: DROPDOWN
     - name: Play MP3 by name

@@ -63,6 +63,16 @@ compatibility:
             - 8
             - 9
             - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            - 20
       - name: Play Next MP3
       - name: Play Previous MP3
       - name: Pause
