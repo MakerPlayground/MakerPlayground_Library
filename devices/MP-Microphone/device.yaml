@@ -36,11 +36,11 @@ compatibility:
       unit: PERCENT
 platforms:
 - platform: ARDUINO_AVR8
-  classname: MP_MICROPHONE_NORMALIZED
+  classname: MP_MICROPHONE
   library_dependency: []
 - platform: ARDUINO_ESP8266
-  classname: MP_MICROPHONE_NORMALIZED
+  classname: MP_MICROPHONE
   library_dependency: []
 - platform: ARDUINO_ESP32
-  classname: MP_MICROPHONE_NORMALIZED
+  classname: MP_MICROPHONE
   library_dependency: []

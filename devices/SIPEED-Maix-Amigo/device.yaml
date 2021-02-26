@@ -429,7 +429,7 @@ integrated_devices:
 #          unit: PERCENT
 #    platforms:
 #     - platform: ARDUINO_ESP32
-#       classname: MP_MICROPHONE_NORMALIZED
+#       classname: MP_MICROPHONE
 #       library_dependency: []
 #  - name: Integrated 9-DOF IMU
 #    pin_template: GENERIC_I2C_DEVICE_3v3

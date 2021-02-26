@@ -248,7 +248,7 @@ integrated_devices:
         unit: PERCENT
   platforms:
   - platform: ARDUINO_ATSAMD51
-    classname: MP_MICROPHONE_NORMALIZED
+    classname: MP_MICROPHONE
     library_dependency: []
 - name: Integrated Light Sensor
   integrated_connection:

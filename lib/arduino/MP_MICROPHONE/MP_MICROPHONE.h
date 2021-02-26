@@ -16,6 +16,9 @@ public:
 private:
 	uint8_t pin;
 	double soundLevel;
+	unsigned long startMillis = 0;
+	int signalMin = 1024;
+	int signalMax = 0;
 };
 
 #endif
