@@ -1,0 +1,115 @@
+id: Generic-TCS34725
+brand: Generic
+model: TCS34725 I2C Color Sensor
+url: https://www.myarduino.net/product/2842/%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B5-tcs34725-color-sensor-development-board-module
+type: MODULE
+width: 113
+height: 111
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: SDA
+    type: WIRE
+    pins:
+    - x: 42
+      y: 104
+      pin_function: SDA
+  - name: SCL
+    type: WIRE
+    pins:
+    - x: 56.4
+      y: 104
+      pin_function: SCL
+  - name: 3V3
+    type: WIRE
+    pins:
+    - x: 70.8
+      y: 104
+      pin_function: VCC
+  - name: GND
+    type: WIRE
+    pins:
+    - x: 85.2
+      y: 104
+      pin_function: GND
+compatibility:
+- name: Color
+  condition:
+  - name: Detect Color
+    parameter:
+    - name: Color
+      value: Red
+      constraint:
+      - key: Red
+        value: 0
+      - key: Green
+        value: 1
+      - key: Blue
+        value: 2
+      - key: Cyan
+        value: 3
+      - key: Magenta
+        value: 4
+      - key: Orange
+        value: 5
+      - key: Violet
+        value: 6
+      - key: White
+        value: 7
+      - key: Yellow
+        value: 8
+      - key: Black
+        value: 9
+  value:
+  - name: Red
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Green
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Blue
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Hue
+    constraint:
+      min: 0
+      max: 360
+      unit: NOT_SPECIFIED
+  - name: Saturation
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+  - name: Value
+    constraint:
+      min: 0
+      max: 255
+      unit: NOT_SPECIFIED
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_TCS34725
+  library_dependency:
+  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+- platform: ARDUINO_ESP8266
+  classname: MP_TCS34725
+  library_dependency:
+  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+- platform: ARDUINO_ESP32
+  classname: MP_TCS34725
+  library_dependency:
+  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+- platform: ARDUINO_ATSAMD21
+  classname: MP_TCS34725
+  library_dependency:
+  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+- platform: ARDUINO_ATSAMD51
+  classname: MP_TCS34725
+  library_dependency:
+  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
