@@ -39,7 +39,7 @@ current_version = {'version': version_string, 'min_mp_version': compatibility['m
 
 # generate library archive (ignore empty subdirectory)
 print('Generating library.zip...')
-dir_to_zip = ['devices', 'icons', 'lib', 'lib_ext', 'pin_templates', 'schemas']
+dir_to_zip = ['config', 'devices', 'icons', 'lib', 'lib_ext', 'pin_templates', 'schemas']
 ignore_ext = ['.svg', '.ai']
 with zipfile.ZipFile(version_string + '.zip', 'w', zipfile.ZIP_DEFLATED) as releaseZip:
     releaseZip.writestr(os.path.join('library', 'version.json'), json.dumps(current_version))
