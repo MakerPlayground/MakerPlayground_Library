@@ -30,18 +30,11 @@ compatibility:
       - name: Play MP3 by index
         parameter:
           - name: Index
-            value: 1
+            value: 0
             constraint:
-              - 1
-              - 2
-              - 3
-              - 4
-              - 5
-              - 6
-              - 7
-              - 8
-              - 9
-              - 10
+              min: 0.0
+              max: 100.0
+              unit: NOT_SPECIFIED
       - name: Play MP3 by name
         parameter:
           - name: File name
