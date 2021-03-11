@@ -1,15 +1,16 @@
 #include "MP_MICROPHONE.h"
 
-#define SAMPLEWINDOW 400
+#define SAMPLEWINDOW 200
 
 MP_MICROPHONE::MP_MICROPHONE(uint8_t pin)
-	:pin(pin)
+	: pin(pin)
 {
 }
 
 int MP_MICROPHONE::init()
 {
-	this->soundLevel = 0;
+	soundLevel = 0;
+	startMillis = 0;
 	signalMin = 1024;
 	signalMax = 0;
 	pinMode(pin, INPUT);
@@ -18,30 +19,25 @@ int MP_MICROPHONE::init()
 
 void MP_MICROPHONE::update(unsigned long current_time)
 {
-	// reset data every SAMPLEWINDOW mS
-	if (current_time - startMillis < SAMPLEWINDOW)
-	{
-		signalMax = 0;
-		signalMin = 1024;
-		for (int i=0; i<10; i++) {
-			int sample = analogRead(pin);
-			if (sample < 1024)  // toss out spurious readings
-			{
-				signalMax = sample > signalMax ? sample : signalMax; // save just the max levels
-				signalMin = sample < signalMin ? sample : signalMin; // save just the min levels
-			}
-		}
-		startMillis = current_time;
-	}
+    if (current_time - startMillis > SAMPLEWINDOW)
+    {
+        // peak-peak amplitude as percentage of the full-range
+        soundLevel = signalMax < signalMin ? 0 : ((signalMax - signalMin) * 100.0) / 1023;
+        // reset min, max and start time
+        signalMin = 1024;
+        signalMax = 0;
+        startMillis = current_time;
+    }
 
-	int sample = analogRead(pin);
-	if (sample < 1024)  // toss out spurious readings
-	{
-		signalMax = sample > signalMax ? sample : signalMax; // save just the max levels
-		signalMin = sample < signalMin ? sample : signalMin; // save just the min levels
-	}
-
-	soundLevel = ((signalMax - signalMin) * 100.0) / 1023;  // peak-peak amplitude
+    int sample = analogRead(pin);
+    if (sample > signalMax)
+    {
+        signalMax = sample;
+    }
+    if (sample < signalMin)
+    {
+        signalMin = sample;
+    }
 }
 
 void MP_MICROPHONE::printStatus()
