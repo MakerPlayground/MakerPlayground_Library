@@ -90,9 +90,14 @@ compatibility:
       max: 2000
       unit: DEGREEPERSEC
 platforms:
-- platform: ARDUINO_AVR8
-  classname: MP_MPU6050
-  library_dependency:
-  - i2cdevlib/Arduino/MPU6050
-  - i2cdevlib/Arduino/I2Cdev
-  - Wire
+  - platform: ARDUINO_AVR8
+    classname: MP_MPU6050
+    library_dependency:
+    - i2cdevlib/Arduino/MPU6050
+    - i2cdevlib/Arduino/I2Cdev
+    - Wire
+  - platform: ARDUINO_ESP32
+    classname: MP_MPU6050
+    library_dependency:
+      - i2cdevlib/Arduino/MPU6050
+      - i2cdevlib/Arduino/I2Cdev
