@@ -1,0 +1,47 @@
+id: Grove-101020018
+brand: Grove
+model: Water Sensor
+url: https://www.seeedstudio.com/Grove-Water-Sensor.html
+type: MODULE
+width: 239
+height: 135
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: PORT
+    type: GROVE
+    pins:
+    - x: 19
+      y: 50.67
+      pin_function: GND
+    - x: 19
+      y: 62
+      pin_function: VCC
+    - x: 19
+      y: 73.33
+      pin_function: NO_FUNCTION
+    - x: 19
+      y: 84.67
+      pin_function: ANALOG_OUT
+compatibility:
+- name: Water
+  condition:
+  - name: Detect Water
+  - name: No Water
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_WATER_SENSOR
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_WATER_SENSOR
+  library_dependency: []
