@@ -1,9 +1,9 @@
 id: Grove-104030005
 brand: SeeedStudio
-model: Grove LED Socket Kit (Red, Green, White)
+model: Grove Red LED
 url: https://www.seeedstudio.com/Grove-Red-LED-p-1144.html
 type: MODULE
-width: 132
+width: 131
 height: 114
 connection_consume:
   min_voltage: 3.3
