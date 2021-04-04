@@ -1,0 +1,196 @@
+id: DOIT-NodeMCU-Grove-Extension-Board
+brand: DOIT
+model: ESP8266 NodeMCU Grove Kit Sensor Shield IoT Extension Board
+url: https://www.allnewstep.com/product/3259/esp8266-nodemcu-grove-kit-sensor-shield-iot-extension-board
+type: CONTROLLER
+pio_boardid: nodemcuv2
+width: 421
+height: 512
+cloud_provide:
+- cloud_platform: AZURE
+  classname: MP_AZURE_ESP
+  library_dependency: []
+- cloud_platform: NETPIE
+  classname: MP_NETPIE_ESP
+  library_dependency:
+  - netpieio/microgear-esp8266-arduino
+- cloud_platform: BLYNK
+  classname: MP_BLYNK_NODEMCU
+  library_dependency:
+  - blynkkk/Blynk-0.6.1
+compatibility: []
+platforms:
+- platform: ARDUINO_ESP8266
+  classname: ''
+  library_dependency: []
+pin_template: ESP_12
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
+  - name: Port A0
+    type: GROVE
+    pins:
+    - x: 14
+      y: 18
+      ref_to: GND
+    - x: 25
+      y: 18
+      ref_to: VCC
+    - x: 38
+      y: 18
+      ref_to: ADC
+    - x: 50
+      y: 18
+      ref_to: NF
+  - name: Port 14_10
+    type: GROVE
+    pins:
+    - x: 14
+      y: 64
+      ref_to: GND
+    - x: 25
+      y: 64
+      ref_to: VCC
+    - x: 38
+      y: 64
+      ref_to: IO14
+    - x: 50
+      y: 64
+      ref_to: IO10
+  - name: Port 13_14
+    type: GROVE
+    pins:
+    - x: 14
+      y: 112
+      ref_to: GND
+    - x: 25
+      y: 112
+      ref_to: VCC
+    - x: 38
+      y: 112
+      ref_to: IO13
+    - x: 50
+      y: 112
+      ref_to: IO14
+  - name: Port 12_13
+    type: GROVE
+    pins:
+    - x: 14
+      y: 159
+      ref_to: GND
+    - x: 25
+      y: 159
+      ref_to: VCC
+    - x: 38
+      y: 159
+      ref_to: IO12
+    - x: 50
+      y: 159
+      ref_to: IO13
+  - name: Port 5_4
+    type: GROVE
+    pins:
+    - x: 14
+      y: 208
+      ref_to: GND
+    - x: 25
+      y: 208
+      ref_to: VCC
+    - x: 38
+      y: 208
+      ref_to: IO5
+    - x: 50
+      y: 208
+      ref_to: IO4
+  - name: Port 9_10
+    type: GROVE
+    pins:
+    - x: 14
+      y: 254
+      ref_to: GND
+    - x: 25
+      y: 254
+      ref_to: VCC
+    - x: 38
+      y: 254
+      ref_to: IO9
+    - x: 50
+      y: 254
+      ref_to: IO10
+  - name: Port UART
+    type: GROVE
+    pins:
+    - x: 233
+      y: 15
+      ref_to: GND
+    - x: 244
+      y: 15
+      ref_to: VCC
+    - x: 256
+      y: 15
+      ref_to: RXD
+    - x: 268
+      y: 15
+      ref_to: TXD
+  - name: Port 4_5
+    type: GROVE
+    pins:
+    - x: 233
+      y: 60
+      ref_to: GND
+    - x: 244
+      y: 60
+      ref_to: VCC
+    - x: 256
+      y: 60
+      ref_to: RXD
+    - x: 268
+      y: 60
+      ref_to: TXD
+  - name: Port 0_2
+    type: GROVE
+    pins:
+    - x: 233
+      y: 110
+      ref_to: GND
+    - x: 244
+      y: 110
+      ref_to: VCC
+    - x: 256
+      y: 110
+      ref_to: RXD
+    - x: 268
+      y: 110
+      ref_to: TXD
+  - name: Port I2C(1)
+    type: INEX3
+    pins:
+    - x: 233
+      y: 158
+      ref_to: GND
+    - x: 244
+      y: 158
+      ref_to: VCC
+    - x: 256
+      y: 158
+      ref_to: IO4
+    - x: 268
+      y: 158
+      ref_to: IO5
+  - name: Port I2C(2)
+    type: INEX3
+    pins:
+    - x: 233
+      y: 206
+      ref_to: GND
+    - x: 244
+      y: 206
+      ref_to: VCC
+    - x: 256
+      y: 206
+      ref_to: IO4
+    - x: 268
+      y: 206
+      ref_to: IO5
+
+    
