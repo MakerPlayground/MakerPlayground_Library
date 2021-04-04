@@ -1,10 +1,10 @@
-id: SeeedStudio-103020005
+id: SeeedStudio-105020003
 brand: SeeedStudio
-model: Grove - Relay
-url: https://www.seeedstudio.com/Grove-Relay.html
+model: Grove - Vibration Motor
+url: https://www.seeedstudio.com/Grove-Vibration-Motor.html
 type: MODULE
-width: 235
-height: 137
+width: 114
+height: 132
 connection_consume:
   min_voltage: 3.3
   max_voltage: 5
@@ -12,36 +12,36 @@ connection_consume:
   - name: Port
     type: GROVE
     pins:
-    - x: 22.5
-      y: 52.5
+    - x: 74
+      y: 99.38
       pin_function: GND
-    - x: 22.5
-      y: 63
+    - x: 62.67
+      y: 99.38
       pin_function: VCC
-    - x: 22.5
-      y: 75
+    - x: 51.33
+      y: 99.38
       pin_function: NO_FUNCTION
-    - x: 22.5
-      y: 86.5
+    - x: 40
+      y: 99.38
       pin_function: DIGITAL_IN
 compatibility:
-- name: Relay Module
+- name: Load Driver
   action:
   - name: 'On'
   - name: 'Off'
 platforms:
 - platform: ARDUINO_AVR8
-  classname: MP_RELAY
+  classname: MP_LOAD_DRIVER_AH
   library_dependency: []
 - platform: ARDUINO_ESP8266
-  classname: MP_RELAY
+  classname: MP_LOAD_DRIVER_AH
   library_dependency: []
 - platform: ARDUINO_ESP32
-  classname: MP_RELAY
+  classname: MP_LOAD_DRIVER_AH
   library_dependency: []
 - platform: ARDUINO_ATSAMD21
-  classname: MP_RELAY
+  classname: MP_LOAD_DRIVER_AH
   library_dependency: []
 - platform: ARDUINO_ATSAMD51
-  classname: MP_RELAY
+  classname: MP_LOAD_DRIVER_AH
   library_dependency: []

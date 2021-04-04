@@ -1,0 +1,71 @@
+id: SeeedStudio-101020011
+brand: SeeedStudio
+model: Grove - Temperature & Humidity Sensor (DHT11)
+url: https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html
+type: MODULE
+width: 238
+height: 134
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: Port
+    type: GROVE
+    pins:
+    - x: 36
+      y: 51
+      pin_function: GND
+    - x: 36
+      y: 62.3
+      pin_function: VCC
+    - x: 36
+      y: 73.6
+      pin_function: NO_FUNCTION
+    - x: 36
+      y: 84.9
+      pin_function: DIGITAL_OUT
+compatibility:
+- name: Temperature
+  condition:
+  - name: Compare
+  value:
+  - name: Temperature
+    constraint:
+      min: 0
+      max: 50
+      unit: CELSIUS
+- name: Humidity
+  condition:
+  - name: Compare
+  value:
+  - name: Humidity
+    constraint:
+      min: 20
+      max: 80
+      unit: PERCENT
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ESP8266
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ESP32
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ATSAMD21
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0
+- platform: ARDUINO_ATSAMD51
+  classname: MP_DHT11
+  library_dependency:
+  - adafruit/Adafruit_Sensor-1.1.4
+  - adafruit/DHT-sensor-library-1.4.0

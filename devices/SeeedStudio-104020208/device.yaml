@@ -1,0 +1,123 @@
+id: SeeedStudio-104020208
+brand: SeeedStudio
+model: Grove - OLED Display 0.96" (SSD1315)
+url: https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html
+type: MODULE
+width: 315
+height: 182
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: Port
+    type: GROVE
+    pins:
+    - x: 25
+      y: 68
+      pin_function: GND
+    - x: 25
+      y: 83
+      pin_function: VCC
+    - x: 25
+      y: 98
+      pin_function: SDA
+    - x: 25
+      y: 113
+      pin_function: SCL
+compatibility:
+- name: Display
+  action:
+  - name: Show Text
+    parameter:
+    - name: Row
+      constraint:
+        min: 1
+        max: 10
+        unit: NOT_SPECIFIED
+    - name: Text
+    - name: Size
+      value: 1x
+      constraint:
+      - key: 1x
+        value: 1
+      - key: 2x
+        value: 2
+      - key: 3x
+        value: 3
+    - name: Align
+      value: Left
+      constraint:
+      - key: Left
+        value: 0
+      - key: Center
+        value: 1
+      - key: Right
+        value: 2
+    - name: Color
+      value: White
+      constraint:
+      - key: Blue
+        value: 0
+      - key: Cyan
+        value: 1
+      - key: Dark Cyan
+        value: 2
+      - key: Dark Green
+        value: 3
+      - key: Dark Grey
+        value: 4
+      - key: Green
+        value: 5
+      - key: Green Yellow
+        value: 6
+      - key: Light Grey
+        value: 7
+      - key: Magenta
+        value: 8
+      - key: Maroon
+        value: 9
+      - key: Navy
+        value: 10
+      - key: Olive
+        value: 11
+      - key: Orange
+        value: 12
+      - key: Pink
+        value: 13
+      - key: Purple
+        value: 14
+      - key: White
+        value: 15
+      - key: Red
+        value: 16
+      - key: Yellow
+        value: 17
+  - name: Clear Row
+    parameter:
+    - name: Row
+      constraint:
+        min: 1
+        max: 10
+        unit: NOT_SPECIFIED
+  - name: Clear Screen
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_OLED_SSD1315_128x64
+  library_dependency:
+  - olikraus/U8g2_Arduino-2.27.6
+- platform: ARDUINO_ESP8266
+  classname: MP_OLED_SSD1315_128x64
+  library_dependency:
+  - olikraus/U8g2_Arduino-2.27.6
+- platform: ARDUINO_ESP32
+  classname: MP_OLED_SSD1315_128x64
+  library_dependency:
+  - olikraus/U8g2_Arduino-2.27.6
+- platform: ARDUINO_ATSAMD21
+  classname: MP_OLED_SSD1315_128x64
+  library_dependency:
+  - olikraus/U8g2_Arduino-2.27.6
+- platform: ARDUINO_ATSAMD51
+  classname: MP_OLED_SSD1315_128x64
+  library_dependency:
+  - olikraus/U8g2_Arduino-2.27.6

@@ -1,0 +1,366 @@
+id: SeeedStudio-102010168
+brand: SeeedStudio
+model: Lotus V1.1 - ATMega328 Board with Grove Interface
+url: https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface-p-2917.html
+type: CONTROLLER
+pio_boardid: uno
+pin_template: ATMEGA328P
+wiring_method: GROVE
+width: 397
+height: 307
+connection_provide:
+  voltage_level: LEVEL_5
+  items:
+  - name: '0'
+    type: WIRE
+    pins:
+    - x: 367
+      y: 16
+      ref_to: PD0
+  - name: '1'
+    type: WIRE
+    pins:
+    - x: 352.6
+      y: 16
+      ref_to: PD1
+  - name: '2'
+    type: WIRE
+    pins:
+    - x: 338.2
+      y: 16
+      ref_to: PD2
+  - name: '3'
+    type: WIRE
+    pins:
+    - x: 323.8
+      y: 16
+      ref_to: PD3
+  - name: '4'
+    type: WIRE
+    pins:
+    - x: 309.4
+      y: 16
+      ref_to: PD4
+  - name: '5'
+    type: WIRE
+    pins:
+    - x: 295
+      y: 16
+      ref_to: PD5
+  - name: '6'
+    type: WIRE
+    pins:
+    - x: 280.6
+      y: 16
+      ref_to: PD6
+  - name: '7'
+    type: WIRE
+    pins:
+    - x: 266.2
+      y: 16
+      ref_to: PD7
+  - name: '8'
+    type: WIRE
+    pins:
+    - x: 244
+      y: 16
+      ref_to: PB0
+  - name: '9'
+    type: WIRE
+    pins:
+    - x: 229.6
+      y: 16
+      ref_to: PB1
+  - name: '10'
+    type: WIRE
+    pins:
+    - x: 215.2
+      y: 16
+      ref_to: PB2
+  - name: '11'
+    type: WIRE
+    pins:
+    - x: 200.8
+      y: 16
+      ref_to: PB3
+  - name: '12'
+    type: WIRE
+    pins:
+    - x: 186.4
+      y: 16
+      ref_to: PB4
+  - name: '13'
+    type: WIRE
+    pins:
+    - x: 172
+      y: 16
+      ref_to: PB5
+  - name: GND0
+    type: WIRE
+    pins:
+    - x: 157.6
+      y: 16
+      ref_to: GND
+  - name: SDA
+    type: WIRE
+    pins:
+    - x: 128.8
+      y: 16
+      ref_to: PC4
+      function: SDA
+  - name: SCL
+    type: WIRE
+    pins:
+    - x: 114.4
+      y: 16
+      ref_to: PC5
+      function: SCL
+  - name: 3.3V
+    type: WIRE
+    pins:
+    - x: 207
+      y: 290
+      ref_to: VCC
+      voltage_level: LEVEL_3v3
+  - name: 5V
+    type: WIRE
+    pins:
+    - x: 221.4
+      y: 290
+      ref_to: VCC
+  - name: GND1
+    type: WIRE
+    pins:
+    - x: 235.8
+      y: 290
+      ref_to: GND
+  - name: GND2
+    type: WIRE
+    pins:
+    - x: 250.2
+      y: 290
+      ref_to: GND
+  - name: A0
+    type: WIRE
+    pins:
+    - x: 295
+      y: 290
+      ref_to: PC0
+  - name: A1
+    type: WIRE
+    pins:
+    - x: 309.4
+      y: 290
+      ref_to: PC1
+  - name: A2
+    type: WIRE
+    pins:
+    - x: 323.8
+      y: 290
+      ref_to: PC2
+  - name: A3
+    type: WIRE
+    pins:
+    - x: 337.8
+      y: 290
+      ref_to: PC3
+  - name: A4
+    type: WIRE
+    pins:
+    - x: 352.2
+      y: 290
+      ref_to: PC4
+      function:
+      - ANALOG_IN
+  - name: A5
+    type: WIRE
+    pins:
+    - x: 366.6
+      y: 290
+      ref_to: PC5
+      function:
+      - ANALOG_IN
+  - name: Port A0
+    type: GROVE
+    pins:
+    - x: 195
+      y: 219
+      ref_to: GND
+    - x: 195
+      y: 230
+      ref_to: VCC
+    - x: 195
+      y: 241
+      ref_to: PC1
+    - x: 195
+      y: 252
+      ref_to: PC0
+  - name: Port A2
+    type: GROVE
+    pins:
+    - x: 126
+      y: 219
+      ref_to: GND
+    - x: 126
+      y: 230
+      ref_to: VCC
+    - x: 126
+      y: 241
+      ref_to: PC3
+    - x: 126
+      y: 252
+      ref_to: PC2
+  - name: Port A6
+    type: GROVE
+    pins:
+    - x: 126
+      y: 138
+      ref_to: GND
+    - x: 126
+      y: 149
+      ref_to: VCC
+    - x: 126
+      y: 160
+      ref_to: A7
+    - x: 126
+      y: 171
+      ref_to: A6
+  - name: Port D2
+    type: GROVE
+    pins:
+    - x: 264
+      y: 58
+      ref_to: GND
+    - x: 264
+      y: 69
+      ref_to: VCC
+    - x: 264
+      y: 80
+      ref_to: PD3
+    - x: 264
+      y: 91
+      ref_to: PD2
+  - name: Port D3
+    type: GROVE
+    pins:
+    - x: 195
+      y: 58
+      ref_to: GND
+    - x: 195
+      y: 69
+      ref_to: VCC
+    - x: 195
+      y: 80
+      ref_to: PD3
+    - x: 195
+      y: 91
+      ref_to: PD2
+  - name: Port D4
+    type: GROVE
+    pins:
+    - x: 126
+      y: 58
+      ref_to: GND
+    - x: 126
+      y: 69
+      ref_to: VCC
+    - x: 126
+      y: 80
+      ref_to: PD5
+    - x: 126
+      y: 91
+      ref_to: PD4
+  - name: Port D5
+    type: GROVE
+    pins:
+    - x: 333
+      y: 138
+      ref_to: GND
+    - x: 333
+      y: 149
+      ref_to: VCC
+    - x: 333
+      y: 160
+      ref_to: PD6
+    - x: 333
+      y: 171
+      ref_to: PD5
+  - name: Port D6
+    type: GROVE
+    pins:
+    - x: 264
+      y: 138
+      ref_to: GND
+    - x: 264
+      y: 149
+      ref_to: VCC
+    - x: 264
+      y: 160
+      ref_to: PD7
+    - x: 264
+      y: 171
+      ref_to: PD6
+  - name: Port D7
+    type: GROVE
+    pins:
+    - x: 195
+      y: 138
+      ref_to: GND
+    - x: 195
+      y: 149
+      ref_to: VCC
+    - x: 195
+      y: 160
+      ref_to: PB0
+    - x: 195
+      y: 171
+      ref_to: PD7
+  - name: UART
+    type: GROVE
+    pins:
+    - x: 333
+      y: 58
+      ref_to: GND
+    - x: 333
+      y: 69
+      ref_to: VCC
+    - x: 333
+      y: 80
+      ref_to: PD1
+    - x: 333
+      y: 91
+      ref_to: PD0
+  - name: I2C (1)
+    type: GROVE
+    pins:
+    - x: 333
+      y: 219
+      ref_to: GND
+    - x: 333
+      y: 230
+      ref_to: VCC
+    - x: 333
+      y: 241
+      ref_to: PC4
+    - x: 333
+      y: 252
+      ref_to: PC5
+  - name: I2C (2)
+    type: GROVE
+    pins:
+    - x: 264
+      y: 219
+      ref_to: GND
+    - x: 264
+      y: 230
+      ref_to: VCC
+    - x: 264
+      y: 241
+      ref_to: PC4
+    - x: 264
+      y: 252
+      ref_to: PC5
+platforms:
+- platform: ARDUINO_AVR8
+  classname: ''
+  library_dependency: []
