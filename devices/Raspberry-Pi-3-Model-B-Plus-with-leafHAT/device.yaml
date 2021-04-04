@@ -448,7 +448,6 @@ connection_provide:
 compatibility: []
 integrated_device:
 - name: Integrated Button
-  pin_template: GENERIC_DIGITAL_SENSOR_3v3
   integrated_connection:
   - ref_to: SIG
     host_ref_to: '33'
@@ -467,7 +466,6 @@ integrated_device:
     classname: MP_BUTTON_AL
     library_dependency: []
 - name: Integrated Joystick
-  pin_template: INEX_JOYSTICK
   integrated_connection:
   - ref_to: UP
     host_ref_to: '31'
@@ -500,7 +498,6 @@ integrated_device:
     classname: MP_LEAFHAT_JOYSTICK
     library_dependency: []
 - name: Integrated WS2812
-  pin_template: GENERIC_DIGITAL_ACTUATOR_3v3
   platforms:
   - platform: RASPBERRYPI
     classname: MP_WS281X
@@ -543,7 +540,6 @@ integrated_device:
   - platform: RASPBERRYPI
     classname: MP_OLED_SSD1306_128x64
     library_dependency: []
-  pin_template: GENERIC_I2C_DEVICE_3v3
   integrated_connection:
   - ref_to: VCC
     host_ref_to: '1'

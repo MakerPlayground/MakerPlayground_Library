@@ -58,7 +58,6 @@ connection_provide:
           ref_to: "23"
 integrated_devices:
   - name: Integrated TFT LCD
-    pin_template: NO_PIN
     integrated_connection: []
     compatibility:
       - name: Display
@@ -210,7 +209,6 @@ integrated_devices:
         classname: MP_TFT_SIPEED_AMIGO
         library_dependency: []
   - name: Integrated Camera (Front)
-    pin_template: NO_PIN
     integrated_connection: []
     compatibility:
       - name: Camera
@@ -221,7 +219,6 @@ integrated_devices:
         classname: MP_CAMERA_SIPEED_AMIGO_FRONT
         library_dependency: []
   - name: Integrated Camera (Back)
-    pin_template: NO_PIN
     integrated_connection: []
     compatibility:
       - name: Camera
@@ -323,7 +320,6 @@ integrated_devices:
         classname: MP_K210_AUDIO_PLAYER
         library_dependency: []
 #  - name: Integrated Buzzer
-#    pin_template: GENERIC_PWM_ACTUATOR_3v3
 #    integrated_connection:
 #      - ref_to: GND
 #        host_ref_to: GND
@@ -352,7 +348,6 @@ integrated_devices:
 #        classname: MP_BUZZER
 #        library_dependency: []
 #  - name: Integrated Button A
-#    pin_template: GENERIC_DIGITAL_SENSOR_3v3
 #    integrated_connection:
 #      - ref_to: GND
 #        host_ref_to: GND
@@ -371,7 +366,6 @@ integrated_devices:
 #        classname: MP_BUTTON_AL
 #        library_dependency: []
 #  - name: Integrated Button B
-#    pin_template: GENERIC_DIGITAL_SENSOR_3v3_5
 #    integrated_connection:
 #      - ref_to: GND
 #        host_ref_to: GND
@@ -409,7 +403,6 @@ integrated_devices:
 #        classname: MP_BUTTON_AL
 #        library_dependency: []
 #  - name: Integrated Microphone
-#    pin_template: GENERIC_ANALOG_SENSOR_3v3
 #    integrated_connection:
 #      - ref_to: GND
 #        host_ref_to: GND
@@ -432,7 +425,6 @@ integrated_devices:
 #       classname: MP_MICROPHONE
 #       library_dependency: []
 #  - name: Integrated 9-DOF IMU
-#    pin_template: GENERIC_I2C_DEVICE_3v3
 #    integrated_connection:
 #      - ref_to: GND
 #        host_ref_to: GND
