@@ -1,0 +1,329 @@
+id: SeeedStudio-105020008
+brand: SeeedStudio
+model: NodeMCU with Grove Base Shield for NodeMCU
+url: https://www.seeedstudio.com/Grove-Base-Shield-for-NodeMCU.html
+type: CONTROLLER
+pio_boardid: nodemcuv2
+width: 412
+height: 270
+property: []
+pin_template: ESP_12
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
+    - name: GND0
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 221.4
+        ref_to: GND
+    - name: RST
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 207
+        ref_to: RST
+    - name: EN
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 192.6
+        ref_to: EN
+    - name: 3v3(0)
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 178.2
+        ref_to: VCC
+    - name: GND1
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 163.8
+        ref_to: GND
+    - name: CLK
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 149.4
+        ref_to: IO6
+    - name: SD0
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 135
+        ref_to: IO7
+    - name: CMD
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 120.6
+        ref_to: IO11
+    - name: SD1
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 106.2
+        ref_to: IO8
+    - name: SD2
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 91.8
+        ref_to: IO9
+    - name: SD3
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 77.4
+        ref_to: IO10
+    - name: RSV0
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 63
+        ref_to: NF
+    - name: RSV1
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 48.6
+        ref_to: NF
+    - name: A0
+      type: WIRE
+      pins:
+      - x: 32.3
+        y: 34.2
+        ref_to: ADC
+
+    - name: 3v3(1)
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 235.8
+        ref_to: VCC
+    - name: GND2
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 221.4
+        ref_to: GND
+    - name: TX
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 207
+        ref_to: TXD
+    - name: RX
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 192.6
+        ref_to: RXD
+    - name: D8
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 178.2
+        ref_to: IO15
+    - name: D7
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 163.8
+        ref_to: IO13
+    - name: D6
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 149.4
+        ref_to: IO12
+    - name: D5
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 135
+        ref_to: IO14
+    - name: GND3
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 120.6
+        ref_to: GND
+    - name: 3v3(2)
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 106.2
+        ref_to: VCC
+    - name: D4
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 91.8
+        ref_to: IO2
+    - name: D3
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 77.4
+        ref_to: IO0
+    - name: D2
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 63
+        ref_to: IO4
+    - name: D1
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 48.6
+        ref_to: IO5
+    - name: D0
+      type: WIRE
+      pins:
+      - x: 190.7
+        y: 34.2
+        ref_to: IO16
+
+    - name: Port A0
+      type: GROVE
+      pins:
+        - x: 265
+          y: 72.33
+          ref_to: GND
+        - x: 265
+          y: 61
+          ref_to: VCC
+        - x: 265
+          y: 49.67
+          ref_to: NF
+        - x: 265
+          y: 38.33
+          ref_to: ADC
+          voltage_level: LEVEL_3v3
+    - name: Port I2C(1)
+      type: GROVE
+      pins:
+        - x: 319
+          y: 72.33
+          ref_to: GND
+        - x: 319
+          y: 61
+          ref_to: VCC
+        - x: 319
+          y: 49.67
+          ref_to: IO4
+        - x: 319
+          y: 38.33
+          ref_to: IO5
+    - name: Port I2C(2)
+      type: GROVE
+      pins:
+        - x: 374
+          y: 72.33
+          ref_to: GND
+        - x: 374
+          y: 61
+          ref_to: VCC
+        - x: 374
+          y: 49.67
+          ref_to: IO4
+        - x: 374
+          y: 38.33
+          ref_to: IO5
+    - name: Port D3
+      type: GROVE
+      pins:
+        - x: 265
+          y: 152.33
+          ref_to: GND
+        - x: 265
+          y: 141
+          ref_to: VCC
+        - x: 265
+          y: 129.67
+          ref_to: IO14
+        - x: 265
+          y: 118.33
+          ref_to: IO0
+    - name: Port D5
+      type: GROVE
+      pins:
+        - x: 319
+          y: 152.33
+          ref_to: GND
+        - x: 319
+          y: 141
+          ref_to: VCC
+        - x: 319
+          y: 129.67
+          ref_to: IO12
+        - x: 319
+          y: 118.33
+          ref_to: IO14
+    - name: Port D6
+      type: GROVE
+      pins:
+        - x: 374
+          y: 152.33
+          ref_to: GND
+        - x: 374
+          y: 141
+          ref_to: VCC
+        - x: 374
+          y: 129.67
+          ref_to: IO13
+        - x: 374
+          y: 118.33
+          ref_to: IO12
+    - name: Port UART0
+      type: GROVE
+      pins:
+        - x: 265
+          y: 232.33
+          ref_to: GND
+        - x: 265
+          y: 221
+          ref_to: VCC
+        - x: 265
+          y: 209.67
+          ref_to: TXD
+        - x: 265
+          y: 198.33
+          ref_to: RXD
+    - name: Port D8
+      type: GROVE
+      pins:
+        - x: 319
+          y: 232.33
+          ref_to: GND
+        - x: 319
+          y: 221
+          ref_to: VCC
+        - x: 319
+          y: 209.67
+          ref_to: IO2
+        - x: 319
+          y: 198.33
+          ref_to: IO15
+    - name: Port D7
+      type: GROVE
+      pins:
+        - x: 374
+          y: 232.33
+          ref_to: GND
+        - x: 374
+          y: 221
+          ref_to: VCC
+        - x: 374
+          y: 209.67
+          ref_to: IO15
+        - x: 374
+          y: 198.33
+          ref_to: IO13
+platforms:
+  - platform: ARDUINO_ESP8266
+    classname: ""
+    library_dependency: []
