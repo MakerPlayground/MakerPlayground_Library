@@ -56,6 +56,24 @@ connection_provide:
         - x: 270.57
           y: 584
           ref_to: "23"
+    - name: 12
+      type: WIRE
+      pins:
+        - x: 171.15
+          y: 400
+          ref_to: '12'
+    - name: 6
+      type: WIRE
+      pins:
+        - x: 171.15
+          y: 400
+          ref_to: '6'
+    - name: GND
+      type: WIRE
+      pins:
+        - x: 150
+          y: 400
+          ref_to: 'GND'
 integrated_devices:
   - name: Integrated TFT LCD
     integrated_connection: []
