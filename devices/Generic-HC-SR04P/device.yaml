@@ -67,6 +67,10 @@ platforms:
   classname: MP_HC_SR04
   library_dependency:
   - teckel12/NewPing_v1.9.1
+- platform: ARDUINO_K210
+  classname: MP_HC_SR04
+  library_dependency:
+    - teckel12/NewPing_v1.9.1
 - platform: RASPBERRYPI
   classname: MP_HC_SR04
   library_dependency: []

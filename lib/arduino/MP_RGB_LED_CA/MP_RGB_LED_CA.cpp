@@ -45,7 +45,7 @@ void MP_RGB_LED_CA::on(uint8_t red, uint8_t green, uint8_t blue, uint8_t brightn
 
 void MP_RGB_LED_CA::off()
 {
-	digitalWrite(r, HIGH);
-	digitalWrite(g, HIGH);
-	digitalWrite(b, HIGH);
+	analogWrite(r, 255);
+	analogWrite(g, 255);
+	analogWrite(b, 255);
 }

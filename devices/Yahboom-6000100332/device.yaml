@@ -1,0 +1,372 @@
+id: Yahboom-6000100332
+brand: Yahboom
+model: K210 Developer Kit
+url: 'https://category.yahboom.net/products/k210-developer-kit'
+type: CONTROLLER
+pio_boardid: sipeed-maix-go
+pio_custom_config:
+  upload_speed: '115200'
+width: 582
+height: 418
+pin_template: K210
+cloud_provide:
+  - cloud_platform: BLYNK
+    classname: MP_BLYNK_K210_ESP8285
+    library_dependency:
+      - blynkkk/Blynk-0.6.1
+      - blynkkk/BlynkESP8266_Lib-0.6.1
+#  - cloud_platform: REST
+#    classname: MP_REST_ESP
+#    library_dependency: []
+connection_provide:
+  voltage_level: LEVEL_3v3
+  items:
+    - name: 'GND (1)'
+      type: WIRE
+      pins:
+        - x: 58.65
+          y: 178.78
+          ref_to: GND
+    - name: '3.3V (1)'
+      type: WIRE
+      pins:
+      - x: 161.02
+        y: 376.71
+        ref_to: VCC
+    - name: 'GND (2)'
+      type: WIRE
+      pins:
+        - x: 161.02
+          y: 391.14
+          ref_to: GND
+    - name: 'GND (3)'
+      type: WIRE
+      pins:
+        - x: 175.45
+          y: 391.14
+          ref_to: GND
+    - name: 'GND (4)'
+      type: WIRE
+      pins:
+        - x: 189.88
+          y: 391.14
+          ref_to: GND
+    - name: 'GND (5)'
+      type: WIRE
+      pins:
+        - x: 406.3
+          y: 391.14
+          ref_to: GND
+    - name: 'GND (6)'
+      type: WIRE
+      pins:
+        - x: 420.73
+          y: 391.14
+          ref_to: GND
+    - name: 'GND (7)'
+      type: WIRE
+      pins:
+        - x: 435.15
+          y: 391.14
+          ref_to: GND
+    - name: '3.3V (2)'
+      type: WIRE
+      pins:
+        - x: 435.15
+          y: 376.71
+          ref_to: VCC
+    - name: '3.3V (3)'
+      type: WIRE
+      pins:
+        - x: 519.71
+          y: 323.07
+          ref_to: VCC
+    - name: 'GND (8)'
+      type: WIRE
+      pins:
+        - x: 534.14
+          y: 323.07
+          ref_to: GND
+    - name: 'IO9'
+      type: WIRE
+      pins:
+        - x: 73.08
+          y: 250.93
+          ref_to: '9'
+    - name: 'IO10'
+      type: WIRE
+      pins:
+        - x: 58.66
+          y: 265.35
+          ref_to: '10'
+    - name: 'IO18'
+      type: WIRE
+      pins:
+        - x: 58.66
+          y: 323.07
+          ref_to: '18'
+    - name: 'IO19'
+      type: WIRE
+      pins:
+        - x: 73.08
+          y: 323.07
+          ref_to: '19'
+    - name: 'IO20'
+      type: WIRE
+      pins:
+        - x: 204.3
+          y: 376.71
+          ref_to: '20'
+    - name: 'IO21'
+      type: WIRE
+      pins:
+        - x: 204.3
+          y: 391.13
+          ref_to: '21'
+    - name: 'IO22'
+      type: WIRE
+      pins:
+        - x: 218.73
+          y: 376.71
+          ref_to: '22'
+    - name: 'IO23'
+      type: WIRE
+      pins:
+        - x: 218.73
+          y: 391.13
+          ref_to: '23'
+    - name: 'IO24'
+      type: WIRE
+      pins:
+        - x: 233.16
+          y: 376.71
+          ref_to: '24'
+    - name: 'IO25'
+      type: WIRE
+      pins:
+        - x: 233.16
+          y: 391.13
+          ref_to: '25'
+integrated_devices:
+  - name: Integrated Joystick
+    integrated_connection:
+      - host_ref_to: '3'
+        pin_function: DIGITAL_OUT
+      - host_ref_to: '2'
+        pin_function: DIGITAL_OUT
+      - host_ref_to: '1'
+        pin_function: DIGITAL_OUT
+      - host_ref_to: 'GND'
+        pin_function: GND
+    compatibility:
+      - name: Joystick
+        condition:
+          - name: Press left
+          - name: Not press left
+          - name: Press right
+          - name: Not press right
+          - name: Press middle
+          - name: Not press middle
+          - name: Not press all
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_JOYSTICK_LCR
+        library_dependency: [ ]
+  - name: Integrated LED 0
+    integrated_connection:
+      - host_ref_to: GND
+        pin_function: GND
+      - host_ref_to: VCC
+        pin_function: VCC
+      - host_ref_to: '0'
+        pin_function: PWM_IN
+    compatibility:
+      - name: LED
+        action:
+          - name: 'On'
+            parameter:
+              - name: Brightness
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: 'Off'
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_LED_AL
+        library_dependency: [ ]
+  - name: Integrated LED 1
+    integrated_connection:
+      - host_ref_to: GND
+        pin_function: GND
+      - host_ref_to: VCC
+        pin_function: VCC
+      - host_ref_to: '17'
+        pin_function: PWM_IN
+    compatibility:
+      - name: LED
+        action:
+          - name: 'On'
+            parameter:
+              - name: Brightness
+                constraint:
+                  min: 0.0
+                  max: 100.0
+                  unit: PERCENT
+          - name: 'Off'
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_LED_AL
+        library_dependency: [ ]
+  - name: Integrated RGB LED
+    integrated_connection:
+      - host_ref_to: GND
+        pin_function: GND
+      - host_ref_to: '8'
+        pin_function: PWM_IN
+      - host_ref_to: '7'
+        pin_function: PWM_IN
+      - host_ref_to: '6'
+        pin_function: PWM_IN
+      - host_ref_to: VCC
+        pin_function: VCC
+    compatibility:
+      - name: RGB LED
+        action:
+          - name: 'On'
+            parameter:
+              - name: Red
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+              - name: Green
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+              - name: Blue
+                constraint:
+                  min: 0
+                  max: 255
+                  unit: NOT_SPECIFIED
+              - name: Brightness
+                constraint:
+                  min: 0
+                  max: 100
+                  unit: NOT_SPECIFIED
+          - name: 'Off'
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_RGB_LED_CA
+        library_dependency: []
+  - name: Integrated Camera
+    integrated_connection: []
+    compatibility:
+      - name: Camera
+        value:
+          - name: Image
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_CAMERA_OV2640_K210
+        library_dependency:
+          - makerplayground/Yahboom_K210_OV2640-master
+  - name: Integrated TFT LCD
+    integrated_connection:
+      - host_ref_to: GND
+        pin_function: GND
+      - host_ref_to: VCC
+        pin_function: VCC
+    compatibility:
+      - name: Display
+        action:
+          - name: Show Text
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 16
+                  unit: NOT_SPECIFIED
+              - name: Text
+              - name: Size
+                value: 1x
+                constraint:
+                  - key: 1x
+                    value: 1
+                  - key: 2x
+                    value: 2
+                  - key: 3x
+                    value: 3
+              - name: Align
+                value: Left
+                constraint:
+                  - key: Left
+                    value: 0
+                  - key: Center
+                    value: 1
+                  - key: Right
+                    value: 2
+              - name: Color
+                value: White
+                constraint:
+                  - key: Blue
+                    value: 0
+                  - key: Cyan
+                    value: 1
+                  - key: Dark Cyan
+                    value: 2
+                  - key: Dark Green
+                    value: 3
+                  - key: Dark Grey
+                    value: 4
+                  - key: Green
+                    value: 5
+                  - key: Green Yellow
+                    value: 6
+                  - key: Light Grey
+                    value: 7
+                  - key: Magenta
+                    value: 8
+                  - key: Maroon
+                    value: 9
+                  - key: Navy
+                    value: 10
+                  - key: Olive
+                    value: 11
+                  - key: Orange
+                    value: 12
+                  - key: Pink
+                    value: 13
+                  - key: Purple
+                    value: 14
+                  - key: White
+                    value: 15
+                  - key: Red
+                    value: 16
+                  - key: Yellow
+                    value: 17
+          - name: Show Image
+            parameter:
+              - name: Image
+                value: ''
+                constraint: [ ]
+                datatype: IMAGE
+                controltype: IMAGE_SELECTOR
+          - name: Clear Row
+            parameter:
+              - name: Row
+                constraint:
+                  min: 1
+                  max: 16
+                  unit: NOT_SPECIFIED
+          - name: Clear Screen
+    platforms:
+      - platform: ARDUINO_K210
+        classname: MP_TFT_ST7789_YAHBOOM_K210
+        library_dependency:
+          - makerplayground/Yahboom_K210_ST7789-master
+          - adafruit/Adafruit-GFX-Library-1.5.2
+platforms:
+- platform: ARDUINO_K210
+  classname: ''
+  library_dependency: []

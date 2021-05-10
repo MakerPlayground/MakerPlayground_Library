@@ -43,3 +43,6 @@ platforms:
 - platform: ARDUINO_ATSAMD51
   classname: MP_BLYNK_VIRTUAL_SLIDER
   library_dependency: []
+- platform: ARDUINO_K210
+  classname: MP_BLYNK_VIRTUAL_SLIDER
+  library_dependency: [ ]
