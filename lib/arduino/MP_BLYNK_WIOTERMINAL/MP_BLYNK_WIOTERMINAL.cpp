@@ -6,7 +6,9 @@
 #include "MP_BLYNK_WIOTERMINAL.h"
 #include <SPI.h>
 #include <Adafruit_ZeroDMA.h>
-#include <WiFi.h>
+#include "Seeed_mbedtls.h"
+#include "Seeed_FS.h"
+#include "rpcWiFi.h"
 #include <BlynkSimpleWifi.h>
 
 double MP_BLYNK_WIOTERMINAL::value[8];
@@ -16,6 +18,8 @@ MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* ssid, char* pass)
     : auth(auth)
     , ssid(ssid)
     , pass(pass)
+    , host(BLYNK_DEFAULT_DOMAIN)
+    , port(BLYNK_DEFAULT_PORT)
     , lastSendMillis(0)
 {
     for (uint8_t i=0; i<8; i++)
@@ -24,13 +28,27 @@ MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* ssid, char* pass)
     }
 }
 
-int MP_BLYNK_WIOTERMINAL::init() 
+MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* ssid, char* pass, char* host, char* port)
+    : auth(auth)
+    , ssid(ssid)
+    , pass(pass)
+    , host(host)
+    , port(atoi(port))
+    , lastSendMillis(0)
+{
+    for (uint8_t i=0; i<8; i++)
+    {
+        MP_BLYNK_WIOTERMINAL::value[i] = 0;
+    }
+}
+
+int MP_BLYNK_WIOTERMINAL::init()
 {
     if (!connectWifi()) {
         return MP_ERR_CONNECT_WIFI;
     }
 
-    Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
+    Blynk.config(auth, host, port);
 
     if (!Blynk.connect()) {
         return MP_ERR_CONNECT_SERVER;
