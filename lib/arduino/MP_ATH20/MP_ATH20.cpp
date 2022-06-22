@@ -8,45 +8,45 @@ MP_ATH20::MP_ATH20()
 
 int MP_ATH20::init()
 {
-	this->humidity = 0;
-	this->celcius = 0;
-  this->isValid = true;
-	ATH.begin();
-	return MP_ERR_OK;
+    this->humidity = 0;
+    this->celsius = 0;
+    this->isValid = true;
+    ATH.begin();
+    return MP_ERR_OK;
 }
 
 void MP_ATH20::update(unsigned long current_time)
 {
-  float humi, temp;
-  int ret = ATH.getSensor(&humi, &temp);
-  if (ret) {
-    isValid = false;
-  } else {
-    isValid = true;
-  }
-	this->humidity = humi;
-	this->celcius = temp;
+    float humidity, temp;
+    int ret = ATH.getSensor(&humidity, &temp);
+    if (ret) {
+        this->isValid = false;
+    } else {
+        this->isValid = true;
+        this->humidity = humidity * 100.0;
+        this->celsius = temp;
+    }
 }
 
 void MP_ATH20::printStatus()
 {
-  if (isValid) {
-    Serial.print(F("humidity = "));
-    Serial.print(this->humidity);
+    if (isValid) {
+        Serial.print(F("humidity = "));
+        Serial.print(this->humidity);
 
-    Serial.print(F(" , temperature (C) = "));
-    Serial.println(this->celcius);
-  } else {
-    Serial.print(F("Can't get sensor data"));
-  }
+        Serial.print(F(" , temperature (C) = "));
+        Serial.println(this->celsius);
+    } else {
+        Serial.print(F("Can't get sensor data"));
+    }
 }
 
 double MP_ATH20::getTemperature()
 {
-	return this->celcius;
+    return this->celsius;
 }
 
 double MP_ATH20::getHumidity()
 {
-	return this->humidity;
+    return this->humidity;
 }
