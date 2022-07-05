@@ -9,31 +9,17 @@
 #include "Seeed_mbedtls.h"
 #include "Seeed_FS.h"
 #include "rpcWiFi.h"
-#include <BlynkSimpleWifi.h>
+#include <WiFiClient.h>
+#include <BlynkSimpleWioTerminal.h>
 
 double MP_BLYNK_WIOTERMINAL::value[8];
 uint8_t MP_BLYNK_WIOTERMINAL::valueChanged;
 
-MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* ssid, char* pass)
+MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* templateID, char* ssid, char* pass)
     : auth(auth)
+    , templateID(templateID)
     , ssid(ssid)
     , pass(pass)
-    , host(BLYNK_DEFAULT_DOMAIN)
-    , port(BLYNK_DEFAULT_PORT)
-    , lastSendMillis(0)
-{
-    for (uint8_t i=0; i<8; i++)
-    {
-        MP_BLYNK_WIOTERMINAL::value[i] = 0;
-    }
-}
-
-MP_BLYNK_WIOTERMINAL::MP_BLYNK_WIOTERMINAL(char* auth, char* ssid, char* pass, char* host, char* port)
-    : auth(auth)
-    , ssid(ssid)
-    , pass(pass)
-    , host(host)
-    , port(atoi(port))
     , lastSendMillis(0)
 {
     for (uint8_t i=0; i<8; i++)
@@ -48,7 +34,7 @@ int MP_BLYNK_WIOTERMINAL::init()
         return MP_ERR_CONNECT_WIFI;
     }
 
-    Blynk.config(auth, host, port);
+    Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT, templateID);
 
     if (!Blynk.connect()) {
         return MP_ERR_CONNECT_SERVER;

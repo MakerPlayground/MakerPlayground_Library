@@ -11,7 +11,7 @@ cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_WIOTERMINAL
   library_dependency:
-    - blynkkk/Blynk-0.6.1
+    - makerplayground/blynk-library
     - SeeedStudio/Seeed_Arduino_FS-2.1.1
     - SeeedStudio/Seeed_Arduino_mbedtls-3.0.1
     - SeeedStudio/Seeed_Arduino_rpcUnified-2.1.3

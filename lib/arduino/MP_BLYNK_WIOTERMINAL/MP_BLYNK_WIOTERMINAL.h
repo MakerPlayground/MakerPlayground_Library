@@ -7,8 +7,7 @@
 class MP_BLYNK_WIOTERMINAL : public MP_BLYNK
 {
 public:
-	MP_BLYNK_WIOTERMINAL(char auth[], char ssid[], char pass[]);
-	MP_BLYNK_WIOTERMINAL(char auth[], char ssid[], char pass[], char host[], char port[]);
+	MP_BLYNK_WIOTERMINAL(char auth[], char templateID[], char ssid[], char pass[]);
 
 	int init();
 	void update(unsigned long time);
@@ -39,10 +38,9 @@ public:
 private:
 	bool connectWifi();
 	char* auth;
+	char* templateID;
 	char* ssid;
 	char* pass;
-	char* host;
-	uint16_t port;
 
 	unsigned long lastSendMillis;   // time of the last time we send some data to blynk server
 };
