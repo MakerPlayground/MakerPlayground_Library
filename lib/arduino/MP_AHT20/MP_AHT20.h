@@ -1,14 +1,14 @@
-#ifndef MP_ATH20_H
-#define MP_ATH20_H
+#ifndef MP_AHT20_H
+#define MP_AHT20_H
 
 #include "MP_DEVICE.h"
 #include <Wire.h>
-#include "ATH20.h"
+#include <Adafruit_AHTX0.h>
 
-class MP_ATH20
+class MP_AHT20
 {
 public:
-    MP_ATH20();
+    MP_AHT20();
 
     int init();
     void update(unsigned long current_time);
@@ -18,12 +18,13 @@ public:
     double getHumidity();
 
 private:
-    ATH20 ATH;
+    Adafruit_AHTX0 aht;
     uint8_t pin;
 
-    double humidity;
-    double celsius;
+    double temp;
+    double humid;
     bool isValid;
+    unsigned long last_update = 0;
 };
 
 #endif
