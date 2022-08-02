@@ -23,7 +23,7 @@ cloud_provide:
   library_dependency:
     - SeeedStudio/Seeed_Arduino_FS-2.1.1
     - SeeedStudio/Seeed_Arduino_mbedtls-3.0.1
-    - SeeedStudio/Seeed_Arduino_rpcUnified-2.1.3
+    - SeeedStudio/Seeed_Arduino_rpcUnified-2.1.4
     - SeeedStudio/Seeed_Arduino_rpcWiFi-1.0.5
     - SeeedStudio/Seeed_Arduino_SFUD-2.0.1
     - adafruit/Adafruit_ZeroDMA-1.0.8

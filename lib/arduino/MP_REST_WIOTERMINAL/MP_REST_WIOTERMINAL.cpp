@@ -1,7 +1,9 @@
 #include "MP_REST_WIOTERMINAL.h"
 #include <SPI.h>
 #include <Adafruit_ZeroDMA.h>
-#include <AtWiFi.h>
+#include "Seeed_mbedtls.h"
+#include "Seeed_FS.h"
+#include "rpcWiFi.h"
 
 MP_REST_WIOTERMINAL::MP_REST_WIOTERMINAL(const char* ssid, const char* pass)
     : ssid(ssid)
