@@ -17,7 +17,7 @@ cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_NODEMCU
   library_dependency:
-  - blynkkk/Blynk-0.6.1
+  - makerplayground/blynk-library
 need_breadboard: true
 breadboard_placement: TWO_SIDES
 compatibility: []

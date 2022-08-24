@@ -7,7 +7,7 @@
 class MP_BLYNK_NODEMCU : public MP_BLYNK
 {
 public:
-	MP_BLYNK_NODEMCU(char auth[], char ssid[], char pass[]);
+	MP_BLYNK_NODEMCU(char auth[], char templateID[], char ssid[], char pass[]);
 
 	int init();
 	void update(unsigned long time);
@@ -38,6 +38,7 @@ public:
 private:
 	bool connectWifi();
 	char* auth;
+	char* templateID;
 	char* ssid;
 	char* pass;
 

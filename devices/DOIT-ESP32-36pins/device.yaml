@@ -12,11 +12,11 @@ cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_NODEMCU
   library_dependency:
-  - blynkkk/Blynk-0.6.1
+  - makerplayground/blynk-library
 - cloud_platform: BLYNK_BLE
   classname: MP_BLYNK_ESP32_BLE
   library_dependency:
-  - blynkkk/Blynk-0.6.1
+  - makerplayground/blynk-library
 - cloud_platform: AZURE
   classname: MP_AZURE_ESP
   library_dependency: []

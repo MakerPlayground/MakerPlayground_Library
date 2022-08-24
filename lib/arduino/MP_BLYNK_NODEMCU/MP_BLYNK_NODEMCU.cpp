@@ -15,8 +15,9 @@
 double MP_BLYNK_NODEMCU::value[8];
 uint8_t MP_BLYNK_NODEMCU::valueChanged;
 
-MP_BLYNK_NODEMCU::MP_BLYNK_NODEMCU(char* auth, char* ssid, char* pass)
+MP_BLYNK_NODEMCU::MP_BLYNK_NODEMCU(char* auth, char* templateID, char* ssid, char* pass)
     : auth(auth)
+    , templateID(templateID)
     , ssid(ssid)
     , pass(pass)
     , lastSendMillis(0)
@@ -29,7 +30,7 @@ MP_BLYNK_NODEMCU::MP_BLYNK_NODEMCU(char* auth, char* ssid, char* pass)
 
 int MP_BLYNK_NODEMCU::init() 
 {
-    Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT);
+    Blynk.config(auth, BLYNK_DEFAULT_DOMAIN, BLYNK_DEFAULT_PORT, templateID);
     
     if (!connectWifi()) {
         return MP_ERR_CONNECT_WIFI;
@@ -122,7 +123,7 @@ void MP_BLYNK_NODEMCU::writeVirtualPin(uint8_t pin, char* val1)
 }
 
 void MP_BLYNK_NODEMCU::notify(const char* msg) {
-    Blynk.notify(msg);
+//    Blynk.notify(msg);
 }
 
 bool MP_BLYNK_NODEMCU::checkVirtualPinValue(uint8_t pin, int value)
