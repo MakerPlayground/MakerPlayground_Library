@@ -2,6 +2,7 @@
 #define MP_LINE_NOTIFY_WIOTERMINAL_H
 
 #include <Arduino.h>
+#include <WiFiClientSecure.h>
 #include "MP_DEVICE.h"
 #include "MP_REST.h"
 
@@ -27,6 +28,7 @@ public:
     };
 
 private:
+    WiFiClientSecure client;
     String token;
     MP_REST* rest;
     Error error;

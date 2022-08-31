@@ -1,7 +1,6 @@
 #include "MP_Line_Notify_Wioterminal.h"
 
 #include <HTTPClient.h>
-#include <WiFiClientSecure.h>
 
 const char* rootCA = \
 "-----BEGIN CERTIFICATE-----\n"
@@ -40,6 +39,7 @@ MP_Line_Notify_Wioterminal::MP_Line_Notify_Wioterminal(String token, MP_REST* re
 
 int MP_Line_Notify_Wioterminal::init()
 {
+    client.setCACert(rootCA);
     return MP_ERR_OK;
 }
 
@@ -84,9 +84,6 @@ void MP_Line_Notify_Wioterminal::sendMessage(String message, MP_IMAGE image)
         error = Error::NO_INTERNET_CONNECTION;
         return;
     }
-
-    WiFiClientSecure client;
-    client.setCACert(rootCA);
 
     HTTPClient https;
     if (!https.begin(client, "https://notify-api.line.me/api/notify"))
