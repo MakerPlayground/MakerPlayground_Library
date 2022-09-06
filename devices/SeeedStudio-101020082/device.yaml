@@ -1,0 +1,54 @@
+id: SeeedStudio-101020082
+brand: SeeedStudio
+model: Grove - Finger-clip Heart Rate Sensor with shell
+url: https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell.html
+type: MODULE
+width: 290.0
+height: 360.0
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+    - name: Port
+      type: GROVE
+      pins:
+        - x: 136.96
+          y: 50.7
+          pin_function: GND
+        - x: 121.57
+          y: 50.7
+          pin_function: VCC
+        - x: 106.51
+          y: 50.7
+          pin_function: SDA
+        - x: 91.45
+          y: 50.7
+          pin_function: SCL
+compatibility:
+  - name: Pulse Oximetry
+    condition:
+      - name: Compare
+        funcname: ''
+    value:
+      - name: Heart Rate
+        dataType: DOUBLE
+        constraint:
+          min: 0
+          max: 300
+          unit: BPM
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_PAH8001EI2G_Seeed
+  library_dependency: []
+- platform: ARDUINO_ESP8266
+  classname: MP_PAH8001EI2G_Seeed
+  library_dependency: []
+- platform: ARDUINO_ESP32
+  classname: MP_PAH8001EI2G_Seeed
+  library_dependency: []
+- platform: ARDUINO_ATSAMD21
+  classname: MP_PAH8001EI2G_Seeed
+  library_dependency: []
+- platform: ARDUINO_ATSAMD51
+  classname: MP_PAH8001EI2G_Seeed
+  library_dependency: []

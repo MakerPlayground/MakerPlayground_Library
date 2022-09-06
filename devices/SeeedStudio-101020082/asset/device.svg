@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 228 283.03" style="enable-background:new 0 0 228 283.03;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#98ED48;}
+	.st1{fill:#BABABA;}
+	.st2{fill:#DCDCDB;}
+	.st3{fill:#ECECF0;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:none;stroke:#000000;stroke-width:0.265;stroke-miterlimit:12.5;}
+	.st6{fill:#C9B55E;}
+	.st7{fill:#6B6B6B;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M68.65,278.85c-19.27,0-34.94-15.67-34.94-34.94V39.13c0-19.27,15.67-34.94,34.94-34.94h90.78
+			c19.27,0,34.94,15.67,34.94,34.94v204.78c0,19.27-15.67,34.94-34.94,34.94H68.65z"/>
+		<g>
+			<path class="st1" d="M159.43,8.38c16.96,0,30.75,13.79,30.75,30.75v204.78c0,16.96-13.79,30.75-30.75,30.75H68.65
+				c-16.96,0-30.75-13.79-30.75-30.75V39.13c0-16.96,13.79-30.75,30.75-30.75H159.43 M159.43,0H68.65
+				C47.04,0,29.53,17.52,29.53,39.13v204.78c0,21.61,17.52,39.13,39.13,39.13h90.78c21.61,0,39.13-17.52,39.13-39.13V39.13
+				C198.56,17.52,181.04,0,159.43,0L159.43,0z"/>
+		</g>
+	</g>
+	<g>
+		<rect x="75.01" y="32.45" class="st1" width="77.97" height="43.17"/>
+	</g>
+	<g id="XMLID_41_">
+		<g id="g3109_1_" transform="matrix(0 1.2499976 -1.2499976 0 1338.60444 1003.15358)">
+			<rect x="-792.24" y="968.94" class="st2" width="60.57" height="21.42"/>
+			<g id="g33658-1_1_" transform="translate(-1.6000031,0)">
+				<path id="path16826-7_1_" class="st3" d="M-771.87,1006.82v-8.57h2.94v5.62h17.13v-9.37h2.94v3.21h4.28v9.1H-771.87z"/>
+				<path id="path16828-7_1_" class="st3" d="M-771.87,961.05v-8.57h27.57v9.1h-4.28v3.21h-2.94v-9.37h-17.13v5.62H-771.87z"/>
+				<path id="path16832-7_1_" class="st4" d="M-771.87,961.05h2.94v37.21h-2.94V961.05z"/>
+				<path id="path16834-3_1_" class="st4" d="M-748.85,989.15v5.35h-2.94v-29.45h2.94v5.35V989.15L-748.85,989.15z"/>
+				<path id="path16836-3_1_" class="st3" d="M-744.3,989.15h-4.55v-19.01h4.55V989.15z"/>
+				<path id="path22220-2_4_" class="st5" d="M-771.87,998.26"/>
+				<path id="path22220-2_3_" class="st5" d="M-771.87,961.05"/>
+				<path id="path22246-8_4_" class="st5" d="M-751.79,955.42"/>
+				<path id="path22246-8_3_" class="st5" d="M-768.93,955.42"/>
+				<path id="path22248-0_4_" class="st5" d="M-768.93,955.42"/>
+				<path id="path22248-0_3_" class="st5" d="M-768.93,961.05"/>
+				<path id="path22250-1_4_" class="st5" d="M-768.93,961.05"/>
+				<path id="path22250-1_3_" class="st5" d="M-771.87,961.05"/>
+				<path id="path22252-2_4_" class="st5" d="M-771.87,952.48"/>
+				<path id="path22252-2_3_" class="st5" d="M-771.87,961.05"/>
+				<path id="path22276-4_4_" class="st5" d="M-744.57,961.58"/>
+				<path id="path22276-4_3_" class="st5" d="M-744.57,952.48"/>
+				<path id="path29510-1_4_" class="st5" d="M-744.57,952.48"/>
+				<path id="path29510-1_3_" class="st5" d="M-771.87,952.48"/>
+			</g>
+			<path id="connector3pin_1_" class="st6" d="M-760.62,996.38v2.68h-2.68v-2.68H-760.62z"/>
+			<path id="connector2pin_1_" class="st6" d="M-763.3,987.01v-2.68h2.68v2.68H-763.3z"/>
+			<path id="connector1pin_1_" class="st6" d="M-760.62,974.97h-2.68v-2.68h2.68V974.97z"/>
+			<path id="connector0pin_1_" class="st6" d="M-760.62,962.65h-2.68v-2.68h2.68V962.65z"/>
+		</g>
+	</g>
+	<path class="st1" d="M198.47,41.18c0,0,5.38,7.18,12.26,8.22c0,0,14.53,2.54,14.5,20.78h-26.76V41.18z"/>
+	<path class="st1" d="M227.48,217.84c0,0-7.18,5.38-8.22,12.26c0,0-2.54,14.53-20.78,14.5v-26.76H227.48z"/>
+	<rect x="206.14" y="70.18" class="st7" width="6.84" height="147.66"/>
+	<path class="st1" d="M29.53,40.06c0,0-5.38,7.18-12.26,8.22c0,0-14.53,2.54-14.5,20.78h26.76V40.06z"/>
+	<path class="st1" d="M0.52,216.71c0,0,7.18,5.38,8.22,12.26c0,0,2.54,14.53,20.78,14.5v-26.76H0.52z"/>
+	
+		<rect x="15.02" y="69.06" transform="matrix(-1 -4.390500e-11 4.390500e-11 -1 36.8857 285.7736)" class="st7" width="6.84" height="147.66"/>
+</g>
+</svg>
