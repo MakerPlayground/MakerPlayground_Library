@@ -43,25 +43,25 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_DS18B20
   library_dependency:
-  - milesburton/Arduino-Temperature-Control-Library-3.8.0
-  - PaulStoffregen/OneWire-2.3.4
+  - milesburton/Arduino-Temperature-Control-Library-3.9.1
+  - PaulStoffregen/OneWire-2.3.7
 - platform: ARDUINO_ESP8266
   classname: MP_DS18B20
   library_dependency:
-  - milesburton/Arduino-Temperature-Control-Library-3.8.0
-  - PaulStoffregen/OneWire-2.3.4
+  - milesburton/Arduino-Temperature-Control-Library-3.9.1
+  - PaulStoffregen/OneWire-2.3.7
 - platform: ARDUINO_ESP32
   classname: MP_DS18B20
   library_dependency:
-  - milesburton/Arduino-Temperature-Control-Library-3.8.0
-  - PaulStoffregen/OneWire-2.3.4
+  - milesburton/Arduino-Temperature-Control-Library-3.9.1
+  - PaulStoffregen/OneWire-2.3.7
 - platform: ARDUINO_ATSAMD21
   classname: MP_DS18B20
   library_dependency:
-  - milesburton/Arduino-Temperature-Control-Library-3.8.0
-  - PaulStoffregen/OneWire-2.3.4
+  - milesburton/Arduino-Temperature-Control-Library-3.9.1
+  - PaulStoffregen/OneWire-2.3.7
 - platform: ARDUINO_ATSAMD51
   classname: MP_DS18B20
   library_dependency:
-  - milesburton/Arduino-Temperature-Control-Library-3.8.0
-  - PaulStoffregen/OneWire-2.3.4
+  - milesburton/Arduino-Temperature-Control-Library-3.9.1
+  - PaulStoffregen/OneWire-2.3.7
