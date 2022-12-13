@@ -3,8 +3,9 @@
 
 #include "MP_BLYNK_MPBASEBOARD.h"
 
-MP_BLYNK_MPBASEBOARD::MP_BLYNK_MPBASEBOARD(char* auth, char* ssid, char* pass)
+MP_BLYNK_MPBASEBOARD::MP_BLYNK_MPBASEBOARD(char* auth, char* templateID, char* ssid, char* pass)
     : auth(auth)
+    , templateID(templateID)
     , ssid(ssid)
     , pass(pass)
     , lastSendMillis(0)
@@ -43,7 +44,8 @@ int MP_BLYNK_MPBASEBOARD::init()
 
     // connect to blynk
     Serial1.print(F("B,"));
-    Serial1.println(auth);
+    Serial1.print(auth);
+    Serial1.println(templateID);
     if (!checkResponse())
     {
         return MP_ERR_CONNECT_SERVER;

@@ -32,6 +32,9 @@ compatibility:
   condition: []
   value: []
 platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_Line_Notify_MPBASEBOARD
+  library_dependency: []
 - platform: ARDUINO_ESP8266
   classname: MP_Line_Notify
   library_dependency: []

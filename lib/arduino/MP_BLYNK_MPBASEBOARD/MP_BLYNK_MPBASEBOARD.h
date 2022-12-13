@@ -7,7 +7,7 @@
 class MP_BLYNK_MPBASEBOARD : public MP_BLYNK
 {
 public:
-	MP_BLYNK_MPBASEBOARD(char* auth, char* ssid, char* pass);
+	MP_BLYNK_MPBASEBOARD(char* auth, char* templateID, char* ssid, char* pass);
 
 	int init();
 	void update(unsigned long current_time);
@@ -38,6 +38,7 @@ private:
 	bool checkResponse();
 
 	char* auth;
+	char* templateID;
 	char* ssid;
 	char* pass;
 

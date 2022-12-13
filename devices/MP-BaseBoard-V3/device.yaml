@@ -8,8 +8,8 @@ cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_MPBASEBOARD
   library_dependency: []
-- cloud_platform: NETPIE
-  classname: MP_NETPIE_MPBASEBOARD
+- cloud_platform: REST
+  classname: MP_REST_MPBASEBOARD
   library_dependency: []
 width: 392
 height: 346
@@ -184,6 +184,67 @@ connection_provide:
       ref_to: PC5
       function:
       - SCL
+integrated_devices:
+  - name: Network Time Protocol
+    integrated_connection: []
+    compatibility:
+      - name: RTC
+        condition:
+          - name: Compare
+          - name: Check Day
+            parameter:
+              - name: Day
+                value: Monday
+                constraint:
+                  - key: Sunday
+                    value: 1
+                  - key: Monday
+                    value: 2
+                  - key: Tuesday
+                    value: 3
+                  - key: Wednesday
+                    value: 4
+                  - key: Thursday
+                    value: 5
+                  - key: Friday
+                    value: 6
+                  - key: Saturday
+                    value: 7
+        value:
+          - name: Hour
+            constraint:
+              min: 0
+              max: 23
+              unit: NOT_SPECIFIED
+          - name: Minute
+            constraint:
+              min: 0
+              max: 59
+              unit: NOT_SPECIFIED
+          - name: Second
+            constraint:
+              min: 0
+              max: 59
+              unit: NOT_SPECIFIED
+          - name: Date
+            constraint:
+              min: 1
+              max: 31
+              unit: NOT_SPECIFIED
+          - name: Month
+            constraint:
+              min: 1
+              max: 12
+              unit: NOT_SPECIFIED
+          - name: Year
+            constraint:
+              min: 0
+              max: 2025
+              unit: NOT_SPECIFIED
+    platforms:
+      - platform: ARDUINO_AVR8
+        classname: MP_NTP_MPBASEBOARD
+        library_dependency: []
 compatibility: []
 platforms:
 - platform: ARDUINO_AVR8
