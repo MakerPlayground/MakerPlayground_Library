@@ -187,29 +187,12 @@ connection_provide:
 integrated_devices:
   - name: Network Time Protocol
     integrated_connection: []
+    # TODO: add support for cloud consume
+    # cloud_consume: REST
     compatibility:
       - name: RTC
         condition:
           - name: Compare
-          - name: Check Day
-            parameter:
-              - name: Day
-                value: Monday
-                constraint:
-                  - key: Sunday
-                    value: 1
-                  - key: Monday
-                    value: 2
-                  - key: Tuesday
-                    value: 3
-                  - key: Wednesday
-                    value: 4
-                  - key: Thursday
-                    value: 5
-                  - key: Friday
-                    value: 6
-                  - key: Saturday
-                    value: 7
         value:
           - name: Hour
             constraint:
