@@ -1,0 +1,77 @@
+id: Generic-GPS-NEO6M0001
+brand: Generic
+model: Generic - GPS (NEO-6M-0-001)
+url: https://www.cybertice.com/product/674/gps-module-gy-neo-6mv2-ublox
+type: MODULE
+width: 274
+height: 234
+need_breadboard: true
+breadboard_placement: ONE_SIDE
+connection_consume:
+  min_voltage: 3.3
+  max_voltage: 5
+  items:
+  - name: GND
+    type: WIRE
+    pins:
+    - x: 39
+      y: 227
+      pin_function: GND
+  - name: VCC
+    type: WIRE
+    pins:
+    - x: 81
+      y: 227
+      pin_function: VCC
+  - name: RX
+    type: WIRE
+    pins:
+    - x: 67
+      y: 227
+      pin_function: SW_SERIAL_RX
+  - name: TX
+    type: WIRE
+    pins:
+    - x: 53
+      y: 227
+      pin_function: SW_SERIAL_TX
+compatibility:
+- name: GPS
+  condition:
+  - name: Compare
+  - name: Data is valid
+  - name: Data is not valid
+  value:
+  - name: Latitude
+    constraint:
+      min: -90
+      max: 90
+      unit: DEGREE
+  - name: Longitude
+    constraint:
+      min: -180
+      max: 180
+      unit: DEGREE
+platforms:
+- platform: ARDUINO_AVR8
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ESP8266
+  classname: MP_TINY_GPS
+  library_dependency:
+  - plerup/espsoftwareserial-3.4.2
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ESP32
+  classname: MP_TINY_GPS
+  library_dependency:
+  - plerup/espsoftwareserial-6.8.5
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ATSAMD21
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
+- platform: ARDUINO_ATSAMD51
+  classname: MP_TINY_GPS
+  library_dependency:
+  - mikalhart/TinyGPSPlus-1.0.2
