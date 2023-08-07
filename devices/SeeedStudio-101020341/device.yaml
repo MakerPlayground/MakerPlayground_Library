@@ -27,6 +27,7 @@ connection_consume:
 compatibility:
 - name: Color
   condition:
+  - name: Compare
   - name: Detect Color
     parameter:
     - name: Color
