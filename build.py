@@ -62,7 +62,7 @@ current_version['sha256'] = hasher.hexdigest()
 
 # retrieve previous version information
 print('Getting version information from the server...')
-with urllib.request.urlopen('https://makerplayground.z23.web.core.windows.net/library/version.json') as response:
+with urllib.request.urlopen('https://github.com/MakerPlayground/MakerPlayground_Library/releases/latest/download/version.json') as response:
     if response.status != 200:
         print('Error: can\'t connect to the version server')
         exit(1)
