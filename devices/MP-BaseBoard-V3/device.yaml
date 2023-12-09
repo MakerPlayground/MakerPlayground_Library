@@ -4,6 +4,8 @@ model: BaseBoard V3
 url: ''
 type: CONTROLLER
 pio_boardid: ATmega328PB
+pio_custom_config:
+  upload_protocol: arduino
 cloud_provide:
 - cloud_platform: BLYNK
   classname: MP_BLYNK_MPBASEBOARD

@@ -4,6 +4,8 @@ model: i-Duino R3B with Playground-X
 url: https://inex.co.th/shop/i-duino-uno-r3b.html
 type: CONTROLLER
 pio_boardid: ATmega328PB
+pio_custom_config:
+  upload_protocol: arduino
 width: 769
 height: 334
 pin_template: ATMEGA328PB
