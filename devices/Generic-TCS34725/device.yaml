@@ -96,20 +96,25 @@ platforms:
 - platform: ARDUINO_AVR8
   classname: MP_TCS34725
   library_dependency:
-  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+  - adafruit/Adafruit_BusIO-1.4.1
+  - adafruit/Adafruit_TCS34725-master-1.4.4
 - platform: ARDUINO_ESP8266
   classname: MP_TCS34725
   library_dependency:
-  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+  - adafruit/Adafruit_BusIO-1.4.1
+  - adafruit/Adafruit_TCS34725-master-1.4.4
 - platform: ARDUINO_ESP32
   classname: MP_TCS34725
   library_dependency:
-  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+  - adafruit/Adafruit_BusIO-1.4.1
+  - adafruit/Adafruit_TCS34725-master-1.4.4
 - platform: ARDUINO_ATSAMD21
   classname: MP_TCS34725
   library_dependency:
-  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+  - adafruit/Adafruit_BusIO-1.4.1
+  - adafruit/Adafruit_TCS34725-master-1.4.4
 - platform: ARDUINO_ATSAMD51
   classname: MP_TCS34725
   library_dependency:
-  - SeeedStudio/Grove_I2C_Color_Sensor_TCS3472-master-2020-12-18
+  - adafruit/Adafruit_BusIO-1.4.1
+  - adafruit/Adafruit_TCS34725-master-1.4.4
