@@ -21,22 +21,8 @@ int MP_TCS34725::init()
 void MP_TCS34725::update(unsigned long current_time)
 {
 	if (current_time == 0 || current_time - end_time > 50) {
-		tcs.setInterrupt(false);      // turn on LED
-		delay(60);  // takes 50ms to read 
-		tcs.getRawData(&red, &green, &blue, &clear);
-		tcs.setInterrupt(true);  // turn off LED
-
-		double r, g, b;
-		r = 255.0 * red / clear; 
-		g = 255.0 * green / clear; 
-		b = 255.0 * blue / clear;
-
-		rgb2hsv(r, g, b, &h, &s, &v);
-
-		red = (uint16_t) r;
-		green = (uint16_t) g;
-		blue = (uint16_t) b;
-
+        tcs.getRGB(&red, &green, &blue);
+		rgb2hsv(red, green, blue, &h, &s, &v);
 		color_code = hsv2ColorCode(h, s, v);
 
 		end_time = current_time;

@@ -3,6 +3,7 @@
 
 #include "MP_DEVICE.h"
 #include <Wire.h>
+#include "SPI.h"
 #include "Adafruit_TCS34725.h"
 
 class MP_TCS34725
@@ -23,9 +24,8 @@ public:
 	double getValue();
 
 private:
-	// Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
-	Adafruit_TCS34725 tcs = Adafruit_TCS34725();
-	uint16_t clear, red, green, blue;
+    Adafruit_TCS34725 tcs = Adafruit_TCS34725();
+    float red, green, blue;
 	double h, s, v;
 	uint8_t color_code;
 	unsigned long end_time;
