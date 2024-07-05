@@ -26,7 +26,11 @@ void MP_JOYSTICK_5PIN_AL::update(unsigned long current_time)
 void MP_JOYSTICK_5PIN_AL::printStatus() 
 {
 	Serial.print(F("Button is "));
-	Serial.println((digitalRead(pin) == LOW) ? F("pressed"): F("not pressed"));
+	Serial.println((digitalRead(upPin) == LOW) ? F("upPin pressed"): F("upPin not pressed"));
+	Serial.println((digitalRead(downPin) == LOW) ? F("downPin pressed"): F("downPin not pressed"));
+	Serial.println((digitalRead(leftPin) == LOW) ? F("leftPin pressed"): F("leftPin not pressed"));
+	Serial.println((digitalRead(rightPin) == LOW) ? F("rightPin pressed"): F("rightPin not pressed"));
+	Serial.println((digitalRead(pressPin) == LOW) ? F("pressPin pressed"): F("pressPin not pressed"));
 }
 
 bool MP_JOYSTICK_5PIN_AL::isUpPress() {
