@@ -274,15 +274,15 @@ integrated_devices:
     library_dependency: []
 - name: Integrated Joystick
   integrated_connection:
-  - host_ref_to: '31'
-    pin_function: DIGITAL_OUT
-  - host_ref_to: '32'
-    pin_function: DIGITAL_OUT
-  - host_ref_to: '33'
+  - host_ref_to: '34'
     pin_function: DIGITAL_OUT
   - host_ref_to: '35'
     pin_function: DIGITAL_OUT
-  - host_ref_to: '34'
+  - host_ref_to: '33'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '32'
+    pin_function: DIGITAL_OUT
+  - host_ref_to: '31'
     pin_function: DIGITAL_OUT
   - host_ref_to: GND
     pin_function: GND
